@@ -188,6 +188,15 @@ not block the merge.
 2. **Shared table data / nav:** unchanged. This session's dashboard has its own
    self-contained navigation and data registry; it does not modify `data/*.csv`,
    `docs/**`, `site/**`, or `.github/workflows/**`.
+3. **PRIVACY — urgent:** a repo-wide scan on 2026-11-06 found raw tenant initials
+   in published files owned by earlier sessions (`site/executive_summary.html`,
+   `site/discrimination.html`, `site/flagged.html`, `research/discrimination.md`,
+   `docs/v1/executive_summary.md`). These are reachable from the GitHub Pages root
+   or docs tree. This session does **not** edit those files (they are outside its
+   claimed scope). The owning session / integration owner must replace the raw
+   initials with placeholders and re-run its privacy gate. Published here as flag
+   **F21** on the dashboard's Flagged for Review page. This item is flagged for the
+   user's review and does not block this session's merge.
 
 ## Handoff rule
 
@@ -207,8 +216,10 @@ another session may take over D8 and must note the handoff in this log.
   arithmetic recomputes exactly, every HTML data-table row has an official source
   link, every internal link resolves, every page shares the same nav, and no raw
   personal identifiers appear in published files.
-* **Irregularities:** 20 flagged items (F01–F20) are published on
+* **Irregularities:** 21 flagged items (F01–F21) are published on
   `dashboard/pages/flagged.html` with source links; they do not block the merge.
+  F21 records raw tenant initials found in other sessions' published files; this
+  session's own `dashboard/**` scope passed a repo-local privacy scan.
 * **Not legal advice:** the dashboard is an informational summary of official sources.
 
 ## Pull request / merge record (this session)

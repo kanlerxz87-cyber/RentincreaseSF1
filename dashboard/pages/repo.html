@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Anonymized, official-source-only San Francisco rent-increase review dashboard.">
+<title>Repo Review — SF Rent Review</title>
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar">
+  <a class="brand" href="../index.html"><span class="brand-mark">SF</span><span>Rent Increase Review<small>independent verification dashboard</small></span></a>
+  <div class="topbar-tools">
+    <label class="search"><span class="sr-only">Filter table rows</span><input id="tableFilter" type="search" placeholder="Filter table rows…" autocomplete="off"></label>
+    <a class="top-link" href="../pages/flagged.html">Flagged for Review</a>
+  </div>
+</header>
+<div class="layout">
+  <aside class="sidebar"><nav aria-label="Dashboard navigation"><a href="../index.html">Overview</a><a href="summary.html">Executive Summary</a><a href="laws.html">Laws &amp; Rates</a><a href="units.html">Case Facts</a><a href="analysis.html">Analysis &amp; Scenarios</a><a href="notice.html">Notice &amp; Reasons</a><a href="owners.html">Owner Practices</a><a href="discrimination.html">One Unit or Both</a><a href="review.html">Tenant Lawyer Review</a><a href="sources.html">Official Sources</a><a href="flagged.html">Flagged for Review</a><a class="active" href="repo.html">Repo Review</a></nav></aside>
+  <main class="content" id="main">
+    <div class="page-head"><p class="eyebrow">San Francisco · ZIP 94122 area · anonymized</p><h1>Repo Review</h1><p class="lede">Repository inspection, coordination notes, conflicts, and verification commands, with links for manual review.</p></div>
+
+<section class="panel"><h2>Repository review, line by line</h2>
+<p>The initial checkout contained a single README.md. There were no data tables, no legal values, and no site to verify; the work therefore started from official sources rather than from repository content. The shared board did not exist and was created, claimed, and pushed before implementation.</p>
+<p>While research was in progress, other sessions merged work to <code>main</code>. This session ran <code>git pull --rebase origin main</code>, resolved the COORDINATION.md conflict without discarding their content, and moved its own scope into the disjoint <code>dashboard/**</code> directory. No file owned by another session is edited by this session; a request for a navigation link is logged in COORDINATION.md instead.</p>
+<p>The site is generated from <code>dashboard/data/site_data.json</code> by <code>dashboard/build.py</code> and checked by <code>dashboard/verify.py</code>. Both are Python standard library only; no build service or external dependency is required.</p>
+</section>
+<h2>Review log</h2>
+<div class="table-wrap"><table class="data-table" data-filter="1"><caption>Repository review findings — each row has a source link</caption><thead><tr><th scope="col">Topic</th><th scope="col">Finding</th><th scope="col">Source / link</th></tr></thead><tbody><tr><td>Initial repository state</td><td>Only README.md ('# RentincreaseSF1') at commit b2a2caf; no COORDINATION.md, site, data, or verification tooling existed to review line by line.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1" target="_blank" rel="noopener noreferrer">S42</a></td></tr><tr><td>COORDINATION.md created</td><td>This session created the shared task board, claimed a scope, committed and pushed the claim immediately, then rebased onto main and preserved the earlier boards.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">S42</a></td></tr><tr><td>Parallel session scopes</td><td>Three other sessions merged PRs to main while this research was underway; their scopes (docs/**, site/**, research/**, data/*.csv, tools/**, workflows, root index.html) are preserved and not edited here.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1/branches" target="_blank" rel="noopener noreferrer">S42</a></td></tr><tr><td>Merge conflict resolution</td><td>An add/add conflict in COORDINATION.md was resolved by keeping main's board verbatim and appending this session's section; no other session's work was discarded.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1/blob/main/COORDINATION.md" target="_blank" rel="noopener noreferrer">S42</a></td></tr><tr><td>GitHub Pages configuration</td><td>Repository settings show legacy publishing from main at root '/', with root index.html redirecting to docs/index.html; this dashboard is live at /dashboard/.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1/settings/pages" target="_blank" rel="noopener noreferrer">S42</a></td></tr><tr><td>Privacy scan</td><td>No real tenant names, initials, or street address are published anywhere in this dashboard; placeholder labels are used throughout.</td><td><a href="https://www.sf.gov/rent-board-housing-inventory" target="_blank" rel="noopener noreferrer">S13</a></td></tr><tr><td>Verification gate</td><td>dashboard/verify.py re-checks data, source links, blank verified values, arithmetic, internal links, navigation, and privacy; build.py regenerates all pages from the single data registry.</td><td><a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1" target="_blank" rel="noopener noreferrer">S42</a></td></tr></tbody></table></div>
+<h2>Commands for manual review</h2>
+<pre><code>cd dashboard
+python3 build.py
+python3 verify.py
+cd .. &amp;&amp; git status --short</code></pre>
+<div class="callout warn"><h3>Flagged items</h3><p>Repository-related flags: <a href="flagged.html#F15">F15</a> (initial repo state), <a href="flagged.html#F16">F16</a> (overlapping claims), <a href="flagged.html#F18">F18</a> (anonymization), and <a href="flagged.html#F21">F21</a> (raw tenant initials found in published files of other sessions). All 21 flags are on <a href="flagged.html">Flagged for Review</a>.</p></div>
+
+    <footer class="footer"><p>Compiled 2026-11-06 from official government sources. Informational summary only — not legal advice. Real tenant identifiers are never published.</p><p><a href="../pages/sources.html">Official source register</a> · <a href="../pages/flagged.html">Flagged for Review</a> · <a href="https://github.com/kanlerxz87-cyber/RentincreaseSF1" target="_blank" rel="noopener noreferrer">Repository</a></p></footer>
+  </main>
+</div>
+<script src="../assets/app.js"></script>
+</body>
+</html>
