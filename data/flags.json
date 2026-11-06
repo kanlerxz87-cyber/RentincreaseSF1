@@ -1,0 +1,206 @@
+{
+  "version": "1.0",
+  "status_definition": "Every item on this register has status 'needs review' — it is published on the site's Flagged for Review page and does not block the build, the PR, the merge, or deployment.",
+  "flags": [
+    {
+      "id": "F-01",
+      "title": "Repository was empty at session start; no pre-existing findings existed to verify",
+      "category": "Repo audit",
+      "severity": "informational",
+      "detail": "The repository contained exactly one tracked file, README.md, with the single line '# RentincreaseSF1'. There was no pre-existing data, code, site, or research to review line by line. All site content is newly created research verified against official sources.",
+      "sources": ["S39", "S40"],
+      "value_left_blank": "Not applicable — no prior entries existed.",
+      "action": "No action required. Recorded for transparency."
+    },
+    {
+      "id": "F-02",
+      "title": "Building year 1940 is unverified; source text is ambiguous ('how was built in 1940')",
+      "category": "Property facts",
+      "severity": "high",
+      "detail": "The request states the units 'are rent controlled, how was built in 1940'. The wording is ambiguous and the stated year 1940 has not been confirmed against any official property record. SF.gov instructs owners to check the building date via the Property Information Map, and coverage turns on the certificate of occupancy / 'built before June 14, 1979' test rather than on an unverified listing age.",
+      "sources": ["S10"],
+      "value_left_blank": "Confirmed year built / certificate of occupancy date",
+      "action": "Verify the building's certificate of occupancy and construction date using the SF Property Information Map before relying on the assumed year."
+    },
+    {
+      "id": "F-03",
+      "title": "Rent-control coverage of both units is unverified",
+      "category": "Property facts",
+      "severity": "high",
+      "detail": "The request asserts the units are rent controlled. SF.gov says pre-6/13/1979 units 'may' have rent control and lists partial exemptions (single-family homes, condominiums, substantial rehabilitation, government-regulated units, post-1979 construction). SF.gov does state that a single-family dwelling with a legal or illegal in-law unit constitutes a two-unit building that is not exempt. Because privacy rules prohibit publishing an address or APN, coverage cannot be confirmed from official records here.",
+      "sources": ["S10", "S38", "S04"],
+      "value_left_blank": "Official confirmation of coverage for Unit 1 and Unit 2",
+      "action": "Confirm coverage with the SF Rent Board (free counseling) or a tenant attorney before serving any notice."
+    },
+    {
+      "id": "F-04",
+      "title": "Unit 1 — legal nature of the April 1, 2026 'continuing tenancy' is unverified",
+      "category": "Unit 1",
+      "severity": "high",
+      "detail": "Unit 1 is described as a lease starting February 1, 2025 with three initial occupants, and a 'continuing tenancy' on April 1, 2026 at the same $3,995 rent with one original occupant plus a different occupant. Whether this was a lease amendment, a roommate replacement, or a brand-new tenancy is not documented. That distinction controls the base rent, the anniversary date, and whether banked increases carry over. SF.gov prohibits charging more rent simply because a new roommate moved in, and both state and local Costa-Hawkins provisions exclude partial changes in occupancy where an original occupant remains.",
+      "sources": ["S07", "S16", "S04", "S28", "S17", "S18"],
+      "value_left_blank": "Legal characterisation of the April 1, 2026 occupancy change",
+      "action": "Have a SF tenant attorney (or the Rent Board) review the lease, any roommate-change paperwork, and any 6.14 notice before treating April 1, 2026 as a new tenancy."
+    },
+    {
+      "id": "F-05",
+      "title": "Unit 1 — no verified rent history / no verified anniversary date",
+      "category": "Unit 1",
+      "severity": "high",
+      "detail": "No rent-increase notices, ledgers, or receipts were provided. SF.gov says the first annual increase may be imposed 12 months after the lease began; the Rules define the anniversary date as the date the current rent became effective. Without documents it is not possible to confirm whether an increase was served on February 1, 2026, nor what anniversary date applies.",
+      "sources": ["S07", "S05", "S19"],
+      "value_left_blank": "Confirmed anniversary date and full rent-increase history for Unit 1",
+      "action": "Assemble the lease, all notices, and rent ledgers; consider a Rent Board rent-history determination (no charge, no time limit)."
+    },
+    {
+      "id": "F-06",
+      "title": "Unit 2 — unverified whether any increases were imposed since June 1, 2019",
+      "category": "Unit 2",
+      "severity": "high",
+      "detail": "The request supplies a lease start of June 1, 2019 at $3,150 and no later rent figure. It does not state that no increases occurred. The site therefore does not assume a 'no increases' history. Any banked-increase calculation depends on that history.",
+      "sources": ["S08", "S19", "S03"],
+      "value_left_blank": "Confirmed rent-increase history for Unit 2",
+      "action": "Obtain the full rent history (leases, notices, ledgers) before computing any banked increase."
+    },
+    {
+      "id": "F-07",
+      "title": "Unit 2 — banked-increase total cannot be confirmed; no legal determination is offered",
+      "category": "Unit 2",
+      "severity": "high",
+      "detail": "SF.gov's banking rules are fact-sensitive: a skipped increase is only banked if at least 24 full months pass without any rent increase; banked increases cannot be compounded or prorated; a change of anniversary date can permanently lose a skipped increase; and banked increases do not carry over to a new tenant. The official worked examples themselves contain date/rate inconsistencies (see F-12 to F-14). The site publishes only the official annual rates per year and illustrative arithmetic, not a determination of the lawful rent.",
+      "sources": ["S08", "S09", "S06", "S03"],
+      "value_left_blank": "Lawful banked-increase percentage and resulting lawful rent for Unit 2",
+      "action": "Do not impose a banked increase on Unit 2 without a Rent Board determination or a tenant attorney's written review."
+    },
+    {
+      "id": "F-08",
+      "title": "Rent Increase License status is unverified",
+      "category": "Compliance",
+      "severity": "high",
+      "detail": "SF.gov requires a current Rent Increase License on file before any annual or banked increase takes effect; a notice effective while unlicensed 'may be null and void' and the tenant 'may be entitled to a rent refund'. Buildings with fewer than 10 units have been required to report since March 1, 2023. License status cannot be checked here without publishing the property address/APN.",
+      "sources": ["S07", "S11", "S12", "S13", "S04"],
+      "value_left_blank": "Current Rent Increase License status for both units",
+      "action": "Check the Rent Board Portal for each unit's license on the intended effective date."
+    },
+    {
+      "id": "F-09",
+      "title": "No official federal numeric rent-increase cap was located",
+      "category": "Federal law",
+      "severity": "medium",
+      "detail": "No official federal source establishing a numeric cap on rent increases for ordinary private rental housing was found. HUD's legislative chronology shows federal rent-control authority was enacted in 1942 and allowed to expire in 1953 (with a 1954 extension for critical defense housing areas). Federal law instead regulates discrimination (Fair Housing Act) and federally subsidised housing. Per the verification rule, the numeric cap cell is left blank rather than inferred.",
+      "sources": ["S34", "S31", "S32"],
+      "value_left_blank": "Federal numeric rent-increase cap",
+      "action": "If a federal program (e.g., a housing subsidy) applies to either unit, verify its own rules with the administering agency."
+    },
+    {
+      "id": "F-10",
+      "title": "No official source documents 'typical' individual-owner rent-increase behaviour",
+      "category": "Practice",
+      "severity": "medium",
+      "detail": "Official sources describe the rules that apply to all owners and document the compliance obligations specific to small buildings (fewer than 10 units), but no official source quantifies how individual owners typically set increases. Per the verification rule, the site does not invent a behavioural figure.",
+      "sources": ["S11", "S12", "S14", "S22"],
+      "value_left_blank": "Typical individual-owner increase percentage or frequency",
+      "action": "Treat the normative rules (annual allowable increase, license, notice) as the standard of practice instead."
+    },
+    {
+      "id": "F-11",
+      "title": "No official source can certify that an increase 'would pass review by a SF tenant lawyer'",
+      "category": "Legal opinion",
+      "severity": "high",
+      "detail": "The request asks that any increase be able to pass review by a tenant-friendly SF lawyer. That is a legal opinion, not an officially verifiable value. Official sources confirm tenants can obtain free Rent Board counseling, free/low-cost legal assistance, free legal clinics and a Tenant Right to Counsel program for eviction proceedings, and can file an unlawful-rent-increase petition with no charge and no time limit — but no government source issues advance clearance for a proposed increase.",
+      "sources": ["S21", "S22", "S25", "S23", "S19", "S30"],
+      "value_left_blank": "Advance 'passes tenant-lawyer review' certification",
+      "action": "Obtain a written opinion from a licensed California attorney before serving notices; provide the full file."
+    },
+    {
+      "id": "F-12",
+      "title": "Official-source inconsistency: SF.gov worked example states the June 1, 2025 rate as 1.6%",
+      "category": "Official-source irregularity",
+      "severity": "medium",
+      "detail": "On 'Learn about rent increases in San Francisco', the example 'RENT INCREASE FOR ONE YEAR ON ANNIVERSARY DATE' describes a tenant who moved in June 1, 2025 with an increase wanted for June 1, 2026, then states: 'The annual allowable increase in effect on June 1, 2025 is 1.6%'. The same page and the official rates table state 1.6% is effective March 1, 2026 – February 28, 2027, and 1.4% was effective March 1, 2025 – February 28, 2026. Quoted for manual review; the site uses the official rates table, not the example's date wording.",
+      "sources": ["S07", "S02", "S01", "S03"],
+      "value_left_blank": "Not a data value — quoted inconsistency",
+      "action": "Confirm rate/date wording with the SF Rent Board before relying on that example."
+    },
+    {
+      "id": "F-13",
+      "title": "Official-source inconsistency: SF.gov multi-year example uses mismatched dates",
+      "category": "Official-source irregularity",
+      "severity": "medium",
+      "detail": "The example 'RENT INCREASE FOR MULTIPLE YEARS ON ANNIVERSARY DATE' says the owner 'wants to increase the tenant's rent for the first time on June 1, 2026' but then says 'The total amount of banked increases that could be imposed on June 1, 2025, is 3.1% (1.7% for June 1, 2024 + 1.4% for June 1, 2025 = 3.1%)'. A separate example for an increase effective May 1, 2026 cites 'the annual allowable increase in effect on June 1, 2026 (1.6%)'. Quoted for manual review.",
+      "sources": ["S07", "S09", "S03"],
+      "value_left_blank": "Not a data value — quoted inconsistency",
+      "action": "Confirm the intended effective dates with the SF Rent Board."
+    },
+    {
+      "id": "F-14",
+      "title": "Official-source inconsistency: SF.gov banked-increase example gives two different dates for the same 1.4% rate",
+      "category": "Official-source irregularity",
+      "severity": "medium",
+      "detail": "On 'Banked rent increases', the worked example first says 'the annual allowable increase in effect on August 1, 2025 (1.4%)' and two sentences later says 'add the total percentage of banked rent increases (5.3%) to the annual allowable rent increase in effect on August 1, 2024 (1.4%)'. The official rates table shows 1.4% effective March 1, 2025 – February 28, 2026 and 1.7% effective March 1, 2024 – February 28, 2025. Quoted for manual review.",
+      "sources": ["S08", "S03", "S02"],
+      "value_left_blank": "Not a data value — quoted inconsistency",
+      "action": "Confirm the intended date with the SF Rent Board before using that example for a calculation."
+    },
+    {
+      "id": "F-15",
+      "title": "Additional occupant cannot be used as a reason to raise Unit 1's rent",
+      "category": "Unit 1 / compliance",
+      "severity": "high",
+      "detail": "SF.gov states a landlord cannot charge more rent simply because a new roommate moved in, that any such agreement is void and unenforceable, and SF Admin Code § 37.3(a)(11)(A) prohibits increases solely because a tenant added an additional occupant, notwithstanding a lease clause permitting it. Any April 1, 2026 rent change linked to the change in occupants would therefore be scrutinised.",
+      "sources": ["S07", "S16", "S04"],
+      "value_left_blank": "Not a data value — compliance warning",
+      "action": "Keep the increase tied exclusively to the official annual allowable rate and the tenancy's own anniversary date."
+    },
+    {
+      "id": "F-16",
+      "title": "No official source requires raising both units at once, or states that raising one unit is discriminatory",
+      "category": "Fairness / discrimination",
+      "severity": "medium",
+      "detail": "The Rent Ordinance sets one increase per 12 months per tenancy based on that tenancy's own anniversary date. Fair housing statutes prohibit different terms based on protected characteristics, but no official source states a rule about simultaneous increases across units. Per the verification rule, the site does not infer a legal requirement.",
+      "sources": ["S07", "S05", "S31", "S33", "S29"],
+      "value_left_blank": "Official rule requiring or forbidding a single-unit increase",
+      "action": "Document a neutral, written, unit-based policy reviewed by counsel before deciding."
+    },
+    {
+      "id": "F-17",
+      "title": "Coordination deviation: session-<id>/<task> branches could not be created",
+      "category": "Process",
+      "severity": "informational",
+      "detail": "The task instructions require each session to work on its own session-<id>/<task> branch and a final integration session to merge those branches. This Arena session is pinned by platform policy to a single branch (arena/2e94d96a-rentincreasesf1). A single integration session performed all tasks with strictly non-overlapping file scopes, small frequent commits, and git pull --rebase before every push. Full detail is in COORDINATION.md.",
+      "sources": ["S41"],
+      "value_left_blank": "Not a data value — process log",
+      "action": "No action required; recorded for audit."
+    },
+    {
+      "id": "F-18",
+      "title": "Whether a written 6.14 notice was ever served to the Unit 1 successor occupant is unverified",
+      "category": "Unit 1",
+      "severity": "medium",
+      "detail": "Rules and Regulations § 6.14 allows an unlimited increase on remaining occupants when the last original occupant vacates only if the landlord timely served all remaining occupants with a written '6.14 notice' (generally within 60 days of learning of the occupancy). Costa-Hawkins § 1954.53(d)(2) does not apply to a lawful sublessee/assignee where an original occupant remains; co-tenants are excluded. No notice documentation was provided, and an original occupant is described as still in occupancy.",
+      "sources": ["S17", "S18", "S28", "S04"],
+      "value_left_blank": "Existence and service date of any 6.14 notice",
+      "action": "Do not pursue a market-rate reset under § 6.14 / Costa-Hawkins; if considered, obtain a Rent Board determination and legal advice first."
+    },
+    {
+      "id": "F-19",
+      "title": "Housing Inventory submissions contain owner/occupant information and are public",
+      "category": "Privacy",
+      "severity": "high",
+      "detail": "SF.gov states that information entered in a Housing Inventory submission is public, including the owner's name and business contact information. This site therefore publishes no owner names, tenant names, street addresses, APNs, or contact details; only placeholder identifiers, the ZIP code 94122, dates and dollar amounts.",
+      "sources": ["S11", "S39"],
+      "value_left_blank": "Not a data value — privacy control",
+      "action": "Keep the internal identity file outside the repository and outside the site."
+    },
+    {
+      "id": "F-20",
+      "title": "No official source requires a stated justification for the annual allowable increase",
+      "category": "Reasons / procedure",
+      "severity": "informational",
+      "detail": "The annual allowable and banked increases are formula-based and require no Rent Board petition; SF.gov's petition page lists six categories that DO require a petition before notice (capital improvements, operating & maintenance, comparable rents, Proposition I rent history, utility passthrough, § 1.21). The site therefore presents 'reasons' only as official categories, not as an invented requirement.",
+      "sources": ["S15", "S09", "S04", "S03"],
+      "value_left_blank": "Official justification requirement for an annual allowable increase",
+      "action": "If a reason beyond the CPI-based annual adjustment is needed, use the official petition process before serving notice."
+    }
+  ]
+}
