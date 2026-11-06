@@ -122,6 +122,22 @@ for p in PAGES:
             else:
                 ok("row-source" if has_source else "row-flagged-unverified")
 
+# ------------------------------------------- 4b column counts match the header
+for p in PAGES:
+    body = read(os.path.join(ROOT, p))
+    for tbl_i, table_html in enumerate(re.findall(r"<table.*?</table>", body, re.S)):
+        ncols = None
+        for row_i, row in enumerate(re.findall(r"<tr>(.*?)</tr>", table_html, re.S)):
+            cells = len(re.findall(r"<t[hd][ >]", row))
+            if "<th>" in row:
+                ncols = cells
+                continue
+            if ncols is not None and cells != ncols:
+                fail("%s table %d row %d has %d cells, header has %d"
+                     % (p, tbl_i, row_i, cells, ncols))
+            else:
+                ok("column-count")
+
 # --------------------------------------------------------- 5 privacy check
 for name in FORBIDDEN_NAMES:
     pat = r"\b%s\b" % re.escape(name)
