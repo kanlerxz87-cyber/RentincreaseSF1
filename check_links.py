@@ -26,6 +26,9 @@ SKIP_DIRS = {".git", "__pycache__", "node_modules"}
 # published text file. Ordinary abbreviations are whitelisted.
 INITIAL_PAIR = re.compile(r"\b[A-Z][ .][A-Z]\b")
 WHITELIST = {"U.S", "U.S.", "A.M", "P.M"}
+# A second shape: two initials run together with no separator.
+BARE_INITIAL = re.compile(r"\b[A-Z]{2}\b")
+BARE_OK = {"SF", "AB", "ID", "CA", "US", "OK", "PR", "CI", "JS", "UI", "IV", "AI", "MD", "DC", "PDF", "HQ"}
 
 
 class Collector(HTMLParser):
@@ -111,6 +114,13 @@ def main():
             p = os.path.join(base, f)
             with open(p, encoding="utf-8", errors="ignore") as fh:
                 text = fh.read()
+            for m in BARE_INITIAL.finditer(text):
+                if m.group(0) in BARE_OK:
+                    continue
+                line = text[:m.start()].count("\n") + 1
+                errors.append(
+                    f"{os.path.relpath(p, ROOT)}:{line}: possible run-together initials {m.group(0)!r}"
+                )
             for m in INITIAL_PAIR.finditer(text):
                 if m.group(0) in WHITELIST:
                     continue

@@ -1,41 +1,48 @@
 # Rent Increase SF — 94122
 
 A verified, source-linked analysis of what may lawfully be charged for two rent-controlled units in a
-1940 building in San Francisco's Outer Sunset (ZIP 94122), plus the tenant-facing question set: how
-large an increase is normal, how owners actually impose them, how tenants must be notified, and why
-the two units may lawfully receive different increases.
+1940 building in San Francisco's Outer Sunset (ZIP 94122), answering the full question set: how large an
+increase is normal, how owners actually impose them, how tenants must be notified, and why the two units
+may lawfully receive different increases.
 
-**Live site:** published from this branch through GitHub Pages.
+**Live site:** GitHub Pages, repository root (`index.html`) — https://kanlerxz87-cyber.github.io/RentincreaseSF1/
 
-## What is here
+## Repository layout
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` … `sources.html` | The published site (static HTML, no build step at serve time) |
-| `build.py` | Generates every page from `data/*.json`; also runs the consistency check |
-| `check_links.py` | Internal-link, fragment, privacy and source-coverage checks |
+| `index.html` … `sources.html` | **The published site.** Ten static pages, no build step at serve time |
+| `assets/` | Stylesheet and the table-filter script for the published site |
+| `build.py` | Generates every published page from `data/*.json`; asserts the arithmetic |
+| `check_links.py` | Internal links, fragments, privacy scan, source-coverage check |
 | `data/sources.json` | 24-entry source register (city, state, federal, SEC filing) |
 | `data/increases.json` | Every published allowable annual increase, 1982–2027 |
 | `data/units.json` | Anonymised unit ledger |
 | `data/flags.json` | The 11 items on Flagged for Review |
-| `COORDINATION.md` | Shared task board: task status, ownership, verification log, publish record |
-| `research/verified-notes.md` | Raw notes taken while reading each primary source |
+| `research/verified-notes.md` | Note-by-note record taken while reading each primary source |
+| `COORDINATION.md` | Shared task board, verification log, integration record, publish record |
+| `docs/` | **Archive** — the earlier draft published by a parallel session, left intact and reachable |
+| `site/`, `research/*.md`, `scripts/` | **Archive** — that session's earlier pages, notes and build/verify scripts |
+| `.github/workflows/pages.yml` | CI: rebuilds and verifies the archived `docs/` site is unchanged |
 
-## Rebuild
+## Rebuild and verify
 
 ```bash
-python3 build.py          # regenerate HTML + assets, with the arithmetic assertions
-python3 check_links.py    # must print LINK CHECK OK before publishing
+python3 build.py            # regenerate the published pages + assets (with arithmetic assertions)
+python3 check_links.py      # must print LINK CHECK OK before publishing
+python scripts/build.py && python scripts/verify.py   # the archived draft's own checks
 ```
 
 ## Content rules used
 
-1. Every factual claim carries a source id (`S01`–`S24`) that links to the official document.
-2. No value is inferred. Where an official source does not exist, the cell is blank and the item is
-   listed on the Flagged for Review page.
-3. Percentages are copied from the Rent Board's own schedule; dollar figures are computed from them.
-4. No personal identifiers appear in this repository. Tenants are role labels only. Dates and
-   dollar amounts are preserved exactly, because the legal analysis depends on them.
+1. Every factual claim carries a source id (`S01`–`S24`) linking to the official document.
+2. No value is inferred. Where no official source exists, the cell is blank and the item appears on the
+   Flagged for Review page.
+3. Percentages are copied from the Rent Board's own schedule; dollar figures are computed from them and
+   asserted by `build.py`.
+4. No personal identifiers appear anywhere in this repository — including commit messages and the privacy
+   checker itself. Tenants are role labels only. Dates and amounts are preserved exactly, because the
+   legal analysis depends on them.
 
 ## Key verified figures
 
