@@ -13,7 +13,7 @@
 | Task | Status | Owner | Files exclusively owned by this task |
 | --- | --- | --- | --- |
 | R1 — Official-source legal and market-practice research | done | arena-832c7b0c | `research/**`, `sources/**` |
-| R2 — Privacy-preserving case assessment and executive summary | in progress | arena-832c7b0c | `analysis/**`, `private/**` (local-only, ignored) |
+| R2 — Privacy-preserving case assessment and executive summary | done | arena-832c7b0c | `analysis/**`, `private/**` (local-only, ignored) |
 | S1 — Static dashboard, category pages, anonymized public data, tests | in progress | arena-832c7b0c | `site/**`, `tests/**`, `scripts/**`, `package.json`, `package-lock.json`, `.gitignore` |
 | I1 — Final integration, shared index/navigation/data, PR, merge, Pages deployment | unclaimed | — | `README.md`, `.github/workflows/**`, `COORDINATION.md`, generated shared outputs; publication of `site/**` only after R1/R2/S1 completion |
 
@@ -28,4 +28,5 @@ None.
 - Verification standard: legal/rate claims require official government or primary statutory sources. Private lease amounts and coverage cannot be confirmed without authoritative records; do not infer them. Calculations, if used, must be explicitly conditional and must not populate verified-value fields.
 - R1 completed: saved 33 official-source entries and a scoped legal/market synthesis. Verified the 1.6% local interval, state/local interaction, notice/service, banking mechanics, retaliation/fair housing, petition routes, algorithm restrictions, and FY 2027 metropolitan benchmarks. The November 2, 2026 amendment list was checked for relevant rent-limitation changes.
 - R1 unresolved items remain published flags: exact coverage/address/APN, current lawful rents, banking history, inventory/license, exemptions/subsidy, owner form, bedrooms/utilities, FY 2027 ZIP SAFMRs, and actual attorney review. HUD's accessible ZIP service is FY 2026 and is labeled historical; no current ZIP value was inferred.
-- Claimed R2 and S1 sequentially after R1 completion; scopes do not overlap. S1 will first establish local-only privacy ignores before R2 writes private intake. S1 tests may build only into ignored `.tmp/`; shared navigation/index/public output is reserved for I1 after R1/R2/S1 completion.
+- Claimed R2 and S1 sequentially after R1 completion; scopes do not overlap. S1 first established local-only privacy ignores before R2 wrote private intake. S1 tests may build only into ignored `.tmp/`; shared navigation/index/public output is reserved for I1 after R1/R2/S1 completion.
+- R2 completed: anonymized dashboard content, requirements checklist, executive summary, case assessment, and 16 explicit property/review flags. Raw intake exists only under ignored `private/`; tracked-file identifier scan passed after excluding the ordinary English word “is” from compact-initial matching. Public null cells must render blank plus a review flag. Site/build acceptance items remain unchecked until S1/I1 actually complete them.
