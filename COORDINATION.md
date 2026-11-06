@@ -1,53 +1,203 @@
-# COORDINATION.md - RentincreaseSF1
+# COORDINATION.md — Shared Task Board
 
-## Shared Task Board
+This file is the shared task board for multi-session work on this repository.
+Read it before starting any task. Claim a task by writing your session ID and
+file scope below, then commit and push the claim immediately.
 
-This file coordinates parallel agent sessions working on the RentincreaseSF1 project.
+**Last updated:** 2026-11-06 (UTC)
+**Repo:** `kanlerxz87-cyber/RentincreaseSF1`
+**Default/published branch:** `main`  **GitHub Pages source:** `main` → `/docs`
 
-### Tasks
+---
 
-| Task ID | Description | Status | Owning Session ID | Files Touched | Sources / Verification | Irregularities |
-|---------|-------------|--------|-------------------|---------------|------------------------|----------------|
-| TASK-01 | Create Executive Summary (Internal) | done | arena/da7cfb4c-rentincreasesf1 | `/docs/executive_summary.md`, `/site/executive_summary.html` | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://landlordos.net/learn/questions/sf-annual-rent-increase-2026) [3](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [4](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [5](https://www.lethub.co/blog/how-much-can-you-raise-rent) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [8](https://www.bancalsf.com/banked-rent-increases-san-francisco) [9](https://christopherleesf.com/san-francisco-rent-control-laws-2025/) [10](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [11](https://www.bancalsf.com/sf-rent-board-housing-inventory) [12](https://rentreboot.com/guide/bay-area-rent-control-by-city-2026) [13](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [14](https://www.leaserunner.com/blog/month-to-month-rent-increase-california) | Internal tenant names (L O, V N, JP, M T, E R, I S) anonymized on site; Unit 1 tenancy change (April 1, 2026) flagged; Unit 2 anniversary (June 1, 2026) flagged; Banking verification needed |
-| TASK-02 | Research SF Rent Control Laws & Increases (94122) | done | arena/da7cfb4c-rentincreasesf1 | `/research/sf_laws.md`, `/site/sf_laws.html` | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://landlordos.net/learn/questions/sf-annual-rent-increase-2026) [3](https://www.bancalsf.com/sf-rent-board-housing-inventory) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [8](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [9](https://www.lethub.co/blog/how-much-can-you-raise-rent) | Verified from SF Rent Board, CA state laws, federal laws; 1.4% (2025-26) and 1.6% (2026-27) rates confirmed |
-| TASK-03 | Research Corporate vs Individual Owner Practices | done | arena/da7cfb4c-rentincreasesf1 | `/research/practices.md`, `/site/practices.html` | [1](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [2](https://www.bancalsf.com/banked-rent-increases-san-francisco) [3](https://christopherleesf.com/san-francisco-rent-control-laws-2025/) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://rentreboot.com/guide/bay-area-rent-control-by-city-2026) [6](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [7](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | Verified corporate vs individual practices; consistent application vs selective increases |
-| TASK-04 | Tenant Notification Methods & Reasonable Reasons | done | arena/da7cfb4c-rentincreasesf1 | `/research/notification.md`, `/site/notification.html` | [1](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [2](https://landlordos.net/learn/questions/sf-annual-rent-increase-2026) [3](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.leaserunner.com/blog/month-to-month-rent-increase-california) [8](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) | 30/90 days notice confirmed; 1.4%/1.6% rates confirmed; capital/operating/utility pass-throughs verified |
-| TASK-05 | Discrimination Analysis (Unit 1 vs Unit 2) | done | arena/da7cfb4c-rentincreasesf1 | `/research/discrimination.md`, `/site/discrimination.html` | [1](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [2](https://www.bancalsf.com/banked-rent-increases-san-francisco) [3](https://christopherleesf.com/san-francisco-rent-control-laws-2025/) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [8](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) | Recommendation: Raise both units to avoid discrimination; Fair Housing Act compliance verified |
-| TASK-06 | Create Site Structure & Landing Page | done | arena/da7cfb4c-rentincreasesf1 | `/site/index.html`, `/site/css/style.css` | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) | Dashboard created with tables and findings |
-| TASK-07 | Populate Tables & Findings | done | arena/da7cfb4c-rentincreasesf1 | `/site/index.html`, `/site/executive_summary.html`, `/site/sf_laws.html`, `/site/practices.html`, `/site/notification.html`, `/site/discrimination.html` | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [3](https://www.bancalsf.com/sf-rent-board-housing-inventory) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [8](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [9](https://www.lethub.co/blog/how-much-can-you-raise-rent) | Tables populated with verified data and source links |\n| TASK-08 | Flagged for Review Page | done | arena/da7cfb4c-rentincreasesf1 | `/site/flagged.html` | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://landlordos.net/learn/questions/sf-annual-rent-increase-2026) [3](https://www.bancalsf.com/sf-rent-board-housing-inventory) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) | Internal irregularities flagged for manual review |\n| TASK-09 | Integration, Verification & GitHub Pages | done | arena/da7cfb4c-rentincreasesf1 | All site files | [1](https://cityrulelookup.com/rental-property/rent-control/san-francisco-ca) [2](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit) [3](https://www.bancalsf.com/sf-rent-board-housing-inventory) [4](https://urbantaken.com/understanding-rent-control-in-san-francisco/) [5](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [6](https://calandlordtenantlaws.com/rent-control-ab-1482) [7](https://www.lifetimepm.com/blog/california-rent-increase-guide-2026) [8](https://www.fflw.org/blog/how-much-can-a-landlord-raise-rent) [9](https://www.lethub.co/blog/how-much-can-you-raise-rent) | Site built, verified line by line, GitHub Pages deployment ready |
+## Environment constraint on branch naming (read this first)
 
-### Session Claim Instructions
-1. Claim a task by writing your session ID (e.g., `arena/da7cfb4c-rentincreasesf1`) and file scope.
-2. Commit and push the claim immediately.
-3. Work line by line, verify from official sources, provide links.
-4. Record sources, verification, and irregularities in this file.
-5. Mark task as `done` when finished.
+The task protocol asks each session to work on its own branch named
+`session-<id>/<task>`. In this environment the working session is bound by the
+platform to the branch **`arena/53a11683-rentincreasesf1`**, and the session is
+not permitted to create, switch to, or push any other branch. This session
+therefore:
 
-### Current Session
-- Session ID: `arena/da7cfb4c-rentincreasesf1`
-- Branch: `arena/da7cfb4c-rentincreasesf1`
-- Claimed Tasks:
-  - TASK-01 (Executive Summary) - Status: done
-  - TASK-02 (SF Rent Control Laws) - Status: done
-  - TASK-03 (Corporate vs Individual Practices) - Status: done
-  - TASK-04 (Tenant Notification & Reasons) - Status: done
-  - TASK-05 (Discrimination Analysis) - Status: done
-  - TASK-06 (Site Structure) - Status: done
-  - TASK-07 (Populate Tables) - Status: done
-  - TASK-08 (Flagged for Review) - Status: done
-  - TASK-09 (Integration & Deploy) - Status: done
+* works only on `arena/53a11683-rentincreasesf1`;
+* records its file scope in this board **before** writing those files;
+* opens the integration pull request **from** `arena/53a11683-rentincreasesf1`
+  **into** `main`;
+* runs `git pull --rebase origin main` before every push.
 
-### Notes
-- All work must be verified from official sources (SF Rent Board, CA state laws, federal laws, etc.).
-- Provide source links for manual review.
-- Flag any irregularities.
-- Personal information must be anonymized (placeholder names) on the website.
-- Keep internal executive summary with actual details (internal only).
+This is recorded here so a later session does not read the missing
+`session-*` branches as unfinished or abandoned work. No other session has
+claimed anything in this repository as of the timestamp above (the repository
+contained only `README.md` at commit `b2a2caf`).
 
-## Integration Notes (from main)
-- Official sources retrieved: SF annual 2026 announcement, rent guide, coverage, inventory, banking, petitions and tenant/landlord help; California legislative §§827, 1947.12, 1942.5; CRD housing; HUD Fair Housing Act overview. Source URLs are enumerated in docs/data.json and the site's Sources page.
-- Row-by-row substantive review separates verified guidance, analysis, derived arithmetic and unverified supplied context. No private fact is marked officially confirmed. No original personal initials were stored.
-- Flags F01–F09 published on docs/flagged.html: coverage, ledger, continuity, license/lease, market norms, lawyer approval, source example date errors, privacy limits and verification scope. These are needs review and do not block publication.
-- Tests: seven generated pages; 66 rows with official links; source domain/key checks; internal asset/navigation existence; exact-cent calculation checks; JavaScript syntax. No installed browser automation; visual browser testing not claimed. External pages retrieved using official-page tools; no assertion of exhaustive case-law/lease review.
-- Initial remote branch pull failed because branch did not exist; rebased against origin/main and pushed the claim. No conflicts and no other sessions found.
-- Pages API: existing main-root legacy configuration confirmed. Changing configuration denied 403; using root redirect to docs and legacy deployment instead. No authentication secrets requested.
+---
+
+## Session registry
+
+| Session ID | Branch | Started (UTC) | Status | Notes |
+| --- | --- | --- | --- | --- |
+| `arena-53a11683` | `arena/53a11683-rentincreasesf1` | 2026-11-06 | active | Only session present. Holds all tasks T1–T9. |
+
+---
+
+## Task board
+
+Status values: `unclaimed` · `in progress` · `done` · `needs review`.
+`needs review` means the item is published on the site's **Flagged for Review**
+page and does **not** block integration or merge.
+
+| ID | Task | Status | Owner session | Files (scope) |
+| --- | --- | --- | --- | --- |
+| T1 | Source registry + verification pass (official sources only) | in progress → done | `arena-53a11683` | `data/sources.csv`, `docs/sources.html` |
+| T2 | Unit facts, anonymisation, computed lawful maximums | in progress → done | `arena-53a11683` | `data/units.csv`, `data/aga-rates.csv`, `docs/units.html`, `docs/limits.html` |
+| T3 | Local / State / Federal requirement tables | in progress → done | `arena-53a11683` | `docs/rules.html` |
+| T4 | Notice procedure + lawful reasons for increase | in progress → done | `arena-53a11683` | `docs/process.html` |
+| T5 | Institutional vs individual owner practice | in progress → done | `arena-53a11683` | `docs/practice.html` |
+| T6 | One unit vs both units / fair-housing + tenant-lawyer review | in progress → done | `arena-53a11683` | `docs/discrimination.html`, `docs/review.html` |
+| T7 | Executive summary + landing dashboard | in progress → done | `arena-53a11683` | `EXECUTIVE_SUMMARY.md`, `docs/index.html`, `docs/assets/style.css` |
+| T8 | Flagged-for-review register | in progress → done | `arena-53a11683` | `docs/flagged.html` |
+| T9 | Integration: nav, link check, PR to `main`, merge, Pages deploy | in progress | `arena-53a11683` | `docs/*` (nav), `README.md`, `.github/workflows/pages.yml` |
+
+---
+
+## Claim log
+
+```
+2026-11-06T00:00Z  arena-53a11683  CLAIM T1..T9  scope: data/, docs/, EXECUTIVE_SUMMARY.md, README.md
+                                     reason: repository is empty apart from README.md; no competing sessions.
+```
+
+---
+
+## Verification record (filled as tasks close)
+
+### T1 — Source registry
+* **Sources:** 26 official sources (SF Rent Ordinance §§37.3, 37.9F, 37.10B, 37.10C, 37.15; Rent Board Rules Part IV §§4.10/4.12; Rent Board fact sheet 571; SF.gov rent-increase, banking, hardship, housing-inventory, referral pages; Cal. Civ. Code §§827, 1942.5, 1947.12, 1954.53; Gov. Code §12955; 42 U.S.C. §3604; SF Human Rights Commission).
+* **Verification performed:** each source fetched and read directly; quoted text compared against the page it is attributed to. Every row in every table links to one of these sources.
+* **Irregularities:** see F1 and F5 on the Flagged page.
+
+### T2 — Unit facts and computed maximums
+* **Sources:** fact sheet 571 (annual percentages), SF.gov rent-increase page (12-month rule, no rounding, additional-occupant rule), Rule 4.12 (banking, non-compounding).
+* **Verification performed:** every percentage read from fact sheet 571; arithmetic recomputed in `python3` (see `data/units.csv`); percentages added, never compounded.
+* **Irregularities:** F2, F3, F4, F5.
+
+### T3 — Requirement tables
+* **Sources:** as T1 (`rules.html`).
+* **Verification performed:** each requirement traced to enacted text or the issuing agency's page; `n/a` used where a rule does not reach these facts.
+* **Irregularities:** F6 (no federal rent ceiling found in the federal materials reviewed — recorded as "none found", not as "confirmed absent").
+
+### T4 — Notice and reasons
+* **Sources:** §37.3(b), Rule 4.10, Cal. Civ. Code §827, SF.gov pages for increases/banking/hardship.
+* **Verification performed:** notice periods (30/90 days, +5 if mailed) cross-checked against both §827 and the SF.gov summary.
+* **Irregularities:** F1 (banking look-back wording differs between SF.gov page and Rule 4.12), F12 (service-date arithmetic for Unit 2).
+
+### T5 — Owner practice
+* **Sources:** §37.3 generally (applies to "landlords" of any size), §37.10C (algorithmic devices), §37.15 (licence), §37.7/§37.8 (petitions), SF.gov fee page.
+* **Verification performed:** only statements traceable to official text are made as findings. Statements about typical private behaviour of large vs small owners are **not** sourced and are labelled unverified (F6/F7 group).
+* **Irregularities:** no official dataset was found that measures how individual SF owners set increases — flagged, not invented.
+
+### T6 — Fair housing / one-vs-both
+* **Sources:** 42 U.S.C. §3604; Gov. Code §12955; §37.10B(a)(9); Cal. Civ. Code §1942.5; §37.3(a)(1)–(2); SF HRC housing page.
+* **Verification performed:** protected classes compared between FHA and FEHA text; SF harassment provision quoted.
+* **Irregularities:** none beyond F10 (unknown complaint history).
+
+### T8 — Flagged register
+* **Sources:** as cited per flag.
+* **Verification performed:** every flag names the specific conflicting or missing evidence.
+
+---
+
+## Integration record (T9)
+
+* **Link check:** internal links and anchors checked with `tools/check_links.py`; external links spot-checked by fetching each URL.
+* **PR:** see "Pull request" section below.
+* **Pages:** `main` → `/docs` (workflow-less legacy publishing), `.nojekyll` present.
+* **PII:** no tenant names, initials, street address, or contact data in any published file. Only ZIP code, dates, and amounts, as instructed.
+
+### Pull request
+
+| Item | Value |
+| --- | --- |
+| PR | *(recorded after creation — see bottom of file)* |
+| Merge result | *(recorded after merge)* |
+| Pages deploy | *(recorded after verification)* |
+
+---
+
+## Requests to other sessions
+
+None. If another session needs to change a file in this session's scope, log the
+request here rather than editing it.
+
+## Handoff rule
+
+If this session crashes or its claim is more than 60 minutes old with no new
+commits, any other session may take over the task and must note the handoff in
+this log.
+
+---
+
+# Merged history and integration record (session `arena-53a11683`)
+
+## Merge event
+
+`origin/main` had advanced to `cb9b829` (two earlier pull requests from sessions
+`arena/2347590f-rentincreasesf1` and `arena/da7cfb4c-rentincreasesf1`), producing a parallel
+generated site. This session merged `origin/main` into `arena/53a11683-rentincreasesf1`.
+
+**Conflicts encountered and how they were resolved — no work was discarded:**
+
+| File | Resolution |
+| --- | --- |
+| `COORDINATION.md` | This session's board kept as the live board; the earlier session's record is preserved below and in git history at `7b8226a`. |
+| `README.md` | Rewritten to describe the combined repository, including the archived v1 site and v1 tooling. |
+| `docs/index.html`, `docs/units.html`, `docs/practice.html`, `docs/flagged.html`, `docs/sources.html` | Current version kept in `docs/`; the earlier generated version copied, with an archive banner, to `docs/v1/`. |
+| `docs/law.html`, `docs/notice.html`, `docs/data.json`, `docs/style.css`, `docs/site.js`, `docs/executive_summary.md` | Moved (not deleted) into `docs/v1/`, where their relative links still resolve. |
+| `scripts/build.py`, `scripts/verify.py` | Moved to `archive/v1-tooling/`. They would otherwise regenerate `docs/` and overwrite the current site. |
+| `.github/workflows/pages.yml` | Rewritten: it previously required `docs/` to equal the output of `scripts/build.py`. It now runs `tools/check_links.py`, asserts the Pages entry points exist, and greps the published tree for tenant initials. |
+
+Pages configuration was left as found: legacy branch publishing from `main` at `/`, with the root
+`index.html` redirecting to `docs/index.html`.
+
+## Preserved record from session `arena/da7cfb4c-rentincreasesf1` (v1 site)
+
+Copied verbatim from `COORDINATION.md` at `7b8226a` so nothing is lost:
+
+* Session ID `arena/da7cfb4c-rentincreasesf1`; tasks TASK-01 to TASK-09 all marked `done`.
+* Scope: `/docs/executive_summary.md`, `/site/executive_summary.html`, `/research/*.md`,
+  `/site/*.html`, and the generated `/docs/*` pages.
+* Integration notes as recorded at the time:
+  - "Official sources retrieved: SF annual 2026 announcement, rent guide, coverage, inventory,
+    banking, petitions and tenant/landlord help; California legislative §§827, 1947.12, 1942.5;
+    CRD housing; HUD Fair Housing Act overview. Source URLs are enumerated in docs/data.json and
+    the site's Sources page."
+  - "Row-by-row substantive review separates verified guidance, analysis, derived arithmetic and
+    unverified supplied context. No private fact is marked officially confirmed. No original
+    personal initials were stored."
+  - "Flags F01–F09 published on docs/flagged.html: coverage, ledger, continuity, license/lease,
+    market norms, lawyer approval, source example date errors, privacy limits and verification
+    scope. These are needs review and do not block publication."
+  - "Tests: seven generated pages; 66 rows with official links; source domain/key checks; internal
+    asset/navigation existence; exact-cent calculation checks; JavaScript syntax. No installed
+    browser automation; visual browser testing not claimed. External pages retrieved using
+    official-page tools; no assertion of exhaustive case-law/lease review."
+  - "Initial remote branch pull failed because branch did not exist; rebased against origin/main
+    and pushed the claim. No conflicts and no other sessions found."
+  - "Pages API: existing main-root legacy configuration confirmed. Changing configuration denied
+    403; using root redirect to docs and legacy deployment instead. No authentication secrets
+    requested."
+* The v1 task table's source column cited a mix of official pages and commercial blogs
+  (cityrulelookup, landlordos, bancalsf, urbantaken, lifetimepm, fflw, lethub,
+  calandlordtenantlaws, christopherleesf). Those blog citations are **not carried into the current
+  site**: every row in `docs/` now links to a government source, and the v1 pages remain available
+  in `docs/v1/` and git history for comparison.
+
+## Integration verification (T9)
+
+| Check | Result |
+| --- | --- |
+| `python3 tools/check_links.py` | OK — 10 published pages + 7 archived pages; all internal links and anchors resolve; CSVs consistent; every external citation registered in `data/sources.csv`; no personal tokens |
+| Navigation parity | All 10 published pages carry the same 10-item navigation, and every page is reachable from it |
+| Anonymous content | Placeholder names only (1A–1D, 2A–2B); street address omitted; dates and amounts unchanged |
+| CI workflow | Rewritten to the checks above; no dependency on the retired generator |
+| Pages entry points | `index.html` (redirect), `docs/index.html`, `docs/flagged.html`, `docs/sources.html`, `docs/.nojekyll` present |
+
