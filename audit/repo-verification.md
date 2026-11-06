@@ -3,14 +3,14 @@
 **Audit Date:** 2026-11-06 (UTC)  
 **Auditing Session:** `arena/b43dc55e-rentincreasesf1`  
 **Audited Baseline:** `origin/main` through commit `c1de888` (encompassing merged PR #1 from `arena/2347590f-rentincreasesf1`, PR #2 from `arena/da7cfb4c-rentincreasesf1`, and PR #4 from `arena/53a11683-rentincreasesf1`).  
-**Scope Compliance:** Per `COORDINATION.md`, no files owned by prior active sessions (`docs/**`, `data/**`, `research/**`, `site/**`, `README.md`, `index.html`, `tools/**`) were edited. All irregularities identified below are logged for manual review on `dashboard/repo-verification.html`, `dashboard/flagged-for-review.html`, and `COORDINATION.md`.
+**Scope Compliance:** Per `COORDINATION.md`, no files owned by prior active sessions (`docs/**`, `dashboard/**`, `data/**`, `research/**`, `site/**`, `README.md`, `index.html`, `tools/**`) were edited. All irregularities identified below are logged for manual review on `portal/repo-verification.html`, `portal/flagged-for-review.html`, and `COORDINATION.md`.
 
 ---
 
 ## Summary of Findings
 
-1. **Privacy & PII Check Across Existing Repo (`PASS`):**
-   - Scanned all tracked files in `origin/main` (`docs/`, `docs/v1/`, `data/`, `research/`, `site/`, `EXECUTIVE_SUMMARY.md`, `README.md`) for raw tenant initials, personal names, street addresses, emails, and phone numbers (excluding public government agency phone numbers such as SF Rent Board `415-252-4600`). Zero personal tenant identifiers were exposed.
+1. **Privacy & PII Check (`PASS` across `/portal/**` & `/audit/**`; `IRREGULARITY RA-09` in earlier session drafts):**
+   - Verified via strict uppercase token-allowlist scanning (`audit/verify_all.py`) that zero personal tenant initials, real names, street addresses, emails, or non-agency phone numbers appear anywhere in `/portal/**` or `/audit/**`. Earlier session drafts (`site/`, `research/`, `docs/v1/executive_summary.md`) were flagged in `COORDINATION.md` for raw-initial cleanup by the shared-scope integration owner without cross-scope edits.
 2. **Official Rate Schedule Verification (`PASS` on `data/aga-rates.csv` and `docs/v1/data.json`; `IRREGULARITY` in `research/sf_laws.md`):**
    - Verified every rate in `data/aga-rates.csv` (2019–2027: `2.6%`, `1.8%`, `0.7%`, `2.3%`, `3.6%`, `1.7%`, `1.4%`, `1.6%`) line by line against SF Rent Board Form 571 (`https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf`). Exact match.
    - **Flagged Irregularity (`RA-01`):** `research/sf_laws.md` (and `site/sf_laws.html`) asserts an "Applicable Rate" of `1.6%` for a `June 1, 2027` effective date on Unit 2. In fact, `1.6%` expires **February 28, 2027** (`3/1/26 – 2/28/27`), and the `3/1/27 – 2/29/28` rate has not yet been published by the SF Rent Board as of November 6, 2026.

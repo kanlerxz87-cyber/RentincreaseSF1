@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Comprehensive line-by-line, link, arithmetic, schema, and privacy verifier for /dashboard/ and /audit/."""
+"""Comprehensive line-by-line, link, arithmetic, schema, and privacy verifier for /portal/ and /audit/."""
 
 from __future__ import annotations
 
@@ -13,8 +13,8 @@ from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parent.parent
 AUDIT_DIR = ROOT / "audit"
-DASH_DIR = ROOT / "dashboard"
-DATA_DIR = DASH_DIR / "data"
+DASH_DIR = ROOT / "portal"
+DATA_DIR = AUDIT_DIR / "data"
 
 ALLOWED_GOV_HOSTS = {
     "www.sf.gov",
@@ -196,7 +196,7 @@ def main() -> int:
     build_dashboard.build_all()
     after = {p: p.read_text(encoding="utf-8") for p in sorted(DASH_DIR.glob("*.html"))}
     if before and before != after:
-        fail(errors, "build_dashboard.py output was out of sync with committed dashboard/*.html (now regenerated).")
+        fail(errors, "build_dashboard.py output was out of sync with committed portal/*.html (now regenerated).")
 
     # 2. Check sources.json
     sources = json.loads((DATA_DIR / "sources.json").read_text(encoding="utf-8"))
@@ -235,13 +235,13 @@ def main() -> int:
 
     # 4. Parse all expected HTML pages and check nav, links, anchors, and row source links
     if not (DASH_DIR / ".nojekyll").exists():
-        fail(errors, "Missing dashboard/.nojekyll")
+        fail(errors, "Missing portal/.nojekyll")
 
     parsed_pages: dict[str, DashboardHTMLParser] = {}
     for pname in EXPECTED_PAGES:
         ppath = DASH_DIR / pname
         if not ppath.exists():
-            fail(errors, f"Missing expected page dashboard/{pname}")
+            fail(errors, f"Missing expected page portal/{pname}")
             continue
         parser = DashboardHTMLParser()
         parser.feed(ppath.read_text(encoding="utf-8"))

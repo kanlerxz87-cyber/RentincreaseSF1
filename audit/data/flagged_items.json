@@ -75,7 +75,7 @@
     "id": "FLG-10",
     "category": "Repo Audit Irregularity · Broken OLRC Link (uscode.house.gov) in data/sources.csv Row S25",
     "official_value": "Verified replacement: govinfo.gov 42 U.S.C. §3604",
-    "analysis": "Existing repo file data/sources.csv row S25 points to uscode.house.gov/view.xhtml?..., which returns 'Page Not Found' on 2026-11-06. Flagged for review; replaced across /dashboard/ with live-verified U.S. Government Publishing Office (govinfo.gov) statutory URL.",
+    "analysis": "Existing repo file data/sources.csv row S25 points to uscode.house.gov/view.xhtml?..., which returns 'Page Not Found' on 2026-11-06. Flagged for review; replaced across /portal/ with live-verified U.S. Government Publishing Office (govinfo.gov) statutory URL.",
     "status": "Irregularity — Flagged for Review",
     "sources": ["fha_3604_gpo", "hud_fha"]
   },
@@ -83,7 +83,7 @@
     "id": "FLG-11",
     "category": "Repo Audit Irregularity · Non-Official Commercial Blogs & Post-2/28/2027 1.6% Claim in research/ & site/",
     "official_value": "1.6% expires 2027-02-28; commercial blogs excluded",
-    "analysis": "Earlier session files in research/ and site/ cited 10 commercial domains and applied 1.6% to a June 1, 2027 effective date. Flagged for review; zero commercial domains are used in /dashboard/.",
+    "analysis": "Earlier session files in research/ and site/ cited 10 commercial domains and applied 1.6% to a June 1, 2027 effective date. Flagged for review; zero commercial domains are used in /portal/.",
     "status": "Irregularity — Flagged for Review",
     "sources": ["sfrb_form571", "sfrb_rate_2026"]
   },

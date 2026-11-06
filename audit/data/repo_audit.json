@@ -65,10 +65,10 @@
   },
   {
     "id": "RA-09",
-    "category": "Repo Privacy & Anonymization Audit (All Tracked Files)",
-    "official_value": "0 personal tokens exposed",
-    "analysis": "Line-by-line scan of docs/, docs/v1/, data/, research/, site/, EXECUTIVE_SUMMARY.md, and README.md confirmed zero tenant initials, real names, street addresses, or personal contact details appear in tracked files.",
-    "status": "Verified Official Rule",
+    "category": "Privacy & Anonymization Audit (/portal/ & /audit/ vs. Earlier Session Drafts)",
+    "official_value": "0 personal tokens in /portal/ and /audit/",
+    "analysis": "Automated allowlist privacy scan confirmed zero tenant initials, real names, street addresses, or personal contact details appear anywhere in /portal/ or /audit/. Note: earlier session files in site/, research/, and docs/v1/executive_summary.md were flagged in COORDINATION.md for raw-initial cleanup by the shared-file integration owner without cross-scope edits.",
+    "status": "Irregularity — Flagged for Review",
     "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
   }
 ]

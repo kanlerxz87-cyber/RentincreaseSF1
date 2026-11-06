@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic static site builder for /dashboard/ (Outer Sunset 94122 Rent Increase Audit)."""
+"""Deterministic static site builder for /portal/ (Outer Sunset 94122 Rent Increase Audit)."""
 
 from __future__ import annotations
 
@@ -8,8 +8,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-DATA_DIR = ROOT / "dashboard" / "data"
-OUT_DIR = ROOT / "dashboard"
+DATA_DIR = ROOT / "audit" / "data"
+OUT_DIR = ROOT / "portal"
 ASSETS_DIR = OUT_DIR / "assets"
 
 PAGES = [
