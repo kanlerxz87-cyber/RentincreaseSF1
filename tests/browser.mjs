@@ -1,0 +1,111 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import http from 'node:http';
+import path from 'node:path';
+import os from 'node:os';
+import { chromium as playwright } from 'playwright-core';
+import chromium, { inflate, setupLambdaEnvironment } from '@sparticuz/chromium';
+import { buildSite, isOfficialUrl } from '../scripts/build.mjs';
+
+const root = path.resolve(import.meta.dirname, '..');
+const outDir = path.join(root, '.tmp', 'browser-site');
+buildSite({ root, outDir });
+const data = JSON.parse(fs.readFileSync(path.join(root, 'analysis/dashboard.json'), 'utf8'));
+const types = { '.html': 'text/html; charset=utf-8', '.css': 'text/css; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json', '.csv': 'text/csv', '.svg': 'image/svg+xml', '.txt': 'text/plain' };
+const server = http.createServer((request, response) => {
+  const pathname = decodeURIComponent(new URL(request.url, 'http://localhost').pathname);
+  const file = path.resolve(outDir, `.${pathname === '/' ? '/index.html' : pathname}`);
+  if (!file.startsWith(outDir + path.sep) || !fs.existsSync(file) || !fs.statSync(file).isFile()) { response.writeHead(404); response.end('Not found'); return; }
+  response.writeHead(200, { 'Content-Type': types[path.extname(file)] || 'application/octet-stream' });
+  fs.createReadStream(file).pipe(response);
+});
+await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
+const base = `http://127.0.0.1:${server.address().port}`;
+let browser;
+const errors = [];
+const externalRequests = [];
+try {
+  // The serverless Chromium pack also carries the NSS/NSPR libraries needed
+  // on non-Amazon Linux CI runners. Keep security/CSP enforcement enabled.
+  await inflate(path.join(root, 'node_modules', '@sparticuz', 'chromium', 'bin', 'al2023.tar.br'));
+  setupLambdaEnvironment(path.join(os.tmpdir(), 'al2023', 'lib'));
+  const safeArgs = chromium.args.filter(arg => !['--disable-web-security', '--allow-running-insecure-content', '--disable-site-isolation-trials'].includes(arg));
+  browser = await playwright.launch({ executablePath: await chromium.executablePath(), args: safeArgs, headless: true });
+  const page = await browser.newPage({ viewport: { width: 1440, height: 1000 } });
+  page.on('pageerror', error => errors.push(error.message));
+  page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
+  page.on('request', request => { if (!request.url().startsWith(base) && !request.url().startsWith('data:')) externalRequests.push(request.url()); });
+  for (const item of data.pages) {
+    const response = await page.goto(`${base}/${item.file}`, { waitUntil: 'networkidle' });
+    assert.equal(response.status(), 200, item.file);
+    await page.locator('h1').waitFor();
+    assert.ok((await page.title()).includes('San Francisco Rent Increase Review'));
+    const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);
+    if (overflow) console.log('Overflow diagnostics', item.file, await page.evaluate(() => ({ inner: innerWidth, scroll: document.documentElement.scrollWidth, elements: [...document.querySelectorAll('*')].filter(e => e.getBoundingClientRect().right > innerWidth + 1).slice(0, 12).map(e => ({ tag: e.tagName, class: e.className, right: Math.round(e.getBoundingClientRect().right), width: Math.round(e.getBoundingClientRect().width) })) })));
+    assert.equal(overflow, false, `Horizontal page overflow on ${item.file}`);
+    const badSourceLinks = await page.locator('a.source-link').evaluateAll(links => links.map(link => link.href).filter(href => !href.startsWith('https://')));
+    assert.deepEqual(badSourceLinks, []);
+    const missingLabels = await page.locator('input:not([type=checkbox]), select').evaluateAll(inputs => inputs.filter(input => !input.labels?.length).map(input => input.id));
+    assert.deepEqual(missingLabels, [], `Unlabelled inputs on ${item.file}`);
+  }
+  await page.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
+  await page.screenshot({ path: path.join(root, '.tmp', 'dashboard-desktop.png'), fullPage: true });
+  await page.getByRole('link', { name: 'Reported units', exact: true }).click();
+  assert.ok(page.url().endsWith('/units.html'));
+  await page.goto(`${base}/review.html`, { waitUntil: 'networkidle' });
+  const totalRows = await page.locator('tbody tr:visible').count();
+  await page.locator('#table-search').fill('banking');
+  const filteredRows = await page.locator('tbody tr:visible').count();
+  assert.ok(filteredRows > 0 && filteredRows < totalRows);
+  await page.locator('#clear-filters').click();
+  assert.equal(await page.locator('tbody tr:visible').count(), totalRows);
+  await page.locator('#status-filter').selectOption('flagged');
+  assert.ok(await page.locator('tbody tr:visible').count() > 0);
+  assert.equal(await page.locator('tbody tr:visible:not([data-status="flagged"])').count(), 0);
+  await page.goto(`${base}/sources.html`, { waitUntil: 'networkidle' });
+  await page.locator('#jurisdiction-filter').selectOption('Federal');
+  assert.ok(await page.locator('tbody tr:visible').count() > 0);
+  assert.equal(await page.locator('tbody tr:visible:not([data-jurisdiction="Federal"])').count(), 0);
+  const sourceHrefs = await page.locator('#source-register tbody a').evaluateAll(links => links.map(link => link.href));
+  assert.ok(sourceHrefs.every(isOfficialUrl));
+  await page.goto(`${base}/calculator.html`, { waitUntil: 'networkidle' });
+  await page.locator('#use-reported').click();
+  assert.equal(await page.locator('#base').inputValue(), '3995');
+  assert.equal(await page.locator('#base-verified').isChecked(), false);
+  await page.locator('#effective').fill('2026-11-06');
+  await page.locator('#anniversary').fill('2026-02-01');
+  await page.locator('#last-increase').fill('2025-02-01');
+  await page.locator('#service-date').fill('2026-10-01');
+  await page.locator('#calculate').click();
+  assert.match(await page.locator('#calculator-output').innerText(), /\$63\.92/);
+  assert.match(await page.locator('#calculator-output').innerText(), /\$4,058\.92/);
+  assert.match(await page.locator('#calculator-output').innerText(), /Conditional illustration only/);
+  for (const id of ['base-verified', 'coverage-verified', 'compliance-verified', 'exclusions-verified', 'review-verified']) await page.locator(`#${id}`).check();
+  await page.locator('#calculate').click();
+  assert.match(await page.locator('#calculator-output').innerText(), /Supplied checks pass—not legal approval/);
+  await page.locator('#review-verified').uncheck();
+  await page.locator('#calculate').click();
+  assert.match(await page.locator('#calculator-output').innerText(), /Conditional illustration only/);
+  await page.locator('#reset-calculator').click();
+  assert.equal(await page.locator('#base').inputValue(), '');
+  assert.match(await page.locator('#calculator-output').innerText(), /No lawful rent is determined/);
+  const storage = await page.evaluate(() => ({ local: localStorage.length, session: sessionStorage.length }));
+  assert.deepEqual(storage, { local: 0, session: 0 });
+  await page.setViewportSize({ width: 390, height: 844 });
+  await page.goto(`${base}/index.html`, { waitUntil: 'networkidle' });
+  assert.equal(await page.locator('#menu-toggle').getAttribute('aria-expanded'), 'false');
+  await page.locator('#menu-toggle').click();
+  assert.equal(await page.locator('#menu-toggle').getAttribute('aria-expanded'), 'true');
+  await page.keyboard.press('Escape');
+  assert.equal(await page.locator('#menu-toggle').getAttribute('aria-expanded'), 'false');
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1), false);
+  await page.screenshot({ path: path.join(root, '.tmp', 'dashboard-mobile.png'), fullPage: true });
+  await page.goto(`${base}/calculator.html`, { waitUntil: 'networkidle' });
+  await page.screenshot({ path: path.join(root, '.tmp', 'calculator-mobile.png'), fullPage: true });
+  assert.deepEqual(externalRequests, [], 'The static site must not make external asset or data requests');
+  assert.deepEqual(errors, [], 'Browser console/page errors');
+  console.log(`Browser checks passed: ${data.pages.length} desktop pages, mobile navigation/layout, filters, calculator, privacy/storage, and zero external requests.`);
+} finally {
+  await browser?.close();
+  await new Promise(resolve => server.close(resolve));
+}

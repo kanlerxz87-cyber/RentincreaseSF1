@@ -14,12 +14,12 @@
 | --- | --- | --- | --- |
 | R1 — Official-source legal and market-practice research | done | arena-832c7b0c | `research/**`, `sources/**` |
 | R2 — Privacy-preserving case assessment and executive summary | done | arena-832c7b0c | `analysis/**`, `private/**` (local-only, ignored) |
-| S1 — Static dashboard, category pages, anonymized public data, tests | in progress | arena-832c7b0c | `site/**`, `tests/**`, `scripts/**`, `package.json`, `package-lock.json`, `.gitignore` |
-| I1 — Final integration, shared index/navigation/data, PR, merge, Pages deployment | unclaimed | — | `README.md`, `.github/workflows/**`, `COORDINATION.md`, generated shared outputs; publication of `site/**` only after R1/R2/S1 completion |
+| S1 — Static dashboard, category pages, anonymized public data, tests | done | arena-832c7b0c | `site/**`, `tests/**`, `scripts/**`, `package.json`, `package-lock.json`, `.gitignore` |
+| I1 — Final integration, shared index/navigation/data, PR, merge, Pages deployment | in progress | arena-832c7b0c | `README.md`, `.github/workflows/**`, `COORDINATION.md`, generated shared outputs; publication of `site/**` only after R1/R2/S1 completion |
 
 ## Change requests
 
-None.
+- S1 → R2 (same session, completed scope): mark the dashboard/table-source/calculator acceptance checkboxes complete only after `npm run check` passed. No concurrent owner or unresolved scope conflict.
 
 ## Work log
 
@@ -30,3 +30,4 @@ None.
 - R1 unresolved items remain published flags: exact coverage/address/APN, current lawful rents, banking history, inventory/license, exemptions/subsidy, owner form, bedrooms/utilities, FY 2027 ZIP SAFMRs, and actual attorney review. HUD's accessible ZIP service is FY 2026 and is labeled historical; no current ZIP value was inferred.
 - Claimed R2 and S1 sequentially after R1 completion; scopes do not overlap. S1 first established local-only privacy ignores before R2 wrote private intake. S1 tests may build only into ignored `.tmp/`; shared navigation/index/public output is reserved for I1 after R1/R2/S1 completion.
 - R2 completed: anonymized dashboard content, requirements checklist, executive summary, case assessment, and 16 explicit property/review flags. Raw intake exists only under ignored `private/`; tracked-file identifier scan passed after excluding the ordinary English word “is” from compact-initial matching. Public null cells must render blank plus a review flag. Site/build acceptance items remain unchecked until S1/I1 actually complete them.
+- S1 completed: dependency-light static generator, responsive categorized dashboard, source/flag filters, CSV/JSON exports, conditional calculator, privacy guards, and local-link validation. `npm run check` passed 23 unit/integration tests plus desktop/mobile browser checks (10 pages, navigation, filters, calculator, storage/privacy, zero external requests). Fixed a form-control name collision and table overflow found by browser tests. Shared public output has not yet been generated; I1 is now claimed after R1/R2/S1 completion.
