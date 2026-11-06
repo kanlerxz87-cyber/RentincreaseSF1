@@ -2,9 +2,13 @@
 """
 Static site generator for Rent Increase SF.
 
-Reads everything from data/*.json so that no fact on the site exists in two
+Reads everything from data/v2/*.json so that no fact on the site exists in two
 places. Output is plain HTML + one CSS file, no JavaScript framework, no CDN,
 no runtime fetch: it works from GitHub Pages and from the filesystem.
+
+This is the "companion edition" (v2) of the site. It is published under
+docs/v2/ so that it sits alongside, and never overwrites, the site generated
+by the earlier session (docs/*.html).
 
 Usage:  python3 build/build.py
 """
@@ -16,8 +20,8 @@ import re
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
-OUT = ROOT
+DATA = os.path.join(ROOT, "data", "v2")
+OUT = os.path.join(ROOT, "docs", "v2")
 
 # --------------------------------------------------------------------------
 # helpers
@@ -91,6 +95,7 @@ NAV = [
     ("flags.html", "Flagged for review"),
     ("sources.html", "Sources"),
     ("method.html", "Method"),
+    ("reconciliation.html", "Reconciliation"),
 ]
 
 
@@ -842,11 +847,80 @@ def build_method():
                 "How the data was collected, verified and checked &mdash; and what remains uncertain.", body)
 
 
+def build_reconciliation():
+    rec = load("reconciliation.json")
+    ed_rows = [[
+        "<strong>%s</strong>" % esc(e["name"]),
+        '<a href="%s">%s</a>' % (esc(e["url"]), esc(e["path"])),
+        esc(e["built_by"]),
+        esc(e["pages"]),
+        esc(e["status"]),
+    ] for e in rec["editions"]]
+
+    agree_rows = [[
+        esc(a["finding"]),
+        esc(a["this_site"]),
+        esc(a["main_edition"]),
+        '<span class="pill ok">%s</span>' % esc(a["agrees"]),
+        '<a href="../index.html">main edition</a>' if not a.get("source") else src(a["source"]),
+    ] for a in rec["agreement"]]
+
+    diff_rows = [[
+        "<strong>%s</strong>" % esc(d["topic"]),
+        esc(d["this_site"]),
+        esc(d["main_edition"]),
+        esc(d["reading"]),
+        src(d["source"]) if d.get("source") else '<a href="../index.html">main edition</a>',
+    ] for d in rec["differences"]]
+
+    open_items = "".join("<li>%s</li>" % esc(x) for x in rec["unresolved_by_both"])
+
+    body = f"""
+    <p class="lead">{esc(rec["context"])}</p>
+
+    <div class="callout key">
+      <h3>The headline</h3>
+      <p>Two independent analyses of the same primary sources arrived at <strong>identical figures to the cent</strong> &mdash; $63.92, $119.85, $412.65, $4,058.92, $4,114.85, $3,562.65 &mdash; identical notice periods, and independently flagged the same two substantive uncertainties. Nothing on this page changes a number.</p>
+    </div>
+
+    <section>
+      <h2>The editions of this site</h2>
+      {table(["Edition","Path","Built by","Scope","Status"], ed_rows)}
+      <p class="note">Read the main edition first. This companion edition adds the 31-row requirement matrix, the complete 1982&ndash;2027 rate table, the 14-point tenant-lawyer review test and the 13-item flag register, which the main edition does not duplicate.</p>
+    </section>
+
+    <section>
+      <h2>Where the two agree</h2>
+      {table(["Finding","This edition","Main edition","Agrees","Cross-check"], agree_rows)}
+    </section>
+
+    <section>
+      <h2>Where they differ, and how to read the difference</h2>
+      {table(["Topic","This edition","Main edition","How to read it","Source"], diff_rows)}
+    </section>
+
+    <section>
+      <h2>Open in both editions</h2>
+      <p>These are factual gaps in the owner's records, not disagreements about the law. Neither edition fills them in.</p>
+      <ul class="checks">{open_items}</ul>
+    </section>
+
+    <section>
+      <h2>Conclusion</h2>
+      <p>{esc(rec["conclusion"])}</p>
+      <p class="note">{esc(rec["sources_note"])}</p>
+    </section>
+    """
+    return page("reconciliation.html", "Reconciliation",
+                "What the three published editions of this analysis agree on, and where they legitimately differ.", body)
+
+
 def main():
     written = [
         build_index(), build_summary(), build_answers(), build_calculations(),
         build_requirements(), build_notice(), build_practice(), build_review(),
         build_rates(), build_flags(), build_sources(), build_method(),
+        build_reconciliation(),
     ]
     print("wrote %d pages: %s" % (len(written), ", ".join(written)))
 

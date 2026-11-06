@@ -21,9 +21,10 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
+DATA = os.path.join(ROOT, "data", "v2")
+PUB = os.path.join(ROOT, "docs", "v2")
 
-PAGES = sorted(f for f in os.listdir(ROOT) if f.endswith(".html"))
+PAGES = sorted(f for f in os.listdir(PUB) if f.endswith(".html"))
 
 # Names supplied by the owner. These must never appear in published output.
 FORBIDDEN_NAMES = ["L O", "V N", "JP", "M T", "E R", "I S"]
@@ -50,11 +51,11 @@ def read(path):
 # ---------------------------------------------------------------- 1 + 2 links
 ids_by_page = {}
 for p in PAGES:
-    body = read(os.path.join(ROOT, p))
+    body = read(os.path.join(PUB, p))
     ids_by_page[p] = set(re.findall(r'id="([^"]+)"', body))
 
 for p in PAGES:
-    body = read(os.path.join(ROOT, p))
+    body = read(os.path.join(PUB, p))
     for href in re.findall(r'href="([^"]+)"', body):
         if href.startswith(("http://", "https://", "mailto:")):
             continue
@@ -66,7 +67,7 @@ for p in PAGES:
             else:
                 ok("anchor")
             continue
-        dest = os.path.join(ROOT, target)
+        dest = os.path.join(PUB, target)
         if not os.path.isfile(dest):
             fail("%s: broken internal link -> %s" % (p, target))
             continue
@@ -77,7 +78,7 @@ for p in PAGES:
         ok("link")
 
 # ------------------------------------------------------- 3 external sources
-all_html = "\n".join(read(os.path.join(ROOT, p)) for p in PAGES)
+all_html = "\n".join(read(os.path.join(PUB, p)) for p in PAGES)
 # hrefs are HTML-escaped in output (& -> &amp;); compare against both forms
 def unescaped(text):
     return text.replace("&amp;", "&")
@@ -108,7 +109,7 @@ ok("source-ids")
 for p in PAGES:
     if p in ("index.html",):
         continue
-    body = read(os.path.join(ROOT, p))
+    body = read(os.path.join(PUB, p))
     for tbl_i, table_html in enumerate(re.findall(r"<table.*?</table>", body, re.S)):
         for row_i, row in enumerate(re.findall(r"<tr>(.*?)</tr>", table_html, re.S)):
             if "<th>" in row:
@@ -124,7 +125,7 @@ for p in PAGES:
 
 # ------------------------------------------- 4b column counts match the header
 for p in PAGES:
-    body = read(os.path.join(ROOT, p))
+    body = read(os.path.join(PUB, p))
     for tbl_i, table_html in enumerate(re.findall(r"<table.*?</table>", body, re.S)):
         ncols = None
         for row_i, row in enumerate(re.findall(r"<tr>(.*?)</tr>", table_html, re.S)):
@@ -142,7 +143,7 @@ for p in PAGES:
 for name in FORBIDDEN_NAMES:
     pat = r"\b%s\b" % re.escape(name)
     for p in PAGES:
-        if re.search(pat, read(os.path.join(ROOT, p))):
+        if re.search(pat, read(os.path.join(PUB, p))):
             fail("privacy: personal name %r found in %s" % (name, p))
 ok("privacy")
 
