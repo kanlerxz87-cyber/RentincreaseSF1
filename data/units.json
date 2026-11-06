@@ -1,0 +1,60 @@
+{
+  "property": {
+    "jurisdiction": "San Francisco, CA 94122 (Outer Sunset)",
+    "year_built": 1940,
+    "units": 2,
+    "coverage_basis": "Built on or before 13 June 1979 and not a single-family dwelling → presumed covered by both rent control and just-cause eviction protection (S06). Certificate of occupancy not yet independently checked — see F05.",
+    "anonymisation": "Tenant identifiers are role labels only. Dates and dollar amounts are unaltered from the owner's records."
+  },
+  "units": [
+    {
+      "id": "Unit A",
+      "role": "Unit 1 in the brief",
+      "status": "Rent-controlled, tenant in occupancy",
+      "lease_start": "2025-02-01",
+      "lease_start_display": "1 February 2025",
+      "base_rent": 3995.00,
+      "initial_tenants": 3,
+      "current_tenants": 2,
+      "continued_tenant": true,
+      "rent_date": "2026-04-01",
+      "rent_date_display": "1 April 2026",
+      "facts": [
+        "Base rent of record: $3,995.00 per month from 1 February 2025.",
+        "Three tenants named on the initial lease (anonymised as Tenant A-1, A-2, A-3).",
+        "Current occupancy: Tenant A-1 continues; Tenant A-4 added; the rent line dated 1 April 2026 remains $3,995.00.",
+        "At least one tenant from the original lease remains in possession, which on its face makes this a continuing tenancy rather than a new tenancy (see F03)."
+      ],
+      "legal_consequences": [
+        "Because the tenancy began 1 February 2025, the first annual increase may take effect no earlier than 1 February 2026 (S01).",
+        "Adding Tenant A-4 cannot itself justify any rent increase, even if a lease clause says otherwise (S01, S08 §37.3(a)(11)).",
+        "The allowable annual increase in effect on any effective date between 1 March 2026 and 28 February 2027 is 1.6% (S01, S02, S03).",
+        "No banked amount is available yet. The 1.4% that could first have been imposed on 1 February 2026 banks only after a full 12 months have elapsed from that date — i.e. from 1 February 2027 under Rule 4.12 (S07), or 1 February 2028 under the 24-month wording on S04 (see F01)."
+      ]
+    },
+    {
+      "id": "Unit B",
+      "role": "Unit 2 in the brief",
+      "status": "Rent-controlled, tenant in occupancy",
+      "lease_start": "2019-06-01",
+      "lease_start_display": "1 June 2019",
+      "base_rent": 3150.00,
+      "initial_tenants": 2,
+      "current_tenants": 2,
+      "continued_tenant": true,
+      "rent_date": null,
+      "rent_date_display": "No later rent line supplied",
+      "facts": [
+        "Base rent of record: $3,150.00 per month from 1 June 2019.",
+        "Two tenants on the lease (anonymised as Tenant B-1 and Tenant B-2).",
+        "No increase notices for 2019–2026 were supplied, so the rent history is unverified (see F04).",
+        "Unit B's rent is 21.2% below Unit A's rent ($3,150 vs $3,995) on the facts as supplied."
+      ],
+      "legal_consequences": [
+        "If no increase has been imposed since 1 June 2019, seven annual increases have become available on 1 June of 2020–2026 and most of them are banked (S04, S07).",
+        "Any single increase greater than 10% of the rent charged in the preceding 12 months needs 90 days' written notice, not 30 (S15, S01).",
+        "An above-allowable increase would require a Rent Board petition; the fact that a long-standing tenant pays below market is expressly not a sufficient ground (S12)."
+      ]
+    }
+  ]
+}

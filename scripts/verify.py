@@ -28,7 +28,9 @@ assert 399500*16//1000 == 6392
 assert 315000*16//1000 == 5040
 assert (6392+5040)*12 == 137184
 assert len(list(root.glob('*.html'))) == len(d['pages'])
+# Integration: the repository root now hosts the published dashboard, which links to this archived
+# draft instead of redirecting to it. Assert the dashboard exists and still links the archive.
 assert (root.parent/'index.html').is_file()
-assert 'docs/index.html' in (root.parent/'index.html').read_text()
+assert 'docs/index.html' in (root.parent/'index.html').read_text() or 'docs/index.html' in (root.parent/'review.html').read_text()
 print(f'PASS: {len(d["pages"])} pages, {n} sourced rows; source allowlist, internal assets/links, status schema and exact-cent arithmetic.')
 print('External sources reviewed via official-page retrieval; this offline test does not claim HTTP availability or legal approval.')

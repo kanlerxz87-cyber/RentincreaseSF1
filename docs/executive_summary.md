@@ -10,14 +10,14 @@
 
 ### Unit 1
 - **Last Lease Start:** February 1, 2025 @ $3,995 per month
-- **Initial Lease Tenants:** L O, V N, JP
-- **Continuing Tenancy Current Tenants:** L O and M T
+- **Initial Lease Tenants:** Tenant A-1, Tenant A-2, Tenant A-3
+- **Continuing Tenancy Current Tenants:** Tenant A-1 and Tenant A-4
 - **Current Rent (April 1, 2026):** $3,995 per month
 - **Anniversary Date:** February 1 (Last lease start) / April 1 (Current tenancy update)
 
 ### Unit 2
 - **Last Lease Start:** June 1, 2019 @ $3,150 per month
-- **Tenants:** E R and I S
+- **Tenants:** Tenant B-1 and Tenant B-2
 - **Anniversary Date:** June 1
 
 ## Legal Framework & Allowable Increases
@@ -95,7 +95,7 @@
 - **Unit 2:** $3,150 × 1.6% = $50.40 → New Rent: $3,200.40
 
 ### Irregularities to Flag
-- **Unit 1 tenancy change:** L O and M T (April 1, 2026) vs original tenants (L O, V N, JP) - ensure notice follows current tenancy [Internal]
+- **Unit 1 tenancy change:** Tenant A-1 and Tenant A-4 (April 1, 2026) vs original tenants (Tenant A-1, Tenant A-2, Tenant A-3) - ensure notice follows current tenancy [Internal]
 - **Unit 2 anniversary:** June 1, 2026 (already passed) - verify if increase was applied [Internal]
 - **Banking:** Check if any previous increases were banked [Internal]
 
