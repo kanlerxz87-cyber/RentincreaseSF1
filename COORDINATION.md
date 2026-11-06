@@ -226,6 +226,6 @@ another session may take over D8 and must note the handoff in this log.
 
 | Item | Value |
 |---|---|
-| PR | *(recorded after creation)* |
-| Merge result | *(recorded after merge)* |
-| Pages deploy | *(recorded after verification)* |
+| PR | [#6](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/6) — "Add independent official-source verification dashboard at /dashboard/" |
+| Merge result | *(to be recorded after merge; PR #6 is merged without waiting for review)* |
+| Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
