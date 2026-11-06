@@ -57,6 +57,15 @@ def src(ids):
     return " ".join(out)
 
 
+MONTHS = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"]
+
+
+def longdate(iso):
+    year, month, day = iso.split("-")
+    return "%s %d, %s" % (MONTHS[int(month) - 1], int(day), year)
+
+
 def money(value):
     if value is None or value == "":
         return '<span class="blank">&mdash; unverified</span>'
@@ -66,7 +75,7 @@ def money(value):
 def pct(value):
     if value is None or value == "":
         return '<span class="blank">&mdash; unverified</span>'
-    return "%s%%" % ("%g" % value)
+    return "%.1f%%" % float(value)
 
 
 NAV = [
@@ -407,7 +416,7 @@ def build_calculations():
             <div><span>Rent at lease start</span><strong>{money(unit["rent_at_lease_start"])}</strong></div>
             <div><span>Current tenants</span><strong>{esc(unit["current_tenants"])}</strong></div>
             <div><span>Current rent</span><strong>{money(unit["current_rent"])}</strong></div>
-            <div><span>Anniversary date</span><strong>{esc(unit["anniversary_reading_a"]["date"])}</strong></div>
+            <div><span>Anniversary date</span><strong>{longdate(unit["anniversary_reading_a"]["date"])}</strong></div>
           </div>
           {table(["Scenario","Effective","Components","Total %","Increase / mo","New rent","Notice","Status"], rows)}
           {conditions}
@@ -669,7 +678,7 @@ def build_rates():
             used.append("Unit 2")
         rows.append([
             esc(r["period"]),
-            "<strong>%s%%</strong>" % ("%g" % r["pct"]),
+            "<strong>%.1f%%</strong>" % float(r["pct"]),
             ", ".join(used) or '<span class="muted">&mdash;</span>',
             src("S03"),
         ])
@@ -681,8 +690,8 @@ def build_rates():
     <div class="stats">
       <div class="stat"><span>Periods listed</span><strong>{len(aga["rows"])}</strong></div>
       <div class="stat"><span>Current rate</span><strong>1.6%</strong></div>
-      <div class="stat"><span>Unit 1 uses</span><strong>{"%g" % used1}%</strong></div>
-      <div class="stat"><span>Unit 2 uses</span><strong>{"%g" % used2}%</strong></div>
+      <div class="stat"><span>Unit 1 uses</span><strong>{used1:.1f}%</strong></div>
+      <div class="stat"><span>Unit 2 uses</span><strong>{used2:.1f}%</strong></div>
     </div>
 
     <div class="callout">
