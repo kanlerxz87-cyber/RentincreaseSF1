@@ -1,0 +1,194 @@
+[
+  {
+    "id": "S01",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Learn about rent increases in San Francisco",
+    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+    "supports": "Current allowable increase 1.6% (3/1/2026–2/28/2027); once per 12 months; base rent only; no rounding up; 30/90-day notice; rent increase license; additional occupants cannot be charged; anniversary date rules."
+  },
+  {
+    "id": "S02",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov) news release, 14 Jan 2026",
+    "title": "Annual Rent Increase for 3/1/26 – 2/28/27 Announced",
+    "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+    "supports": "1.6% effective 3/1/2026–2/28/2027; prior year 1.4% (3/1/2025–2/28/2026); worked dollar example."
+  },
+  {
+    "id": "S03",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board, form 571",
+    "title": "Allowable Annual Rent Increases (full historical table)",
+    "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+    "supports": "Every allowable annual increase percentage from 4/1/1982 through 2/28/2027."
+  },
+  {
+    "id": "S04",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Banked rent increases",
+    "url": "https://www.sf.gov/information--banked-rent-increases",
+    "supports": "Banking since 4/1/1982; no cap on banked amount; not compounded or prorated; does not expire during a tenancy; new owners may use predecessors' banked amounts; does not carry to a new tenant; states a 24-month test (see F01)."
+  },
+  {
+    "id": "S05",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Annual rent increase for multiple years",
+    "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years",
+    "supports": "Multi-year increases are added, not compounded; no petition required; no rounding up; 30/35-day notice; worked 8.2% example."
+  },
+  {
+    "id": "S06",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Learn about San Francisco rental laws",
+    "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws/",
+    "supports": "Rent control + just cause for units built on or before 13 June 1979 that are not single-family dwellings; list of partial/full exemptions; Property Information Map for build date."
+  },
+  {
+    "id": "S07",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board Rules and Regulations, Part IV",
+    "title": "Rules 4.10 (Notice) and 4.12 (Banking)",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+    "supports": "Verbatim text of Rule 4.12(a)/(b): 12-month banking test, one increase per 12 months, no compounding/rounding, disclosure of banked portion and dates; Rule 4.10(b): non-conforming increase is null and void."
+  },
+  {
+    "id": "S08",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Board of Supervisors",
+    "title": "Administrative Code Chapter 37 (Rent Ordinance) as amended 24 Nov 2024",
+    "url": "https://www.sf.gov/sites/default/files/2024-12/600%20Ordinance%2011-24-24.pdf",
+    "supports": "§37.3(a)(1) annual increase ≤60% of CPI and ≤7%, license required; §37.3(a)(2) banking; §37.3(a)(8) above-allowable increases need a §37.8 petition; §37.3(a)(11) no increase for additional occupants; §37.3(b) notice content and void-if-nonconforming; §37.10C algorithmic-device ban."
+  },
+  {
+    "id": "S09",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "The Rent Board Housing Inventory / rent increase license",
+    "url": "https://www.sf.gov/rent-board-housing-inventory",
+    "supports": "Annual reporting deadline 1 March; a rent increase license is required before any annual or banked increase can take effect; notice is not enforceable without a license on the effective date."
+  },
+  {
+    "id": "S10",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Landlord Petitions and Passthroughs",
+    "url": "https://www.sf.gov/landlord-petitions-and-passthroughs",
+    "supports": "The six increase types that require a petition (capital improvement, O&M, special circumstances/comparable rents, Prop I rent history, utility passthrough, Rule 1.21); no filing fee; petitions must precede the notice."
+  },
+  {
+    "id": "S11",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov), topic 322",
+    "title": "Operating and Maintenance Expense Petitions",
+    "url": "https://www.sf.gov/information/topic-no-322-operating-and-maintenance-expense-petitions",
+    "supports": "O&M petition allows up to 7% extra only if O&M expenses rose more than the annual allowable increase over two comparison years; must be filed before the notice; becomes part of base rent."
+  },
+  {
+    "id": "S12",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov), topic 323",
+    "title": "Special Circumstances Petitions Based on Rents for Comparable Units",
+    "url": "https://www.sf.gov/information/topic-no-323-special-circumstances-petitions-based-rents-comparable-units",
+    "supports": "\"The mere fact that a long-standing tenant is paying significantly less than market rent is not considered an extraordinary circumstance\"; petition required; one-time only; precludes other increases."
+  },
+  {
+    "id": "S13",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Tenant Petitions",
+    "url": "https://www.sf.gov/tenant-petitions",
+    "supports": "Free tenant petitions include Unlawful Rent Increase / determination of lawful rent and Tenant Summary Petition for an invalid notice; the Rent Board does not adjudicate harassment, discrimination or retaliation."
+  },
+  {
+    "id": "S14",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Civil Code §1947.12 (Tenant Protection Act / AB 1482)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
+    "supports": "Statewide cap = 5% + CPI change, max 10%; max two increments per 12 months; new-tenancy reset; §1947.12(d)(3) exempts units under a stricter local ordinance."
+  },
+  {
+    "id": "S15",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Civil Code §827 (notice of rent increase)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+    "supports": "30 days' notice if the increase is 10% or less; 90 days if greater than 10%; service personally or by mail per Code of Civil Procedure §1013; longer period controls if another law requires it."
+  },
+  {
+    "id": "S16",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Civil Code §1954.52 (Costa-Hawkins)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.52",
+    "supports": "Owner may set initial and subsequent rates for units with a certificate of occupancy after 1 Feb 1995 or that are separately alienable — the exemptions relied on by newer condos/SFRs, not by this 1940 multi-unit building."
+  },
+  {
+    "id": "S17",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Civil Code §1954.53 (vacancy re-pricing)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
+    "supports": "An owner may establish the initial rental rate for a new tenancy, except where the prior tenancy was terminated by the owner's notice or a §827 change in terms."
+  },
+  {
+    "id": "S18",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Civil Code §1942.5 (retaliation)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
+    "supports": "A landlord may not increase rent or reduce services in retaliation for a tenant's repair complaint, agency complaint, inspection, or tenant-organising activity, including a 180-day window after specified tenant actions."
+  },
+  {
+    "id": "S19",
+    "tier": "Official — State of California",
+    "publisher": "California Legislative Information",
+    "title": "Government Code §12955 (FEHA — housing discrimination)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955",
+    "supports": "Unlawful for an owner to discriminate or harass because of race, color, religion, sex, gender identity/expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran/military status or genetic information; §12955(f) bars retaliatory eviction/discrimination."
+  },
+  {
+    "id": "S20",
+    "tier": "Official — Federal",
+    "publisher": "U.S. Department of Housing and Urban Development",
+    "title": "Housing Discrimination Under the Fair Housing Act",
+    "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+    "supports": "Federal Fair Housing Act prohibits discrimination in rental housing because of race, color, national origin, religion, sex, familial status or disability."
+  },
+  {
+    "id": "S21",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Rent Board (sf.gov)",
+    "title": "Rent Board Referral Listing (free and low-cost tenant resources)",
+    "url": "https://www.sf.gov/reports--january-2025--rent-board-referral-listing",
+    "supports": "Official list of tenant legal/counselling resources, including Eviction Defense Collaborative, Bay Area Legal Aid, SF Tenants Union, Tenants Together, Advancing Justice–Asian Law Caucus, Housing Rights Committee, and Open Door Legal with a Sunset office in ZIP 94122."
+  },
+  {
+    "id": "S22",
+    "tier": "Program operator (non-government)",
+    "publisher": "Eviction Defense Collaborative",
+    "title": "What is Tenant Right to Counsel — Prop F",
+    "url": "https://evictiondefense.org/faq-items/what-is-tenant-right-to-counsel-prop-f/",
+    "supports": "City-funded Tenant Right to Counsel programme: tenants who received an eviction notice or an unlawful detainer and do not live with the landlord have a right to a free attorney, full-scope representation. EDC is named as the intake point in the Rent Board's official §37.9(c) notice form."
+  },
+  {
+    "id": "S23",
+    "tier": "Primary filing — SEC",
+    "publisher": "AvalonBay Communities, Inc.",
+    "title": "Form 10-K for fiscal year ended 31 Dec 2024 (filed with the SEC)",
+    "url": "https://investors.avalonbay.com/sec-filings/all-sec-filings/content/0000915912-25-000005/0000915912-25-000005.pdf",
+    "supports": "Institutional-owner practice: leases of one year or less; staggering lease expirations to seasonal demand; premium pricing for customer segments; centralised renewal activity; explicit statement that rents and renewal increases are limited by fair housing laws and by state/local rent regulations."
+  },
+  {
+    "id": "S24",
+    "tier": "Official — City & County of San Francisco",
+    "publisher": "SF Human Rights Commission",
+    "title": "Civil Rights Division — housing discrimination complaints",
+    "url": "https://www.sf.gov/information/civil-rights-division",
+    "supports": "The City body that investigates and mediates discrimination complaints in housing, employment and public accommodations — the local forum for a discrimination claim (the Rent Board does not hear these)."
+  }
+]

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "F01",
+    "severity": "High",
+    "title": "The two official SF sources disagree on how long a skipped increase takes to “bank”",
+    "detail": "Rent Board Rules and Regulations §4.12(a) says “A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed before this banking section becomes applicable.” The Rent Board's own explanatory page says “A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost.” Nothing on either page reconciles the two.",
+    "impact": "For Unit B this is worth 1.4 percentage points (the 2025–26 increase of 1.4%): 13.1% under the 12-month reading versus 11.7% under the 24-month reading, i.e. $44.10 per month on a $3,150 base rent.",
+    "action": "Do not rely on the 1.4% component until a Rent Board counselor confirms which test applies. Treat 11.7% as the ceiling in the meantime.",
+    "sources": ["S07", "S04"],
+    "status": "Open — needs official confirmation"
+  },
+  {
+    "id": "F02",
+    "severity": "Medium",
+    "title": "Two official worked examples attach the percentage to the wrong year",
+    "detail": "The rule stated on the same page is to “use the percentage that will be in effect on the date of the increase”. The example for an increase effective 1 June 2026 nevertheless labels 1.6% as “the annual allowable increase in effect on June 1, 2025”, and the multiple-years example for an increase effective 1 May 2026 labels 1.6% as the increase “in effect on June 1, 2026”. The percentages themselves are right for the effective dates; the labels are not.",
+    "impact": "No effect on the numbers for these two units, because 1.6% is the rate in effect for every effective date between 1 March 2026 and 28 February 2027. It does matter if an increase is scheduled near 1 March 2027.",
+    "action": "Apply the rate in effect on the effective date (1.6% through 28 February 2027). Re-check the 2027–28 rate before any notice that takes effect on or after 1 March 2027.",
+    "sources": ["S01", "S05"],
+    "status": "Open — documentation defect upstream"
+  },
+  {
+    "id": "F03",
+    "severity": "High",
+    "title": "Unit A: new tenancy or continuing tenancy with an added occupant?",
+    "detail": "The brief gives a 1 February 2025 lease start with three tenants at $3,995, then a 1 April 2026 rent line at the same $3,995 with one original tenant and one added tenant. Which of two very different situations applies is not stated: (a) a continuing tenancy in which an occupant was added — in which case no increase may be charged for the added occupant at all; or (b) the original tenancy ended and a new tenancy was created — in which case the $3,995 is a freely set initial rent and the 12-month clock restarts.",
+    "impact": "Determines Unit A's lawful base rent, its anniversary date and its next allowable increase date.",
+    "action": "Confirm from the signed leases whether any original tenant remained continuously in possession. If yes, treat 1 February 2025 as the tenancy start and 1 February as the anniversary.",
+    "sources": ["S01", "S08", "S17"],
+    "status": "Open — facts required"
+  },
+  {
+    "id": "F04",
+    "severity": "High",
+    "title": "Unit B: no rent history was supplied for 2019–2026",
+    "detail": "Only the 1 June 2019 start and a $3,150 rent are documented. Any increase imposed in the intervening years would reduce the banked total; the banked total in this report is a conditional maximum that assumes no increase notice was ever served.",
+    "impact": "The 11.7%/13.1% figures are ceilings, not entitlements. Overstating a banked amount is the single most common way an SF increase is later found unlawful and refunded.",
+    "action": "Produce the full rent ledger (lease, every increase notice, bank statements or receipts showing amounts paid) before serving any notice above 1.6%.",
+    "sources": ["S04", "S07", "S13"],
+    "status": "Open — records required"
+  },
+  {
+    "id": "F05",
+    "severity": "Medium",
+    "title": "Coverage is inferred from the build year, not yet verified from a City record",
+    "detail": "Coverage rests on the stated 1940 construction date. The Rent Board's own test is whether the building was built on or before 13 June 1979 and is not a single-family dwelling. The certificate of occupancy and the legal unit count have not been pulled from the City's Property Information Map or the Assessor's records.",
+    "impact": "If the building were legally a single-family dwelling, or if a unit were exempt for another reason, the rent cap would not apply (though just-cause eviction protection still would).",
+    "action": "Look the address up on the SF Property Information Map and keep a screenshot with the report.",
+    "sources": ["S06"],
+    "status": "Open — City record check"
+  },
+  {
+    "id": "F06",
+    "severity": "Medium",
+    "title": "“No federal rent cap” is an absence-of-law finding, not a citation",
+    "detail": "No federal statute, regulation or agency page was located that caps rent in private-market residential housing. The federal layer that does apply to this tenancy is anti-discrimination law (Fair Housing Act). This is recorded as a negative finding so it is not mistaken for a verified positive rule.",
+    "impact": "None on the numbers. Federal law neither raises nor lowers the 1.6% local cap.",
+    "action": "Reviewer may accept, or supply a counter-source if one exists.",
+    "sources": ["S20"],
+    "status": "Open — reviewer confirmation"
+  },
+  {
+    "id": "F07",
+    "severity": "Medium",
+    "title": "The 2027–28 allowable increase is not published yet",
+    "detail": "The Rent Board publishes the annual figure every 1 March. The last published figure is 1.6% for 1 March 2026 – 28 February 2027. Any notice that takes effect on or after 1 March 2027 must use the not-yet-announced rate.",
+    "impact": "Unit A's natural next anniversary (1 February 2027) falls just inside the known window; an effective date on or after 1 March 2027 does not.",
+    "action": "Re-check sf.gov before serving any notice in 2027.",
+    "sources": ["S01", "S02", "S03"],
+    "status": "Open — time-dependent"
+  },
+  {
+    "id": "F08",
+    "severity": "Medium",
+    "title": "No official statistic defines a “normal” increase for ZIP 94122",
+    "detail": "The Rent Board sets one citywide percentage; it does not publish a per-ZIP norm, and no City, State or federal source publishes a verified “normal” year-over-year increase for 94122. Market-rent data from listing portals is not an official source, so none is reproduced here and none was used in any calculation.",
+    "impact": "The defensible definition of “reasonable and normal” for these units is the published allowable increase plus properly documented banked amounts — not a market comparison.",
+    "action": "Accept, or request a specific market-data source to be added as clearly-labelled unofficial context.",
+    "sources": ["S01", "S06"],
+    "status": "Open — scope decision"
+  },
+  {
+    "id": "F09",
+    "severity": "Low",
+    "title": "Unit A has two different dates in the brief",
+    "detail": "The brief labels 1 February 2025 as the “last lease start” and separately records “April 1, 2026 @ $3,995” as a continuing-tenancy rent line. These are treated in this report as two distinct facts (tenancy start and a later rent line), not as competing tenancy dates.",
+    "impact": "Affects which document is the “current” lease and therefore the anniversary date.",
+    "action": "Confirm which document governs the current term.",
+    "sources": ["S01"],
+    "status": "Reviewed — interpretation stated"
+  },
+  {
+    "id": "F10",
+    "severity": "Low",
+    "title": "Rent Board form 571 has a metadata mismatch",
+    "detail": "The PDF that contains the allowable-increase table parses with the document title “517: Allowable Annual Increases 26-27”, while the file name, the sf.gov link text and the body all say 571. The content itself (the percentages) is internally consistent and matches the news release.",
+    "impact": "None on the data; noted so a reviewer is not confused by the title.",
+    "action": "No action; cite by URL, not by form number alone.",
+    "sources": ["S03"],
+    "status": "Reviewed — no data impact"
+  },
+  {
+    "id": "F11",
+    "severity": "Low",
+    "title": "Rent Board fee amounts deliberately omitted",
+    "detail": "The annual Rent Board fee per unit is not reproduced because it was not verified against the official fee page in this pass, and it has no bearing on how much rent may be charged.",
+    "impact": "None on the increase analysis.",
+    "action": "Verify on sf.gov/rent-board-fee if the fee amount is needed.",
+    "sources": ["S09"],
+    "status": "Reviewed — out of scope"
+  }
+]
