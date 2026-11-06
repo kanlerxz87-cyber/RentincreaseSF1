@@ -1,0 +1,676 @@
+{
+  "checked": "2026-11-06",
+  "sources": {
+    "rate": [
+      "SF Rent Board \u00b7 2026 announcement",
+      "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced"
+    ],
+    "rules": [
+      "SF Rent Board \u00b7 rent increase guide",
+      "https://www.sf.gov/learn-about-rent-increases-san-francisco"
+    ],
+    "license": [
+      "SF Rent Board \u00b7 Housing Inventory",
+      "https://www.sf.gov/rent-board-housing-inventory"
+    ],
+    "coverage": [
+      "SF Rent Board \u00b7 coverage",
+      "https://www.sf.gov/learn-about-san-francisco-rental-laws"
+    ],
+    "bank": [
+      "SF Rent Board \u00b7 banked increases",
+      "https://www.sf.gov/information--banked-rent-increases"
+    ],
+    "petition": [
+      "SF Rent Board \u00b7 petitions",
+      "https://www.sf.gov/landlord-petitions-and-passthroughs"
+    ],
+    "state": [
+      "California Civil Code \u00a71947.12",
+      "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV"
+    ],
+    "notice": [
+      "California Civil Code \u00a7827",
+      "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827.&lawCode=CIV"
+    ],
+    "crd": [
+      "California Civil Rights Department",
+      "https://calcivilrights.ca.gov/housing/"
+    ],
+    "hud": [
+      "HUD \u00b7 Fair Housing Act",
+      "https://www.hud.gov/helping-americans/fair-housing-act-overview"
+    ],
+    "help": [
+      "SF \u00b7 tenant and landlord resources",
+      "https://www.sf.gov/tenant-and-landlord-resources"
+    ],
+    "retaliation": [
+      "California Civil Code \u00a71942.5",
+      "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV"
+    ]
+  },
+  "pages": {
+    "index": [
+      "Executive summary",
+      "A cautious path, not a market reset.",
+      [
+        [
+          "Recommended approach",
+          "Consider no increase or a modest annual-only increase up to the published 1.6%, after all eligibility checks. This is a conservative research recommendation, not a legal opinion or evidence of market norms.",
+          "Analysis",
+          [
+            "rate",
+            "rules"
+          ]
+        ],
+        [
+          "Current local allowance",
+          "1.6% of lawful base rent for covered units; effective March 1, 2026\u2013February 28, 2027. It is an allowance, not a mandatory increase and not a universal cap on every type of approved adjustment.",
+          "Verified rule",
+          [
+            "rate",
+            "petition"
+          ]
+        ],
+        [
+          "Unit 1 \u00b7 illustration",
+          "$3,995 \u00d7 0.016 = $63.92/month; illustrative new rent $4,058.92. Supplied base is unverified. No banked increase included; not an authorized amount.",
+          "Conditional calculation",
+          [
+            "rate",
+            "rules"
+          ]
+        ],
+        [
+          "Unit 2 \u00b7 illustration",
+          "$3,150 \u00d7 0.016 = $50.40/month; illustrative new rent $3,200.40. The 2019 rent is not confirmed as today\u2019s lawful base. No banked increase included.",
+          "Conditional calculation",
+          [
+            "rate",
+            "rules"
+          ]
+        ],
+        [
+          "Decision gate",
+          "Do not treat these illustrations as notices. Confirm coverage, lawful rent history, anniversary, lease permission, current license, service method, and discrimination/retaliation issues first.",
+          "Analysis",
+          [
+            "coverage",
+            "rules",
+            "license",
+            "crd",
+            "retaliation"
+          ]
+        ],
+        [
+          "One unit or both?",
+          "Applying the same neutral annual-review policy to both is recommended; actual dates and outcomes may differ. Raising both does not immunize discrimination, and raising only one is not by itself proof of it. Review the reasons and facts, not just numerical equality.",
+          "Analysis",
+          [
+            "crd",
+            "hud",
+            "rules"
+          ]
+        ],
+        [
+          "No guaranteed legal clearance",
+          "This is source-based legal information, not a tenant-lawyer review, litigation guarantee, or exhaustive title/lease audit. No lawyer has reviewed either proposed increase.",
+          "Needs review",
+          [
+            "rules",
+            "crd"
+          ]
+        ]
+      ]
+    ],
+    "units": [
+      "Units & calculations",
+      "Supplied facts are not verified records.",
+      [
+        [
+          "Unit 1 \u00b7 initial lease",
+          "User-supplied: February 1, 2025; $3,995/month. Household Alpha: three placeholder residents initially. Official-confirmed lease date and rent: blank.",
+          "Unverified",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Unit 1 \u00b7 continuing household",
+          "User-supplied: April 1, 2026; $3,995/month. Household Alpha: one continuing resident and one replacement resident. Official-confirmed terms: blank. No original initials retained.",
+          "Unverified",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Unit 2 \u00b7 lease",
+          "User-supplied: June 1, 2019; $3,150/month. Household Beta: two placeholder residents. Official-confirmed lease date, current rent and rent history: blank.",
+          "Unverified",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Building & area",
+          "User-supplied: Outer Sunset, San Francisco 94122; built 1940; both units rent-controlled. Official-confirmed construction, classification and coverage: blank. No street address or parcel supplied.",
+          "Unverified",
+          [
+            "coverage"
+          ]
+        ],
+        [
+          "Privacy boundary",
+          "No names, initials, address, parcel, contact details, or identity key are stored in this site. Dates and amounts remain as supplied. Their combination can still create re-identification risk; this public site is not a confidential file store.",
+          "Analysis",
+          [
+            "license"
+          ]
+        ],
+        [
+          "Unit 1 \u00b7 timing",
+          "A first annual increase generally requires 12 months after the lease began. The supplied February 1, 2025 date is not a verified eligibility date. The April 2026 household change does not itself authorize a roommate surcharge or market reset. Review leases and actual occupancy.",
+          "Analysis",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Unit 2 \u00b7 timing and banking",
+          "Do not assume no increases since 2019 from an old lease figure. Current lawful base, last increase and banked entitlement remain blank until the complete ledger and notices are reviewed.",
+          "Needs review",
+          [
+            "bank",
+            "petition"
+          ]
+        ],
+        [
+          "Annual-only arithmetic",
+          "At 1.6%, Unit 1 illustration: +$63.92 monthly / +$767.04 over 12 full months. Unit 2 illustration: +$50.40 monthly / +$604.80 over 12 full months. Combined +$114.32 monthly / +$1,371.84 over 12 full months; not a calendar-year revenue forecast.",
+          "Conditional calculation",
+          [
+            "rate"
+          ]
+        ],
+        [
+          "Effective dates",
+          "Actual proposed effective date for each unit: blank. Do not assume a 2027 rate beyond February 28, 2027 from the current posting.",
+          "Needs review",
+          [
+            "rate",
+            "notice"
+          ]
+        ]
+      ]
+    ],
+    "law": [
+      "Rules & legal framework",
+      "Local protection comes first for covered units.",
+      [
+        [
+          "San Francisco coverage",
+          "Many units built on or before June 13, 1979 have local rent control, but exceptions and classification matter. A reported 1940 construction date alone does not establish coverage.",
+          "Verified rule",
+          [
+            "coverage"
+          ]
+        ],
+        [
+          "Local annual method",
+          "Apply the published percentage effective on the increase date to base rent, including housing services such as parking/storage; exclude temporary passthroughs and fluctuating charges. Do not round up to a whole dollar.",
+          "Verified rule",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Local frequency",
+          "First annual increase generally after 12 months; subsequent annual increases at least 12 months apart. A delayed increase changes the anniversary date.",
+          "Verified rule",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "California cap relationship",
+          "Civil Code \u00a71947.12(a) sets the state cap at the lesser of 5% plus cost-of-living change or 10% for covered property. Subdivision (d)(3) exempts housing under a valid, lower local rent cap. Do not substitute the larger state formula for SF\u2019s covered-unit allowance.",
+          "Verified rule",
+          [
+            "state",
+            "rate"
+          ]
+        ],
+        [
+          "Federal protections",
+          "The Fair Housing Act prohibits housing discrimination based on race, color, national origin, religion, sex, familial status and disability. HUD\u2019s cited overview establishes protections, not a numeric SF rent allowance. Subsidy-program status is unverified here.",
+          "Verified rule",
+          [
+            "hud"
+          ]
+        ],
+        [
+          "State fair housing",
+          "CRD identifies broader state protections, reasonable accommodation obligations and prohibitions on retaliation for exercising fair housing rights. Ownership size does not establish immunity from these rules; exemptions need fact-specific review.",
+          "Verified rule",
+          [
+            "crd"
+          ]
+        ],
+        [
+          "Additional occupants",
+          "An additional or replacement roommate moving in with an existing tenant is not itself a lawful reason for additional rent, even if a lease says otherwise.",
+          "Verified rule",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "Banking",
+          "Properly banked percentages are added, not compounded or prorated. Skipped increases generally require at least 24 full months without an increase to bank; partial unused increases have separate rules. Anniversary changes can lose an increase. No banked total is established here.",
+          "Verified rule",
+          [
+            "bank"
+          ]
+        ],
+        [
+          "Beyond annual allowance",
+          "Capital improvements, operating/maintenance and other adjustments have distinct petition/worksheet rules. Cost increases do not automatically authorize an arbitrary surcharge; review the applicable process and approval before collection.",
+          "Verified rule",
+          [
+            "petition"
+          ]
+        ],
+        [
+          "ZIP-level norm",
+          "Official-confirmed typical increase for Outer Sunset 94122: blank. The cited annual allowance is a city rent-control rule, not a neighborhood market survey or a requirement to reach market rent.",
+          "Unverified",
+          [
+            "rate",
+            "coverage"
+          ]
+        ],
+        [
+          "Retaliation protections",
+          "Civil Code \u00a71942.5 addresses rent increases in retaliation for habitability complaints, tenant organizing and lawful exercise of rights. Its 180-day provisions have conditions and exceptions; do not treat timing alone as automatic legal clearance or automatic liability.",
+          "Verified rule",
+          [
+            "retaliation"
+          ]
+        ]
+      ]
+    ],
+    "practice": [
+      "Fairness & business practice",
+      "Consistent process, individual legal eligibility.",
+      [
+        [
+          "Large corporations \u00b7 empirical practice",
+          "Official-confirmed usual SF corporate increase percentage and frequency: blank. The reviewed official sources do not establish what corporations typically charge; no industry norm is asserted.",
+          "Unverified",
+          [
+            "rules",
+            "crd"
+          ]
+        ],
+        [
+          "Individual owners \u00b7 empirical practice",
+          "Official-confirmed usual SF small-owner increase percentage and frequency: blank. No claim that individual owners always increase annually, skip years, or use a particular percentage.",
+          "Unverified",
+          [
+            "rules",
+            "crd"
+          ]
+        ],
+        [
+          "Suggested business process \u00b7 either owner type",
+          "Maintain a rent ledger, conduct a documented annual eligibility review, use the published allowance, verify the license and retain the served notice/service record. This is a recommended workflow, not a verified survey of owner behavior.",
+          "Analysis",
+          [
+            "rules",
+            "license",
+            "notice"
+          ]
+        ],
+        [
+          "Reasons for an annual increase",
+          "Use the annual allowable adjustment as the legal basis if eligible. If explaining budget pressures, use only actual documented insurance, repairs, taxes or operating costs; do not claim those costs establish a right to exceed the allowance. Do not invent expenses.",
+          "Analysis",
+          [
+            "rules",
+            "petition"
+          ]
+        ],
+        [
+          "One unit only",
+          "Different legal anniversaries, fixed-term lease constraints or documented decisions to defer may justify different outcomes. These are possible neutral explanations, not established facts about these households or a legal safe harbor.",
+          "Analysis",
+          [
+            "rules",
+            "notice",
+            "crd"
+          ]
+        ],
+        [
+          "Both units",
+          "Prefer the same review criteria and, when appropriate, the same percentage rather than an equal dollar increase. Do not increase a second unit merely to conceal discriminatory treatment of the first. Record genuine reasons for any difference.",
+          "Analysis",
+          [
+            "crd",
+            "hud"
+          ]
+        ],
+        [
+          "Tenant-friendly challenge \u00b7 amount",
+          "A tenant reviewer should challenge the base rent, omitted credits/services, percentage date, prior increases, banked ledger and any unapproved passthrough. The calculation alone does not prove legality.",
+          "Analysis",
+          [
+            "rules",
+            "bank",
+            "petition"
+          ]
+        ],
+        [
+          "Tenant-friendly challenge \u00b7 motive",
+          "Review complaints, accommodation requests, protected activity and timing privately with counsel. A small increase can still be discriminatory or retaliatory; uniform increases do not cure unlawful motives. Do not profile tenants or collect protected characteristics for pricing.",
+          "Analysis",
+          [
+            "crd",
+            "hud",
+            "retaliation"
+          ]
+        ],
+        [
+          "Tenant access to help",
+          "The City directs tenants with rent increase notices to tenant counseling organizations and tenants with eviction court papers to immediate free legal help. This does not verify free individual lawyer review of every routine rent notice.",
+          "Verified guidance",
+          [
+            "help"
+          ]
+        ]
+      ]
+    ],
+    "notice": [
+      "Notice & review checklist",
+      "Preparation guidance \u2014 not a notice to serve.",
+      [
+        [
+          "1 \u00b7 Verify coverage and lease",
+          "Check property classification, actual lease term and any limits on mid-term increases. Lease end dates and clauses are unverified; do not treat an annual allowance as overriding a fixed-term promise.",
+          "Needs review",
+          [
+            "coverage",
+            "rules",
+            "notice"
+          ]
+        ],
+        [
+          "2 \u00b7 Verify lawful base and timing",
+          "Review the complete ledger, lease amendments, discounts, notices and last effective increase. No tenant-specific lawful base or anniversary has been certified here.",
+          "Needs review",
+          [
+            "rules",
+            "petition"
+          ]
+        ],
+        [
+          "3 \u00b7 Confirm license",
+          "Have a current rent increase license on file when an annual/banked increase becomes effective. Inventory reporting is due March 1 annually; submission data is public. The license need not be attached to the notice.",
+          "Verified rule",
+          [
+            "license"
+          ]
+        ],
+        [
+          "4 \u00b7 Notice period",
+          "At least 30 days written notice for increases of 10% or less; 90 days if greater than 10%, counting combined increases during the preceding 12 months. More notice does not make an excessive increase lawful.",
+          "Verified rule",
+          [
+            "notice",
+            "rules"
+          ]
+        ],
+        [
+          "5 \u00b7 Delivery",
+          "Civil Code \u00a7827 provides personal delivery or mail under Code of Civil Procedure \u00a71013. SF guidance adds five days for mailing; confirm \u00a71013\u2019s applicable extension if mailing outside California. Do not rely on email or text alone.",
+          "Verified rule",
+          [
+            "notice",
+            "rules"
+          ]
+        ],
+        [
+          "6 \u00b7 Content",
+          "Include dollar increase, percentage and effective date. Identify any banked portion. For clarity include current lawful base, resulting rent and unit identification in the private served document, never the public dashboard.",
+          "Analysis",
+          [
+            "rules",
+            "bank"
+          ]
+        ],
+        [
+          "7 \u00b7 Suggested explanation",
+          "If true: \u201cThis is an annual allowable base-rent adjustment using the SF Rent Board percentage effective on the stated date.\u201d Add verified calculation, required notice dates and a contact for questions. This sentence is not a completed statutory notice.",
+          "Analysis",
+          [
+            "rules",
+            "notice"
+          ]
+        ],
+        [
+          "8 \u00b7 Tenant-lawyer packet",
+          "Retain leases/amendments, complete rent ledger, prior notices and service evidence, current/historical licenses, calculation, banking records if claimed, relevant orders and documented neutral rationale. Have qualified SF counsel review unresolved issues before service.",
+          "Analysis",
+          [
+            "rules",
+            "license",
+            "bank",
+            "petition",
+            "crd"
+          ]
+        ],
+        [
+          "9 \u00b7 No automatic action",
+          "No notices have been served, rents changed, filings made, or legal approval obtained by this project. The research dashboard cannot certify unavailable private records.",
+          "Needs review",
+          [
+            "rules",
+            "license"
+          ]
+        ]
+      ]
+    ],
+    "flagged": [
+      "Flagged for Review",
+      "Transparent gaps. No invented values.",
+      [
+        [
+          "F01 \u00b7 Property records",
+          "Official-confirmed construction year, legal unit type and rent-control coverage: blank. Supplied 1940 and covered status are not independent verification. Resolve with property records and Rent Board classification, not public tenant details.",
+          "Needs review",
+          [
+            "coverage"
+          ]
+        ],
+        [
+          "F02 \u00b7 Rent histories",
+          "Official-confirmed current lawful base, prior increases, service components and banked entitlement for both units: blank. A lease amount is not a complete rent history.",
+          "Needs review",
+          [
+            "rules",
+            "bank",
+            "petition"
+          ]
+        ],
+        [
+          "F03 \u00b7 Household continuity",
+          "Unit 1 continuing occupancy and April 1, 2026 amendment terms are unverified. Do not assume a vacancy reset or an automatic new anniversary from a roommate change.",
+          "Needs review",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "F04 \u00b7 Licenses and leases",
+          "Current licenses, lease end dates, increase clauses, restrictions, subsidy terms and any Rent Board orders: blank. These are implementation gates, not reasons to prevent publication of this research.",
+          "Needs review",
+          [
+            "license",
+            "rules",
+            "coverage"
+          ]
+        ],
+        [
+          "F05 \u00b7 Market/business norms",
+          "Official-confirmed Outer Sunset typical increase, corporate typical increase and individual-owner typical increase: blank. Legal allowance is not evidence of actual market behavior.",
+          "Unverified",
+          [
+            "rate",
+            "rules"
+          ]
+        ],
+        [
+          "F06 \u00b7 Counsel clearance",
+          "Actual tenant-lawyer review and a guarantee of no discrimination claim: blank. No legal outcome can be promised from these facts.",
+          "Needs review",
+          [
+            "crd",
+            "hud",
+            "help"
+          ]
+        ],
+        [
+          "F07 \u00b7 Source example inconsistencies",
+          "The SF rent guide\u2019s one-year example labels June 1, 2025 as 1.6% although its stated 2026 calculation and announcement apply 1.6% to 2026. The banked guide also has an August 2024/2025 date mismatch in its example. Use explicit effective-period announcements and review examples carefully.",
+          "Needs review",
+          [
+            "rules",
+            "rate",
+            "bank"
+          ]
+        ],
+        [
+          "F08 \u00b7 Privacy limits",
+          "Dates and amounts remain public as requested; household labels replace all personal identifiers. Combinations of dates, rents and area can still be identifying. No public identity mapping or private leases are included.",
+          "Needs review",
+          [
+            "license"
+          ]
+        ],
+        [
+          "F09 \u00b7 Verification scope",
+          "Official pages were retrieved November 6, 2026. Links are for manual review; content can change. No exhaustive case-law search, authenticated property record review or independent legal opinion was performed.",
+          "Needs review",
+          [
+            "rules",
+            "notice",
+            "state",
+            "crd"
+          ]
+        ]
+      ]
+    ],
+    "sources": [
+      "Sources & methodology",
+      "Primary-source rules, not fabricated certainty.",
+      [
+        [
+          "rate",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 2026 announcement. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "rate"
+          ]
+        ],
+        [
+          "rules",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 rent increase guide. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "rules"
+          ]
+        ],
+        [
+          "license",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 Housing Inventory. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "license"
+          ]
+        ],
+        [
+          "coverage",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 coverage. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "coverage"
+          ]
+        ],
+        [
+          "bank",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 banked increases. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "bank"
+          ]
+        ],
+        [
+          "petition",
+          "Reviewed November 6, 2026. SF Rent Board \u00b7 petitions. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "petition"
+          ]
+        ],
+        [
+          "state",
+          "Reviewed November 6, 2026. California Civil Code \u00a71947.12. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "state"
+          ]
+        ],
+        [
+          "notice",
+          "Reviewed November 6, 2026. California Civil Code \u00a7827. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "notice"
+          ]
+        ],
+        [
+          "crd",
+          "Reviewed November 6, 2026. California Civil Rights Department. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "crd"
+          ]
+        ],
+        [
+          "hud",
+          "Reviewed November 6, 2026. HUD \u00b7 Fair Housing Act. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "hud"
+          ]
+        ],
+        [
+          "help",
+          "Reviewed November 6, 2026. SF \u00b7 tenant and landlord resources. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "help"
+          ]
+        ],
+        [
+          "retaliation",
+          "Reviewed November 6, 2026. California Civil Code \u00a71942.5. Supports the linked legal guidance only; it does not certify any household or property facts.",
+          "Verified guidance",
+          [
+            "retaliation"
+          ]
+        ]
+      ]
+    ]
+  }
+}
