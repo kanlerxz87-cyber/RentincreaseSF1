@@ -1,0 +1,176 @@
+{
+  "as_of": "2026-11-06",
+  "property": {
+    "city": "San Francisco",
+    "neighborhood": "Outer Sunset",
+    "zip": "94122",
+    "year_built": 1940,
+    "year_built_source": "Owner-supplied. Not independently verified in this session - see FLAG-01.",
+    "unit_count_shown": 2,
+    "coverage_basis": "Units built on or before June 13, 1979 that are not single-family dwellings generally have both rent control and eviction protection under the SF Rent Ordinance.",
+    "coverage_source": "S07"
+  },
+  "anonymization": {
+    "policy": "All tenant names are replaced with role labels. Dates and dollar amounts are unchanged, because the rent math depends on them.",
+    "name_map_held_internally": true,
+    "map_published": false
+  },
+  "units": [
+    {
+      "id": "Unit 1",
+      "label": "Two-bedroom unit, upper floor (placeholder description - not stated in source data)",
+      "lease_start": "2025-02-01",
+      "lease_start_display": "February 1, 2025",
+      "rent_at_lease_start": 3995.0,
+      "initial_tenants": "Tenant A, Tenant B, Tenant C",
+      "current_tenants": "Tenant A, Tenant D",
+      "current_tenancy_start": "2026-04-01",
+      "current_tenancy_start_display": "April 1, 2026",
+      "current_rent": 3995.0,
+      "current_rent_source": "Owner-supplied; unchanged from the February 1, 2025 lease rate. Consistent with no increase having been imposed. See FLAG-02.",
+      "anniversary_reading_a": {
+        "date": "2027-02-01",
+        "basis": "Original lease began February 1, 2025 and the rent has never been increased, so the anniversary date is February 1.",
+        "source": "S01"
+      },
+      "anniversary_reading_b": {
+        "date": "2027-04-01",
+        "basis": "A new lease began April 1, 2026 at the same rent. Read strictly as 'the date the lease began', that would make April 1 the anniversary date.",
+        "source": "S01"
+      },
+      "calculations": [
+        {
+          "id": "U1-A",
+          "scenario": "Annual increase only - conservative, works under either anniversary reading",
+          "effective_date": "2027-02-01",
+          "effective_display": "February 1, 2027",
+          "components": [{ "label": "Annual allowable increase (3/1/26-2/28/27 period)", "pct": 1.6, "source": "S03" }],
+          "total_pct": 1.6,
+          "increase_dollars": 63.92,
+          "new_rent": 4058.92,
+          "notice_days": 30,
+          "notice_basis": "Increase is 10% or less, so 30 days' written notice; 35 days if served by mail.",
+          "notice_source": "S24",
+          "confidence": "verified"
+        },
+        {
+          "id": "U1-B",
+          "scenario": "Annual increase plus the banked February 1, 2026 increase - requires the February 1 anniversary reading and exactly 24 full months with no increase",
+          "effective_date": "2027-02-01",
+          "effective_display": "February 1, 2027",
+          "components": [
+            { "label": "Banked: February 1, 2026 skipped annual increase (3/1/25-2/28/26 period)", "pct": 1.4, "source": "S03" },
+            { "label": "Annual allowable increase (3/1/26-2/28/27 period)", "pct": 1.6, "source": "S03" }
+          ],
+          "total_pct": 3.0,
+          "increase_dollars": 119.85,
+          "new_rent": 4114.85,
+          "notice_days": 30,
+          "notice_basis": "Increase is 10% or less, so 30 days' written notice; 35 days if served by mail.",
+          "notice_source": "S24",
+          "confidence": "conditional",
+          "condition": "Only if the February 1 anniversary date is the correct one AND at least 24 full months pass with no rent increase between February 1, 2025 and February 1, 2027. See FLAG-02."
+        },
+        {
+          "id": "U1-C",
+          "scenario": "Any increase effective on or after March 1, 2027",
+          "effective_date": "2027-03-01",
+          "effective_display": "March 1, 2027 or later",
+          "components": [],
+          "total_pct": null,
+          "increase_dollars": null,
+          "new_rent": null,
+          "notice_days": null,
+          "confidence": "unverified",
+          "note": "The 2027-28 allowable increase had not been announced as of 2026-11-06. The Rent Board announces it each year in January, effective March 1. Value intentionally left blank."
+        }
+      ]
+    },
+    {
+      "id": "Unit 2",
+      "label": "Second unit (placeholder description - not stated in source data)",
+      "lease_start": "2019-06-01",
+      "lease_start_display": "June 1, 2019",
+      "rent_at_lease_start": 3150.0,
+      "initial_tenants": "Tenant E, Tenant F",
+      "current_tenants": "Tenant E, Tenant F",
+      "current_tenancy_start": "2019-06-01",
+      "current_tenancy_start_display": "June 1, 2019",
+      "current_rent": 3150.0,
+      "current_rent_source": "Owner-supplied lease-start rate. No later increases were reported, so the model assumes $3,150 is still the lawful base rent. Assumption - see FLAG-03.",
+      "anniversary_reading_a": {
+        "date": "2027-06-01",
+        "basis": "Lease began June 1, 2019 and no increase has been imposed, so the anniversary date is June 1.",
+        "source": "S01"
+      },
+      "anniversary_reading_b": {
+        "date": "2027-06-01",
+        "basis": "Same result under either reading - no new lease was reported.",
+        "source": "S01"
+      },
+      "calculations": [
+        {
+          "id": "U2-A",
+          "scenario": "Annual increase only - no banked amounts used",
+          "effective_date": "2027-06-01",
+          "effective_display": "June 1, 2027",
+          "components": [{ "label": "Annual allowable increase (varies by year; 1.6% shown is the latest published)", "pct": 1.6, "source": "S03" }],
+          "total_pct": 1.6,
+          "increase_dollars": 50.4,
+          "new_rent": 3200.4,
+          "notice_days": 30,
+          "confidence": "conditional",
+          "condition": "Illustrative only. The rate in effect on June 1, 2027 is the 2027-28 rate, which is not yet announced. See U2-C."
+        },
+        {
+          "id": "U2-B",
+          "scenario": "Maximum using only published rates: every skipped annual increase from June 1, 2020 through June 1, 2026, plus the current annual increase. Effective on or before February 28, 2027.",
+          "effective_date": "2027-01-01",
+          "effective_display": "Any date on or before February 28, 2027 (example shown: January 1, 2027)",
+          "components": [
+            { "label": "Banked: June 1, 2020 (3/1/20-2/28/21 period)", "pct": 1.8, "source": "S03" },
+            { "label": "Banked: June 1, 2021 (3/1/21-2/28/22 period)", "pct": 0.7, "source": "S03" },
+            { "label": "Banked: June 1, 2022 (3/1/22-2/28/23 period)", "pct": 2.3, "source": "S03" },
+            { "label": "Banked: June 1, 2023 (3/1/23-2/29/24 period)", "pct": 3.6, "source": "S03" },
+            { "label": "Banked: June 1, 2024 (3/1/24-2/28/25 period)", "pct": 1.7, "source": "S03" },
+            { "label": "Banked: June 1, 2025 (3/1/25-2/28/26 period)", "pct": 1.4, "source": "S03" },
+            { "label": "Current annual increase (3/1/26-2/28/27 period)", "pct": 1.6, "source": "S03" }
+          ],
+          "total_pct": 13.1,
+          "increase_dollars": 412.65,
+          "new_rent": 3562.65,
+          "notice_days": 90,
+          "notice_basis": "Combined increase is more than 10%, so 90 days' written notice; 95 days if served by mail.",
+          "notice_source": "S24",
+          "confidence": "conditional",
+          "condition": "Requires that no rent increase has been imposed since June 1, 2019, that the increase is effective no later than February 28, 2027, and that the owner's Housing Inventory reporting is current. See FLAG-03 and FLAG-04."
+        },
+        {
+          "id": "U2-C",
+          "scenario": "Any increase effective on or after March 1, 2027",
+          "effective_date": "2027-03-01",
+          "effective_display": "March 1, 2027 or later",
+          "components": [],
+          "total_pct": null,
+          "increase_dollars": null,
+          "new_rent": null,
+          "notice_days": null,
+          "confidence": "unverified",
+          "note": "13.1% remains banked and does not expire, and the 2027-28 annual increase would be added on top. That rate is not yet published, so the total is left blank."
+        }
+      ]
+    }
+  ],
+  "arithmetic_notes": [
+    "Percentages are added, never compounded. Source S04 and S05.",
+    "The dollar amount is the total percentage multiplied by the CURRENT base rent, not by each year's rent. Source S04.",
+    "No rounding up to the nearest dollar is permitted. Source S01.",
+    "Unit 1 check: 3995 x 0.016 = 63.92 exactly; 3995 x 0.030 = 119.85 exactly.",
+    "Unit 2 check: 3150 x 0.131 = 412.65 exactly; 3150 x 0.016 = 50.40 exactly."
+  ],
+  "differential": {
+    "unit1_max_pct": 3.0,
+    "unit2_max_pct": 13.1,
+    "explanation": "The maximum lawful increase differs sharply between the two units even though they are in the same building, because the legal ceiling is a function of each tenancy's own history of skipped increases - not of the unit's size, condition, or market rent."
+  }
+}

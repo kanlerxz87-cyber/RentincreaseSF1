@@ -1,19 +1,63 @@
-name: Verify research dashboard
+name: Verify published site
+
+# GitHub Pages for this repository is served from `main` (legacy branch
+# publishing, root `/`), with `index.html` redirecting to `docs/index.html`.
+# This workflow therefore only verifies; it does not deploy.
+
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
   workflow_dispatch:
+
 permissions:
   contents: read
+
 jobs:
   verify:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - run: python scripts/build.py && python scripts/verify.py
-      - run: git diff --exit-code -- docs
+
+      - name: Link, anchor, citation, CSV and privacy checks
+        run: python3 tools/check_links.py
+
+      - name: Confirm the Pages entry points exist
+        run: |
+          test -f index.html
+          test -f docs/index.html
+          test -f docs/.nojekyll
+          test -f docs/flagged.html
+          test -f docs/sources.html
+          echo "entry points present"
+
+      - name: Confirm no personal identifiers in the published tree
+        run: |
+          ! grep -rInE '\b(L O|V N|JP|M T|E R|I S)\b' docs/*.html docs/*/*.html docs/*/*/*.html
+          echo "no tenant initials found"
+
+      # ---- companion edition (docs/v2) ----
+      - name: Companion edition is reproducible from data/v2
+        run: |
+          python3 build/build.py
+          if ! git diff --quiet -- docs/v2/; then
+            echo "::error::Committed docs/v2 HTML is out of date with data/v2/. Run 'python3 build/build.py' and commit."
+            git diff --stat -- docs/v2/
+            exit 1
+          fi
+          echo "generated companion pages match the committed files"
+
+      - name: Companion edition checks
+        run: python3 tools/check_site.py
+
+      - name: Confirm the companion edition entry point exists
+        run: |
+          test -f docs/v2/index.html
+          test -f docs/v2/reconciliation.html
+          test -f docs/v2/assets/style.css
+          echo "companion entry points present"

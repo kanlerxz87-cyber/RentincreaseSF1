@@ -1,0 +1,96 @@
+{
+  "title": "How increases are actually handled: large owners vs individual owners",
+  "important_limits": [
+    "No official dataset records how San Francisco owners set rents in practice. No source located in this session documents institutional or individual owner behaviour with evidence. The 'practice' rows below are therefore left blank and marked unverified rather than filled in from assumption.",
+    "The legal ceiling is identical whoever the owner is. Nothing in this section changes the 1.6% / banked analysis on the Calculations page.",
+    "California's statewide Tenant Protection Act covers many corporate owners, but in San Francisco the local 1.6% is stricter, so the local rule controls (S25, Sec. 1947.12(d)(3)). A common misconception is that a larger owner may use the state cap instead. It may not, in this city."
+  ],
+  "rows": [
+    {
+      "topic": "Maximum annual increase",
+      "large_owner": "1.6% of base rent for 3/1/26-2/28/27, plus properly banked amounts.",
+      "individual_owner": "Identical. No institutional exemption or alternative cap exists.",
+      "sources": ["S03", "S08"],
+      "status": "verified"
+    },
+    {
+      "topic": "Increases above the annual cap",
+      "large_owner": "Only by Rent Board petition: capital improvement, O&M (up to 7%), utility passthrough, special circumstances/comparable rents.",
+      "individual_owner": "Identical petition routes. Filing a petition is free for either owner.",
+      "sources": ["S12", "S13"],
+      "status": "verified"
+    },
+    {
+      "topic": "Frequency and notice",
+      "large_owner": "Once every 12 months; 30 days' notice, or 90 days if the increase exceeds 10%.",
+      "individual_owner": "Identical.",
+      "sources": ["S01", "S24"],
+      "status": "verified"
+    },
+    {
+      "topic": "Software-based rent setting",
+      "large_owner": "Revenue-management / algorithmic pricing tools that use non-public competitor data are banned in San Francisco. Owners using such tools had to change practice when Sec. 37.10C took effect on October 14, 2024. Penalty: up to $1,000 per violation, per unit, per month.",
+      "individual_owner": "Same ban.",
+      "sources": ["S15"],
+      "status": "verified"
+    },
+    {
+      "topic": "A practice that is banned but was historically common among large owners",
+      "large_owner": "Rent-setting software marketed on peer-landlord data. Now unlawful in San Francisco. This is the only documented, sourced statement this site can make about large-owner conduct.",
+      "individual_owner": "Not documented in any source located.",
+      "sources": ["S15"],
+      "status": "verified"
+    },
+    {
+      "topic": "How large owners otherwise set the amount",
+      "large_owner": "",
+      "individual_owner": "",
+      "sources": [],
+      "status": "unverified",
+      "flag": "FLAG-08",
+      "note": "No official source describes this. Nothing is filled in."
+    },
+    {
+      "topic": "How individual owners otherwise set the amount",
+      "large_owner": "",
+      "individual_owner": "",
+      "sources": [],
+      "status": "unverified",
+      "flag": "FLAG-08",
+      "note": "No official source describes this. Nothing is filled in."
+    },
+    {
+      "topic": "Where compliance most often breaks",
+      "large_owner": "The rent increase licence: reporting into the Housing Inventory annually by March 1. A notice is unenforceable without a licence in effect on the effective date.",
+      "individual_owner": "The same licence requirement, plus the 90-day notice rule when a banked increase pushes the total above 10%.",
+      "sources": ["S10", "S24"],
+      "status": "verified",
+      "note": "This row identifies the two rules easiest to breach in these particular facts. It is not a statistic and no rate of non-compliance is claimed."
+    },
+    {
+      "topic": "Dispute route available to the tenant",
+      "large_owner": "Free Rent Board petition (no time limit); free Rent Board ADR; City-listed free tenant counsellors; free legal representation through the Tenant Right to Counsel program at the eviction stage.",
+      "individual_owner": "Identical. The same free resources apply regardless of the owner's size.",
+      "sources": ["S20", "S34", "S23", "S33"],
+      "status": "verified"
+    },
+    {
+      "topic": "Market benchmark for Outer Sunset 94122",
+      "large_owner": "",
+      "individual_owner": "",
+      "sources": [],
+      "status": "unverified",
+      "flag": "FLAG-05",
+      "note": "No defensible ZIP-level market rent was obtained. HUD's interactive FMR lookup returned an empty result in this session and the Census API required a key. No market figure is used anywhere on this site, and none is needed: the lawful cap does not depend on market rent."
+    }
+  ],
+  "secondary_sources": [
+    {
+      "id": "secondary-01",
+      "publisher": "ReLISTO (San Francisco property manager)",
+      "title": "San Francisco Rent Increase 2026: What the 1.6% Allowable Increase Means for Landlords and Tenants",
+      "url": "https://www.relisto.com/blog/san-francisco-rent-increase-2026",
+      "note": "Commercial source, fetched 2026-11-06. It agrees with the Rent Board on 1.6% and on the missing October 2025 CPI as the reason for the estimated figure, and explains the geometric-mean method. It does NOT describe how owners set rents, so it is not cited for that. Retained here only as corroboration of the 1.6% figure."
+    }
+  ]
+}

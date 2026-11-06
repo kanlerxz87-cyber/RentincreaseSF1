@@ -1,0 +1,36 @@
+name: Verify site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate the site from data
+        run: python3 build/build.py
+
+      - name: Fail if generated HTML differs from the committed HTML
+        run: |
+          if ! git diff --quiet -- '*.html'; then
+            echo "::error::Committed HTML is out of date with data/. Run 'python3 build/build.py' and commit."
+            git diff --stat -- '*.html'
+            exit 1
+          fi
+          echo "Generated HTML matches the committed files."
+
+      - name: Run the verification suite
+        run: python3 tools/check_site.py

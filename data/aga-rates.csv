@@ -1,0 +1,9 @@
+effective_start,effective_end,allowable_increase_percent,source_id,notes
+2019-03-01,2020-02-29,2.6,S2,Not available to Unit 2 - first increase could not be imposed until 2020-06-01
+2020-03-01,2021-02-28,1.8,S2,Available on Unit 2 anniversary 2020-06-01
+2021-03-01,2022-02-28,0.7,S2,Available on Unit 2 anniversary 2021-06-01
+2022-03-01,2023-02-28,2.3,S2,Available on Unit 2 anniversary 2022-06-01
+2023-03-01,2024-02-29,3.6,S2,Available on Unit 2 anniversary 2023-06-01
+2024-03-01,2025-02-28,1.7,S2,Available on Unit 2 anniversary 2024-06-01
+2025-03-01,2026-02-28,1.4,S2,Available on Unit 2 anniversary 2025-06-01; also the rate that was available on Unit 1 on 2026-02-01
+2026-03-01,2027-02-28,1.6,S2,Current rate - available on Unit 2 anniversary 2026-06-01 and on any increase effective on or before 2027-02-28

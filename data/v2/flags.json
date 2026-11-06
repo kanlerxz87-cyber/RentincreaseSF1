@@ -1,0 +1,141 @@
+{
+  "title": "Flagged for Review",
+  "intro": "Everything on this page is either unverified, unconfirmed, or a discrepancy between sources. Nothing here blocks publication. Each item states exactly what is missing and what would resolve it. Values that could not be confirmed are left blank on the other pages rather than estimated.",
+  "severity_key": {
+    "high": "Affects the lawful maximum or whether the increase is enforceable. Resolve before serving a notice.",
+    "medium": "Affects how the file would be read by a tenant lawyer or the Rent Board. Resolve before serving a notice if possible.",
+    "low": "Documentation or source-quality gap. Does not change any number on this site."
+  },
+  "flags": [
+    {
+      "id": "FLAG-01",
+      "severity": "medium",
+      "title": "Year built (1940) is owner-supplied and was not independently confirmed",
+      "detail": "Rent control in San Francisco attaches to units in buildings with a certificate of occupancy on or before June 13, 1979. 1940 is far before that date, so coverage on age grounds is not in doubt. However, this session did not query the Assessor or the Planning Department Property Information Map for the actual permit or assessor record.",
+      "why_it_matters": "If a later permit created a new unit, or if either unit is legally a single-family dwelling, the coverage analysis changes. A single-family dwelling tenancy begun on or after January 1, 1996 can be partially exempt under Costa-Hawkins.",
+      "impact_on_numbers": "None. Coverage is treated as applying to both units.",
+      "resolution": "Look up the address on the SF Planning Property Information Map (S32) and the Assessor's records, and record the certificate-of-occupancy date and the dwelling-unit count.",
+      "sources": ["S07", "S32", "S19"]
+    },
+    {
+      "id": "FLAG-02",
+      "severity": "high",
+      "title": "Unit 1 anniversary date is ambiguous between February 1 and April 1",
+      "detail": "The original lease began February 1, 2025. A new tenancy is recorded as beginning April 1, 2026 at the same $3,995. The Rent Board defines the anniversary date as the date of the last rent increase, or, if there has never been an increase, the date the lease began. If the April 1, 2026 change is treated as a new lease, the anniversary date could be read as April 1.",
+      "why_it_matters": "It controls the earliest effective date of any increase and therefore which annual rate applies. It also controls whether the February 1, 2026 annual increase can be banked.",
+      "impact_on_numbers": "Two readings are presented. Reading A (February 1): 1.6% = $63.92, or 3.0% = $119.85 with the banked 1.4%. Reading B (April 1): the safest available increase is 1.6%, and the banked 1.4% becomes available only after April 1, 2028.",
+      "resolution": "Ask a Rent Board counsellor (415-252-4600) which date controls where the rent did not change but the named tenants did. Do not assume the more favourable reading.",
+      "sources": ["S01", "S04"]
+    },
+    {
+      "id": "FLAG-03",
+      "severity": "high",
+      "title": "Unit 2: it is an assumption that no increase has been taken since June 1, 2019",
+      "detail": "The briefing gives the June 1, 2019 lease rate of $3,150 and no later rate. The 13.1% figure depends entirely on no increase having been imposed since then, because each imposed increase resets the anniversary date and breaks the banking chain.",
+      "why_it_matters": "The 24-month banking test is what makes $412.65 available. One properly noticed increase anywhere in the chain reduces the total.",
+      "impact_on_numbers": "If any increase was taken, 13.1% is overstated and the lawful maximum is lower. The exact figure cannot be computed until the rent history is produced.",
+      "resolution": "Produce the rent ledger and every notice served since 2019 for Unit 2, and recompute. The Rent Board can also determine the lawful rent (S20).",
+      "sources": ["S04", "S03"]
+    },
+    {
+      "id": "FLAG-04",
+      "severity": "high",
+      "title": "Unit 2's 13.1% expires as a maximum on February 28, 2027",
+      "detail": "The 1.6% annual component is the rate for 3/1/26-2/28/27. A June 1 anniversary falls after that date, so a June 1, 2027 increase would use the 2027-28 rate, which the Rent Board has not yet announced. The banked 13.1% minus that component (11.5%) remains banked and does not expire, but the total cannot be stated until the new rate is published.",
+      "why_it_matters": "Someone may plan a June 1, 2027 increase using 13.1% and be wrong in either direction.",
+      "impact_on_numbers": "The 2027-28 components are left blank on the Calculations page.",
+      "resolution": "Watch for the Rent Board's annual announcement each January (S02 is the equivalent 2026 announcement) and recompute after publication.",
+      "sources": ["S02", "S03", "S04"]
+    },
+    {
+      "id": "FLAG-05",
+      "severity": "low",
+      "title": "No verified market rent for Outer Sunset 94122 was obtained",
+      "detail": "HUD publishes Fair Market Rents, and the FY2026 two-bedroom figure for the San Francisco HUD Metro FMR Area exists, but the interactive lookup returned an empty result for the area parameters available in this session, and the Census data API required an access key. No ZIP-level market rent was confirmed.",
+      "why_it_matters": "Market rent is not needed to compute the lawful cap, and it is expressly not a basis for exceeding it (S14). It would only matter if a Special Circumstances petition were contemplated.",
+      "impact_on_numbers": "None. No market figure is used anywhere on this site.",
+      "resolution": "Query the HUD FMR documentation system with the HUD Metro FMR Area parameter, or the Census ACS table B25064 for ZCTA 94122, and record the figure with its retrieval date.",
+      "sources": ["S31"]
+    },
+    {
+      "id": "FLAG-06",
+      "severity": "medium",
+      "title": "Whether $3,995 and $3,150 are entirely base rent is unconfirmed",
+      "detail": "The calculation must be made on base rent only, which can include parking or storage but excludes temporary passthroughs and fluctuating charges. The briefing gives a single monthly figure for each unit and does not say whether it includes a passthrough or a separate parking charge.",
+      "why_it_matters": "If any part of the stated rent is a passthrough, the base rent is lower and the dollar increase is lower.",
+      "impact_on_numbers": "Could reduce the dollar amounts. Percentages are unaffected.",
+      "resolution": "Check each lease and the most recent notices for any itemised passthrough, and confirm the base rent figure before calculating.",
+      "sources": ["S01", "S08"]
+    },
+    {
+      "id": "FLAG-07",
+      "severity": "medium",
+      "title": "Unit 1: the identity and role of the added tenant is unknown",
+      "detail": "Unit 1 moved from three named tenants to two named tenants including one who was not on the initial lease. Whether that person is a co-tenant or a subtenant determines whether an unlimited increase route under Sec. 6.14 / Costa-Hawkins could ever apply, and whether a 6.14 notice should have been served.",
+      "why_it_matters": "A co-tenant is not subject to an unlimited increase regardless of when the co-tenant moved in. A subtenant can be, but only if a written 6.14 notice was served within a reasonable time, generally 60 days, after the landlord learned of the occupancy.",
+      "impact_on_numbers": "None on the figures shown, because the unlimited route is not assumed to be available. It matters if you were considering anything above the annual amount.",
+      "resolution": "Establish whether Tenant D signed the lease or moved in as a subtenant, and whether any 6.14 notice was ever served. If none was served, do not rely on that route.",
+      "sources": ["S17"]
+    },
+    {
+      "id": "FLAG-08",
+      "severity": "low",
+      "title": "No sourced description of how large or individual owners actually set rents",
+      "detail": "The brief asks how big real estate corporations and individual owners handle increases. No official source describes owner behaviour, and the single commercial source located was checked against its own text and does not describe it either. Those rows are therefore left blank and marked unverified on the Practice page rather than filled from assumption.",
+      "why_it_matters": "It is a research gap, not a legal gap.",
+      "impact_on_numbers": "None.",
+      "resolution": "A defensible answer would need data, for example Rent Board petition volumes by owner type, or a peer-reviewed study. Neither was located in this session.",
+      "sources": []
+    },
+    {
+      "id": "FLAG-09",
+      "severity": "high",
+      "title": "Rent increase licence status for this building is unknown",
+      "detail": "A landlord must hold a rent increase licence, obtained by reporting into the Rent Board Housing Inventory, before an annual or banked increase can take effect. Reporting is annual by March 1, and for buildings with fewer than 10 units it began on March 1, 2023. Whether this owner has reported is not known.",
+      "why_it_matters": "A notice served without a licence in effect on the effective date is unenforceable, and the tenant is not obligated to pay the increase for the period of suspension. This defect voids an otherwise perfectly calculated increase.",
+      "impact_on_numbers": "None on the arithmetic; it can void the increase entirely.",
+      "resolution": "Check the property on the Rent Board Portal (portal.sfrb.org) or report if not already done, and keep a screenshot of the licence status dated before the notice is served.",
+      "sources": ["S09", "S10"]
+    },
+    {
+      "id": "FLAG-10",
+      "severity": "medium",
+      "title": "No information on repair complaints, inspections, organising or buyout discussions",
+      "detail": "The review tests for retaliation, harassment and the algorithmic-pricing ban cannot be assessed because no facts were supplied on repair complaints, DBI or health inspections, tenant association activity, or any prior buyout or offer-to-vacate discussion.",
+      "why_it_matters": "A rent increase within 180 days of a tenantability complaint is separately prohibited regardless of the amount. An increase within six months of an attempt to recover possession is expressly listed as evidence of bad faith. Either can convert a lawful amount into a violation.",
+      "impact_on_numbers": "None on the arithmetic. Can make the increase unlawful.",
+      "resolution": "Confirm in writing that none of those events occurred in the 180 days preceding the notice, and record that confirmation with the file.",
+      "sources": ["S27", "S11"]
+    },
+    {
+      "id": "FLAG-11",
+      "severity": "low",
+      "title": "Third-party sites publish a conflicting 1.7% figure for the same period",
+      "detail": "Several commercial rent calculators and blogs state that the 2026-27 allowable increase is 1.7%, and one states that the 2025-26 figure was 1.4% while the current one is 1.7%. The Rent Board's own pages and its official PDF both state 1.6% for 3/1/26-2/28/27 and 1.4% for 3/1/25-2/28/26. The 1.7% figure corresponds to 3/1/24-2/28/25 and appears to be an off-by-one-year error propagated between sites.",
+      "why_it_matters": "Using 1.7% instead of 1.6% would overstate the lawful increase. On Unit 1 that is the difference between $63.92 and $67.92.",
+      "impact_on_numbers": "None. 1.6% is used throughout, from the official source.",
+      "resolution": "None needed. Third-party figures are excluded from all calculations. Recorded here so the conflict is visible rather than silently resolved.",
+      "sources": ["S03", "S19", "S02"]
+    },
+    {
+      "id": "FLAG-12",
+      "severity": "low",
+      "title": "The 2026-27 rate itself is an estimate, not a straight CPI reading",
+      "detail": "October 2025 CPI was never published because of the 2025 lapse in federal appropriations. The Bureau of Labor Statistics confirms the missing value on its own release. The Rent Board therefore estimated the missing October 2025 CPI to preserve its October-to-October method, producing 1.6%. A similar approach is expected for the 2027-28 figure.",
+      "why_it_matters": "It explains why sources disagree, and it means the 2027-28 rate may be computed by an unusual method. It does not make 1.6% challengeable: it is the published, in-force rate.",
+      "impact_on_numbers": "None. 1.6% is the operative rate until February 28, 2027.",
+      "resolution": "None. Monitor the January announcement for the following year.",
+      "sources": ["S31", "S02"]
+    },
+    {
+      "id": "FLAG-13",
+      "severity": "low",
+      "title": "Tenant names are held internally and are not published",
+      "detail": "All personal names have been replaced with role labels throughout this site and its data files. Dates and dollar amounts are unchanged because the calculations depend on them. No name map exists in this repository.",
+      "why_it_matters": "Privacy. The KYC/anonymisation standard set for this project is that no personal information appears on the published site.",
+      "impact_on_numbers": "None.",
+      "resolution": "None needed while the internal key is kept offline. Do not add it to this repository.",
+      "sources": []
+    }
+  ]
+}
