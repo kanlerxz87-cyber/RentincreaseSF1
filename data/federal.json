@@ -1,0 +1,191 @@
+{
+  "page": {
+    "slug": "law-federal",
+    "title": "Federal Law & Fair Housing",
+    "category": "Legal Framework",
+    "order": 5,
+    "eyebrow": "Federal · United States",
+    "intro": "Federal law does not supply the percentage for a San Francisco rent-controlled increase — the local ordinance does. Federal law matters here in three verified ways: the Fair Housing Act's ban on discriminatory terms, the federal CPI that drives San Francisco's formula, and the historical expiry of federal rent control. {{S31}} {{S35}} {{S34}}",
+    "sections": [
+      {
+        "heading": "1. Is there a federal rent-increase cap?",
+        "body": "No official federal source establishing a numeric rent-increase cap for ordinary private rental housing was located. HUD's own legislative chronology records the 1942 statute that authorised federal rent control and the 1953 statute that allowed those controls to expire. Per the verification rule, the numeric cap cell is left blank rather than filled with an inference. {{S34}} {{F-09}} Note: HUD does publish rent-adjustment rules for federally subsidised projects, but those are program-specific and no evidence was provided that either unit is in such a program.",
+        "table": {
+          "caption": "Federal rent-increase cap — verification result",
+          "rows": [
+            {
+              "item": "Numeric federal cap on rent increases for ordinary private rental housing",
+              "value": "",
+              "basis": "No official federal source located that sets such a cap. Left blank by rule; do not substitute the local 1.6% or the state 8.8% figures here.",
+              "source": "S34",
+              "status": "unverified",
+              "flag": "F-09"
+            },
+            {
+              "item": "1942 — Emergency Price Control Act (Public Law 77-421)",
+              "value": "Authorised rent control and other emergency provisions",
+              "basis": "\"Authorizes rent control and other emergency provisions.\"",
+              "source": "S34",
+              "status": "verified"
+            },
+            {
+              "item": "1953 — Housing and Rent Act (Public Law 83-23)",
+              "value": "Allowed federal rent controls to expire July 31, 1953 (April 30, 1954 for critical defense housing areas)",
+              "basis": "\"Allows Federal rent controls to expire July 31, 1953, except that for critical defense housing areas, it extends the expiration date to April 30, 1954.\"",
+              "source": "S34",
+              "status": "verified"
+            },
+            {
+              "item": "Federal rules that do apply to a private landlord's increase",
+              "value": "Fair Housing Act (no discriminatory terms or conditions)",
+              "basis": "42 U.S.C. § 3604(b), quoted below; the HUD regulation at 24 CFR § 100.65 implements it.",
+              "source": "S31",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "2. Fair Housing Act — 42 U.S.C. § 3604",
+        "body": "The relevant federal rule for a rent increase is § 3604(b): it is unlawful to discriminate in the <em>terms, conditions, or privileges</em> of rental because of a protected characteristic. HUD lists seven protected classes; HUD's regulation at 24 CFR § 100.65 restates the prohibition on imposing different terms. {{S31}} {{S32}} {{S33}}",
+        "table": {
+          "caption": "Federal Fair Housing Act — verified statutory and regulatory text",
+          "rows": [
+            {
+              "item": "§ 3604(b) — terms and conditions",
+              "value": "Unlawful to discriminate in the terms, conditions or privileges of rental because of a protected characteristic",
+              "basis": "\"To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling, or in the provision of services or facilities in connection therewith, because of race, color, religion, sex, familial status, or national origin.\"",
+              "source": "S31",
+              "status": "verified"
+            },
+            {
+              "item": "§ 3604(f)(2) — disability",
+              "value": "Unlawful to discriminate in terms, conditions or privileges because of a handicap",
+              "basis": "\"To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling, or in the provision of services or facilities in connection with such dwelling, because of a handicap of … that person …\"",
+              "source": "S31",
+              "status": "verified"
+            },
+            {
+              "item": "§ 3604(c) — discriminatory notices or statements",
+              "value": "Unlawful to publish a notice indicating a preference, limitation or discrimination",
+              "basis": "\"To make, print, or publish … any notice, statement, or advertisement, with respect to the sale or rental of a dwelling that indicates any preference, limitation, or discrimination …\"",
+              "source": "S31",
+              "status": "verified"
+            },
+            {
+              "item": "Protected classes listed by HUD",
+              "value": "Race, Color, National Origin, Religion, Sex, Familial Status, Disability",
+              "basis": "\"The Fair Housing Act prohibits discrimination in housing because of: Race; Color; National Origin; Religion; Sex; Familial Status; Disability.\"",
+              "source": "S32",
+              "status": "verified"
+            },
+            {
+              "item": "24 CFR § 100.65(a) — HUD regulation",
+              "value": "Unlawful to impose different terms, conditions or privileges relating to rental because of a protected class",
+              "basis": "\"It shall be unlawful, because of race, color, religion, sex, handicap, familial status, or national origin, to impose different terms, conditions or privileges relating to the sale or rental of a dwelling …\"",
+              "source": "S33",
+              "status": "verified"
+            },
+            {
+              "item": "§ 3603(b)(2) — federal small-owner exemption",
+              "value": "Owner-occupied dwellings with no more than four families living independently are exempt from § 3604 (other than § 3604(c))",
+              "basis": "\"rooms or units in dwellings containing living quarters occupied or intended to be occupied by no more than four families living independently of each other, if the owner actually maintains and occupies one of such living quarters as his residence.\" This federal exemption does not displace California's broader FEHA protections (§ 12955).",
+              "source": "S31",
+              "status": "verified"
+            },
+            {
+              "item": "California protected classes (for comparison)",
+              "value": "Broader list, including source of income, marital status, ancestry, gender identity/expression, sexual orientation, veteran or military status, genetic information",
+              "basis": "Government Code § 12955(a). See the California State Law page.",
+              "source": "S29",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. The federal input to San Francisco's rate: the CPI",
+        "body": "The Rent Board's formula uses the Consumer Price Index for All Urban Consumers for the Bay Area published by the U.S. Department of Labor / Bureau of Labor Statistics. {{S04}} {{S05}} {{S35}} The BLS figure is an inflation measure, not a permitted rent-increase percentage; the two must not be confused.",
+        "table": {
+          "caption": "Federal CPI data and its local use",
+          "rows": [
+            {
+              "item": "Federal agency publishing the underlying index",
+              "value": "U.S. Bureau of Labor Statistics (U.S. Department of Labor)",
+              "basis": "SF Admin Code § 37.3(a)(1): \"the Board shall publish the increase in the CPI for the preceding 12 months, as made available by the U.S. Department of Labor.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Regional index used in the Rules",
+              "value": "CPI for All Urban Consumers in the San Francisco region, 12-month period ending October 31",
+              "basis": "Rules § 1.12: \"no more than 60% of the percentage increase in the Consumer Price Index (CPI) for All Urban Consumers in the San Francisco region as published by the U.S. Department of Labor for the 12 month period ending October 31.\"",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Metropolitan area covered by the BLS release",
+              "value": "San Francisco-Oakland-Hayward (Alameda, Contra Costa, Marin, San Francisco, San Mateo counties)",
+              "basis": "\"The San Francisco-Oakland-Hayward, CA. metropolitan area covered in this release is comprised of Alameda, Contra Costa, Marin, San Francisco, San Mateo Counties in the State of California.\"",
+              "source": "S35",
+              "status": "verified"
+            },
+            {
+              "item": "BLS over-the-year CPI-U, April 2026 release",
+              "value": "3.8%",
+              "basis": "\"The San Francisco area all items CPI-U advanced 3.8 percent for the 12 months ending in April.\" Informational only — not the allowable rent increase.",
+              "source": "S35",
+              "status": "verified"
+            },
+            {
+              "item": "Local allowable increase derived from the CPI",
+              "value": "60% of the published CPI increase, capped at 7%",
+              "basis": "SF Admin Code § 37.3(a)(1) and Rules § 1.12(a).",
+              "source": "S04",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "4. What federal law means for these two units",
+        "body": "<strong>Analysis (not a legal conclusion).</strong> The verified federal materials support one practical reading: there is no federal percentage to apply, and the federal constraint on how an increase is chosen is the prohibition on discriminatory terms. Because a rent increase is a term of the tenancy, the defensible approach is a written, neutral, unit-based rule applied consistently — the rate published by the Rent Board, on each tenancy's own anniversary date, with identical documentation for both units. Whether that approach \"passes review by a SF tenant lawyer\" cannot be certified by any official source; see Flagged for Review. {{S31}} {{S33}} {{S07}} {{F-11}}",
+        "table": {
+          "caption": "Federal-law findings applied to the two units",
+          "rows": [
+            {
+              "item": "Federal percentage to use",
+              "value": "",
+              "basis": "No official federal numeric cap located; the applicable percentage is the local 1.6% for 3/1/26–2/28/27.",
+              "source": "S34",
+              "status": "unverified",
+              "flag": "F-09"
+            },
+            {
+              "item": "Neutral, consistently applied criterion available from official sources",
+              "value": "The published annual allowable increase applied on each tenancy's own 12-month anniversary",
+              "basis": "\"A landlord can only increase a tenant's rent by a certain percentage once every 12 months.\" and \"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\"",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Prohibited basis for a difference between the two units",
+              "value": "Any protected characteristic under 42 U.S.C. § 3604 / Government Code § 12955",
+              "basis": "\"It shall be unlawful … to impose different terms, conditions or privileges relating to the sale or rental of a dwelling\" because of a protected class.",
+              "source": "S33",
+              "status": "verified"
+            },
+            {
+              "item": "Official certification of tenant-lawyer approval",
+              "value": "",
+              "basis": "A legal opinion; no government source issues advance clearance. Left blank by rule.",
+              "source": "S21",
+              "status": "unverified",
+              "flag": "F-11"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

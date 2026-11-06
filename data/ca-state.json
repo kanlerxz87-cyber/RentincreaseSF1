@@ -1,0 +1,260 @@
+{
+  "page": {
+    "slug": "law-state",
+    "title": "California State Law",
+    "category": "Legal Framework",
+    "order": 4,
+    "eyebrow": "State · California",
+    "intro": "California's statewide rent cap (AB 1482 / Civil Code § 1947.12), the statewide notice statute (Civil Code § 827), the Costa-Hawkins Rental Housing Act (Civil Code § 1954.53) and the Fair Employment and Housing Act (Government Code § 12955). Verified against the California Legislative Information website and the SF Rent Board's official AB 1482 summary. {{S27}} {{S30}}",
+    "sections": [
+      {
+        "heading": "1. AB 1482 / Civil Code § 1947.12 — the statewide cap",
+        "body": "The statewide cap is 5% plus the local CPI change, or 10%, whichever is lower, over any 12-month period. Crucially, § 1947.12(d)(3) exempts housing already subject to a local rent-control ordinance that restricts annual increases to a lesser amount — which is the situation described for these units. The SF Rent Board states plainly that its AB 1482 figure \"does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance\". {{S27}} {{S30}}",
+        "table": {
+          "caption": "Statewide rent-cap provisions — California Civil Code § 1947.12",
+          "rows": [
+            {
+              "item": "Statewide cap over any 12-month period",
+              "value": "5% + percentage change in cost of living, or 10%, whichever is lower",
+              "basis": "\"An owner of residential real property shall not, over the course of any 12-month period, increase the gross rental rate for a dwelling or a unit more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower …\"",
+              "source": "S27",
+              "status": "verified"
+            },
+            {
+              "item": "Maximum number of increases",
+              "value": "No more than two increments in a 12-month period; combined amount cannot exceed the cap",
+              "basis": "\"… the gross rental rate … shall not be increased in more than two increments over that 12-month period, subject to the other restrictions of this subdivision governing gross rental rate increase.\"",
+              "source": "S27",
+              "status": "verified"
+            },
+            {
+              "item": "Local-rent-control exemption § 1947.12(d)(3)",
+              "value": "Exempts housing subject to a local rent-control ordinance that caps annual increases below the state cap",
+              "basis": "\"(d) This section shall not apply to the following residential real properties: … (3) Housing subject to rent or price control through a public entity's valid exercise of its police power consistent with Chapter 2.7 (commencing with Section 1954.50) that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).\"",
+              "source": "S27",
+              "status": "verified"
+            },
+            {
+              "item": "SF Rent Board's official AB 1482 figure for San Francisco",
+              "value": "8.8% (August 1, 2026 – July 31, 2027)",
+              "basis": "\"The maximum rent increase for units under AB 1482 from August 1, 2026 to July 31, 2027 is 8.8% in San Francisco.\" Derived from 5% + 3.8% CPI.",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Does that 8.8% apply to these rent-controlled units?",
+              "value": "No",
+              "basis": "\"This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance.\"",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Effect of a stricter local ordinance",
+              "value": "The unit remains subject to the local regulation; state law does not remove or replace local protections",
+              "basis": "\"If a unit is already covered by San Francisco's local eviction and/or rent increase regulations, the unit remains subject to those local regulations and the statewide law does not remove or replace those tenant protections.\"",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Where AB 1482 is enforced",
+              "value": "State court only; the Rent Board cannot enforce it or hold hearings on it",
+              "basis": "\"But the Rent Board does not provide legal advice and cannot enforce state law or conduct hearings on disputes about AB 1482. AB 1482 can only be enforced in state court.\"",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Term of the state law",
+              "value": "Effective January 1, 2020; expires January 1, 2030; amended by SB 567",
+              "basis": "\"… is a statewide law that goes into effect on January 1, 2020 and expires on January 1, 2030. It is amended by SB 567.\"",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Rolling 15-year new-construction exemption",
+              "value": "Units constructed within the last 15 years are exempt from both just cause and the rent cap",
+              "basis": "\"Units that were constructed within the last 15 years (this applies on a rolling basis …)\"",
+              "source": "S30",
+              "status": "verified"
+            },
+            {
+              "item": "Just cause requirement under state law",
+              "value": "A tenancy may not be terminated without a stated allowable just cause reason",
+              "basis": "\"A tenancy may not be terminated unless the landlord has one of the allowable 'just cause' reasons, which must be stated in the notice terminating tenancy.\" SF's just cause ordinance is more protective and displaces the state just cause rules.",
+              "source": "S30",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "2. Civil Code § 827 — the statewide notice statute",
+        "body": "Even where local rent control sets the percentage, the state notice rules govern how the change is delivered and how much advance notice is required. The SF Rent Board's own guidance restates § 827 and adds the 5-day mailing extension. {{S26}} {{S07}}",
+        "table": {
+          "caption": "Notice periods and service under California Civil Code § 827",
+          "rows": [
+            {
+              "item": "Rent increase of 10% or less",
+              "value": "At least 30 days' notice",
+              "basis": "\"If the proposed rent increase for that tenant is 10 percent or less of the rental amount charged to that tenant at any time during the 12 months before the effective date of the increase … the notice shall be delivered at least 30 days before the effective date of the increase …\"",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Rent increase greater than 10%",
+              "value": "At least 90 days' notice",
+              "basis": "\"If the proposed rent increase for that tenant is greater than 10 percent … the notice shall be delivered at least 90 days before the effective date of the increase …\"",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Aggregation test",
+              "value": "Measured alone or combined with any other increases in the preceding 12 months",
+              "basis": "\"… either in and of itself or when combined with any other rent increases for the 12 months before the effective date of the increase …\"",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Permitted service methods",
+              "value": "Personal delivery, or mail under Code of Civil Procedure § 1013",
+              "basis": "\"(A) By delivering a copy to the tenant personally. (B) By serving a copy by mail under the procedures prescribed in Section 1013 of the Code of Civil Procedure.\"",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Effect of the notice on the lease",
+              "value": "The notice itself establishes the new terms if the tenant continues to hold the premises",
+              "basis": "\"The notice, when served upon the tenant, shall in and of itself operate and be effectual to create and establish, as a part of the lease, the terms, rents, and conditions specified in the notice, if the tenant shall continue to hold the premises after the notice takes effect.\"",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Mailing extension as applied by the SF Rent Board",
+              "value": "Add 5 days to the notice period",
+              "basis": "\"If the notice is mailed, the landlord must give the tenant 5 more days.\"",
+              "source": "S07",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. Costa-Hawkins — vacancies and changes in occupancy",
+        "body": "This is the state-law area most relevant to Unit 1, where an original occupant is described as remaining in the unit alongside a different occupant. Both § 1954.53(d)(3) and SF Admin Code § 37.3(d)(2)(B) exclude <em>partial</em> changes in occupancy where an original occupant remains; the Rent Board also states that a co-tenant is not subject to a Costa-Hawkins increase. {{S28}} {{S04}} {{S17}} {{F-04}} {{F-18}}",
+        "table": {
+          "caption": "Costa-Hawkins Rental Housing Act — Civil Code § 1954.53",
+          "rows": [
+            {
+              "item": "Owner's right to set the initial rent",
+              "value": "An owner may establish the initial rental rate for a dwelling or unit, subject to listed exceptions",
+              "basis": "\"(a) Notwithstanding any other provision of law, an owner of residential real property may establish the initial rental rate for a dwelling or unit, except where any of the following applies …\"",
+              "source": "S28",
+              "status": "verified"
+            },
+            {
+              "item": "§ 1954.53(d)(2) — last original occupant no longer resides",
+              "value": "An owner may increase rent by any amount to a lawful sublessee or assignee who did not reside there before January 1, 1996",
+              "basis": "\"If the original occupant or occupants who took possession of the dwelling or unit pursuant to the rental agreement with the owner no longer permanently reside there, an owner may increase the rent by any amount allowed by this section to a lawful sublessee or assignee who did not reside at the dwelling or unit prior to January 1, 1996.\"",
+              "source": "S28",
+              "status": "verified"
+            },
+            {
+              "item": "§ 1954.53(d)(3) — partial change in occupancy",
+              "value": "Does not apply where one or more original occupants remain in lawful possession",
+              "basis": "\"This subdivision does not apply to partial changes in occupancy of a dwelling or unit where one or more of the occupants of the premises, pursuant to the agreement with the owner provided for above, remains an occupant in lawful possession of the dwelling or unit …\"",
+              "source": "S28",
+              "status": "verified"
+            },
+            {
+              "item": "Local parallel — SF Admin Code § 37.3(d)(2)(B)",
+              "value": "Same exclusion for partial changes in occupancy",
+              "basis": "\"This Subsection shall not apply to partial changes in occupancy of a dwelling or unit where one or more of the occupants of the premises … remains an occupant in lawful possession of the dwelling or unit …\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Co-tenants",
+              "value": "Not subject to a Costa-Hawkins unlimited increase, regardless of when they moved in",
+              "basis": "\"In addition, a co-tenant, as opposed to a subtenant, is not subject to such a rent increase, regardless of when the co-tenant moved in.\"",
+              "source": "S17",
+              "status": "verified"
+            },
+            {
+              "item": "Definition of co-tenant",
+              "value": "Someone with an oral or written agreement with the landlord, or treated as a tenant by acceptance of rent or other conduct",
+              "basis": "\"A co-tenant is someone who has an oral or written agreement with the landlord, or who the landlord has treated as a tenant by the acceptance of rent or other conduct.\"",
+              "source": "S18",
+              "status": "verified"
+            },
+            {
+              "item": "Rules & Regulations § 6.14",
+              "value": "Unlimited increase on remaining occupants when the last original occupant vacates, only if a timely written 6.14 notice was served",
+              "basis": "\"Rules and Regulations Section 6.14 provides for an unlimited rent increase on remaining occupants when the last original occupant vacates the unit, as long as the landlord timely served all remaining occupants with a written '6.14 notice.' … Generally, sixty days is considered reasonable.\"",
+              "source": "S17",
+              "status": "verified"
+            },
+            {
+              "item": "Rent Board's own advice on § 6.14 / Costa-Hawkins",
+              "value": "Landlords and tenants should obtain legal advice",
+              "basis": "\"Since these provisions can be complicated, landlords and tenants should obtain legal advice concerning their application to specific fact situations.\"",
+              "source": "S17",
+              "status": "verified"
+            },
+            {
+              "item": "Existence / service date of a 6.14 notice for Unit 1",
+              "value": "",
+              "basis": "No notice documentation was provided; an original occupant is described as still in occupancy. Left blank by rule.",
+              "source": "S17",
+              "status": "unverified",
+              "flag": "F-18"
+            },
+            {
+              "item": "Legal character of the April 1, 2026 occupancy change",
+              "value": "",
+              "basis": "Whether a lease amendment, roommate replacement, or new tenancy is not documented. Left blank by rule.",
+              "source": "S28",
+              "status": "unverified",
+              "flag": "F-04"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "4. State fair housing law (FEHA, Government Code § 12955)",
+        "body": "California's protected-class list is broader than the federal list and includes source of income. It also contains an explicit anti-retaliation provision. {{S29}}",
+        "table": {
+          "caption": "California Government Code § 12955 — housing discrimination",
+          "rows": [
+            {
+              "item": "Protected classes under § 12955(a)",
+              "value": "Race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, genetic information",
+              "basis": "\"For the owner of any housing accommodation to discriminate against or harass any person because of the race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, or genetic information of that person.\"",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Prohibited inquiries (§ 12955(b))",
+              "value": "No written or oral inquiry about those characteristics of a person seeking to rent",
+              "basis": "\"For the owner of any housing accommodation to make or to cause to be made any written or oral inquiry concerning the race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, disability, veteran or military status, or genetic information of any person seeking to purchase, rent, or lease any housing accommodation.\"",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Discriminatory notices (§ 12955(c))",
+              "value": "No notice, statement or advertisement indicating a preference, limitation or discrimination",
+              "basis": "\"For any person to make, print, or publish … any notice, statement, or advertisement, with respect to the sale or rental of a housing accommodation that indicates any preference, limitation, or discrimination …\"",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Retaliation (§ 12955(f))",
+              "value": "Unlawful to harass, evict or otherwise discriminate with the dominant purpose of retaliation",
+              "basis": "\"For any owner of housing accommodations to harass, evict, or otherwise discriminate against any person in the sale or rental of housing accommodations when the owner's dominant purpose is retaliation against a person who has opposed practices unlawful under this section …\"",
+              "source": "S29",
+              "status": "verified"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,256 @@
+{
+  "page": {
+    "slug": "law-local",
+    "title": "SF Local Law & Rates",
+    "category": "Legal Framework",
+    "order": 3,
+    "eyebrow": "Local · City and County of San Francisco",
+    "intro": "This page contains the San Francisco Rent Ordinance (Chapter 37 of the Administrative Code), the Rent Board's Rules and Regulations, the published allowable annual increase rates, and the license/notice prerequisites. Every row links to the official document it was verified against on 2026-11-06. {{S24}}",
+    "sections": [
+      {
+        "heading": "1. Coverage: does the 1979 rule apply?",
+        "body": "SF.gov frames coverage as a date-and-use test, not simply a building age: <em>many</em> residential units built on or before June 13, 1979 have both rent control and eviction protection, and the City directs owners to confirm the construction date on the Property Information Map. {{S10}} For a two-unit property, SF.gov states that a single-family dwelling with a legal (or illegal) in-law unit constitutes a two-unit building and is not exempt from the Ordinance. {{S38}} Because the exact certificate of occupancy and property configuration were not verified here (privacy rule), the two coverage cells below are deliberately left blank and flagged. {{F-02}} {{F-03}}",
+        "table": {
+          "caption": "Rent-control coverage tests — official sources",
+          "rows": [
+            {
+              "item": "Local rent-control cutoff date",
+              "value": "June 13, 1979",
+              "basis": "\"Many residential units built on or before June 13, 1979 have both rent control and eviction protection.\"",
+              "source": "S10",
+              "status": "verified"
+            },
+            {
+              "item": "Practical test stated by SF.gov",
+              "value": "Built before June 14, 1979 and not used as a single family dwelling → may have rent control + eviction protection",
+              "basis": "\"If your unit was built before June 14, 1979, and is not used as a single family dwelling, it may have both: Rent control; Eviction protection.\"",
+              "source": "S10",
+              "status": "verified"
+            },
+            {
+              "item": "Official method to verify the building date",
+              "value": "Search the address on the SF Property Information Map",
+              "basis": "\"The first step is to find out when your building was built. You can search your address on the Property Information Map.\"",
+              "source": "S10",
+              "status": "verified"
+            },
+            {
+              "item": "Two-unit building rule",
+              "value": "A 2-unit building is not exempt as a single-family home",
+              "basis": "\"A single-family dwelling with a legal in-law unit constitutes a two-unit building and is not exempt from the Ordinance.\" Also applies to an illegal in-law unit unless both units are rented together as one tenancy.",
+              "source": "S38",
+              "status": "verified"
+            },
+            {
+              "item": "Single-family home / condo partial exemption",
+              "value": "Generally exempt from rent-increase limits only if tenancy began on or after January 1, 1996",
+              "basis": "\"Pursuant to the Costa-Hawkins Rental Housing Act, as of January 1, 1999 single-family homes and condominiums are generally exempt from the rent increase limitations (but not the just cause eviction provisions) … but ONLY IF the tenancy commenced on or after January 1, 1996.\"",
+              "source": "S38",
+              "status": "verified"
+            },
+            {
+              "item": "Other partial exemptions listed by SF.gov",
+              "value": "Post-6/13/1979 construction; substantial rehabilitation; units regulated by another government agency",
+              "basis": "SF.gov lists units that have eviction protection but no local rent-increase cap.",
+              "source": "S10",
+              "status": "verified"
+            },
+            {
+              "item": "Confirmed year built / certificate of occupancy for this property",
+              "value": "",
+              "basis": "Request states 1940 but wording is ambiguous and no official property record was checked. Left blank by rule.",
+              "source": "S10",
+              "status": "unverified",
+              "flag": "F-02"
+            },
+            {
+              "item": "Official confirmation that Unit 1 and Unit 2 are covered",
+              "value": "",
+              "basis": "Cannot be confirmed without an address/APN lookup, which the privacy rule forbids publishing. Left blank by rule.",
+              "source": "S10",
+              "status": "unverified",
+              "flag": "F-03"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "2. The allowable annual increase — current rate",
+        "body": "The Rent Board publishes the rate annually; it takes effect March 1 and runs through the last day of February. The current rate is the figure a landlord must use on the date the increase takes effect, not the date the notice is served. {{S01}} {{S07}}",
+        "table": {
+          "caption": "Current allowable annual rent increase for rent-controlled units",
+          "rows": [
+            {
+              "item": "Effective March 1, 2026 – February 28, 2027",
+              "value": "1.6%",
+              "basis": "\"For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.\"",
+              "source": "S01",
+              "status": "verified"
+            },
+            {
+              "item": "Rate shown on the Rent Board's Current Rates page",
+              "value": "1.6%",
+              "basis": "\"Allowable Rent Increase: 1.6% for March 1, 2026 – February 28, 2027\"",
+              "source": "S02",
+              "status": "verified"
+            },
+            {
+              "item": "Rate shown on the Rent Board department page",
+              "value": "1.6%",
+              "basis": "\"For covered units, the allowable rent increase effective March 1, 2026 through February 28, 2027 is 1.6%.\"",
+              "source": "S24",
+              "status": "verified"
+            },
+            {
+              "item": "Rate that applies to the notice",
+              "value": "The percentage in effect on the date the increase takes effect",
+              "basis": "\"The landlord should use the percentage that will be in effect on the date of the increase, not the percentage in effect on the date they serve the notice.\"",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Dollar calculation method",
+              "value": "Base rent × 0.016",
+              "basis": "\"To calculate the dollar amount of the 1.6% annual rent increase, multiply the tenant's base rent by .016.\"",
+              "source": "S01",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. Full official rate history (Form 571)",
+        "body": "The Rent Board's Form 571 is the official historical rate table. It is reproduced here verbatim for the years relevant to the two tenancies, so that any banked-increase question can be reviewed line by line. {{S03}} Note that the SF.gov worked examples contain date/rate inconsistencies; those are reproduced on the Flagged for Review page rather than silently 'corrected'. {{F-12}} {{F-13}} {{F-14}}",
+        "table": {
+          "caption": "Allowable annual increases by effective period — official Rent Board Form 571",
+          "rows": [
+            { "item": "3/1/19 – 2/29/20", "value": "2.6%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/20 – 2/28/21", "value": "1.8%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/21 – 2/28/22", "value": "0.7%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/22 – 2/28/23", "value": "2.3%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/23 – 2/29/24", "value": "3.6%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/24 – 2/28/25", "value": "1.7%", "basis": "Form 571 rate table, verified 2026-11-06.", "source": "S03", "status": "verified" },
+            { "item": "3/1/25 – 2/28/26", "value": "1.4%", "basis": "Form 571 rate table; also confirmed on the Current Rates page and the 2026 announcement.", "source": "S02", "status": "verified" },
+            { "item": "3/1/26 – 2/28/27", "value": "1.6%", "basis": "\"Effective March 1, 2026 through February 28, 2027, the allowable annual increase amount is 1.6%.\"", "source": "S03", "status": "verified" }
+          ]
+        }
+      },
+      {
+        "heading": "4. How the rate is set (legal cap)",
+        "body": "The Ordinance ties the annual increase to 60% of the increase in the CPI for All Urban Consumers in the Bay Area and caps it at 7%. The underlying CPI is published by the U.S. Bureau of Labor Statistics. {{S04}} {{S35}}",
+        "table": {
+          "caption": "Statutory formula for the annual allowable increase",
+          "rows": [
+            {
+              "item": "Formula in SF Admin Code § 37.3(a)(1)",
+              "value": "Not more than 60% of the published CPI increase, applied to the tenant's base rent",
+              "basis": "\"A landlord … shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Absolute statutory ceiling",
+              "value": "7%",
+              "basis": "\"In no event, however, shall the allowable annual increase be greater than 7%.\" Also Rules § 1.12: \"… shall be no more than 60% of the percentage increase in the Consumer Price Index (CPI) for All Urban Consumers in the San Francisco region … In no event … greater than seven percent (7%).\"",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Rounding rule (Rules § 1.12)",
+              "value": ".04 and below round down; .05 and above round up, to the nearest tenth decimal place",
+              "basis": "Verbatim from Rules and Regulations § 1.12(a).",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Publication schedule (Rules § 1.12)",
+              "value": "Published on or about January 1; effective each March 1; fixed for the 12-month period",
+              "basis": "\"The Rent Board shall publish the annual allowable increase amount on or about January 1. The published increase shall be determined only once for each 12 month period.\"",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Federal CPI source behind the formula",
+              "value": "BLS CPI-U, San Francisco-Oakland-Hayward area",
+              "basis": "\"The San Francisco-Oakland-Hayward, CA. metropolitan area covered in this release is comprised of Alameda, Contra Costa, Marin, San Francisco, San Mateo Counties in the State of California.\"",
+              "source": "S35",
+              "status": "verified"
+            },
+            {
+              "item": "Most recent BLS over-the-year figure in the verified release",
+              "value": "3.8% (12 months ending April 2026)",
+              "basis": "\"The San Francisco area all items CPI-U advanced 3.8 percent for the 12 months ending in April.\" This is a CPI release, NOT the Rent Board's allowable increase rate.",
+              "source": "S35",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "5. Timing, base rent and banking",
+        "body": "An increase is a once-every-12-months event tied to the tenancy's own anniversary date. Banked increases are legally available but fact-sensitive and easy to miscalculate; see the Flagged for Review page before considering one. {{S07}} {{S08}} {{F-07}}",
+        "table": {
+          "caption": "Timing, base rent and banked-increase rules",
+          "rows": [
+            { "item": "First annual increase", "value": "12 months after the date the tenant's lease began", "basis": "\"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\"", "source": "S07", "status": "verified" },
+            { "item": "Frequency", "value": "No more than one increase in any 12-month period", "basis": "\"The landlord cannot increase the rent again until at least 12 months later.\" Rules § 4.12: \"the rent may be increased only one time every twelve (12) months.\"", "source": "S07", "status": "verified" },
+            { "item": "Anniversary date (Rules § 1.11)", "value": "The date the tenant's current rent became effective", "basis": "\"The anniversary date is the date on which the tenant's current rent became effective … The next allowable rent increase shall take effect no less than one year from the anniversary date.\"", "source": "S05", "status": "verified" },
+            { "item": "Changing the anniversary date", "value": "An increase effective more than 12 months later sets a new anniversary date", "basis": "\"If a landlord increases the rent more than 12 months later, the effective date of the increase becomes the tenant's new anniversary date.\"", "source": "S07", "status": "verified" },
+            { "item": "What the percentage is applied to", "value": "Base rent only (includes parking/storage; excludes temporary passthroughs)", "basis": "\"Landlords must calculate the rent increase on the tenant's base rent only. … It does not include any temporary passthroughs or fluctuating charges.\"", "source": "S07", "status": "verified" },
+            { "item": "Rounding of the dollar amount", "value": "Cannot round up to the nearest dollar; banked increases cannot be rounded up", "basis": "\"Rent increases cannot be rounded up to the nearest dollar.\" Rules § 4.12: \"Banked increases shall not be compounded and shall not be rounded up.\"", "source": "S09", "status": "verified" },
+            { "item": "Initial rent for a vacant covered unit", "value": "No limit", "basis": "\"There is no limit on how much rent a landlord may first charge a tenant when renting an empty unit that is covered by rent control.\"", "source": "S07", "status": "verified" },
+            { "item": "When a skipped increase may be banked", "value": "Only if at least 24 full months pass without any rent increase", "basis": "\"A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost and cannot be imposed at a later date.\"", "source": "S08", "status": "verified" },
+            { "item": "Banking under Rules § 4.12", "value": "A full 12 months must elapse from the date the increase could have been imposed", "basis": "\"A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed before this banking section becomes applicable.\"", "source": "S06", "status": "verified" },
+            { "item": "Compounding / prorating", "value": "Not allowed", "basis": "\"They cannot be compounded or prorated.\" Also: \"Increases cannot be compounded.\"", "source": "S08", "status": "verified" },
+            { "item": "Cumulative limit and expiry", "value": "No limit on how much can be banked; banked increases do not expire during a tenancy", "basis": "\"There is no limit on how much can be banked. … Banked increases do not expire during a tenancy.\" Banking has only been allowed since April 1, 1982.", "source": "S08", "status": "verified" },
+            { "item": "Banked increases and a new tenant", "value": "Do not carry over to a new tenant", "basis": "\"Banked increases do not carry over to a new tenant.\" \"New owners may use banked increases from prior owners.\"", "source": "S08", "status": "verified" },
+            { "item": "Petition required for annual / banked increases?", "value": "No", "basis": "\"Landlords are not required to file a petition with the City to impose these types of rent increases.\"", "source": "S09", "status": "verified" },
+            { "item": "Additional occupant as a reason for an increase", "value": "Prohibited", "basis": "\"A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a unit with the existing tenant. This is an unlawful rent increase, even if the lease or rental agreement provides for the additional charge.\" § 37.3(a)(11)(A) says this applies \"notwithstanding a rental agreement or lease that specifically permits a rent increase for additional occupants.\"", "source": "S04", "status": "verified" },
+            { "item": "Agreement to pay more because of a new roommate", "value": "Void and unenforceable", "basis": "\"Any agreement to pay more rent is void and unenforceable by the landlord.\"", "source": "S16", "status": "verified" }
+          ]
+        }
+      },
+      {
+        "heading": "6. License and notice prerequisites",
+        "body": "Both prerequisites are independent of each other: a current Rent Increase License must be on file with the Rent Board, and a conforming written notice must be served. A notice that does not conform is null and void. {{S11}} {{S04}} {{F-08}}",
+        "table": {
+          "caption": "Prerequisites to a lawful annual or banked increase",
+          "rows": [
+            { "item": "Rent Increase License", "value": "Required before any annual or banked increase goes into effect", "basis": "\"A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant.\"", "source": "S07", "status": "verified" },
+            { "item": "How a license is obtained", "value": "Annual Housing Inventory report; license generated for non-owner-occupied units", "basis": "\"If you are a property owner, once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units.\"", "source": "S11", "status": "verified" },
+            { "item": "Reporting deadline", "value": "March 1 of every year", "basis": "\"Deadline: March 1 of every year.\" 2027 notice: \"Deadline to report: March 1, 2027, and annually by March 1 of each year.\"", "source": "S13", "status": "verified" },
+            { "item": "Who must report", "value": "All owners of residential property in San Francisco", "basis": "\"All owners of residential property are required to report.\" 2027 notice: \"A new law requires all owners of residential property in San Francisco to annually report … [Ordinance No. 265-20].\"", "source": "S11", "status": "verified" },
+            { "item": "Effective date for small buildings", "value": "March 1, 2023 for condominiums and buildings with fewer than 10 residential units", "basis": "\"Owners of condominiums and buildings with less than 10 residential units have been required to report since March 1, 2023, with updates due every following March.\"", "source": "S12", "status": "verified" },
+            { "item": "Consequence of an unlicensed increase", "value": "May be null and void; tenant may be entitled to a rent refund", "basis": "\"A rent increase notice that goes into effect while the unit is unlicensed may be null and void (this may apply for multiple years).\" \"… your tenant may be entitled to a rent refund.\"", "source": "S12", "status": "verified" },
+            { "item": "Nonconforming notice (§ 37.3(b)(5))", "value": "Null and void", "basis": "\"Any rent increase which does not conform with the provisions of this section shall be null and void.\" Rules § 4.10(b): \"Any rent increase which does not conform with the provisions of this Section shall render the entire rent increase null and void …\"", "source": "S04", "status": "verified" },
+            { "item": "Notice period — increase of 10% or less", "value": "30 days' written notice", "basis": "\"30-day written notice of the proposed rent increase.\" Civil Code § 827(b)(2): \"the notice shall be delivered at least 30 days before the effective date of the increase.\"", "source": "S07", "status": "verified" },
+            { "item": "Notice period — increase over 10%", "value": "90 days' written notice", "basis": "\"90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10%.\" Civil Code § 827(b)(3)(A).", "source": "S07", "status": "verified" },
+            { "item": "Notice served by mail", "value": "Add 5 days (i.e., 35 days for a ≤10% increase)", "basis": "\"If the notice is mailed, the landlord must give the tenant 5 more days.\" Multi-year page: \"30-days notice in writing … (or 35-days if sent by mail).\"", "source": "S09", "status": "verified" },
+            { "item": "Required notice contents", "value": "Dollar amount; percentage; effective date; which part is banked", "basis": "\"The rent increase notice should include the: Dollar amount of the increase; Percentage amount of the increase; Date the increase will go into effect; Which part of the increase is banked.\"", "source": "S08", "status": "verified" },
+            { "item": "Allocation disclosure (§ 37.3(b) / Rules § 4.10)", "value": "State which portion is the annual increase, banked amount, capital improvements, O&M, comparable rents, passthroughs, RAP loan", "basis": "\"On or before the date upon which a landlord gives a tenant legal notice of a rent increase, the landlord shall inform the tenant, in writing, of the following: (1) Which portion of the rent increase reflects the annual increase, and/or a banked amount, if any …\"", "source": "S04", "status": "verified" },
+            { "item": "Dates behind a banked amount (Rules § 4.12(b))", "value": "Disclose the dates on which the banked amount is based", "basis": "\"(2) the dates upon which said banked amount is based; provided, however, that failure to include such information shall not render the increase null and void.\"", "source": "S06", "status": "verified" },
+            { "item": "Service method (Civil Code § 827)", "value": "Personal delivery, or mail under Code of Civil Procedure § 1013", "basis": "\"By delivering a copy to the tenant personally. By serving a copy by mail under the procedures prescribed in Section 1013 of the Code of Civil Procedure.\"", "source": "S26", "status": "verified" }
+          ]
+        }
+      },
+      {
+        "heading": "7. Tenant review routes (scrutiny is built into the system)",
+        "body": "San Francisco tenants can challenge an increase at no cost and with no filing deadline, obtain free Rent Board counseling, and reach free or low-cost legal services through the City's referral listing. {{S19}} {{S21}} {{S22}} {{F-11}}",
+        "table": {
+          "caption": "Official tenant challenge and assistance routes",
+          "rows": [
+            { "item": "Unlawful rent increase petition", "value": "Form 516C; no charge; no time limit", "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"", "source": "S19", "status": "verified" },
+            { "item": "Pending (not yet effective) increase", "value": "Form 518 Tenant Summary Petition", "basis": "\"This petition is for tenants who have received a rent increase notice that is clearly unlawful on its face and has not yet gone into effect.\"", "source": "S20", "status": "verified" },
+            { "item": "Adjudication", "value": "Arbitration hearing before a Rent Board Administrative Law Judge", "basis": "\"Usually within a few months after the petition is filed, it will be scheduled for an arbitration hearing before a Rent Board Administrative Law Judge.\"", "source": "S19", "status": "verified" },
+            { "item": "Rent Board counseling", "value": "Free; weekdays 9 am–12 pm and 1–4 pm", "basis": "\"Cost: Free … We provide counseling on subjects related to the Rent Ordinance. We cannot give legal advice.\"", "source": "S21", "status": "verified" },
+            { "item": "Free legal clinics in the Rent Board Referral Listing", "value": "Three free legal clinics every month for low-income Bay Area residents", "basis": "\"The clinics offer free, limited legal advice and referrals.\"", "source": "S22", "status": "verified" },
+            { "item": "Tenant Right to Counsel program", "value": "Free legal assistance for residents facing eviction; free full-scope representation for eligible cases", "basis": "\"In June 2018, San Francisco voters passed the No Eviction Without Representation Act to establish the Tenant Right to Counsel program, which provides free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases.\"", "source": "S25", "status": "verified" },
+            { "item": "Eviction Defense Collaborative (free legal help)", "value": "415-659-9184 / legal@evictiondefense.org", "basis": "\"If you are a tenant who has received eviction court papers, you can call 415-659-9184, email legal@evictiondefense.org, or visit the Eviction Defense Collaborative for free legal help.\"", "source": "S23", "status": "verified" },
+            { "item": "Section 6.14 / Costa-Hawkins market-rate increases", "value": "Co-tenants are not subject; ask for legal advice", "basis": "\"In addition, a co-tenant, as opposed to a subtenant, is not subject to such a rent increase, regardless of when the co-tenant moved in.\" \"Since these provisions can be complicated, landlords and tenants should obtain legal advice.\"", "source": "S17", "status": "verified" },
+            { "item": "Petition for a § 6.14 / Costa-Hawkins determination", "value": "Available to landlords and tenants", "basis": "\"A landlord is not required to file a petition … However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination … A tenant may also file a petition alleging an unlawful rent increase.\"", "source": "S18", "status": "verified" }
+          ]
+        }
+      }
+    ]
+  }
+}
