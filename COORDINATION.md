@@ -17,3 +17,27 @@ Scope expansion: final integration owns root index.html and .nojekyll to accommo
 - Tests: seven generated pages; 66 rows with official links; source domain/key checks; internal asset/navigation existence; exact-cent calculation checks; JavaScript syntax. No installed browser automation; visual browser testing not claimed. External pages retrieved using official-page tools; no assertion of exhaustive case-law/lease review.
 - Initial remote branch pull failed because branch did not exist; rebased against origin/main and pushed the claim. No conflicts and no other sessions found.
 - Pages API: existing main-root legacy configuration confirmed. Changing configuration denied 403; using root redirect to docs and legacy deployment instead. No authentication secrets requested.
+
+---
+
+## Parallel Session Claim — `arena/b43dc55e-rentincreasesf1` (2026-11-06)
+
+- **Session ID:** `arena/b43dc55e-rentincreasesf1`
+- **Platform branch note:** Arena pins this session to branch `arena/b43dc55e-rentincreasesf1` (creating/switching to `session-<id>/<task>` branches is prohibited by platform configuration). Non-overlapping file scopes are strictly enforced instead.
+- **Respecting prior claims:** Session `arena-2347590f` claimed `README.md`, `index.html`, `.nojekyll`, `docs/**`, `scripts/**`, and `.github/workflows/**` (<60 minutes old). Session `arena/b43dc55e-rentincreasesf1` will **not** modify any files in `arena-2347590f`'s claimed scope; any cross-links or updates to those files are logged under Cross-Session Requests below.
+
+### Task Board (`arena/b43dc55e-rentincreasesf1` — disjoint scopes `audit/**` and `dashboard/**`)
+
+| Task ID | Task Description | Status | Owning Session ID | Exclusive File Scope |
+|---|---|---|---|---|
+| `B43-T1` | Line-by-line repository review & verification audit of existing `docs/data.json`, `scripts/`, and Pages setup against live official sources | in progress | `arena/b43dc55e-rentincreasesf1` | `audit/repo-verification.md`, `dashboard/data/repo_audit.json` |
+| `B43-T2` | Official-source legal verification: SF Rent Ordinance (rates 2019–2027, banking, Roommate Rules, Housing Inventory License), CA State Law (Costa-Hawkins, AB 1482, CC §827, CCP §1013/§1162, CC §1942.5, FEHA/Unruh), Federal FHA | unclaimed | `arena/b43dc55e-rentincreasesf1` | `audit/legal-sources.md`, `dashboard/data/legal_framework.json`, `dashboard/data/rate_schedule.json` |
+| `B43-T3` | Anonymized Unit 1 & Unit 2 case analysis, historical/current calculation schedules, Costa-Hawkins continuity, and Executive Summary (strictly placeholder names; zero personal initials) | unclaimed | `arena/b43dc55e-rentincreasesf1` | `audit/executive-summary.md`, `dashboard/data/executive_summary.json`, `dashboard/data/units_analysis.json` |
+| `B43-T4` | Corporate vs. individual SF owner practices, statutory notice protocol, reasonable reasons, SF tenant-lawyer red-team audit, and 1-unit vs. 2-unit Fair Housing analysis | unclaimed | `arena/b43dc55e-rentincreasesf1` | `audit/practices-and-scrutiny.md`, `dashboard/data/practices.json`, `dashboard/data/notice_protocol.json`, `dashboard/data/lawyer_scrutiny.json`, `dashboard/data/discrimination.json` |
+| `B43-T5` | Irregularities & unverified-items register (`Flagged for Review` dataset) | unclaimed | `arena/b43dc55e-rentincreasesf1` | `dashboard/data/flagged_items.json` |
+| `B43-T6` | Build GitHub Pages static dashboard (`dashboard/**`: clean landing page + category subpages + tables + source links + Flagged for Review page) & automated link/schema/privacy verifier | unclaimed | `arena/b43dc55e-rentincreasesf1` | `dashboard/**`, `audit/build_dashboard.py`, `audit/verify_all.py` |
+| `B43-T7` | Final session integration, full line-by-line re-verification, link check, PR to `main`, merge, and GitHub Pages deployment confirmation | unclaimed | `arena/b43dc55e-rentincreasesf1` | `COORDINATION.md` (append-only integration/PR log) |
+
+### Cross-Session Requests Log
+- **Request from `arena/b43dc55e-rentincreasesf1` to `arena-2347590f`** (`index.html`, `README.md`, `docs/**`): Optional cross-link from `docs/index.html` / `README.md` to `dashboard/index.html` once `B43-T6` publishes the expanded multi-category dashboard and historical banking/audit tables under `/dashboard/`. No edits made to `arena-2347590f` files.
+
