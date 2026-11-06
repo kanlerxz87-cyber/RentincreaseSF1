@@ -133,3 +133,71 @@ request here rather than editing it.
 If this session crashes or its claim is more than 60 minutes old with no new
 commits, any other session may take over the task and must note the handoff in
 this log.
+
+---
+
+# Merged history and integration record (session `arena-53a11683`)
+
+## Merge event
+
+`origin/main` had advanced to `cb9b829` (two earlier pull requests from sessions
+`arena/2347590f-rentincreasesf1` and `arena/da7cfb4c-rentincreasesf1`), producing a parallel
+generated site. This session merged `origin/main` into `arena/53a11683-rentincreasesf1`.
+
+**Conflicts encountered and how they were resolved — no work was discarded:**
+
+| File | Resolution |
+| --- | --- |
+| `COORDINATION.md` | This session's board kept as the live board; the earlier session's record is preserved below and in git history at `7b8226a`. |
+| `README.md` | Rewritten to describe the combined repository, including the archived v1 site and v1 tooling. |
+| `docs/index.html`, `docs/units.html`, `docs/practice.html`, `docs/flagged.html`, `docs/sources.html` | Current version kept in `docs/`; the earlier generated version copied, with an archive banner, to `docs/v1/`. |
+| `docs/law.html`, `docs/notice.html`, `docs/data.json`, `docs/style.css`, `docs/site.js`, `docs/executive_summary.md` | Moved (not deleted) into `docs/v1/`, where their relative links still resolve. |
+| `scripts/build.py`, `scripts/verify.py` | Moved to `archive/v1-tooling/`. They would otherwise regenerate `docs/` and overwrite the current site. |
+| `.github/workflows/pages.yml` | Rewritten: it previously required `docs/` to equal the output of `scripts/build.py`. It now runs `tools/check_links.py`, asserts the Pages entry points exist, and greps the published tree for tenant initials. |
+
+Pages configuration was left as found: legacy branch publishing from `main` at `/`, with the root
+`index.html` redirecting to `docs/index.html`.
+
+## Preserved record from session `arena/da7cfb4c-rentincreasesf1` (v1 site)
+
+Copied verbatim from `COORDINATION.md` at `7b8226a` so nothing is lost:
+
+* Session ID `arena/da7cfb4c-rentincreasesf1`; tasks TASK-01 to TASK-09 all marked `done`.
+* Scope: `/docs/executive_summary.md`, `/site/executive_summary.html`, `/research/*.md`,
+  `/site/*.html`, and the generated `/docs/*` pages.
+* Integration notes as recorded at the time:
+  - "Official sources retrieved: SF annual 2026 announcement, rent guide, coverage, inventory,
+    banking, petitions and tenant/landlord help; California legislative §§827, 1947.12, 1942.5;
+    CRD housing; HUD Fair Housing Act overview. Source URLs are enumerated in docs/data.json and
+    the site's Sources page."
+  - "Row-by-row substantive review separates verified guidance, analysis, derived arithmetic and
+    unverified supplied context. No private fact is marked officially confirmed. No original
+    personal initials were stored."
+  - "Flags F01–F09 published on docs/flagged.html: coverage, ledger, continuity, license/lease,
+    market norms, lawyer approval, source example date errors, privacy limits and verification
+    scope. These are needs review and do not block publication."
+  - "Tests: seven generated pages; 66 rows with official links; source domain/key checks; internal
+    asset/navigation existence; exact-cent calculation checks; JavaScript syntax. No installed
+    browser automation; visual browser testing not claimed. External pages retrieved using
+    official-page tools; no assertion of exhaustive case-law/lease review."
+  - "Initial remote branch pull failed because branch did not exist; rebased against origin/main
+    and pushed the claim. No conflicts and no other sessions found."
+  - "Pages API: existing main-root legacy configuration confirmed. Changing configuration denied
+    403; using root redirect to docs and legacy deployment instead. No authentication secrets
+    requested."
+* The v1 task table's source column cited a mix of official pages and commercial blogs
+  (cityrulelookup, landlordos, bancalsf, urbantaken, lifetimepm, fflw, lethub,
+  calandlordtenantlaws, christopherleesf). Those blog citations are **not carried into the current
+  site**: every row in `docs/` now links to a government source, and the v1 pages remain available
+  in `docs/v1/` and git history for comparison.
+
+## Integration verification (T9)
+
+| Check | Result |
+| --- | --- |
+| `python3 tools/check_links.py` | OK — 10 published pages + 7 archived pages; all internal links and anchors resolve; CSVs consistent; every external citation registered in `data/sources.csv`; no personal tokens |
+| Navigation parity | All 10 published pages carry the same 10-item navigation, and every page is reachable from it |
+| Anonymous content | Placeholder names only (1A–1D, 2A–2B); street address omitted; dates and amounts unchanged |
+| CI workflow | Rewritten to the checks above; no dependency on the retired generator |
+| Pages entry points | `index.html` (redirect), `docs/index.html`, `docs/flagged.html`, `docs/sources.html`, `docs/.nojekyll` present |
+

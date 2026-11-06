@@ -35,7 +35,13 @@ warnings: list[str] = []
 
 
 def html_files() -> list[Path]:
+    """Primary (published, linked) pages."""
     return sorted(DOCS.glob("*.html"))
+
+
+def archive_files() -> list[Path]:
+    """Archived v1 pages: preserved and reachable, but not part of the nav."""
+    return sorted((DOCS / "v1").glob("*.html"))
 
 
 def collect_ids(text: str) -> set[str]:
@@ -153,15 +159,16 @@ def check_privacy(files: list[Path]) -> None:
 
 def main() -> int:
     files = html_files()
+    archived = archive_files()
     if not files:
         print("no HTML files found", file=sys.stderr)
         return 1
 
-    check_links(files)
+    check_links(files + archived)
     check_nav(files)
     check_sources(files)
     check_csv_consistency()
-    check_privacy(files)
+    check_privacy(files + archived)
 
     for w in warnings:
         print(f"warn: {w}")
@@ -170,8 +177,9 @@ def main() -> int:
             print(f"FAIL: {e}", file=sys.stderr)
         print(f"\n{len(errors)} error(s)", file=sys.stderr)
         return 1
-    print(f"OK: {len(files)} pages, all internal links and anchors resolve, "
-          f"all CSVs consistent, all external citations registered, no personal tokens")
+    print(f"OK: {len(files)} published pages (+{len(archived)} archived), all internal links "
+          f"and anchors resolve, all CSVs consistent, all external citations registered, "
+          f"no personal tokens")
     return 0
 
 
