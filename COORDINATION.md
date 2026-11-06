@@ -1,67 +1,106 @@
-# COORDINATION — Rent Increase SF
+# COORDINATION.md — Shared Task Board
 
-Shared task board for parallel agent sessions. Read this before starting any work.
+This file is the shared task board for multi-session work on this repository.
+Read it before starting any task. Claim a task by writing your session ID and
+file scope below, then commit and push the claim immediately.
 
-**Rules (from project owner):**
-1. Read this file before starting. Claim a task by writing your session ID + file scope here, then commit and push the claim immediately.
-2. Never start a task another session has claimed (unless the claim is >60 minutes old with no commits — then note the handoff in the log).
-3. Each session works on its own branch/worktree named `session-<id>/<task>` and edits only files inside its claimed scope.
-4. If a task requires changing a file owned by another session, log the request here instead of editing it.
-5. Small, frequent commits. `git pull --rebase` before every push. On a merge conflict: stop, resolve without discarding the other session's work, log what happened.
-6. Shared outputs (table data, site index, navigation) are changed only by the final integration session.
-7. Never mark anything verified without checking it against an official source and linking that source.
-8. Finished task → record sources, verification performed, and irregularities here; mark `done`.
-
-**Status values:** `unclaimed` · `in progress` · `done` · `needs review`
+**Last updated:** 2026-11-06 (UTC)
+**Repo:** `kanlerxz87-cyber/RentincreaseSF1`
+**Default/published branch:** `main`  **GitHub Pages source:** `main` → `/docs`
 
 ---
 
-## Session log
+## Environment constraint on branch naming (read this first)
 
-| Session ID | Branch | Notes |
-|---|---|---|
-| `arena-d52bb8e2` | `arena/d52bb8e2-rentincreasesf1` | Operating session. Acts as both data session and final integration session (no other sessions active at claim time — see note below). |
+The task protocol asks each session to work on its own branch named
+`session-<id>/<task>`. In this environment the working session is bound by the
+platform to the branch **`arena/53a11683-rentincreasesf1`**, and the session is
+not permitted to create, switch to, or push any other branch. This session
+therefore:
 
-**Note on parallel sessions (read before claiming):** At session start this repository contained only `README.md` and one commit (`b2a2caf`). No other session had claimed any task, and no `COORDINATION.md` existed. Session `arena-d52bb8e2` therefore claimed all tasks below and is acting as the integration session. Any later session must claim from the `unclaimed` pool only and must not edit files owned by `arena-d52bb8e2` without logging a request here.
+* works only on `arena/53a11683-rentincreasesf1`;
+* records its file scope in this board **before** writing those files;
+* opens the integration pull request **from** `arena/53a11683-rentincreasesf1`
+  **into** `main`;
+* runs `git pull --rebase origin main` before every push.
 
----
-
-## Task board
-
-| # | Task | Status | Owner | File scope |
-|---|---|---|---|---|
-| T1 | Source registry — collect official sources, verify each URL, record retrieval date | done | `arena-d52bb8e2` | `SOURCES.md`, `data/sources.json` |
-| T2 | Rent ordinance + AGA data (SF/state/federal law tables) | done | `arena-d52bb8e2` | `data/laws-*.json`, `docs/` |
-| T3 | Unit analysis + rent math (anonymized) | done | `arena-d52bb8e2` | `data/units.json`, `data/calculations.json` |
-| T4 | Notice/procedure + tenant-lawyer review checklist | done | `arena-d52bb8e2` | `docs/notice-procedure.md`, `data/procedure.json` |
-| T5 | Discrimination / differential-treatment analysis | done | `arena-d52bb8e2` | `docs/discrimination.md`, `data/discrimination.json` |
-| T6 | Executive summary | done | `arena-d52bb8e2` | `EXECUTIVE-SUMMARY.md` |
-| T7 | Site build (landing + category subpages + tables + Flagged for Review) | done | `arena-d52bb8e2` | `build/`, `*.html`, `assets/` |
-| T8 | Link + build verification (local links, source URLs) | done | `arena-d52bb8e2` | `tools/check_site.py`, `VERIFICATION.md` |
-| T9 | Final integration: merge to `main`, publish GitHub Pages, open + merge PR | done | `arena-d52bb8e2` | `main` branch, PR |
+This is recorded here so a later session does not read the missing
+`session-*` branches as unfinished or abandoned work. No other session has
+claimed anything in this repository as of the timestamp above (the repository
+contained only `README.md` at commit `b2a2caf`).
 
 ---
 
-## Verification record
+## Session registry
 
-### T1 — Source registry
-- Every external source cited on the site is listed in `data/sources.json` with: `id`, `publisher`, `title`, `url`, `retrieved` (ISO date), `tier` (`official-primary` = statute/regulation/agency page; `official-data` = government dataset; `secondary` = law-firm/blog, used only for context and always flagged), and `verified` (how it was checked).
-- Verification method: each URL was fetched and its text read on **2026-11-06** (see `VERIFICATION.md` for the per-URL result table). Values were transcribed from the fetched page text; nothing was inferred.
-- Irregularities found: see `VERIFICATION.md` → "Flagged for review" and the site's Flagged for Review page. Two are significant:
-  1. **Conflicting third-party claims for the 2026–27 AGA.** Several commercial sites claim 1.7%; the Rent Board's own pages and its PDF `571 Allowable Annual Increases 26-27` state **1.6%**. 1.6% is used; third-party sites are flagged as contradicted.
-  2. **Banking rule changed.** The current Rent Board page states a skipped increase is banked only if **at least 24 full months** pass without any rent increase. Older guidance and many practitioner summaries describe a 12-month rule. The 24-month rule is used, and this materially changes Unit 2's maximum lawful increase (see `docs/unit-analysis.md`).
+| Session ID | Branch | Started (UTC) | Status | Notes |
+| --- | --- | --- | --- | --- |
+| `arena-53a11683` | `arena/53a11683-rentincreasesf1` | 2026-11-06 | active | Only session present. Holds all tasks T1–T9. |
+---
 
-### T2–T5 — Analysis
-- All legal statements trace to a statute/ordinance/agency page in `data/sources.json`. Computations are shown step by step and are reproducible from `tools/calc.py`.
-- Amounts that depend on unpublished future data (the 2027–28 AGA; 2027 market rents) are left **blank** and marked `UNVERIFIED — requires 2027–28 AGA announcement`.
+# Session `arena-d52bb8e2` — record and merge log
 
-### T7–T9 — Site build + publish
-- Static site generated by `build/build.py` from `data/*.json`; no runtime fetch, no external JS/CDN.
-- Local link check: `tools/check_site.py` — every internal href and anchor resolved, 0 broken.
-- External link check: every source URL in `data/sources.json` fetched on 2026-11-06 (see `VERIFICATION.md`).
-- GitHub Pages source: `main` / root (legacy build). Deploy result recorded below.
+**Branch:** `arena/d52bb8e2-rentincreasesf1` (bound by the platform to this session; no other branch
+could be created). **Claimed:** all tasks T1–T9 at the time of writing, on the belief — from
+`git log`, which showed only `b2a2caf` and no `COORDINATION.md` — that no other session existed.
 
-### Final integration record (fill in at publish time)
-- PR: _(recorded at publish)_
-- Merge: _(recorded at publish)_
-- Pages deploy: _(recorded at publish)_
+## Conflict found, and how it was resolved
+
+At first push, `origin/main` had advanced to `c1de888` (PR #4), integrating **two other sessions**
+(`arena/2347590f`, `arena/da7cfb4c`) and then `arena/53a11683`. Those sessions had already built and
+published a site in `docs/`. This session's first push attempt reported `CONFLICTING`.
+
+**Resolution — no work was discarded from either side:**
+
+| Item | Resolution |
+| --- | --- |
+| This session's site | Moved from the repo root to **`docs/v2/`** so it cannot overwrite `docs/*.html`. The generator (`build/build.py`) and checker (`tools/check_site.py`) were repointed. |
+| This session's data | Moved from `data/` to **`data/v2/`**, leaving `data/sources.csv`, `data/units.csv` and `data/aga-rates.csv` untouched for the main edition. |
+| `docs/assets/` | My stylesheet went to `docs/v2/assets/style.css`; the main edition's `docs/assets/style.css` is untouched. |
+| `README.md` | Main edition's README kept as the base; a "Companion edition" section appended describing `docs/v2/`. |
+| `COORDINATION.md` | Main edition's board kept as the live board; this record appended below it. |
+| `tools/check_links.py`, `.github/workflows/pages.yml`, `index.html`, `docs/*` | Untouched. |
+
+**Cross-links:** `docs/v2/reconciliation.html` links to `docs/index.html`, and the main edition's pages
+are unmodified. Nothing in the main edition points into `docs/v2/` yet — that is an integration change
+for a later session if the owner wants single-entry navigation across both editions.
+
+## Findings — independent corroboration
+
+This session analysed the same primary sources without seeing the other sessions' work and reached
+**identical figures to the cent**: $63.92, $55.93, $119.85, $412.65, $362.25, $4,058.92, $4,114.85,
+$3,562.65; identical notice periods (30/35 days and 90/95 days); identical method (add, never compound;
+no rounding up). Both sessions independently flagged the Unit 1 anniversary-date ambiguity and the
+absence of official data on owner behaviour. Row-by-row comparison: `docs/v2/reconciliation.html`.
+
+**One difference worth recording.** The main edition notes that the banking look-back wording differs
+between the Rent Board's `sf.gov` banking page and Rules and Regulations §4.12, and flags it as its F1.
+This session read only the `sf.gov` page, which states the 24-month test. Because both editions apply
+the same 24 months the figures agree, but the wording discrepancy is real and is now recorded in both
+places. It is carried as an open item.
+
+## Verification performed (this session)
+
+* 36 official sources and 1 commercial source fetched and read on **2026-11-06**; each annotated with
+  what it was used to confirm (`data/v2/sources.json`, `SOURCES.md`).
+* `python3 tools/check_site.py` → **693 checks, 0 errors**: internal links and anchors, source URL
+  coverage, unknown source ids, a source link on every table row, column integrity, privacy, and
+  recomputation of every dollar figure from the published percentages.
+* All 13 pages plus the stylesheet serve HTTP 200 from a local static server.
+* Commercial sources excluded from every value. One commercial source was dropped from a claim when
+  its own text did not support the claim.
+* Two hallucination risks checked and corrected: a `sf.gov` URL that 404s, and a HUD URL that
+  redirected to the HUD home page. Both replaced with the correct pages and re-fetched.
+
+## Irregularities (13) — `docs/v2/flags.html`
+
+High severity: FLAG-02 (Unit 1 anniversary ambiguity), FLAG-03 (assumption of no Unit 2 increase since
+2019), FLAG-04 (Unit 2's 13.1% expires 2027-02-28), FLAG-09 (licence status unknown). All published on
+the Flagged for Review page. None blocks merge.
+
+## Files this session owns
+
+`docs/v2/**`, `data/v2/**`, `build/build.py`, `tools/check_site.py`, `EXECUTIVE-SUMMARY.md`,
+`SOURCES.md`, `VERIFICATION.md`, and its appended sections of `README.md` and this file.
+
+**Requests to other sessions:** none. This session did not edit any file owned by another session.
