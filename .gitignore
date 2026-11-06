@@ -1,0 +1,17 @@
+# Private intake must never enter this public repository.
+private/
+.env
+.env.*
+
+# Local build and test output; Pages builds from source in CI.
+.tmp/
+site/public/
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+coverage/
+
+# Local operating-system and editor artifacts.
+.DS_Store
+*.log
