@@ -275,3 +275,13 @@ another session may take over D8 and must note the handoff in this log.
   - `python3 audit/verify_all.py`: 10 HTML pages in `portal/`, 137 source-linked rows, 39 official `.gov` URLs, exact cent `Decimal` checks, blank `Official Confirmed Value` cells on all unverified items, valid relative links/anchors, and strict uppercase token-allowlist privacy screening (`0` raw initials, `0` emails, `0` private addresses).
   - Also executed existing repository CI checks (`python3 tools/check_links.py`, `python3 tools/check_site.py`, `python3 build/build.py`, `python3 dashboard/verify.py`) to confirm full repository compatibility before opening and merging PR.
 - **Flagged Irregularities (`FLG-01`–`FLG-12` on `portal/flagged-for-review.html`):** Unverified private lease/Certificate-of-Occupancy/Rent-Increase-License/rent-ledger inputs (official values left blank), unpublished `3/1/2027–2/29/2028` SF rate, SF.gov worked-example year typos, and repo-audit items (`RA-01`–`RA-09`). Flagged items do not block PR merge.
+
+## Pull Request & Merge Record (`arena/b43dc55e-rentincreasesf1`)
+
+| Item | Details |
+|---|---|
+| Pull Request | [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) — `Add line-by-line verified SF 94122 compliance & lawyer-scrutiny portal (/portal/)` |
+| Published Portal | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/portal/> (`portal/index.html` + 9 category subpages + `portal/flagged-for-review.html`) |
+| Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
+| Merge & Pages Result | Merged to `main` via PR #8 (merge commit & Pages deployment status recorded upon post-merge confirmation) |
+
