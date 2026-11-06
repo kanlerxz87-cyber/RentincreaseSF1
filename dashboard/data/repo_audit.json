@@ -1,0 +1,74 @@
+[
+  {
+    "id": "RA-01",
+    "category": "Repo File: research/sf_laws.md & site/sf_laws.html",
+    "official_value": "1.6% effective 2026-03-01 to 2027-02-28 only",
+    "analysis": "Earlier session file claims 1.6% applies to a June 1, 2027 Unit 2 increase. Official Form 571 confirms 1.6% expires February 28, 2027; the March 1, 2027–February 29, 2028 rate is not yet published as of November 6, 2026.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_form571", "sfrb_rate_2026"]
+  },
+  {
+    "id": "RA-02",
+    "category": "Repo File: data/sources.csv (Row S25)",
+    "official_value": "",
+    "analysis": "Row S25 links uscode.house.gov/view.xhtml?req=(title:42+section:3604+edition:prelim), which returns 'Page Not Found' on November 6, 2026 while uscode.house.gov operates in temporary mode. Official confirmed value left blank for the broken URL; replaced in this dashboard with verified GPO U.S. Code URL (govinfo.gov).",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["fha_3604_gpo", "hud_fha"]
+  },
+  {
+    "id": "RA-03",
+    "category": "Repo Files: research/*.md & site/*.html",
+    "official_value": "",
+    "analysis": "Ten non-government commercial blog domains (cityrulelookup.com, landlordos.net, bancalsf.com, urbantaken.com, lifetimepm.com, leaserunner.com, fflw.org, lethub.co, christopherleesf.com, rentreboot.com) were cited in earlier draft files. Excluded from verified findings; only official government sources are permitted.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_guide", "civ_827", "civ_1947_12"]
+  },
+  {
+    "id": "RA-04",
+    "category": "Repo File: README.md (Line 52 — Rule 4.10 / 4.12 Effect)",
+    "official_value": "Not null and void if within annual + banked cap (Rules 4.10(b), 4.12(b))",
+    "analysis": "README.md asserts that omitting itemization of annual vs. banked portions voids an otherwise correct increase. Enacted SF Rent Board Rules 4.10(b) and 4.12(b) explicitly provide that failure to include banking breakdown dates/portions does NOT render the increase null and void so long as total rent requested does not exceed lawful annual + banked limits (though itemization remains essential to pass lawyer review).",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_rules_part4", "sfrb_sec_37_3"]
+  },
+  {
+    "id": "RA-05",
+    "category": "Repo Files: README.md & data/units.csv (90-Day Mail Service Cutoff)",
+    "official_value": "90 days personal delivery; 95 calendar days if mailed in CA (CC §827(b)(3), CCP §1013(a))",
+    "analysis": "README.md cites November 30, 2026 as the last service date for a >10% Unit 2 increase effective February 28, 2027. If served by U.S. Mail within California, CCP §1013(a) adds 5 calendar days (95 days total), making November 25, 2026 the final mailing date to take effect on February 28, 2027.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["civ_827", "ccp_1013"]
+  },
+  {
+    "id": "RA-06",
+    "category": "Repo File: data/units.csv (Unit 1 Placeholder Mapping)",
+    "official_value": "",
+    "analysis": "data/units.csv labels Unit 1 current tenants 'Tenant 1A and Tenant 1B', obscuring that two of the three February 1, 2025 original tenants vacated and were replaced on April 1, 2026 by one continuing original tenant plus one new occupant. Distinct synthetic placeholder names (Alex Morgan + Casey Kim) preserve exact Costa-Hawkins §1954.53(d) and Rule 6.14 co-tenancy tracking.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["civ_1954_53", "sfrb_614"]
+  },
+  {
+    "id": "RA-07",
+    "category": "Repo File: data/units.csv (Unit 1 April 1, 2026 Lease Term Assumption)",
+    "official_value": "",
+    "analysis": "data/units.csv schedules Unit 1's next increase for February 1, 2027 without flagging that if the April 1, 2026 continuing-tenancy agreement created a new 12-month fixed term through March 31, 2027, Cal. Civ. Code §827(a) bars any unilateral rent increase before April 1, 2027.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["civ_827", "sfrb_guide"]
+  },
+  {
+    "id": "RA-08",
+    "category": "Official Agency Webpages: SF.gov Worked-Example Date Typos",
+    "official_value": "Form 571 governs: 1.7% (3/1/24–2/28/25), 1.4% (3/1/25–2/28/26), 1.6% (3/1/26–2/28/27)",
+    "analysis": "SF.gov's 'Learn about rent increases' Example 1 misprints 'June 1, 2025 is 1.6%' (should read June 1, 2026), and SF.gov's 'Banked rent increases' example misprints 'August 1, 2024 (1.4%)' (should read August 1, 2025). Official Form 571 rate table controls.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_form571", "sfrb_guide", "sfrb_banked"]
+  },
+  {
+    "id": "RA-09",
+    "category": "Repo Privacy & Anonymization Audit (All Tracked Files)",
+    "official_value": "0 personal tokens exposed",
+    "analysis": "Line-by-line scan of docs/, docs/v1/, data/, research/, site/, EXECUTIVE_SUMMARY.md, and README.md confirmed zero tenant initials, real names, street addresses, or personal contact details appear in tracked files.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+  }
+]
