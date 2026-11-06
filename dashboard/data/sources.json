@@ -1,0 +1,392 @@
+{
+  "sfrb_rate_2026": {
+    "id": "SRC-01",
+    "short": "SF Rent Board · 2026–27 Annual Rate (1.6%)",
+    "title": "Annual Rent Increase for 3/1/26 - 2/28/27 Announced",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+    "verified_date": "2026-11-06",
+    "scope": "Confirms 1.6% annual allowable increase effective March 1, 2026 through February 28, 2027, and 1.4% for March 1, 2025 through February 28, 2026."
+  },
+  "sfrb_form571": {
+    "id": "SRC-02",
+    "short": "SF Rent Board · Form 571 Rate Schedule (1982–2027)",
+    "title": "Form 571: Allowable Annual Rent Increases (2026–2027)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov PDF)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+    "verified_date": "2026-11-06",
+    "scope": "Official historical schedule of every SF Rent Board annual allowable rent increase percentage from April 1, 1982 through February 28, 2027."
+  },
+  "sfrb_guide": {
+    "id": "SRC-03",
+    "short": "SF Rent Board · Rent Increase Guide",
+    "title": "Learn about rent increases in San Francisco",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+    "verified_date": "2026-11-06",
+    "scope": "12-month anniversary rule, base-rent-only calculation, prohibition on rounding up, 30/90-day + 5-day mail notice summary, roommate surcharge ban, and Rent Increase License requirement."
+  },
+  "sfrb_coverage": {
+    "id": "SRC-04",
+    "short": "SF Rent Board · Rental Laws & Coverage",
+    "title": "Learn about San Francisco rental laws",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+    "verified_date": "2026-11-06",
+    "scope": "June 13, 1979 Certificate of Occupancy rent-control threshold, just-cause eviction coverage, and partial/complete exemptions."
+  },
+  "sfrb_inventory": {
+    "id": "SRC-05",
+    "short": "SF Rent Board · Housing Inventory & License",
+    "title": "The Rent Board Housing Inventory",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/rent-board-housing-inventory",
+    "verified_date": "2026-11-06",
+    "scope": "Mandatory annual March 1 reporting for all SF residential units (1–9 unit buildings since March 1, 2023) and Rent Increase License prerequisite before any annual/banked increase takes effect."
+  },
+  "sfrb_banked": {
+    "id": "SRC-06",
+    "short": "SF Rent Board · Banked Rent Increases",
+    "title": "Banked rent increases (Topic 503)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information--banked-rent-increases",
+    "verified_date": "2026-11-06",
+    "scope": "Additive (non-compounded) banking math, 24-month no-increase threshold for first skipped year (12 months after eligibility), non-expiration during tenancy, and notice content."
+  },
+  "sfrb_multi_year": {
+    "id": "SRC-07",
+    "short": "SF Rent Board · Multi-Year Increases",
+    "title": "Annual rent increase for multiple years",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information--annual-rent-increase-multiple-years",
+    "verified_date": "2026-11-06",
+    "scope": "Exact multi-year anniversary additive calculation, exclusion of passthrough charges from base rent, and prohibition on rounding up."
+  },
+  "sfrb_irregular": {
+    "id": "SRC-08",
+    "short": "SF Rent Board · Irregular Period Increases",
+    "title": "Increasing rents during irregular periods",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information--increasing-rents-during-irregular-periods",
+    "verified_date": "2026-11-06",
+    "scope": "Trade-off and forfeiture mechanics when shifting a tenant's anniversary date vs. waiting for the exact anniversary date."
+  },
+  "sfrb_petitions": {
+    "id": "SRC-09",
+    "short": "SF Rent Board · Landlord Petitions & Passthroughs",
+    "title": "Landlord Petitions and Passthroughs (Topic 301)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/landlord-petitions-and-passthroughs",
+    "verified_date": "2026-11-06",
+    "scope": "Six categories requiring Rent Board petition approval (Capital Improvement, O&M, Comparable Rents, Prop I, Utility, Rule 1.21) and worksheet passthroughs (GO Bond, Water Bond)."
+  },
+  "sfrb_614": {
+    "id": "SRC-10",
+    "short": "SF Rent Board · Rule 6.14 & Costa-Hawkins",
+    "title": "Rent Increases Under Section 6.14 And Costa-Hawkins (Topic 153)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local / State Interaction",
+    "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+    "verified_date": "2026-11-06",
+    "scope": "No market reset while any original occupant permanently resides in unit; co-tenants with direct agreement/rent acceptance are exempt from Costa-Hawkins increases absent timely 6.14 notice."
+  },
+  "sfrb_sfh_costa": {
+    "id": "SRC-11",
+    "short": "SF Rent Board · Single-Family/Condo & In-Law Units",
+    "title": "Partial Exemption for Certain Single-Family Homes and Condominiums Under Costa-Hawkins",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local / State Interaction",
+    "url": "https://www.sf.gov/information--partial-exemption-certain-single-family-homes-and-condominiums-under-costa-hawkins",
+    "verified_date": "2026-11-06",
+    "scope": "Confirms a house with a legal OR illegal in-law unit constitutes a two-unit building NOT exempt from SF Rent Control under Costa-Hawkins."
+  },
+  "sfrb_ab1482": {
+    "id": "SRC-12",
+    "short": "SF Rent Board · AB 1482 in SF (8.8% Cap Not Applicable to Covered Units)",
+    "title": "The California Tenant Protection Act of 2019 (AB 1482)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "State / Local Interaction",
+    "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
+    "verified_date": "2026-11-06",
+    "scope": "Confirms SF AB 1482 cap is 8.8% (5% + 3.8% CPI) for 8/1/2026–7/31/2027, and explicitly does NOT apply to units under SF Rent Ordinance rent limitations."
+  },
+  "sfrb_ordinance": {
+    "id": "SRC-13",
+    "short": "SF Admin. Code Ch. 37 · Rent Ordinance Index",
+    "title": "The Rent Ordinance (Chapter 37, SF Administrative Code — Current through 11/2/26)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/reports--rent-ordinance",
+    "verified_date": "2026-11-06",
+    "scope": "Chapter 37 index current through November 2, 2026 amendments and official publisher designation (American Legal)."
+  },
+  "sfrb_amendments_2026": {
+    "id": "SRC-14",
+    "short": "SF Rent Board · Ordinance Amendments Log (11/2/2026)",
+    "title": "Form 601: List of Rent Ordinance Amendments through 11/02/26",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov PDF)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://media.api.sf.gov/documents/601_List_of_Ord_Amendments_11-2-26.pdf",
+    "verified_date": "2026-11-06",
+    "scope": "Chronological log of all Chapter 37 amendments from June 13, 1979 through November 2, 2026, including Ord. 064-24 (unauthorized unit removal coverage), Ord. 224-24 & 169-25 (§37.10C algorithmic ban), and Ord. 003-26."
+  },
+  "sfrb_sec_37_3": {
+    "id": "SRC-15",
+    "short": "SF Admin. Code §37.3 · Rent Limitations",
+    "title": "Sec. 37.3 — Rent Limitations",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information/sec-373-rent-limitations",
+    "verified_date": "2026-11-06",
+    "scope": "Enacted text establishing 60%-of-CPI annual cap (7% statutory ceiling), §37.15 license prerequisite, banking (§37.3(a)(2)), and passthrough rules."
+  },
+  "sfrb_sec_37_10b": {
+    "id": "SRC-16",
+    "short": "SF Admin. Code §37.10B · Tenant Harassment",
+    "title": "Sec. 37.10B — Tenant Harassment",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information/sec-3710b-tenant-harassment",
+    "verified_date": "2026-11-06",
+    "scope": "Prohibits bad-faith coercion to vacate, retaliatory/discriminatory acts (§37.10B(a)(9)), privacy intrusions, and establishes treble-damages + mandatory prevailing-tenant attorney's fees."
+  },
+  "sfrb_sec_37_10c": {
+    "id": "SRC-17",
+    "short": "SF Admin. Code §37.10C · Algorithmic Rent Software Ban",
+    "title": "Sec. 37.10C — Use and Sale of Algorithmic Devices Prohibited",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+    "verified_date": "2026-11-06",
+    "scope": "Bans landlords in SF from using algorithmic revenue-management software based on non-public competitor data (effective Oct 14, 2024; tenant-rights nonprofit enforcement effective Oct 6, 2025; up to $1,000/unit/month penalty + attorney's fees)."
+  },
+  "sfrb_algo_info": {
+    "id": "SRC-18",
+    "short": "SF Rent Board · Algorithmic Devices Guidance",
+    "title": "Algorithmic devices that set rent are prohibited in San Francisco (Topic 268)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information--algorithmic-devices-set-rent-are-prohibited-san-francisco",
+    "verified_date": "2026-11-06",
+    "scope": "Agency guidance distinguishing prohibited revenue-management pricing software from permissible general property-management/accounting software."
+  },
+  "sfrb_sec_37_15": {
+    "id": "SRC-19",
+    "short": "SF Admin. Code §37.15 · Housing Inventory Licensing",
+    "title": "Sec. 37.15 — Reporting Obligations; Licensing",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing",
+    "verified_date": "2026-11-06",
+    "scope": "Suspends landlord authority to impose §37.3(a)(1)–(2) annual or banked increases during any period of Housing Inventory reporting noncompliance; restoration is prospective only."
+  },
+  "sfrb_rules_part4": {
+    "id": "SRC-20",
+    "short": "SF Rent Board Rules · Part IV (§§4.10, 4.12)",
+    "title": "Rent Board Rules and Regulations: Part IV — Rent Increases Not Requiring Approval",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+    "verified_date": "2026-11-06",
+    "scope": "Enacted regulatory text of Section 4.10 (written notice breakdown) and Section 4.12 (banking 12-month eligibility elapsed rule, non-compounding, no rounding up, and non-voidness proviso)."
+  },
+  "sfrb_rules_part6": {
+    "id": "SRC-21",
+    "short": "SF Rent Board Rules · Part VI (§6.10 O&M)",
+    "title": "Rent Board Rules and Regulations: Part VI — Rent Increase Justifications",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
+    "verified_date": "2026-11-06",
+    "scope": "Operating & Maintenance petition rules (7% cap, 2-year comparison window, post-2018 debt-service/property-tax reassessment exclusions) and roommate rules."
+  },
+  "sfrb_fee": {
+    "id": "SRC-22",
+    "short": "SF Rent Board · 2026–27 Rent Board Fee ($59)",
+    "title": "The Rent Board Fee",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/rent-board-fee",
+    "verified_date": "2026-11-06",
+    "scope": "Confirms 2026–2027 Rent Board Fee of $59.00 per dwelling unit (due March 1), with 50% ($29.50) recoverable separately from tenants in occupancy as of November 1 (not added to base rent)."
+  },
+  "sfrb_hardship": {
+    "id": "SRC-23",
+    "short": "SF Rent Board · Tenant Financial Hardship",
+    "title": "Tenant Financial Hardship Applications (Topic 363)",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/tenant-financial-hardship-applications",
+    "verified_date": "2026-11-06",
+    "scope": "Confirms hardship applications defer capital improvement, bond, utility, and O&M passthroughs, whereas annual allowable and banked CPI increases are NOT eligible for formal hardship deferral."
+  },
+  "sfrb_referrals": {
+    "id": "SRC-24",
+    "short": "SF Rent Board · Tenant Legal Referral List (incl. 94122)",
+    "title": "Rent Board Referral Listing",
+    "publisher": "City & County of San Francisco — Rent Board (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/reports--january-2025--rent-board-referral-listing",
+    "verified_date": "2026-11-06",
+    "scope": "Official directory of SF free/low-cost tenant legal aid and counseling providers, including Open Door Legal Sunset Office (1722 Irving St, SF 94122), Eviction Defense Collaborative, Housing Rights Committee, SF Tenants Union, Asian Law Caucus, and Bay Area Legal Aid."
+  },
+  "sf_mohcd_help": {
+    "id": "SRC-25",
+    "short": "SF MOHCD · Tenant Right to Counsel & Resources",
+    "title": "Tenant and Landlord Resources",
+    "publisher": "SF Mayor's Office of Housing and Community Development (SF.gov)",
+    "jurisdiction": "Local (San Francisco)",
+    "url": "https://www.sf.gov/tenant-and-landlord-resources",
+    "verified_date": "2026-11-06",
+    "scope": "City-funded free legal representation via Eviction Defense Collaborative (Tenant Right to Counsel), Bar Association of SF Conflict Intervention Service mediation, and neighborhood counseling clinics."
+  },
+  "civ_827": {
+    "id": "SRC-26",
+    "short": "Cal. Civ. Code §827 · Rent Increase Notice Statute",
+    "title": "California Civil Code Section 827",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Applies to month-to-month tenancies; mandates written notice served personally or by CCP §1013 mail at least 30 days (if ≤10% over 12 months) or 90 days (if >10% over 12 months) prior to effective date."
+  },
+  "ccp_1013": {
+    "id": "SRC-27",
+    "short": "Cal. CCP §1013 · +5 Calendar Days for Mail Service",
+    "title": "California Code of Civil Procedure Section 1013",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013.&lawCode=CCP",
+    "verified_date": "2026-11-06",
+    "scope": "Extends statutory notice periods by +5 calendar days when mailed and addressed within California (+10 days out-of-state within U.S.; +20 days international)."
+  },
+  "civ_1947_12": {
+    "id": "SRC-28",
+    "short": "Cal. Civ. Code §1947.12 · AB 1482 State Rent Cap",
+    "title": "California Civil Code Section 1947.12 (Tenant Protection Act of 2019)",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Caps covered state units at 5% + CPI (max 10%), while §1947.12(d)(3) expressly exempts units governed by stricter local rent control ordinances like SF Admin. Code Ch. 37."
+  },
+  "civ_1954_52": {
+    "id": "SRC-29",
+    "short": "Cal. Civ. Code §1954.52 · Costa-Hawkins Exemptions",
+    "title": "California Civil Code Section 1954.52 (Costa-Hawkins Rental Housing Act)",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.52.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Exempts post-Feb 1, 1995 construction and separately alienable single-family/condo units (with exceptions for multi-unit parcels, unsold condos, code citations, and prior §827 terminations)."
+  },
+  "civ_1954_53": {
+    "id": "SRC-30",
+    "short": "Cal. Civ. Code §1954.53 · Costa-Hawkins Vacancy & Partial Changes",
+    "title": "California Civil Code Section 1954.53 (Costa-Hawkins Rental Housing Act)",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1954.53.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Subdivision (d)(3) bars vacancy decontrol on partial changes in occupancy so long as at least one original occupant under the rental agreement with the owner remains in lawful possession."
+  },
+  "civ_1942_4": {
+    "id": "SRC-31",
+    "short": "Cal. Civ. Code §1942.4 · Substandard Habitability Bar",
+    "title": "California Civil Code Section 1942.4",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.4.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Prohibits issuing a rent increase notice or demanding rent when an unabated housing/building inspection citation remains open >35 days without good cause ($100–$5,000 statutory damages + mandatory attorney's fees)."
+  },
+  "civ_1942_5": {
+    "id": "SRC-32",
+    "short": "Cal. Civ. Code §1942.5 · Anti-Retaliation Protections",
+    "title": "California Civil Code Section 1942.5",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Bars increasing rent within 180 days of a tenant's good-faith repair/habitability complaint or citation (§1942.5(a)) and prohibits retaliatory rent increases at any time for organizing or peaceably exercising legal rights (§1942.5(d))."
+  },
+  "civ_51": {
+    "id": "SRC-33",
+    "short": "Cal. Civ. Code §51 · Unruh Civil Rights Act",
+    "title": "California Civil Code Section 51 (Unruh Civil Rights Act)",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=51.&lawCode=CIV",
+    "verified_date": "2026-11-06",
+    "scope": "Requires full and equal accommodations in all business establishments (including residential rentals) regardless of sex, race, color, religion, ancestry, national origin, disability, medical condition, genetic info, marital status, sexual orientation, citizenship, primary language, or immigration status."
+  },
+  "gov_12955": {
+    "id": "SRC-34",
+    "short": "Cal. Gov. Code §12955 · FEHA Housing Discrimination",
+    "title": "California Government Code Section 12955 (Fair Employment and Housing Act)",
+    "publisher": "California Legislative Information (leginfo.legislature.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955.&lawCode=GOV",
+    "verified_date": "2026-11-06",
+    "scope": "Prohibits housing discrimination, harassment, discriminatory inquiries, and fair-housing retaliation across race, color, religion, sex, gender identity/expression, sexual orientation, marital/familial status, national origin, ancestry, source of income (incl. vouchers), disability, veteran/military status, and genetic info."
+  },
+  "crd_housing": {
+    "id": "SRC-35",
+    "short": "CA Civil Rights Dept · Fair Housing Enforcement",
+    "title": "Housing Discrimination — California Civil Rights Department (CRD)",
+    "publisher": "State of California — Civil Rights Department (calcivilrights.ca.gov)",
+    "jurisdiction": "State (California)",
+    "url": "https://calcivilrights.ca.gov/housing/",
+    "verified_date": "2026-11-06",
+    "scope": "Agency guidance on FEHA/Unruh protected classes (including age, citizenship, primary language, immigration status, source of income), associational/perceived discrimination, reasonable accommodations, and administrative complaint remedies."
+  },
+  "fha_3604_gpo": {
+    "id": "SRC-36",
+    "short": "42 U.S.C. §3604 · Federal Fair Housing Act (GPO)",
+    "title": "42 U.S.C. § 3604 — Discrimination in the sale or rental of housing (U.S. Government Publishing Office)",
+    "publisher": "U.S. Government Publishing Office (govinfo.gov)",
+    "jurisdiction": "Federal (United States)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+    "verified_date": "2026-11-06",
+    "scope": "Enacted federal statutory text (§3604(b) & §3604(f)(2)) prohibiting discrimination in the terms, conditions, or privileges of rental because of race, color, religion, sex, familial status, national origin, or handicap/disability."
+  },
+  "hud_fha": {
+    "id": "SRC-37",
+    "short": "U.S. HUD · Fair Housing Act Overview",
+    "title": "Housing Discrimination Under the Fair Housing Act",
+    "publisher": "U.S. Department of Housing and Urban Development (hud.gov)",
+    "jurisdiction": "Federal (United States)",
+    "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+    "verified_date": "2026-11-06",
+    "scope": "Federal FHEO administrative complaint authority and protected-class overview across private and assisted housing."
+  },
+  "doj_realpage": {
+    "id": "SRC-38",
+    "short": "U.S. DOJ & CA AG · Corporate Algorithmic Rent Antitrust Action",
+    "title": "Justice Department Sues RealPage for Algorithmic Pricing Scheme that Harms Millions of American Renters",
+    "publisher": "U.S. Department of Justice — Office of Public Affairs (justice.gov)",
+    "jurisdiction": "Federal / Multi-State Antitrust",
+    "url": "https://www.justice.gov/archives/opa/pr/justice-department-sues-realpage-algorithmic-pricing-scheme-harms-millions-american-renters",
+    "verified_date": "2026-11-06",
+    "scope": "Documents how institutional multifamily operators used commercial revenue-management software ( ~80% market share, auto-accept pricing, concession limits) and Sherman Act §§1–2 enforcement joined by California AG."
+  },
+  "census_rhfs_2024": {
+    "id": "SRC-39",
+    "short": "U.S. Census & HUD · 2024 Rental Housing Finance Survey",
+    "title": "2024 Rental Housing Finance Survey (CBDRB-FY25-0428)",
+    "publisher": "U.S. Census Bureau & U.S. Dept. of Housing and Urban Development (census.gov PDF)",
+    "jurisdiction": "Federal Statistical Benchmark",
+    "url": "https://www.census.gov/content/dam/Census/programs-surveys/rhfs/2024-rhfs-infographic.pdf",
+    "verified_date": "2026-11-06",
+    "scope": "Official empirical comparison of small 1-unit (82.9% of properties) and 2–4 unit properties (14.6% of properties; $5,820/unit mean operating expense; median DSCR 74; mean low-to-high rent $1,326–$1,668) versus 50+ unit institutional properties (0.4% of properties / 39.2% of units; median DSCR 164; $10,979/unit mean operating expense; mean low-to-high rent $1,324–$2,239)."
+  }
+}

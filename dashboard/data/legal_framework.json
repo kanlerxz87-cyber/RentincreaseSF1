@@ -1,0 +1,114 @@
+[
+  {
+    "id": "LAW-01",
+    "category": "Local · SF Rent Ordinance Coverage (1940 Building, 94122)",
+    "official_value": "Covered if pre-6/13/1979 multi-unit (Admin. Code §37.2, §37.3)",
+    "analysis": "Residential units in multi-unit buildings with a Certificate of Occupancy issued on or before June 13, 1979 have both local rent-increase control and just-cause eviction protection. Under SF Rent Board Costa-Hawkins guidance and Ord. 064-24, even a 1940 Outer Sunset house with a legal or unpermitted in-law unit rented separately constitutes a 2-unit building subject to SF Rent Control.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_coverage", "sfrb_sfh_costa", "sfrb_amendments_2026"]
+  },
+  {
+    "id": "LAW-02",
+    "category": "Local · Annual Allowable Rent Increase Formula & 2026–27 Rate",
+    "official_value": "1.6% (3/1/2026–2/28/2027); statutory ceiling 7.0% (60% of CPI)",
+    "analysis": "Under SF Admin. Code §37.3(a)(1), the annual allowable increase equals 60% of the preceding 12-month Bay Area CPI-U increase, capped at 7%. For effective dates March 1, 2026 through February 28, 2027, the published rate is 1.6% of base rent only (no rounding up to the nearest dollar).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_3", "sfrb_rate_2026", "sfrb_guide"]
+  },
+  {
+    "id": "LAW-03",
+    "category": "Local · Mandatory Housing Inventory & Rent Increase License",
+    "official_value": "Annual March 1 filing required; license suspended if noncompliant (§37.15)",
+    "analysis": "Since March 1, 2023 for buildings with 1–9 units, owners must report unit occupancy and base rent (in $250 bands) annually into the SF Rent Board Housing Inventory to obtain a Rent Increase License. Under §37.15(e), if the owner is noncompliant on the effective date, the license is suspended and the tenant owes zero increase for suspended months (restoration is prospective only).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+  },
+  {
+    "id": "LAW-04",
+    "category": "Local · 12-Month Frequency & Banking Mechanics",
+    "official_value": "Min. 12 months between increases; banking additive, never compounded (Rule 4.12)",
+    "analysis": "First annual increase requires 12 full months after lease start; subsequent increases must be at least 12 months apart. Under Rule 4.12(a), a skipped annual increase banks only after a full 12 months have elapsed from the date it first could have been imposed (24 months from lease start for a first skipped increase). Banked percentages are summed linearly and do not expire during the same tenancy.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_rules_part4", "sfrb_banked", "sfrb_irregular"]
+  },
+  {
+    "id": "LAW-05",
+    "category": "Local · Roommate Addition / Replacement & Base-Rent Protection",
+    "official_value": "$0 surcharge permitted for additional/replacement roommates (Topic 050; Rules 6.14, 6.15)",
+    "analysis": "SF Rent Board guidance explicitly establishes that charging extra rent solely because a replacement or additional roommate moved in with an existing tenant is an unlawful rent increase, even if a lease clause purports to allow it.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_guide", "sfrb_614"]
+  },
+  {
+    "id": "LAW-06",
+    "category": "Local · Petitions, Passthroughs & Annual Rent Board Fee",
+    "official_value": "2026–27 Fee: $59.00/unit (50% = $29.50 recoverable separately); O&M max +7%; Cap. Imp. max +10%",
+    "analysis": "Increases exceeding annual + banked CPI require prior Rent Board petition approval (Capital Improvements §37.7, Operating & Maintenance §37.8/Rule 6.10—excluding post-April 3, 2018 acquisition debt service/property tax reassessment) or official worksheets (GO/Water bonds). Half of the paid $59 Rent Board Fee ($29.50) may be billed separately for tenants in occupancy Nov 1, never rolled into base rent.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_petitions", "sfrb_rules_part6", "sfrb_fee", "sfrb_hardship"]
+  },
+  {
+    "id": "LAW-07",
+    "category": "Local · Tenant Harassment & Algorithmic Pricing Prohibitions",
+    "official_value": "§37.10B treble damages + fees; §37.10C up to $1,000/unit/mo civil penalty + fees",
+    "analysis": "Admin. Code §37.10B prohibits bad-faith coercion to vacate, repair neglect, privacy violations, and housing discrimination (§37.10B(a)(9)). Admin. Code §37.10C (effective Oct 14, 2024; tenant-rights nonprofit standing Oct 6, 2025) bans using revenue-management algorithms relying on non-public competitor data to set SF residential rents.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_10b", "sfrb_sec_37_10c", "sfrb_algo_info"]
+  },
+  {
+    "id": "LAW-08",
+    "category": "State · California Tenant Protection Act (AB 1482 — Civ. Code §1947.12)",
+    "official_value": "8.8% in SF (8/1/2026–7/31/2027), INAPPLICABLE to SF Rent Ordinance covered units",
+    "analysis": "AB 1482 caps non-exempt California units at 5% + regional CPI (3.8% for SF = 8.8% through July 31, 2027, max 10%). However, Civ. Code §1947.12(d)(3) expressly exempts units subject to a stricter local rent control ordinance. Covered 1940 SF multi-unit apartments are governed by SF's 1.6% annual cap, NOT 8.8%.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1947_12", "sfrb_ab1482"]
+  },
+  {
+    "id": "LAW-09",
+    "category": "State · Costa-Hawkins Rental Housing Act (Civ. Code §§1954.50–1954.53)",
+    "official_value": "No vacancy reset on partial turnover while an original occupant remains (§1954.53(d)(3))",
+    "analysis": "Costa-Hawkins permits market-rate initial rent on true full vacancies, but §1954.53(d)(3) bars unlimited increases during partial roommate turnover while at least one original occupant under the agreement with the owner remains in lawful possession. Furthermore, SF Rent Board Topic 153 confirms co-tenants who contract with or pay rent directly to the owner are exempt from Costa-Hawkins increases absent a timely written Rule 6.14 notice.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1954_52", "civ_1954_53", "sfrb_614"]
+  },
+  {
+    "id": "LAW-10",
+    "category": "State · Statutory Written Notice & Mail Extension (Civ. Code §827 & CCP §1013)",
+    "official_value": "30 days (≤10%) or 90 days (>10%); +5 calendar days if mailed within CA",
+    "analysis": "Applies only to periodic (e.g., month-to-month) tenancies unless a fixed-term lease expressly authorizes mid-term increases. Notice must be in writing and served by personal delivery or U.S. Mail (never email/text alone); mailing within California adds 5 calendar days (35 days for ≤10%, 95 days for >10%).",
+    "status": "Verified Official Rule",
+    "sources": ["civ_827", "ccp_1013"]
+  },
+  {
+    "id": "LAW-11",
+    "category": "State · Habitability Citation Bar & Anti-Retaliation (Civ. Code §§1942.4, 1942.5)",
+    "official_value": "35-day unabated citation bar (§1942.4); 180-day retaliation bar (§1942.5(a))",
+    "analysis": "Civil Code §1942.4 prohibits issuing a rent increase notice if a public officer's substandard-condition notice remains unabated >35 days without good cause ($100–$5,000 special damages + fees). Civil Code §1942.5 bars retaliatory rent increases within 180 days of repair complaints/citations or at any time for tenant organizing or peaceable exercise of legal rights.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1942_4", "civ_1942_5"]
+  },
+  {
+    "id": "LAW-12",
+    "category": "State · FEHA & Unruh Fair Housing Laws (Gov. Code §12955; Civ. Code §51)",
+    "official_value": "19+ protected characteristics; applies to all rental owners regardless of size",
+    "analysis": "California prohibits differential rental terms, selective increases, harassment, or retaliation motivated by race, color, ancestry, national origin, citizenship, immigration status, primary language, religion, mental/physical disability, sex/gender, sexual orientation, gender identity/expression, genetic info, marital/familial status, source of income (Section 8/vouchers), military/veteran status, or age.",
+    "status": "Verified Official Rule",
+    "sources": ["gov_12955", "civ_51", "crd_housing"]
+  },
+  {
+    "id": "LAW-13",
+    "category": "Federal · Fair Housing Act & Absence of Federal Private-Market Rent Cap",
+    "official_value": "42 U.S.C. §3604(b) & (f)(2) prohibit discriminatory rental terms; no federal CPI cap on unsubsidized units",
+    "analysis": "Federal law imposes no numeric rent-increase percentage ceiling on private unsubsidized rentals, but 42 U.S.C. §3604(b) and §3604(f)(2) strictly prohibit post-acquisition discrimination in the terms, conditions, or privileges of rental (including selective rent increases or refusal of reasonable disability accommodations) based on race, color, religion, sex, familial status, national origin, or disability.",
+    "status": "Verified Official Rule",
+    "sources": ["fha_3604_gpo", "hud_fha"]
+  },
+  {
+    "id": "LAW-14",
+    "category": "Outer Sunset ZIP 94122 · Neighborhood Market Norm vs. Legal Cap",
+    "official_value": "",
+    "analysis": "Official confirmed value intentionally left blank: no government agency publishes an official 'normal neighborhood rent increase percentage' specific to Outer Sunset ZIP 94122, and market comparables in 94122 do NOT authorize exceeding SF's 1.6% annual allowance (plus verified lawful banking) on covered units.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_rate_2026", "sfrb_coverage"]
+  }
+]
