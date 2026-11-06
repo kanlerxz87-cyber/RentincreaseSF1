@@ -158,7 +158,7 @@ change that setting or any workflow.
 | D5 | Dashboard site: landing + subpages, tables, analysis, findings | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/index.html`, `dashboard/pages/**`, `dashboard/assets/**` |
 | D6 | Clearly labelled "Flagged for Review" page (all unverified items + source links) | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/pages/flagged.html` |
 | D7 | Line-by-line verification, source-link check, privacy scan, link check, build | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/verify.py` |
-| D8 | PR to `main`, merge, confirm Pages deploy, record link here | in progress | `arena/dd1caa16-rentincreasesf1` | `COORDINATION.md` |
+| D8 | PR to `main`, merge, confirm Pages deploy, record link here | done | `arena/dd1caa16-rentincreasesf1` | `COORDINATION.md` |
 
 Status `needs review` items live on the dashboard's Flagged for Review page and do
 not block the merge.
@@ -176,6 +176,10 @@ not block the merge.
                             Second COORDINATION.md conflict resolved by preserving
                             main's expanded board verbatim and re-appending this
                             addendum. No other session's work was discarded.
+2026-11-06  arena/dd1caa16  PR #6 created, CI checks passed, merged as 342e14a;
+                            GitHub Pages build built at 13:43:54Z and /dashboard/
+                            confirmed live. D8 done. This final record is delivered
+                            by a small follow-up PR from the same fixed branch.
 ```
 
 ## Requests to other sessions / integration owner
@@ -227,5 +231,7 @@ another session may take over D8 and must note the handoff in this log.
 | Item | Value |
 |---|---|
 | PR | [#6](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/6) — "Add independent official-source verification dashboard at /dashboard/" |
-| Merge result | *(to be recorded after merge; PR #6 is merged without waiting for review)* |
-| Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
+| CI checks | Both `verify` jobs passed before merge (link/anchor/citation/CSV/privacy checks, entry points, companion-edition reproducibility and checks). |
+| Merge result | **Merged** 2026-11-06T13:40:41Z as `342e14a4cacc955b9ebe5d95e9465471d772350e` via `gh pr merge 6 --merge`, without waiting for review. |
+| Pages deploy | **Built** 2026-11-06T13:43:54Z for commit `342e14a`; live at `https://kanlerxz87-cyber.github.io/RentincreaseSF1/dashboard/` (landing page, sources page, and Flagged for Review page fetched successfully; a cache-busting query was needed immediately after the build because the CDN briefly served a cached 404). |
+| Verification after deploy | `python3 dashboard/verify.py` passes: 42 official sources, 67 verified facts, 17 blank-verified case facts, 21 flags, 3 scenarios, 12 pages; every table row source-linked, all links/anchors/nav resolve, no personal identifiers in `dashboard/**`. |
