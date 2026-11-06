@@ -193,6 +193,16 @@
       "action": "Keep the internal identity file outside the repository and outside the site."
     },
     {
+      "id": "F-21",
+      "title": "No official source states a typical corporate per-unit increase for SF rent-controlled units",
+      "category": "Practice",
+      "severity": "medium",
+      "detail": "SEC filings from a large apartment REIT disclose portfolio-level same-property revenue growth, renewal/reletting practices, and rent-control compliance as a risk factor, but no official source gives a per-unit rent-increase percentage for a San Francisco rent-controlled unit. Per the verification rule, that value is left blank and the SEC figures are labelled as portfolio-level disclosures, not as a permitted rent increase.",
+      "sources": ["S36", "S37", "S01"],
+      "value_left_blank": "Typical corporate per-unit rent-increase percentage for a 94122 rent-controlled unit",
+      "action": "Use the official Rent Board rate; do not benchmark against a REIT's portfolio revenue growth."
+    },
+    {
       "id": "F-20",
       "title": "No official source requires a stated justification for the annual allowable increase",
       "category": "Reasons / procedure",

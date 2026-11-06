@@ -1,0 +1,138 @@
+{
+  "page": {
+    "slug": "notices",
+    "title": "Notice Procedure & Reasons",
+    "category": "Practice & Procedure",
+    "order": 7,
+    "eyebrow": "Procedure · how to inform tenants correctly",
+    "intro": "A step-by-step, source-linked procedure for informing tenants of a rent increase, followed by the official categories of reasons that can lawfully support an increase. Every step and every reason is tied to an official document; a reason that no official source supports is not listed. {{S07}} {{S15}}",
+    "sections": [
+      {
+        "heading": "1. The correct way to inform tenants — step by step",
+        "body": "The sequence matters. A petition-based increase must be filed with the Rent Board <em>before</em> the notice is served {{S15}}, and a Rent Increase License must already be on file before the increase takes effect {{S11}}. A notice that does not conform with § 37.3(b) is null and void. {{S04}}",
+        "table": {
+          "caption": "Rent-increase notice checklist — each step sourced",
+          "rows": [
+            { "item": "Step 1 — Confirm coverage", "value": "Verify the unit is subject to the Rent Ordinance before applying the rate", "basis": "\"If your unit was built before June 14, 1979, and is not used as a single family dwelling, it may have both: Rent control; Eviction protection.\" Use the Property Information Map.", "source": "S10", "status": "verified" },
+            { "item": "Step 2 — Confirm the Rent Increase License", "value": "A current license must be on file on the effective date", "basis": "\"A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect.\"", "source": "S11", "status": "verified" },
+            { "item": "Step 3 — Establish the current base rent", "value": "Base rent only, including parking/storage but excluding temporary passthroughs", "basis": "\"Landlords must calculate the rent increase on the tenant's base rent only.\"", "source": "S07", "status": "verified" },
+            { "item": "Step 4 — Establish the anniversary date", "value": "The date the tenant's current rent became effective; first increase at 12 months after the lease began", "basis": "Rules § 1.11 and SF.gov timing guidance.", "source": "S05", "status": "verified" },
+            { "item": "Step 5 — Choose the rate in effect on the effective date", "value": "1.6% for an increase effective 3/1/26 – 2/28/27", "basis": "\"The landlord should use the percentage that will be in effect on the date of the increase, not the percentage in effect on the date they serve the notice.\"", "source": "S07", "status": "verified" },
+            { "item": "Step 6 — Calculate the amount", "value": "Base rent × 0.016; no rounding up to the nearest dollar", "basis": "\"To calculate the dollar amount of the 1.6% annual rent increase, multiply the tenant's base rent by .016.\" \"Rent increases cannot be rounded up to the nearest dollar.\"", "source": "S01", "status": "verified" },
+            { "item": "Step 7 — Decide whether a petition is needed", "value": "Annual/banked increases need no petition; six other categories do", "basis": "\"For certain types of rent increases, landlords must file a petition at the Rent Board before serving the tenants with a notice of the increase.\"", "source": "S15", "status": "verified" },
+            { "item": "Step 8 — Prepare a written notice", "value": "State the dollar amount, percentage amount, effective date, and which part (if any) is banked", "basis": "\"The rent increase notice should include the: Dollar amount … Percentage amount … Date the increase will go into effect … Which part of the increase is banked.\"", "source": "S08", "status": "verified" },
+            { "item": "Step 9 — Allocate the increase in the notice", "value": "Disclose which portion is annual, banked, capital improvement, O&M, comparable rent, or passthrough", "basis": "SF Admin Code § 37.3(b)(1)–(4).", "source": "S04", "status": "verified" },
+            { "item": "Step 10 — For a banked portion, state the underlying dates", "value": "Disclose the dates on which the banked amount is based", "basis": "Rules § 4.12(b)(2).", "source": "S06", "status": "verified" },
+            { "item": "Step 11 — Serve the notice", "value": "Personal delivery, or mail under Code of Civil Procedure § 1013", "basis": "\"By delivering a copy to the tenant personally. By serving a copy by mail …\"", "source": "S26", "status": "verified" },
+            { "item": "Step 12 — Observe the lead time", "value": "30 days if ≤10%; 90 days if >10%; add 5 days if mailed", "basis": "Civil Code § 827(b)(2)–(3) and SF.gov guidance.", "source": "S26", "status": "verified" },
+            { "item": "Step 13 — Retain proof and expect scrutiny", "value": "Tenants may file Form 516C with no charge and no time limit", "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"", "source": "S19", "status": "verified" },
+            { "item": "Consequence of a defective notice", "value": "Null and void", "basis": "\"Any rent increase which does not conform with the provisions of this section shall be null and void.\"", "source": "S04", "status": "verified" },
+            { "item": "Consequence of a missing licence", "value": "Increase may be null and void; tenant may be entitled to a rent refund", "basis": "\"A rent increase notice that goes into effect while the unit is unlicensed may be null and void.\"", "source": "S12", "status": "verified" }
+          ]
+        }
+      },
+      {
+        "heading": "2. Reasonable (officially recognised) reasons for an increase",
+        "body": "The annual allowable increase is a CPI-based formula and requires no justification or petition. Anything above the permitted amounts needs a Rent Board petition, and the official petition categories define the recognised reasons. {{S03}} {{S09}} {{S15}} {{F-20}}",
+        "table": {
+          "caption": "Officially recognised reasons / mechanisms for a rent increase",
+          "rows": [
+            {
+              "item": "Annual CPI-based adjustment",
+              "value": "1.6% effective 3/1/26 – 2/28/27; no petition and no stated justification required",
+              "basis": "Form 571: \"A landlord may increase the tenant's base rent once every 12 months by the amount of the allowable annual rent increase without filing a petition at the Rent Board.\"",
+              "source": "S03",
+              "status": "verified"
+            },
+            {
+              "item": "Banked (previously skipped) annual increases",
+              "value": "Sum of the allowable percentages for the years properly banked; no petition required",
+              "basis": "\"Landlords are not required to file a petition with the City to impose these types of rent increases.\" Subject to the 24-month banking rule and no compounding.",
+              "source": "S09",
+              "status": "verified"
+            },
+            {
+              "item": "Capital improvement passthrough",
+              "value": "Requires a Rent Board petition before the notice; certified costs",
+              "basis": "\"There are six types of rent increases that require the filing of a landlord petition. These are: Capital Improvement Passthrough …\" § 37.3(a)(3).",
+              "source": "S15",
+              "status": "verified"
+            },
+            {
+              "item": "Increased operating and maintenance expenses",
+              "value": "Requires a petition; any certified O&M increase shall not exceed 7%",
+              "basis": "\"Operating and Maintenance Expense Increase …\" and § 37.3(b)(2): \"Any rent increase certified due to increases in operating and maintenance costs shall not exceed seven percent.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Special circumstances / comparable rents",
+              "value": "Requires a petition (one per unit), filed before a rent-increase notice",
+              "basis": "\"Special Circumstances Increase Based on Rents for Comparable Units\" is one of the six petition categories.",
+              "source": "S15",
+              "status": "verified"
+            },
+            {
+              "item": "Utility passthrough (gas/electricity)",
+              "value": "Requires a petition or a filed calculation worksheet before the notice",
+              "basis": "\"Utility Passthrough (requires the filing of either a petition or a worksheet)\" and § 37.3(a)(4).",
+              "source": "S15",
+              "status": "verified"
+            },
+            {
+              "item": "Water revenue bond / general obligation bond passthroughs",
+              "value": "No petition required, but a Rent Board worksheet form must be used",
+              "basis": "\"Landlords are not required to file petitions for Rent Board approval of rent increases based on general obligation bond measure passthroughs or water revenue bond passthroughs … However, the landlord must use the worksheet forms provided by the Rent Board.\"",
+              "source": "S15",
+              "status": "verified"
+            },
+            {
+              "item": "Any increase above the permitted amounts",
+              "value": "Petition for a rental arbitration hearing under § 37.3(a)(8) / § 37.8",
+              "basis": "\"A landlord who seeks to impose any rent increase which exceeds those permitted above shall petition for a rental arbitration hearing pursuant to Section 37.8 of this chapter.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "New roommate / additional occupant",
+              "value": "NOT a lawful reason",
+              "basis": "\"A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a unit with the existing tenant. This is an unlawful rent increase …\"",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Market-rate 'catch-up' for an occupied rent-controlled tenancy",
+              "value": "NOT a standalone reason — only available through a petition or a qualifying vacancy",
+              "basis": "§ 37.3 limits increases for tenants in occupancy; SF.gov: \"There is no limit on how much rent a landlord may first charge a tenant when renting an empty unit that is covered by rent control.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Officially required justification for the annual allowable increase",
+              "value": "",
+              "basis": "No official source requires a stated reason for a formula-based annual increase. Left blank by rule.",
+              "source": "S15",
+              "status": "unverified",
+              "flag": "F-20"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. Analysis — what to write in the notice",
+        "body": "<strong>Analysis (not legal advice).</strong> Based only on the verified sources, the safest content is a short factual notice: the current base rent, the published percentage applicable on the effective date, the exact dollar amount, the effective date, a statement that the entire increase is the annual allowable increase (no banked portion), the Rent Increase License status, and the tenant's right to contact the Rent Board. It should avoid any reference to household composition, an occupant change, or market rent, because those are either prohibited as a basis or require a petition. {{S07}} {{S04}} {{S21}} {{F-15}}",
+        "table": {
+          "caption": "Notice content — grounded in official requirements",
+          "rows": [
+            { "item": "Dollar amount of the increase", "value": "Required", "basis": "\"The rent increase notice should include the: Dollar amount of the increase …\"", "source": "S08", "status": "verified" },
+            { "item": "Percentage amount of the increase", "value": "Required", "basis": "\"Percentage amount of the increase\"", "source": "S08", "status": "verified" },
+            { "item": "Effective date", "value": "Required", "basis": "\"Date the increase will go into effect\"", "source": "S08", "status": "verified" },
+            { "item": "Allocation of the increase", "value": "Required — state which portion is annual/banked", "basis": "§ 37.3(b)(1) and Rules § 4.10(a)(1).", "source": "S04", "status": "verified" },
+            { "item": "Reference to household composition or occupant change", "value": "Omit", "basis": "Charging more because of a new roommate is prohibited by § 37.3(a)(11)(A).", "source": "S16", "status": "verified" },
+            { "item": "Tenant assistance information", "value": "Optional — free Rent Board counseling at 415-252-4600", "basis": "\"Cost: Free … We provide counseling on subjects related to the Rent Ordinance.\"", "source": "S21", "status": "verified" }
+          ]
+        }
+      }
+    ]
+  }
+}

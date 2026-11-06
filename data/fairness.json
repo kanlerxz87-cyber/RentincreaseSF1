@@ -1,0 +1,159 @@
+{
+  "page": {
+    "slug": "fairness",
+    "title": "One Unit or Both Units?",
+    "category": "Unit Analysis",
+    "order": 9,
+    "eyebrow": "Question · avoiding discrimination claims",
+    "intro": "The question: would it be acceptable to raise the rent on only one tenant's unit, or is it safer to raise both units to avoid a discrimination claim? This page separates what the official sources actually say from what cannot be officially confirmed. {{S07}} {{S31}} {{F-16}}",
+    "sections": [
+      {
+        "heading": "1. What the official sources actually say",
+        "body": "Two verified facts frame the answer. First, an increase is a per-tenancy event: the Rent Ordinance permits one increase every 12 months on each tenancy's own anniversary date. Second, a landlord is not required to raise rent at all. Fair housing law then prohibits different <em>terms</em> based on a protected characteristic. {{S07}} {{S05}} {{S06}} {{S31}}",
+        "table": {
+          "caption": "Verified rules bearing on a one-unit vs two-unit decision",
+          "rows": [
+            {
+              "item": "Is an increase mandatory?",
+              "value": "No",
+              "basis": "Rules & Regulations § 4.11(e): \"Nothing in this section or in these Rules and Regulations shall be interpreted as requiring any landlord to pass through any utility increase or to raise any tenant's rent.\"",
+              "source": "S06",
+              "status": "verified"
+            },
+            {
+              "item": "Unit of regulation",
+              "value": "Each tenancy, not each building",
+              "basis": "\"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\" \"If a landlord increases the rent more than 12 months later, the effective date of the increase becomes the tenant's new anniversary date.\"",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Does the Ordinance require both units to increase on the same date?",
+              "value": "No — each tenancy has its own anniversary date",
+              "basis": "Rules § 1.11: \"The anniversary date is the date on which the tenant's current rent became effective … The next allowable rent increase shall take effect no less than one year from the anniversary date.\"",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Rate that applies to any covered unit",
+              "value": "The same published annual allowable increase (1.6% for 3/1/26 – 2/28/27)",
+              "basis": "\"For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.\" No owner- or unit-specific variation is provided.",
+              "source": "S01",
+              "status": "verified"
+            },
+            {
+              "item": "Federal prohibition relevant to a difference between units",
+              "value": "No different terms, conditions or privileges because of race, color, religion, sex, familial status, national origin or handicap",
+              "basis": "42 U.S.C. § 3604(b) and (f)(2); 24 CFR § 100.65(a).",
+              "source": "S31",
+              "status": "verified"
+            },
+            {
+              "item": "State prohibition (broader)",
+              "value": "No discrimination or harassment because of any § 12955 protected characteristic, including source of income",
+              "basis": "Government Code § 12955(a).",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Retaliation",
+              "value": "Unlawful where the owner's dominant purpose is retaliation for opposing unlawful practices",
+              "basis": "Government Code § 12955(f).",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Occupant change as a reason for a different increase",
+              "value": "Prohibited",
+              "basis": "SF Admin Code § 37.3(a)(11)(A): \"a landlord may not impose increases solely because a tenant has added an additional occupant to an existing tenancy … notwithstanding a rental agreement or lease that specifically permits a rent increase for additional occupants.\"",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Tenant's ability to challenge either decision",
+              "value": "Form 516C, no charge, no time limit",
+              "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"",
+              "source": "S19",
+              "status": "verified"
+            },
+            {
+              "item": "Official rule requiring or forbidding a single-unit increase",
+              "value": "",
+              "basis": "No official source states such a rule. Left blank by rule — do not infer one.",
+              "source": "S31",
+              "status": "unverified",
+              "flag": "F-16"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "2. Analysis of the two options",
+        "body": "<strong>Analysis (not legal advice).</strong> Raising both units is not, by itself, a legal safeguard: the verified rules require each increase to fall on that tenancy's own 12-month anniversary. Forcing two units onto one calendar date could put one of them outside its permitted window. Conversely, raising only one unit is not prohibited by any official source located — but the decision must be driven by a neutral, documented, unit-based rule (for example, \"each unit receives the annual allowable increase on its own anniversary date\"), never by who lives there, household composition, or a tenant's exercise of rights. {{S07}} {{S05}} {{S29}} {{F-16}}",
+        "table": {
+          "caption": "Option analysis — grounded in the verified rules above",
+          "rows": [
+            {
+              "item": "Option A — increase only one unit now",
+              "value": "Permissible only if that unit is at its own 12-month anniversary and the decision is documented as neutral",
+              "basis": "Timing rule and the anti-retaliation / anti-discrimination provisions.",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Option B — increase both units on the same date",
+              "value": "Would need both tenancies to be at their own lawful anniversary on that date",
+              "basis": "\"The next allowable rent increase shall take effect no less than one year from the anniversary date.\"",
+              "source": "S05",
+              "status": "verified"
+            },
+            {
+              "item": "Unit 1 stated lease start / Unit 2 stated lease start",
+              "value": "February 1, 2025 / June 1, 2019 (internal record, dates unchanged)",
+              "basis": "Internal case dates. Different lease-start months mean the anniversary dates are not the same, subject to confirmation of the actual rent histories.",
+              "source": "S07",
+              "status": "internal",
+              "flag": "F-05"
+            },
+            {
+              "item": "Neutral criterion available from official sources",
+              "value": "Identical written policy applied to every covered unit: published rate, own anniversary date, identical notice package",
+              "basis": "The Rent Board publishes a single rate and one set of notice rules for all landlords and units.",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Prohibited differentiator",
+              "value": "Any protected characteristic, household composition, or a tenant's assertion of rights",
+              "basis": "42 U.S.C. § 3604(b), 24 CFR § 100.65, Government Code § 12955(a) and (f), SF Admin Code § 37.3(a)(11)(A).",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Whether either option eliminates discrimination exposure",
+              "value": "",
+              "basis": "No official source can certify that. Left blank by rule; obtain written legal review.",
+              "source": "S21",
+              "status": "unverified",
+              "flag": "F-11"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. Practical conclusion",
+        "body": "<strong>Conclusion (analysis).</strong> The verified sources support applying the same neutral rule to both units rather than treating simultaneity as the safeguard: confirm coverage and licences, then give each unit the current published annual allowable increase on its own lawful anniversary, using the identical notice template and the identical calculation method, and document the policy in writing before any notice is served. That yields equal treatment without forcing an unlawful date. Because no official source can confirm that a given increase \"passes review by a SF tenant lawyer\", written review by a licensed attorney (and, if desired, free Rent Board counseling) should be obtained first. {{S01}} {{S07}} {{S11}} {{S21}} {{S22}} {{F-11}}",
+        "table": {
+          "caption": "Equal-treatment controls available in official sources",
+          "rows": [
+            { "item": "One published rate for all covered units", "value": "1.6% (3/1/26 – 2/28/27)", "basis": "Rent Board annual announcement.", "source": "S01", "status": "verified" },
+            { "item": "One licence requirement for all owners", "value": "Current Rent Increase License on file", "basis": "\"All owners of residential property are required to report.\"", "source": "S11", "status": "verified" },
+            { "item": "One notice rule for all units", "value": "30 days (90 if >10%), +5 days if mailed, statutory contents", "basis": "Civil Code § 827; SF Admin Code § 37.3(b).", "source": "S26", "status": "verified" },
+            { "item": "One challenge forum for all tenants", "value": "Free Rent Board petition, no time limit", "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"", "source": "S19", "status": "verified" },
+            { "item": "Free pre-notice guidance", "value": "Rent Board counseling (not legal advice)", "basis": "\"Cost: Free … We cannot give legal advice.\"", "source": "S21", "status": "verified" }
+          ]
+        }
+      }
+    ]
+  }
+}

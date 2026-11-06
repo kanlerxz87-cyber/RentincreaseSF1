@@ -1,0 +1,99 @@
+{
+  "page": {
+    "slug": "units",
+    "title": "Units & Calculations",
+    "category": "Unit Analysis",
+    "order": 8,
+    "eyebrow": "Case data · anonymised",
+    "intro": "All names and personal details have been replaced with placeholders. Dates and dollar amounts are reproduced exactly as supplied. Case facts are labelled <em>internal record</em>: they are the requester's inputs, not official findings, and each is linked to the official rule governing that field plus a Flagged-for-Review item. Any value that would need official confirmation is left blank. {{S10}} {{S07}} {{F-19}}",
+    "sections": [
+      {
+        "heading": "1. Anonymised case facts (internal record)",
+        "body": "<strong>Privacy control.</strong> Real names, initials, street address, APN, owner identity and contact details are not stored in this repository or published on this site. Placeholders are used throughout: Tenant A, B, C and D for Unit 1; Tenant E and F for Unit 2. SF.gov notes that Housing Inventory submissions (which contain owner/occupant information) are public — an additional reason to keep identifiers out of the site. {{S11}} {{F-19}}",
+        "table": {
+          "caption": "Case facts — supplied by requester, anonymised, dates and amounts unchanged",
+          "rows": [
+            { "item": "Location", "value": "San Francisco, Outer Sunset, ZIP 94122", "basis": "Internal record. No street address, APN or owner name published.", "source": "S10", "status": "internal", "flag": "F-19" },
+            { "item": "Stated building year", "value": "", "basis": "Request wording is ambiguous ('how was built in 1940') and no official property record was checked. Left blank by rule.", "source": "S10", "status": "unverified", "flag": "F-02" },
+            { "item": "Stated rent-control status of both units", "value": "", "basis": "Asserted by the requester; not confirmed against official property records. Left blank by rule.", "source": "S10", "status": "unverified", "flag": "F-03" },
+            { "item": "Unit 1 — lease start date", "value": "February 1, 2025", "basis": "Internal record, reproduced exactly. Determines the first anniversary under SF.gov timing guidance.", "source": "S07", "status": "internal", "flag": "F-05" },
+            { "item": "Unit 1 — rent at lease start", "value": "$3,995 per month", "basis": "Internal record, reproduced exactly. This is the starting base rent figure used in the calculations below.", "source": "S07", "status": "internal", "flag": "F-05" },
+            { "item": "Unit 1 — initial occupants", "value": "3 occupants: Tenant A, Tenant B, Tenant C (placeholders)", "basis": "Internal record; names replaced with placeholders. No real initials published.", "source": "S16", "status": "internal", "flag": "F-19" },
+            { "item": "Unit 1 — continuing tenancy date", "value": "April 1, 2026", "basis": "Internal record, reproduced exactly. Its legal character (amendment, roommate replacement or new tenancy) is unverified.", "source": "S28", "status": "internal", "flag": "F-04" },
+            { "item": "Unit 1 — current occupants", "value": "2 occupants: Tenant A (an original occupant) and Tenant D (placeholder)", "basis": "Internal record; names replaced. An original occupant is described as remaining in occupancy.", "source": "S04", "status": "internal", "flag": "F-04" },
+            { "item": "Unit 1 — current rent", "value": "$3,995 per month", "basis": "Internal record, reproduced exactly. Unchanged from the February 1, 2025 figure.", "source": "S07", "status": "internal", "flag": "F-05" },
+            { "item": "Unit 1 — legal character of the April 1, 2026 change", "value": "", "basis": "Not documented. Controls base rent, anniversary date and banking. Left blank by rule.", "source": "S28", "status": "unverified", "flag": "F-04" },
+            { "item": "Unit 1 — confirmed anniversary date / rent-increase history", "value": "", "basis": "No notices or ledgers provided. Left blank by rule.", "source": "S19", "status": "unverified", "flag": "F-05" },
+            { "item": "Unit 2 — lease start date", "value": "June 1, 2019", "basis": "Internal record, reproduced exactly.", "source": "S07", "status": "internal", "flag": "F-06" },
+            { "item": "Unit 2 — rent at lease start", "value": "$3,150 per month", "basis": "Internal record, reproduced exactly.", "source": "S07", "status": "internal", "flag": "F-06" },
+            { "item": "Unit 2 — occupants", "value": "2 occupants: Tenant E and Tenant F (placeholders)", "basis": "Internal record; names replaced with placeholders.", "source": "S16", "status": "internal", "flag": "F-19" },
+            { "item": "Unit 2 — current rent", "value": "", "basis": "No current-rent figure was supplied and no later increase was documented. Left blank by rule.", "source": "S19", "status": "unverified", "flag": "F-06" },
+            { "item": "Unit 2 — confirmed rent-increase history since June 1, 2019", "value": "", "basis": "Not documented. Any banked-increase calculation depends on this. Left blank by rule.", "source": "S08", "status": "unverified", "flag": "F-06" },
+            { "item": "Rent Increase License status for both units", "value": "", "basis": "Cannot be checked without publishing an address/APN. Left blank by rule.", "source": "S11", "status": "unverified", "flag": "F-08" }
+          ]
+        }
+      },
+      {
+        "heading": "2. Unit 1 — illustrative arithmetic from official rates",
+        "body": "These are arithmetic illustrations using the requester's $3,995 figure and the Rent Board's published percentages. They are <em>not</em> a determination of lawful rent: the anniversary date, licence, notices and rent history are unverified. {{S01}} {{S02}} {{S07}} {{F-05}} {{F-08}}",
+        "table": {
+          "caption": "Unit 1 — calculated amounts (illustrative only)",
+          "rows": [
+            { "item": "Base rent used", "value": "$3,995.00", "basis": "Internal record figure; calculations must be on base rent only.", "source": "S07", "status": "internal", "flag": "F-05" },
+            { "item": "1.6% (rate effective 3/1/26 – 2/28/27)", "value": "$63.92 → new base rent $4,058.92", "basis": "Multiply the tenant's base rent by .016.", "source": "S01", "status": "calculated", "calc": "$3,995.00 × 0.016 = $63.92; $3,995.00 + $63.92 = $4,058.92" },
+            { "item": "1.4% (rate effective 3/1/25 – 2/28/26)", "value": "$55.93 → new base rent $4,050.93", "basis": "Multiply the tenant's base rent by .014.", "source": "S02", "status": "calculated", "calc": "$3,995.00 × 0.014 = $55.93; $3,995.00 + $55.93 = $4,050.93" },
+            { "item": "Rounding", "value": "No rounding up to the nearest dollar", "basis": "\"Rent increases cannot be rounded up to the nearest dollar.\"", "source": "S07", "status": "verified" },
+            { "item": "Increase permitted because of the occupant change", "value": "Not permitted", "basis": "\"A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a unit with the existing tenant.\"", "source": "S07", "status": "verified" },
+            { "item": "Lawful increase amount for Unit 1", "value": "", "basis": "Requires the confirmed anniversary date, licence, and rent history. Left blank by rule; no legal determination offered.", "source": "S19", "status": "unverified", "flag": "F-05" }
+          ]
+        }
+      },
+      {
+        "heading": "3. Unit 2 — official rates on each June 1 anniversary",
+        "body": "The table below maps each June 1 anniversary date to the official rate period it falls within, using the Rent Board's Form 571 rate table. This is a date-to-rate lookup, not a finding that each increase was available or banked. {{S03}} {{S05}}",
+        "table": {
+          "caption": "Official allowable rate in effect on each June 1 anniversary (Form 571)",
+          "rows": [
+            { "item": "June 1, 2020", "value": "1.8% (3/1/20 – 2/28/21)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2021", "value": "0.7% (3/1/21 – 2/28/22)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2022", "value": "2.3% (3/1/22 – 2/28/23)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2023", "value": "3.6% (3/1/23 – 2/29/24)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2024", "value": "1.7% (3/1/24 – 2/28/25)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2025", "value": "1.4% (3/1/25 – 2/28/26)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" },
+            { "item": "June 1, 2026", "value": "1.6% (3/1/26 – 2/28/27)", "basis": "Rate period from the official Form 571 table.", "source": "S03", "status": "verified" }
+          ]
+        }
+      },
+      {
+        "heading": "4. Unit 2 — illustrative sum (NOT a determination of lawful rent)",
+        "body": "<strong>Warning.</strong> The arithmetic below adds the seven official rates listed above. It is presented only so the numbers can be reviewed line by line. It is <strong>not</strong> a lawful-rent calculation, <strong>not</strong> a recommendation, and <strong>must not be used</strong> as the basis for a notice. Banking is fact-sensitive (24-month rule, no compounding, no rounding up, anniversary changes can permanently lose a skipped increase), the rent history is unverified, and SF.gov's own worked examples contain inconsistencies. {{S08}} {{S09}} {{S06}} {{F-07}} {{F-12}} {{F-13}} {{F-14}}",
+        "table": {
+          "caption": "Illustrative arithmetic only — do not use as a rent-increase notice",
+          "rows": [
+            { "item": "Sum of the seven listed official rates", "value": "13.1%", "basis": "Arithmetic only. Banked increases cannot be compounded; whether any of these years was actually bankable is unverified.", "source": "S09", "status": "calculated", "calc": "1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 + 1.6 = 13.1%", "flag": "F-07" },
+            { "item": "13.1% applied to the supplied $3,150 figure", "value": "$412.65 → $3,562.65", "basis": "Arithmetic only — NOT a lawful rent and NOT a recommendation. The current rent for Unit 2 is unverified.", "source": "S07", "status": "calculated", "calc": "$3,150.00 × 0.131 = $412.65; $3,150.00 + $412.65 = $3,562.65", "flag": "F-07" },
+            { "item": "1.6% applied to the supplied $3,150 figure", "value": "$50.40 → $3,200.40", "basis": "Illustration of the current annual allowable rate only; requires a confirmed base rent, anniversary date and licence.", "source": "S01", "status": "calculated", "calc": "$3,150.00 × 0.016 = $50.40; $3,150.00 + $50.40 = $3,200.40" },
+            { "item": "Does a >10% combined increase change the notice period?", "value": "Yes — 90 days' written notice under Civil Code § 827", "basis": "\"If the proposed rent increase for that tenant is greater than 10 percent … the notice shall be delivered at least 90 days before the effective date of the increase.\"", "source": "S26", "status": "verified" },
+            { "item": "Lawful banked-increase amount for Unit 2", "value": "", "basis": "Cannot be confirmed: rent history, anniversary date, licence and banking eligibility are unverified. Left blank by rule.", "source": "S08", "status": "unverified", "flag": "F-07" }
+          ]
+        }
+      },
+      {
+        "heading": "5. Conservative approach (analysis, not legal advice)",
+        "body": "<strong>Analysis.</strong> The lowest-scrutiny option supported by the verified sources is to forgo banked increases entirely and apply only the current published annual allowable increase (1.6% for an effective date between March 1, 2026 and February 28, 2027) to each unit on its own confirmed anniversary date, after confirming coverage and licence, with identical written notices and identical supporting documentation. This is the option most likely to be described as ordinary, formula-driven business practice. It does not guarantee that a tenant attorney would approve it — no official source can certify that. {{S01}} {{S07}} {{S11}} {{S26}} {{F-11}}",
+        "table": {
+          "caption": "Conservative action list — each item grounded in an official source",
+          "rows": [
+            { "item": "Confirm coverage and licence before any notice", "value": "Required", "basis": "Coverage test and licence requirement.", "source": "S11", "status": "verified" },
+            { "item": "Use only the published annual rate", "value": "1.6% for effective dates 3/1/26 – 2/28/27", "basis": "\"For rent-controlled units, the annual allowable increase amount effective March 1, 2026 through February 28, 2027 is 1.6%.\"", "source": "S01", "status": "verified" },
+            { "item": "Apply it on each tenancy's own 12-month anniversary", "value": "No more than one increase in 12 months", "basis": "\"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\"", "source": "S07", "status": "verified" },
+            { "item": "Calculate on base rent only, no rounding up", "value": "Required", "basis": "\"Landlords must calculate the rent increase on the tenant's base rent only.\" \"Rent increases cannot be rounded up to the nearest dollar.\"", "source": "S07", "status": "verified" },
+            { "item": "Serve identical written notices with the same lead time and contents", "value": "30 days (35 by mail) for a ≤10% increase", "basis": "Civil Code § 827 and SF Admin Code § 37.3(b).", "source": "S26", "status": "verified" },
+            { "item": "Do not use occupant changes or market-rent comparisons as reasons", "value": "Prohibited / requires a petition", "basis": "§ 37.3(a)(11)(A) and the six petition categories.", "source": "S16", "status": "verified" },
+            { "item": "Obtain written tenant-lawyer review before serving", "value": "Recommended (no official certification exists)", "basis": "Free Rent Board counseling is available but \"We cannot give legal advice.\"", "source": "S21", "status": "verified" }
+          ]
+        }
+      }
+    ]
+  }
+}

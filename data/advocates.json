@@ -1,0 +1,68 @@
+{
+  "page": {
+    "slug": "advocates",
+    "title": "Tenant Advocate Review",
+    "category": "Review & Verification",
+    "order": 10,
+    "eyebrow": "Review · the scrutiny standard",
+    "intro": "The request requires that any increase be able to withstand review by tenant-friendly San Francisco advocates and lawyers. This page documents the free and low-cost review channels that officially exist, and turns the legal requirements into a review checklist a tenant attorney would apply. It does not claim that a government source can certify an increase in advance. {{S19}} {{S21}} {{S25}} {{F-11}}",
+    "sections": [
+      {
+        "heading": "1. Why independent scrutiny is realistic in San Francisco",
+        "body": "Tenants can obtain free Rent Board counseling, free or low-cost legal help, free legal clinics, and a Tenant Right to Counsel program for eviction proceedings; they can also challenge an increase at no charge with no filing deadline. An unlawful increase can be null and void and can lead to a rent refund. {{S21}} {{S22}} {{S25}} {{S19}} {{S12}}",
+        "table": {
+          "caption": "Official tenant review and assistance channels",
+          "rows": [
+            { "item": "Rent Board counseling", "value": "Free; 415-252-4600; weekdays 9 am–12 pm and 1–4 pm", "basis": "\"Cost: Free … We provide counseling on subjects related to the Rent Ordinance. We cannot give legal advice.\"", "source": "S21", "status": "verified" },
+            { "item": "Unlawful rent increase petition (Form 516C)", "value": "No charge; no time limit", "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"", "source": "S19", "status": "verified" },
+            { "item": "Pending increase not yet effective (Form 518)", "value": "Tenant Summary Petition", "basis": "\"This petition is for tenants who have received a rent increase notice that is clearly unlawful on its face and has not yet gone into effect.\"", "source": "S20", "status": "verified" },
+            { "item": "Hearing", "value": "Arbitration before a Rent Board Administrative Law Judge; no attorney required", "basis": "\"The hearing process is designed so that no one needs an attorney, although parties are entitled to have an attorney or other authorized representative assist them at the hearing.\"", "source": "S19", "status": "verified" },
+            { "item": "Free legal clinics (Rent Board Referral Listing)", "value": "Three free legal clinics every month for low-income Bay Area residents", "basis": "\"The clinics offer free, limited legal advice and referrals.\"", "source": "S22", "status": "verified" },
+            { "item": "Tenant advocacy organisations listed by the Rent Board", "value": "Housing Rights Committee of SF, San Francisco Tenants Union, Tenants Together, Bay Area Legal Aid, Asian Law Caucus and others", "basis": "Organisations listed under \"Tenant Resources\" in the official Rent Board Referral Listing.", "source": "S22", "status": "verified" },
+            { "item": "Tenant Right to Counsel", "value": "Free legal assistance for residents facing eviction and free full-scope legal assistance for eligible cases", "basis": "\"In June 2018, San Francisco voters passed the No Eviction Without Representation Act to establish the Tenant Right to Counsel program …\"", "source": "S25", "status": "verified" },
+            { "item": "Free legal help for eviction court papers", "value": "Eviction Defense Collaborative, 415-659-9184", "basis": "\"If you are a tenant who has received eviction court papers, you can call 415-659-9184 … for free legal help.\"", "source": "S23", "status": "verified" },
+            { "item": "Consequence of a defective increase", "value": "Null and void; possible rent refund", "basis": "\"Any rent increase which does not conform with the provisions of this section shall be null and void.\" \"… your tenant may be entitled to a rent refund.\"", "source": "S12", "status": "verified" },
+            { "item": "Official certification that an increase passes tenant-lawyer review", "value": "", "basis": "A legal opinion, not an officially verifiable value. Left blank by rule.", "source": "S21", "status": "unverified", "flag": "F-11" }
+          ]
+        }
+      },
+      {
+        "heading": "2. The review checklist",
+        "body": "Each row is a control derived from an official source. A reviewer would expect documentary evidence for every one of them. Rows that cannot be confirmed on this project are left blank and flagged. {{S04}} {{S11}} {{S07}} {{S26}}",
+        "table": {
+          "caption": "Rent-increase review checklist — every control sourced",
+          "rows": [
+            { "item": "Is the unit actually covered by the Rent Ordinance?", "value": "Verify via the Property Information Map / Rent Board", "basis": "\"Many residential units built on or before June 13, 1979 have both rent control and eviction protection.\"", "source": "S10", "status": "verified" },
+            { "item": "Is a current Rent Increase License on file?", "value": "Must be on file before the effective date", "basis": "\"A landlord must have a current rent increase license … before any annual or banked rent increase can go into effect.\"", "source": "S11", "status": "verified" },
+            { "item": "Is the increase on/after the 12-month anniversary?", "value": "Yes — one increase per 12 months", "basis": "\"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\"", "source": "S07", "status": "verified" },
+            { "item": "Is the percentage the one in effect on the effective date?", "value": "1.6% for 3/1/26 – 2/28/27", "basis": "\"The landlord should use the percentage that will be in effect on the date of the increase …\"", "source": "S07", "status": "verified" },
+            { "item": "Was the calculation on base rent only?", "value": "Yes — no passthroughs, no rounding up", "basis": "\"Landlords must calculate the rent increase on the tenant's base rent only.\" \"Rent increases cannot be rounded up to the nearest dollar.\"", "source": "S07", "status": "verified" },
+            { "item": "Was any banked increase properly computed?", "value": "No compounding, no prorating, no rounding up; 24-month rule", "basis": "\"They cannot be compounded or prorated.\" \"A skipped increase is only banked if at least 24 full months pass without any rent increase.\"", "source": "S08", "status": "verified" },
+            { "item": "Was a petition required and filed first?", "value": "Only for the six petition categories", "basis": "\"For certain types of rent increases, landlords must file a petition at the Rent Board before serving the tenants with a notice of the increase.\"", "source": "S15", "status": "verified" },
+            { "item": "Did the written notice contain all required items?", "value": "Dollar amount, percentage, effective date, allocation", "basis": "SF Admin Code § 37.3(b) and Rent Board guidance.", "source": "S04", "status": "verified" },
+            { "item": "Was the correct notice period used and was it served properly?", "value": "30 days (90 if >10%); +5 days if mailed; personal delivery or § 1013 mail", "basis": "Civil Code § 827.", "source": "S26", "status": "verified" },
+            { "item": "Was any part of the increase linked to an occupant change?", "value": "Must be no", "basis": "SF Admin Code § 37.3(a)(11)(A); \"Any agreement to pay more rent is void and unenforceable by the landlord.\"", "source": "S16", "status": "verified" },
+            { "item": "Was the same neutral rule applied to both units?", "value": "Documented in writing before service", "basis": "Fair housing law prohibits different terms based on a protected characteristic.", "source": "S33", "status": "verified" },
+            { "item": "Was there any retaliatory purpose?", "value": "Must be no", "basis": "Government Code § 12955(f).", "source": "S29", "status": "verified" },
+            { "item": "Was a market-rate reset (§ 6.14 / Costa-Hawkins) used?", "value": "Not available where an original occupant remains; co-tenants excluded", "basis": "\"This subdivision does not apply to partial changes in occupancy … where one or more of the occupants … remains an occupant in lawful possession.\"", "source": "S28", "status": "verified" },
+            { "item": "Actual licence / notice / rent-history documents for these two units", "value": "", "basis": "Not supplied. Left blank by rule; see Flagged for Review.", "source": "S19", "status": "unverified", "flag": "F-08" },
+            { "item": "Written opinion from a licensed tenant attorney", "value": "", "basis": "Not obtainable from an official source. Left blank by rule.", "source": "S22", "status": "unverified", "flag": "F-11" }
+          ]
+        }
+      },
+      {
+        "heading": "3. What this project can and cannot conclude",
+        "body": "<strong>Can conclude:</strong> the applicable published rate, the notice and licence requirements, the timing rules, the petition categories, and the fair-housing constraints — all verified against official sources. <strong>Cannot conclude:</strong> that either unit is covered, that a licence exists, that a particular increase is lawful, or that a tenant lawyer would approve it. Those are listed on the Flagged for Review page with their official source links. {{S01}} {{S11}} {{S19}} {{F-03}} {{F-08}} {{F-11}}",
+        "table": {
+          "caption": "Scope of this project's conclusions",
+          "rows": [
+            { "item": "Published allowable rate", "value": "1.6% (3/1/26 – 2/28/27) — verified", "basis": "Rent Board announcement.", "source": "S01", "status": "verified" },
+            { "item": "Notice and licence requirements", "value": "Verified", "basis": "Civil Code § 827; SF Admin Code § 37.3(b); Housing Inventory rules.", "source": "S26", "status": "verified" },
+            { "item": "Lawfulness of a specific proposed increase", "value": "", "basis": "Requires the full file and a legal determination. Left blank by rule.", "source": "S19", "status": "unverified", "flag": "F-11" },
+            { "item": "Coverage confirmation for these units", "value": "", "basis": "Requires an official property-record lookup. Left blank by rule.", "source": "S10", "status": "unverified", "flag": "F-03" }
+          ]
+        }
+      }
+    ]
+  }
+}

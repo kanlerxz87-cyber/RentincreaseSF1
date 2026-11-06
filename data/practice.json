@@ -1,0 +1,216 @@
+{
+  "page": {
+    "slug": "practice",
+    "title": "Corporations vs Individual Owners",
+    "category": "Practice & Procedure",
+    "order": 6,
+    "eyebrow": "Practice · how landlords actually handle increases",
+    "intro": "This page answers how large real-estate corporations and individual property owners handle rent increases, using only official, verifiable records. For a large corporation the best available official evidence is its SEC-filed annual report and Form 10-K; for individual owners it is the City's own Housing Inventory and compliance data. Claims about 'typical behaviour' that no official source supports are left blank and flagged. {{S36}} {{S11}}",
+    "sections": [
+      {
+        "heading": "1. Large real-estate corporations — evidence from SEC filings",
+        "body": "Large apartment REITs manage increases as a portfolio-level pricing process: short-term leases, renewal and reletting decisions, and published same-property revenue growth. They also disclose rent control as a material regulatory risk. The example below is Essex Property Trust, Inc. (a West Coast apartment REIT, CIK 0000920522) — its FY2025 Form 10-K was filed 2026-02-20 and its 2025 Annual Report was filed with the SEC. These are portfolio disclosures, <em>not</em> a permitted percentage for a San Francisco rent-controlled unit. {{S36}} {{S37}} {{F-21}}",
+        "table": {
+          "caption": "Large corporate landlord practice — official SEC filings",
+          "rows": [
+            {
+              "item": "Official filing used",
+              "value": "Form 10-K for fiscal year ended 2025-12-31, filed 2026-02-20 (SEC accession 0000920522-26-000003)",
+              "basis": "\"Form 10-K - Annual report … Filing Date 2026-02-20 … Period of Report 2025-12-31.\"",
+              "source": "S36",
+              "status": "verified"
+            },
+            {
+              "item": "Type of entity",
+              "value": "Real Estate Investment Trust (SIC 6798)",
+              "basis": "\"SIC: 6798 Real Estate Investment Trusts.\"",
+              "source": "S36",
+              "status": "verified"
+            },
+            {
+              "item": "Portfolio-level result reported for 2025",
+              "value": "Same-property revenue growth 3.3%; NOI growth 3.2%",
+              "basis": "\"Achieved sector leading same-property revenue and net operating income ('NOI') growth of 3.3% and 3.2%, respectively.\" This is portfolio revenue growth, not a per-unit rent-increase percentage.",
+              "source": "S37",
+              "status": "verified"
+            },
+            {
+              "item": "Lease structure behind the pricing process",
+              "value": "Short-term leases; rental rates set on renewal or reletting",
+              "basis": "\"Short-term leases expose us to the effects of declining market rents … If the Company is unable to promptly renew or re-let existing leases, or if the rental rates upon renewal or reletting are significantly lower than expected rates, then the Company's results of operations and financial condition will be adversely affected.\"",
+              "source": "S37",
+              "status": "verified"
+            },
+            {
+              "item": "Rent control as a disclosed business risk",
+              "value": "Local rent control limits the ability to increase rents and to recover operating-cost increases",
+              "basis": "\"Such laws and regulations limit our ability to charge market rents, increase rents, evict tenants, limit our ability to collect rent, or recover increases in our operating expenses …\"",
+              "source": "S37",
+              "status": "verified"
+            },
+            {
+              "item": "Compliance framework disclosed",
+              "value": "Federal, state and local landlord-tenant laws, rent control, fee transparency, and laws regulating housing revenue management software",
+              "basis": "\"These laws and regulations include zoning laws, building codes, rent control or stabilization laws, fee transparency requirements, emergency orders, laws benefiting disabled persons, federal, state and local tax laws, landlord tenant laws … and other laws regulating housing revenue management software and practices …\"",
+              "source": "S37",
+              "status": "verified"
+            },
+            {
+              "item": "Competition as a pricing constraint",
+              "value": "Rental rates and occupancy may drop if demand falls or competing housing is developed",
+              "basis": "\"There are numerous housing alternatives that compete with the Company's communities in attracting tenants … If the demand for the Company's communities is reduced or if competitors develop and/or acquire competing housing, rental rates and occupancy may drop …\"",
+              "source": "S37",
+              "status": "verified"
+            },
+            {
+              "item": "Typical corporate per-unit increase for a 94122 rent-controlled unit",
+              "value": "",
+              "basis": "No official source states this value. Left blank by rule.",
+              "source": "S37",
+              "status": "unverified",
+              "flag": "F-21"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "2. Individual / small property owners in San Francisco",
+        "body": "The City's records describe small owners primarily through the compliance obligations that apply specifically to them: buildings with fewer than 10 residential units (and condominiums) have had to report to the Housing Inventory since March 1, 2023, and all residential owners must report annually. The Rent Board's own referral listing names a small-owner association as a landlord resource. {{S14}} {{S11}} {{S22}} {{F-10}}",
+        "table": {
+          "caption": "Individual / small-owner practice — official City records",
+          "rows": [
+            {
+              "item": "Who must file the Housing Inventory report",
+              "value": "All owners of residential property in San Francisco",
+              "basis": "\"All owners of residential property are required to report.\" 2027 notice: \"A new law requires all owners of residential property in San Francisco to annually report information about their units … [Ordinance No. 265-20].\"",
+              "source": "S11",
+              "status": "verified"
+            },
+            {
+              "item": "Small-building reporting start date",
+              "value": "March 1, 2023 for condominiums and buildings with fewer than 10 residential units",
+              "basis": "\"Owners of condominiums and buildings with less than 10 residential units have been required to report since March 1, 2023, with updates due every following March.\"",
+              "source": "S12",
+              "status": "verified"
+            },
+            {
+              "item": "Consequence of not reporting",
+              "value": "No Rent Increase License; increase may be null and void; tenant may be entitled to a refund",
+              "basis": "\"Landlords will not receive a license to impose annual and/or banked rent increases until reporting is complete.\" \"Some rent increases given without a license will be null and void.\"",
+              "source": "S13",
+              "status": "verified"
+            },
+            {
+              "item": "Official measure of early small-owner compliance (Feb 2023)",
+              "value": "12,000 licenses issued — less than 5% of the estimated residential units in San Francisco",
+              "basis": "\"Thus far, the San Francisco Rent Board has issued 12,000 licenses to permit owners to impose rent increases for the next year. That represents less than 5% of the estimated number of residential units in San Francisco.\" Historical figure, quoted as published.",
+              "source": "S14",
+              "status": "verified"
+            },
+            {
+              "item": "Reason small owners were added",
+              "value": "Owners of properties with fewer than 10 units are now also required to report annually",
+              "basis": "\"Owners of properties with fewer than 10 units, including condos and single-family homes, are now also required to report into the Inventory annually.\"",
+              "source": "S14",
+              "status": "verified"
+            },
+            {
+              "item": "Official landlord resource for small owners",
+              "value": "Small Property Owners of San Francisco, listed in the Rent Board Referral Listing",
+              "basis": "Under \"Landlord Resources\", the Rent Board lists \"Small Property Owners of San Francisco\" (membership organisation).",
+              "source": "S22",
+              "status": "verified"
+            },
+            {
+              "item": "Free guidance available to owners",
+              "value": "Free Rent Board counseling (not legal advice)",
+              "basis": "\"Cost: Free … We provide counseling on subjects related to the Rent Ordinance. We cannot give legal advice.\"",
+              "source": "S21",
+              "status": "verified"
+            },
+            {
+              "item": "Typical individual-owner increase percentage or frequency",
+              "value": "",
+              "basis": "No official source documents typical behaviour. Left blank by rule.",
+              "source": "S22",
+              "status": "unverified",
+              "flag": "F-10"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "3. What is identical for both types of owner",
+        "body": "<strong>Finding.</strong> The size of the owner does not change any of the operative rules. The Rent Ordinance addresses \"a landlord\", the Rent Board publishes a single rate, the license and notice prerequisites are universal, and tenants have the same challenge rights. {{S04}} {{S01}} {{S11}} {{S19}}",
+        "table": {
+          "caption": "Rules that apply regardless of owner size",
+          "rows": [
+            {
+              "item": "Applicable rent-increase ceiling",
+              "value": "The same published annual allowable increase (1.6% for 3/1/26 – 2/28/27)",
+              "basis": "\"A landlord who has reported the required information … shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase.\" No owner-size distinction appears in § 37.3.",
+              "source": "S04",
+              "status": "verified"
+            },
+            {
+              "item": "Frequency",
+              "value": "Once every 12 months on the tenancy's own anniversary date",
+              "basis": "\"Under the San Francisco Rent Ordinance, a landlord can only increase a tenant's rent by a certain percentage once every 12 months.\"",
+              "source": "S07",
+              "status": "verified"
+            },
+            {
+              "item": "Rent Increase License",
+              "value": "Required for any annual or banked increase",
+              "basis": "\"A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect.\"",
+              "source": "S11",
+              "status": "verified"
+            },
+            {
+              "item": "Notice",
+              "value": "30 days (or 90 days if >10%), plus 5 days if mailed; statutory contents",
+              "basis": "Civil Code § 827 and SF Admin Code § 37.3(b).",
+              "source": "S26",
+              "status": "verified"
+            },
+            {
+              "item": "Tenant challenge",
+              "value": "Form 516C, no charge, no time limit, hearing before an ALJ",
+              "basis": "\"There is no charge for filing the petition. There is no time limit for filing a petition.\"",
+              "source": "S19",
+              "status": "verified"
+            },
+            {
+              "item": "Fair housing law",
+              "value": "Applies to any owner of housing accommodation",
+              "basis": "\"For the owner of any housing accommodation to discriminate against or harass any person because of …\" (Government Code § 12955(a)).",
+              "source": "S29",
+              "status": "verified"
+            },
+            {
+              "item": "Rent Board's stated mission",
+              "value": "Protecting tenants from excessive rent increases and unjust evictions while assuring landlords fair and adequate rents",
+              "basis": "Verbatim from the Rent Board department page.",
+              "source": "S24",
+              "status": "verified"
+            }
+          ]
+        }
+      },
+      {
+        "heading": "4. Analysis: the normal-practice baseline",
+        "body": "<strong>Analysis (not legal advice).</strong> Reading the verified sources together, \"normal business practice\" for a San Francisco rent-controlled unit is: register the unit and hold a current Rent Increase License; apply the single published annual rate on the tenancy's own 12-month anniversary; serve a conforming written notice with the statutory lead time; and keep the calculation on base rent only with no rounding up. Portfolio revenue-growth figures from corporate filings and any market-rate 'catch-up' are not a lawful basis for an occupied rent-controlled tenancy. {{S11}} {{S07}} {{S04}} {{S37}} {{F-21}}",
+        "table": {
+          "caption": "Normal-practice baseline derived from official sources",
+          "rows": [
+            { "item": "Rate", "value": "The published annual allowable increase for the effective date", "basis": "\"The landlord should use the percentage that will be in effect on the date of the increase …\"", "source": "S07", "status": "verified" },
+            { "item": "Timing", "value": "On/after the 12-month anniversary; never more than one increase in 12 months", "basis": "\"A landlord can impose the first annual increase 12 months after the date the tenant's lease began.\"", "source": "S07", "status": "verified" },
+            { "item": "Documentation", "value": "Written notice with dollar amount, percentage, effective date, allocation of any banked portion", "basis": "SF Admin Code § 37.3(b) and Rent Board guidance.", "source": "S04", "status": "verified" },
+            { "item": "Compliance record", "value": "Current Rent Increase License on file before the effective date", "basis": "\"A landlord must have a current rent increase license … before any annual or banked rent increase can go into effect.\"", "source": "S11", "status": "verified" },
+            { "item": "Any increase above the permitted amounts", "value": "Requires a petition under § 37.3(a)(8) and Rent Board approval before notice", "basis": "\"A landlord who seeks to impose any rent increase which exceeds those permitted above shall petition for a rental arbitration hearing pursuant to Section 37.8 of this chapter.\"", "source": "S04", "status": "verified" }
+          ]
+        }
+      }
+    ]
+  }
+}
