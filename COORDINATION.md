@@ -283,5 +283,5 @@ another session may take over D8 and must note the handoff in this log.
 | Pull Request | [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) — `Add line-by-line verified SF 94122 compliance & lawyer-scrutiny portal (/portal/)` |
 | Published Portal | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/portal/> (`portal/index.html` + 9 category subpages + `portal/flagged-for-review.html`) |
 | Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
-| Merge & Pages Result | Merged to `main` via PR #8 (merge commit & Pages deployment status recorded upon post-merge confirmation) |
+| Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
