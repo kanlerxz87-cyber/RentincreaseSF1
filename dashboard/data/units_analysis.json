@@ -1,0 +1,94 @@
+{
+  "profiles": [
+    {
+      "id": "PROF-01",
+      "category": "Property Profile · Outer Sunset, San Francisco, CA 94122",
+      "official_value": "",
+      "analysis": "Supplied property baseline: 2-unit residential building constructed in 1940 in ZIP 94122. Official parcel/Certificate of Occupancy record intentionally omitted and unverified to protect owner/tenant location privacy; flagged for owner internal confirmation before serving notice.",
+      "status": "Unverified — Flagged for Review",
+      "sources": ["sfrb_coverage", "sfrb_sfh_costa"]
+    },
+    {
+      "id": "PROF-02",
+      "category": "Unit 1 · Initial Tenancy (February 1, 2025 @ $3,995.00/mo)",
+      "official_value": "",
+      "analysis": "Anonymized original co-tenants: Alex Morgan (Tenant 1A), Jordan Taylor (Tenant 1B), and Sam Rivera (Tenant 1C). Initial monthly base rent: $3,995.00 starting February 1, 2025. Official value left blank because private lease agreements are non-public.",
+      "status": "Unverified — Flagged for Review",
+      "sources": ["sfrb_guide", "civ_1954_53"]
+    },
+    {
+      "id": "PROF-03",
+      "category": "Unit 1 · Continuing Tenancy (April 1, 2026 @ $3,995.00/mo)",
+      "official_value": "",
+      "analysis": "Anonymized current co-tenants: Alex Morgan (Tenant 1A, continuing original co-tenant) and Casey Kim (Tenant 1D, replacement/subsequent co-tenant). Base rent remained $3,995.00 on April 1, 2026. Because Alex Morgan remains in occupancy, Costa-Hawkins §1954.53(d)(3) prohibits vacancy decontrol and SF law prohibits any roommate surcharge.",
+      "status": "Unverified — Flagged for Review",
+      "sources": ["civ_1954_53", "sfrb_614", "sfrb_guide"]
+    },
+    {
+      "id": "PROF-04",
+      "category": "Unit 2 · Long-Term Continuing Tenancy (June 1, 2019 @ $3,150.00/mo)",
+      "official_value": "",
+      "analysis": "Anonymized continuing co-tenants: Riley Chen (Tenant 2A) and Quinn Patel (Tenant 2B). Last lease start: June 1, 2019 at $3,150.00/month. Whether any annual increases, passthroughs, or housing-service changes occurred between June 2020 and November 2026 is unverified from public records and must be confirmed against the owner's rent ledger.",
+      "status": "Unverified — Flagged for Review",
+      "sources": ["sfrb_rules_part4", "sfrb_banked"]
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "U1-SC1",
+      "category": "Unit 1 · Recommended Uniform Annual-Only (1.6%)",
+      "official_value": "1.6% official annual rate (3/1/2026–2/28/2027)",
+      "analysis": "Conditional calculation on $3,995.00: +$63.92/mo → $4,058.92/mo ($48,707.04/yr). Requires 30 days' personal notice or 35 days' CA mail notice. CRITICAL TIMING NOTE: Under Rule 4.12(a), imposing 1.6% BEFORE February 1, 2027 forfeits the skipped Feb 1, 2026 (1.4%) allowance because <12 months elapsed since eligibility; waiting until Feb 1, 2027 preserves the 1.4% in the bank! Subject to confirming April 1, 2026 agreement is month-to-month.",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_rate_2026", "sfrb_rules_part4", "sfrb_irregular", "civ_827"]
+    },
+    {
+      "id": "U1-SC2",
+      "category": "Unit 1 · Exact 24-Month Anniversary Annual + Banked (3.0% on Feb 1, 2027)",
+      "official_value": "1.4% (2025–26) + 1.6% (2026–27) = 3.0% additive",
+      "analysis": "Conditional calculation on $3,995.00 effective February 1, 2027 (thru Feb 28, 2027): $55.93 (1.4% banked from Feb 1, 2026) + $63.92 (1.6% current annual) = +$119.85/mo → $4,114.85/mo. Requires active §37.15 license, month-to-month status, zero prior increases, and 30/35-day itemized written notice served on/before Jan 2, 2027 (personal) or Dec 28, 2026 (CA mail).",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_form571", "sfrb_rules_part4", "civ_827", "ccp_1013"]
+    },
+    {
+      "id": "U1-SC3",
+      "category": "Unit 1 · Contingency If April 1, 2026 Signed a 12-Month Fixed Lease",
+      "official_value": "0.0% permissible before lease expiration (Civ. Code §827(a))",
+      "analysis": "If the April 1, 2026 continuing-tenancy agreement is a fixed-term lease ending March 31, 2027 without an express escalation clause, earliest effective date is April 1, 2027. On April 1, 2027, the Feb 1, 2026 1.4% ($55.93) is banked, while the current annual component will be governed by the not-yet-published 3/1/2027–2/29/2028 SF Rent Board rate.",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["civ_827", "sfrb_form571", "sfrb_rules_part4"]
+    },
+    {
+      "id": "U2-SC1",
+      "category": "Unit 2 · Recommended Uniform Annual-Only (1.6% — Preferred Option)",
+      "official_value": "1.6% official annual rate (3/1/2026–2/28/2027)",
+      "analysis": "Conditional calculation on $3,150.00: +$50.40/mo → $3,200.40/mo ($38,404.80/yr). Requires 30 days' personal notice or 35 days' CA mail notice. Matches Unit 1's neutral 1.6% building-wide policy, avoids 90-day notice complexity, minimizes tenant turnover/audit friction, and preserves all 11.5% ($362.25/mo) of prior banked allowances intact under Rule 4.12(a).",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_rate_2026", "sfrb_rules_part4", "civ_827"]
+    },
+    {
+      "id": "U2-SC2",
+      "category": "Unit 2 · Moderate Capped Phase-In Illustration (1.6% Current + 1.8% 2020 Banked = 3.4%)",
+      "official_value": "1.6% (2026–27) + 1.8% (2020–21) = 3.4% additive",
+      "analysis": "Conditional calculation on $3,150.00 (effective ≤ Feb 28, 2027, assuming zero prior increases): $50.40 (1.6% current) + $56.70 (1.8% banked from June 1, 2020) = +$107.10/mo → $3,257.10/mo, leaving 9.7% (2021–2025) banked for future years. Stays well under the 10% 90-day trigger (30/35-day notice applies) and itemizes exact June 1, 2020 banking date per Rule 4.12(b).",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_form571", "sfrb_rules_part4", "sfrb_banked", "civ_827"]
+    },
+    {
+      "id": "U2-SC3",
+      "category": "Unit 2 · Theoretical Legal Ceiling Before Feb 28, 2027 (13.1% Full Banked + Current — NOT Recommended)",
+      "official_value": "11.5% banked (2020–2025 sum) + 1.6% current = 13.1% additive",
+      "analysis": "Conditional calculation on $3,150.00 IF zero increases occurred since June 1, 2019: $56.70 (1.8%) + $22.05 (0.7%) + $72.45 (2.3%) + $113.40 (3.6%) + $53.55 (1.7%) + $44.10 (1.4%) = $362.25 banked + $50.40 (1.6% current) = +$412.65/mo → $3,562.65/mo. Exceeds 10%, triggering 90 days' personal notice (last day Nov 30, 2026 for Feb 28, 2027) or 95 days' CA mail notice (last day Nov 25, 2026 for Feb 28, 2027), shifts June 1 anniversary, and creates severe payment shock / legal-clinic audit risk.",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_form571", "sfrb_rules_part4", "civ_827", "ccp_1013"]
+    },
+    {
+      "id": "BOTH-FEE",
+      "category": "Optional Separate Charge · SF Rent Board Fee Pass-Through (Not Base Rent)",
+      "official_value": "$59.00/unit paid by owner; 50% = $29.50/yr recoverable from Nov 1 tenants",
+      "analysis": "If owner timely paid the $59.00 annual SF Rent Board Fee (due March 1) and tenants were in occupancy on November 1, owner may bill $29.50 as a separate itemized annual charge. NEVER add $29.50 to base rent or apply CPI percentages to it (Rule 4.10 / SF.gov Rent Board Fee rule).",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_fee", "sfrb_multi_year"]
+    }
+  ]
+}
