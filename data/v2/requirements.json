@@ -1,0 +1,327 @@
+{
+  "title": "Every legal requirement that applies to a rent increase on these two units",
+  "note": "One row per requirement. 'Applies to' shows which unit the row governs. A requirement with a blank value means it could not be confirmed from an official source.",
+  "rows": [
+    {
+      "id": "REQ-01",
+      "layer": "Local (SF)",
+      "requirement": "Maximum annual increase for the 3/1/26-2/28/27 period",
+      "value": "1.6% of base rent",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "$3,995 x .016 = $63.92. 60% of the published CPI increase, capped at 7%.",
+      "source": "S03",
+      "source2": "S08",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-02",
+      "layer": "Local (SF)",
+      "requirement": "Maximum annual increase for the 3/1/25-2/28/26 period",
+      "value": "1.4% of base rent",
+      "applies_to": "Unit 1 (banking only), Unit 2",
+      "detail": "This is the year Unit 1 skipped if it increases on February 1, 2027.",
+      "source": "S03",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-03",
+      "layer": "Local (SF)",
+      "requirement": "Frequency limit",
+      "value": "Once every 12 months",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "The first increase can be imposed 12 months after the lease began. After that, the effective date becomes the anniversary date and the next increase cannot be given until at least 12 months later.",
+      "source": "S01",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-04",
+      "layer": "Local (SF)",
+      "requirement": "Base for the calculation",
+      "value": "Base rent only",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Includes housing services such as parking or storage. Excludes temporary passthroughs and fluctuating charges.",
+      "source": "S01",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-05",
+      "layer": "Local (SF)",
+      "requirement": "Rounding",
+      "value": "Not permitted to round up",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "The notice must state the true calculated amount.",
+      "source": "S01",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-06",
+      "layer": "Local (SF)",
+      "requirement": "Banking rule",
+      "value": "A skipped increase is banked only if at least 24 full months pass without any rent increase",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "This is the single most important rule for Unit 2, which has skipped six consecutive years. It is also why the claim that a long-tenured tenant must be brought to market rate has no legal basis.",
+      "source": "S04",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-07",
+      "layer": "Local (SF)",
+      "requirement": "Banking cap and compounding",
+      "value": "No dollar cap; no compounding; no prorating; no expiration during the tenancy; does not carry to a new tenant",
+      "applies_to": "Unit 2",
+      "detail": "Banked percentages are added, then applied once to the current base rent.",
+      "source": "S04",
+      "source2": "S05",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-08",
+      "layer": "Local (SF)",
+      "requirement": "Earliest date banking is available",
+      "value": "April 1, 1982",
+      "applies_to": "Unit 2",
+      "detail": "Skipped increases before that date cannot be banked. Not relevant to either unit here, but it is the outer boundary of the 24-month analysis.",
+      "source": "S04",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-09",
+      "layer": "Local (SF)",
+      "requirement": "Rent increase licence",
+      "value": "Required before the increase takes effect",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Obtained by reporting into the Rent Board Housing Inventory. A notice is not enforceable without a licence in effect on the effective date of the notice. For buildings with fewer than 10 units, reporting began March 1, 2023 and is annual by March 1.",
+      "source": "S09",
+      "source2": "S10",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-10",
+      "layer": "Local (SF)",
+      "requirement": "Notice content",
+      "value": "Dollar amount, percentage, effective date, and which portion is annual vs banked",
+      "applies_to": "Unit 2 (has a banked portion)",
+      "detail": "Section 37.3(b)(1) requires the landlord to inform the tenant in writing which portion is the annual increase and which is banked.",
+      "source": "S08",
+      "source2": "S01",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-11",
+      "layer": "Local (SF)",
+      "requirement": "Rate to use",
+      "value": "The rate in effect on the effective date, not the date the notice is served",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Practical consequence: a notice served in December 2026 for a March 2027 effective date must use the 2027-28 rate.",
+      "source": "S01",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-12",
+      "layer": "Local (SF)",
+      "requirement": "Null and void rule",
+      "value": "An increase that does not conform to Section 37.3 is null and void",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Section 37.3(b)(5). This is the provision a tenant lawyer will cite first.",
+      "source": "S08",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-13",
+      "layer": "State (CA)",
+      "requirement": "Notice period, increase of 10% or less",
+      "value": "30 days written notice",
+      "applies_to": "Unit 1 (3.0% or 1.6%)",
+      "detail": "Civil Code Sec. 827(b)(2). Service by mail adds 5 days under Code Civ. Proc. Sec. 1013.",
+      "source": "S24",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-14",
+      "layer": "State (CA)",
+      "requirement": "Notice period, increase greater than 10%",
+      "value": "90 days written notice",
+      "applies_to": "Unit 2 (13.1%)",
+      "detail": "Civil Code Sec. 827(b)(3). Service by mail adds 5 days. A 13.1% increase served with only 30 days' notice is defective on its face even though the amount is lawful.",
+      "source": "S24",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-15",
+      "layer": "State (CA)",
+      "requirement": "Longer of the two notice periods controls",
+      "value": "State or local longer period governs",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Civil Code Sec. 827(c).",
+      "source": "S24",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-16",
+      "layer": "State (CA)",
+      "requirement": "Statewide cap (AB 1482) applicability",
+      "value": "Does not control here",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "AB 1482 allows 5% plus CPI, max 10% (a far higher ceiling than SF's 1.6%). Section 1947.12(d)(3) exempts housing subject to a local ordinance that restricts increases to less than the state cap. The local 1.6% therefore governs. AB 1482 is never a route to a larger increase in San Francisco.",
+      "source": "S25",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-17",
+      "layer": "State (CA)",
+      "requirement": "Retaliation",
+      "value": "No rent increase within 180 days of a tenantability complaint",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Civil Code Sec. 1942.5(a). Also bars increases intended to retaliate for tenant organizing or for exercising legal rights, Sec. 1942.5(d).",
+      "source": "S27",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-18",
+      "layer": "State (CA)",
+      "requirement": "Discrimination in terms and conditions",
+      "value": "Prohibited on listed protected bases",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Gov. Code Sec. 12955(a) and (f). Protected bases include race, color, religion, sex, gender identity, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran status, genetic information. Note 'source of income' and 'marital status' are broader than the federal list.",
+      "source": "S28",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-19",
+      "layer": "State (CA)",
+      "requirement": "Just cause / fixed-term leases",
+      "value": "A lease cannot require the tenant to vacate at the end of a stated term",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Civil Code Sec. 1946.2 and SF Admin Code Sec. 37.9F(b). Relevant because terminating a tenancy to reset to market rent is not available while the tenant remains.",
+      "source": "S26",
+      "source2": "S18",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-20",
+      "layer": "Local (SF)",
+      "requirement": "Increased rent for an added occupant",
+      "value": "Prohibited",
+      "applies_to": "Unit 1",
+      "detail": "Unit 1 went from three named tenants to two named tenants. If Tenant D moved in while Tenant A remained, the landlord may not charge more merely because of that. Section 37.3(a)(11) applies even if the lease allows it.",
+      "source": "S16",
+      "source2": "S08",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-21",
+      "layer": "Local (SF)",
+      "requirement": "Unlimited increase when the last original tenant leaves",
+      "value": "Generally not available to a co-tenant; only to a subtenant, and only with a timely 6.14 notice",
+      "applies_to": "Unit 1",
+      "detail": "A co-tenant is not subject to an unlimited increase regardless of when the co-tenant moved in. A subtenant may be only if the landlord served a written 6.14 notice within a reasonable time (generally 60 days) after learning of the occupancy. No 6.14 notice is reported for Unit 1, so this route is not assumed available.",
+      "source": "S17",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-22",
+      "layer": "Local (SF)",
+      "requirement": "Software that sets rent",
+      "value": "Prohibited",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Sec. 37.10C, effective October 14, 2024. Bans algorithmic devices that use non-public competitor data to recommend rent or occupancy. Up to $1,000 civil penalty per violation, per unit, per month.",
+      "source": "S15",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-23",
+      "layer": "Federal",
+      "requirement": "Rent ceiling",
+      "value": "None",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "No federal statute sets a residential rent ceiling for private housing. 42 U.S.C. Sec. 3604 regulates discriminatory terms and conditions, not rent levels.",
+      "source": "S30",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-24",
+      "layer": "Federal",
+      "requirement": "Discrimination in terms, conditions or privileges of rental",
+      "value": "Prohibited on race, color, national origin, religion, sex, familial status, disability",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "42 U.S.C. Sec. 3604(b); 24 CFR 100.70. The federal list is narrower than California's, so the state list controls in practice.",
+      "source": "S30",
+      "source2": "S35",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-25",
+      "layer": "Local (SF)",
+      "requirement": "Harassment through rent increases",
+      "value": "Prohibited",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Sec. 37.10B(a)(5). Evidence of bad faith expressly includes an increase substantially in excess of market rates for comparable units, and an increase within six months of an attempt to recover possession. Remedies include treble damages where there is knowing or reckless violation, plus attorney fees for a prevailing plaintiff.",
+      "source": "S11",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-26",
+      "layer": "Local (SF)",
+      "requirement": "Banked increase and the 7% annual ceiling",
+      "value": "Annual increase can never exceed 7% in any year",
+      "applies_to": "Unit 2",
+      "detail": "The 7% figure is a formula ceiling on the annual adjustment (60% of CPI, capped at 7%), not on a combined banked plus annual notice. Section 37.3(a)(1).",
+      "source": "S08",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-27",
+      "layer": "Local (SF)",
+      "requirement": "Increase above the annual plus banked amount",
+      "value": "Requires a Rent Board petition filed before the notice",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "Six petition types exist: capital improvement, operating and maintenance (up to 7%), special circumstances/comparable rents, Proposition I rent history, utility passthrough, and Rules Sec. 1.21. A notice served before the petition is filed is void.",
+      "source": "S12",
+      "source2": "S13",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-28",
+      "layer": "Local (SF)",
+      "requirement": "Definition of 'reasonable' for an above-market rent",
+      "value": "A below-market tenancy is not by itself an extraordinary circumstance",
+      "applies_to": "Unit 2",
+      "detail": "The Rent Board states expressly: 'The mere fact that a long-standing tenant is paying significantly less than market rent is not considered an extraordinary circumstance.' A special circumstances increase also resets base rent once and forfeits all prior annual and banked increases.",
+      "source": "S14",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-29",
+      "layer": "State (CA)",
+      "requirement": "Tenant right to free legal representation at trial",
+      "value": "Available in SF via the Tenant Right to Counsel program",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "The Eviction Defense Collaborative describes itself as the lead organization of the City's Tenant Right to Counsel program providing free, full-scope representation. Practical effect: any increase should be expected to be reviewed by counsel at no cost to the tenant.",
+      "source": "S33",
+      "status": "verified",
+      "caveat": "Right to counsel attaches to eviction proceedings. It is not a general right to free counsel for a rent increase dispute, though the Rent Board petition process is free and does not require an attorney (S20)."
+    },
+    {
+      "id": "REQ-30",
+      "layer": "Local (SF)",
+      "requirement": "Date the 1.6% rate applies from",
+      "value": "March 1, 2026 through February 28, 2027",
+      "applies_to": "Unit 1, Unit 2",
+      "detail": "The rate is announced each January. The 2027-28 rate is not yet published as of 2026-11-06.",
+      "source": "S02",
+      "source2": "S19",
+      "status": "verified"
+    },
+    {
+      "id": "REQ-31",
+      "layer": "Local (SF)",
+      "requirement": "Building coverage date",
+      "value": "On or before June 13, 1979",
+      "applies_to": "Both units (1940 build)",
+      "detail": "1940 is well before the cutoff, so coverage is not in doubt on age grounds. The remaining question is whether either unit is a single-family dwelling, which would create a Costa-Hawkins partial exemption.",
+      "source": "S07",
+      "status": "verified",
+      "caveat": "Year built (1940) is owner-supplied and was not independently confirmed from the Assessor or Planning Department in this session. See FLAG-01."
+    }
+  ]
+}

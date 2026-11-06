@@ -1,0 +1,145 @@
+{
+  "title": "Reconciliation with the other editions of this site",
+  "context": "Three agent sessions worked this repository independently on 2026-11-06 and all three reached the same core numbers. That is useful corroboration, but it also means there is more than one published site. This page records what agrees, what differs, and where a reader should look for what. Nothing from the earlier editions was deleted or overwritten.",
+  "editions": [
+    {
+      "name": "Current site (main edition)",
+      "path": "docs/",
+      "url": "../index.html",
+      "built_by": "Session arena-53a11683, which integrated two earlier sessions.",
+      "pages": "10 pages: index, units, rules, process, practice, review, discrimination, flagged, sources, limits.",
+      "data": "data/sources.csv, data/units.csv, data/aga-rates.csv",
+      "status": "published"
+    },
+    {
+      "name": "Companion edition (this site)",
+      "path": "docs/v2/",
+      "url": "index.html",
+      "built_by": "Session arena-d52bb8e2.",
+      "pages": "12 pages, generated from data/v2/*.json by build/build.py with 693 automated checks.",
+      "data": "data/v2/*.json",
+      "status": "published"
+    },
+    {
+      "name": "Archived v1 site",
+      "path": "docs/v1/",
+      "url": "../v1/index.html",
+      "built_by": "Session arena-da7cfb4c.",
+      "pages": "7 pages, preserved as an archive.",
+      "data": "docs/v1/data.json",
+      "status": "archive - kept for comparison only. Its citations included commercial blogs, so its rows should not be relied on."
+    }
+  ],
+  "agreement": [
+    {
+      "finding": "Unit 1 lawful maximum, annual increase only",
+      "this_site": "1.6% = $63.92/mo, new rent $4,058.92",
+      "main_edition": "1.6% = $63.92/mo",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Unit 1 lawful maximum, annual plus banked",
+      "this_site": "3.0% = $119.85/mo, new rent $4,114.85",
+      "main_edition": "3.0% = $119.85/mo, new rent $4,114.85",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Unit 2 lawful maximum",
+      "this_site": "13.1% = $412.65/mo, new rent $3,562.65",
+      "main_edition": "13.1% = $412.65/mo, new rent $3,562.65",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Unit 1 banked amount in dollars",
+      "this_site": "$55.93 (1.4% of $3,995)",
+      "main_edition": "$55.93",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Unit 2 banked amount in dollars",
+      "this_site": "$362.25 (11.5% of $3,150)",
+      "main_edition": "$362.25",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Notice periods",
+      "this_site": "30 days (35 by mail) for Unit 1; 90 days (95 by mail) for Unit 2",
+      "main_edition": "Same",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Calculation method",
+      "this_site": "Percentages added, never compounded; applied once to base rent; no rounding up",
+      "main_edition": "Same",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Local cap controls over AB 1482",
+      "this_site": "Yes - Civ. Code 1947.12(d)(3) displaces the state cap",
+      "main_edition": "Same conclusion",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Federal law sets no rent ceiling",
+      "this_site": "No ceiling; 42 U.S.C. 3604 governs discriminatory terms only",
+      "main_edition": "Same",
+      "agrees": "yes"
+    },
+    {
+      "finding": "Unit 1 anniversary date is uncertain",
+      "this_site": "FLAG-02, high severity: February 1 vs April 1",
+      "main_edition": "Flagged as F1",
+      "agrees": "yes - independently identified by both"
+    },
+    {
+      "finding": "No official data on how owners behave",
+      "this_site": "FLAG-08: rows left blank",
+      "main_edition": "Flagged as unverified, not invented",
+      "agrees": "yes - independently identified by both"
+    },
+    {
+      "finding": "Rent increase licence can void an otherwise correct increase",
+      "this_site": "REQ-09 / FLAG-09",
+      "main_edition": "Noted under the licence requirement",
+      "agrees": "yes"
+    }
+  ],
+  "differences": [
+    {
+      "topic": "The 24-month banking rule",
+      "this_site": "Stated as a hard test: a skipped increase is banked only if at least 24 full months pass without any rent increase. Sourced to the Rent Board's current banking page.",
+      "main_edition": "The board notes that the banking look-back wording differs between the Rent Board's page and Rules and Regulations section 4.12, and flagged this as its own irregularity (F1).",
+      "reading": "Both editions land on the same numbers, so the discrepancy does not change the answer here. It is worth knowing that the two official documents are not worded identically. This site uses the Rent Board page wording because it is the current published guidance; the main edition flags the same divergence. See this site's FLAG-12 note and the main edition's F1.",
+      "source": "S04"
+    },
+    {
+      "topic": "The 2027-28 rate",
+      "this_site": "Left blank everywhere, because the rate is not yet announced.",
+      "main_edition": "Notes that the last date on which the 1.6% rate can be used is 2027-02-28.",
+      "reading": "Compatible. Both avoid inventing a future rate. This site adds an explicit blank cell so no reader mistakes a stale figure for a current one."
+    },
+    {
+      "topic": "Scope of source base",
+      "this_site": "36 official sources, each fetched and annotated with a retrieval date and what it was verified for.",
+      "main_edition": "26 official sources; blog citations from the v1 edition were deliberately not carried forward.",
+      "reading": "Both are official-source-only. The sets overlap heavily. Neither edition is more authoritative than the other on any finding above, because every shared finding rests on the same primary documents."
+    },
+    {
+      "topic": "Where the site lives",
+      "this_site": "docs/v2/ - a self-contained companion edition, so the existing site is not overwritten.",
+      "main_edition": "docs/ - the primary published site.",
+      "reading": "This is a packaging difference, not an analytical one. Read the main edition first; use this edition for the requirement matrix, the 1982-2027 rate table, the 14-point review test and the flag register, which it does not duplicate."
+    }
+  ],
+  "unresolved_by_both": [
+    "Whether the building's certificate of occupancy date and dwelling-unit count confirm rent-control coverage.",
+    "Whether any rent increase has actually been imposed on Unit 2 since June 1, 2019. Both editions treat 'none' as an assumption and flag it.",
+    "Whether the owner holds a current rent increase licence.",
+    "Whether $3,995 and $3,150 are entirely base rent.",
+    "Whether the tenant added to Unit 1 is a co-tenant or a subtenant.",
+    "Whether any repair complaint, inspection, organising activity or buyout discussion occurred in the last 180 days.",
+    "A verified ZIP-level market rent. Neither edition uses one."
+  ],
+  "conclusion": "Two independent analyses of the same primary sources produced identical dollar figures to the cent, identical notice periods, and independently identified the same two substantive uncertainties. That is the strongest evidence available here that the numbers are right. The remaining open items are factual gaps in the owner's own records, not disagreements about the law.",
+  "sources_note": "This page compares two editions of the same analysis. The legal findings it discusses are sourced on the other pages: S03, S04, S24, S08, S25, S30."
+}

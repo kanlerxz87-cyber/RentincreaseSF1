@@ -89,3 +89,45 @@ request to `main`.
 This is a research summary with citations, not legal advice. Rates, fees, forms and the ordinance
 change; re-verify any figure before relying on it. Free counselling is available from the SF Rent
 Board on 415-252-4600.
+---
+
+## Companion edition — `docs/v2/`
+
+Session `arena-d52bb8e2` independently built a second, self-contained edition at **`docs/v2/`**
+(entry point `docs/v2/index.html`). It does not overwrite or modify anything in `docs/*.html`; the two
+sites link to each other. It reached **identical figures to the cent** and is useful because it adds
+material the main edition does not duplicate:
+
+| Path | Contents |
+| --- | --- |
+| `docs/v2/` | The companion site: 13 pages, plain HTML plus one stylesheet, no JavaScript, no CDN |
+| `docs/v2/requirements.html` | 31-row requirement matrix across local, state and federal law |
+| `docs/v2/rates.html` | Every published allowable increase, 1982–2027, with the years used by each unit marked |
+| `docs/v2/review.html` | A 14-point tenant-lawyer review test with a pass condition per question |
+| `docs/v2/flags.html` | A 13-item flag register with severity, effect on the numbers and resolution step |
+| `docs/v2/reconciliation.html` | Row-by-row comparison of this edition against the main edition |
+| `data/v2/*.json` | The companion edition's single source of truth |
+| `build/build.py` | Generator for the companion edition (reads `data/v2/`, writes `docs/v2/`) |
+| `tools/check_site.py` | 693 checks for the companion edition |
+| `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` | Companion edition's summary and records |
+
+Rebuild and verify the companion edition:
+
+```bash
+python3 build/build.py      # regenerate docs/v2/ from data/v2/
+python3 tools/check_site.py # 693 checks; exit 0 = clean
+```
+
+`tools/check_site.py` fails on: a broken internal link or anchor, a source URL missing from the site,
+an inline reference to an unknown source id, a table row with neither a source link nor an unverified
+marker, any personal name in output, a table row whose column count disagrees with its header, or any
+dollar figure that does not recompute from the published percentages.
+
+### Agreement between the two editions
+
+Both editions independently reached: Unit 1 at 1.6% = **$63.92** → $4,058.92, or 3.0% = **$119.85** →
+$4,114.85 with the banked 1.4%; Unit 2 at 13.1% = **$412.65** → $3,562.65; 30-day notice for Unit 1 and
+**90 days** for Unit 2; percentages added and never compounded. Both also independently flagged the
+Unit 1 anniversary-date ambiguity and the absence of any official data on how owners behave. See
+`docs/v2/reconciliation.html`.
+
