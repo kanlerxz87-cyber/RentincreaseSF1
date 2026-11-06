@@ -1,0 +1,58 @@
+[
+  {
+    "id": "CORP-01",
+    "category": "Ownership Scale & Capital Structure (U.S. Census / HUD 2024 RHFS Benchmark)",
+    "official_value": "1-unit (82.9%) + 2–4 units (14.6%) = 97.5% of U.S. rental properties; 50+ units = 0.4% of properties / 39.2% of units",
+    "analysis": "In the official 2024 HUD/Census Rental Housing Finance Survey, small 2–4 unit buildings (like this 2-unit 1940 Outer Sunset property) average $5,820/unit in annual operating expenses with a tighter median debt-service coverage ratio (DSCR) of 74 and narrower mean low-to-high rent spread ($1,326–$1,668), whereas 50+ unit institutional properties average $34.0M market value, $10,979/unit operating expenses, a median DSCR of 164, and wider rent spread ($1,324–$2,239).",
+    "status": "Verified Empirical Data",
+    "sources": ["census_rhfs_2024"]
+  },
+  {
+    "id": "CORP-02",
+    "category": "Equal Statutory Cap Across Corporate & Individual Owners on Covered SF Units",
+    "official_value": "Identical 1.6% annual cap (3/1/2026–2/28/2027) under SF Admin. Code §37.3",
+    "analysis": "For pre-June 13, 1979 multi-unit SF buildings, corporate REITs and individual owners face the exact same 1.6% annual base-rent cap, 12-month spacing, and additive banking rules. Note: AB 1482's single-family corporate-LLC distinction (Civ. Code §1947.12(d)(5)) applies only to single-family homes/condos, NOT to 2-unit 1940 buildings covered by SF Admin. Code Ch. 37.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_3", "sfrb_sfh_costa", "civ_1947_12"]
+  },
+  {
+    "id": "CORP-03",
+    "category": "Algorithmic Revenue-Management Software Ban (Corporate Differential)",
+    "official_value": "Prohibited citywide (SF Admin. Code §37.10C: up to $1,000/unit/mo penalty + attorney's fees)",
+    "analysis": "Large institutional operators historically used commercial revenue-management platforms (e.g., RealPage YieldStar/AI Revenue Management, accounting for ~80% of that software market per U.S. DOJ) to coordinate vacant-unit pricing and renewal offers. San Francisco enacted §37.10C (effective Oct 14, 2024; tenant-rights nonprofit enforcement effective Oct 6, 2025) banning algorithmic rent-setting devices built on non-public competitor data, alongside federal/California antitrust prosecution. Individual owners using official Form 571 CPI schedules are unaffected; standard accounting/ledger software remains lawful.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_10c", "sfrb_algo_info", "doj_realpage"]
+  },
+  {
+    "id": "CORP-04",
+    "category": "Housing Inventory Reporting & Licensing Cadence (Corporate Compliance Teams vs. Small Owners)",
+    "official_value": "10+ units required since July 1, 2022; 1–9 units required annually by March 1 since March 1, 2023 (§37.15)",
+    "analysis": "Corporate portfolios automate annual March 1 Rent Board Housing Inventory submissions across properties to prevent §37.15(e) license suspension. Small 2-unit owners were added a year later (2023) and face higher risk of inadvertent non-filing—which suspends any annual or banked increase until reported.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_inventory", "sfrb_sec_37_15"]
+  },
+  {
+    "id": "CORP-05",
+    "category": "Passthrough Petitions (Capital Improvement, Bond, Utility & O&M)",
+    "official_value": "Cap. Imp.: 100% (≤5 units, 10–20 yr amortization, 5%/yr cap) vs. 50%/100% (6+ units, 7–10 yr, 10% cap); O&M capped at 7%",
+    "analysis": "Institutional landlords routinely maintain audited invoices to file formal Capital Improvement petitions (§37.7), General Obligation/Water Bond worksheets, and Operating & Maintenance petitions (§37.8 / Rule 6.10). Note that SF Ordinance amendments effective April 3, 2018 bar post-acquisition mortgage debt service and property-tax reassessment increases from O&M petitions—eliminating corporate debt-leveraged rent hikes. Individual owners rarely file formal O&M petitions due to two-year accounting burdens, relying instead on simple annual CPI adjustments.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_petitions", "sfrb_rules_part6", "sfrb_hardship"]
+  },
+  {
+    "id": "CORP-06",
+    "category": "Annual CPI Execution vs. Multi-Year Banking Accumulation (SF Owner Behavioral Share)",
+    "official_value": "",
+    "analysis": "Official confirmed value intentionally left blank: neither the SF Rent Board nor the U.S. Census publishes exact percentages of SF corporate vs. individual landlords who impose annual increases every year versus banking. Structurally, SF's banking rules (§37.3(a)(2), Rule 4.12) exist specifically so small landlords who skip annual increases during stable tenancies (as occurred on Unit 2 from 2019–2026) do not permanently forfeit CPI adjustments, whereas institutional property-management calendars typically issue the current annual CPI allowance every 12 months on schedule.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_banked", "sfrb_rules_part4", "sfrb_inventory"]
+  },
+  {
+    "id": "CORP-07",
+    "category": "Roommate Turnover & Rule 6.14 Reservation Notices",
+    "official_value": "Written Rule 6.14 notice required within reasonable time of knowledge of replacement occupant",
+    "analysis": "Institutional property managers routinely require formal written sublease/occupant applications and serve standardized Rule 6.14 reservation notices whenever an original co-tenant is replaced (preserving a future Costa-Hawkins reset ONLY after the final original occupant vacates). Individual owners frequently execute informal roommate addenda or accept rent directly from replacement roommates (like Casey Kim in Unit 1) without serving a Rule 6.14 notice—making the replacement occupant a full protected co-tenant.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_614", "civ_1954_53"]
+  }
+]

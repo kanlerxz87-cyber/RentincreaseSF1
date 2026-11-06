@@ -1,0 +1,98 @@
+[
+  {
+    "id": "LAW-AUD-01",
+    "category": "1. Neighborhood Legal Aid Intake & Public Registry Check (94122 Clinics)",
+    "official_value": "SF Rent Board Referral List includes Open Door Legal (1722 Irving St, SF 94122), HRC, SFTU, EDC",
+    "analysis": "What SF tenant lawyers check first: Tenants in Outer Sunset 94122 have immediate access to free counseling at Open Door Legal's Sunset office (1722 Irving St), Housing Rights Committee, SF Tenants Union, Asian Law Caucus, Bay Area Legal Aid, and City-funded Eviction Defense Collaborative. Counsel immediately pulls the property's SF Rent Board Housing Inventory license status, DBI permit/complaint history, and Assessor parcel records. How to pass: Ensure 100% public-registry compliance BEFORE serving notice.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_referrals", "sf_mohcd_help", "sfrb_inventory"]
+  },
+  {
+    "id": "LAW-AUD-02",
+    "category": "2. SF Admin. Code §37.15 Rent Increase License Audit",
+    "official_value": "Unlicensed §37.3(a)(1)–(2) increase is legally suspended (§37.15(e))",
+    "analysis": "What SF tenant lawyers check: Whether the landlord filed the current March 1 Housing Inventory report for BOTH units and held an active Rent Increase License on the date notice was served and on the effective date. How to pass: File/verify both units on portal.sfrb.org and retain the dated PDF license certificate before serving notice.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+  },
+  {
+    "id": "LAW-AUD-03",
+    "category": "3. 1940 Sunset Permit / In-Law Unit & Certificate of Occupancy Audit",
+    "official_value": "Legal or unpermitted second unit in pre-1979 building = covered by SF Rent Control (Topic 019; Ord. 064-24)",
+    "analysis": "What SF tenant lawyers check: Many 1940 Outer Sunset properties are 2-unit flats or single-family homes with ground-floor in-law units. If an owner mistakenly claimed Costa-Hawkins single-family exemption or AB 1482's 8.8% cap, counsel files an immediate Unlawful Rent Increase petition for full refund of overpayments. How to pass: Treat both units strictly as SF Rent Ordinance covered units capped at 1.6% annual CPI.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sfh_costa", "sfrb_amendments_2026", "sfrb_ab1482"]
+  },
+  {
+    "id": "LAW-AUD-04",
+    "category": "4. Fixed-Term Lease Bar Audit on Unit 1 (Cal. Civ. Code §827(a))",
+    "official_value": "Unilateral increase void during active fixed-term lease unless lease expressly authorizes it",
+    "analysis": "What SF tenant lawyers check: Counsel inspects the April 1, 2026 Unit 1 paperwork word-for-word. If the owner and Alex Morgan/Casey Kim signed a new 12-month lease (4/1/2026–3/31/2027) rather than a month-to-month addendum, any unilateral Feb 1, 2027 increase violates Civ. Code §827(a). How to pass: Inspect the signed April 1, 2026 instrument first; if fixed-term through 3/31/2027, defer Unit 1's effective date to April 1, 2027.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_827", "sfrb_guide"]
+  },
+  {
+    "id": "LAW-AUD-05",
+    "category": "5. Costa-Hawkins §1954.53(d) & Rule 6.14 Co-Tenancy Audit on Unit 1",
+    "official_value": "Zero vacancy reset while original tenant remains; direct rent acceptance creates co-tenancy",
+    "analysis": "What SF tenant lawyers check: Whether any part of Unit 1's increase attempts to charge for Casey Kim moving in on April 1, 2026, or mischaracterizes Casey Kim as an unprotected subtenant after the landlord signed an April 1, 2026 continuing tenancy or accepted rent directly. How to pass: Name both Alex Morgan and Casey Kim on standard CPI notices, charge $0 roommate fee, and apply only the lawful 1.6% CPI rate.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1954_53", "sfrb_614", "sfrb_guide"]
+  },
+  {
+    "id": "LAW-AUD-06",
+    "category": "6. Base-Rent Purity, Non-Compounding & Anti-Rounding Audit (Rules 4.10 & 4.12)",
+    "official_value": "Exact cents required; rounding up or compounding banked rates is unlawful",
+    "analysis": "What SF tenant lawyers check: Counsel recomputes every cent from initial base rent. Rounding $4,058.92 up to $4,059.00, compounding Unit 2's 2020–2026 percentages (13.84% compounded vs. 13.1% additive), or including utilities/pet fees/$29.50 Rent Board fees in base rent invalidates the overcharge (Rule 4.12(a) allows ALJ readjustment only if good-faith banking error is ≤0.5% of prior base rent). How to pass: Use exact unrounded figures ($4,058.92 and $3,200.40) and additive math only.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_rules_part4", "sfrb_multi_year", "sfrb_banked"]
+  },
+  {
+    "id": "LAW-AUD-07",
+    "category": "7. Banking Eligibility Timing Audit on Unit 1 (24-Month Rule — Rule 4.12(a))",
+    "official_value": "Full 12 months must elapse AFTER eligibility date before skipped rate banks",
+    "analysis": "What SF tenant lawyers check: If an owner serves a 3.0% (1.4% + 1.6%) increase on Unit 1 taking effect BEFORE February 1, 2027 (e.g., January 1, 2027), counsel strikes the 1.4% because 12 full months had not yet elapsed since Feb 1, 2026. How to pass: Never include Unit 1's 1.4% banked rate on any effective date earlier than February 1, 2027.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_rules_part4", "sfrb_banked", "sfrb_irregular"]
+  },
+  {
+    "id": "LAW-AUD-08",
+    "category": "8. Service Method & CCP §1013 +5 Calendar-Day Mail Audit",
+    "official_value": "Email notice invalid; CA mail requires 35 days (≤10%) or 95 days (>10%)",
+    "analysis": "What SF tenant lawyers check: Envelopes and postmarks! Serving a 30-day notice by mail on Jan 2, 2027 for Feb 1, 2027 (only 30 days instead of 35) or mailing a >10% notice on Nov 28, 2026 for Feb 28, 2027 (92 days instead of 95) renders the effective date defective under Civ. Code §827(b) and CCP §1013(a). How to pass: Serve at least 38–40 calendar days early by first-class U.S. Mail (or hand-deliver ≥32 days early with witness/receipt).",
+    "status": "Verified Official Rule",
+    "sources": ["civ_827", "ccp_1013"]
+  },
+  {
+    "id": "LAW-AUD-09",
+    "category": "9. Open DBI Citation & Decreased Housing Services Audit (Civ. Code §1942.4; §37.2(g))",
+    "official_value": ">35-day unabated citation bars rent increases ($100–$5,000 statutory damages + fees)",
+    "analysis": "What SF tenant lawyers check: Outer Sunset salt-air/fog exposure commonly causes window leaks, dampness/mold, heater issues, or dry rot. If any DBI/DPH notice of violation is open >35 days, Civ. Code §1942.4 bars demanding any increase; even without a citation, unresolved maintenance issues invite a Rent Board 'Substantial Decrease in Housing Services' petition offsetting far more than a $50–$64/mo increase. How to pass: Complete a proactive maintenance check and resolve any pending repairs on both units BEFORE serving notice.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1942_4", "sfrb_coverage"]
+  },
+  {
+    "id": "LAW-AUD-10",
+    "category": "10. 180-Day Anti-Retaliation Timeline Audit (Cal. Civ. Code §1942.5)",
+    "official_value": "180-day statutory bar following good-faith repair complaints or agency inspections",
+    "analysis": "What SF tenant lawyers check: Texts, emails, and repair requests over the prior 6 months. Serving a rent increase within 180 days of a tenant complaining about habitability or contacting the Rent Board/DBI creates a statutory retaliation claim ($100–$2,000 punitive damages per retaliatory act + actual damages + attorney's fees). How to pass: Verify zero habitability/agency complaints within the past 180 days and document routine annual business timing.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1942_5", "sfrb_sec_37_10b"]
+  },
+  {
+    "id": "LAW-AUD-11",
+    "category": "11. Bad-Faith Harassment / Constructive-Eviction Shock Audit (SF Admin. Code §37.10B)",
+    "official_value": "Treble damages + mandatory prevailing-tenant attorney's fees under §37.10B(c)(5)",
+    "analysis": "What SF tenant lawyers check: If an owner suddenly demands a 13.1% ($412.65/mo) lump sum from 7-year Unit 2 tenants while leaving higher-paying Unit 1 untouched (or pairs a steep banked increase with hostile communications or buyout pressure), counsel investigates constructive-eviction / §37.10B(a)(5) coercion. How to pass: Impose a modest, uniform 1.6% annual CPI adjustment ($50.40/mo on Unit 2; $63.92/mo on Unit 1) with courteous, neutral written communication and zero buyout pressure.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_10b", "sfrb_hardship"]
+  },
+  {
+    "id": "LAW-AUD-12",
+    "category": "12. Algorithmic Pricing & Disparate Treatment Audit (§37.10C; FEHA; Unruh; FHA)",
+    "official_value": "Zero algorithmic software; identical neutral % formula across covered units",
+    "analysis": "What SF tenant lawyers check: Whether third-party pricing software was used (§37.10C) and whether one household in a 2-unit building was singled out by protected characteristics (race, national origin, age, disability, sexual orientation, marital/familial status, source of income). How to pass: Base increases solely on official Form 571 (1.6%) under a written uniform building policy applied equally to both units.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_sec_37_10c", "gov_12955", "civ_51", "fha_3604_gpo"]
+  }
+]
