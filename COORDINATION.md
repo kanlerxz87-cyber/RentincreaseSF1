@@ -104,3 +104,117 @@ the Flagged for Review page. None blocks merge.
 `SOURCES.md`, `VERIFICATION.md`, and its appended sections of `README.md` and this file.
 
 **Requests to other sessions:** none. This session did not edit any file owned by another session.
+
+---
+
+# Session addendum — `arena/dd1caa16-rentincreasesf1` (independent verification dashboard)
+
+> Appended without discarding any earlier session's board or integration record.
+> This session rebased onto `origin/main` (which already contains the merged work of
+> `arena/2347590f`, `arena/da7cfb4c`, and `arena/53a11683`) and resolved the
+> `COORDINATION.md` add/add conflict by preserving the existing board verbatim above
+> and adding this section. No file in another session's scope is edited by this session.
+
+## Platform constraint
+
+Arena fixes this session to branch `arena/dd1caa16-rentincreasesf1`; it cannot create
+`session-<id>/<task>` branches or a worktree. Coordination is therefore by
+**disjoint file scope**. `git pull --rebase origin main` was run before the first
+push of this addendum, and will be run before every subsequent push of this session.
+
+## Claimed scope (revised after rebase)
+
+`origin/main` already contains a root `index.html`, `docs/**`, `site/**`,
+`research/**`, `data/*.csv`, `tools/**`, `scripts/**`, `.github/workflows/**`,
+`README.md`, and `EXECUTIVE_SUMMARY.md`, all owned by earlier sessions. This session
+therefore **withdraws** its initial claim to root `index.html`, root `data/**`,
+`SOURCES.md`, `RESEARCH.md`, `EXECUTIVE_SUMMARY.md`, and `verify.py`, and claims only:
+
+| Scope | Purpose |
+|---|---|
+| `dashboard/index.html` | Landing page for this session's independent dashboard |
+| `dashboard/pages/**` | Subpages by category (all with source-linked tables) |
+| `dashboard/assets/**` | Stylesheet and small client-side table filter |
+| `dashboard/data/site_data.json` | Verified source registry, facts, case facts, flags, scenarios |
+| `dashboard/SOURCES.md`, `dashboard/RESEARCH.md`, `dashboard/EXECUTIVE_SUMMARY.md` | Line-by-line source notes, research findings, anonymized executive summary |
+| `dashboard/build.py`, `dashboard/verify.py` | Static generator and line-by-line verification / link / privacy gate |
+| `dashboard/README.md` | Scope-local build instructions |
+| `COORDINATION.md` | Shared task board (this appended section only; earlier content untouched) |
+
+The dashboard will be published at
+`https://kanlerxz87-cyber.github.io/RentincreaseSF1/dashboard/`. GitHub Pages is
+configured by the repository settings as legacy publishing from `main`, root `/`;
+the existing root `index.html` redirects to `docs/index.html`. This session does not
+change that setting or any workflow.
+
+## Task board for this session
+
+| ID | Task | Status | Owner | Scope |
+|---|---|---|---|---|
+| D1 | Read/create task board, claim disjoint scope, rebase onto main | done | `arena/dd1caa16-rentincreasesf1` | `COORDINATION.md` |
+| D2 | Official-source research, line by line, with links and quotes | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/data/site_data.json`, `dashboard/SOURCES.md`, `dashboard/RESEARCH.md` |
+| D3 | Anonymized executive summary (no raw personal identifiers) | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/EXECUTIVE_SUMMARY.md` |
+| D4 | Case facts + illustrative calculations (all user inputs flagged unverified) | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/data/site_data.json` |
+| D5 | Dashboard site: landing + subpages, tables, analysis, findings | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/index.html`, `dashboard/pages/**`, `dashboard/assets/**` |
+| D6 | Clearly labelled "Flagged for Review" page (all unverified items + source links) | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/pages/flagged.html` |
+| D7 | Line-by-line verification, source-link check, privacy scan, link check, build | done | `arena/dd1caa16-rentincreasesf1` | `dashboard/verify.py` |
+| D8 | PR to `main`, merge, confirm Pages deploy, record link here | in progress | `arena/dd1caa16-rentincreasesf1` | `COORDINATION.md` |
+
+Status `needs review` items live on the dashboard's Flagged for Review page and do
+not block the merge.
+
+## Claim log
+
+```
+2026-11-06  arena/dd1caa16  CLAIM D1..D8  initial scope: root index.html, pages/**,
+                            assets/**, data/**, root-level docs. Pushed 444bc7e.
+2026-11-06  arena/dd1caa16  REBASE onto origin/main (c1de888). Add/add conflict in
+                            COORDINATION.md resolved by preserving main's board and
+                            appending this section. Scope revised to dashboard/** only
+                            because main now contains other sessions' site outputs.
+2026-11-06  arena/dd1caa16  REBASE onto origin/main (e2d2528 after PR #5 merged).
+                            Second COORDINATION.md conflict resolved by preserving
+                            main's expanded board verbatim and re-appending this
+                            addendum. No other session's work was discarded.
+```
+
+## Requests to other sessions / integration owner
+
+1. **Root navigation:** this session does not edit the shared root `index.html` or
+   `docs/index.html`. Please add a link labelled "Independent verification dashboard"
+   pointing to `dashboard/index.html` if the site owner wants it discoverable from
+   the main landing page. Logging the request here instead of editing the shared
+   file, per the coordination protocol.
+2. **Shared table data / nav:** unchanged. This session's dashboard has its own
+   self-contained navigation and data registry; it does not modify `data/*.csv`,
+   `docs/**`, `site/**`, or `.github/workflows/**`.
+
+## Handoff rule
+
+If this session crashes or its claim is more than 60 minutes old with no new commits,
+another session may take over D8 and must note the handoff in this log.
+
+## Verification record (this session)
+
+* **Official sources:** 42 registered sources in `dashboard/data/site_data.json`,
+  each fetched and read directly with `fetch_page` on 2026-11-06; short verbatim
+  quotes stored per source. Agencies: SF Rent Board / SF.gov, SF Board of
+  Supervisors, California Legislative Information, California Attorney General,
+  U.S. DOJ, HUD, eCFR, and the GitHub repository of record.
+* **Verification performed:** `dashboard/verify.py` checks that every verified fact
+  maps to a registered official source, every case fact has a blank `verified_value`
+  and a matching flag, every flag has an official source link, every scenario's
+  arithmetic recomputes exactly, every HTML data-table row has an official source
+  link, every internal link resolves, every page shares the same nav, and no raw
+  personal identifiers appear in published files.
+* **Irregularities:** 20 flagged items (F01–F20) are published on
+  `dashboard/pages/flagged.html` with source links; they do not block the merge.
+* **Not legal advice:** the dashboard is an informational summary of official sources.
+
+## Pull request / merge record (this session)
+
+| Item | Value |
+|---|---|
+| PR | *(recorded after creation)* |
+| Merge result | *(recorded after merge)* |
+| Pages deploy | *(recorded after verification)* |
