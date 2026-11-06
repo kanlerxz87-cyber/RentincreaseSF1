@@ -1,0 +1,74 @@
+[
+  {
+    "id": "RATE-2019",
+    "category": "Effective Period: March 1, 2019 – February 29, 2020",
+    "official_value": "2.6%",
+    "analysis": "In effect when Unit 2's lease commenced on June 1, 2019 ($3,150.00/mo). Not bankable for Unit 2 because a landlord cannot impose a first annual increase until 12 months after lease start (June 1, 2020).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_guide"]
+  },
+  {
+    "id": "RATE-2020",
+    "category": "Effective Period: March 1, 2020 – February 28, 2021",
+    "official_value": "1.8%",
+    "analysis": "First annual allowance eligible on Unit 2's June 1, 2020 anniversary. If skipped through June 1, 2021 (12 full months after eligibility), 1.8% banked for Unit 2 (conditional: $56.70/mo on $3,150).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_rules_part4"]
+  },
+  {
+    "id": "RATE-2021",
+    "category": "Effective Period: March 1, 2021 – February 28, 2022",
+    "official_value": "0.7%",
+    "analysis": "Eligible on Unit 2's June 1, 2021 anniversary. If skipped through June 1, 2022, 0.7% banked for Unit 2 (conditional: $22.05/mo on $3,150).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_rules_part4"]
+  },
+  {
+    "id": "RATE-2022",
+    "category": "Effective Period: March 1, 2022 – February 28, 2023",
+    "official_value": "2.3%",
+    "analysis": "Eligible on Unit 2's June 1, 2022 anniversary. If skipped through June 1, 2023, 2.3% banked for Unit 2 (conditional: $72.45/mo on $3,150).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_rules_part4"]
+  },
+  {
+    "id": "RATE-2023",
+    "category": "Effective Period: March 1, 2023 – February 29, 2024",
+    "official_value": "3.6%",
+    "analysis": "Eligible on Unit 2's June 1, 2023 anniversary (post-March 1, 2023 Housing Inventory effective date for 1–9 unit buildings). If skipped through June 1, 2024, 3.6% banked for Unit 2 (conditional: $113.40/mo on $3,150).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_inventory"]
+  },
+  {
+    "id": "RATE-2024",
+    "category": "Effective Period: March 1, 2024 – February 28, 2025",
+    "official_value": "1.7%",
+    "analysis": "Eligible on Unit 2's June 1, 2024 anniversary (banked on June 1, 2025: conditional $53.55/mo on $3,150). Also in effect when Unit 1's initial lease started February 1, 2025 ($3,995.00/mo; not bankable for Unit 1).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_rules_part4"]
+  },
+  {
+    "id": "RATE-2025",
+    "category": "Effective Period: March 1, 2025 – February 28, 2026",
+    "official_value": "1.4%",
+    "analysis": "Eligible on Unit 2's June 1, 2025 anniversary (banked on June 1, 2026: conditional $44.10/mo on $3,150; cumulative Unit 2 banked 2020–2025 = 11.5%). Also first eligible on Unit 1's February 1, 2026 anniversary (does NOT bank until February 1, 2027 per Rule 4.12(a)).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_form571", "sfrb_rate_2026", "sfrb_rules_part4"]
+  },
+  {
+    "id": "RATE-2026",
+    "category": "Effective Period: March 1, 2026 – February 28, 2027 (Current)",
+    "official_value": "1.6%",
+    "analysis": "Current published SF Rent Board annual allowable increase (60% of Bay Area CPI-U). Applies to any lawful annual increase taking effect on or before February 28, 2027 (conditional annual-only: +$63.92/mo for Unit 1; +$50.40/mo for Unit 2).",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_rate_2026", "sfrb_form571"]
+  },
+  {
+    "id": "RATE-2027",
+    "category": "Effective Period: March 1, 2027 – February 29, 2028 (Upcoming)",
+    "official_value": "",
+    "analysis": "Official confirmed value intentionally left blank: as of November 6, 2026, the SF Rent Board has not yet published the March 1, 2027–February 29, 2028 rate (typically announced around December/January after autumn CPI release). Any increase taking effect on or after March 1, 2027 (such as April 1, 2027 or June 1, 2027) must use that newly published rate, not 1.6%.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_rate_2026", "sfrb_form571"]
+  }
+]

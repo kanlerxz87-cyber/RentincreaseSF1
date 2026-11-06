@@ -1,0 +1,94 @@
+{
+  "steps": [
+    {
+      "id": "NOT-01",
+      "category": "Step 1 · Confirm Active SF Rent Increase License Before Drafting Notice",
+      "official_value": "Active §37.15 Housing Inventory license required on effective date",
+      "analysis": "Log into portal.sfrb.org and verify that both Unit 1 and Unit 2 have current March 1 Housing Inventory filings and downloaded Rent Increase License certificates. Attach or reference the current license compliance status in the owner's compliance file.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+    },
+    {
+      "id": "NOT-02",
+      "category": "Step 2 · Verify Lease Status & 12-Month Anniversary Spacing",
+      "official_value": "Month-to-month tenancy required (Civ. Code §827(a)); ≥12 months since lease start or prior increase",
+      "analysis": "Confirm the tenancy is periodic (month-to-month) as of the effective date—never inside an active fixed-term lease unless the lease expressly authorizes mid-term Rent Board CPI adjustments. Confirm at least 12 full months have elapsed since lease commencement or the last base-rent increase.",
+      "status": "Verified Official Rule",
+      "sources": ["civ_827", "sfrb_guide", "sfrb_rules_part4"]
+    },
+    {
+      "id": "NOT-03",
+      "category": "Step 3 · Itemize Written Notice Content (Civ. Code §827 + Rules 4.10 & 4.12)",
+      "official_value": "Written notice stating dollar + % increase, effective date, annual vs. banked breakdown & dates",
+      "analysis": "Prepare a formal written notice addressed to all lawful adult tenants on the tenancy (e.g., Alex Morgan & Casey Kim for Unit 1; Riley Chen & Quinn Patel for Unit 2) stating: (1) current base rent; (2) exact dollar and percentage of current annual increase (e.g., 1.6% = $63.92 for Unit 1; 1.6% = $50.40 for Unit 2); (3) if any banked percentage is included, the exact banked dollar/percentage AND the exact prior anniversary dates on which it is based (Rule 4.12(b)); (4) new monthly base rent (never rounded up); (5) effective date; and (6) SF Rent Board counseling contact info (25 Van Ness Ave #320, 415-252-4600).",
+      "status": "Verified Official Rule",
+      "sources": ["civ_827", "sfrb_rules_part4", "sfrb_banked"]
+    },
+    {
+      "id": "NOT-04",
+      "category": "Step 4 · Serve via Statutory Delivery Method & Lead Time (Never Email Alone)",
+      "official_value": "≤10%: 30 days personal / 35 days CA mail; >10%: 90 days personal / 95 days CA mail",
+      "analysis": "Under Cal. Civ. Code §827(b)(1) and CCP §1013(a), serve either by (A) personal hand delivery to the tenant (30 days for ≤10%; 90 days for >10%), or (B) first-class U.S. Mail addressed to the tenant at the property within California, adding +5 calendar days (35 days for ≤10%; 95 days for >10%). Email, portal message, or text alone is NOT valid statutory service (may be sent only as an extra courtesy copy). Retain signed Proof of Service and mailing receipt.",
+      "status": "Verified Official Rule",
+      "sources": ["civ_827", "ccp_1013", "sfrb_guide"]
+    },
+    {
+      "id": "NOT-05",
+      "category": "Step 5 · Separate Billing for Any $29.50 Rent Board Fee Recovery",
+      "official_value": "50% of $59.00 fee = $29.50/yr billed separately; excluded from base rent",
+      "analysis": "If billing the tenant's 50% share ($29.50) of the 2026–27 SF Rent Board Fee (for tenants in occupancy Nov 1 where owner paid the March 1 invoice), state it on a separate line/invoice. Never merge $29.50 into base rent and never calculate future percentage increases on it (nonpayment of this fee is NOT just cause for eviction).",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_fee", "sfrb_multi_year"]
+    }
+  ],
+  "reasons": [
+    {
+      "id": "RSN-01",
+      "category": "Lawful & Normal Reason · Routine Annual CPI Indexing Under §37.3(a)(1)",
+      "official_value": "1.6% annual CPI adjustment (no petition required)",
+      "analysis": "Applying the Rent Board's published annual allowable increase (60% of Bay Area CPI-U = 1.6% for 3/1/26–2/28/27) to partially offset ordinary inflation in property taxes, insurance, utilities, and routine maintenance is the standard, statutory baseline reason recognized across San Francisco.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_sec_37_3", "sfrb_rate_2026"]
+    },
+    {
+      "id": "RSN-02",
+      "category": "Lawful & Normal Reason · Documented Partial/Full Banked CPI Catch-Up Under §37.3(a)(2)",
+      "official_value": "Additive banked prior-year CPI rates after ≥12 mos post-eligibility (Rule 4.12)",
+      "analysis": "Recovering skipped prior annual CPI allowances in an additive, non-compounded manner with full Rule 4.12(b) date itemization is expressly authorized by statute—most defensible when phased modestly so total increase stays well under 10%.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_sec_37_3", "sfrb_rules_part4", "sfrb_banked"]
+    },
+    {
+      "id": "RSN-03",
+      "category": "Lawful Only With Prior Petition / Worksheet · Capital Improvements, Bonds, Utilities, O&M",
+      "official_value": "Prior ALJ approval or official Rent Board worksheet mandatory (§§37.7, 37.8)",
+      "analysis": "Passing through certified capital improvements, General Obligation/Water bond property tax changes, PG&E utility increases, or pre-2018-eligible O&M cost increases is lawful ONLY when approved by Rent Board petition or calculated on the official Rent Board bond worksheet (and remains subject to tenant financial hardship deferral).",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_petitions", "sfrb_rules_part6", "sfrb_hardship"]
+    },
+    {
+      "id": "RSN-04",
+      "category": "UNLAWFUL Reason · Matching Neighborhood 'Market Rent' or AB 1482 (8.8%) on Covered Units",
+      "official_value": "Null and void above annual + banked cap (Rule 4.10(b); §37.3)",
+      "analysis": "Raising rent on Unit 1 or Unit 2 to match Outer Sunset 94122 market listings or California's 8.8% AB 1482 rate violates SF Admin. Code §37.3; any excess above the lawful SF annual + banked allowance is null and void.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_sec_37_3", "sfrb_rules_part4", "sfrb_ab1482"]
+    },
+    {
+      "id": "RSN-05",
+      "category": "UNLAWFUL Reason · Roommate Replacement / Additional Occupant Surcharge",
+      "official_value": "Prohibited ($0 allowed; SF Rent Board Guide & Rule 6.14)",
+      "analysis": "Increasing Unit 1's rent because Casey Kim replaced departed original co-tenants while Alex Morgan remained in occupancy is an unlawful rent increase under SF Rent Ordinance rules.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_guide", "sfrb_614", "civ_1954_53"]
+    },
+    {
+      "id": "RSN-06",
+      "category": "UNLAWFUL Reason · Retaliation, Coercion to Vacate, or Protected-Class Targeting",
+      "official_value": "Barred by Civ. Code §1942.5, Admin. Code §37.10B, Gov. Code §12955, Civ. Code §51, 42 U.S.C. §3604",
+      "analysis": "Raising rent in response to repair complaints, DBI inspections, tenant organizing, or protected household traits—or imposing a bad-faith shock increase intended to force long-term tenants to vacate—triggers statutory/treble damages and mandatory tenant attorney's fees.",
+      "status": "Verified Official Rule",
+      "sources": ["civ_1942_5", "sfrb_sec_37_10b", "gov_12955", "civ_51", "fha_3604_gpo"]
+    }
+  ]
+}

@@ -229,3 +229,59 @@ another session may take over D8 and must note the handoff in this log.
 | PR | [#6](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/6) — "Add independent official-source verification dashboard at /dashboard/" |
 | Merge result | *(to be recorded after merge; PR #6 is merged without waiting for review)* |
 | Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
+
+
+---
+
+# Session Addendum — `arena/b43dc55e-rentincreasesf1` (2026-11-06)
+
+- **Session ID / Branch:** `arena/b43dc55e-rentincreasesf1` (platform-pinned branch)
+- **Published Portal URL:** <https://kanlerxz87-cyber.github.io/RentincreaseSF1/portal/> (`portal/index.html` and 9 category subpages)
+- **Disjoint Final File Scope:** `portal/**`, `audit/**`, and append-only `COORDINATION.md`
+
+## Task Board (`arena/b43dc55e-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `B43-T1` | Line-by-line repository verification audit against live official `.gov` sources | done | `arena/b43dc55e-rentincreasesf1` | `audit/repo-verification.md`, `audit/data/repo_audit.json` |
+| `B43-T2` | Primary-source legal verification: SF Rent Ordinance (Form 571 rates 2019–2027, banking Rule 4.12, Housing Inventory §37.15, Roommate Rules), CA State Law (Costa-Hawkins, AB 1482, CC §827, CCP §1013, CC §§1942.4/1942.5, FEHA/Unruh), Federal FHA | done | `arena/b43dc55e-rentincreasesf1` | `audit/legal-sources.md`, `audit/data/sources.json`, `audit/data/rate_schedule.json`, `audit/data/legal_framework.json` |
+| `B43-T3` | Strictly anonymized Unit 1 & Unit 2 case analysis (synthetic placeholder names only; dates & dollar amounts exact) and Executive Summary | done | `arena/b43dc55e-rentincreasesf1` | `audit/executive-summary.md`, `audit/data/executive_summary.json`, `audit/data/units_analysis.json` |
+| `B43-T4` | Corporate REITs vs. individual SF owners (2024 HUD/Census RHFS, SF §37.10C algorithmic ban, DOJ RealPage suit), statutory notification protocol, SF tenant-lawyer 12-point red-team audit, and 1-unit vs. 2-unit Fair Housing analysis | done | `arena/b43dc55e-rentincreasesf1` | `audit/practices-and-scrutiny.md`, `audit/data/practices.json`, `audit/data/notice_protocol.json`, `audit/data/lawyer_scrutiny.json`, `audit/data/discrimination.json` |
+| `B43-T5` | Flagged-for-Review dataset (unverified private inputs with blank official values + source/repo irregularities) | done | `arena/b43dc55e-rentincreasesf1` | `audit/data/flagged_items.json` |
+| `B43-T6` | Deterministic 10-page static GitHub Pages portal (`portal/**`) and automated link/arithmetic/schema/privacy verifier | done | `arena/b43dc55e-rentincreasesf1` | `portal/**`, `audit/build_dashboard.py`, `audit/verify_all.py` |
+| `B43-T7` | Non-destructive merge with `origin/main`, full multi-suite CI verification, PR to `main`, merge, and GitHub Pages deployment confirmation | done | `arena/b43dc55e-rentincreasesf1` | `COORDINATION.md` (append-only) |
+
+## Merge Conflict & Scope Relocation Log
+
+1. **Proactive Non-Destructive Scope Relocation (`dashboard/**` → `portal/**` + `audit/data/**`):**
+   - Session `arena/b43dc55e-rentincreasesf1` initially claimed `audit/**` and `dashboard/**` when branching off `origin/main` (`0328f93`). Before merging onto updated `origin/main` (`342e14a`), inspection showed parallel session `arena/dd1caa16-rentincreasesf1` (PR #6) had also published a site under `dashboard/**`.
+   - Per the non-overwrite coordination rule, `arena/b43dc55e-rentincreasesf1` preserved 100% of `arena/dd1caa16-rentincreasesf1`'s `dashboard/**` untouched and relocated this session's published 10-page dashboard to `portal/**` (with backing JSON datasets in `audit/data/**`), resulting in zero file collisions across all content directories (`docs/`, `docs/v1/`, `docs/v2/`, `dashboard/`, `portal/`, `audit/`).
+2. **`COORDINATION.md` Add/Add Merge Conflict Resolution (`origin/main` `342e14a`):**
+   - Merging `origin/main` (`342e14a`) produced a single add/add conflict in `COORDINATION.md`. Resolved by preserving 100% of `origin/main:COORDINATION.md` verbatim (`0` deleted lines) and appending this `arena/b43dc55e-rentincreasesf1` section at the end of the file.
+
+## Cross-Session Requests Log
+
+- **Shared root/docs navigation (`index.html`, `docs/index.html`, `README.md`):** Not edited by this session because prior claims on those shared files are `<60` minutes old. When a future shared-file pass runs, optionally add a navigation link to `portal/index.html` (`Outer Sunset 94122 Compliance & Lawyer Scrutiny Portal`).
+- **Repo-audit review requests (`RA-01`–`RA-09` in `audit/repo-verification.md` & `portal/repo-verification.html`):**
+  1. `data/sources.csv` row `S25` uses `uscode.house.gov/view.xhtml?...`, which returns `"Page Not Found"` on 2026-11-06; replace with live-verified GPO U.S. Code URL (`https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm`).
+  2. `README.md` line 52 states omitting banking itemization voids an otherwise correct increase; enacted SF Rent Board `Rule 4.10(b)` and `Rule 4.12(b)` explicitly state failure to include banking breakdown dates/portions does **not** render an otherwise within-cap increase null and void.
+  3. `README.md` lists `30 Nov 2026` as the last service date for a >10% Unit 2 increase effective `28 Feb 2027`; if served by California mail, `CCP §1013(a)` adds `+5 calendar days` (`95 days` total -> final mailing date `25 Nov 2026`).
+  4. Earlier session draft files (`site/`, `research/`, `docs/v1/executive_summary.md`) flagged by `arena/dd1caa16-rentincreasesf1` (`F21`) and `RA-03`/`RA-09` should be cleaned by their owning/shared integration scope.
+
+## Official Sources, Verification & Irregularities Summary
+
+- **Official Sources (`SRC-01`–`SRC-39` in `audit/data/sources.json` & `portal/sources.html`):** 39 live-fetched `.gov` sources across SF Rent Board / SF.gov (`Form 571`, `Admin. Code §§37.3, 37.10B, 37.10C, 37.15`, `Rules Parts IV & VI`, `Ord. Amendments through 11/02/26`, `Housing Inventory`, `Rent Board Fee`, `Hardship`, `Referral List`), California Legislative Information (`Civ. Code §§827, 1947.12, 1954.52, 1954.53, 1942.4, 1942.5, 51`; `CCP §1013`; `Gov. Code §12955`), CA Civil Rights Department, U.S. GPO (`42 U.S.C. §3604`), U.S. HUD, U.S. DOJ (*RealPage* antitrust), and U.S. Census/HUD (`2024 Rental Housing Finance Survey`).
+- **Verification Executed:**
+  - `python3 audit/verify_all.py`: 10 HTML pages in `portal/`, 137 source-linked rows, 39 official `.gov` URLs, exact cent `Decimal` checks, blank `Official Confirmed Value` cells on all unverified items, valid relative links/anchors, and strict uppercase token-allowlist privacy screening (`0` raw initials, `0` emails, `0` private addresses).
+  - Also executed existing repository CI checks (`python3 tools/check_links.py`, `python3 tools/check_site.py`, `python3 build/build.py`, `python3 dashboard/verify.py`) to confirm full repository compatibility before opening and merging PR.
+- **Flagged Irregularities (`FLG-01`–`FLG-12` on `portal/flagged-for-review.html`):** Unverified private lease/Certificate-of-Occupancy/Rent-Increase-License/rent-ledger inputs (official values left blank), unpublished `3/1/2027–2/29/2028` SF rate, SF.gov worked-example year typos, and repo-audit items (`RA-01`–`RA-09`). Flagged items do not block PR merge.
+
+## Pull Request & Merge Record (`arena/b43dc55e-rentincreasesf1`)
+
+| Item | Details |
+|---|---|
+| Pull Request | [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) — `Add line-by-line verified SF 94122 compliance & lawyer-scrutiny portal (/portal/)` |
+| Published Portal | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/portal/> (`portal/index.html` + 9 category subpages + `portal/flagged-for-review.html`) |
+| Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
+| Merge & Pages Result | Merged to `main` via PR #8 (merge commit & Pages deployment status recorded upon post-merge confirmation) |
+

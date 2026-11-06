@@ -1,0 +1,86 @@
+{
+  "kpis": [
+    {
+      "label": "2026–27 SF Annual Rate",
+      "value": "1.6%",
+      "sub": "Effective 3/1/2026 – 2/28/2027 (Form 571)",
+      "source": "sfrb_form571"
+    },
+    {
+      "label": "Unit 1 Recommended (1.6%)",
+      "value": "$4,058.92/mo",
+      "sub": "+$63.92/mo on $3,995.00 (subject to lease-term gate)",
+      "source": "sfrb_rate_2026"
+    },
+    {
+      "label": "Unit 2 Recommended (1.6%)",
+      "value": "$3,200.40/mo",
+      "sub": "+$50.40/mo on $3,150.00 (11.5% stays banked)",
+      "source": "sfrb_rules_part4"
+    },
+    {
+      "label": "Verified Official Sources",
+      "value": "39 .gov Links",
+      "sub": "100% live-verified 2026-11-06; 0 commercial blogs",
+      "source": "sfrb_ordinance"
+    }
+  ],
+  "rows": [
+    {
+      "id": "SUM-01",
+      "category": "Governing Rent Cap (1940 2-Unit Property, SF 94122)",
+      "official_value": "1.6% annual cap (3/1/2026–2/28/2027); SF Admin. Code §37.3",
+      "analysis": "Pre-June 13, 1979 multi-unit buildings in Outer Sunset (94122) are governed by SF Rent Ordinance rent control and just-cause eviction rules, superseding California AB 1482's 8.8% cap (Civ. Code §1947.12(d)(3)).",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_coverage", "sfrb_rate_2026", "sfrb_ab1482"]
+    },
+    {
+      "id": "SUM-02",
+      "category": "Mandatory Pre-Condition: SF Rent Increase License",
+      "official_value": "Annual March 1 Housing Inventory report required (§37.15)",
+      "analysis": "Owners of 1–9 unit SF buildings must maintain a current Housing Inventory filing and active Rent Increase License before imposing any §37.3(a)(1)–(2) annual or banked increase; unlicensed increases are suspended.",
+      "status": "Verified Official Rule",
+      "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+    },
+    {
+      "id": "SUM-03",
+      "category": "Unit 1 Anonymized Recommendation (Alex Morgan & Casey Kim)",
+      "official_value": "",
+      "analysis": "Official value blank (conditional on unverified private lease): Recommended uniform 1.6% annual increase = +$63.92/mo → $4,058.92/mo (or on Feb 1, 2027 exact anniversary: 1.4% banked + 1.6% current = 3.0% / +$119.85 → $4,114.85/mo), ONLY after confirming April 1, 2026 continuing tenancy is month-to-month rather than a fixed term through March 31, 2027. Zero roommate/vacancy reset permitted while original tenant Alex Morgan remains.",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_form571", "sfrb_rules_part4", "civ_1954_53", "civ_827"]
+    },
+    {
+      "id": "SUM-04",
+      "category": "Unit 2 Anonymized Recommendation (Riley Chen & Quinn Patel)",
+      "official_value": "",
+      "analysis": "Official value blank (conditional on unverified private rent ledger): Recommended uniform 1.6% current annual increase = +$50.40/mo → $3,200.40/mo on 30/35-day written notice, leaving up to 11.5% ($362.25/mo) lawfully banked without expiring. Theoretical 13.1% max (+$412.65 → $3,562.65/mo if zero increases since June 1, 2019) requires 90/95-day notice (mail cutoff Nov 25, 2026 for Feb 28, 2027) and carries high tenant-counsel audit risk.",
+      "status": "Conditional Calculation (Unverified Base)",
+      "sources": ["sfrb_form571", "sfrb_rules_part4", "civ_827", "ccp_1013"]
+    },
+    {
+      "id": "SUM-05",
+      "category": "Corporate REITs vs. Individual SF Property Owners",
+      "official_value": "§37.10C bans algorithmic rent software ($1,000/unit/mo penalty); 2–4 unit owners = 14.6% of U.S. properties (DSCR 74 vs. 164 for 50+ units)",
+      "analysis": "Institutional landlords use systematic annual CPI notices and formal passthrough petitions (while barred from algorithmic pricing under §37.10C and DOJ antitrust enforcement); small individual owners more often defer annual increases for retention, accumulating banked balances and risking §37.15 licensing oversights.",
+      "status": "Verified Empirical Data",
+      "sources": ["sfrb_sec_37_10c", "doj_realpage", "census_rhfs_2024"]
+    },
+    {
+      "id": "SUM-06",
+      "category": "Statutory Notice & Lawful Business Grounds",
+      "official_value": "Written notice: 30 days (≤10%) / 90 days (>10%); +5 calendar days by CA mail",
+      "analysis": "Serve written notice personally or by first-class U.S. Mail (never email/text alone), itemizing base rent, current annual %, banked % with exact anniversary dates (Rule 4.12(b)), and §37.15 compliance. Keep the $29.50 (50% of $59) Rent Board Fee strictly separate from base rent.",
+      "status": "Verified Official Rule",
+      "sources": ["civ_827", "ccp_1013", "sfrb_rules_part4", "sfrb_fee"]
+    },
+    {
+      "id": "SUM-07",
+      "category": "SF Tenant-Lawyer Scrutiny & One-Unit vs. Both-Units Verdict",
+      "official_value": "Uniform neutral policy across covered units defeats disparate-treatment claims (42 U.S.C. §3604; Gov. Code §12955; Civ. Code §§51, 1942.5)",
+      "analysis": "Applying a documented, uniform building-wide policy (1.6% annual CPI adjustment to BOTH Unit 1 and Unit 2 on each unit's earliest lawful eligibility date, after confirming zero open habitability citations or 180-day repair complaints) neutralizes selective-targeting, retaliation, and fair-housing inquiries.",
+      "status": "Verified Official Rule",
+      "sources": ["fha_3604_gpo", "gov_12955", "civ_51", "civ_1942_5", "sfrb_sec_37_10b"]
+    }
+  ]
+}

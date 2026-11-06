@@ -1,0 +1,50 @@
+[
+  {
+    "id": "DISC-01",
+    "category": "Core Legal Answer · Is Raising Only One Unit Automatically Illegal?",
+    "official_value": "Not per se unlawful if non-discriminatory & non-retaliatory, BUT carries elevated comparator risk",
+    "analysis": "Neither the SF Rent Ordinance nor state/federal fair housing statutes mandate equal dollar rents across apartments rented in different years (2019 vs. 2025). Raising one unit is lawful when required by an objective neutral rule—for example, raising month-to-month Unit 2 now while Unit 1 is legally locked inside a fixed-term lease through March 31, 2027, then applying the same policy to Unit 1 at lease expiration. However, selectively raising only one unit when BOTH are eligible creates an instant 1-vs-1 'comparator household' record if the targeted unit's tenants belong to a protected class or recently requested repairs.",
+    "status": "Verified Official Rule",
+    "sources": ["fha_3604_gpo", "gov_12955", "civ_51", "civ_1942_5"]
+  },
+  {
+    "id": "DISC-02",
+    "category": "Protected Classes & Zero Small-Landlord Exemption in California",
+    "official_value": "No 'Mrs. Murphy' small-building exemption under California FEHA / Unruh / SF §37.10B",
+    "analysis": "Crucial trap for individual 2-unit owners: While the federal Fair Housing Act (42 U.S.C. §3603(b)(2)) contains a narrow exemption for certain owner-occupied ≤4-unit buildings (which never exempts race under 42 U.S.C. §1982 or discriminatory statements under §3604(c)), California's FEHA (Gov. Code §12955), Unruh Civil Rights Act (Civ. Code §51), and SF Admin. Code §37.10B(a)(9) contain NO multi-unit small-landlord exemption for a 2-unit rental property (FEHA exempts only a single room/boarder inside an owner's own single-family home under Gov. Code §12927(c)(2)(A)). Every protected class (race, national origin, ancestry, disability, age, familial/marital status, sexual orientation, gender identity, citizenship/immigration/language, source of income) applies in full.",
+    "status": "Verified Official Rule",
+    "sources": ["gov_12955", "civ_51", "crd_housing", "sfrb_sec_37_10b", "fha_3604_gpo"]
+  },
+  {
+    "id": "DISC-03",
+    "category": "Option A · Raise Unit 1 Only ($3,995 → $4,058.92) & Leave Unit 2 at $3,150",
+    "official_value": "Lawful cap 1.6% (or 3.0% on 2/1/2027), but HIGH scrutiny risk",
+    "analysis": "Why risky: Unit 1 already pays $845/mo more than Unit 2 ($3,995 vs. $3,150) and just completed a roommate transition on April 1, 2026 (Alex Morgan + Casey Kim). Raising ONLY Unit 1 looks like either (a) a disguised surcharge for replacement co-tenant Casey Kim (unlawful under SF roommate rules), or (b) differential treatment of the newer household composition relative to Unit 2.",
+    "status": "Conditional Calculation (Unverified Base)",
+    "sources": ["sfrb_guide", "sfrb_614", "gov_12955", "civ_51"]
+  },
+  {
+    "id": "DISC-04",
+    "category": "Option B · Raise Unit 2 Only by Full Banked 13.1% ($3,150 → $3,562.65) & Leave Unit 1 Unchanged",
+    "official_value": "13.1% requires 90/95-day notice; HIGH §37.10B / FEHA / Clinic-Audit Risk",
+    "analysis": "Why risky: Singling out 7-year tenants Riley Chen & Quinn Patel for a $412.65/mo (+13.1%) shock increase while imposing 0% on Unit 1 invites allegations of constructive eviction / bad-faith pressure to force out lower-rent long-term tenants (§37.10B(a)(5)) or age/tenure/protected-class disparate treatment under Unruh/FEHA, plus rigorous line-by-line legal aid scrutiny of 7 years of building records.",
+    "status": "Conditional Calculation (Unverified Base)",
+    "sources": ["sfrb_sec_37_10b", "gov_12955", "civ_51", "civ_827"]
+  },
+  {
+    "id": "DISC-05",
+    "category": "Option C (RECOMMENDED) · Uniform Neutral Policy Across BOTH Units (1.6% Annual CPI Each)",
+    "official_value": "1.6% applied uniformly to both covered units on earliest lawful eligibility dates",
+    "analysis": "Why optimal: Adopting a brief, dated written owner memo—'Annual Building Policy: Apply the current published SF Rent Board annual CPI rate (1.6% for 2026–27; zero banked catch-up) to every covered unit on its earliest lawful month-to-month anniversary/eligibility date'—raises Unit 2 by +$50.40/mo ($3,200.40) and Unit 1 by +$63.92/mo ($4,058.92 on Feb 1, 2027 if month-to-month, or current 2027–28 CPI rate on April 1, 2027 if under a 1-year lease). Treats both households under an identical, objective mathematical formula, keeps notices ≤10% (30/35-day notice), preserves all banked percentages in reserve, and defeats any claim of selective targeting.",
+    "status": "Verified Official Rule",
+    "sources": ["sfrb_rate_2026", "sfrb_rules_part4", "fha_3604_gpo", "gov_12955", "civ_51"]
+  },
+  {
+    "id": "DISC-06",
+    "category": "Option D · Uniform 0% Hold on Both Units Until Any Compliance Gap Is Cleared",
+    "official_value": "0.0% increase; annual allowances bank after 12 months post-eligibility (Rule 4.12(a))",
+    "analysis": "If either unit currently has an open repair/habitability request within the past 180 days (Civ. Code §1942.5), an unabated code issue (Civ. Code §1942.4), or an unfiled §37.15 Housing Inventory license, holding BOTH units at 0% until compliance is 100% clean is completely safe and preserves banking eligibility on schedule.",
+    "status": "Verified Official Rule",
+    "sources": ["civ_1942_4", "civ_1942_5", "sfrb_sec_37_15", "sfrb_rules_part4"]
+  }
+]

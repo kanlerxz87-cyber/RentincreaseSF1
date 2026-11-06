@@ -1,0 +1,98 @@
+[
+  {
+    "id": "FLG-01",
+    "category": "Unverified Property Fact · Exact 1940 Certificate of Occupancy & Unit Permit Record",
+    "official_value": "",
+    "analysis": "Supplied input states a 1940 two-unit Outer Sunset (94122) building. Because street address/APN are kept strictly private and omitted, official DBI Certificate of Occupancy and Assessor records were not pulled. Owner must verify internally before serving notice (note: both legal 2-unit 1940 buildings and 1940 houses with unpermitted second units are covered by SF Rent Control).",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_coverage", "sfrb_sfh_costa", "sfrb_amendments_2026"]
+  },
+  {
+    "id": "FLG-02",
+    "category": "Unverified Compliance Gate · Active SF Rent Increase License (§37.15) for Both Units",
+    "official_value": "",
+    "analysis": "Whether the owner submitted the 2026 March 1 Housing Inventory report on portal.sfrb.org for Unit 1 and Unit 2 cannot be verified without private parcel/PIN credentials. Official value left blank; owner must verify active Rent Increase License certificate before serving any increase.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_sec_37_15", "sfrb_inventory"]
+  },
+  {
+    "id": "FLG-03",
+    "category": "Unverified Lease Instrument · Unit 1 April 1, 2026 Fixed-Term vs. Month-to-Month Status",
+    "official_value": "",
+    "analysis": "Unit 1's continuing tenancy began April 1, 2026 at $3,995.00/mo (Alex Morgan & Casey Kim). Whether the signed document is a month-to-month addendum (permitting a Feb 1, 2027 increase) or a new 12-month fixed-term lease through March 31, 2027 (barring unilateral increases before April 1, 2027 under Civ. Code §827(a)) is unverified.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["civ_827", "sfrb_guide"]
+  },
+  {
+    "id": "FLG-04",
+    "category": "Unverified Co-Tenancy Notice · Unit 1 Rule 6.14 Status of Replacement Tenant Casey Kim",
+    "official_value": "",
+    "analysis": "Whether the owner signed an agreement directly with Casey Kim, accepted rent directly from Casey Kim, or timely served a written SF Rent Board Rule 6.14 reservation notice around April 1, 2026 is unverified. Regardless, zero Costa-Hawkins reset is lawful while original co-tenant Alex Morgan continues to reside in Unit 1.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_614", "civ_1954_53"]
+  },
+  {
+    "id": "FLG-05",
+    "category": "Unverified Rent Ledger · Unit 2 Historical Increases & Passthroughs (June 2019 – Nov 2026)",
+    "official_value": "",
+    "analysis": "Unit 2's 11.5% banked calculation ($362.25/mo across 2020–2025 anniversaries) and 13.1% combined maximum ($412.65/mo) assume ZERO base-rent increases were imposed since June 1, 2019 ($3,150.00/mo) and that $3,150.00 excludes any separate utility/bond/fee passthroughs. Owner must audit every rent receipt since June 2019 before claiming any banked percentage.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_rules_part4", "sfrb_banked", "sfrb_multi_year"]
+  },
+  {
+    "id": "FLG-06",
+    "category": "Unverified Habitability & Retaliation Clearance · Both Units (180-Day & DBI Check)",
+    "official_value": "",
+    "analysis": "Private maintenance logs and DBI complaint histories for this anonymized property cannot be confirmed publicly. Owner must confirm zero open code citations >35 days (Civ. Code §1942.4) and zero tenant habitability/agency complaints within the prior 180 days (Civ. Code §1942.5) before serving notice.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["civ_1942_4", "civ_1942_5", "sfrb_sec_37_10b"]
+  },
+  {
+    "id": "FLG-07",
+    "category": "Unpublished Future Official Rate · SF Allowable Annual Increase for 3/1/2027 – 2/29/2028",
+    "official_value": "",
+    "analysis": "As of November 6, 2026, the SF Rent Board has published rates only through February 28, 2027 (1.6%). The March 1, 2027–February 29, 2028 rate is left blank and flagged unverified; any increase effective on or after March 1, 2027 must use the new rate once announced.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_form571", "sfrb_rate_2026"]
+  },
+  {
+    "id": "FLG-08",
+    "category": "Unpublished Official Statistic · Neighborhood Market Rent & SF Corporate vs. Individual Increase Frequency",
+    "official_value": "",
+    "analysis": "No official city, state, or federal agency publishes neighborhood-specific 94122 'normal increase' percentages or SF-specific counts of corporate vs. individual banking rates. Left blank rather than inferred from commercial listing blogs.",
+    "status": "Unverified — Flagged for Review",
+    "sources": ["sfrb_inventory", "census_rhfs_2024"]
+  },
+  {
+    "id": "FLG-09",
+    "category": "Official Agency Webpage Irregularity · SF.gov Worked-Example Year Typos & Old PDF Link",
+    "official_value": "Form 571 PDF controls: 1.7% (2024–25), 1.4% (2025–26), 1.6% (2026–27)",
+    "analysis": "SF.gov 'Learn about rent increases' Example 1 misstates 'June 1, 2025 is 1.6%' (should be June 1, 2026); SF.gov 'Banked rent increases' misstates 'August 1, 2024 (1.4%)' (should be August 1, 2025); and SF.gov's 2026 announcement sidebar links an older 25–26 PDF filename while Form 571_Allowable_Annual_Increases_26-27_1.pdf contains the updated table.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_form571", "sfrb_guide", "sfrb_banked", "sfrb_rate_2026"]
+  },
+  {
+    "id": "FLG-10",
+    "category": "Repo Audit Irregularity · Broken OLRC Link (uscode.house.gov) in data/sources.csv Row S25",
+    "official_value": "Verified replacement: govinfo.gov 42 U.S.C. §3604",
+    "analysis": "Existing repo file data/sources.csv row S25 points to uscode.house.gov/view.xhtml?..., which returns 'Page Not Found' on 2026-11-06. Flagged for review; replaced across /portal/ with live-verified U.S. Government Publishing Office (govinfo.gov) statutory URL.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["fha_3604_gpo", "hud_fha"]
+  },
+  {
+    "id": "FLG-11",
+    "category": "Repo Audit Irregularity · Non-Official Commercial Blogs & Post-2/28/2027 1.6% Claim in research/ & site/",
+    "official_value": "1.6% expires 2027-02-28; commercial blogs excluded",
+    "analysis": "Earlier session files in research/ and site/ cited 10 commercial domains and applied 1.6% to a June 1, 2027 effective date. Flagged for review; zero commercial domains are used in /portal/.",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_form571", "sfrb_rate_2026"]
+  },
+  {
+    "id": "FLG-12",
+    "category": "Repo Audit Irregularity · README.md Overstatement of Rule 4.10/4.12 Voidness & Nov 30 Mail Cutoff",
+    "official_value": "Rule 4.12(b): non-void if within cap; CCP §1013(a): +5 calendar days for CA mail (Nov 25 cutoff)",
+    "analysis": "Existing README.md states omitting banking itemization voids an otherwise within-cap increase (contradicted by Rule 4.10(b) and Rule 4.12(b)) and lists Nov 30, 2026 as the last service date for Feb 28, 2027 without accounting for CCP §1013(a)'s +5 calendar-day CA mail extension (Nov 25, 2026 cutoff if mailed).",
+    "status": "Irregularity — Flagged for Review",
+    "sources": ["sfrb_rules_part4", "civ_827", "ccp_1013"]
+  }
+]
