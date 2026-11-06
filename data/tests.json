@@ -1,0 +1,135 @@
+{
+  "title": "Tenant-side review test",
+  "framing": "Each row is a question a San Francisco tenant lawyer or Rent Board counsellor would ask about a proposed increase. If every row passes, the increase is in the normal range and procedurally clean. A failure on any row is the kind of defect that leads to a Rent Board petition.",
+  "caveat": "This is a self-check built from the cited authorities. It is not legal advice and it is not a substitute for advice from a lawyer or a Rent Board counsellor.",
+  "tests": [
+    {
+      "id": "T-01",
+      "question": "Is the percentage at or below the allowable annual increase plus properly banked amounts?",
+      "pass_condition": "Total percentage equals the annual rate in force on the effective date, plus only those skipped years that satisfy the 24-month banking test.",
+      "unit1": "Yes at 1.6% or 3.0%.",
+      "unit2": "Yes at 13.1%, provided the increase is effective on or before February 28, 2027 and no increase has been taken since June 1, 2019.",
+      "source": "S03",
+      "source2": "S04"
+    },
+    {
+      "id": "T-02",
+      "question": "Was the calculation done by adding percentages, not compounding?",
+      "pass_condition": "Percentages summed, then applied once to the current base rent.",
+      "unit1": "Yes. 1.4 + 1.6 = 3.0; 3,995 x 0.030 = 119.85.",
+      "unit2": "Yes. 1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 + 1.6 = 13.1; 3,150 x 0.131 = 412.65.",
+      "source": "S04",
+      "source2": "S05"
+    },
+    {
+      "id": "T-03",
+      "question": "Was the increase applied to base rent only, with no passthrough folded in?",
+      "pass_condition": "Base rent plus housing services such as parking or storage; excludes temporary passthroughs and fluctuating charges.",
+      "unit1": "Base rent $3,995 assumed to be all base rent. Not verified - see FLAG-06.",
+      "unit2": "Base rent $3,150 assumed to be all base rent. Not verified - see FLAG-06.",
+      "source": "S01"
+    },
+    {
+      "id": "T-04",
+      "question": "Was the amount rounded up?",
+      "pass_condition": "No rounding up to the nearest dollar.",
+      "unit1": "$63.92 and $119.85 are exact to the cent; nothing was rounded up.",
+      "unit2": "$412.65 is exact to the cent; nothing was rounded up.",
+      "source": "S01"
+    },
+    {
+      "id": "T-05",
+      "question": "Is it at least 12 months since the last increase (or since the lease began)?",
+      "pass_condition": "At least 12 months between increases.",
+      "unit1": "Yes for a February 1, 2027 effective date, which is 24 months after the February 1, 2025 lease start.",
+      "unit2": "Yes. First increase proposed after a June 1, 2019 lease start.",
+      "source": "S01"
+    },
+    {
+      "id": "T-06",
+      "question": "Is the notice period long enough for the size of the increase?",
+      "pass_condition": "30 days if 10% or less; 90 days if more than 10%; plus 5 days if served by mail.",
+      "unit1": "30 days (35 if mailed).",
+      "unit2": "90 days (95 if mailed). A 30-day notice at 13.1% fails this test.",
+      "source": "S24"
+    },
+    {
+      "id": "T-07",
+      "question": "Does the notice state every required element?",
+      "pass_condition": "Dollar amount, percentage, effective date, which portion is annual and which is banked, served in the manner the statute allows.",
+      "unit1": "Achievable.",
+      "unit2": "Achievable, and the banked portion must be itemised because Sec. 37.3(b)(1) requires it.",
+      "source": "S08",
+      "source2": "S01"
+    },
+    {
+      "id": "T-08",
+      "question": "Does the owner hold a current rent increase licence?",
+      "pass_condition": "Licence in effect on the effective date of the increase.",
+      "unit1": "Must be confirmed. Unverified - see FLAG-09.",
+      "unit2": "Must be confirmed. Unverified - see FLAG-09.",
+      "source": "S09",
+      "source2": "S10"
+    },
+    {
+      "id": "T-09",
+      "question": "Is the increase unconnected to any repair complaint, inspection or tenant organising?",
+      "pass_condition": "No tenantability complaint, citation, inspection or organising activity in the preceding 180 days.",
+      "unit1": "Must be confirmed. Unverified - see FLAG-10.",
+      "unit2": "Must be confirmed. Unverified - see FLAG-10.",
+      "source": "S27"
+    },
+    {
+      "id": "T-10",
+      "question": "Is the increase unrelated to any protected characteristic?",
+      "pass_condition": "The basis for the amount is the published percentage and the tenancy's own history, applied under a written policy.",
+      "unit1": "Yes if applied under a written policy.",
+      "unit2": "Yes if applied under a written policy.",
+      "source": "S28",
+      "source2": "S30"
+    },
+    {
+      "id": "T-11",
+      "question": "Is the increase unrelated to any attempt to regain possession or to induce the tenant to leave?",
+      "pass_condition": "No eviction notice, buyout discussion or offer to vacate in the recent past, and no aim of re-renting at market.",
+      "unit1": "Must be confirmed. Unverified - see FLAG-10.",
+      "unit2": "Must be confirmed. Unverified - see FLAG-10.",
+      "source": "S11"
+    },
+    {
+      "id": "T-12",
+      "question": "Was the amount set by hand rather than by a pricing tool?",
+      "pass_condition": "No algorithmic device using non-public competitor data was used.",
+      "unit1": "Must be confirmed. Unverified - see FLAG-10.",
+      "unit2": "Must be confirmed. Unverified - see FLAG-10.",
+      "source": "S15"
+    },
+    {
+      "id": "T-13",
+      "question": "Is the increase justified by market rent or by how long the tenant has stayed?",
+      "pass_condition": "Neither is a lawful basis for exceeding the cap. A below-market long tenancy is expressly not an extraordinary circumstance.",
+      "unit1": "Not applicable - no such basis is proposed.",
+      "unit2": "The 13.1% is not justified on market grounds. It is justified only by the banked percentages. If the banked test fails, the ceiling drops to the annual rate.",
+      "source": "S14"
+    },
+    {
+      "id": "T-14",
+      "question": "Can the tenant check the maths against the Rent Board's own table in under a minute?",
+      "pass_condition": "Yes, if the notice itemises each year's percentage.",
+      "unit1": "Yes.",
+      "unit2": "Yes if itemised; no if a single 13.1% figure is presented without the year-by-year breakdown.",
+      "source": "S03"
+    }
+  ],
+  "verdict_template": {
+    "unit1": "Passes on the cited authorities for the items that can be assessed from the facts given. The open items are the licence, the absence of a recent complaint, and whether $3,995 is entirely base rent.",
+    "unit2": "Passes on the cited authorities at 13.1% only if four conditions hold: no increase since June 1, 2019; effective on or before February 28, 2027; 90 days' notice; a current rent increase licence. Any one of those failing makes the increase defective or void."
+  },
+  "if_a_tenant_petitions": [
+    "The tenant can file a Tenant Petition (Form 516C) free of charge, with no time limit (S20).",
+    "If the notice is clearly unlawful on its face and has not yet taken effect, the tenant can file a Tenant Summary Petition (Form 518) (S22).",
+    "A tenant who received the notice within the last 60 days and whose landlord has not made required repairs can file Form 516B (S22).",
+    "The hearing is before a Rent Board Administrative Law Judge and is designed so that no one needs an attorney (S20).",
+    "The Rent Board does not adjudicate harassment, discrimination or retaliation; those go to court or another forum (S21)."
+  ]
+}

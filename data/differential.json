@@ -1,0 +1,58 @@
+{
+  "question": "Is it acceptable to raise rent on one unit and not the other, or should both be raised to avoid a discrimination claim?",
+  "short_answer": "Treating the two units differently is lawful here, and is in fact what the law produces, because each tenancy has a different legal ceiling. The legal ceiling differs because of each tenancy's own history - not because of who the tenants are. Discrimination law compares similarly situated tenants on protected characteristics, not tenants with different rent histories.",
+  "analysis": [
+    {
+      "point": "The two tenancies are not similarly situated",
+      "explanation": "Unit 1's tenancy began in 2025 and has one skipped annual increase available at most. Unit 2's tenancy began in 2019 and has six skipped annual increases plus the current one. Applying the same percentage to both would be arbitrary; applying each tenancy's own lawful maximum is the consistent rule.",
+      "source": "S04",
+      "source2": "S03"
+    },
+    {
+      "point": "A uniform percentage is not required by any source reviewed",
+      "explanation": "Nothing in Chapter 37, the Civil Code, FEHA, the Fair Housing Act or 24 CFR 100 requires a landlord to raise every tenant by the same percentage or at the same time. The requirement is that the basis not be a protected characteristic.",
+      "source": "S08",
+      "source2": "S28"
+    },
+    {
+      "point": "What actually creates discrimination exposure",
+      "explanation": "Government Code Sec. 12955(a) and 42 U.S.C. Sec. 3604(b) reach discrimination in the terms, conditions or privileges of rental because of a protected characteristic. Source of income, familial status, disability, marital status and national origin are all protected in California. If a decision to raise one rent and not another correlates with any of those, the exposure is real regardless of whether the amounts were lawful.",
+      "source": "S28",
+      "source2": "S30"
+    },
+    {
+      "point": "The protective practice is a written, uniform policy",
+      "explanation": "The defensible position is a written rule applied identically: for every rent-controlled unit, the annual allowable increase is imposed on the anniversary date; banked increases are imposed only when the 24-month test is met. Under that rule Unit 2 receives 13.1% and Unit 1 receives 1.6% or 3.0%, and the difference is fully explained by the rule itself.",
+      "source": "S04",
+      "source2": "S08"
+    },
+    {
+      "point": "Skipping a unit is permitted but has consequences",
+      "explanation": "A landlord may impose less than the maximum, or nothing at all. Partial use banks the remainder. Declining to raise Unit 1 today does not waive the increase forever, but if no increase is imposed for 24 months the intervening annual increases are lost rather than banked.",
+      "source": "S04"
+    },
+    {
+      "point": "Retaliation and harassment are the larger risk, not unequal amounts",
+      "explanation": "Sec. 37.10B(a)(9) treats violating anti-discrimination law as harassment, and Sec. 37.10B(a)(5) treats an increase imposed to push a tenant out as harassment. The exposure is conduct and motive, not the arithmetic difference between two units.",
+      "source": "S11"
+    },
+    {
+      "point": "Documentation is the practical defence",
+      "explanation": "Record: the written policy, the calculation for each unit, the date of the decision, the notice served and the service method. A tenant lawyer reviewing the file should be able to reconstruct both numbers from the Rent Board's own published table without asking you a question.",
+      "source": "S08",
+      "source2": "S04"
+    }
+  ],
+  "conclusion": [
+    "Raise both units under one written policy, not both by the same percentage.",
+    "For Unit 2 the lawful maximum is 13.1% ($412.65) if effective on or before February 28, 2027, served with 90 days' notice.",
+    "For Unit 1 the lawful maximum is 1.6% ($63.92) effective February 1, 2027, or 3.0% ($119.85) on the same date if the February 1 anniversary reading and the 24-month test both hold.",
+    "If you prefer identical treatment as a matter of policy, the lawful way to achieve it is to impose the annual increase only on both units and state in writing that banked increases are being deferred. Deferring, not waiving, keeps the amounts available later."
+  ],
+  "do_not": [
+    "Do not impose the same dollar or percentage amount on both units by using a figure that exceeds either unit's lawful ceiling.",
+    "Do not use market rent or a pricing tool as the basis for either number.",
+    "Do not raise Unit 1 because of the April 2026 occupant change.",
+    "Do not serve a 13.1% notice with 30 days' notice."
+  ]
+}

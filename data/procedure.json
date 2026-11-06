@@ -1,0 +1,139 @@
+{
+  "title": "Notice procedure - the compliant sequence, step by step",
+  "note": "Order matters. Several steps are void if done in the wrong sequence.",
+  "steps": [
+    {
+      "n": 1,
+      "action": "Confirm the lawful base rent for each unit from your own rent ledger",
+      "why": "Every calculation is a percentage of base rent. If a prior increase was never properly noticed, the lawful base rent is not simply the amount being collected.",
+      "detail": "The Rent Board can determine the lawful rent on petition and there is no time limit for a tenant to file (S20). Reconstruct each unit's increase history before calculating.",
+      "source": "S20",
+      "timing": "Before anything else"
+    },
+    {
+      "n": 2,
+      "action": "Confirm the anniversary date for each unit",
+      "why": "The anniversary date sets the earliest permissible effective date and which annual rate applies.",
+      "detail": "Anniversary date is either the date of the last increase or, if there has never been one, the date the lease began. For Unit 1 that is February 1 (S01). The April 1, 2026 change in named tenants does not obviously create a new anniversary date, because the rent did not change then.",
+      "source": "S01",
+      "timing": "Before anything else"
+    },
+    {
+      "n": 3,
+      "action": "Report into the Rent Board Housing Inventory and confirm the rent increase licence is active",
+      "why": "A notice is not enforceable without a licence in effect on the effective date.",
+      "detail": "The deadline is March 1 each year. A licence is generated automatically for non-owner-occupied units once you report. The licence does not need to be attached to the notice, but a tenant can look it up on the Rent Board Portal.",
+      "source": "S10",
+      "timing": "Before the notice is served; must be current on the effective date"
+    },
+    {
+      "n": 4,
+      "action": "Decide the amount: annual only, or annual plus banked",
+      "why": "This is the only lawful dial you control.",
+      "detail": "Unit 1: 1.6% ($63.92) or, if the February 1 anniversary applies, 3.0% ($119.85). Unit 2: up to 13.1% ($412.65) if effective on or before February 28, 2027.",
+      "source": "S03",
+      "source2": "S04",
+      "timing": "Before drafting the notice"
+    },
+    {
+      "n": 5,
+      "action": "Choose the service date so the notice period is satisfied",
+      "why": "The notice period runs to the effective date, not the mailing date.",
+      "detail": "Unit 1 at 3.0% or less needs 30 days (35 if mailed). Unit 2 at 13.1% needs 90 days (95 if mailed). Serve earlier than the minimum; there is no penalty for extra notice.",
+      "source": "S24",
+      "timing": "At least 30 or 90 days before the effective date"
+    },
+    {
+      "n": 6,
+      "action": "Serve a written notice that states every required element",
+      "why": "A missing element can make the increase void or unenforceable.",
+      "detail": "Required: the dollar amount, the percentage, the effective date, and which portion is annual versus banked (Sec. 37.3(b)(1)). Do not round up. Do not include passthroughs in the base. Serve by personal delivery or by mail per Code Civ. Proc. Sec. 1013.",
+      "source": "S08",
+      "source2": "S24",
+      "timing": "After step 3, at least the required days before the effective date"
+    },
+    {
+      "n": 7,
+      "action": "Keep a contemporaneous record of why the increase was made, and that it was applied even-handedly",
+      "why": "This is the evidence that defeats a discrimination or harassment claim.",
+      "detail": "The defensible reason is the legally available annual and banked increase, applied by a written policy. Record the date of the decision, the calculation, the notice served, and any communication with the tenant. If a tenant withholds rent or files a petition, the record is what a Rent Board ALJ or a court will read.",
+      "source": "S11",
+      "timing": "At the time of the decision"
+    },
+    {
+      "n": 8,
+      "action": "Consider offering the tenant information about free counselling and dispute resolution before a dispute exists",
+      "why": "It demonstrates good faith and often resolves the matter without a petition.",
+      "detail": "The Rent Board offers free counselling (415-252-4600) and a free Alternative Dispute Resolution program for housing-related disputes including rent increases. The City also publishes a list of free tenant counselling organizations.",
+      "source": "S34",
+      "source2": "S23",
+      "timing": "With or shortly after the notice"
+    },
+    {
+      "n": 9,
+      "action": "If the tenant files a petition, participate; do not retaliate",
+      "why": "Retaliation is a separate violation with its own remedies.",
+      "detail": "The Rent Board process is free and designed so no one needs an attorney. Filing a petition is not a basis for any adverse action, and a rent increase within 180 days of a tenantability complaint is separately prohibited by Civil Code Sec. 1942.5.",
+      "source": "S20",
+      "source2": "S27",
+      "timing": "If and when a petition is filed"
+    }
+  ],
+  "reasons_table": [
+    {
+      "reason": "Offsetting the annual CPI-based adjustment permitted by the Rent Ordinance",
+      "acceptable": "Yes - the intended lawful basis",
+      "why": "Section 37.3(a)(1) sets the annual amount as 60% of the published CPI change.",
+      "source": "S08"
+    },
+    {
+      "reason": "Recovering previously skipped annual increases (banking)",
+      "acceptable": "Yes, if the 24-month banking test is met",
+      "why": "Banked percentages are added to the current annual increase and applied to base rent once.",
+      "source": "S04"
+    },
+    {
+      "reason": "Long-tenured tenant is far below market rent",
+      "acceptable": "No - not a lawful basis on its own",
+      "why": "The Rent Board states expressly that this is not an extraordinary circumstance. The only route is a Special Circumstances petition, which resets base rent once and forfeits the banked amounts.",
+      "source": "S14"
+    },
+    {
+      "reason": "Property taxes, insurance or other operating costs rose",
+      "acceptable": "Only through an O&M petition, filed before the notice",
+      "why": "Up to 7% extra, and only if total O&M expenses rose by more than the annual increase over a defined comparison period. Debt service and ownership-change tax increases are excluded.",
+      "source": "S13"
+    },
+    {
+      "reason": "Capital improvement to the building",
+      "acceptable": "Only through a capital improvement petition and certification",
+      "why": "Costs must be certified under Sec. 37.7 and 37.8B, amortised, and capped at 10% of base rent in any 12 months.",
+      "source": "S12",
+      "source2": "S08"
+    },
+    {
+      "reason": "A new occupant moved into the unit",
+      "acceptable": "No",
+      "why": "Charging more solely because an occupant was added is an unlawful increase, even if the lease says otherwise.",
+      "source": "S16"
+    },
+    {
+      "reason": "Utility costs rose",
+      "acceptable": "Only through a utility passthrough petition or worksheet",
+      "why": "Gas and electricity passthroughs use Rent Board forms and must be filed before the notice; they do not become part of base rent.",
+      "source": "S12"
+    },
+    {
+      "reason": "The tenant complained about repairs or organised with other tenants",
+      "acceptable": "No - prohibited retaliation",
+      "why": "Civil Code Sec. 1942.5 bars an increase within 180 days of a tenantability complaint and any increase intended to retaliate for exercising legal rights.",
+      "source": "S27"
+    },
+    {
+      "reason": "The landlord wants the tenant to leave so the unit can be re-rented at market",
+      "acceptable": "No - tenant harassment",
+      "why": "Sec. 37.10B(a)(5) treats a rent increase imposed with intent to defraud, intimidate or coerce the tenant into vacating as harassment, with treble damages and attorney fees available.",
+      "source": "S11"
+    }
+  ]
+}
