@@ -492,3 +492,5 @@ The findings prompting the handoff are: (1) the hard statutory license gate is t
 
 No legacy edition is deleted. The root's prior-edition links will be labeled superseded/not re-certified so readers are not presented with conflicting editions as equally current. All dates and supplied dollar amounts remain unchanged.
 
+**Privacy scope addendum after PR #14:** the newly merged `review/verify.py` contains raw personal-initial examples in its own comments and an overbroad token check. Before editing that file, this session claims only its privacy implementation: replace the literals with the shared digest list from `tools/check_links.py`, preserve its source/link/arithmetic checks, and stop echoing any matched token. The parallel `/review/` presentation itself is not edited and is listed as an archive on the canonical root.
+
