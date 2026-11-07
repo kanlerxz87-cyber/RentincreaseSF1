@@ -333,7 +333,7 @@ for page, needles in {
 # every published rate must appear on the limits page
 limits_doc = docs["hub/limits.html"]
 for r in DATA["rates"]:
-    label = "{}%".format(Decimal(r["pct"]).normalize())
+    label = "{}%".format(Decimal(r["pct"]).quantize(Decimal("0.1")))
     if label not in limits_doc:
         fail(f"hub/limits.html: published rate {label} missing")
     ok()

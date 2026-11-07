@@ -373,3 +373,75 @@ another session may take over D8 and must note the handoff in this log.
 
 ## Requests to other sessions
 - None. This session's scope (`review/**`) is disjoint from all other editions; the single `index.html` change was additive (one card link in the "Other editions" grid).
+
+---
+
+# Final integration record (from arena/8555cb74 / PR #12)
+
+Status `needs review` items live on `hub/flags.html` and do not block the merge.
+
+## Record (filled in as work completes)
+
+* **Sources re-fetched and read on 2026-11-07** (see `hub/sources.html` for verbatim quotes):
+  SF Admin Code §§37.3, 37.10B, 37.10C, 37.15 (sf.gov); Rent Board pages *Housing Inventory*,
+  *Banked rent increases*, *Learn about rent increases*, *Learn about SF rental laws*,
+  *Rent Board Fee*, *AB 1482*, *Rent Board Referral Listing*; Rent Board Form 571 rate sheet
+  3/1/26–2/28/27; Rent Board Rules Part IV §§4.10, 4.12; Cal. Civ. Code §§827, 1942.5, 1947.12,
+  1954.53; Cal. Gov. Code §12955; 42 U.S.C. §3604 (HUD overview page).
+* **One defect in a prior session's data found and repaired:** `data/sources.csv` row `S25` and
+  `docs/sources.html` row `S25` pointed at `uscode.house.gov/view.xhtml?...`, which returned
+  "Page Not Found" when fetched on 2026-11-07. Replaced with the HUD Fair Housing Act overview page
+  after live verification; logged as `H-14`.
+* **One official-text conflict found and published:** the Rent Board's *Banked rent increases* page
+  states a skipped increase is only banked if **at least 24 full months** pass without any increase,
+  while Rent Board **Rule 4.12(a)** and the worked examples on *Learn about rent increases* describe a
+  **12-month** test. Published as `H-01` with both links; the certain Unit 1 figure is reduced to
+  1.6% ($63.92) and the extra 1.4% is shown only as a flagged, conditional amount.
+
+## Resolution record — conflict with PR #10 and final state
+
+While this session's first push was in flight, PR #10 (session `arena/4addba0b`) merged a parallel
+integration edition and took the root `index.html` as a redirect to `integration/index.html`.
+The rebase produced two conflicts, resolved without discarding either side:
+
+| Conflict | Resolution |
+|---|---|
+| `COORDINATION.md` (add/add) | Both sections kept verbatim, in merge order, with a merge note between them. Nothing deleted from either side. |
+| `index.html` | This session took the entry point (the user asked this session to publish the landing dashboard), and links the `integration/` edition, `docs/`, `docs/v2/`, `dashboard/` and `portal/` from its "Other editions" section. `integration/**` is unchanged. |
+| `.github/workflows/pages.yml` | Comment only, corrected: the root is now the dashboard, not a redirect. No job changed. |
+| `tools/verify_hub.py` privacy scan | Initially used plaintext tenant initials and failed the parallel session's tracked-text privacy scan. Rewritten to reuse the shared SHA-256 digest list in `tools/check_links.py`; no identifier appears in the repository text. |
+
+### Verification performed (this session, 2026-11-07)
+
+| Suite | Result |
+|---|---|
+| `python3 tools/verify_hub.py` | **1,029 checks, 0 errors** — per-row source/flag citations (176 rows), links, anchors, nav parity, source registry completeness, arithmetic, recomputed service dates, no unsourced dollar figure, digest-based privacy scan |
+| `python3 hub/build.py` | 9 pages regenerate byte-identical (CI enforces) |
+| `python3 tools/check_links.py` | pass (main edition, 10 pages + 7 archived) |
+| `python3 tools/check_site.py` | 781 checks pass (companion edition) |
+| `python3 integration/verify.py` | PASS (parallel edition, 6 pages, 57 rows, privacy scan) |
+| `python3 dashboard/verify.py` | pass (42 sources, 21 flags) |
+| `python3 audit/verify_all.py` | pass (10 pages, 137 rows) |
+| `python3 -m http.server` | all 9 pages + stylesheet return HTTP 200 |
+
+### Findings carried forward
+
+`H-01` (24-month vs 12-month banking wording, both official) and `H-04` (licence status unavailable)
+are the two items that can change an amount or make an increase unenforceable; both are published on
+`hub/flags.html` with source links. `H-14` records the repaired `S25` link. None blocks this merge.
+
+### Pull request and deploy record
+
+| Item | Value |
+|---|---|
+| PR | [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) — `Integrated verified dashboard at /` (branch `arena/8555cb74-rentincreasesf1` → `main`) |
+| Merge result | **MERGED** via [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) at `2026-11-07` as `cb71b5e8ab63e989541197ef61e6168134b4894a`. `Verify site` and `Verify published site` both `success` on `cb71b5e`. |
+| Pages deploy | `pages build and deployment` run [42412952640](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42412952640) `success`; Pages API returned `built` for commit `cb71b5e`. Live root retrieved and checked after deploy: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> |
+
+### Post-deploy check and follow-up
+
+The live root page was retrieved after the Pages build and checked line by line against the generated
+file. One cosmetic defect was found: percentages rendered as `3%` and `4%` instead of the Rent Board's
+`3.0%` and `4.0%`. Fixed in `hub/build.py` (`pct()` now always shows one decimal place) and re-verified
+with `tools/verify_hub.py`; published in the follow-up record PR. No figure changed.
+
