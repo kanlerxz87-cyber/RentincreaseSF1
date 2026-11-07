@@ -18,15 +18,15 @@ errors = []
 warnings = []
 
 # -------- Privacy scan --------
-# Forbidden raw patterns: tenant initials like "L O", "V N", "E R", "I S", "M T" (initials space-separated),
-# email addresses, 9-digit ZIP+4, SF street-number patterns.
-# We'll do conservative token checks against published HTML only.
+# Forbidden raw patterns: space-separated single-letter capital pairs (a common shape
+# for raw tenant initials), and email addresses.
+# We do conservative token checks against published HTML only.
 PRIVACY_FORBIDDEN = [
-    re.compile(r"\b[A-Z]\s+[A-Z]\b(?!\.)"),  # two single capital letters separated by a space (raw initials)
-    re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"),  # emails
+    re.compile(r"\b[A-Z]\s+[A-Z]\b(?!\.)"),
+    re.compile(r"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}"),
 ]
-# But allow legitimate 2-letter capital tokens like "SF", "US", "CA", "ID", "CC", "FE", "HA", "DO", "RE".
-ALLOWED_TWO_CAPS = {"SF","US","CA","ID","CC","FE","HA","DO","RE","AB","OR","PI","NO","IN","OK","PA","OH"}
+# Allow legitimate 2-letter capital acronyms that appear in the prose and sources.
+ALLOWED_TWO_CAPS = {"SF","US","CA","ID","CC","FE","HA","DO","RE","AB","OR","PI","NO","IN","OK","PA","OH","AM","PM"}
 
 def privacy_check(path, text):
     for pat in PRIVACY_FORBIDDEN:
