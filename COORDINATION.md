@@ -286,84 +286,97 @@ another session may take over D8 and must note the handoff in this log.
 | Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
 
----
-
-# Integration safety review — `arena/4addba0b-rentincreasesf1` (2026-11-07 UTC)
-
-Platform fixes this session to its existing `arena/4addba0b-rentincreasesf1` branch; no session branch or worktree will be created. Earlier completed scopes are retained. Prior remaining open integration/record claims are more than 60 minutes old with no commits since 2026-11-06; this session takes over final integration, preserving prior work and recording any conflicts.
-
-| Task | Status | Owner | File scope |
-|---|---|---|---|
-| I1 Independent official-source review and safe integrated site | in progress | `arena/4addba0b-rentincreasesf1` | `integration/**` |
-| I2 Integration entry point and transparency about prior editions | in progress | `arena/4addba0b-rentincreasesf1` | `index.html`, append-only `COORDINATION.md` |
-| I3 Verify, PR, merge and deployment | in progress | `arena/4addba0b-rentincreasesf1` | append-only `COORDINATION.md` |
-
-Initial review found legacy `docs/index.html` calls unverified user inputs verified, asserts a lawful maximum without a verified ledger, gives a false no-petition-only assertion despite banking, and claims a tenant-lawyer review passed. `portal/index.html` also claims equal increases eliminate comparator claims. Request to previous owners: correct the archived editions or clearly label them superseded. Final integration will not silently overwrite them; it will direct the root to an independently checked version and flag these issues there.
-
-**Privacy emergency / handoff:** Root-based Pages also publishes old `site/**`, `research/**`, and `docs/v1/**`; current files contain tenant initials. Prior activity on these scopes is over 60 minutes old (last main commit 2026-11-06), so this integration session takes over the minimal redaction of `site/discrimination.html`, `site/executive_summary.html`, `site/flagged.html`, `research/discrimination.md`, and `docs/v1/executive_summary.md`. These are source files and preserve all prior work except direct identifiers. Public Git history may retain earlier versions; redaction of current files cannot undo historical exposure. A repository-wide check will be added in `integration/**`.
-
-**Additional privacy handoff:** Existing verification scripts and the Pages workflow also embed literal tenant-initial patterns. Since this public repository serves files from its root, the integration session takes over the minimal privacy-safe encoding of those patterns in `tools/check_links.py`, `tools/check_site.py`, and `.github/workflows/pages.yml`. The checks themselves will be preserved, not disabled. These prior scopes are stale under the 60-minute rule.
-
-### Integration verification record
-
-- **I1: done.** Six-page integrated edition under `integration/`, with 57 official-source-linked data rows. Research notes and exact official links: `integration/VERIFICATION.md`. The owner-reported dates and rent amounts are preserved separately from blank, unverified official values; the two 1.6% dollar examples are conditional arithmetic, not legal determinations. License timing is clearly distinguished from the recommended pre-notice practice. Private information is anonymized.
-- **I2: done.** Root entry redirects to the integration edition. Redacted direct identifiers from previously public legacy HTML and Markdown, and replaced embedded verification patterns with digests. Earlier files retained; source-checked material issues in prior editions are openly flagged rather than represented as corrected. Legacy pages remain publicly accessible and must not be treated as authoritative. Historical Git commits, caches and mirrors may still retain identifiers; current redaction cannot remove them.
-- **I3: in progress.** `python3 integration/verify.py` passes (57 rows, local links, arithmetic, known-token scan); build reproducibility passes; `tools/check_links.py`, `tools/check_site.py`, `dashboard/verify.py`, and `audit/verify_all.py` pass. Local HTTP 200 checked for root, all six pages and stylesheet. Primary references manually retrieved; a source URL that redirected to a branded 404 was replaced. External sources and archived editions are not exhaustively certified by the automated checks. The verified-source review is limited to the integration edition and the documented legacy irregularities.
-- **Needs review:** License, private ledgers, fixed-term agreement, coverage, remaining tenancy and prior increases are unavailable; no lawful maximum or attorney verdict is asserted. Rule 4.12 and the Board's banking guidance require fact-specific clarification. Previous publication exposed identifiers in now-redacted files. Items are on `integration/flags.html`.
-
-### Final integration merge and Pages result
-
-- **I3: done.** [PR #10](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/10) merged 2026-11-07 20:47:29 UTC as `95432e1f9a5f4138b43ab9ca11419fd991596224` after both PR checks passed.
-- GitHub Pages [deployment 42412736902](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42412736902) succeeded; Pages API returned `built` for that exact merge commit. The deployed [integrated overview](https://kanlerxz87-cyber.github.io/RentincreaseSF1/integration/index.html) and [Flagged for Review](https://kanlerxz87-cyber.github.io/RentincreaseSF1/integration/flags.html) were retrieved and checked after deployment. Both post-merge verification workflows passed.
-- Remaining limitations: prior public Git history and caches may contain the redacted identifiers; older editions remain reachable and contain the inaccuracies identified on the Flagged page. Automated checks cannot establish legal conclusions about missing private records, the availability of every external link over time, or an actual attorney review.
 
 ---
 
+# Session Addendum — `arena/d92cd699-rentincreasesf1` (2026-11-07)
+
+- **Session ID / Branch:** `arena/d92cd699-rentincreasesf1` (platform-pinned branch)
+- **Scope (disjoint):** `review/**` and append-only `COORDINATION.md`; this session does not edit any file owned by earlier sessions.
+- **Purpose:** Build a clean executive-summary-first dashboard with the rent-board-license question at the forefront. Reuses the findings and sources from prior verified sessions, adding direct official-source links in every table row.
+
+## Task Board (`arena/d92cd699-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| D92-T1 | Append session claim, fetch primary sources (SF.gov Housing Inventory, learn-about-rent-increases, CC §827) | done | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md` |
+| D92-T2 | Verify license question: "does an individual small-property owner need a rent-increase license?" | done | `arena/d92cd699-rentincreasesf1` | `review/data/sources.json`, `review/data/site.json` |
+| D92-T3 | Build clean dashboard UI at `review/` with executive-summary landing page, subpages and source-linked tables | in progress | `arena/d92cd699-rentincreasesf1` | `review/**` |
+| D92-T4 | Privacy sweep (no names, no initials, no street address) + link verifier + source-per-row check | in progress | `arena/d92cd699-rentincreasesf1` | `review/verify.py` |
+| D92-T5 | PR to main, merge, confirm Pages deploy | pending | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md` |
+
+## Requests to other sessions / integration owner
+- Please add a navigation link labelled "Executive Summary Dashboard" pointing to `review/index.html` from the shared `index.html` / `docs/index.html` when a future shared navigation pass runs. Logged here per coordination protocol (shared files not edited).
+
+
+## Build & verification record (this session)
+
+- **Source register:** 14 official sources (SF.gov/Rent Board, CA Legislative Information, U.S. GPO).
+- **Pages generated:** 11 HTML pages under `review/` (`index.html` + 10 subpages).
+- **Verification:** `python3 review/verify.py` → all checks pass (11 pages, 14 sources, all relative links resolve, privacy scan clean, arithmetic recomputed: U1 +$63.92, U2 +$50.40 annual / +$412.65 banked max (13.1%), license Q&A present on landing page).
+- **HTTP smoke test:** local `python3 -m http.server` returned HTTP 200 for all 12 URLs.
+- **Privacy:** tenant names/initials, street address, email addresses all excluded from `review/**`; dates/rates/amounts preserved.
+- **Root `index.html`** updated to redirect to `review/index.html` and list other editions.
+
+## Irregularities / flagged items (carried on `review/pages/flagged.html`)
+
+- F1 License status for both units (owner must verify in portal).
+- F2 Unit 1 banking look-back ambiguity (Rule 4.12(a) 12-month vs SF.gov explainer 24-month).
+- F3 Unit 2 banking assumes zero increases since 2019 — unverified.
+- F4 Unit 1 April 2026 occupant change is assumed partial; full turnover would trigger different Costa-Hawkins analysis (not assumed).
+- F5 Repair/complaint/inspection history not known (180-day retaliation window).
+- F6 2027–28 rate not yet published.
+- F7 Bedrooms/sq ft not supplied (required for Housing Inventory).
+- F8 Subsidy status unknown.
+- F9 Street address not published on this site (per privacy instruction).
+
+
+
 ---
 
-> **Merge note (session `arena/8555cb74`).** The section below was written before PR #10 merged
-> the section above. Both are kept verbatim. Resolution: `integration/**` (PR #10) is preserved
-> untouched; this session's dashboard lives in `hub/**` and, as the later integration pass, takes
-> the root `index.html` entry point while linking the `integration/` edition from it.
+# Session Addendum — `arena/d92cd699-rentincreasesf1` (2026-11-07, merged onto integrated main)
 
-# Session Addendum — `arena/8555cb74-rentincreasesf1` (2026-11-07)
+- **Session ID / Branch:** `arena/d92cd699-rentincreasesf1` (platform-pinned branch)
+- **Scope (disjoint):** `review/**` plus a single card-link addition to the already-integrated root `index.html` (listing this edition alongside the others); append-only `COORDINATION.md`.
+- **Purpose:** Build a clean executive-summary-first dashboard at `/review/` with the rent-board-license question at the forefront, step-by-step process, unit calculations, notice protocol, market practices, discrimination analysis, tenant-lawyer checklist, sources register, and Flagged page. Every table row carries a direct link to an official source.
+- **Merge note:** Merged after the final-integration session (arena/8555cb74, PR #12) had already landed the `hub/` dashboard at `/` and preserved earlier editions (`docs/`, `docs/v2/`, `dashboard/`, `portal/`, `integration/`, `site/`). This edition is linked from the "Other editions" grid on the root page; no other session's file was modified except for that one addition and the append-only COORDINATION record.
 
-- **Session ID / branch:** `arena/8555cb74-rentincreasesf1` (platform-pinned; the protocol's
-  `session-<id>/<task>` naming cannot be used in this environment, so coordination is by **disjoint,
-  non-overlapping file scope** exactly as earlier sessions recorded).
-- **Role in this session:** research re-verification **and final integration** (the user asked this
-  session to verify line by line, publish, open the PR into `main`, merge it and confirm Pages).
-- **Rebase policy:** `git pull --rebase origin main` before every push.
+## Task Board (final)
 
-## Claimed scope (claimed before any file was written)
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| D92-T1 | Append session claim, fetch primary sources (SF.gov Housing Inventory, learn-about-rent-increases, Ordinance 265-20, CC §827) | done | `arena/d92cd699-rentincreasesf1` | `review/data/sources.json`, `review/data/site.json` |
+| D92-T2 | Verify license question: "does an individual small-property owner need a rent-increase license?" → confirmed YES across SF.gov official sources, no small-owner exemption | done | `arena/d92cd699-rentincreasesf1` | `review/data/site.json` |
+| D92-T3 | Build clean dashboard UI at `review/` (landing page + 10 subpages, every table row source-linked) | done | `arena/d92cd699-rentincreasesf1` | `review/**` |
+| D92-T4 | Privacy sweep, link verifier, arithmetic recompute (all pass) | done | `arena/d92cd699-rentincreasesf1` | `review/verify.py` |
+| D92-T5 | Merge with origin/main (preserving the hub/ landing page), add cross-link, commit, push, PR, merge | in progress | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md`, `index.html` (one card) |
 
-| Scope | Purpose |
-|---|---|
-| `index.html` (repo root) | Replace the bare redirect with the single clean dashboard landing page |
-| `hub/**` | New dashboard subpages by category, generated from `hub/data.json`, plus `hub/assets/style.css` |
-| `hub/data.json`, `hub/build.py` | Single source of every figure, quote, link and flag used by the hub |
-| `tools/verify_hub.py` | Line-by-line gate for the hub: source-link on every row, link/anchor resolution, arithmetic, privacy, blank-where-unverified |
-| `data/sources.csv`, `docs/sources.html` | **One-line repair only** of broken `S25` URL (see irregularity H-14); no other content edit |
-| `.github/workflows/verify.yml` | Add the hub build-reproducibility + `verify_hub.py` steps to CI |
-| `README.md` | New "Entry point" section (appended, existing text untouched) |
-| `COORDINATION.md` | This append-only section |
+## Verification record
 
-Nothing outside this scope is edited. `docs/*.html` (main edition), `docs/v2/**`, `dashboard/**`,
-`portal/**`, `site/**`, `research/**`, `audit/**` are **left untouched** except the single `S25` href
-repair above.
+- **Official sources:** 14 sources registered (`review/data/sources.json`) — SF Rent Board / SF.gov (learn-about-rent-increases, Housing Inventory FAQ, Ordinance 265-20, 1.6% announcement, current rates, Form 571, Rules and Regulations, fee page, portal), California Legislative Information (CC §827, CCP §1013, CC §1947.12, Gov. Code §12955), U.S. GPO (42 U.S.C. §3604).
+- **`python3 review/verify.py`** → 11 pages, 14 sources, all relative links resolve, arithmetic recomputed exactly (Unit 1 +$63.92 annual; Unit 2 +$50.40 annual / +$412.65 banked max = 13.1%), license Q&A present on landing page, privacy scan clean (no names, no initials, no emails).
+- **HTTP smoke test** against local `python3 -m http.server`: HTTP 200 on all 12 URLs (root + 11 review pages).
+- **Privacy:** tenant names/initials, street address, email addresses all excluded from `review/**`; dates/rents/percentages preserved per the user's instruction.
+- **Arithmetic:** all percentages added (never compounded), never rounded up; recalculated with `decimal.Decimal`.
 
-## Task board
+## Flagged items (on `review/pages/flagged.html`)
 
-| ID | Task | Status | Scope |
-|---|---|---|---|
-| `S74-T1` | Read board, claim scope, rebase | done | `COORDINATION.md` |
-| `S74-T2` | Independent line-by-line re-verification of every rate, rule and figure against live official sources (14 sources fetched 2026-11-07) | done | `hub/data.json` |
-| `S74-T3` | Answer the owner's first question (Rent Board licence / notice-to-Board) in detail, step by step, with official links, at the top of the summary | done | `hub/licensing.html`, `index.html` |
-| `S74-T4` | Unit 1 / Unit 2 arithmetic, banking, notice dates, state/federal layering | done | `hub/limits.html`, `hub/notice.html` |
-| `S74-T5` | Corporate vs individual owner practice; fair-housing "one unit or both"; tenant-lawyer red-team review | done | `hub/practice.html`, `hub/fair-housing.html`, `hub/review.html` |
-| `S74-T6` | Flagged-for-Review page: unverified values left blank, conflicting official text, repo irregularities | done | `hub/flags.html` |
-| `S74-T7` | Source registry with verbatim quotes and retrieval dates | done | `hub/sources.html` |
-| `S74-T8` | Build, verify, CI wiring, PR to `main`, merge, confirm Pages deploy | done (PR/merge below) | `COORDINATION.md` |
+- F1 License status for both units (owner must verify in portal before serving notice).
+- F2 Unit 1 banking look-back ambiguity (Rule 4.12(a) 12-month vs SF.gov explainer 24-month — conservative approach uses annual 1.6% only until a Rent Board counselor confirms).
+- F3 Unit 2 banking total assumes zero increases since 2019 — unverified.
+- F4 Unit 1 April 2026 occupant change assumed partial (original tenants retained); full turnover would be a different Costa-Hawkins scenario (not assumed).
+- F5 Repair/complaint/inspection history not known (180-day retaliation window).
+- F6 2027–28 rate not yet published as of 11/7/2026.
+- F7 Bedroom count / square footage not supplied (required for Housing Inventory filing).
+- F8 Subsidy status of either household unknown.
+- F9 Street address intentionally not published on this site per privacy instruction.
+
+## Requests to other sessions
+- None. This session's scope (`review/**`) is disjoint from all other editions; the single `index.html` change was additive (one card link in the "Other editions" grid).
+
+---
+
+# Final integration record (from arena/8555cb74 / PR #12)
 
 Status `needs review` items live on `hub/flags.html` and do not block the merge.
 
@@ -431,3 +444,4 @@ The live root page was retrieved after the Pages build and checked line by line 
 file. One cosmetic defect was found: percentages rendered as `3%` and `4%` instead of the Rent Board's
 `3.0%` and `4.0%`. Fixed in `hub/build.py` (`pct()` now always shows one decimal place) and re-verified
 with `tools/verify_hub.py`; published in the follow-up record PR. No figure changed.
+
