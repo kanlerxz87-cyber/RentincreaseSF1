@@ -468,11 +468,11 @@ PR #10 preserved an `integration/` edition and performed the urgent current-file
 
 | ID | Task | Status | Owner | Exclusive file scope |
 | --- | --- | --- | --- | --- |
-| FI1 | Independently re-fetch official sources and audit the canonical root/hub edition row by row, including license timing, private-input labeling, rate windows, banking wording, calculations, notice dates, fair-housing statements, and corporate-practice evidence | in progress | `arena-1abdce92` | `audit/final-integration/**`, `assurance/**` |
-| FI2 | Publish an anonymized assurance report and a clearly labeled residual Flagged for Review table; leave every unsupported official-confirmation value blank | unclaimed | `arena-1abdce92` | `assurance/**`, `audit/final-integration/**` |
-| FI3 | Run arithmetic, date, source-registry, table-row, internal-link, reproducible-build, and repository-wide privacy checks without weakening existing suites | unclaimed | `arena-1abdce92` | `tools/verify_assurance.py`, `.github/workflows/assurance.yml` |
-| FI4 | Log any requested corrections to the canonical hub here instead of editing another session's scope; if a completed scope is formally handed off, re-verify the corrected combined output | unclaimed | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
-| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | unclaimed | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+| FI1 | Independently re-fetch official sources and audit the canonical root/hub edition row by row, including license timing, private-input labeling, rate windows, banking wording, calculations, notice dates, fair-housing statements, and corporate-practice evidence | done | `arena-1abdce92` | `audit/final-integration/**`, `assurance/**` |
+| FI2 | Publish an anonymized assurance report and a clearly labeled residual Flagged for Review table; leave every unsupported official-confirmation value blank | done | `arena-1abdce92` | `assurance/**`, `audit/final-integration/**` |
+| FI3 | Run arithmetic, date, source-registry, table-row, internal-link, reproducible-build, and repository-wide privacy checks without weakening existing suites | done | `arena-1abdce92` | `tools/verify_assurance.py`, `.github/workflows/assurance.yml` |
+| FI4 | Log any requested corrections to the canonical hub here instead of editing another session's scope; if a completed scope is formally handed off, re-verify the corrected combined output | done | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | in progress | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
 
 **Coordination requests:** none at the narrowed claim. Any correction to `index.html`, `hub/**`, `integration/**`, or other prior scopes will first be logged here with evidence. The canonical dashboard remains the root edition published by PR #12; this session adds an independent assurance layer, not a sixth competing presentation.
 
@@ -486,9 +486,9 @@ The findings prompting the handoff are: (1) the hard statutory license gate is t
 
 | ID | Corrective task | Status | Claimed file scope |
 | --- | --- | --- | --- |
-| FI6 | Correct the canonical source of truth and regenerate the existing dashboard; distinguish owner-brief facts, official rules, conditional arithmetic, and blanks; add the fixed-term contingency and direct statutes | in progress | `index.html`, `hub/**` |
-| FI7 | Strengthen the existing hub verifier to reject the corrected overstatements and require conditional labels; preserve all useful existing checks | unclaimed | `tools/verify_hub.py`, `.github/workflows/assurance.yml` |
-| FI8 | Publish an independent row-level assurance record and explicit correction log, with source links on every assurance table row | unclaimed | `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py` |
+| FI6 | Correct the canonical source of truth and regenerate the existing dashboard; distinguish owner-brief facts, official rules, conditional arithmetic, and blanks; add the fixed-term contingency and direct statutes | done | `index.html`, `hub/**` |
+| FI7 | Strengthen the existing hub verifier to reject the corrected overstatements and require conditional labels; preserve all useful existing checks | done | `tools/verify_hub.py`, `.github/workflows/assurance.yml` |
+| FI8 | Publish an independent row-level assurance record and explicit correction log, with source links on every assurance table row | done | `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py` |
 
 No legacy edition is deleted. The root's prior-edition links will be labeled superseded/not re-certified so readers are not presented with conflicting editions as equally current. All dates and supplied dollar amounts remain unchanged.
 
@@ -496,3 +496,14 @@ No legacy edition is deleted. The root's prior-edition links will be labeled sup
 
 **Shared-documentation reconciliation claim (before writing):** the corrected HTML is committed as `7ec8f63`, but the root Markdown entry points still contain the earlier overstatements. This session now claims `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, and `VERIFICATION.md` solely to align them with the canonical source data, preserve links to prior editions, and direct readers to the independent assurance record. The older prose remains in Git history; no parallel implementation is deleted.
 
+
+### Final-assurance implementation record before PR
+
+- **Canonical correction:** `7ec8f63` regenerated the existing root/hub edition rather than adding another competing dashboard. The standalone Markdown summary, source index, verification record, and README are reconciled in the subsequent documentation commit. `index.html` remains the single entry point; prior editions are linked only as superseded archives.
+- **Official verification:** 23/23 sources retrieved and read from official publishers on 2026-11-07; manifest at `audit/final-integration/source-manifest.json`. Current annual allowance confirmed as 1.6% through 2027-02-28. No 2027–28 rate inferred.
+- **Public findings:** 12 correction rows, 20 canonical flags, 13 scrutiny checks, and explicit official-confirmation blanks. Unit 1 fixed-term status and Unit 2 current base/history are high-severity open facts. No current lawful maximum, attorney acceptance, or universal free-representation claim is asserted.
+- **Arithmetic:** Unit 1 annual-only $63.92 → $4,058.92 and conditional combined $119.85 → $4,114.85; Unit 2 annual-only $50.40 → $3,200.40 and conditional combined $412.65 → $3,562.65. All are scenario calculations on anonymized brief inputs. Service-date arithmetic independently recomputed for 30/90 days and 35/95 California-mail planning periods.
+- **Final local gates:** `tools/verify_hub.py` — **1,336 checks, 0 errors**; `tools/verify_assurance.py` — **1,556 checks, 0 errors**; 194 canonical claim rows and 33 assurance rows source-linked; 170 current text files privacy-scanned with no forbidden personal token; `git diff --check` clean.
+- **Preserved suites:** `tools/check_links.py`, companion build + `tools/check_site.py` (781 checks), `integration/verify.py` (57 rows), `dashboard/verify.py`, `audit/verify_all.py` (137 rows), and `review/build.py` + `review/verify.py` all pass without unintended generated-file changes.
+- **Concurrency:** repeated `COORDINATION.md` append conflicts were resolved by preserving every parallel addendum. The `/review/` edition and its parallel privacy repair are retained. No other session's implementation was deleted. The final-assurance CI workflow regenerates canonical and assurance output and fails on drift.
+- **Merge posture:** unresolved private facts remain prominently flagged and do not block publication; broken pages, stale generators, missing citations, arithmetic errors, privacy findings, or failed checks do block the integration PR. PR and Pages results remain to be recorded below.

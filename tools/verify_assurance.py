@@ -62,6 +62,16 @@ for rel in PAGES:
     docs[rel] = path.read_text(encoding="utf-8") if path.is_file() else ""
 id_map = {rel: ids(doc) for rel, doc in docs.items()}
 
+# Reconciled Markdown entry points must not contain broken local links.
+for rel in ("README.md", "EXECUTIVE_SUMMARY.md", "EXECUTIVE-SUMMARY.md", "SOURCES.md", "VERIFICATION.md"):
+    text = (ROOT / rel).read_text(encoding="utf-8")
+    for target in re.findall(r"\]\(([^)]+)\)", text):
+        if target.startswith(("https://", "http://", "mailto:", "tel:", "#")):
+            continue
+        path = target.split("#", 1)[0]
+        if path:
+            check((ROOT / path).exists(), f"{rel}: broken local Markdown link {target}")
+
 for rel, doc in docs.items():
     for href in re.findall(r'href="([^"]+)"', doc):
         href = html.unescape(href)
