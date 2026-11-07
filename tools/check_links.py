@@ -16,6 +16,7 @@ from __future__ import annotations
 
 import csv
 import re
+import hashlib
 import sys
 from pathlib import Path
 from urllib.parse import urlsplit
@@ -25,7 +26,7 @@ DOCS = ROOT / "docs"
 
 # Tokens that must never appear on the published site (tenant initials and
 # variants, as supplied). Matched as whole words, case-sensitive.
-FORBIDDEN_TOKENS = ["L O", "V N", "JP", "M T", "E R", "I S"]
+FORBIDDEN_HASHES = ['01efd0141d7d80509ee44bbbb2dee48875711d55358bd9a91bf22d5208ffa93d', '0b28c4215599de9c8f7019402d7eaeccc8cbdc5103aeca7427774222c2bf2f16', '158dc33a8be8ae49804b3fa72e2e116edb683730b51752bdb552435f31f0ba5a', '27c9478468718ed43669f8b2bbac3694d1f03287a6347d4c9adadc9d12f9ecf5', '399ad8e221e6815cd19b54cd7f313335f9bab0ecc681615af552c64ea3901b0f', '569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e']
 FORBIDDEN_PATTERNS = [
     (re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"), "email address"),
 ]
@@ -149,9 +150,9 @@ def check_csv_consistency() -> None:
 def check_privacy(files: list[Path]) -> None:
     for f in files:
         text = f.read_text(encoding="utf-8")
-        for token in FORBIDDEN_TOKENS:
-            if re.search(rf"\b{re.escape(token)}\b", text):
-                errors.append(f"{f.name}: contains forbidden personal token '{token}'")
+        for token in re.findall(r"\b(?:[A-Z]{2}|[A-Z] [A-Z])\b", text):
+            if hashlib.sha256(token.encode()).hexdigest() in FORBIDDEN_HASHES:
+                errors.append(f"{f.name}: contains forbidden personal token")
         for pattern, label in FORBIDDEN_PATTERNS:
             for match in pattern.findall(text):
                 errors.append(f"{f.name}: contains what looks like an {label}: {match}")
