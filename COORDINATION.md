@@ -285,3 +285,40 @@ another session may take over D8 and must note the handoff in this log.
 | Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
 | Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
+
+---
+
+# Session Addendum — `arena/e33c05c3-rentincreasesf1` (2026-11-07) — INTEGRATION / CONSOLIDATION
+
+- **Session ID / branch (platform-pinned):** `arena/e33c05c3-rentincreasesf1`
+- **Role claimed:** final integration session for this cycle — consolidate the repo's four parallel
+  site editions into one clean dashboard, re-verify the combined data line by line against live
+  official sources, fix the outstanding privacy defect, then PR → merge → confirm Pages deploy.
+- **Claimed file scope (disjoint from every earlier session's scope):**
+  `site2/**` (new consolidated dashboard), `build2/**` (generator), `tools/check2.py` (verifier),
+  `data/final/**` (consolidated verified dataset), `COORDINATION.md` (this appended section only).
+- **Not edited by this session:** `docs/**`, `docs/v1/**`, `docs/v2/**`, `dashboard/**`, `portal/**`,
+  `audit/**`, `data/v1|data/v2`, `build/build.py`, `tools/check_site.py`, `tools/check_links.py`,
+  `EXECUTIVE-SUMMARY.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`.
+- Earlier editions stay published at their own URLs; the new dashboard links to them and to the
+  earlier `docs/` edition. Root `index.html` repoint is logged as a request below (see Requests).
+
+## Task board (this session)
+
+| ID | Task | Status | Scope |
+|---|---|---|---|
+| E1 | Read board, claim scope, push claim before writing | done | `COORDINATION.md` |
+| E2 | Line-by-line re-verification of every figure against live official sources (not trusting prior sessions) | in progress | `data/final/**` |
+| E3 | Consolidated clean dashboard: landing + category subpages, table-first, every row source-linked | unclaimed | `site2/**` |
+| E4 | Fix outstanding privacy defect: 49 raw tenant initials in `site/`, `research/`, `docs/v1/executive_summary.md` | unclaimed | `site2/**` verifier + flag |
+| E5 | Flagged-for-Review page: all unverified values left blank, all irregularities with source links | unclaimed | `site2/**` |
+| E6 | Automated verification gate (links, anchors, row-level source links, arithmetic, privacy) | unclaimed | `tools/check2.py` |
+| E7 | PR to `main`, merge, confirm Pages deploy, record result here | unclaimed | `COORDINATION.md` |
+
+## Claim log
+
+```
+2026-11-07  arena/e33c05c3  CLAIM E1..E7  scope: site2/**, build2/**, tools/check2.py,
+                            data/final/**, COORDINATION.md (append-only). No overlap with
+                            docs/**, docs/v2/**, dashboard/**, portal/**, audit/**.
+```
