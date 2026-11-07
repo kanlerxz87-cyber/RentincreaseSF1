@@ -18,6 +18,7 @@ Usage: python3 tools/check_site.py
 import json
 import os
 import re
+import hashlib
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -27,7 +28,7 @@ PUB = os.path.join(ROOT, "docs", "v2")
 PAGES = sorted(f for f in os.listdir(PUB) if f.endswith(".html"))
 
 # Names supplied by the owner. These must never appear in published output.
-FORBIDDEN_NAMES = ["L O", "V N", "JP", "M T", "E R", "I S"]
+FORBIDDEN_HASHES = ['01efd0141d7d80509ee44bbbb2dee48875711d55358bd9a91bf22d5208ffa93d', '0b28c4215599de9c8f7019402d7eaeccc8cbdc5103aeca7427774222c2bf2f16', '158dc33a8be8ae49804b3fa72e2e116edb683730b51752bdb552435f31f0ba5a', '27c9478468718ed43669f8b2bbac3694d1f03287a6347d4c9adadc9d12f9ecf5', '399ad8e221e6815cd19b54cd7f313335f9bab0ecc681615af552c64ea3901b0f', '569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e']
 
 errors = []
 warnings = []
@@ -140,11 +141,10 @@ for p in PAGES:
                 ok("column-count")
 
 # --------------------------------------------------------- 5 privacy check
-for name in FORBIDDEN_NAMES:
-    pat = r"\b%s\b" % re.escape(name)
-    for p in PAGES:
-        if re.search(pat, read(os.path.join(PUB, p))):
-            fail("privacy: personal name %r found in %s" % (name, p))
+for p in PAGES:
+    for token in re.findall(r"\b(?:[A-Z]{2}|[A-Z] [A-Z])\b", read(os.path.join(PUB, p))):
+        if hashlib.sha256(token.encode()).hexdigest() in FORBIDDEN_HASHES:
+            fail("privacy: personal token found in %s" % p)
 ok("privacy")
 
 # --------------------------------------------------------- 6 arithmetic check

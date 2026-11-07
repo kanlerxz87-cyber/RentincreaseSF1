@@ -330,3 +330,46 @@ another session may take over D8 and must note the handoff in this log.
 - F8 Subsidy status unknown.
 - F9 Street address not published on this site (per privacy instruction).
 
+
+
+---
+
+# Session Addendum — `arena/d92cd699-rentincreasesf1` (2026-11-07, merged onto integrated main)
+
+- **Session ID / Branch:** `arena/d92cd699-rentincreasesf1` (platform-pinned branch)
+- **Scope (disjoint):** `review/**` plus a single card-link addition to the already-integrated root `index.html` (listing this edition alongside the others); append-only `COORDINATION.md`.
+- **Purpose:** Build a clean executive-summary-first dashboard at `/review/` with the rent-board-license question at the forefront, step-by-step process, unit calculations, notice protocol, market practices, discrimination analysis, tenant-lawyer checklist, sources register, and Flagged page. Every table row carries a direct link to an official source.
+- **Merge note:** Merged after the final-integration session (arena/8555cb74, PR #12) had already landed the `hub/` dashboard at `/` and preserved earlier editions (`docs/`, `docs/v2/`, `dashboard/`, `portal/`, `integration/`, `site/`). This edition is linked from the "Other editions" grid on the root page; no other session's file was modified except for that one addition and the append-only COORDINATION record.
+
+## Task Board (final)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| D92-T1 | Append session claim, fetch primary sources (SF.gov Housing Inventory, learn-about-rent-increases, Ordinance 265-20, CC §827) | done | `arena/d92cd699-rentincreasesf1` | `review/data/sources.json`, `review/data/site.json` |
+| D92-T2 | Verify license question: "does an individual small-property owner need a rent-increase license?" → confirmed YES across SF.gov official sources, no small-owner exemption | done | `arena/d92cd699-rentincreasesf1` | `review/data/site.json` |
+| D92-T3 | Build clean dashboard UI at `review/` (landing page + 10 subpages, every table row source-linked) | done | `arena/d92cd699-rentincreasesf1` | `review/**` |
+| D92-T4 | Privacy sweep, link verifier, arithmetic recompute (all pass) | done | `arena/d92cd699-rentincreasesf1` | `review/verify.py` |
+| D92-T5 | Merge with origin/main (preserving the hub/ landing page), add cross-link, commit, push, PR, merge | in progress | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md`, `index.html` (one card) |
+
+## Verification record
+
+- **Official sources:** 14 sources registered (`review/data/sources.json`) — SF Rent Board / SF.gov (learn-about-rent-increases, Housing Inventory FAQ, Ordinance 265-20, 1.6% announcement, current rates, Form 571, Rules and Regulations, fee page, portal), California Legislative Information (CC §827, CCP §1013, CC §1947.12, Gov. Code §12955), U.S. GPO (42 U.S.C. §3604).
+- **`python3 review/verify.py`** → 11 pages, 14 sources, all relative links resolve, arithmetic recomputed exactly (Unit 1 +$63.92 annual; Unit 2 +$50.40 annual / +$412.65 banked max = 13.1%), license Q&A present on landing page, privacy scan clean (no names, no initials, no emails).
+- **HTTP smoke test** against local `python3 -m http.server`: HTTP 200 on all 12 URLs (root + 11 review pages).
+- **Privacy:** tenant names/initials, street address, email addresses all excluded from `review/**`; dates/rents/percentages preserved per the user's instruction.
+- **Arithmetic:** all percentages added (never compounded), never rounded up; recalculated with `decimal.Decimal`.
+
+## Flagged items (on `review/pages/flagged.html`)
+
+- F1 License status for both units (owner must verify in portal before serving notice).
+- F2 Unit 1 banking look-back ambiguity (Rule 4.12(a) 12-month vs SF.gov explainer 24-month — conservative approach uses annual 1.6% only until a Rent Board counselor confirms).
+- F3 Unit 2 banking total assumes zero increases since 2019 — unverified.
+- F4 Unit 1 April 2026 occupant change assumed partial (original tenants retained); full turnover would be a different Costa-Hawkins scenario (not assumed).
+- F5 Repair/complaint/inspection history not known (180-day retaliation window).
+- F6 2027–28 rate not yet published as of 11/7/2026.
+- F7 Bedroom count / square footage not supplied (required for Housing Inventory filing).
+- F8 Subsidy status of either household unknown.
+- F9 Street address intentionally not published on this site per privacy instruction.
+
+## Requests to other sessions
+- None. This session's scope (`review/**`) is disjoint from all other editions; the single `index.html` change was additive (one card link in the "Other editions" grid).

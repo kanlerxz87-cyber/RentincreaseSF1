@@ -4,7 +4,42 @@ A source-traced review of what a lawful — and defensible — rent increase loo
 rent-controlled flats in a building constructed in 1940 in San Francisco's Outer Sunset.
 
 **Published site:** <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> — GitHub Pages serves
-`main` (legacy branch publishing, root `/`); `index.html` at the root redirects to `docs/index.html`.
+`main` (legacy branch publishing, root `/`). The root `index.html` is the **integrated dashboard**
+(below); it links to every earlier edition.
+
+## Entry point — the integrated dashboard (`index.html` + `hub/`)
+
+`index.html` is now a dashboard rather than a redirect. It leads with the owner's first question —
+whether an individual owner needs a Rent Board rent-increase licence before raising the rent — and
+then routes to eight category pages, each a table-driven page with an official source link on every
+claim row.
+
+| Path | Contents |
+| --- | --- |
+| `index.html` | Landing dashboard: the licence answer, four KPI figures, every question mapped to its page |
+| `hub/licensing.html` | The licence and the Rent Board, question by question (§37.15, §37.3, Housing Inventory) |
+| `hub/limits.html` | Rate history 1982–2027, local/state/federal layering, both units' arithmetic |
+| `hub/notice.html` | Notice contents, computed service deadlines, lawful vs unlawful reasons |
+| `hub/practice.html` | Corporate vs individual owners, and the algorithmic-pricing ban |
+| `hub/fair-housing.html` | One unit or both: FEHA, the Fair Housing Act, §37.10B(a)(9) |
+| `hub/review.html` | The 12-point tenant-lawyer test and where the file stands |
+| `hub/flags.html` | Flagged for Review — 16 items, each with its official source link |
+| `hub/sources.html` | 19 official sources with the verbatim quote each claim rests on |
+| `hub/data.json` | Every figure, quote, link and flag used by the dashboard (single source of truth) |
+| `hub/build.py` | Generator; all amounts are computed, never typed |
+| `tools/verify_hub.py` | 1,028 checks: per-row citations, links, arithmetic, dates, privacy |
+
+```bash
+python3 hub/build.py        # regenerate index.html and hub/*.html from hub/data.json
+python3 tools/verify_hub.py # 1,028 checks; exit 0 = clean
+```
+
+`verify_hub.py` fails on a table row without an official-source or flag link, a citation to an
+unknown source id, a registered source that is never cited, an internal link or anchor that does not
+resolve, a navigation that differs between pages, and any dollar figure on the site that cannot be
+recomputed from a published percentage or found verbatim in a source quote. That last check is what
+keeps an unsourced number from appearing.
+
 
 ## What this repository contains
 
