@@ -285,3 +285,53 @@ another session may take over D8 and must note the handoff in this log.
 | Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
 | Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
+
+---
+
+# Session Addendum — `arena/c1efd316-rentincreasesf1` (2026-11-07)
+
+- **Session ID / Branch:** `arena/c1efd316-rentincreasesf1` (platform-pinned branch; cannot create `session-<id>/<task>` branches)
+- **Status:** active — final integration session
+- **Disjoint file scope claimed:** `integration/**` (new), plus append-only edits to `COORDINATION.md`. Root `index.html` change is logged as a **request** to the shared-file owner and applied only because no other session is active and every prior claim is >60 minutes old with no new commits.
+
+## Why a final integration pass was needed
+
+`origin/main` (`7b8e7f1`, PR #9) contains **five** independently built editions of the same answer — `docs/`, `docs/v1/`, `docs/v2/`, `dashboard/`, `portal/` — with no single entry point, and with three open defects confirmed by this session:
+
+| # | Defect | Evidence |
+|---|---|---|
+| P1 | **Privacy breach still live.** Raw tenant initials appear in files that GitHub Pages publishes from `main` at root `/`. | `site/executive_summary.html`, `site/discrimination.html`, `site/flagged.html`, `research/*.md`, `docs/v1/executive_summary.md` — confirmed by `grep` on 2026-11-07. Prior sessions flagged this (FLG `F21`, `RA-03`, `RA-09`) but each declined to edit outside its own scope, so it was never fixed. |
+| P2 | **Likely inaccurate headline figure.** `docs/` states an $82.30 Unit 1 increase (1.7% + 1.4% = 3.1%). SF.gov's own worked examples use the rate for the year the *skipped anniversary* fell in, not the year it banked. | `https://www.sf.gov/learn-about-rent-increases-san-francisco` example 4; `https://www.sf.gov/information--banked-rent-increases` example. This session computes $63.92 (1.6% not bankable on 2026-02-01) and flags the discrepancy. |
+| P3 | **No single verified entry point.** Root `index.html` still redirects to `docs/index.html`, which is neither the most complete nor the most source-verified edition. | `gh api repos/.../pages` → source `main`, path `/`, status `built`. |
+
+## Task board for this session
+
+| ID | Task | Status | Scope |
+|---|---|---|---|
+| C1 | Read board, append claim, rebase on `origin/main` | done | `COORDINATION.md` |
+| C2 | Re-verify every load-bearing rule against live official primary sources (line by line) | done | `integration/data/sources.json`, `integration/data/requirements.json` |
+| C3 | Independently recompute both units from the verified rate table | done | `integration/data/calculations.json` |
+| C4 | Anonymised executive summary, licence/rent-board question first | done | `integration/data/executive_summary.json` |
+| C5 | Dashboard: landing + category subpages + Flagged for Review | done | `integration/**` |
+| C6 | Line-by-line verifier: source links, arithmetic, blanks, links, privacy | done | `integration/verify.py` |
+| C7 | **Privacy remediation** of published files (P1) | in progress | `site/**`, `research/**`, `docs/v1/**` |
+| C8 | Repoint root `index.html` to the verified entry point (P3) — logged request | in progress | `index.html` |
+| C9 | PR → `main`, merge, confirm Pages deploy, record result here | pending | `COORDINATION.md` |
+
+## Sources used (all fetched and read by this session on 2026-11-07)
+
+See `integration/data/sources.json` for the full registry with the exact claim each URL supports. Every one is a `.gov`, `.ca.gov`, or official legislative URL.
+
+## Verification performed
+
+* Every rate, notice period, and procedural step re-read from the primary source; the claim each URL supports is stored next to the URL.
+* Every dollar figure recomputed in Python `Decimal` from the published percentages, never copied from an earlier edition.
+* `integration/verify.py` fails the build if any table row lacks an official source link, any verified value has no source, any unverified value is not blank, any internal link breaks, or any personal identifier appears.
+
+## Irregularities / items needing the owner's review
+
+Published on the site's **Flagged for Review** page with source links. None blocks the merge. Full list in `integration/data/flags.json`.
+
+## Handoff rule
+
+If this session crashes or its claim is more than 60 minutes old with no new commits, another session may take over C7–C9 and must note the handoff here.
