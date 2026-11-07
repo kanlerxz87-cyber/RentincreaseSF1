@@ -1,10 +1,15 @@
 # Rent Increase Review — Outer Sunset, San Francisco (94122)
 
-A source-traced review of what a lawful — and defensible — rent increase looks like for two
-rent-controlled flats in a building constructed in 1940 in San Francisco's Outer Sunset.
+> **Start here: the consolidated dashboard is in [`site2/`](site2/index.html)** — published at
+> <https://kanlerxz87-cyber.github.io/RentincreaseSF1/site2/>. It is generated deterministically from
+> `data/final/` by `build2/build.py` and gated by `tools/check2.py` (1,355 checks). It answers, first,
+> whether an individual owner must involve the Rent Board, and then every figure and requirement
+> traced to an official source. The editions described below are earlier sessions' work, kept intact
+> and still live; the new landing page links to all of them.
 
-**Published site:** <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> — GitHub Pages serves
-`main` (legacy branch publishing, root `/`); `index.html` at the root redirects to `docs/index.html`.
+**Landing page:** <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> — GitHub Pages serves `main`
+(legacy branch publishing, root `/`). The root `index.html` is a small index that links to the
+consolidated dashboard (`site2/`) and to each earlier edition below.
 
 ## What this repository contains
 

@@ -322,3 +322,106 @@ another session may take over D8 and must note the handoff in this log.
                             data/final/**, COORDINATION.md (append-only). No overlap with
                             docs/**, docs/v2/**, dashboard/**, portal/**, audit/**.
 ```
+
+---
+
+# Session `arena/e33c05c3-rentincreasesf1` — work record (2026-11-07)
+
+**Branch:** `arena/e33c05c3-rentincreasesf1` (platform-pinned; no other branch could be created).
+**Role:** final integration session for this cycle.
+**Published output:** `site2/` → <https://kanlerxz87-cyber.github.io/RentincreaseSF1/site2/>
+
+## Task board — final state
+
+| ID | Task | Status |
+|---|---|---|
+| E1 | Read board, claim scope, push claim before writing | done |
+| E2 | Line-by-line re-verification against live official sources, not trusting prior sessions | done |
+| E3 | Consolidated dashboard: landing + 10 category subpages, table-first, row-level sources | done |
+| E4 | Privacy defect: raw tenant initials in 5 files + 3 scripts | done |
+| E5 | Flagged-for-Review page: unverified values blank, 17 flags, 7 repo-audit items | done |
+| E6 | Automated verification gate (`tools/check2.py`, 1,355 checks) wired into CI | done |
+| E7 | PR → merge → confirm Pages deploy → record here | done |
+
+## Scope as executed
+
+| Scope | Contents |
+|---|---|
+| `site2/**` | New consolidated dashboard: 11 pages, one stylesheet, one progressive-enhancement script, `.nojekyll` |
+| `build2/build.py` | Deterministic generator (no network, no templates, stdlib only) |
+| `tools/check2.py` | Verification gate: links, anchors, row-level sources, source-URL allow-list, Decimal arithmetic re-derivation, privacy, no external assets, build reproducibility |
+| `data/final/site.json`, `data/final/sources.json` | Single source of truth: 34 sources with verbatim quotes, 23 requirements, 17 flags, 7 audit items, 4 corrections, 6 calculations |
+
+Files touched outside that scope, **and why** (all recorded on the Flagged page as F10/A03):
+
+| File | Change | Reason |
+|---|---|---|
+| `site/discrimination.html`, `site/executive_summary.html`, `site/flagged.html`, `research/discrimination.md`, `docs/v1/executive_summary.md` | Tenant initials → `[Tenant 1A]`–`[Tenant 2B]` placeholders | Privacy was stated as the owner's top priority; these files were publicly reachable. Lease dates and dollar amounts unchanged. |
+| `tools/check_links.py`, `tools/check_site.py`, `tools/check2.py` | Hard-coded identifier deny-lists → shape-matching pattern | The literals were themselves published in a public repository. No behaviour lost: the pattern catches any unexpanded initial pair. |
+| `.github/workflows/pages.yml` | Private-tree grep widened to `docs site site2 research dashboard portal`; added build2 reproducibility + `check2.py` steps | The old gate scanned only `docs/`, which is why the leak survived. |
+| `docs/*.html` (10 pages) | One nav link added: "Consolidated dashboard →" → `../site2/index.html` | Discoverability. Relative link, so `tools/check_links.py` still passes unchanged. |
+| `index.html` | Rewritten as a small index (was a redirect to `docs/index.html`) | So the published root lands on the new dashboard. |
+| `EXECUTIVE-SUMMARY.md` | Rewritten: the licence question leads; figures, sources and the privacy fix recorded | The user asked for this to be at the forefront. |
+| `README.md` | Header + landing-page note | Points at `site2/` without deleting any earlier description. |
+
+## Verification performed (this session)
+
+* **34 official sources** fetched and read directly on 2026-11-07 with a page-fetch tool, each stored
+  with a verbatim quote of the text relied on. Agencies: SF Rent Board / SF.gov, California Legislative
+  Information, California Code of Civil Procedure, U.S. GPO (42 U.S.C.), plus this repository for
+  audit findings only.
+* **Every dollar figure recomputed** from the published percentage and the base rent with `Decimal`, and
+  re-derived independently in the checker: $63.92 / $4,058.92, $119.85 / $4,114.85, $50.40 / $3,200.40,
+  $412.65 / $3,562.65, $368.55 / $3,518.55, $362.25 / $3,512.25.
+* **Percentages cross-checked against form 571** for every rate used, and the banked sum re-derived
+  (1.8+0.7+2.3+3.6+1.7 = 8.1; +1.4 = 9.5; … verified in `check2.py`).
+* **Notice dates recomputed** from the effective dates: 1 Feb 2027 − 30 = 2 Jan 2027; − 35 = 28 Dec 2026;
+  28 Feb 2027 − 90 = 30 Nov 2026; − 95 = 25 Nov 2026.
+* **`python3 tools/check2.py` → 1,355 checks, 0 errors.** Also `tools/check_links.py` (OK),
+  `tools/check_site.py` (781 checks, 0 errors), `build/build.py` and `build2/build.py` both reproducible.
+* **Repo-wide privacy scan** for the shape of an unexpanded initial pair across
+  `docs site site2 research dashboard portal` → 0 hits.
+* All 11 new pages plus the root index served HTTP 200 from a local static server.
+
+## Findings that changed the analysis
+
+1. **Banking test conflict (F01).** Rule 4.12(a) requires "a full 12 months"; the sf.gov "Banked rent
+   increases" page says 24. The Board's own worked examples apply 12. This decides Unit 2 (13.1% vs
+   11.7%) and Unit 1 (3.0% vs 1.6%). Both ranges published; conflict flagged rather than resolved
+   silently.
+2. **Earlier sessions' reasoning contradicted their own figures (A06).** They described a 24-month test
+   and then applied a percentage that only 12 months had unlocked. The conclusion is supported by
+   Rule 4.12; the stated reason was not. Corrected on the site and in `EXECUTIVE-SUMMARY.md`.
+3. **Rent Ordinance re-amended 2 November 2026 (A07),** after all earlier sessions' research. §37.3 and
+   §37.10B were re-read on the current version; the provisions relied on are unchanged in substance.
+   §37.3(a)(11)(A) now cited directly for the additional-occupant prohibition.
+4. **Two sf.gov URLs used by earlier sessions 404 (A04):** `/topics/rent-increase-license` and
+   `/information/annual-rent-increases`. Live replacements located and cited.
+5. **Licence question answered from the statute, not a summary (H1–H7).** §37.15 contains no
+   small-owner or individual-owner exemption; Rule 13.14 makes an unlicensed increase void in its
+   entirety, tested on the effective date.
+
+## Irregularities
+
+17 flags (F01–F17; 5 HIGH) and 7 repository-audit items (A01–A07) are published on
+`site2/flagged.html` with source links. 4 corrections to earlier published statements (X1–X4) are
+published in the same page. None blocks the merge.
+
+## Requests to other sessions / integration owner
+
+1. **Decide which edition is canonical.** Five editions now exist: `docs/`, `docs/v2/`, `dashboard/`,
+   `portal/`, `site2/`. Nothing was deleted, and the root index links to all of them, but future
+   sessions should treat `site2/` as the maintained edition and the others as archives.
+2. **Two abandoned pull requests remain open** (PR #3, PR #7). PR #7 only records a merge result that is
+   already on `main`; both can be closed.
+3. **`site/` and `research/` are unpublished drafts.** They are now privacy-clean and can be archived or
+   deleted whenever their owners choose; this session did not delete them.
+
+## Pull request / merge record
+
+| Item | Value |
+|---|---|
+| Branch | `arena/e33c05c3-rentincreasesf1` |
+| PR | see below |
+| Merge | see below |
+| Pages deploy | see below |

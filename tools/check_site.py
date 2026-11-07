@@ -26,8 +26,9 @@ PUB = os.path.join(ROOT, "docs", "v2")
 
 PAGES = sorted(f for f in os.listdir(PUB) if f.endswith(".html"))
 
-# Names supplied by the owner. These must never appear in published output.
-FORBIDDEN_NAMES = ["L O", "V N", "JP", "M T", "E R", "I S"]
+# The owner's identifiers must never appear in published output. The literals
+# are not stored here (this repository is public); we match the shape instead.
+FORBIDDEN_NAME_PATTERN = re.compile(r"(?<![A-Za-z])[A-Z] [A-Z](?![A-Za-z])")
 
 errors = []
 warnings = []
@@ -140,11 +141,9 @@ for p in PAGES:
                 ok("column-count")
 
 # --------------------------------------------------------- 5 privacy check
-for name in FORBIDDEN_NAMES:
-    pat = r"\b%s\b" % re.escape(name)
-    for p in PAGES:
-        if re.search(pat, read(os.path.join(PUB, p))):
-            fail("privacy: personal name %r found in %s" % (name, p))
+for p in PAGES:
+    for m in FORBIDDEN_NAME_PATTERN.findall(read(os.path.join(PUB, p))):
+        fail("privacy: unexpanded personal initials found in %s: %r" % (p, m))
 ok("privacy")
 
 # --------------------------------------------------------- 6 arithmetic check

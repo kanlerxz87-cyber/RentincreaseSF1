@@ -23,7 +23,7 @@
 ### Unit 1
 - **Last Lease Start:** February 1, 2025 @ $3,995 per month [Internal]
 - **Current Rent (April 1, 2026):** $3,995 per month [Internal]
-- **Tenants:** L O and M T (Continuing tenancy) [Internal]
+- **Tenants:** [Tenant 1A] and [Tenant 1D] (Continuing tenancy) [Internal]
 - **Anniversary Date:** February 1 [Internal]
 - **Applicable Rate (March 1, 2026 – Feb 28, 2027):** 1.6% [1](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit)
 - **Maximum Increase (1.6%):** $3,995 × 0.016 = $63.92 [Internal Calculation]
@@ -32,7 +32,7 @@
 
 ### Unit 2
 - **Last Lease Start:** June 1, 2019 @ $3,150 per month [Internal]
-- **Tenants:** E R and I S [Internal]
+- **Tenants:** [Tenant 2A] and [Tenant 2B] [Internal]
 - **Anniversary Date:** June 1 [Internal]
 - **Applicable Rate (March 1, 2026 – Feb 28, 2027):** 1.6% [1](https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit)
 - **Maximum Increase (1.6%):** $3,150 × 0.016 = $50.40 [Internal Calculation]
@@ -53,7 +53,7 @@
 - **Total Increase:** $114.32 [Internal Calculation]
 
 ### Irregularities to Flag
-- **Unit 1 Tenancy Change:** L O and M T (April 1, 2026) vs original tenants (L O, V N, JP) - ensure notice follows current tenancy [Internal]
+- **Unit 1 Tenancy Change:** [Tenant 1A] and [Tenant 1D] (April 1, 2026) vs original tenants ([Tenant 1A], [Tenant 1B], [Tenant 1C]) - ensure notice follows current tenancy [Internal]
 - **Unit 2 Anniversary:** June 1, 2026 (already passed) - verify if increase was applied [Internal]
 - **Banking:** Check if any previous increases were banked [Internal]
 

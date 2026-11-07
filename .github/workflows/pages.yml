@@ -1,8 +1,8 @@
 name: Verify published site
 
 # GitHub Pages for this repository is served from `main` (legacy branch
-# publishing, root `/`), with `index.html` redirecting to `docs/index.html`.
-# This workflow therefore only verifies; it does not deploy.
+# publishing, root `/`), with `index.html` linking to the consolidated
+# dashboard in `site2/`. This workflow only verifies; it does not deploy.
 
 on:
   push:
@@ -34,12 +34,41 @@ jobs:
           test -f docs/.nojekyll
           test -f docs/flagged.html
           test -f docs/sources.html
+          test -f site2/index.html
+          test -f site2/flagged.html
+          test -f site2/sources.html
+          test -f site2/assets/styles.css
+          test -f site2/.nojekyll
           echo "entry points present"
 
       - name: Confirm no personal identifiers in the published tree
         run: |
-          ! grep -rInE '\b(L O|V N|JP|M T|E R|I S)\b' docs/*.html docs/*/*.html docs/*/*/*.html
-          echo "no tenant initials found"
+          # Scan every published directory, not just docs/. Matches the shape
+          # of an unexpanded initial pair (single capital letters separated by
+          # a space) rather than a hard-coded list, so the identifiers
+          # themselves are not stored in this public repository.
+          if grep -rInE '(^|[^A-Za-z])[A-Z] [A-Z]([^A-Za-z]|$)' \
+               docs site site2 research dashboard portal \
+               --include='*.html' --include='*.md' --include='*.js' \
+               2>/dev/null | grep -v 'a-z A-Z'; then
+            echo "::error::Unexpanded personal initials found in the published tree."
+            exit 1
+          fi
+          echo "no unexpanded personal initials found"
+
+      # ---- consolidated dashboard (site2) ----
+      - name: Consolidated dashboard is reproducible from data/final
+        run: |
+          python3 build2/build.py
+          if ! git diff --quiet -- site2/; then
+            echo "::error::Committed site2 HTML is out of date with data/final/. Run 'python3 build2/build.py' and commit."
+            git diff --stat -- site2/
+            exit 1
+          fi
+          echo "generated site2 pages match the committed files"
+
+      - name: Consolidated dashboard verification gate
+        run: python3 tools/check2.py
 
       # ---- companion edition (docs/v2) ----
       - name: Companion edition is reproducible from data/v2

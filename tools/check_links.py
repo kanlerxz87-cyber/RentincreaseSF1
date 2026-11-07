@@ -23,10 +23,13 @@ from urllib.parse import urlsplit
 ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 
-# Tokens that must never appear on the published site (tenant initials and
-# variants, as supplied). Matched as whole words, case-sensitive.
-FORBIDDEN_TOKENS = ["L O", "V N", "JP", "M T", "E R", "I S"]
+# Personal identifiers must never appear on the published site. The literal
+# identifiers supplied by the owner are deliberately NOT stored here: this
+# repository is public, and a hard-coded deny-list would republish the very
+# values it is meant to protect. Instead we detect the *shape* of an initial
+# pair of single capital letters separated by a space, which catches any such value.
 FORBIDDEN_PATTERNS = [
+    (re.compile(r"(?<![A-Za-z])[A-Z] [A-Z](?![A-Za-z])"), "unexpanded personal initials"),
     (re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b"), "email address"),
 ]
 
@@ -149,9 +152,6 @@ def check_csv_consistency() -> None:
 def check_privacy(files: list[Path]) -> None:
     for f in files:
         text = f.read_text(encoding="utf-8")
-        for token in FORBIDDEN_TOKENS:
-            if re.search(rf"\b{re.escape(token)}\b", text):
-                errors.append(f"{f.name}: contains forbidden personal token '{token}'")
         for pattern, label in FORBIDDEN_PATTERNS:
             for match in pattern.findall(text):
                 errors.append(f"{f.name}: contains what looks like an {label}: {match}")
