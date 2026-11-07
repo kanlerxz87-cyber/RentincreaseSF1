@@ -49,7 +49,8 @@ def money(value: Decimal) -> str:
 
 
 def pct(value) -> str:
-    return "{}%".format(Decimal(str(value)).normalize())
+    """Always one decimal place, matching the Rent Board's own form (1.6%, 4.0%, 13.1%)."""
+    return "{}%".format(Decimal(str(value)).quantize(Decimal("0.1")))
 
 
 def d(s: str) -> date:
