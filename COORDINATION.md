@@ -472,7 +472,7 @@ PR #10 preserved an `integration/` edition and performed the urgent current-file
 | FI2 | Publish an anonymized assurance report and a clearly labeled residual Flagged for Review table; leave every unsupported official-confirmation value blank | done | `arena-1abdce92` | `assurance/**`, `audit/final-integration/**` |
 | FI3 | Run arithmetic, date, source-registry, table-row, internal-link, reproducible-build, and repository-wide privacy checks without weakening existing suites | done | `arena-1abdce92` | `tools/verify_assurance.py`, `.github/workflows/assurance.yml` |
 | FI4 | Log any requested corrections to the canonical hub here instead of editing another session's scope; if a completed scope is formally handed off, re-verify the corrected combined output | done | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
-| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | in progress | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | done | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
 
 **Coordination requests:** none at the narrowed claim. Any correction to `index.html`, `hub/**`, `integration/**`, or other prior scopes will first be logged here with evidence. The canonical dashboard remains the root edition published by PR #12; this session adds an independent assurance layer, not a sixth competing presentation.
 
@@ -507,3 +507,18 @@ No legacy edition is deleted. The root's prior-edition links will be labeled sup
 - **Preserved suites:** `tools/check_links.py`, companion build + `tools/check_site.py` (781 checks), `integration/verify.py` (57 rows), `dashboard/verify.py`, `audit/verify_all.py` (137 rows), and `review/build.py` + `review/verify.py` all pass without unintended generated-file changes.
 - **Concurrency:** repeated `COORDINATION.md` append conflicts were resolved by preserving every parallel addendum. The `/review/` edition and its parallel privacy repair are retained. No other session's implementation was deleted. The final-assurance CI workflow regenerates canonical and assurance output and fails on drift.
 - **Merge posture:** unresolved private facts remain prominently flagged and do not block publication; broken pages, stale generators, missing citations, arithmetic errors, privacy findings, or failed checks do block the integration PR. PR and Pages results remain to be recorded below.
+
+### PR #15 merge and GitHub Pages deployment record
+
+| Item | Confirmed result |
+|---|---|
+| Integration PR | [#15 — Correct canonical dashboard and add final assurance](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) |
+| Merge | **MERGED** 2026-11-07 at `2026-11-07T21:32:24Z`; merge commit `3fbd5e195330babacbd5e1568e287171ee4f8e93` |
+| Pre-merge status | GitHub `CLEAN` / `MERGEABLE`; all three PR workflows passed |
+| Post-merge `Verify site` | Run [42416341845](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42416341845) — `success` |
+| Post-merge `Verify published site` | Run [42416341852](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42416341852) — `success` |
+| Post-merge `Final assurance` | Run [42416341861](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42416341861) — `success` |
+| GitHub Pages | Run [42416341186](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42416341186) — build and deploy `success`; Pages API `status: built`, source `main` `/` |
+| Live content confirmation | Retrieved [canonical dashboard](https://kanlerxz87-cyber.github.io/RentincreaseSF1/), [independent assurance](https://kanlerxz87-cyber.github.io/RentincreaseSF1/assurance/index.html), and [Flagged for Review](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html) after deployment; confirmed the individual-owner effective-date license answer, 12 corrections, 23 sources, and 20 flags |
+
+The public result is the corrected canonical dashboard and assurance layer described above. Older editions remain available only as superseded archives. No unresolved private fact was filled or hidden to obtain the merge. This record is being landed in a follow-up documentation PR on the same platform-bound branch.

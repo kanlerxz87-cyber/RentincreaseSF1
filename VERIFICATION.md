@@ -111,3 +111,10 @@ The 12-row public correction register is rendered at [`assurance/index.html`](as
 The canonical [Flagged for Review](hub/flags.html) contains 20 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
 
 **No scenario is certified as notice-ready. No lawful current maximum or attorney/advocate acceptance is asserted.**
+
+## Pull request and deployment result
+
+- [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` as `3fbd5e195330babacbd5e1568e287171ee4f8e93` after all three PR workflows passed.
+- Post-merge `Verify site` run `42416341845`, `Verify published site` run `42416341852`, and `Final assurance` run `42416341861` all succeeded.
+- GitHub Pages build/deployment run `42416341186` succeeded; the Pages API reported `built` for `main` `/`.
+- The deployed root, `assurance/index.html`, and `hub/flags.html` were retrieved after deployment and confirmed to contain the corrected license answer, 12 corrections, 23 official sources, and 20 flags.
