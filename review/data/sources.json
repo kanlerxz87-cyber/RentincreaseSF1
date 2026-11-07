@@ -1,0 +1,100 @@
+[
+  {
+    "id": "S01",
+    "title": "SF.gov — Learn about rent increases in San Francisco",
+    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+    "agency": "San Francisco Rent Board",
+    "used_for": "1.6% rate (effective 3/1/2026–2/28/2027), 30/90-day notice rule, banking rule, no extra charge for additional occupants."
+  },
+  {
+    "id": "S02",
+    "title": "SF.gov — The Rent Board Housing Inventory (FAQ)",
+    "url": "https://www.sf.gov/rent-board-housing-inventory",
+    "agency": "San Francisco Rent Board",
+    "used_for": "All residential owners (including individuals / small buildings) must report; reporting a tenant-occupied unit auto-generates a rent-increase license; license must be in effect on the effective date; deadline March 1; no monetary late penalty but unlicensed increases are unenforceable."
+  },
+  {
+    "id": "S03",
+    "title": "SF.gov — New Legislation Creates A Housing Inventory And Requires Owners To Obtain a License Before Imposing Annual/Banked Rent Increases (Ordinance 265-20, eff. 1/18/2021)",
+    "url": "https://www.sf.gov/news--new-legislation-creates-housing-inventory-and-requires-owners-obtain-license-imposing",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Effective dates (7/1/2022 for 10+ units; 3/1/2023 for condos and 1–9 unit buildings); license suspension during noncompliance."
+  },
+  {
+    "id": "S04",
+    "title": "SF.gov — Annual Rent Increase for 3/1/26 – 2/28/27 Announced (1.6%)",
+    "url": "https://www.sf.gov/news--annual-rent-increase-3126-22827-announced",
+    "agency": "San Francisco Rent Board",
+    "used_for": "1.6% current allowable increase; 1.4% prior year."
+  },
+  {
+    "id": "S05",
+    "title": "SF.gov — Current Rates, including Rent Increase, Relocation, Sec. Deposit",
+    "url": "https://www.sf.gov/reports--current-rates-including-rent-increase-relocation-sec-deposit",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Published rate table and Form 571 link."
+  },
+  {
+    "id": "S06",
+    "title": "SF.gov — Form 571 Allowable Annual Increases (2026–2027, English)",
+    "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Year-by-year allowable rates used for banking calculations."
+  },
+  {
+    "id": "S07",
+    "title": "California Civil Code § 827 — Notice of rent increase (state notice periods)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV",
+    "agency": "California Legislative Information",
+    "used_for": "30-day notice for ≤10%, 90-day notice for >10%; service by mail under CCP §1013."
+  },
+  {
+    "id": "S08",
+    "title": "California Code of Civil Procedure § 1013 — Service by mail (+5 days in-state)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP",
+    "agency": "California Legislative Information",
+    "used_for": "Additional 5 calendar days when a notice is mailed within California."
+  },
+  {
+    "id": "S09",
+    "title": "California Civil Code § 1947.12 — Tenant Protection Act (state rent cap)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV",
+    "agency": "California Legislative Information",
+    "used_for": "Statewide 5%+CPI cap (max 10%) — preempted for units already covered by a stricter local ordinance (SF rent control is stricter)."
+  },
+  {
+    "id": "S10",
+    "title": "California Government Code § 12955 — Fair Employment and Housing Act (FEHA, discrimination)",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=12955&lawCode=GOV",
+    "agency": "California Legislative Information",
+    "used_for": "Protected classes under state law (source of income, immigration status, etc., added locally in SF). Discriminatory rent terms are unlawful."
+  },
+  {
+    "id": "S11",
+    "title": "42 U.S.C. § 3604 — Federal Fair Housing Act",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+    "agency": "U.S. Government Publishing Office",
+    "used_for": "Federal prohibition on discriminatory terms and conditions; no federal rent ceiling for private market housing."
+  },
+  {
+    "id": "S12",
+    "title": "SF Rent Board Portal (Housing Inventory / License lookup / fee payment)",
+    "url": "https://portal.sfrb.org/",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Where individual owners file the Housing Inventory and obtain the rent-increase license; tenants can verify license status here too."
+  },
+  {
+    "id": "S13",
+    "title": "SF.gov — Rent Board Fee information",
+    "url": "https://www.sf.gov/information/rent-board-fee",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Annual Rent Board fee is $59 per dwelling unit (2026–27); separate from the license; 50% may be recoverable from tenants as a fee passthrough (not as rent)."
+  },
+  {
+    "id": "S14",
+    "title": "SF Rent Board Rules and Regulations, Part 4 — Annual Increases (banking Rule 4.12)",
+    "url": "https://www.sf.gov/information/rules-and-regulations",
+    "agency": "San Francisco Rent Board",
+    "used_for": "Banking: unused increases are added, not compounded; anniversary-date rules; banking look-back period (12 months per Rule 4.12(a))."
+  }
+]

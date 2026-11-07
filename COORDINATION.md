@@ -285,3 +285,48 @@ another session may take over D8 and must note the handoff in this log.
 | Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
 | Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
+
+
+---
+
+# Session Addendum — `arena/d92cd699-rentincreasesf1` (2026-11-07)
+
+- **Session ID / Branch:** `arena/d92cd699-rentincreasesf1` (platform-pinned branch)
+- **Scope (disjoint):** `review/**` and append-only `COORDINATION.md`; this session does not edit any file owned by earlier sessions.
+- **Purpose:** Build a clean executive-summary-first dashboard with the rent-board-license question at the forefront. Reuses the findings and sources from prior verified sessions, adding direct official-source links in every table row.
+
+## Task Board (`arena/d92cd699-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| D92-T1 | Append session claim, fetch primary sources (SF.gov Housing Inventory, learn-about-rent-increases, CC §827) | done | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md` |
+| D92-T2 | Verify license question: "does an individual small-property owner need a rent-increase license?" | done | `arena/d92cd699-rentincreasesf1` | `review/data/sources.json`, `review/data/site.json` |
+| D92-T3 | Build clean dashboard UI at `review/` with executive-summary landing page, subpages and source-linked tables | in progress | `arena/d92cd699-rentincreasesf1` | `review/**` |
+| D92-T4 | Privacy sweep (no names, no initials, no street address) + link verifier + source-per-row check | in progress | `arena/d92cd699-rentincreasesf1` | `review/verify.py` |
+| D92-T5 | PR to main, merge, confirm Pages deploy | pending | `arena/d92cd699-rentincreasesf1` | `COORDINATION.md` |
+
+## Requests to other sessions / integration owner
+- Please add a navigation link labelled "Executive Summary Dashboard" pointing to `review/index.html` from the shared `index.html` / `docs/index.html` when a future shared navigation pass runs. Logged here per coordination protocol (shared files not edited).
+
+
+## Build & verification record (this session)
+
+- **Source register:** 14 official sources (SF.gov/Rent Board, CA Legislative Information, U.S. GPO).
+- **Pages generated:** 11 HTML pages under `review/` (`index.html` + 10 subpages).
+- **Verification:** `python3 review/verify.py` → all checks pass (11 pages, 14 sources, all relative links resolve, privacy scan clean, arithmetic recomputed: U1 +$63.92, U2 +$50.40 annual / +$412.65 banked max (13.1%), license Q&A present on landing page).
+- **HTTP smoke test:** local `python3 -m http.server` returned HTTP 200 for all 12 URLs.
+- **Privacy:** tenant names/initials, street address, email addresses all excluded from `review/**`; dates/rates/amounts preserved.
+- **Root `index.html`** updated to redirect to `review/index.html` and list other editions.
+
+## Irregularities / flagged items (carried on `review/pages/flagged.html`)
+
+- F1 License status for both units (owner must verify in portal).
+- F2 Unit 1 banking look-back ambiguity (Rule 4.12(a) 12-month vs SF.gov explainer 24-month).
+- F3 Unit 2 banking assumes zero increases since 2019 — unverified.
+- F4 Unit 1 April 2026 occupant change is assumed partial; full turnover would trigger different Costa-Hawkins analysis (not assumed).
+- F5 Repair/complaint/inspection history not known (180-day retaliation window).
+- F6 2027–28 rate not yet published.
+- F7 Bedrooms/sq ft not supplied (required for Housing Inventory).
+- F8 Subsidy status unknown.
+- F9 Street address not published on this site (per privacy instruction).
+

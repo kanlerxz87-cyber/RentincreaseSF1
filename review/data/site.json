@@ -1,0 +1,189 @@
+{
+  "case": {
+    "location": "San Francisco, Outer Sunset, ZIP 94122",
+    "building_year": 1940,
+    "units_covered": true,
+    "coverage_basis": "Certificate of occupancy issued before 6/13/1979 → covered by SF Rent Ordinance (Admin. Code Ch. 37).",
+    "owner_type": "Individual property owner (not a corporation)",
+    "privacy_note": "All tenant names/initials and the street address are replaced with placeholders. Dates, rents, and percentages are stated exactly as supplied."
+  },
+  "units": [
+    {
+      "id": "U1",
+      "placeholder": "Unit 1",
+      "last_lease_start": "2025-02-01",
+      "initial_rent": 3995.00,
+      "current_rent": 3995.00,
+      "current_rent_date": "2026-04-01",
+      "tenant_status": "Continuing tenancy; partial occupant change in April 2026 (original tenants retained possession; one new occupant added). No rent change at that time.",
+      "anniversary_date": "February 1 (annual)"
+    },
+    {
+      "id": "U2",
+      "placeholder": "Unit 2",
+      "last_lease_start": "2019-06-01",
+      "initial_rent": 3150.00,
+      "current_rent": 3150.00,
+      "current_rent_date": "as supplied",
+      "tenant_status": "Two continuing tenants (placeholders); no recorded increases since tenancy began.",
+      "anniversary_date": "June 1 (annual)"
+    }
+  ],
+  "license_qa": [
+    {
+      "question": "Do I, as an individual small-property owner (not a corporation), need to apply for a rent-increase license / inform the Rent Board before notifying tenants of a rent increase?",
+      "short_answer": "Yes — absolutely. The Housing Inventory reporting requirement and rent-increase license apply to ALL owners of residential property in San Francisco, including individuals and buildings with fewer than 10 units. There is no individual/small-owner exemption.",
+      "detail": "Per the SF Rent Board: 'If you own residential property, you are required to report into the Housing Inventory online through the Rent Board Portal. Property owners who have tenants will receive a rent increase license after the submission.' For buildings with fewer than 10 residential units (which covers this 2-unit building), the requirement took effect March 1, 2023. The license must be in effect on the effective date of the increase. An increase imposed while unlicensed is null and void, regardless of whether the percentage arithmetic is correct. Licenses are issued automatically when you report a tenant-occupied unit — there is no separate 'application' beyond the Housing Inventory filing.",
+      "sources": ["S02", "S03", "S01"]
+    },
+    {
+      "question": "Does being an individual (not a corporation) change whether I need the license?",
+      "short_answer": "No. The rule draws no individual-vs-corporation distinction. The threshold is building size (10+ units started 7/1/2022; 1–9 units and condos started 3/1/2023), not owner entity type.",
+      "detail": "Individual owners of 2-unit, 3-unit, single-family-home and condo rentals all must report by March 1 each year. Corporate/LLC ownership matters for OTHER exemptions (e.g., the Costa-Hawkins single-family-home exemption is unavailable to certain corporate owners), but it does not affect the licensing requirement.",
+      "sources": ["S02", "S03"]
+    },
+    {
+      "question": "Is there a separate license application, or is reporting to the Housing Inventory enough?",
+      "short_answer": "Reporting is what generates the license. There is no separate 'rent-increase license application.'",
+      "detail": "The Rent Board states: 'Once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units.' You confirm the license is in effect before serving notice. You do not need to attach the license to the tenant notice.",
+      "sources": ["S02"]
+    },
+    {
+      "question": "What happens if I serve a notice without an active license?",
+      "short_answer": "The entire increase is null and void. The tenant is not obligated to pay it, and any overpayment is recoverable by the tenant.",
+      "detail": "Per Ordinance §37.15(d)–(e): during any period of noncompliance the license is suspended, and an annual or banked increase imposed in that period is unenforceable. This applies even if the percentage and notice period are correct.",
+      "sources": ["S03", "S02"]
+    }
+  ],
+  "steps": [
+    {
+      "step": 1,
+      "title": "File / update the Rent Board Housing Inventory for both units",
+      "how": "Log in to the Rent Board Portal (https://portal.sfrb.org/) and confirm both units are reported as non-owner-occupied (tenant-occupied), with the required fields (bedrooms/bathrooms, approximate sq ft, occupancy date, base rent in $250 increments, utilities, owner/manager contact). Do this BEFORE the increase effective date. Annual deadline is March 1; late filing is accepted but the license only exists from the point of compliance.",
+      "sources": ["S02", "S03", "S12"]
+    },
+    {
+      "step": 2,
+      "title": "Confirm the rent-increase license is active for each unit",
+      "how": "In the Rent Board Portal, verify the license status for both units shows active for the date the increase will take effect. Tenants can also search this portal, so expect them to verify.",
+      "sources": ["S02", "S12"]
+    },
+    {
+      "step": 3,
+      "title": "Pay the annual Rent Board fee ($59 per dwelling unit for 2026–27)",
+      "how": "Pay through the portal by March 1. This is separate from the license. Up to 50% may be recoverable from tenants as a fee passthrough (not as rent), using the Board's passthrough procedure.",
+      "sources": ["S13"]
+    },
+    {
+      "step": 4,
+      "title": "Calculate the increase using the published percentage in effect on the effective date (NOT the date you serve notice)",
+      "how": "Through 2/28/2027 the rate is 1.6%. Multiply base rent × 0.016. Do NOT round up. Add banked amounts from prior eligible years that were never used (added, never compounded). A new rate will be published for effective dates on/after 3/1/2027.",
+      "sources": ["S01", "S04", "S05", "S06", "S14"]
+    },
+    {
+      "step": 5,
+      "title": "Determine the notice period",
+      "how": "30 days' written notice for an increase of 10% or less; 90 days' written notice if the increase (alone or combined with other increases in the prior 12 months) exceeds 10%. Add 5 calendar days if served by mail within California (CCP §1013).",
+      "sources": ["S01", "S07", "S08"]
+    },
+    {
+      "step": 6,
+      "title": "Prepare a written notice that states the dollar amount, percentage, effective date, and itemises any banked amounts by year",
+      "how": "The SF Rent Board guidance says the notice should state the dollar amount, the percentage, and the effective date. Best practice (and the safer choice under tenant-lawyer scrutiny) is to also itemise which portion is the current annual allowance and which portion is banked, and to identify each banked year. Failure to itemise banking is a common tenant-petition ground even though Rule 4.10(b)/4.12(b) say omission does not automatically void an otherwise-within-cap increase.",
+      "sources": ["S01", "S14"]
+    },
+    {
+      "step": 7,
+      "title": "Serve the notice (personal delivery or mail)",
+      "how": "Personal delivery OR mail per CCP §1013 (add 5 days for CA mail). Keep proof of service. Consider a brief neutral cover letter that (a) cites the Rent Board rate and the unit's anniversary date, (b) shows the arithmetic, (c) notes the tenant's right to call the Rent Board (415-252-4600) for free verification, (d) does not demand agreement or waiver of rights.",
+      "sources": ["S07", "S08"]
+    },
+    {
+      "step": 8,
+      "title": "After the effective date, accept rent at the new amount and maintain records",
+      "how": "Keep the notice, proof of service, license confirmation, rate sheet, and banking worksheet in the tenancy file. If a tenant files a petition, respond factually and on time.",
+      "sources": ["S01", "S14"]
+    }
+  ],
+  "allowable_increases": [
+    {
+      "unit": "U1",
+      "anniversary": "Feb 1",
+      "current_rate_period": "1.6% (3/1/2026 – 2/28/2027)",
+      "annual_only_increase_pct": "1.6%",
+      "annual_only_dollars": "$63.92",
+      "new_rent_annual_only": "$4,058.92",
+      "banked_available": "1.4% from 2/1/2026 anniversary is NOT yet banked as of 2/1/2027 under Rule 4.12(a) (12-month waiting period) — flagged for review",
+      "lawful_max_before_petition": "1.6% (annual only) until the banking look-back question is resolved",
+      "notice_required": "30 days (35 if mailed)",
+      "latest_service_date_for_2_1_2027_effective": "1/2/2027 (personal) / 12/28/2026 (mail) — recompute before serving",
+      "sources": ["S01", "S04", "S05", "S06", "S14", "S07", "S08"]
+    },
+    {
+      "unit": "U2",
+      "anniversary": "Jun 1",
+      "current_rate_period": "1.6% (3/1/2026 – 2/28/2027)",
+      "annual_only_increase_pct": "1.6%",
+      "annual_only_dollars": "$50.40",
+      "new_rent_annual_only": "$3,200.40",
+      "banked_available": "1.8% + 0.7% + 2.3% + 3.6% + 1.7% + 1.4% = 11.5% across 2020–2025 anniversaries (if no prior increase was ever served — unverified, flagged)",
+      "lawful_max_before_petition": "13.1% total (11.5% banked + 1.6% current) = $412.65 → new rent $3,562.65. NOTE: because this exceeds 10%, 90-day notice is required.",
+      "notice_required": "90 days (95 if mailed) because total > 10%",
+      "latest_service_date_for_2_28_2027_effective": "11/30/2026 (personal) / 11/25/2026 (mail)",
+      "sources": ["S01", "S04", "S05", "S06", "S14", "S07", "S08"]
+    }
+  ],
+  "rate_history": [
+    {"period": "3/1/2019 – 2/29/2020", "rate": "2.6%", "note": "Not bankable for Unit 2 (first increase can't be until 12 months after 6/1/2019 lease start = 6/1/2020).", "sources": ["S06", "S01"]},
+    {"period": "3/1/2020 – 2/28/2021", "rate": "1.8%", "note": "Bankable for Unit 2 from 6/1/2021.", "sources": ["S06", "S14"]},
+    {"period": "3/1/2021 – 2/28/2022", "rate": "0.7%", "note": "Bankable for Unit 2.", "sources": ["S06", "S14"]},
+    {"period": "3/1/2022 – 2/28/2023", "rate": "2.3%", "note": "Bankable for Unit 2.", "sources": ["S06", "S14"]},
+    {"period": "3/1/2023 – 2/29/2024", "rate": "3.6%", "note": "Bankable for Unit 2 (post-license requirement).", "sources": ["S06", "S03", "S14"]},
+    {"period": "3/1/2024 – 2/28/2025", "rate": "1.7%", "note": "Bankable for Unit 2; in effect at Unit 1 lease start (2/1/2025).", "sources": ["S06", "S14"]},
+    {"period": "3/1/2025 – 2/28/2026", "rate": "1.4%", "note": "Bankable for Unit 2; Unit 1's first-anniversary rate (banking eligibility depends on look-back period — flagged).", "sources": ["S04", "S06", "S14"]},
+    {"period": "3/1/2026 – 2/28/2027", "rate": "1.6%", "note": "Current published rate.", "sources": ["S04", "S05", "S01"]},
+    {"period": "3/1/2027 – 2/29/2028", "rate": "", "note": "Not yet published as of 11/7/2026 — flagged.", "sources": ["S05"]}
+  ],
+  "discrimination": {
+    "summary": "You are NOT required to raise both units by the same amount or to raise both units at all. But differences between units must rest on neutral, documented, non-protected reasons (anniversary date, base rent, banked history, lease start date, capital-improvement petitions). A difference motivated by a protected characteristic — race, national origin, religion, sex, gender identity/expression, sexual orientation, familial status, disability, marital status, source of income, age, immigration status — or by retaliation within 180 days of a repair complaint or agency contact, is unlawful under FEHA, the SF Rent Ordinance, and the federal Fair Housing Act.",
+    "practical_recommendation": "Applying the published annual rate on each unit's anniversary date, with banked amounts applied in a transparent, year-by-year schedule, is the most defensible uniform practice. It produces lawful differences in dollar amount between units because base rents and banked years differ. Apply and document the same policy to both units; do not vary treatment based on who the tenants are, their household composition, or whether they asserted rights.",
+    "sources": ["S10", "S11"]
+  },
+  "practices": {
+    "corporate_landlords": "Large corporate owners and REITs typically: (1) centralise Housing Inventory filings through property-management software and confirm license status before every notice; (2) apply the annual published percentage on every anniversary across their portfolio, banking and drawing down per Rules 4.10–4.12; (3) use standard written notices served by mail with proof of service; (4) pursue capital-improvement and operating-and-maintenance petitions where justified; (5) maintain detailed rent ledgers; (6) avoid algorithmic 'revenue-management' tools that rely on non-public competitor data — San Francisco Administrative Code §37.10C prohibits that practice. NOTE: Specific corporate practices are described from public regulatory materials; no proprietary corporate data is used.",
+    "individual_sf_owners": "Individual owners in San Francisco typically: (1) file the Housing Inventory themselves through the Rent Board Portal each March; (2) give the annual allowable increase (1.6% this year) on or shortly after the anniversary date; (3) either use banked increases modestly or phase them rather than impose the entire banked amount in one jump (for tenant-relations and to avoid the 90-day-notice trigger at >10%); (4) keep a simple worksheet showing each year's rate and whether it was taken; (5) consult the Rent Board's free counseling line or a tenant/landlord attorney when anything is unusual (roommate changes, passthroughs, O&M petitions).",
+    "sources": ["S02", "S03", "S01"]
+  },
+  "lawyer_scrutiny_checklist": [
+    {"check": "License active on the effective date for both units?", "status": "Owner must confirm in Rent Board Portal — flagged, unverified", "sources": ["S02", "S12"]},
+    {"check": "Percentage used is the one in effect on the effective date (1.6% through 2/28/2027)?", "status": "Pass if followed", "sources": ["S01", "S04"]},
+    {"check": "Calculation done on base rent only (not on passthroughs); no rounding up?", "status": "Pass if followed", "sources": ["S01"]},
+    {"check": "Banking added, not compounded, and itemised by year?", "status": "Pass if followed", "sources": ["S14"]},
+    {"check": "Notice period correct (30/90 days) and +5 days added if mailed?", "status": "Pass if followed", "sources": ["S01", "S07", "S08"]},
+    {"check": "No increase imposed for the new occupant (roommate) in Unit 1?", "status": "Required — charging extra for an additional occupant is an unlawful rent increase under SF Rent Ordinance", "sources": ["S01"]},
+    {"check": "No recent (≤180 days) repair complaints, Rent Board petitions, or good-faith repair requests that would make the increase retaliatory?", "status": "Owner must verify against maintenance log — flagged", "sources": ["S01"]},
+    {"check": "No discriminatory pattern (e.g., larger increase on one unit for a protected reason or for asserting rights)?", "status": "Pass if uniform written policy is applied", "sources": ["S10", "S11"]},
+    {"check": "Notice in writing, served properly, with dollar amount, percentage, and effective date?", "status": "Pass if followed", "sources": ["S01", "S07"]},
+    {"check": "Unit is in fact rent-controlled (built 1940; no owner-move-in or other exemption claimed)?", "status": "Built 1940 → covered; confirm no exemption applies", "sources": ["S01"]}
+  ],
+  "reasonable_reasons": [
+    {"reason": "Annual allowable increase per the Rent Board's published CPI-based percentage", "is_lawful": true, "note": "The standard, expected, tenant-lawyer-reviewed reason; no further justification needed.", "sources": ["S01", "S04"]},
+    {"reason": "Imposition of previously banked (unused) annual increases", "is_lawful": true, "note": "Lawful when calculated additively and itemised; >10% total triggers 90-day notice.", "sources": ["S01", "S14"]},
+    {"reason": "Petition-based capital-improvement passthrough", "is_lawful": true, "note": "Requires filing a Rent Board petition; not added to base rent for future % calculations; amortised per Rules.", "sources": ["S01"]},
+    {"reason": "Operating-and-maintenance (O&M) petition", "is_lawful": true, "note": "Capped at 7% and subject to Rent Board approval.", "sources": ["S01"]},
+    {"reason": "'Catching up to market'", "is_lawful": false, "note": "Not a lawful reason for a sitting tenant in a rent-controlled unit.", "sources": ["S01"]},
+    {"reason": "New roommate / additional occupant in Unit 1", "is_lawful": false, "note": "SF explicitly forbids charging additional rent just because an additional occupant moved in with an existing tenant.", "sources": ["S01"]},
+    {"reason": "Punitive increase because a tenant asked for repairs or filed a complaint", "is_lawful": false, "note": "Unlawful retaliation under state and local law within the protected period.", "sources": ["S01"]}
+  ],
+  "flags": [
+    {"id": "F1", "flag": "Rent-increase license status for both units is unverified (must be confirmed in the Rent Board Portal before serving notice).", "sources": ["S02", "S12"]},
+    {"id": "F2", "flag": "Unit 1 banking look-back: Rule 4.12(a) uses a 12-month test while an SF.gov explainer page refers to 24 months. Conservative approach: do not claim the 1.4% (2025–26) as banked for a 2/1/2027 increase until a Rent Board counselor confirms; use the annual 1.6% only.", "sources": ["S01", "S14"]},
+    {"id": "F3", "flag": "Unit 2 banking total of 11.5% assumes NO rent increase has been served since 6/1/2019. If any increase was actually served in that period, that year's percentage is not bankable and the total must be recomputed.", "sources": ["S14"]},
+    {"id": "F4", "flag": "The April 2026 occupant change in Unit 1 is described as a partial change (original tenants retained). If it was instead a full tenant turnover (new master tenants / new lease), Costa-Hawkins could permit market-rate reset — but that is NOT the scenario described and is not assumed.", "sources": ["S09"]},
+    {"id": "F5", "flag": "Repair/complaint/inspection history for the prior 180 days is not known; an increase served within that window after protected activity can be challenged as retaliatory.", "sources": ["S01"]},
+    {"id": "F6", "flag": "The 3/1/2027 – 2/29/2028 allowable rate has not yet been published as of 11/7/2026; any effective date on or after 3/1/2027 must use that new rate.", "sources": ["S05"]},
+    {"id": "F7", "flag": "Bedroom count and square footage for both units not supplied; required fields in the Housing Inventory filing.", "sources": ["S02"]},
+    {"id": "F8", "flag": "Whether any tenant has a subsidy (e.g., Section 8) is not supplied; subsidy tenancies have additional rules.", "sources": []},
+    {"id": "F9", "flag": "No street address appears on this site, per the privacy instruction. The owner must use the correct APN and unit number when filing in the portal.", "sources": []}
+  ]
+}
