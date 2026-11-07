@@ -1,64 +1,113 @@
-# Verification record
+# Final integration verification record
 
-Retrieval date for every source: **2026-11-06**.
+**Verification date:** 2026-11-07
+**Canonical edition:** root `index.html` + `hub/`
+**Independent assurance:** `assurance/` + `audit/final-integration/`
+**Branch:** `arena/1abdce92-rentincreasesf1`
 
-## 1. What was checked, and how
+## Scope and evidentiary standard
 
-| # | Check | Method | Result |
-|---|---|---|---|
-| 1 | Every source URL resolves and says what is claimed | Each URL fetched and the relevant text read on 2026-11-06; the specific point relied on is recorded per source in `data/sources.json` (`verified` field) and `SOURCES.md` | 37/37 fetched and read |
-| 2 | Values transcribed, not recalled | Values copied from the fetched text of the statute/agency page; no value taken from memory or from a search-result snippet alone | Done |
-| 3 | Historical rate table | Transcribed cell by cell from the Rent Board's official PDF `571 Allowable Annual Increases 26-27`; the three most recent years cross-checked against two other Rent Board pages | 46 rows match; 3 recent years confirmed independently |
-| 4 | Everything in the "used" years adds up | `tools/check_site.py` sums the AGA rows flagged for each unit and compares to the stated totals (3.0%, 13.1%) | Pass |
-| 5 | Every dollar figure recomputes | `tools/check_site.py` recomputes increase = current rent × total %, and new rent = current + increase, for every scenario | Pass |
-| 6 | Blank means blank | Any row with a blank percentage must have blank dollar amounts; unverified cells carry an explicit marker | Pass |
-| 7 | One source link per table row | `tools/check_site.py` walks every `<tr>` in every table; a row must carry a source link or an explicit unverified marker | Pass (693 checks, 0 errors) |
-| 8 | Every registered source is actually linked on the site | URL presence check against rendered HTML | Pass |
-| 9 | No inline reference to an unknown source | Regex on rendered output vs. the register | Pass |
-| 10 | Internal links and anchors | Every `href` resolved against the generated files and every `#anchor` resolved against the target page's ids | Pass |
-| 11 | Table integrity | Column count of every row checked against its header row | Pass |
-| 12 | Privacy | Six known personal-name strings searched across all output pages | Pass — none present |
-| 13 | Site serves | All 12 pages plus the stylesheet return HTTP 200 from a local server; no external JS, CSS or font requests | Pass |
+The final audit read the canonical data and generated prose, re-fetched official material, corrected overstatements in the existing generator, regenerated the site, and independently recomputed every scenario and service date. Earlier editions remain preserved as superseded archives; this record does not claim that every historical sentence was re-certified.
 
-Reproduce with:
+Evidence classes are kept separate:
+
+1. **Official rule/rate:** directly supported by one of the 23 registered official sources.
+2. **Owner-brief input:** a date or amount supplied for the two units, not an official record.
+3. **Conditional arithmetic:** reproducible calculation on an owner-brief input and an official percentage.
+4. **Official confirmation:** private license, parcel, lease, or ledger evidence that was unavailable; the public cell is blank and flagged.
+
+No personal identity is used in the current site or verification data.
+
+## Official-source verification
+
+All **23/23** registered sources were retrieved and read from their official publishers on 2026-11-07. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+
+Notable checks:
+
+- Individual-owner reporting and effective-date license gate: [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) + [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
+- Current 1.6% rate and all historical rates: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
+- Banking and notice text, including Rule 4.12(b)’s express non-void provision: [Rules Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring).
+- Fixed-term limitation: [California Tenants guide](https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf).
+- Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
+- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV).
+- Corporate-practice example, accurately labeled as allegations/proposed settlement: [DOJ RealPage announcement](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and).
+
+Official Rent Board worked-example year-label errors were not copied. Form 571 controls every rate period; the discrepancies are public as H-19.
+
+## Arithmetic independently recomputed
+
+| Scenario | Formula | Increase | Illustrative new rent | Official rate source |
+|---|---|---:|---:|---|
+| Unit 1 annual-only | $3,995.00 × 1.6% | $63.92 | $4,058.92 | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) |
+| Unit 1 combined | $3,995.00 × (1.4% + 1.6%) | $119.85 | $4,114.85 | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) + [Rule 4.12](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) |
+| Unit 2 annual-only | $3,150.00 × 1.6% | $50.40 | $3,200.40 | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) |
+| Unit 2 combined | $3,150.00 × (1.8% + 0.7% + 2.3% + 3.6% + 1.7% + 1.4% + 1.6%) | $412.65 | $3,562.65 | [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) + [Rule 4.12](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring) |
+
+Percentages are added, not compounded, and not rounded up. Unit 2 has six **potentially banked** components plus current annual 1.6%, not seven banked increases. The Unit 2 input is only the supplied 2019 lease-start rent; current base and no-prior-increase history are not verified.
+
+Service-date subtraction was independently checked:
+
+| Scenario | Effective date | Personal service | California mail | Official basis |
+|---|---|---|---|---|
+| Unit 1 annual or combined | 2027-02-01 | 2027-01-02 (30 days) | 2026-12-28 (35 days) | [§827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP) |
+| Unit 2 annual-only | 2027-02-28 | 2027-01-29 (30 days) | 2027-01-24 (35 days) | Same statutes |
+| Unit 2 combined | 2027-02-28 | 2026-11-30 (90 days) | 2026-11-25 (95 days) | Same statutes |
+
+These are scenario calculations, not universal last-safe dates or legal clearance.
+
+## Automated and local gates
+
+Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
+
+| Check | Result at verification |
+|---|---|
+| `python3 hub/build.py` | Root and eight hub pages regenerated |
+| `python3 assurance/build.py` | Assurance page and 23-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,336 checks; 0 errors**; 194 claim-table rows with source/flag links |
+| `python3 tools/verify_assurance.py` | **1,556 checks; 0 errors**; 33 assurance rows with official sources |
+| Current-text privacy scan | **170 files; no forbidden personal token** |
+| `git diff --check` | No whitespace errors |
+
+The canonical verifier checks internal links/anchors, navigation, source registry completeness and use, every claim-table row’s source/flag citation, official dollar/rate traceability, service dates, placeholders, corrected categorical-label regressions, required flags, and explicit official-confirmation blanks.
+
+The independent verifier additionally checks all canonical and assurance links, assurance-row sources, official-host allowlisting, manifest agreement, private-input caveats, conditional Unit 2 components, stale-overstatement absence, required blank cells, and current-text privacy across the repository.
+
+CI reproduces both builds and fails on stale output through [`.github/workflows/assurance.yml`](.github/workflows/assurance.yml).
+
+## Preserved legacy suites
+
+The following existing checks are retained and run during integration:
 
 ```bash
+python3 tools/check_links.py
 python3 build/build.py && python3 tools/check_site.py
+python3 integration/verify.py
+python3 dashboard/verify.py
+python3 audit/verify_all.py
+python3 review/build.py && python3 review/verify.py
 ```
 
-## 2. Sources that were checked and then **not** relied on
+Passing an archived edition’s own suite does not mean every archived legal statement was accepted into the canonical edition. Corrections and their official bases are enumerated in [`audit/final-integration/findings.json`](audit/final-integration/findings.json).
 
-| Source | What happened |
-|---|---|
-| Several commercial SF rent-increase calculators and blogs | Publish **1.7%** for 3/1/26–2/28/27. The Rent Board's pages and official PDF both say **1.6%**; 1.7% is the figure for 3/1/24–2/28/25. Excluded from all calculations. Recorded as FLAG-11. |
-| ReLISTO blog | Fetched in full. Agrees on 1.6% and on the missing October 2025 CPI as the reason for the estimated figure. It does **not** describe how owners set rents, so an earlier draft claim that it did was removed. Retained only as corroboration of 1.6%. |
-| U.S. Census data API | Returned `Missing Key` for every query. No Census figure used. |
-| HUD Fair Market Rent documentation system | The interactive lookup returned empty/placeholder output for the area parameters reachable in this session. No FMR figure used. Recorded as FLAG-05. |
-| HUD Fair Housing Act overview (first attempt) | The URL in an earlier draft redirected to the HUD home page. Replaced with `hud.gov/helping-americans/fair-housing-act-overview`, which was fetched and read. |
-| `sf.gov/information--tenant-harassment` | 404 on fetch. Replaced with the actual ordinance text at `sf.gov/information--sec-3710b-tenant-harassment`. |
-| `sf.gov/information/sec-373-rent-increases` | 404 on fetch. Correct path is `sf.gov/information/sec-373-rent-limitations`. |
+## Corrections made by the final audit
 
-## 3. Irregularities found (full detail on the site's Flagged for Review page)
+The 12-row public correction register is rendered at [`assurance/index.html`](assurance/index.html). It covers:
 
-| ID | Severity | Irregularity |
-|---|---|---|
-| FLAG-01 | medium | Building year (1940) is owner-supplied; not confirmed against Assessor or Planning records |
-| FLAG-02 | high | Unit 1 anniversary date ambiguous between Feb 1 and Apr 1 after the April 2026 tenant change at unchanged rent |
-| FLAG-03 | high | Assumption that Unit 2 has had no increase since 2019 — the 13.1% depends entirely on it |
-| FLAG-04 | high | Unit 2's 13.1% maximum expires 2027-02-28; the 2027–28 rate is unpublished |
-| FLAG-05 | low | No verified ZIP-level market rent obtained; none used anywhere |
-| FLAG-06 | medium | Whether $3,995 / $3,150 are entirely base rent is unconfirmed |
-| FLAG-07 | medium | Whether the added Unit 1 tenant is a co-tenant or subtenant is unknown |
-| FLAG-08 | low | No sourced description of how large or individual owners actually set rents |
-| FLAG-09 | high | Rent increase licence status unknown; without it the increase is unenforceable |
-| FLAG-10 | medium | No facts on complaints, inspections, organising or buyout discussions |
-| FLAG-11 | low | Third-party **1.7%** vs official **1.6%** for the same period |
-| FLAG-12 | low | The 1.6% rate is itself an estimate because October 2025 CPI was never published |
-| FLAG-13 | low | Tenant names held internally; no name map in the repository |
+- effective-date versus notice-date license timing;
+- Unit 2 lease-start versus current-base labeling;
+- Unit 1 fixed-term contingency;
+- reconciliation of banking measuring points;
+- Rule 4.10/4.12 notice exceptions;
+- fact-specific retaliation and repair analysis;
+- limits of free-representation claims;
+- fair-housing neutrality without safe-harbour claims;
+- accurately bounded corporate-practice evidence;
+- official worked-example year errors;
+- separation of Rent Board Fee recovery from license/base rent;
+- blank market-normal and owner-behavior values.
 
-## 4. Statement of limits
+## Remaining limitations
 
-- This is an analysis of public law, not legal advice.
-- Every figure depends on the owner's own rent history being complete; that history was not available.
-- Coverage was accepted from the stated 1940 construction date; the certificate-of-occupancy date and dwelling-unit count were not independently confirmed.
-- The 2027–28 allowable increase had not been announced as of 2026-11-06 and is left blank wherever it would appear.
+The canonical [Flagged for Review](hub/flags.html) contains 20 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
+
+**No scenario is certified as notice-ready. No lawful current maximum or attorney/advocate acceptance is asserted.**

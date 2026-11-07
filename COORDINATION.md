@@ -456,3 +456,54 @@ with `tools/verify_hub.py`; published in the follow-up record PR. No figure chan
 | Published URL (primary entry) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> (hub/ integrated dashboard) |
 | Published URL (this edition) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/review/index.html> |
 
+---
+
+# Independent Final Assurance Addendum — `arena-1abdce92` (2026-11-07)
+
+**Platform-bound branch:** `arena/1abdce92-rentincreasesf1`. This session initially claimed a broad final-integration scope before parallel PRs #10, #11, and #12 appeared on `origin/main`. The rebase conflict in this file is resolved by retaining every earlier section and replacing only this session's own addendum with the narrowed, disjoint scope below. No other session's work is discarded.
+
+## Concurrent-work handoff and revised claim
+
+PR #10 preserved an `integration/` edition and performed the urgent current-file privacy redaction; PR #12 preserved that work and published the root dashboard backed by `hub/**`. Both now report completion. This session withdraws its initial overlapping claims to their files. It will independently audit the combined result and publish any residual findings in a new assurance scope rather than creating another competing dashboard.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| FI1 | Independently re-fetch official sources and audit the canonical root/hub edition row by row, including license timing, private-input labeling, rate windows, banking wording, calculations, notice dates, fair-housing statements, and corporate-practice evidence | done | `arena-1abdce92` | `audit/final-integration/**`, `assurance/**` |
+| FI2 | Publish an anonymized assurance report and a clearly labeled residual Flagged for Review table; leave every unsupported official-confirmation value blank | done | `arena-1abdce92` | `assurance/**`, `audit/final-integration/**` |
+| FI3 | Run arithmetic, date, source-registry, table-row, internal-link, reproducible-build, and repository-wide privacy checks without weakening existing suites | done | `arena-1abdce92` | `tools/verify_assurance.py`, `.github/workflows/assurance.yml` |
+| FI4 | Log any requested corrections to the canonical hub here instead of editing another session's scope; if a completed scope is formally handed off, re-verify the corrected combined output | done | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | in progress | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+
+**Coordination requests:** none at the narrowed claim. Any correction to `index.html`, `hub/**`, `integration/**`, or other prior scopes will first be logged here with evidence. The canonical dashboard remains the root edition published by PR #12; this session adds an independent assurance layer, not a sixth competing presentation.
+
+**Claim log:** 2026-11-07 — Initial claim pushed as `0ad4075`. During official-source research, PRs #10–#12 merged. `git pull --rebase origin main` produced a `COORDINATION.md` content conflict. Both parallel sections are preserved verbatim above; only this session's own section is narrowed. No site file had been edited by this session before the handoff.
+
+### Completed-scope correction handoff — logged before any canonical write
+
+PR #12 and its record commit are merged and its task board is marked done; there is no active `arena/8555cb74` implementation to wait out. The independent read-through nevertheless found material issues that require correction in the published root edition rather than another parallel edition. Under the user's final-integrator instruction, this session now claims the **completed** root/hub correction scope while preserving its generator, source registry, page structure, and useful work. Contact to the prior owner is recorded here: `arena/8555cb74-rentincreasesf1`, please leave `index.html`, `hub/**`, and `tools/verify_hub.py` unchanged while this corrective PR is in flight; any later concurrent change will be preserved during rebase.
+
+The findings prompting the handoff are: (1) the hard statutory license gate is the increase's effective date, while the current landing headline incorrectly makes tenant notification itself the cutoff; (2) Unit 2's supplied $3,150 is a 2019 lease-start rent, not an independently supplied current rent; (3) Unit 1's fixed-term/month-to-month status is unexamined; (4) the 180-day retaliation discussion omits statutory conditions and lawful-cause provisions; (5) free tenant representation is asserted without the referral listing's service/eligibility limits; (6) the 24-month guidance and Rule 4.12's 12-month rule use different measuring points and both are satisfied by the conditional Unit 1 date, rather than establishing a proven conflict; and (7) Rule 4.12(b)'s express non-void provision is obscured by categorical notice-defect language.
+
+| ID | Corrective task | Status | Claimed file scope |
+| --- | --- | --- | --- |
+| FI6 | Correct the canonical source of truth and regenerate the existing dashboard; distinguish owner-brief facts, official rules, conditional arithmetic, and blanks; add the fixed-term contingency and direct statutes | done | `index.html`, `hub/**` |
+| FI7 | Strengthen the existing hub verifier to reject the corrected overstatements and require conditional labels; preserve all useful existing checks | done | `tools/verify_hub.py`, `.github/workflows/assurance.yml` |
+| FI8 | Publish an independent row-level assurance record and explicit correction log, with source links on every assurance table row | done | `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py` |
+
+No legacy edition is deleted. The root's prior-edition links will be labeled superseded/not re-certified so readers are not presented with conflicting editions as equally current. All dates and supplied dollar amounts remain unchanged.
+
+**Privacy scope addendum after PR #14:** the newly merged `review/verify.py` initially contained raw personal-initial examples in its comments. This session claimed a privacy-only repair before writing it. During the required rebase, parallel commit `ebc7207` removed those literals on `main`; that implementation is preserved and this session made **no edit** to `review/verify.py`. The final assurance scanner checks the resulting current tree independently. The parallel `/review/` presentation itself is not edited and is listed as an archive on the canonical root.
+
+**Shared-documentation reconciliation claim (before writing):** the corrected HTML is committed as `7ec8f63`, but the root Markdown entry points still contain the earlier overstatements. This session now claims `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, and `VERIFICATION.md` solely to align them with the canonical source data, preserve links to prior editions, and direct readers to the independent assurance record. The older prose remains in Git history; no parallel implementation is deleted.
+
+
+### Final-assurance implementation record before PR
+
+- **Canonical correction:** `7ec8f63` regenerated the existing root/hub edition rather than adding another competing dashboard. The standalone Markdown summary, source index, verification record, and README are reconciled in the subsequent documentation commit. `index.html` remains the single entry point; prior editions are linked only as superseded archives.
+- **Official verification:** 23/23 sources retrieved and read from official publishers on 2026-11-07; manifest at `audit/final-integration/source-manifest.json`. Current annual allowance confirmed as 1.6% through 2027-02-28. No 2027–28 rate inferred.
+- **Public findings:** 12 correction rows, 20 canonical flags, 13 scrutiny checks, and explicit official-confirmation blanks. Unit 1 fixed-term status and Unit 2 current base/history are high-severity open facts. No current lawful maximum, attorney acceptance, or universal free-representation claim is asserted.
+- **Arithmetic:** Unit 1 annual-only $63.92 → $4,058.92 and conditional combined $119.85 → $4,114.85; Unit 2 annual-only $50.40 → $3,200.40 and conditional combined $412.65 → $3,562.65. All are scenario calculations on anonymized brief inputs. Service-date arithmetic independently recomputed for 30/90 days and 35/95 California-mail planning periods.
+- **Final local gates:** `tools/verify_hub.py` — **1,336 checks, 0 errors**; `tools/verify_assurance.py` — **1,556 checks, 0 errors**; 194 canonical claim rows and 33 assurance rows source-linked; 170 current text files privacy-scanned with no forbidden personal token; `git diff --check` clean.
+- **Preserved suites:** `tools/check_links.py`, companion build + `tools/check_site.py` (781 checks), `integration/verify.py` (57 rows), `dashboard/verify.py`, `audit/verify_all.py` (137 rows), and `review/build.py` + `review/verify.py` all pass without unintended generated-file changes.
+- **Concurrency:** repeated `COORDINATION.md` append conflicts were resolved by preserving every parallel addendum. The `/review/` edition and its parallel privacy repair are retained. No other session's implementation was deleted. The final-assurance CI workflow regenerates canonical and assurance output and fails on drift.
+- **Merge posture:** unresolved private facts remain prominently flagged and do not block publication; broken pages, stale generators, missing citations, arithmetic errors, privacy findings, or failed checks do block the integration PR. PR and Pages results remain to be recorded below.

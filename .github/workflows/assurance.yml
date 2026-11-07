@@ -1,0 +1,41 @@
+name: Final assurance
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Regenerate canonical and assurance pages
+        run: |
+          python3 hub/build.py
+          python3 assurance/build.py
+
+      - name: Fail if generated output differs from committed files
+        run: |
+          if ! git diff --quiet -- index.html hub/ assurance/ audit/final-integration/source-manifest.json; then
+            echo "::error::Generated canonical or assurance output is stale. Run both builders and commit the result."
+            git diff --stat -- index.html hub/ assurance/ audit/final-integration/source-manifest.json
+            exit 1
+          fi
+
+      - name: Verify canonical dashboard and independent assurance
+        run: |
+          python3 tools/verify_hub.py
+          python3 tools/verify_assurance.py
