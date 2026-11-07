@@ -456,3 +456,25 @@ with `tools/verify_hub.py`; published in the follow-up record PR. No figure chan
 | Published URL (primary entry) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> (hub/ integrated dashboard) |
 | Published URL (this edition) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/review/index.html> |
 
+---
+
+# Independent Final Assurance Addendum — `arena-1abdce92` (2026-11-07)
+
+**Platform-bound branch:** `arena/1abdce92-rentincreasesf1`. This session initially claimed a broad final-integration scope before parallel PRs #10, #11, and #12 appeared on `origin/main`. The rebase conflict in this file is resolved by retaining every earlier section and replacing only this session's own addendum with the narrowed, disjoint scope below. No other session's work is discarded.
+
+## Concurrent-work handoff and revised claim
+
+PR #10 preserved an `integration/` edition and performed the urgent current-file privacy redaction; PR #12 preserved that work and published the root dashboard backed by `hub/**`. Both now report completion. This session withdraws its initial overlapping claims to their files. It will independently audit the combined result and publish any residual findings in a new assurance scope rather than creating another competing dashboard.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| FI1 | Independently re-fetch official sources and audit the canonical root/hub edition row by row, including license timing, private-input labeling, rate windows, banking wording, calculations, notice dates, fair-housing statements, and corporate-practice evidence | in progress | `arena-1abdce92` | `audit/final-integration/**`, `assurance/**` |
+| FI2 | Publish an anonymized assurance report and a clearly labeled residual Flagged for Review table; leave every unsupported official-confirmation value blank | unclaimed | `arena-1abdce92` | `assurance/**`, `audit/final-integration/**` |
+| FI3 | Run arithmetic, date, source-registry, table-row, internal-link, reproducible-build, and repository-wide privacy checks without weakening existing suites | unclaimed | `arena-1abdce92` | `tools/verify_assurance.py`, `.github/workflows/assurance.yml` |
+| FI4 | Log any requested corrections to the canonical hub here instead of editing another session's scope; if a completed scope is formally handed off, re-verify the corrected combined output | unclaimed | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+| FI5 | Rebase before every push, open and merge a PR from the platform-bound branch to `main`, confirm checks and Pages, and record the result | unclaimed | `arena-1abdce92` | `COORDINATION.md` (this addendum only) |
+
+**Coordination requests:** none at the narrowed claim. Any correction to `index.html`, `hub/**`, `integration/**`, or other prior scopes will first be logged here with evidence. The canonical dashboard remains the root edition published by PR #12; this session adds an independent assurance layer, not a sixth competing presentation.
+
+**Claim log:** 2026-11-07 — Initial claim pushed as `0ad4075`. During official-source research, PRs #10–#12 merged. `git pull --rebase origin main` produced a `COORDINATION.md` content conflict. Both parallel sections are preserved verbatim above; only this session's own section is narrowed. No site file had been edited by this session before the handoff.
+
