@@ -1,8 +1,9 @@
 name: Verify published site
 
 # GitHub Pages for this repository is served from `main` (legacy branch
-# publishing, root `/`), with `index.html` redirecting to `integration/index.html`.
-# This workflow therefore only verifies; it does not deploy.
+# publishing, root `/`). The root `index.html` is the integrated dashboard built by
+# `hub/build.py`; the earlier editions live in `docs/`, `docs/v2/`, `dashboard/`, `portal/`
+# and `integration/`. This workflow therefore only verifies; it does not deploy.
 
 on:
   push:

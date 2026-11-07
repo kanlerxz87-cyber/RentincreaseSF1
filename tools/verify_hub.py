@@ -24,6 +24,7 @@ Exit code 0 = all checks pass. Usage: python3 tools/verify_hub.py
 
 from __future__ import annotations
 
+import hashlib
 import html
 import json
 import os
@@ -51,7 +52,12 @@ PAGES = ["index.html"] + [
     )
 ]
 
-FORBIDDEN = ["L O", "V N", "JP", "M T", "E R", "I S"]
+# Tenant initials are never written here in plaintext. The digests are the shared
+# list maintained by tools/check_links.py, so a matched value is never echoed.
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+from check_links import FORBIDDEN_HASHES  # noqa: E402
+
+TOKEN_RE = re.compile(r"\b(?:[A-Z]{2}|[A-Z] [A-Z])\b")
 EMAIL_RE = re.compile(r"\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}\b")
 
 errors: list[str] = []
@@ -337,9 +343,9 @@ ok()
 
 # ----------------------------------------------------------------- 8 privacy
 for page, doc in docs.items():
-    for token in FORBIDDEN:
-        if re.search(r"\b%s\b" % re.escape(token), doc):
-            fail(f"{page}: contains a tenant initial token '{token}'")
+    for token in TOKEN_RE.findall(html.unescape(re.sub(r"<[^>]+>", " ", doc))):
+        if hashlib.sha256(token.encode()).hexdigest() in FORBIDDEN_HASHES:
+            fail(f"{page}: contains a forbidden personal token")
     for match in EMAIL_RE.findall(doc):
         fail(f"{page}: contains an email address: {match}")
     ok()

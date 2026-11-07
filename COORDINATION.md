@@ -363,7 +363,7 @@ repair above.
 | `S74-T5` | Corporate vs individual owner practice; fair-housing "one unit or both"; tenant-lawyer red-team review | done | `hub/practice.html`, `hub/fair-housing.html`, `hub/review.html` |
 | `S74-T6` | Flagged-for-Review page: unverified values left blank, conflicting official text, repo irregularities | done | `hub/flags.html` |
 | `S74-T7` | Source registry with verbatim quotes and retrieval dates | done | `hub/sources.html` |
-| `S74-T8` | Build, verify, CI wiring, PR to `main`, merge, confirm Pages deploy | in progress | `COORDINATION.md` |
+| `S74-T8` | Build, verify, CI wiring, PR to `main`, merge, confirm Pages deploy | done (PR/merge below) | `COORDINATION.md` |
 
 Status `needs review` items live on `hub/flags.html` and do not block the merge.
 
@@ -384,3 +384,43 @@ Status `needs review` items live on `hub/flags.html` and do not block the merge.
   while Rent Board **Rule 4.12(a)** and the worked examples on *Learn about rent increases* describe a
   **12-month** test. Published as `H-01` with both links; the certain Unit 1 figure is reduced to
   1.6% ($63.92) and the extra 1.4% is shown only as a flagged, conditional amount.
+
+## Resolution record — conflict with PR #10 and final state
+
+While this session's first push was in flight, PR #10 (session `arena/4addba0b`) merged a parallel
+integration edition and took the root `index.html` as a redirect to `integration/index.html`.
+The rebase produced two conflicts, resolved without discarding either side:
+
+| Conflict | Resolution |
+|---|---|
+| `COORDINATION.md` (add/add) | Both sections kept verbatim, in merge order, with a merge note between them. Nothing deleted from either side. |
+| `index.html` | This session took the entry point (the user asked this session to publish the landing dashboard), and links the `integration/` edition, `docs/`, `docs/v2/`, `dashboard/` and `portal/` from its "Other editions" section. `integration/**` is unchanged. |
+| `.github/workflows/pages.yml` | Comment only, corrected: the root is now the dashboard, not a redirect. No job changed. |
+| `tools/verify_hub.py` privacy scan | Initially used plaintext tenant initials and failed the parallel session's tracked-text privacy scan. Rewritten to reuse the shared SHA-256 digest list in `tools/check_links.py`; no identifier appears in the repository text. |
+
+### Verification performed (this session, 2026-11-07)
+
+| Suite | Result |
+|---|---|
+| `python3 tools/verify_hub.py` | **1,029 checks, 0 errors** — per-row source/flag citations (176 rows), links, anchors, nav parity, source registry completeness, arithmetic, recomputed service dates, no unsourced dollar figure, digest-based privacy scan |
+| `python3 hub/build.py` | 9 pages regenerate byte-identical (CI enforces) |
+| `python3 tools/check_links.py` | pass (main edition, 10 pages + 7 archived) |
+| `python3 tools/check_site.py` | 781 checks pass (companion edition) |
+| `python3 integration/verify.py` | PASS (parallel edition, 6 pages, 57 rows, privacy scan) |
+| `python3 dashboard/verify.py` | pass (42 sources, 21 flags) |
+| `python3 audit/verify_all.py` | pass (10 pages, 137 rows) |
+| `python3 -m http.server` | all 9 pages + stylesheet return HTTP 200 |
+
+### Findings carried forward
+
+`H-01` (24-month vs 12-month banking wording, both official) and `H-04` (licence status unavailable)
+are the two items that can change an amount or make an increase unenforceable; both are published on
+`hub/flags.html` with source links. `H-14` records the repaired `S25` link. None blocks this merge.
+
+### Pull request and deploy record
+
+| Item | Value |
+|---|---|
+| PR | *(recorded below once opened)* |
+| Merge result | *(recorded in the follow-up record commit)* |
+| Pages deploy | *(recorded in the follow-up record commit)* |
