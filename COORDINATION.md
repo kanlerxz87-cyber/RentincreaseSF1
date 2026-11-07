@@ -445,3 +445,14 @@ file. One cosmetic defect was found: percentages rendered as `3%` and `4%` inste
 `3.0%` and `4.0%`. Fixed in `hub/build.py` (`pct()` now always shows one decimal place) and re-verified
 with `tools/verify_hub.py`; published in the follow-up record PR. No figure changed.
 
+
+### Pull request and Pages deploy record (this session)
+
+| Item | Value |
+|---|---|
+| PR | [#14](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/14) — `Add /review/ executive-summary dashboard with Rent Board license Q&A at the forefront` |
+| Merge result | **MERGED** via [#14](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/14). Two follow-up commits fixed CI (`hub/build.py` regenerated with the review/ cardlink; raw initials removed from `review/verify.py` comment). |
+| CI result | `Verify site` ✅, `Verify published site` ✅, `pages build and deployment` ✅ (run 42413672344). |
+| Published URL (primary entry) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> (hub/ integrated dashboard) |
+| Published URL (this edition) | <https://kanlerxz87-cyber.github.io/RentincreaseSF1/review/index.html> |
+
