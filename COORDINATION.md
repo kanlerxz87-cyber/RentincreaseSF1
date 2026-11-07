@@ -421,6 +421,6 @@ are the two items that can change an amount or make an increase unenforceable; b
 
 | Item | Value |
 |---|---|
-| PR | *(recorded below once opened)* |
+| PR | [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) — `Integrated verified dashboard at /` (branch `arena/8555cb74-rentincreasesf1` → `main`) |
 | Merge result | *(recorded in the follow-up record commit)* |
 | Pages deploy | *(recorded in the follow-up record commit)* |
