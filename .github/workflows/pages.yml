@@ -1,7 +1,7 @@
 name: Verify published site
 
 # GitHub Pages for this repository is served from `main` (legacy branch
-# publishing, root `/`), with `index.html` redirecting to `docs/index.html`.
+# publishing, root `/`), with `index.html` redirecting to `integration/index.html`.
 # This workflow therefore only verifies; it does not deploy.
 
 on:
@@ -36,10 +36,8 @@ jobs:
           test -f docs/sources.html
           echo "entry points present"
 
-      - name: Confirm no personal identifiers in the published tree
-        run: |
-          ! grep -rInE '\b(L O|V N|JP|M T|E R|I S)\b' docs/*.html docs/*/*.html docs/*/*/*.html
-          echo "no tenant initials found"
+      - name: Confirm privacy and links in integrated edition
+        run: python3 integration/verify.py
 
       # ---- companion edition (docs/v2) ----
       - name: Companion edition is reproducible from data/v2
