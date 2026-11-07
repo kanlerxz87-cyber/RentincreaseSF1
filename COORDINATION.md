@@ -478,3 +478,17 @@ PR #10 preserved an `integration/` edition and performed the urgent current-file
 
 **Claim log:** 2026-11-07 — Initial claim pushed as `0ad4075`. During official-source research, PRs #10–#12 merged. `git pull --rebase origin main` produced a `COORDINATION.md` content conflict. Both parallel sections are preserved verbatim above; only this session's own section is narrowed. No site file had been edited by this session before the handoff.
 
+### Completed-scope correction handoff — logged before any canonical write
+
+PR #12 and its record commit are merged and its task board is marked done; there is no active `arena/8555cb74` implementation to wait out. The independent read-through nevertheless found material issues that require correction in the published root edition rather than another parallel edition. Under the user's final-integrator instruction, this session now claims the **completed** root/hub correction scope while preserving its generator, source registry, page structure, and useful work. Contact to the prior owner is recorded here: `arena/8555cb74-rentincreasesf1`, please leave `index.html`, `hub/**`, and `tools/verify_hub.py` unchanged while this corrective PR is in flight; any later concurrent change will be preserved during rebase.
+
+The findings prompting the handoff are: (1) the hard statutory license gate is the increase's effective date, while the current landing headline incorrectly makes tenant notification itself the cutoff; (2) Unit 2's supplied $3,150 is a 2019 lease-start rent, not an independently supplied current rent; (3) Unit 1's fixed-term/month-to-month status is unexamined; (4) the 180-day retaliation discussion omits statutory conditions and lawful-cause provisions; (5) free tenant representation is asserted without the referral listing's service/eligibility limits; (6) the 24-month guidance and Rule 4.12's 12-month rule use different measuring points and both are satisfied by the conditional Unit 1 date, rather than establishing a proven conflict; and (7) Rule 4.12(b)'s express non-void provision is obscured by categorical notice-defect language.
+
+| ID | Corrective task | Status | Claimed file scope |
+| --- | --- | --- | --- |
+| FI6 | Correct the canonical source of truth and regenerate the existing dashboard; distinguish owner-brief facts, official rules, conditional arithmetic, and blanks; add the fixed-term contingency and direct statutes | in progress | `index.html`, `hub/**` |
+| FI7 | Strengthen the existing hub verifier to reject the corrected overstatements and require conditional labels; preserve all useful existing checks | unclaimed | `tools/verify_hub.py`, `.github/workflows/assurance.yml` |
+| FI8 | Publish an independent row-level assurance record and explicit correction log, with source links on every assurance table row | unclaimed | `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py` |
+
+No legacy edition is deleted. The root's prior-edition links will be labeled superseded/not re-certified so readers are not presented with conflicting editions as equally current. All dates and supplied dollar amounts remain unchanged.
+
