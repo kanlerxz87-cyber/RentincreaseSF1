@@ -285,3 +285,17 @@ another session may take over D8 and must note the handoff in this log.
 | Pre-Merge CI Checks | `Verify published site` (`PASS`), `Verify site` (`PASS`), `audit/verify_all.py` (`PASS`), `dashboard/verify.py` (`PASS`) |
 | Merge & Pages Result | **MERGED** via [#8](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/8) at `2026-11-06T13:50:27Z` (`8f65878d8fa1f0b45f34979eee7d8c40f6d72538`); `Verify published site` (`PASS`), `Verify site` (`PASS`), and `pages-build-deployment` run `42228752175` (`status: built` at `2026-11-06T13:52:56Z`). Live pages verified at `/RentincreaseSF1/portal/index.html` and `/RentincreaseSF1/portal/flagged-for-review.html`. |
 
+
+---
+
+# Integration safety review — `arena/4addba0b-rentincreasesf1` (2026-11-07 UTC)
+
+Platform fixes this session to its existing `arena/4addba0b-rentincreasesf1` branch; no session branch or worktree will be created. Earlier completed scopes are retained. Prior remaining open integration/record claims are more than 60 minutes old with no commits since 2026-11-06; this session takes over final integration, preserving prior work and recording any conflicts.
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| I1 Independent official-source review and safe integrated site | in progress | `arena/4addba0b-rentincreasesf1` | `integration/**` |
+| I2 Integration entry point and transparency about prior editions | in progress | `arena/4addba0b-rentincreasesf1` | `index.html`, append-only `COORDINATION.md` |
+| I3 Verify, PR, merge and deployment | in progress | `arena/4addba0b-rentincreasesf1` | append-only `COORDINATION.md` |
+
+Initial review found legacy `docs/index.html` calls unverified user inputs verified, asserts a lawful maximum without a verified ledger, gives a false no-petition-only assertion despite banking, and claims a tenant-lawyer review passed. `portal/index.html` also claims equal increases eliminate comparator claims. Request to previous owners: correct the archived editions or clearly label them superseded. Final integration will not silently overwrite them; it will direct the root to an independently checked version and flag these issues there.
