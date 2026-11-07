@@ -354,6 +354,54 @@ for page, doc in docs.items():
 if "Tenants 1A and 1B" not in docs["index.html"]:
     fail("index.html: expected placeholder tenant names")
 
+# ----------------------------------------------------------------- 9 corrected legal labels
+# Regression gates for issues found by the independent final assurance review.
+for page, doc in docs.items():
+    for phrase in (
+        "Unit 1 — certain increase", "Unit 2 — lawful maximum", "No, for 180 days",
+        "free representation is available", "Get free representation in 94122",
+        "Seven checks pass", "Seven can be answered", "Sixteen items",
+        "Two official pages state different banking look-back tests",
+        "A conforming amount in a nonconforming notice is void",
+        "Unit 2 — $3,150.00 a month, unchanged since 1 June 2019",
+    ):
+        if phrase in doc:
+            fail(f"{page}: stale categorical claim: {phrase}")
+        ok()
+
+if len(sources) != 23:
+    fail(f"expected 23 official sources, found {len(sources)}")
+if len(DATA["flags"]) != 20:
+    fail(f"expected 20 flags, found {len(DATA['flags'])}")
+if len(DATA["review_rows"]) != 13:
+    fail(f"expected 13 review checks, found {len(DATA['review_rows'])}")
+for field, needle in (
+    (DATA["units"]["U2"]["base_status"], "lease-start"),
+    (DATA["units"]["U2"]["base_status"], "not expressly as the current base rent"),
+    (DATA["units"]["U1"]["occupancy_note"], "fixed-term/month-to-month"),
+):
+    if needle not in field:
+        fail(f"required private-input caveat missing: {needle}")
+    ok()
+for item in DATA["calculations"]["U2"]["banked"]:
+    if not item.get("conditional"):
+        fail("Unit 2 has a banked component not marked conditional")
+    ok()
+for flag_id in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
+    if flag_id not in {f["id"] for f in DATA["flags"]}:
+        fail(f"missing required flag {flag_id}")
+    if not any(f"flags.html#{flag_id}" in doc for doc in docs.values()):
+        fail(f"{flag_id}: not cross-linked from canonical content")
+    ok()
+for rel, minimum in (("index.html", 7), ("hub/flags.html", 8)):
+    if docs[rel].count("<td></td>") < minimum:
+        fail(f"{rel}: unsupported official-confirmation cells were filled instead of left blank")
+    ok()
+if "scenario date 1 February 2027" not in docs["index.html"]:
+    fail("index.html: Unit 1 scenario date missing")
+if "before</em> serving notice" not in docs["index.html"]:
+    fail("index.html: recommended pre-notice license workflow missing")
+
 # ----------------------------------------------------------------- summary
 print(f"pages checked: {len(PAGES)}")
 print(f"claim-table rows with an official source or flag link: {citation_rows}")

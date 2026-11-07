@@ -3,9 +3,8 @@
     "title": "SF Rent Increase Compliance Dashboard",
     "subtitle": "Two rent-controlled flats, Outer Sunset, San Francisco 94122 — built 1940",
     "retrieved": "2026-11-07",
-    "note": "Every figure on this site is either quoted from an official source fetched and read on the retrieval date, or is arithmetic performed on those published figures. Anything that could not be confirmed from an official source is left blank and listed on the Flagged for Review page. Tenant names and initials are replaced with placeholders; dates and dollar amounts are unchanged. This is a research summary, not legal advice."
+    "note": "Official rules and rates are quoted from sources fetched and read on the retrieval date. Private lease, ledger, license, and coverage facts are not independently verified. Dollar amounts are conditional scenario arithmetic using the owner-brief amounts, not certified lawful maxima or permission to serve notice. Unsupported official-confirmation cells are blank and flagged. Tenant names and initials are replaced with placeholders; supplied dates and dollar amounts are unchanged. This is a research summary, not legal advice."
   },
-
   "sources": [
     {
       "id": "S01",
@@ -31,8 +30,8 @@
       "publisher": "San Francisco Rent Board (SF.gov)",
       "level": "Local — agency guidance",
       "url": "https://www.sf.gov/rent-board-housing-inventory",
-      "quote": "All owners of residential property are required to report … Property owners who report that a unit is tenant-occupied will receive a rent increase license that allows them to impose annual allowable and banked rent increases. … Deadline: March 1 of every year. … a landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect. The rent increase license does not need to be included with your rent increase notice. … Reporting is free.",
-      "used_for": "Step-by-step licence mechanics, the annual deadline, the fact that the licence is free and automatic, and that it need not be attached to the notice."
+      "quote": "All owners of residential property are required to report … Property owners who report that a unit is tenant-occupied will receive a rent increase license that allows them to impose annual allowable and banked rent increases. … Deadline: March 1 of every year. You can still make a Housing Inventory submission and receive a rent increase license after the deadline. However, your rent increase notice will not be enforceable without having a rent increase license on the effective date of the notice. … a landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect. The rent increase license does not need to be included with your rent increase notice. … Reporting is free.",
+      "used_for": "Individual-owner reporting duty, automatic license generation after reporting, late submission, annual deadline, effective-date gate, and no need to attach the license to notice."
     },
     {
       "id": "S04",
@@ -41,7 +40,7 @@
       "level": "Local — agency guidance",
       "url": "https://www.sf.gov/information--banked-rent-increases",
       "quote": "A landlord may raise the rent once every 12 months by the allowed annual increase. … A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost and cannot be imposed at a later date. … Banked increases do not have to be approved by the Rent Board, but must be calculated correctly. They cannot be compounded or prorated. … There is no limit on how much can be banked.",
-      "used_for": "Banking: accumulation, the 24-month statement that conflicts with Rule 4.12(a) (flag H-01), no Board approval, no compounding, and the notice contents for a banked increase."
+      "used_for": "Banking: the 24-month no-increase statement, partial increases, no Board approval, no compounding, and notice contents. Read with Rule 4.12(a), which measures 12 months from when the skipped allowance became available (H-01)."
     },
     {
       "id": "S05",
@@ -50,7 +49,7 @@
       "level": "Local — agency guidance",
       "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
       "quote": "The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027. … A landlord can impose the first annual increase 12 months after the date the tenant's lease began. … 90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10% … Rent increases cannot be rounded up to the nearest dollar. … A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a tenant's unit.",
-      "used_for": "The current rate, the 12-month rule, notice periods, the no-rounding rule, the additional-occupant rule, and the worked examples used for the 12-month banking test."
+      "used_for": "Current rate, first/annual timing, base-rent calculation, notice periods, no rounding, and additional occupants. Official worked-example year labels contain errors cross-checked against Form 571 (H-19)."
     },
     {
       "id": "S06",
@@ -66,9 +65,9 @@
       "title": "Rent Board Rules and Regulations, Part IV — §§4.10 (Notice) and 4.12 (Banking)",
       "publisher": "San Francisco Rent Board (SF.gov)",
       "level": "Local — adopted regulations",
-      "url": "https://www.sf.gov/reports/december-2022/rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
       "quote": "§4.12(a) … the rent may be increased only one time every twelve (12) months … A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed before this banking section becomes applicable. Banked increases shall not be compounded and shall not be rounded up … §4.12(b) … failure to include such information shall not render the increase null and void. §4.10(b) Any rent increase which does not conform with the provisions of this Section shall render the entire rent increase null and void, unless the amount requested equals no more than the allowable annual and banked rent increase(s).",
-      "used_for": "The 12-month banking test that conflicts with the 24-month wording on the Rent Board's banking page (flag H-01); the non-compounding and no-rounding rules; the itemisation duty and its exception (flag H-15)."
+      "used_for": "Rule 4.12(a): 12 months from when the skipped allowance could have been imposed; non-compounding/no rounding; Rule 4.12(b) banked-date itemisation and its express non-void provision; Rule 4.10(b) text-specific exception (H-15)."
     },
     {
       "id": "S08",
@@ -112,8 +111,8 @@
       "publisher": "California Legislative Information",
       "level": "State — statute",
       "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
-      "quote": "(a) If the lessor retaliates against the lessee because of the exercise by the lessee of the lessee's rights under this chapter or because of the lessee's complaint to an appropriate agency as to tenantability … the lessor may not recover possession … increase the rent, or decrease any services within 180 days …",
-      "used_for": "The 180-day bar that makes a rent increase unlawful if it follows a habitability complaint."
+      "quote": "(a) If the lessor retaliates against the lessee because of the exercise by the lessee of the lessee’s rights under this chapter or because of his or her complaint to an appropriate agency as to tenantability of a dwelling, and if the lessee of a dwelling is not in default as to the payment of his or her rent, the lessor may not … increase the rent … within 180 days of any of the following … (f) This section does not limit in any way … the lessor’s right to do any of the acts described in subdivision (a) or (d) for any lawful cause. … (g) … if the notice of … rent increase … states the ground upon which the lessor, in good faith, seeks to … increase rent … If the statement is controverted, the lessor shall establish its truth at the trial or other hearing.",
+      "used_for": "Retaliation screening: protected activity, the listed 180-day events, rent-default condition, lawful cause, and good-faith-ground provisions. It is not an automatic 180-day moratorium on every increase."
     },
     {
       "id": "S13",
@@ -157,8 +156,8 @@
       "publisher": "San Francisco Rent Board (SF.gov)",
       "level": "Local — agency guidance",
       "url": "https://www.sf.gov/rent-board-fee",
-      "quote": "For the 2026-2027 tax year, the fee is: $59.00 per dwelling unit … If you pay the Rent Board fee in full, you may be able to collect 50% of the fee from your tenants, which is $29.50 per dwelling unit … Deadline: March 1 of each year.",
-      "used_for": "The per-unit fee, the 50% recovery, and the deadline — distinct from the free rent increase licence."
+      "quote": "For the 2026-2027 tax year, the fee is: $59.00 per dwelling unit … Deadline: March 1 of each year. … Once you have paid the Rent Board fee in full, you can recover 50 percent of the fee from the tenants in occupancy of each unit if the tenant has been living in the unit as of November 1 of the applicable tax year. … You may not recover any penalty fees.",
+      "used_for": "Per-unit fee, separate recovery conditions, November 1 occupancy, full payment, and the annual deadline; distinct from the free license and from base rent."
     },
     {
       "id": "S18",
@@ -176,59 +175,323 @@
       "level": "Local — agency guidance",
       "url": "https://www.sf.gov/reports--january-2025--rent-board-referral-listing",
       "quote": "Please note that you do not need a lawyer to file a petition at the Rent Board. … Open Door Legal … Sunset Office 1722 Irving Street, San Francisco, CA 94122 … San Francisco Tenants Union … Housing Rights Committee of SF … Bay Area Legal Aid.",
-      "used_for": "The free legal resources a tenant in 94122 can use to challenge an increase, and the fact that a petition needs no lawyer."
+      "used_for": "Petition without a lawyer and official referral resources. A listing is not a guarantee of free representation; service area, issue, income, capacity, and other eligibility limits apply (H-20)."
+    },
+    {
+      "id": "S20",
+      "title": "California Tenants — A Guide to Residential Tenants’ and Landlords’ Rights and Responsibilities (RE 26, rev. 02/01/22)",
+      "publisher": "California Department of Real Estate (official publication; hosted by California Courts)",
+      "level": "State — official guidance",
+      "url": "https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf",
+      "quote": "For rental agreements with a fixed term (i.e., 6 months, 1 year, 2 years, etc.), the landlord cannot increase the rent during the rental term unless the rental agreement permits rent increases. Rent may be increased if the rental agreement is renewed.",
+      "used_for": "Unit 1 fixed-term contingency (H-17). The April 1, 2026 instrument must be checked before using the February 1, 2027 scenario."
+    },
+    {
+      "id": "S21",
+      "title": "California Code of Civil Procedure §1013(a) — service by mail",
+      "publisher": "California Legislative Information",
+      "level": "State — statute",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP",
+      "quote": "Service is complete at the time of the deposit, but any period of notice … shall be extended five calendar days, upon service by mail, if the place of address and the place of mailing is within the State of California, 10 calendar days if either the place of mailing or the place of address is outside the State of California but within the United States … and 20 calendar days if either the place of mailing or the place of address is outside the United States …",
+      "used_for": "The California-mail planning periods and the fact that longer extensions can apply outside California; the site does not assume every mailing is within California."
+    },
+    {
+      "id": "S22",
+      "title": "Justice Department Requires RealPage to End the Sharing of Competitively Sensitive Information and Alignment of Pricing Among Competitors",
+      "publisher": "United States Department of Justice, Antitrust Division",
+      "level": "Federal — enforcement press release / proposed settlement",
+      "url": "https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and",
+      "quote": "The Justice Department’s Antitrust Division filed a proposed settlement today … As alleged in Plaintiffs’ complaint, RealPage’s revenue management software has relied on nonpublic, competitively sensitive information shared by landlords to set rental prices. … If approved by the court, the proposed consent judgment would require RealPage to …",
+      "used_for": "A documented federal enforcement example involving portfolio-scale pricing tools. Allegations and a proposed settlement are not generalized into claims about every corporate landlord or a final adjudication."
+    },
+    {
+      "id": "S23",
+      "title": "Failure to Repair and Maintain Petitions",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "level": "Local — agency guidance",
+      "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
+      "quote": "A tenant may petition for a deferral of the annual rent increase if the landlord has failed to perform requested repairs, replacement or maintenance as required by state and/or local law. … The petition must be filed no later than 60 days following the tenant’s receipt of the rent increase notice. … If the petition is granted, the proposed rent increase will be deferred or postponed until the requested repairs are made.",
+      "used_for": "Repair/habitability review independent of arithmetic and the 60-day tenant petition window."
     }
   ],
-
   "rates": [
-    {"start": "2026-03-01", "end": "2027-02-28", "pct": "1.6", "current": true},
-    {"start": "2025-03-01", "end": "2026-02-28", "pct": "1.4", "current": false},
-    {"start": "2024-03-01", "end": "2025-02-28", "pct": "1.7", "current": false},
-    {"start": "2023-03-01", "end": "2024-02-29", "pct": "3.6", "current": false},
-    {"start": "2022-03-01", "end": "2023-02-28", "pct": "2.3", "current": false},
-    {"start": "2021-03-01", "end": "2022-02-28", "pct": "0.7", "current": false},
-    {"start": "2020-03-01", "end": "2021-02-28", "pct": "1.8", "current": false},
-    {"start": "2019-03-01", "end": "2020-02-29", "pct": "2.6", "current": false},
-    {"start": "2018-03-01", "end": "2019-02-28", "pct": "1.6", "current": false},
-    {"start": "2017-03-01", "end": "2018-02-28", "pct": "2.2", "current": false},
-    {"start": "2016-03-01", "end": "2017-02-28", "pct": "1.6", "current": false},
-    {"start": "2015-03-01", "end": "2016-02-29", "pct": "1.9", "current": false},
-    {"start": "2014-03-01", "end": "2015-02-28", "pct": "1.0", "current": false},
-    {"start": "2013-03-01", "end": "2014-02-28", "pct": "1.9", "current": false},
-    {"start": "2012-03-01", "end": "2013-02-28", "pct": "1.9", "current": false},
-    {"start": "2011-03-01", "end": "2012-02-29", "pct": "0.5", "current": false},
-    {"start": "2010-03-01", "end": "2011-02-28", "pct": "0.1", "current": false},
-    {"start": "2009-03-01", "end": "2010-02-28", "pct": "2.2", "current": false},
-    {"start": "2008-03-01", "end": "2009-02-28", "pct": "2.0", "current": false},
-    {"start": "2007-03-01", "end": "2008-02-29", "pct": "1.5", "current": false},
-    {"start": "2006-03-01", "end": "2007-02-28", "pct": "1.7", "current": false},
-    {"start": "2005-03-01", "end": "2006-02-28", "pct": "1.2", "current": false},
-    {"start": "2004-03-01", "end": "2005-02-28", "pct": "0.6", "current": false},
-    {"start": "2003-03-01", "end": "2004-02-29", "pct": "0.8", "current": false},
-    {"start": "2002-03-01", "end": "2003-02-28", "pct": "2.7", "current": false},
-    {"start": "2001-03-01", "end": "2002-02-28", "pct": "2.8", "current": false},
-    {"start": "2000-03-01", "end": "2001-02-28", "pct": "2.9", "current": false},
-    {"start": "1999-03-01", "end": "2000-02-29", "pct": "1.7", "current": false},
-    {"start": "1998-03-01", "end": "1999-02-28", "pct": "2.2", "current": false},
-    {"start": "1997-03-01", "end": "1998-02-28", "pct": "1.8", "current": false},
-    {"start": "1996-03-01", "end": "1997-02-28", "pct": "1.0", "current": false},
-    {"start": "1995-03-01", "end": "1996-02-29", "pct": "1.1", "current": false},
-    {"start": "1994-03-01", "end": "1995-02-28", "pct": "1.3", "current": false},
-    {"start": "1993-03-01", "end": "1994-02-28", "pct": "1.9", "current": false},
-    {"start": "1992-12-08", "end": "1993-02-28", "pct": "1.6", "current": false},
-    {"start": "1992-03-01", "end": "1992-12-07", "pct": "4.0", "current": false},
-    {"start": "1991-03-01", "end": "1992-02-29", "pct": "4.0", "current": false},
-    {"start": "1990-03-01", "end": "1991-02-28", "pct": "4.0", "current": false},
-    {"start": "1989-03-01", "end": "1990-02-28", "pct": "4.0", "current": false},
-    {"start": "1988-03-01", "end": "1989-02-28", "pct": "4.0", "current": false},
-    {"start": "1987-03-01", "end": "1988-02-29", "pct": "4.0", "current": false},
-    {"start": "1986-03-01", "end": "1987-02-28", "pct": "4.0", "current": false},
-    {"start": "1985-03-01", "end": "1986-02-28", "pct": "4.0", "current": false},
-    {"start": "1984-03-01", "end": "1985-02-28", "pct": "4.0", "current": false},
-    {"start": "1983-03-01", "end": "1984-02-29", "pct": "7.0", "current": false},
-    {"start": "1982-04-01", "end": "1983-02-28", "pct": "7.0", "current": false}
+    {
+      "start": "2026-03-01",
+      "end": "2027-02-28",
+      "pct": "1.6",
+      "current": true
+    },
+    {
+      "start": "2025-03-01",
+      "end": "2026-02-28",
+      "pct": "1.4",
+      "current": false
+    },
+    {
+      "start": "2024-03-01",
+      "end": "2025-02-28",
+      "pct": "1.7",
+      "current": false
+    },
+    {
+      "start": "2023-03-01",
+      "end": "2024-02-29",
+      "pct": "3.6",
+      "current": false
+    },
+    {
+      "start": "2022-03-01",
+      "end": "2023-02-28",
+      "pct": "2.3",
+      "current": false
+    },
+    {
+      "start": "2021-03-01",
+      "end": "2022-02-28",
+      "pct": "0.7",
+      "current": false
+    },
+    {
+      "start": "2020-03-01",
+      "end": "2021-02-28",
+      "pct": "1.8",
+      "current": false
+    },
+    {
+      "start": "2019-03-01",
+      "end": "2020-02-29",
+      "pct": "2.6",
+      "current": false
+    },
+    {
+      "start": "2018-03-01",
+      "end": "2019-02-28",
+      "pct": "1.6",
+      "current": false
+    },
+    {
+      "start": "2017-03-01",
+      "end": "2018-02-28",
+      "pct": "2.2",
+      "current": false
+    },
+    {
+      "start": "2016-03-01",
+      "end": "2017-02-28",
+      "pct": "1.6",
+      "current": false
+    },
+    {
+      "start": "2015-03-01",
+      "end": "2016-02-29",
+      "pct": "1.9",
+      "current": false
+    },
+    {
+      "start": "2014-03-01",
+      "end": "2015-02-28",
+      "pct": "1.0",
+      "current": false
+    },
+    {
+      "start": "2013-03-01",
+      "end": "2014-02-28",
+      "pct": "1.9",
+      "current": false
+    },
+    {
+      "start": "2012-03-01",
+      "end": "2013-02-28",
+      "pct": "1.9",
+      "current": false
+    },
+    {
+      "start": "2011-03-01",
+      "end": "2012-02-29",
+      "pct": "0.5",
+      "current": false
+    },
+    {
+      "start": "2010-03-01",
+      "end": "2011-02-28",
+      "pct": "0.1",
+      "current": false
+    },
+    {
+      "start": "2009-03-01",
+      "end": "2010-02-28",
+      "pct": "2.2",
+      "current": false
+    },
+    {
+      "start": "2008-03-01",
+      "end": "2009-02-28",
+      "pct": "2.0",
+      "current": false
+    },
+    {
+      "start": "2007-03-01",
+      "end": "2008-02-29",
+      "pct": "1.5",
+      "current": false
+    },
+    {
+      "start": "2006-03-01",
+      "end": "2007-02-28",
+      "pct": "1.7",
+      "current": false
+    },
+    {
+      "start": "2005-03-01",
+      "end": "2006-02-28",
+      "pct": "1.2",
+      "current": false
+    },
+    {
+      "start": "2004-03-01",
+      "end": "2005-02-28",
+      "pct": "0.6",
+      "current": false
+    },
+    {
+      "start": "2003-03-01",
+      "end": "2004-02-29",
+      "pct": "0.8",
+      "current": false
+    },
+    {
+      "start": "2002-03-01",
+      "end": "2003-02-28",
+      "pct": "2.7",
+      "current": false
+    },
+    {
+      "start": "2001-03-01",
+      "end": "2002-02-28",
+      "pct": "2.8",
+      "current": false
+    },
+    {
+      "start": "2000-03-01",
+      "end": "2001-02-28",
+      "pct": "2.9",
+      "current": false
+    },
+    {
+      "start": "1999-03-01",
+      "end": "2000-02-29",
+      "pct": "1.7",
+      "current": false
+    },
+    {
+      "start": "1998-03-01",
+      "end": "1999-02-28",
+      "pct": "2.2",
+      "current": false
+    },
+    {
+      "start": "1997-03-01",
+      "end": "1998-02-28",
+      "pct": "1.8",
+      "current": false
+    },
+    {
+      "start": "1996-03-01",
+      "end": "1997-02-28",
+      "pct": "1.0",
+      "current": false
+    },
+    {
+      "start": "1995-03-01",
+      "end": "1996-02-29",
+      "pct": "1.1",
+      "current": false
+    },
+    {
+      "start": "1994-03-01",
+      "end": "1995-02-28",
+      "pct": "1.3",
+      "current": false
+    },
+    {
+      "start": "1993-03-01",
+      "end": "1994-02-28",
+      "pct": "1.9",
+      "current": false
+    },
+    {
+      "start": "1992-12-08",
+      "end": "1993-02-28",
+      "pct": "1.6",
+      "current": false
+    },
+    {
+      "start": "1992-03-01",
+      "end": "1992-12-07",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1991-03-01",
+      "end": "1992-02-29",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1990-03-01",
+      "end": "1991-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1989-03-01",
+      "end": "1990-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1988-03-01",
+      "end": "1989-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1987-03-01",
+      "end": "1988-02-29",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1986-03-01",
+      "end": "1987-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1985-03-01",
+      "end": "1986-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1984-03-01",
+      "end": "1985-02-28",
+      "pct": "4.0",
+      "current": false
+    },
+    {
+      "start": "1983-03-01",
+      "end": "1984-02-29",
+      "pct": "7.0",
+      "current": false
+    },
+    {
+      "start": "1982-04-01",
+      "end": "1983-02-28",
+      "pct": "7.0",
+      "current": false
+    }
   ],
-
   "units": {
     "U1": {
       "label": "Unit 1",
@@ -236,8 +499,12 @@
       "base_rent": "3995.00",
       "lease_start": "2025-02-01",
       "anniversary": "2027-02-01",
-      "occupancy_note": "Continuing tenancy. Current occupants changed on 2026-04-01 (one original tenant remains); rent unchanged at $3,995.00.",
-      "conditions": ["A", "B"]
+      "occupancy_note": "Continuing tenancy reported April 1, 2026 at $3,995.00, with one original and one replacement occupant. The fixed-term/month-to-month instrument is not supplied (H-17).",
+      "conditions": [
+        "A",
+        "B"
+      ],
+      "base_status": "Scenario input from the supplied February 2025 and April 2026 amounts; current base-rent composition is unverified."
     },
     "U2": {
       "label": "Unit 2",
@@ -245,16 +512,25 @@
       "base_rent": "3150.00",
       "lease_start": "2019-06-01",
       "anniversary": "2027-02-28",
-      "occupancy_note": "Same tenants since 2019-06-01. No rent increase recorded since the tenancy began (owner statement — flag H-03).",
-      "conditions": ["A", "B"]
+      "occupancy_note": "Lease start June 1, 2019 at $3,150.00. Current base rent and every subsequent increase/passthrough are unverified; the 13.1% scenario assumes no intervening increase (H-03, H-18).",
+      "conditions": [
+        "A",
+        "B"
+      ],
+      "base_status": "Scenario input only: the brief supplies $3,150.00 as the June 2019 lease-start rent, not expressly as the current base rent (H-18)."
     }
   },
-
   "calculations": {
     "U1": {
       "annual_pct": "1.6",
       "annual_effective": "2027-02-01",
-      "banked": [{"pct": "1.4", "for_date": "2026-02-01", "conditional": true}],
+      "banked": [
+        {
+          "pct": "1.4",
+          "for_date": "2026-02-01",
+          "conditional": true
+        }
+      ],
       "banked_total_pct": "1.4",
       "total_pct": "3.0",
       "notice_days": 30,
@@ -264,12 +540,36 @@
       "annual_pct": "1.6",
       "annual_effective": "2027-02-28",
       "banked": [
-        {"pct": "1.8", "for_date": "2020-06-01", "conditional": false},
-        {"pct": "0.7", "for_date": "2021-06-01", "conditional": false},
-        {"pct": "2.3", "for_date": "2022-06-01", "conditional": false},
-        {"pct": "3.6", "for_date": "2023-06-01", "conditional": false},
-        {"pct": "1.7", "for_date": "2024-06-01", "conditional": false},
-        {"pct": "1.4", "for_date": "2025-06-01", "conditional": false}
+        {
+          "pct": "1.8",
+          "for_date": "2020-06-01",
+          "conditional": true
+        },
+        {
+          "pct": "0.7",
+          "for_date": "2021-06-01",
+          "conditional": true
+        },
+        {
+          "pct": "2.3",
+          "for_date": "2022-06-01",
+          "conditional": true
+        },
+        {
+          "pct": "3.6",
+          "for_date": "2023-06-01",
+          "conditional": true
+        },
+        {
+          "pct": "1.7",
+          "for_date": "2024-06-01",
+          "conditional": true
+        },
+        {
+          "pct": "1.4",
+          "for_date": "2025-06-01",
+          "conditional": true
+        }
       ],
       "banked_total_pct": "11.5",
       "total_pct": "13.1",
@@ -277,143 +577,787 @@
       "max_effective": "2027-02-28"
     }
   },
-
   "licensing_steps": [
     {
       "step": 1,
       "question": "Does a single individual owner (no corporation) need a rent increase licence?",
       "answer": "Yes. The duty is written for \"owners of residential dwelling units subject to this Chapter 37\" and the Housing Inventory page states that all owners of residential property must report, including units in buildings with fewer than 10 units and condominiums. There is no small-owner or individual-owner exemption.",
       "status": "verified",
-      "sources": ["S01", "S03"]
+      "sources": [
+        "S01",
+        "S03"
+      ]
     },
     {
       "step": 2,
       "question": "Is the licence an application that the Rent Board approves?",
       "answer": "No. It is generated automatically when the owner reports the unit in the Housing Inventory with a tenant in occupancy: \"Property owners who report that a unit is tenant-occupied will receive a rent increase license\". Reporting is free and is done online in the Rent Board Portal. No approval, hearing or fee is involved.",
       "status": "verified",
-      "sources": ["S03"]
+      "sources": [
+        "S03"
+      ]
     },
     {
       "step": 3,
       "question": "Does the owner have to send the Rent Board the rent increase notice, or ask permission for the annual or banked increase?",
       "answer": "No. Annual and banked increases within the ordinance limits are imposed by the owner: banked increases \"do not have to be approved by the Rent Board\". The Board-facing duty is the reporting duty, and the annual report includes the base rent (in $250 increments) and occupancy. Board involvement is required only for an increase above the allowance, which needs a landlord petition, and for any tenant challenge.",
       "status": "verified",
-      "sources": ["S04", "S02", "S01"]
+      "sources": [
+        "S04",
+        "S02",
+        "S01"
+      ]
     },
     {
       "step": 4,
       "question": "When must the licence exist?",
       "answer": "A current licence must be on file before any annual or banked increase \"can go into effect\". It does not have to be attached to the notice, but it must be live on the effective date. The reporting deadline is 1 March every year; for a building with fewer than 10 units, reporting began on 1 March 2023.",
       "status": "verified",
-      "sources": ["S03", "S01"]
+      "sources": [
+        "S03",
+        "S01"
+      ]
     },
     {
       "step": 5,
       "question": "What happens if the unit was never reported?",
       "answer": "The licence is \"temporarily suspended\" while the owner is not in compliance; it is restored prospectively once the information is filed, but the tenant is not obligated to pay the increased rent for the months during the suspension. That is the precise mechanism that makes an otherwise lawful increase challengeable — and it is cured by filing, not by anything in the notice.",
       "status": "verified",
-      "sources": ["S01"]
+      "sources": [
+        "S01"
+      ]
     },
     {
       "step": 6,
       "question": "Is the licence the same thing as the annual Rent Board fee?",
       "answer": "No. The licence is free and comes from the Housing Inventory report. The fee is separate: $59.00 per dwelling unit for the 2026-2027 tax year, due 1 March, of which up to $29.50 may be recovered from tenants. The Rent Board states expressly that requesting a fee exemption does not satisfy the Housing Inventory requirement.",
       "status": "verified",
-      "sources": ["S17", "S03"]
+      "sources": [
+        "S17",
+        "S03"
+      ]
     },
     {
       "step": 7,
       "question": "Can a tenant check whether the owner holds a licence?",
       "answer": "Yes. The Rent Board states that a tenant can search the Rent Board Portal to see whether the landlord is up to date. The Housing Inventory information reported by owners is public.",
       "status": "verified",
-      "sources": ["S03"]
+      "sources": [
+        "S03"
+      ]
     }
   ],
-
   "process_steps": [
-    {"step": 1, "action": "Confirm the unit is covered", "detail": "Built 1940, so the date test in the Rent Ordinance is met on its face (units built on or before 13 June 1979). Confirm the unit is not in an exempt category and record the certificate-of-occupancy date.", "status": "needs-evidence", "sources": ["S18"]},
-    {"step": 2, "action": "Confirm the rent increase licence", "detail": "Log into the Rent Board Portal, confirm the Housing Inventory report for both units is current, and take a dated screenshot of the licence status.", "status": "needs-evidence", "sources": ["S03", "S01"]},
-    {"step": 3, "action": "Fix the base rent and the anniversary date from records", "detail": "Base rent is the lawful rent actually charged. Unit 1: $3,995.00 from 1 Feb 2025. Unit 2: $3,150.00 from 1 Jun 2019. Keep the leases and payment history.", "status": "verified", "sources": ["S05"]},
-    {"step": 4, "action": "Add up the allowance, without compounding or rounding", "detail": "Current annual allowance 1.6%. Add any banked percentages; never compound them; never round up. Unit 2's seven unused anniversaries add to 13.1%, not 13.1% compounded.", "status": "verified", "sources": ["S05", "S07", "S04"]},
-    {"step": 5, "action": "Pick the effective date and work backwards", "detail": "One increase every 12 months. 30 days' notice if the increase is 10% or less; 90 days if more; plus 5 days if mailed. The 1.6% rate expires on 28 Feb 2027.", "status": "verified", "sources": ["S08", "S05", "S06"]},
-    {"step": 6, "action": "Write the notice with the itemisation", "detail": "Dollar amount, percentage, effective date, which part is the annual increase and which part is banked, and the dates the banked amount is based on.", "status": "verified", "sources": ["S02", "S04", "S07"]},
-    {"step": 7, "action": "Serve it and evidence service", "detail": "Personal delivery, or mail under Code of Civil Procedure §1013 (which adds 5 days). Keep proof of service for the life of the tenancy.", "status": "verified", "sources": ["S08"]},
-    {"step": 8, "action": "Keep the annual reporting current", "detail": "Report into the Housing Inventory by 1 March each year so the licence never lapses; pay the $59.00 per-unit fee separately if it applies.", "status": "verified", "sources": ["S03", "S17"]}
+    {
+      "step": 1,
+      "action": "Confirm the unit is covered",
+      "detail": "Built 1940, so the date test in the Rent Ordinance is met on its face (units built on or before 13 June 1979). Confirm the unit is not in an exempt category and record the certificate-of-occupancy date.",
+      "status": "needs-evidence",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "step": 2,
+      "action": "Confirm the rent increase licence",
+      "detail": "Complete or update the Housing Inventory for both units and confirm each generated license. Best practice is to do this before serving notice; the official hard gate is licensure on the increase’s effective date. Save dated evidence and recheck on that date.",
+      "status": "needs-evidence",
+      "sources": [
+        "S03",
+        "S01"
+      ]
+    },
+    {
+      "step": 3,
+      "action": "Fix the base rent and the anniversary date from records",
+      "detail": "Use the lease and full rent ledger, not a lease-start amount alone. Unit 1’s $3,995.00 is reported again on April 1, 2026. Unit 2’s $3,150.00 is supplied only as the June 1, 2019 lease-start rent; its current base rent is unverified. Check fixed-term clauses and all passthroughs.",
+      "status": "needs-evidence",
+      "sources": [
+        "S05",
+        "S20"
+      ]
+    },
+    {
+      "step": 4,
+      "action": "Add up the allowance, without compounding or rounding",
+      "detail": "Current published annual allowance is 1.6%. If the ledger establishes unused allowances, add them without compounding or rounding up. Unit 2’s 13.1% is a conditional illustration: six potentially banked components (11.5%) plus current 1.6%, all on the unverified $3,150.00 scenario input.",
+      "status": "needs-evidence",
+      "sources": [
+        "S05",
+        "S07",
+        "S04"
+      ]
+    },
+    {
+      "step": 5,
+      "action": "Pick the effective date and work backwards",
+      "detail": "One increase every 12 months. 30 days' notice if the increase is 10% or less; 90 days if more; plus 5 days if mailed. The 1.6% rate expires on 28 Feb 2027.",
+      "status": "verified",
+      "sources": [
+        "S08",
+        "S05",
+        "S06"
+      ]
+    },
+    {
+      "step": 6,
+      "action": "Write the notice with the itemisation",
+      "detail": "Dollar amount, percentage, effective date, which part is the annual increase and which part is banked, and the dates the banked amount is based on.",
+      "status": "verified",
+      "sources": [
+        "S02",
+        "S04",
+        "S07"
+      ]
+    },
+    {
+      "step": 7,
+      "action": "Serve it and evidence service",
+      "detail": "Use personal delivery or mail under Civil Code §827 and Code of Civil Procedure §1013. For California-to-California mail plan on five extra calendar days; longer extensions apply in other circumstances. Keep dated proof.",
+      "status": "verified",
+      "sources": [
+        "S08",
+        "S21"
+      ]
+    },
+    {
+      "step": 8,
+      "action": "Keep the annual reporting current",
+      "detail": "Report into the Housing Inventory by 1 March each year so the licence never lapses; pay the $59.00 per-unit fee separately if it applies.",
+      "status": "verified",
+      "sources": [
+        "S03",
+        "S17"
+      ]
+    }
   ],
-
   "notice_rows": [
-    {"item": "In writing, delivered to the tenant", "detail": "Personal delivery, or mail under Code of Civil Procedure §1013 (adds 5 days).", "sources": ["S08"]},
-    {"item": "At least 30 days before the effective date (increase of 10% or less)", "detail": "Unit 1 (1.6% or 3.0%) falls in this band.", "sources": ["S08", "S05"]},
-    {"item": "At least 90 days before the effective date (increase over 10%)", "detail": "Unit 2's 13.1% falls in this band.", "sources": ["S08", "S05"]},
-    {"item": "Dollar amount of the increase", "detail": "State the monthly dollar figure.", "sources": ["S05"]},
-    {"item": "Percentage amount of the increase", "detail": "State the percentage used.", "sources": ["S05"]},
-    {"item": "Date the increase takes effect", "detail": "Use the percentage in force on that date, not the one in force when the notice is written.", "sources": ["S05"]},
-    {"item": "Which portion is the annual increase and which is banked", "detail": "Required by the ordinance, on or before the date the notice is given.", "sources": ["S02", "S07"]},
-    {"item": "The dates on which a banked amount is based", "detail": "Rule 4.12(b); omitting this does not void the increase under the rule, but §37.3(b)(5) makes any nonconforming increase null and void — so include it (flag H-15).", "sources": ["S07", "S02"]},
-    {"item": "No rounding up and no compounding", "detail": "Arithmetic shown on the notice must match the published percentages exactly.", "sources": ["S05", "S07"]},
-    {"item": "No charge for the April 2026 occupant change", "detail": "An additional occupant cannot support a rent increase, even if a lease says otherwise.", "sources": ["S02", "S05"]}
+    {
+      "item": "In writing, delivered to the tenant",
+      "detail": "Personal delivery, or mail under Code of Civil Procedure §1013 (adds 5 days).",
+      "sources": [
+        "S08"
+      ]
+    },
+    {
+      "item": "At least 30 days before the effective date (increase of 10% or less)",
+      "detail": "Unit 1 (1.6% or 3.0%) falls in this band.",
+      "sources": [
+        "S08",
+        "S05"
+      ]
+    },
+    {
+      "item": "At least 90 days before the effective date (increase over 10%)",
+      "detail": "Unit 2's 13.1% falls in this band.",
+      "sources": [
+        "S08",
+        "S05"
+      ]
+    },
+    {
+      "item": "Dollar amount of the increase",
+      "detail": "State the monthly dollar figure.",
+      "sources": [
+        "S05"
+      ]
+    },
+    {
+      "item": "Percentage amount of the increase",
+      "detail": "State the percentage used.",
+      "sources": [
+        "S05"
+      ]
+    },
+    {
+      "item": "Date the increase takes effect",
+      "detail": "Use the percentage in force on that date, not the one in force when the notice is written.",
+      "sources": [
+        "S05"
+      ]
+    },
+    {
+      "item": "Which portion is the annual increase and which is banked",
+      "detail": "Required by the ordinance, on or before the date the notice is given.",
+      "sources": [
+        "S02",
+        "S07"
+      ]
+    },
+    {
+      "item": "The dates on which a banked amount is based",
+      "detail": "Rule 4.12(b); omitting this does not void the increase under the rule, but §37.3(b)(5) makes any nonconforming increase null and void — so include it (flag H-15).",
+      "sources": [
+        "S07",
+        "S02"
+      ]
+    },
+    {
+      "item": "No rounding up and no compounding",
+      "detail": "Arithmetic shown on the notice must match the published percentages exactly.",
+      "sources": [
+        "S05",
+        "S07"
+      ]
+    },
+    {
+      "item": "No charge for the April 2026 occupant change",
+      "detail": "An additional occupant cannot support a rent increase, even if a lease says otherwise.",
+      "sources": [
+        "S02",
+        "S05"
+      ]
+    }
   ],
-
   "reasons": [
-    {"reason": "The Rent Board's published annual allowance (1.6%)", "lawful": "Yes", "detail": "The ordinance is a price-control scheme: no justification letter is needed for the annual portion.", "sources": ["S02", "S05"]},
-    {"reason": "Allowances skipped in earlier years (banked)", "lawful": "Yes, within the banking rules", "detail": "Itemise the years and percentages; add, never compound.", "sources": ["S04", "S07"]},
-    {"reason": "Certified capital improvements or operating-and-maintenance costs", "lawful": "Only with a Rent Board petition", "detail": "An increase above the allowance requires a landlord petition; certified O&M increases are capped at 7%.", "sources": ["S02"]},
-    {"reason": "\"Catch up to market rent\"", "lawful": "No", "detail": "Market rent is not a component of a lawful increase for a sitting tenant in a covered unit; only a petition can exceed the allowance.", "sources": ["S02"]},
-    {"reason": "\"A new roommate moved in\"", "lawful": "No", "detail": "Expressly prohibited, even where the lease provides for it.", "sources": ["S02", "S05"]},
-    {"reason": "\"To encourage the tenant to leave\"", "lawful": "No — harassment", "detail": "Bad-faith pressure to vacate exposes the owner to treble damages and attorney's fees.", "sources": ["S15"]},
-    {"reason": "After the tenant complained about repairs or habitability", "lawful": "No, for 180 days", "detail": "Statutory retaliation bar.", "sources": ["S12"]},
-    {"reason": "A rent produced by pricing software", "lawful": "No", "detail": "Algorithmic devices using non-public competitor data are prohibited in San Francisco.", "sources": ["S16"]}
+    {
+      "reason": "The Rent Board's published annual allowance (1.6%)",
+      "lawful": "Yes",
+      "detail": "The ordinance is a price-control scheme: no justification letter is needed for the annual portion.",
+      "sources": [
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "reason": "Allowances skipped in earlier years (banked)",
+      "lawful": "Yes, within the banking rules",
+      "detail": "Itemise the years and percentages; add, never compound.",
+      "sources": [
+        "S04",
+        "S07"
+      ]
+    },
+    {
+      "reason": "Certified capital improvements or operating-and-maintenance costs",
+      "lawful": "Only with a Rent Board petition",
+      "detail": "An increase above the allowance requires a landlord petition; certified O&M increases are capped at 7%.",
+      "sources": [
+        "S02"
+      ]
+    },
+    {
+      "reason": "\"Catch up to market rent\"",
+      "lawful": "No",
+      "detail": "Not a unilateral annual/banked justification. Valid banked amounts can exceed the current annual allowance without a petition; any separate comparables or other petition route is fact-specific and no supporting facts are supplied.",
+      "sources": [
+        "S02"
+      ]
+    },
+    {
+      "reason": "\"A new roommate moved in\"",
+      "lawful": "No",
+      "detail": "Expressly prohibited, even where the lease provides for it.",
+      "sources": [
+        "S02",
+        "S05"
+      ]
+    },
+    {
+      "reason": "\"To encourage the tenant to leave\"",
+      "lawful": "No — harassment",
+      "detail": "Bad-faith pressure to vacate exposes the owner to treble damages and attorney's fees.",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "reason": "After the tenant complained about repairs or habitability",
+      "lawful": "Review required — not an automatic 180-day bar",
+      "detail": "Retaliatory purpose and statutory conditions control. Section 1942.5 lists protected activity and 180-day events but preserves lawful cause and contains a good-faith-ground provision. Screen the history; do not describe every increase in that window as automatically unlawful.",
+      "sources": [
+        "S12"
+      ]
+    },
+    {
+      "reason": "A rent produced by pricing software",
+      "lawful": "No",
+      "detail": "Algorithmic devices using non-public competitor data are prohibited in San Francisco.",
+      "sources": [
+        "S16"
+      ]
+    }
   ],
-
   "practice_rows": [
-    {"topic": "Who the rules bind", "corporate": "Same ordinance, same percentage, same notice rules.", "individual": "Same ordinance, same percentage, same notice rules — no small-owner exemption in Chapter 37.", "sources": ["S02", "S01"]},
-    {"topic": "Rent increase licence", "corporate": "Required, obtained from the annual Housing Inventory report.", "individual": "Required, obtained from the annual Housing Inventory report; free and automatic.", "sources": ["S03"]},
-    {"topic": "Algorithmic pricing", "corporate": "Banned in San Francisco: no algorithmic device using non-public competitor data to set rents or occupancy.", "individual": "Banned as well; the prohibition is on \"a landlord\", and tenants and tenant nonprofits may sue.", "sources": ["S16"]},
-    {"topic": "What official sources document", "corporate": "Enforcement attention centres on centralized revenue management and on large landlords' data sharing. No official San Francisco dataset measures corporate increase behaviour.", "individual": "No official dataset measures how individual SF owners set increases. The verified statement is the rule set, not a behavioural average.", "sources": ["S03", "S16"]},
-    {"topic": "State-law difference by owner type", "corporate": "The AB 1482 exemption for single-family homes and condominiums is unavailable to a REIT, a corporation, or an LLC with a corporate member.", "individual": "An individual owner may qualify for that exemption — but it is irrelevant to these units, which are already under SF's lower local cap.", "sources": ["S09", "S10"]},
-    {"topic": "Records that make an increase defensible", "corporate": "Portfolio-level rent ledger, standard notices, central compliance calendar.", "individual": "Lease, rent ledger, licence screenshot, copy of the notice and proof of service, kept per unit. Nothing more is required by the ordinance.", "sources": ["S02", "S07"]}
+    {
+      "topic": "Who the rules bind",
+      "corporate": "Same ordinance, same percentage, same notice rules.",
+      "individual": "Same ordinance, same percentage, same notice rules — no small-owner exemption in Chapter 37.",
+      "sources": [
+        "S02",
+        "S01"
+      ]
+    },
+    {
+      "topic": "Rent increase licence",
+      "corporate": "Required, obtained from the annual Housing Inventory report.",
+      "individual": "Required, obtained from the annual Housing Inventory report; free and automatic.",
+      "sources": [
+        "S03"
+      ]
+    },
+    {
+      "topic": "Algorithmic pricing",
+      "corporate": "Banned in San Francisco: no algorithmic device using non-public competitor data to set rents or occupancy.",
+      "individual": "Banned as well; the prohibition is on \"a landlord\", and tenants and tenant nonprofits may sue.",
+      "sources": [
+        "S16"
+      ]
+    },
+    {
+      "topic": "What official sources document",
+      "corporate": "DOJ allegations and a proposed RealPage settlement document concerns about shared nonpublic competitor data in portfolio-scale pricing tools; they do not establish typical behavior by every corporate landlord.",
+      "individual": "No official dataset measures how individual SF owners set increases. The verified statement is the rule set, not a behavioural average.",
+      "sources": [
+        "S22",
+        "S16"
+      ]
+    },
+    {
+      "topic": "State-law difference by owner type",
+      "corporate": "The AB 1482 exemption for single-family homes and condominiums is unavailable to a REIT, a corporation, or an LLC with a corporate member.",
+      "individual": "An individual owner may qualify for that exemption — but it is irrelevant to these units, which are already under SF's lower local cap.",
+      "sources": [
+        "S09",
+        "S10"
+      ]
+    },
+    {
+      "topic": "Records that make an increase defensible",
+      "corporate": "No official source establishes a universal corporate recordkeeping practice. A documented per-unit ledger, neutral policy, notice, and service evidence are prudent controls.",
+      "individual": "Use the same per-unit evidence discipline: lease, full ledger, license evidence, coverage, calculation, notice, and proof of service. This is a recommended checklist, not an exhaustive statement of every legal duty.",
+      "sources": [
+        "S02",
+        "S07",
+        "S23"
+      ]
+    }
   ],
-
   "fair_housing_rows": [
-    {"point": "Is a difference between the two units itself unlawful?", "finding": "No provision in the cited Chapter 37, Civil Code §1947.12, Government Code §12955 or the federal Fair Housing Act requires identical treatment. The prohibition is discrimination or harassment because of a protected characteristic.", "status": "reading of cited text", "sources": ["S13", "S14", "S02"]},
-    {"point": "What are the protected characteristics?", "finding": "Federal: race, colour, national origin, religion, sex, familial status, disability. California adds, among others, gender, gender identity and expression, sexual orientation, marital status, ancestry, source of income, veteran or military status, and genetic information.", "status": "verified", "sources": ["S14", "S13"]},
-    {"point": "Is a discriminatory rent increase already harassment under local law?", "finding": "Yes: §37.10B(a)(9) makes it bad-faith harassment to \"violate any law which prohibits discrimination\" in the protected categories it lists.", "status": "verified", "sources": ["S15"]},
-    {"point": "What objective reasons justify different outcomes for the two units?", "finding": "Different base rent ($3,995.00 vs $3,150.00), different anniversary dates, and different banked history. Those differences are documented in each unit's own record.", "status": "calculated", "sources": ["S05", "S04"]},
-    {"point": "What actually creates exposure?", "finding": "A difference that tracks a protected characteristic; an increase imposed in bad faith to push a tenant out; an increase within 180 days of a habitability complaint; a notice that does not conform.", "status": "verified", "sources": ["S15", "S12", "S02"]},
-    {"point": "Is there an official safe-harbour rule for \"treat both units the same\"?", "finding": "No official source states that raising both units identically cures a discrimination risk, or that raising one unit creates one. Both questions are decided on the reason for the difference, not on the pattern.", "status": "no official source", "sources": ["S13", "S14"]}
+    {
+      "point": "Is a difference between the two units itself unlawful?",
+      "finding": "No provision in the cited Chapter 37, Civil Code §1947.12, Government Code §12955 or the federal Fair Housing Act requires identical treatment. The prohibition is discrimination or harassment because of a protected characteristic.",
+      "status": "reading of cited text",
+      "sources": [
+        "S13",
+        "S14",
+        "S02"
+      ]
+    },
+    {
+      "point": "What are the protected characteristics?",
+      "finding": "Federal: race, colour, national origin, religion, sex, familial status, disability. California adds, among others, gender, gender identity and expression, sexual orientation, marital status, ancestry, source of income, veteran or military status, and genetic information.",
+      "status": "verified",
+      "sources": [
+        "S14",
+        "S13"
+      ]
+    },
+    {
+      "point": "Is a discriminatory rent increase already harassment under local law?",
+      "finding": "Yes: §37.10B(a)(9) makes it bad-faith harassment to \"violate any law which prohibits discrimination\" in the protected categories it lists.",
+      "status": "verified",
+      "sources": [
+        "S15"
+      ]
+    },
+    {
+      "point": "What objective reasons justify different outcomes for the two units?",
+      "finding": "Use documented lease terms, verified current base rent, anniversary dates, and proven banked history. The brief supplies different lease-start dates and amounts, but Unit 2’s current base and both units’ complete histories are not verified.",
+      "status": "needs-evidence",
+      "sources": [
+        "S05",
+        "S04"
+      ]
+    },
+    {
+      "point": "What actually creates exposure?",
+      "finding": "Selecting a unit because of a protected characteristic; bad-faith pressure to vacate; retaliation under the conditions of Civil Code §1942.5; unresolved repair petitions; or a nonconforming notice. A 180-day complaint history is a review trigger, not an automatic bar.",
+      "status": "verified",
+      "sources": [
+        "S15",
+        "S12",
+        "S02",
+        "S23"
+      ]
+    },
+    {
+      "point": "Is there an official safe-harbour rule for \"treat both units the same\"?",
+      "finding": "No official source states that raising both units identically cures a discrimination risk, or that raising one unit creates one. Both questions are decided on the reason for the difference, not on the pattern.",
+      "status": "no official source",
+      "sources": [
+        "S13",
+        "S14"
+      ]
+    }
   ],
-
   "review_rows": [
-    {"n": 1, "test": "Is the unit covered by Chapter 37?", "evidence": "Certificate of occupancy / year built 1940; not an exempt category.", "result": "needs evidence", "sources": ["S18"]},
-    {"n": 2, "test": "Does the owner hold a current rent increase licence?", "evidence": "Rent Board Portal licence status, dated.", "result": "needs evidence", "sources": ["S01", "S03"]},
-    {"n": 3, "test": "Is the percentage the one in force on the effective date?", "evidence": "Form 571 for 3/1/26–2/28/27 = 1.6%.", "result": "pass", "sources": ["S06", "S05"]},
-    {"n": 4, "test": "Was the increase applied to base rent only?", "evidence": "No passthroughs bundled in; utilities/parking documented.", "result": "needs evidence", "sources": ["S05"]},
-    {"n": 5, "test": "Is the arithmetic additive, not compounded, and not rounded up?", "evidence": "U1 $63.92; U2 $412.65 — both recomputed from the published percentages.", "result": "pass", "sources": ["S07", "S04"]},
-    {"n": 6, "test": "Has it been at least 12 months since the last increase?", "evidence": "U1 last rent 1 Feb 2025; U2 last rent 1 Jun 2019.", "result": "pass (owner records)", "sources": ["S05"]},
-    {"n": 7, "test": "Does the banked amount satisfy the banking test?", "evidence": "U2: more than 24 months with no increase. U1: 1 Feb 2027 is exactly 24 months after the last increase — confirm with the Rent Board (H-01).", "result": "flag", "sources": ["S04", "S07"]},
-    {"n": 8, "test": "Is the notice period long enough, including 5 days for mail?", "evidence": "30 days for U1; 90 days for U2's 13.1%.", "result": "pass (if served on time)", "sources": ["S08"]},
-    {"n": 9, "test": "Does the notice itemise annual vs banked, with dates?", "evidence": "Draft notice attached to the record.", "result": "needs evidence", "sources": ["S02", "S07"]},
-    {"n": 10, "test": "Is any part of the increase retaliatory?", "evidence": "No habitability complaint, inspection or litigation in the previous 180 days.", "result": "needs evidence", "sources": ["S12"]},
-    {"n": 11, "test": "Is any part of the increase discriminatory or intended to push the tenant out?", "evidence": "Written policy: same calculation method for both units; no vacancy-related motive; no pricing software.", "result": "needs evidence", "sources": ["S13", "S15", "S16"]},
-    {"n": 12, "test": "Can the tenant verify the number without a lawyer?", "evidence": "Notice names the rate period, the Rent Board phone number (415-252-4600) and the tenant's right to petition.", "result": "recommended", "sources": ["S18", "S19"]}
+    {
+      "n": 1,
+      "test": "Is the unit covered by Chapter 37?",
+      "evidence": "Certificate of occupancy / year built 1940; not an exempt category.",
+      "result": "needs evidence",
+      "sources": [
+        "S18"
+      ]
+    },
+    {
+      "n": 2,
+      "test": "Does the owner hold a current rent increase licence?",
+      "evidence": "Rent Board Portal licence status, dated.",
+      "result": "needs evidence",
+      "sources": [
+        "S01",
+        "S03"
+      ]
+    },
+    {
+      "n": 3,
+      "test": "Is the percentage the one in force on the effective date?",
+      "evidence": "Form 571 for 3/1/26–2/28/27 = 1.6%.",
+      "result": "pass",
+      "sources": [
+        "S06",
+        "S05"
+      ]
+    },
+    {
+      "n": 4,
+      "test": "Was the increase applied to base rent only?",
+      "evidence": "No passthroughs bundled in; utilities/parking documented.",
+      "result": "needs evidence",
+      "sources": [
+        "S05"
+      ]
+    },
+    {
+      "n": 5,
+      "test": "Is the arithmetic additive, not compounded, and not rounded up?",
+      "evidence": "Arithmetic only: U1 $63.92 annual-only; U2 $412.65 for the conditional 13.1% scenario. Private base and history remain unverified.",
+      "result": "calculated",
+      "sources": [
+        "S07",
+        "S04"
+      ]
+    },
+    {
+      "n": 6,
+      "test": "Does the lease permit an increase now, and has at least 12 months elapsed?",
+      "evidence": "Read Unit 1’s April 2026 instrument for fixed term and escalation clause; verify both ledgers and last increase dates. Lease-start dates alone are insufficient.",
+      "result": "needs evidence",
+      "sources": [
+        "S05",
+        "S20"
+      ]
+    },
+    {
+      "n": 7,
+      "test": "Does the banked amount satisfy the banking test?",
+      "evidence": "Both measuring points are satisfied by the conditional February 1, 2027 Unit 1 scenario: 24 months without an increase and 12 months since the skipped allowance became available. Verify the actual ledger; do not treat the two formulations as a proven conflict.",
+      "result": "needs evidence",
+      "sources": [
+        "S04",
+        "S07"
+      ]
+    },
+    {
+      "n": 8,
+      "test": "Is the notice period long enough, including 5 days for mail?",
+      "evidence": "30 days for U1; 90 days for U2's 13.1%.",
+      "result": "pass (if served on time)",
+      "sources": [
+        "S08",
+        "S21"
+      ]
+    },
+    {
+      "n": 9,
+      "test": "Does the notice itemise annual vs banked, with dates?",
+      "evidence": "Draft notice attached to the record.",
+      "result": "needs evidence",
+      "sources": [
+        "S02",
+        "S07"
+      ]
+    },
+    {
+      "n": 10,
+      "test": "Is any part of the increase retaliatory?",
+      "evidence": "Screen §1942.5 protected activity and listed events in the prior 180 days, other protected activity at any time, rent status, lawful cause, repairs, and any good-faith ground. No blanket clearance can be given from public facts.",
+      "result": "needs evidence",
+      "sources": [
+        "S12",
+        "S23"
+      ]
+    },
+    {
+      "n": 11,
+      "test": "Is any part of the increase discriminatory or intended to push the tenant out?",
+      "evidence": "Written policy: same calculation method for both units; no vacancy-related motive; no pricing software.",
+      "result": "needs evidence",
+      "sources": [
+        "S13",
+        "S15",
+        "S16"
+      ]
+    },
+    {
+      "n": 12,
+      "test": "Can the tenant verify the number without a lawyer?",
+      "evidence": "Recommended: notice names the rate period, Rent Board phone number, petition route, and official referral resources. Do not promise free representation.",
+      "result": "recommended",
+      "sources": [
+        "S18",
+        "S19"
+      ]
+    },
+    {
+      "n": 13,
+      "test": "Is any required repair or tenant petition unresolved?",
+      "evidence": "Review written repair requests, inspections, notices of violation, and any pending petition. A qualifying Failure to Repair and Maintain petition is due no later than 60 days after receipt of the increase notice.",
+      "result": "needs evidence",
+      "sources": [
+        "S23"
+      ]
+    }
   ],
-
   "flags": [
-    {"id": "H-01", "severity": "high", "item": "Two official pages state different banking look-back tests", "detail": "The Rent Board's \"Banked rent increases\" page says a skipped increase is only banked if at least 24 full months pass without any rent increase; Rule 4.12(a) says \"A full 12 months must have elapsed from the date that an annual rent increase … could have been imposed\", and the worked examples on \"Learn about rent increases\" apply a 12-month test.", "effect": "Unit 1's extra 1.4% ($55.93) is conditional. The certain figure is 1.6% ($63.92). 1 February 2027 is the earliest date that satisfies even the stricter 24-month reading.", "sources": ["S04", "S07", "S05"], "action": "Confirm with a Rent Board counselor (415-252-4600) before serving, or serve the 1.6% annual increase only."},
-    {"id": "H-02", "severity": "high", "item": "Unit 1 anniversary date is derived, not verified", "detail": "The anniversary is taken from the lease start of 1 February 2025. If a rent increase was actually imposed on a different date, both the available bank and the notice calendar change.", "effect": "Dates and the $55.93 conditional amount.", "sources": ["S05", "S04"], "action": "Produce the 2025 lease and the rent ledger."},
-    {"id": "H-03", "severity": "high", "item": "Unit 2's \"no increase since 2019\" is the owner's statement", "detail": "The 13.1% accumulation assumes no increase was served or collected after 1 June 2019. No official record was checked.", "effect": "If any increase was imposed, the banked total falls.", "sources": ["S04"], "action": "Produce the rent ledger and any notices since 2019."},
-    {"id": "H-04", "severity": "high", "item": "Rent increase licence status unknown", "detail": "Whether both units are current in the Housing Inventory was not checked; the record is held in the Rent Board Portal, which this session cannot access.", "effect": "Without a licence on the effective date the increase is unenforceable and the tenant may not owe the increase for the suspension months.", "sources": ["S01", "S03"], "action": "Check the Portal and save a dated screenshot before serving."},
-    {"id": "H-05", "severity": "medium", "item": "Coverage not confirmed against official records", "detail": "Year built 1940 satisfies the date test on its face, but coverage also depends on the unit not being in an exempt class (for example certain single-family or condominium situations).", "effect": "If a unit is not covered, the local cap does not apply and the analysis changes entirely.", "sources": ["S18"], "action": "Check the address on the City Property Information Map and confirm with the Rent Board."},
-    {"id": "H-06", "severity": "medium", "item": "Unit 1's April 2026 occupant change needs documentation", "detail": "The analysis treats 1 April 2026 as a partial change of occupancy (an original tenant remained), so there is no vacancy reset and no additional-occupant charge.", "effect": "If the original tenant had in fact vacated, Costa-Hawkins could allow a new initial rent — a different result entirely.", "sources": ["S11", "S02"], "action": "Keep the 2025 lease, the 2026 change documents, and proof of continuous occupancy."},
-    {"id": "H-07", "severity": "medium", "item": "Base rent composition not documented", "detail": "The increase must be calculated on base rent, which includes housing services such as parking or storage and excludes temporary passthroughs.", "effect": "A bundled charge in the base rent would change the dollar amount.", "sources": ["S05"], "action": "Confirm what the $3,995.00 and $3,150.00 include."},
-    {"id": "H-08", "severity": "medium", "item": "The 2027-28 rate is not published", "detail": "The 1.6% rate applies only to increases effective 1 March 2026 – 28 February 2027. The next rate is set on 1 March 2027.", "effect": "Any effective date after 28 February 2027 uses an unknown percentage — left blank, not guessed.", "sources": ["S06", "S05"], "action": "Re-check Form 571 after 1 March 2027."},
-    {"id": "H-09", "severity": "medium", "item": "Complaint and inspection history not checked", "detail": "A rent increase within 180 days of a habitability complaint, inspection or litigation is unlawful.", "effect": "Could void the increase regardless of arithmetic.", "sources": ["S12"], "action": "Check DBI complaint history and any tenant correspondence."},
-    {"id": "H-10", "severity": "medium", "item": "\"Reasonable and normal\" market increase for 94122 — no official figure", "detail": "No official source publishes a permissible or typical market increase for covered units in 94122. Commercial listing data is not an official source and was not used.", "effect": "The value is left blank. The official ceiling is the only verified number.", "sources": ["S05", "S06"], "action": "Treat the Rent Board allowance as the reasonableness benchmark."},
-    {"id": "H-11", "severity": "low", "item": "No official dataset on corporate vs individual owner behaviour", "detail": "Official sources state the rules that bind every landlord; none measures how individual SF owners typically set increases.", "effect": "Practice comparison is qualitative and cited to the ordinance, not to statistics.", "sources": ["S03", "S16"], "action": "None required; do not rely on industry averages."},
-    {"id": "H-12", "severity": "low", "item": "Service dates are computed, not official", "detail": "The dates add the statutory period to the intended effective date, with 5 extra days for mail under Code of Civil Procedure §1013.", "effect": "Weekends, holidays and proof of service can move the last safe date.", "sources": ["S08"], "action": "Serve well before the last date and keep proof of service."},
-    {"id": "H-13", "severity": "low", "item": "Taking the whole 13.1% at once is a business judgement", "detail": "It is lawful (banked increases are not capped in total), but there is no official \"reasonableness\" test for exercising it in one step.", "effect": "Scrutiny risk, not a legal defect.", "sources": ["S04"], "action": "Consider phasing; document the decision."},
-    {"id": "H-14", "severity": "low", "item": "Repo defect found and repaired: broken federal statute link", "detail": "Row S25 in data/sources.csv and docs/sources.html pointed at uscode.house.gov/view.xhtml, which returned \"Page Not Found\" when fetched on 2026-11-07. Replaced with the HUD Fair Housing Act overview page, which was fetched and reads as quoted.", "effect": "One prior citation was not verifiable in its published form.", "sources": ["S14"], "action": "Repaired in this session; review the diff."},
-    {"id": "H-15", "severity": "low", "item": "The regulation and the ordinance differ on notice defects", "detail": "Rule 4.12(b) says failing to state the banked dates does not void an increase, and Rule 4.10(b) preserves an increase that equals the allowable annual plus banked amount; §37.3(b)(5) says any nonconforming increase is null and void.", "effect": "The safe course is to satisfy the stricter reading every time.", "sources": ["S07", "S02"], "action": "Always itemise annual vs banked, with dates."},
-    {"id": "H-16", "severity": "low", "item": "Owner's premise partly incorrect: no per-increase filing with the Rent Board", "detail": "The owner believed the Rent Board must be informed of, or must license, each increase. The licence is real but comes from the annual Housing Inventory report; annual and banked increases \"do not have to be approved by the Rent Board\".", "effect": "The compliance step is the annual report, not a filing about the increase.", "sources": ["S01", "S03", "S04"], "action": "Report by 1 March each year; serve a conforming notice for each increase."}
+    {
+      "id": "H-01",
+      "severity": "low",
+      "item": "Banking guidance uses two measuring points; worked-example labels need care",
+      "detail": "The banking page requires at least 24 full months without an increase; Rule 4.12(a) requires 12 months from when the skipped annual allowance could have been imposed. For an annually reviewed tenancy these formulations can both be satisfied: the skipped allowance first becomes available after the initial 12 months, then banks after another 12. February 1, 2027 satisfies both for the Unit 1 scenario. This is not a proven legal conflict.",
+      "effect": "The 1.4% component is not conditional on choosing between two rules. It remains conditional on the actual lease, anniversary, license, and ledger. Official worked-example year errors are separately logged H-19.",
+      "sources": [
+        "S04",
+        "S07",
+        "S05"
+      ],
+      "action": "Apply Rule 4.12(a) and the guidance together; verify dates from the ledger rather than relying on erroneous example-year labels."
+    },
+    {
+      "id": "H-02",
+      "severity": "high",
+      "item": "Unit 1 anniversary and prior-increase history are not verified",
+      "detail": "February 1, 2027 is a scenario based on the February 1, 2025 lease start and no intervening increase. The April 1, 2026 paperwork and full ledger were not supplied for review.",
+      "effect": "Any different last-increase date changes the anniversary, available bank, and notice calendar.",
+      "sources": [
+        "S05",
+        "S04"
+      ],
+      "action": "Review the 2025 lease, April 2026 instrument, every later notice, and the complete rent ledger."
+    },
+    {
+      "id": "H-03",
+      "severity": "high",
+      "item": "Unit 2 zero-prior-increase assumption is not supplied or verified",
+      "detail": "The 13.1% illustration assumes no increase after June 1, 2019. That is an assumption made for arithmetic, not an established owner statement or official fact.",
+      "effect": "Any prior increase changes the base, bank, anniversary, and notice threshold.",
+      "sources": [
+        "S04"
+      ],
+      "action": "Produce the full rent ledger and every increase notice since June 2019 before using any banked amount."
+    },
+    {
+      "id": "H-04",
+      "severity": "high",
+      "item": "Rent increase licence status unknown",
+      "detail": "Whether both units are current in the Housing Inventory was not checked; the record is held in the Rent Board Portal, which this session cannot access.",
+      "effect": "Without a licence on the effective date the increase is unenforceable and the tenant may not owe the increase for the suspension months.",
+      "sources": [
+        "S01",
+        "S03"
+      ],
+      "action": "Check the Portal and save a dated screenshot before serving."
+    },
+    {
+      "id": "H-05",
+      "severity": "medium",
+      "item": "Coverage not confirmed against official records",
+      "detail": "Year built 1940 satisfies the date test on its face, but coverage also depends on the unit not being in an exempt class (for example certain single-family or condominium situations).",
+      "effect": "If a unit is not covered, the local cap does not apply and the analysis changes entirely.",
+      "sources": [
+        "S18"
+      ],
+      "action": "Check the address on the City Property Information Map and confirm with the Rent Board."
+    },
+    {
+      "id": "H-06",
+      "severity": "medium",
+      "item": "Unit 1's April 2026 occupant change needs documentation",
+      "detail": "The analysis treats 1 April 2026 as a partial change of occupancy (an original tenant remained), so there is no vacancy reset and no additional-occupant charge.",
+      "effect": "If the original tenant had in fact vacated, Costa-Hawkins could allow a new initial rent — a different result entirely.",
+      "sources": [
+        "S11",
+        "S02"
+      ],
+      "action": "Keep the 2025 lease, the 2026 change documents, and proof of continuous occupancy."
+    },
+    {
+      "id": "H-07",
+      "severity": "medium",
+      "item": "Base rent composition not documented",
+      "detail": "The increase must be calculated on base rent, which includes housing services such as parking or storage and excludes temporary passthroughs.",
+      "effect": "A bundled charge in the base rent would change the dollar amount.",
+      "sources": [
+        "S05"
+      ],
+      "action": "Confirm what the $3,995.00 and $3,150.00 include."
+    },
+    {
+      "id": "H-08",
+      "severity": "medium",
+      "item": "The 2027-28 rate is not published",
+      "detail": "The 1.6% rate applies only to increases effective 1 March 2026 – 28 February 2027. The next rate is set on 1 March 2027.",
+      "effect": "Any effective date after 28 February 2027 uses an unknown percentage — left blank, not guessed.",
+      "sources": [
+        "S06",
+        "S05"
+      ],
+      "action": "Re-check Form 571 after 1 March 2027."
+    },
+    {
+      "id": "H-09",
+      "severity": "medium",
+      "item": "Retaliation and repair history require a fact-specific review",
+      "detail": "Section 1942.5 is not an automatic 180-day prohibition on every increase. It addresses retaliation under stated conditions, preserves lawful cause, and includes a good-faith-ground provision. Separately, a qualifying repair petition can defer an annual increase.",
+      "effect": "Protected activity, repair requests, inspections, disputes, and petition deadlines can create exposure even when arithmetic is correct.",
+      "sources": [
+        "S12",
+        "S23"
+      ],
+      "action": "Review correspondence, complaints, inspections, rent status, lawful cause, repairs, and any petitions; obtain legal review if any exist."
+    },
+    {
+      "id": "H-10",
+      "severity": "medium",
+      "item": "\"Reasonable and normal\" market increase for 94122 — no official figure",
+      "detail": "No official source publishes a permissible or typical market increase for covered units in 94122. Commercial listing data is not an official source and was not used.",
+      "effect": "The value is left blank. The official ceiling is the only verified number.",
+      "sources": [
+        "S05",
+        "S06"
+      ],
+      "action": "Treat the Rent Board allowance as the reasonableness benchmark."
+    },
+    {
+      "id": "H-11",
+      "severity": "low",
+      "item": "No official dataset on corporate vs individual owner behaviour",
+      "detail": "Official sources state the rules that bind every landlord; none measures how individual SF owners typically set increases.",
+      "effect": "Practice comparison is qualitative and cited to the ordinance, not to statistics.",
+      "sources": [
+        "S03",
+        "S16"
+      ],
+      "action": "None required; do not rely on industry averages."
+    },
+    {
+      "id": "H-12",
+      "severity": "low",
+      "item": "Service dates are computed, not official",
+      "detail": "The dates add the statutory period to the intended effective date, with 5 extra days for mail under Code of Civil Procedure §1013.",
+      "effect": "Weekends, holidays and proof of service can move the last safe date.",
+      "sources": [
+        "S08"
+      ],
+      "action": "Serve well before the last date and keep proof of service."
+    },
+    {
+      "id": "H-13",
+      "severity": "low",
+      "item": "The 13.1% scenario is neither a certified maximum nor a reasonableness finding",
+      "detail": "The additive arithmetic is reproducible on $3,150.00, but the current base and no-prior-increase premise are unverified. Official banking guidance does not supply a ZIP-specific business recommendation to take the whole amount at once.",
+      "effect": "The amount may change completely after the ledger review. Any phase-in choice is a separate lawful-neutral business decision, not a legal safe harbour.",
+      "sources": [
+        "S04"
+      ],
+      "action": "Do not serve a 13.1% notice from this illustration. Verify all inputs first, then document a neutral decision."
+    },
+    {
+      "id": "H-14",
+      "severity": "low",
+      "item": "Repo defect found and repaired: broken federal statute link",
+      "detail": "Row S25 in data/sources.csv and docs/sources.html pointed at uscode.house.gov/view.xhtml, which returned \"Page Not Found\" when fetched on 2026-11-07. Replaced with the HUD Fair Housing Act overview page, which was fetched and reads as quoted.",
+      "effect": "One prior citation was not verifiable in its published form.",
+      "sources": [
+        "S14"
+      ],
+      "action": "Repaired in this session; review the diff."
+    },
+    {
+      "id": "H-15",
+      "severity": "low",
+      "item": "Notice-defect consequences are text-specific, not universally void",
+      "detail": "Section 37.3(b)(5) states a null-and-void rule. Rule 4.10(b) contains an exception where the amount is no more than allowable annual plus banked increases, and Rule 4.12(b) expressly says omission of banked dates does not itself render the increase null and void.",
+      "effect": "It is inaccurate to say every itemisation omission automatically voids an otherwise valid increase. The conservative course remains full itemisation.",
+      "sources": [
+        "S07",
+        "S02"
+      ],
+      "action": "State the annual and banked dollar amounts, percentages, effective date, and banked basis dates; do not rely on an exception."
+    },
+    {
+      "id": "H-16",
+      "severity": "low",
+      "item": "Owner's premise partly incorrect: no per-increase filing with the Rent Board",
+      "detail": "The owner believed the Rent Board must be informed of, or must license, each increase. The licence is real but comes from the annual Housing Inventory report; annual and banked increases \"do not have to be approved by the Rent Board\".",
+      "effect": "The compliance step is the annual report, not a filing about the increase.",
+      "sources": [
+        "S01",
+        "S03",
+        "S04"
+      ],
+      "action": "Report by 1 March each year; serve a conforming notice for each increase."
+    },
+    {
+      "id": "H-17",
+      "severity": "high",
+      "item": "Unit 1 fixed-term versus month-to-month status is unknown",
+      "detail": "The April 1, 2026 continuing-tenancy instrument was not supplied. Official California guidance says rent cannot be increased during a fixed term unless the agreement permits increases; renewal is another possible point.",
+      "effect": "A February 1, 2027 increase could be too early. If a fixed term runs through March 31, 2027 without an escalation clause, an April 1, 2027 scenario would use the not-yet-published 2027–28 rate; that rate cell stays blank.",
+      "sources": [
+        "S20",
+        "S06"
+      ],
+      "action": "Read the signed instrument and any escalation/renewal clause before selecting an effective date."
+    },
+    {
+      "id": "H-18",
+      "severity": "high",
+      "item": "Unit 2 current base rent is not expressly supplied",
+      "detail": "The brief supplies $3,150.00 as the June 1, 2019 lease-start rent. It does not separately certify that this is the current base rent in November 2026.",
+      "effect": "The $50.40 annual-only and $412.65 combined figures are illustrations on that input, not verified current amounts or lawful maxima. Official current-base confirmation is blank.",
+      "sources": [
+        "S05",
+        "S04"
+      ],
+      "action": "Verify the current base rent and its components from the lease and full ledger."
+    },
+    {
+      "id": "H-19",
+      "severity": "low",
+      "item": "Official Rent Board worked examples contain year-label errors",
+      "detail": "The current rent-increase page includes an example assigning 1.6% to June 1, 2025, and its multiple-year example contains inconsistent year labels. The banking page’s worked example later refers to August 1, 2024 while using the 2025 scenario. Form 571 controls the published periods and rates.",
+      "effect": "Do not copy example-year labels. The calculations here use Form 571 dates and independently recomputed arithmetic.",
+      "sources": [
+        "S05",
+        "S04",
+        "S06"
+      ],
+      "action": "Use Form 571 for every effective period and recheck the current official page before serving."
+    },
+    {
+      "id": "H-20",
+      "severity": "medium",
+      "item": "Free tenant representation is not guaranteed by the referral listing",
+      "detail": "The Rent Board confirms that a lawyer is not required to file a petition and lists legal resources, including a Sunset office. The listing describes legal assistance and, for some providers, income or service-area limits; it does not promise every tenant free representation for notice review.",
+      "effect": "Tenants have official review routes, but availability, eligibility, scope, and capacity must be confirmed with each provider.",
+      "sources": [
+        "S19",
+        "S23"
+      ],
+      "action": "Describe these as referral resources, not guaranteed free lawyers. Rent Board counseling and petitions remain available without counsel."
+    }
   ]
 }
