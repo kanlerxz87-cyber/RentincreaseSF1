@@ -316,3 +316,111 @@ Initial review found legacy `docs/index.html` calls unverified user inputs verif
 - **I3: done.** [PR #10](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/10) merged 2026-11-07 20:47:29 UTC as `95432e1f9a5f4138b43ab9ca11419fd991596224` after both PR checks passed.
 - GitHub Pages [deployment 42412736902](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42412736902) succeeded; Pages API returned `built` for that exact merge commit. The deployed [integrated overview](https://kanlerxz87-cyber.github.io/RentincreaseSF1/integration/index.html) and [Flagged for Review](https://kanlerxz87-cyber.github.io/RentincreaseSF1/integration/flags.html) were retrieved and checked after deployment. Both post-merge verification workflows passed.
 - Remaining limitations: prior public Git history and caches may contain the redacted identifiers; older editions remain reachable and contain the inaccuracies identified on the Flagged page. Automated checks cannot establish legal conclusions about missing private records, the availability of every external link over time, or an actual attorney review.
+
+---
+
+---
+
+> **Merge note (session `arena/8555cb74`).** The section below was written before PR #10 merged
+> the section above. Both are kept verbatim. Resolution: `integration/**` (PR #10) is preserved
+> untouched; this session's dashboard lives in `hub/**` and, as the later integration pass, takes
+> the root `index.html` entry point while linking the `integration/` edition from it.
+
+# Session Addendum — `arena/8555cb74-rentincreasesf1` (2026-11-07)
+
+- **Session ID / branch:** `arena/8555cb74-rentincreasesf1` (platform-pinned; the protocol's
+  `session-<id>/<task>` naming cannot be used in this environment, so coordination is by **disjoint,
+  non-overlapping file scope** exactly as earlier sessions recorded).
+- **Role in this session:** research re-verification **and final integration** (the user asked this
+  session to verify line by line, publish, open the PR into `main`, merge it and confirm Pages).
+- **Rebase policy:** `git pull --rebase origin main` before every push.
+
+## Claimed scope (claimed before any file was written)
+
+| Scope | Purpose |
+|---|---|
+| `index.html` (repo root) | Replace the bare redirect with the single clean dashboard landing page |
+| `hub/**` | New dashboard subpages by category, generated from `hub/data.json`, plus `hub/assets/style.css` |
+| `hub/data.json`, `hub/build.py` | Single source of every figure, quote, link and flag used by the hub |
+| `tools/verify_hub.py` | Line-by-line gate for the hub: source-link on every row, link/anchor resolution, arithmetic, privacy, blank-where-unverified |
+| `data/sources.csv`, `docs/sources.html` | **One-line repair only** of broken `S25` URL (see irregularity H-14); no other content edit |
+| `.github/workflows/verify.yml` | Add the hub build-reproducibility + `verify_hub.py` steps to CI |
+| `README.md` | New "Entry point" section (appended, existing text untouched) |
+| `COORDINATION.md` | This append-only section |
+
+Nothing outside this scope is edited. `docs/*.html` (main edition), `docs/v2/**`, `dashboard/**`,
+`portal/**`, `site/**`, `research/**`, `audit/**` are **left untouched** except the single `S25` href
+repair above.
+
+## Task board
+
+| ID | Task | Status | Scope |
+|---|---|---|---|
+| `S74-T1` | Read board, claim scope, rebase | done | `COORDINATION.md` |
+| `S74-T2` | Independent line-by-line re-verification of every rate, rule and figure against live official sources (14 sources fetched 2026-11-07) | done | `hub/data.json` |
+| `S74-T3` | Answer the owner's first question (Rent Board licence / notice-to-Board) in detail, step by step, with official links, at the top of the summary | done | `hub/licensing.html`, `index.html` |
+| `S74-T4` | Unit 1 / Unit 2 arithmetic, banking, notice dates, state/federal layering | done | `hub/limits.html`, `hub/notice.html` |
+| `S74-T5` | Corporate vs individual owner practice; fair-housing "one unit or both"; tenant-lawyer red-team review | done | `hub/practice.html`, `hub/fair-housing.html`, `hub/review.html` |
+| `S74-T6` | Flagged-for-Review page: unverified values left blank, conflicting official text, repo irregularities | done | `hub/flags.html` |
+| `S74-T7` | Source registry with verbatim quotes and retrieval dates | done | `hub/sources.html` |
+| `S74-T8` | Build, verify, CI wiring, PR to `main`, merge, confirm Pages deploy | done (PR/merge below) | `COORDINATION.md` |
+
+Status `needs review` items live on `hub/flags.html` and do not block the merge.
+
+## Record (filled in as work completes)
+
+* **Sources re-fetched and read on 2026-11-07** (see `hub/sources.html` for verbatim quotes):
+  SF Admin Code §§37.3, 37.10B, 37.10C, 37.15 (sf.gov); Rent Board pages *Housing Inventory*,
+  *Banked rent increases*, *Learn about rent increases*, *Learn about SF rental laws*,
+  *Rent Board Fee*, *AB 1482*, *Rent Board Referral Listing*; Rent Board Form 571 rate sheet
+  3/1/26–2/28/27; Rent Board Rules Part IV §§4.10, 4.12; Cal. Civ. Code §§827, 1942.5, 1947.12,
+  1954.53; Cal. Gov. Code §12955; 42 U.S.C. §3604 (HUD overview page).
+* **One defect in a prior session's data found and repaired:** `data/sources.csv` row `S25` and
+  `docs/sources.html` row `S25` pointed at `uscode.house.gov/view.xhtml?...`, which returned
+  "Page Not Found" when fetched on 2026-11-07. Replaced with the HUD Fair Housing Act overview page
+  after live verification; logged as `H-14`.
+* **One official-text conflict found and published:** the Rent Board's *Banked rent increases* page
+  states a skipped increase is only banked if **at least 24 full months** pass without any increase,
+  while Rent Board **Rule 4.12(a)** and the worked examples on *Learn about rent increases* describe a
+  **12-month** test. Published as `H-01` with both links; the certain Unit 1 figure is reduced to
+  1.6% ($63.92) and the extra 1.4% is shown only as a flagged, conditional amount.
+
+## Resolution record — conflict with PR #10 and final state
+
+While this session's first push was in flight, PR #10 (session `arena/4addba0b`) merged a parallel
+integration edition and took the root `index.html` as a redirect to `integration/index.html`.
+The rebase produced two conflicts, resolved without discarding either side:
+
+| Conflict | Resolution |
+|---|---|
+| `COORDINATION.md` (add/add) | Both sections kept verbatim, in merge order, with a merge note between them. Nothing deleted from either side. |
+| `index.html` | This session took the entry point (the user asked this session to publish the landing dashboard), and links the `integration/` edition, `docs/`, `docs/v2/`, `dashboard/` and `portal/` from its "Other editions" section. `integration/**` is unchanged. |
+| `.github/workflows/pages.yml` | Comment only, corrected: the root is now the dashboard, not a redirect. No job changed. |
+| `tools/verify_hub.py` privacy scan | Initially used plaintext tenant initials and failed the parallel session's tracked-text privacy scan. Rewritten to reuse the shared SHA-256 digest list in `tools/check_links.py`; no identifier appears in the repository text. |
+
+### Verification performed (this session, 2026-11-07)
+
+| Suite | Result |
+|---|---|
+| `python3 tools/verify_hub.py` | **1,029 checks, 0 errors** — per-row source/flag citations (176 rows), links, anchors, nav parity, source registry completeness, arithmetic, recomputed service dates, no unsourced dollar figure, digest-based privacy scan |
+| `python3 hub/build.py` | 9 pages regenerate byte-identical (CI enforces) |
+| `python3 tools/check_links.py` | pass (main edition, 10 pages + 7 archived) |
+| `python3 tools/check_site.py` | 781 checks pass (companion edition) |
+| `python3 integration/verify.py` | PASS (parallel edition, 6 pages, 57 rows, privacy scan) |
+| `python3 dashboard/verify.py` | pass (42 sources, 21 flags) |
+| `python3 audit/verify_all.py` | pass (10 pages, 137 rows) |
+| `python3 -m http.server` | all 9 pages + stylesheet return HTTP 200 |
+
+### Findings carried forward
+
+`H-01` (24-month vs 12-month banking wording, both official) and `H-04` (licence status unavailable)
+are the two items that can change an amount or make an increase unenforceable; both are published on
+`hub/flags.html` with source links. `H-14` records the repaired `S25` link. None blocks this merge.
+
+### Pull request and deploy record
+
+| Item | Value |
+|---|---|
+| PR | [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) — `Integrated verified dashboard at /` (branch `arena/8555cb74-rentincreasesf1` → `main`) |
+| Merge result | *(recorded in the follow-up record commit)* |
+| Pages deploy | *(recorded in the follow-up record commit)* |

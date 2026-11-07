@@ -34,3 +34,18 @@ jobs:
 
       - name: Run the verification suite
         run: python3 tools/check_site.py
+
+      - name: Regenerate the integrated dashboard from hub/data.json
+        run: python3 hub/build.py
+
+      - name: Fail if index.html or hub/*.html differ from the committed pages
+        run: |
+          if ! git diff --quiet -- index.html hub/; then
+            echo "::error::Committed dashboard HTML is out of date with hub/data.json. Run 'python3 hub/build.py' and commit."
+            git diff --stat -- index.html hub/
+            exit 1
+          fi
+          echo "Dashboard HTML matches hub/data.json."
+
+      - name: Verify the integrated dashboard line by line
+        run: python3 tools/verify_hub.py
