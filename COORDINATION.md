@@ -422,5 +422,12 @@ are the two items that can change an amount or make an increase unenforceable; b
 | Item | Value |
 |---|---|
 | PR | [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) — `Integrated verified dashboard at /` (branch `arena/8555cb74-rentincreasesf1` → `main`) |
-| Merge result | *(recorded in the follow-up record commit)* |
-| Pages deploy | *(recorded in the follow-up record commit)* |
+| Merge result | **MERGED** via [#12](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/12) at `2026-11-07` as `cb71b5e8ab63e989541197ef61e6168134b4894a`. `Verify site` and `Verify published site` both `success` on `cb71b5e`. |
+| Pages deploy | `pages build and deployment` run [42412952640](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42412952640) `success`; Pages API returned `built` for commit `cb71b5e`. Live root retrieved and checked after deploy: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> |
+
+### Post-deploy check and follow-up
+
+The live root page was retrieved after the Pages build and checked line by line against the generated
+file. One cosmetic defect was found: percentages rendered as `3%` and `4%` instead of the Rent Board's
+`3.0%` and `4.0%`. Fixed in `hub/build.py` (`pct()` now always shows one decimal place) and re-verified
+with `tools/verify_hub.py`; published in the follow-up record PR. No figure changed.
