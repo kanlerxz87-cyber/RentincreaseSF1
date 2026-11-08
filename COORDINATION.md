@@ -553,3 +553,79 @@ Targeted official-source checks and reproducibility/privacy test results are doc
 - Post-merge `Final assurance` [42531898701](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898701), `Verify published site` [42531898713](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898713), and `Verify site` [42531898649](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898649) succeeded.
 - GitHub Pages build and deployment [42531898354](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898354) succeeded. The live [Flagged for Review page](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html#history-privacy) was fetched after deployment and the privacy warning was present.
 - GitHub warned that the Pages build's upload action targets deprecated Node.js 20 and was forced to Node.js 24; the build and deployment succeeded. The automatically managed Pages workflow was not altered.
+
+# Session addendum — `arena/d998600f-rentincreasesf1` (business-registration gap + 2026-11-08 re-verification)
+
+> Appended without discarding any earlier session's board, record, or implementation.
+> Branch is platform-bound to `arena/d998600f-rentincreasesf1`; no other branch is created or
+> pushed by this session. All tasks below are opened only after `main` was read at `903f649`
+> (PR #16 merged) and every canonical suite was re-run green locally.
+
+## Why this session exists
+
+`main` already publishes a corrected canonical dashboard (root `index.html` + `hub/**`) and an
+independent assurance layer. This session does **not** open a seventh edition. It closes one
+verified substantive gap and re-verifies the combined data against live official sources.
+
+**Gap found (verified, not inferred).** A repository-wide search for the strings
+`business registration` and `sftreasurer` across `index.html`, `hub/**` and every tracked file
+returned **zero matches** before this session. The owner's question is explicitly *"do I still
+need to apply for the license"*. There are **two distinct City licences/registrations** in play
+and the canonical edition answered only one of them:
+
+| Registration | Issued by | Applies to this owner? |
+| --- | --- | --- |
+| **Rent increase licence** (via Housing Inventory) | SF Rent Board | **Yes** — no individual-owner exemption (§37.15) |
+| **Business Registration Certificate** | Treasurer & Tax Collector | **Likely not**, on the reported facts |
+
+The Treasurer & Tax Collector states that a person receiving rental income from
+*"one residential structure consisting of fewer than four units"* is *"not, by reason of that
+fact alone, required to obtain a business registration certificate"*, and that a lessor must file
+a Gross Receipts return *"unless you lease fewer than 4 units in any individual building"*.
+On the owner's reported two units in one 1940 building this points to no business registration —
+but the exemption is expressly conditional (*"If the same person engages in other business
+activities or incurs payroll expense, a business registration certificate may be required"*), so
+it is published as a conditional determination with a flag, never as a settled fact.
+
+## Claims (exclusive file scope)
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| G1 | Register the Treasurer & Tax Collector lessor and business-registration sources, with verbatim quotes, and add them to the canonical registry | in progress | `arena-d998600f` | `hub/data.json`, `hub/build.py`, `index.html`, `hub/**` |
+| G2 | Answer the second licence question in the canonical licensing page: what the Rent Board licence is *not*, and when a Business Registration Certificate is and is not required | in progress | `arena-d998600f` | `hub/data.json`, `hub/build.py`, `hub/licensing.html`, `index.html` |
+| G3 | Replace the H-01 banking-wording flag's paraphrase with the verbatim Rule 4.12(a)/(b) text re-fetched 2026-11-08, and record the "banked amount may only be given at the time of an annual increase" clause | in progress | `arena-d998600f` | `hub/data.json`, `hub/build.py`, `hub/flags.html`, `hub/notice.html` |
+| G4 | Live re-verify every canonical source URL on 2026-11-08 and publish a dated, machine-readable manifest; leave any URL that cannot be confirmed flagged rather than silently kept | in progress | `arena-d998600f` | `audit/session-d998600f/**` |
+| G5 | Re-confirm the pending banked-increase cap (Legistar File #261020) status against Legistar on 2026-11-08 and cite Legistar directly as a registered source | in progress | `arena-d998600f` | `hub/data.json`, `hub/build.py`, `hub/flags.html` |
+| G6 | Extend `tools/verify_hub.py` so the new rows must carry an official source link; do not weaken any existing check | in progress | `arena-d998600f` | `tools/verify_hub.py` |
+| G7 | Reconcile `README.md` / `EXECUTIVE_SUMMARY.md` with the corrected canonical data; record PR + Pages result | pending | `arena-d998600f` | `README.md`, `EXECUTIVE_SUMMARY.md`, `COORDINATION.md` (this addendum) |
+
+**Not claimed / not touched:** `docs/**`, `docs/v1/**`, `docs/v2/**`, `dashboard/**`, `portal/**`,
+`integration/**`, `review/**`, `site/**`, `research/**`, `archive/**`, `build/**`,
+`assurance/**`, `audit/final-integration/**`, `audit/data/**`, `data/**`, `tools/check_*.py`,
+`.github/workflows/**`. No legacy edition is edited or deleted.
+
+**Coordination requests:** none. No file in another session's scope is edited.
+
+## Verification log (live official retrieval, 2026-11-08)
+
+| Source | Publisher | Result on 2026-11-08 |
+| --- | --- | --- |
+| §37.15 Reporting Obligations; Licensing | sf.gov Rent Board | Retrieved; quoted verbatim; confirms individual owners are covered and the licence is issued on substantial compliance |
+| Rent Board Housing Inventory | sf.gov Rent Board | Retrieved; "A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect" |
+| Learn about rent increases in San Francisco | sf.gov Rent Board | Retrieved; 1.6% effective 2026-03-01 through 2027-02-28; 60% of Bay Area CPI-U; 30/90-day notice; +5 days if mailed |
+| Form 571 Allowable Annual Increases 26-27 | sf.gov Rent Board (PDF) | Retrieved; full 1982–2027 table transcribed and matched row by row against `hub/data.json` `rates` — **all rows agree** |
+| Banked rent increases | sf.gov Rent Board | Retrieved; "There is no limit on how much can be banked"; "A skipped increase is only banked if at least 24 full months pass without any rent increase" |
+| Annual rent increase for multiple years | sf.gov Rent Board | Retrieved; additive (never compounded), no rounding up, no petition required |
+| Rent Board Rules & Regs Part IV §§4.10, 4.12 | sf.gov Rent Board | Retrieved; §4.12(a) "A full 12 months must have elapsed…" and "This banked amount may only be given at the time of an annual increase"; §4.12(b) failure to itemise "shall not render the increase null and void"; §4.10(b) null-and-void with the allowable-plus-banked exception |
+| The Rent Board Fee | sf.gov Rent Board | Retrieved; **$59.00 per dwelling unit** for 2026-2027, $29.50 recoverable, due 1 March; fee exemption does not satisfy Housing Inventory |
+| Information for Lessors of Residential Real Estate | sftreasurer.org | Retrieved; **new source** — sub-4-unit registration exemption and Gross Receipts filing threshold |
+| Register a Business | sftreasurer.org | Retrieved; **new source** — registration triggers and the sub-4-unit carve-out |
+| File #261020 Cap On Rent Increases for Rent-Controlled Units | sfgov.legistar.com | Retrieved; **Status: Pending Committee Action**; introduced 2026-09-15; Land Use and Transportation Committee; no final action; **not law** |
+| DOJ / RealPage consent judgment | justice.gov | Retrieved; press release 25-1111, 2025-11-24; settlement is *proposed* and Tunney-Act pending |
+
+**Self-correction recorded.** During this pass I first reported that canonical source `S07`
+pointed to a 404. That was wrong: the 404 came from a malformed URL of my own construction
+(`…not-requiring-petition`), not from the registry. The registered URL
+`https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring`
+resolves and reads as quoted. `S22` (justice.gov) likewise resolves. No canonical source link was
+found broken in this pass; the claim is withdrawn.
