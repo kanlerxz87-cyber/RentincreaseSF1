@@ -546,3 +546,10 @@ Targeted official-source checks and reproducibility/privacy test results are doc
 | Task | Status | Owner | Sources / verification |
 |---|---|---|---|
 | Independent audit and historical-privacy warning | done | `arena-816b4801` | See `audit/session-816b4801/README.md` and the public `hub/flags.html#history-privacy` flag. |
+
+### PR and Pages result
+
+- Integration PR [#17](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/17) merged on 2026-11-08 at 22:46:28 UTC as `f031bb81064b28e6cbea9e810c7a49030804e34d`. All three PR verification workflows passed before merge.
+- Post-merge `Final assurance` [42531898701](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898701), `Verify published site` [42531898713](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898713), and `Verify site` [42531898649](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898649) succeeded.
+- GitHub Pages build and deployment [42531898354](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898354) succeeded. The live [Flagged for Review page](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html#history-privacy) was fetched after deployment and the privacy warning was present.
+- GitHub warned that the Pages build's upload action targets deprecated Node.js 20 and was forced to Node.js 24; the build and deployment succeeded. The automatically managed Pages workflow was not altered.
