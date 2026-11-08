@@ -1,0 +1,47 @@
+{
+  "method": "GitHub API historical blob inspection using the existing digest denylist; no personal token printed",
+  "historical_blobs_inspected": 12,
+  "distinct_blobs": 12,
+  "affected_commit_path_pairs": 6,
+  "affected_paths": [
+    "docs/v1/executive_summary.md",
+    "research/discrimination.md",
+    "review/verify.py",
+    "site/discrimination.html",
+    "site/executive_summary.html",
+    "site/flagged.html"
+  ],
+  "details": [
+    {
+      "commit": "6d026bef29f5df2942c4fa5c24c4f85bd16ef837",
+      "path": "site/executive_summary.html",
+      "distinct_forbidden_tokens": 6
+    },
+    {
+      "commit": "6d026bef29f5df2942c4fa5c24c4f85bd16ef837",
+      "path": "site/discrimination.html",
+      "distinct_forbidden_tokens": 6
+    },
+    {
+      "commit": "6d026bef29f5df2942c4fa5c24c4f85bd16ef837",
+      "path": "site/flagged.html",
+      "distinct_forbidden_tokens": 4
+    },
+    {
+      "commit": "6d026bef29f5df2942c4fa5c24c4f85bd16ef837",
+      "path": "research/discrimination.md",
+      "distinct_forbidden_tokens": 6
+    },
+    {
+      "commit": "7d2aec7805e0e6ca6a8d34fd68d8f79da529fb69",
+      "path": "docs/v1/executive_summary.md",
+      "distinct_forbidden_tokens": 6
+    },
+    {
+      "commit": "ae1291c8637526a099345d48c46f090c5240ac90",
+      "path": "review/verify.py",
+      "distinct_forbidden_tokens": 5
+    }
+  ],
+  "retrieval_errors": []
+}
