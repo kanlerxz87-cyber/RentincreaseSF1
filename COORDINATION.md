@@ -522,3 +522,27 @@ No legacy edition is deleted. The root's prior-edition links will be labeled sup
 | Live content confirmation | Retrieved [canonical dashboard](https://kanlerxz87-cyber.github.io/RentincreaseSF1/), [independent assurance](https://kanlerxz87-cyber.github.io/RentincreaseSF1/assurance/index.html), and [Flagged for Review](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html) after deployment; confirmed the individual-owner effective-date license answer, 12 corrections, 23 sources, and 20 flags |
 
 The public result is the corrected canonical dashboard and assurance layer described above. Older editions remain available only as superseded archives. No unresolved private fact was filled or hidden to obtain the merge. This record is being landed in a follow-up documentation PR on the same platform-bound branch.
+
+---
+
+# Session `arena-816b4801` — independent current-state audit
+
+**Claimed:** 2026-11-08 UTC. Platform requires this session to stay on `arena/816b4801-rentincreasesf1`, so the requested `session-*` branch naming cannot be used. Previous completed work is retained.
+
+| Task | Status | Owner | Scope |
+|---|---|---|---|
+| Recheck current official rent rules, privacy, reproducible builds and deployment; record findings and request any corrections before touching other scopes | in progress | `arena-816b4801` | `COORDINATION.md` (this addendum), `audit/session-816b4801/**` |
+
+Any needed changes to completed canonical site scopes will be claimed and recorded here before implementation; active claims will not be overwritten. Rebase from `origin/main` before pushing.
+
+### Completed-scope handoff: historical privacy exposure
+
+The prior final-integration tasks are complete; no current active implementation claim was found for these files. The prior board records an identifier cleanup in current files. Independent inspection confirms that an earlier Git commit still contains a personal token in an old file; the repository is public. Current-tree scanning does not cover Git history. To make that limitation visible without exposing any identifier or direct historical blob URL, this session claims `hub/build.py`, generated `index.html` and `hub/flags.html`, and `assurance/build.py` / generated `assurance/index.html` for a targeted privacy warning. Earlier work will be preserved. Git history rewriting, force-pushing other branches, changing repository visibility, and purging GitHub caches are not performed by this session because they affect other sessions, clones, and open PRs and the platform restricts branch operations. GitHub's official guidance: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/removing-sensitive-data-from-a-repository
+
+### Audit result
+
+Targeted official-source checks and reproducibility/privacy test results are documented in `audit/session-816b4801/README.md`. The existing independent final-integration record, not this targeted recheck, is the basis for the prior 23-source row-by-row verification. The canonical site and flag page now explicitly warn that an older public Git commit contains tenant initials; the assurance page qualifies its privacy statement as current-file-only. No direct historic blob link or personal token is reproduced. GitHub's official cleanup guidance is linked on the flag page. The superseded review generator changes only its date footer when regenerated on a later date; its test-only modifications were restored. Canonical and assurance generators and all preserved test suites pass. Historical cleanup is still open and cannot be completed through the platform's single-branch normal-PR workflow.
+
+| Task | Status | Owner | Sources / verification |
+|---|---|---|---|
+| Independent audit and historical-privacy warning | done | `arena-816b4801` | See `audit/session-816b4801/README.md` and the public `hub/flags.html#history-privacy` flag. |
