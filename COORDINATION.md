@@ -830,9 +830,9 @@ If this session crashes, another session may take over the PR/merge step and mus
 
 | ID | Task | Status | Owner | File scope |
 | --- | --- | --- | --- | --- |
-| R758-1 | Read board, inspect current remote claims, publish non-destructive integration claim | in progress | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
-| R758-2 | Independently verify current official rent-board, rate, notice, state/federal, practice, and legal-assistance sources | unclaimed | `arena-758c724c` | `research/758c724c/**` |
-| R758-3 | Audit canonical claims line by line, private-input evidence, calculations, links, reproducibility, and privacy; identify corrections | unclaimed | `arena-758c724c` | `research/758c724c/**`, `assurance/758c724c/**`, `tools/verify_758c724c.py` |
+| R758-1 | Read board, inspect current remote claims, publish non-destructive integration claim | done | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
+| R758-2 | Independently verify current official rent-board, rate, notice, state/federal, practice, and legal-assistance sources | done | `arena-758c724c` | `research/758c724c/**` |
+| R758-3 | Audit canonical claims line by line, private-input evidence, calculations, links, reproducibility, and privacy; identify corrections | in progress | `arena-758c724c` | `research/758c724c/**`, `assurance/758c724c/**`, `tools/verify_758c724c.py` |
 | R758-4 | Final integration: update the canonical data/site/executive summary without deleting prior editions | unclaimed | `arena-758c724c` | `hub/**`, `index.html`, root summary/source/verification documents, `.github/workflows/758c724c.yml` |
 | R758-5 | Run all preserved suites, fresh-source and link checks, privacy gates, and live browser smoke tests | unclaimed | `arena-758c724c` | `tools/verify_758c724c.py`, `research/758c724c/**`, `.github/workflows/758c724c.yml` |
 | R758-6 | Rebase, open integration PR, merge only after checks pass, confirm Pages, and record results | unclaimed | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
@@ -840,3 +840,12 @@ If this session crashes, another session may take over the PR/merge step and mus
 **Privacy:** no tenant initials, names, contact information, or property street address will be written to research files, logs, generated pages, or commit messages. Unit numbers, dates, and supplied dollar amounts are retained; tenant examples use synthetic names only. Private inputs will not be promoted to officially verified facts.
 
 **Integration gate:** unresolved facts and official-source irregularities belong on Flagged for Review and do not block publication. Broken site/build/checks, unsupported table claims, stale generators, or privacy leaks do block merge. No official confirmation will be invented.
+
+
+### R758 research record — 2026-11-08
+
+- Created `research/758c724c/official-sources.json` (39 official sources, supporting passages, locations, retrieval dates, and excerpt digests), `findings.json` (19 row-level findings), and `README.md`. No private identifiers or inferred official values were added.
+- Confirmed the current 1.6% annual allowance through 2027-02-28, the separate Treasurer business-registration exception, the license effective-date gate, 30/90-day notice bands, and the conditional nature of all unit arithmetic. Added direct official code/statute links and current compilation currency checks.
+- Found additional official-source irregularities to publish rather than silently copy: the 2026–27 bond worksheet’s small-building license phase-in date conflicts with Rule 13.14/§37.15; the multiple-year guidance’s 30/35-day shorthand conflicts with Civil Code §827’s 90-day band; and the Board convenience text and official publisher differ on Ordinance 3-26’s February 2026 effective date. No new passthrough dollar amount or election outcome was inferred.
+- Baseline canonical/assurance and all preserved legacy suites pass. A real reproducibility defect was found in the archived `review/` generator: it stamps the current date, so regeneration changed 11 committed pages. The final integration will pin that date and add a drift gate; the temporary generated drift was not committed as research.
+- Browser QA is now available locally through an npm-packaged headless Chromium plus Playwright after the normal browser CDN download was blocked. Baseline desktop/mobile rendering and HTTP checks ran; final post-integration rendering tests remain pending.
