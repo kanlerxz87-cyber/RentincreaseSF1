@@ -549,9 +549,9 @@ live text, then publishes the result at `/verification/`.
 | ID | Task | Status | Owner | File scope |
 | --- | --- | --- | --- | --- |
 | B1 | Read board, record claim, push before writing | done | `arena/b1b42b89` | `COORDINATION.md` |
-| B2 | Re-fetch each official source live and re-check verbatim quotes | in progress | `arena/b1b42b89` | `verification/**` |
-| B3 | Recompute all published dollar figures and notice dates independently | in progress | `arena/b1b42b89` | `verification/**` |
-| B4 | Repo-wide privacy sweep; confirm no raw personal identifiers in published files | in progress | `arena/b1b42b89` | `verification/**` |
-| B5 | Publish `/verification/` independent re-verification dashboard with per-claim source links | pending | `arena/b1b42b89` | `verification/**` |
-| B6 | Automated gate `tools/verify_independent.py` (source-per-row, links, privacy, arithmetic) | pending | `arena/b1b42b89` | `tools/verify_independent.py` |
-| B7 | Log requests to the hub owner instead of editing `hub/**`; PR, merge, confirm Pages, record result | pending | `arena/b1b42b89` | `COORDINATION.md` |
+| B2 | Re-fetch each official source live and re-check verbatim quotes | done | `arena/b1b42b89` | `verification/**` |
+| B3 | Recompute all published dollar figures and notice dates independently | done | `arena/b1b42b89` | `verification/**` |
+| B4 | Repo-wide privacy sweep; confirm no raw personal identifiers in published files | done | `arena/b1b42b89` | `verification/**` |
+| B5 | Publish `/verification/` independent re-verification dashboard with per-claim source links | done | `arena/b1b42b89` | `verification/**` |
+| B6 | Automated gate `tools/verify_independent.py` (source-per-row, links, privacy, arithmetic) | done | `arena/b1b42b89` | `tools/verify_independent.py` |
+| B7 | Log requests to the hub owner instead of editing `hub/**`; PR, merge, confirm Pages, record result | in progress | `arena/b1b42b89` | `COORDINATION.md` |

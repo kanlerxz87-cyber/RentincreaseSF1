@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repository audit — Independent verification, SF 94122</title>
+<meta name="description" content="What was verified in the repository itself: the sources it cites, the figures it prints, the generator that produces its pages, and the state of its own housekeeping.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdrin">
+    <a class="brand" href="index.html"><span class="mk">✓</span><span>Independent verification<small>Outer Sunset · 94122 · checked 8 Nov 2026</small></span></a>
+    <nav class="nav" aria-label="Main"><a href="index.html">Overview</a><a href="process.html">Step by step</a><a href="answers.html">Your questions</a><a href="units.html">The two units</a><a href="checks.html">Line-by-line checks</a><a href="flags.html">Flagged for review</a><a href="privacy.html">Privacy</a><a href="repo.html" aria-current="page">Repository audit</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<section class="band">
+  <div class="wrap">
+    <p class="eyebrow">Repository</p>
+    <h1>Repository audit</h1>
+    <p class="lede">What was verified in the repository itself: the sources it cites, the figures it prints, the generator that produces its pages, and the state of its own housekeeping.</p>
+  </div>
+</section>
+<main class="wrap">
+
+<section>
+  <h2>The repository, checked rather than trusted<span class="sub">Sources, quotes, arithmetic, generators, checks and privacy — plus the housekeeping that was wrong.</span></h2>
+  <div class="tablewrap"><table class="t "><caption>Compiled on 8 November 2026 against commit 903f649 and this session's branch.</caption><thead><tr><th scope="col">Area</th><th scope="col">Finding</th><th scope="col">Result</th></tr></thead><tbody><tr><td><b>Sources</b></td><td>23 official sources registered in the canonical edition; each was re-fetched on 8 November 2026 and its published quote compared with the live text.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Quotes</b></td><td>Every stored quote matches the current live page, including the rate table, the licence text, Banking Rule 4.12 and the notice statutes.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Arithmetic</b></td><td>All eight published dollar figures and all six notice dates were recomputed independently with exact decimals and match to the cent and to the day.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Notice bands</b></td><td>The 30/90-day bands and the 5/10/20-day mail extensions are stated correctly.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Generators</b></td><td>hub/build.py regenerates the published pages with no diff, so the committed HTML matches its data source.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Local checks</b></td><td>check_links, check_site, verify_hub, verify_assurance, integration/verify, dashboard/verify and audit/verify_all all pass on this commit.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Privacy</b></td><td>No tenant names, initials, street address or private contact details were found in the current published tree.</td><td><span class="badge b-ok">Verified</span></td></tr><tr><td><b>Tracked cache files</b></td><td>Two .pyc files are tracked and there is no root .gitignore.</td><td><span class="badge b-warn">Irregularity</span><span class="badge-text">Irregularity — F-12</span></td></tr><tr><td><b>Open pull requests</b></td><td>PR #3 and PR #7 remain open for superseded editions.</td><td><span class="badge b-warn">Irregularity</span><span class="badge-text">Irregularity — F-11</span></td></tr><tr><td><b>Multiple editions</b></td><td>Six earlier editions are still published and linked as archives.</td><td><span class="badge b-warn">Flagged</span><span class="badge-text">Flagged — F-15</span></td></tr><tr><td><b>Official page defects</b></td><td>The Rent Board's worked examples contain year-label errors, and its licence wording mixes notice and effective dates.</td><td><span class="badge b-warn">Flagged</span><span class="badge-text">Flagged — F-01, F-02</span></td></tr></tbody></table></div>
+</section>
+<section>
+  <h2>How the checks were run</h2>
+  <p>The arithmetic was recomputed independently with exact decimal arithmetic rather than floating point, so a fraction of a cent cannot hide in a rounded display. The six notice dates were recomputed by subtracting the statutory period from the effective date. The published generator was re-run and produced no diff, which shows the committed pages match their data. All seven existing verification suites were executed on this tree and all pass.</p>
+  <div class="note"><p><strong>Independent means independent.</strong> This record re-fetched the sources itself and formed its own view of each claim. Where it agreed with the published record it says so; where it found a narrower correct statement, it records the qualification; and where it found a defect it writes the defect down instead of editing around it.</p></div>
+</section>
+<section>
+  <h2>Two things that should be fixed in the repository</h2>
+  <div class="split">
+    <div class="note"><p><strong>Tracked cache files.</strong> Two compiled Python files are committed and there is no root <code>.gitignore</code>. They change on every local run, which manufactures diffs for the next session that works here. <a href="flags.html#F-12">F-12</a></p></div>
+    <div class="note"><p><strong>Two stale pull requests.</strong> Two earlier parallel editions were superseded by the integrated site but their pull requests are still open. They are harmless to the published site and are flagged rather than closed here. <a href="flags.html#F-11">F-11</a></p></div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <p><strong>Privacy.</strong> No tenant names, initials, street address or private contact details are published here. The supplied dates and dollar amounts are retained unchanged, as instructed.</p>
+    <p><strong>Scope.</strong> Every legal statement and every percentage on this site is quoted from an official source and linked in the row that uses it. Figures that could not be confirmed from an official source are left blank and listed on <a href="flags.html">Flagged for review</a>. Tenant-side figures use placeholders.</p>
+    <p><strong>Not legal advice.</strong> This is an informational re-check of official material. A Rent Board counsellor can be reached on 415-252-4600 on weekday mornings and afternoons. <a href="../index.html">Canonical dashboard →</a></p>
+  </div>
+</footer>
+</body>
+</html>

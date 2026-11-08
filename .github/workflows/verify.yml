@@ -49,3 +49,19 @@ jobs:
 
       - name: Verify the integrated dashboard line by line
         run: python3 tools/verify_hub.py
+
+      # ---- independent re-verification record (verification/) ----
+      - name: Regenerate the independent verification record
+        run: python3 verification/build.py
+
+      - name: Fail if verification/*.html differ from the committed pages
+        run: |
+          if ! git diff --quiet -- verification/; then
+            echo "::error::Committed verification HTML is out of date with verification/data.json. Run 'python3 verification/build.py' and commit."
+            git diff --stat -- verification/
+            exit 1
+          fi
+          echo "Verification record matches verification/data.json."
+
+      - name: Verify the independent record line by line
+        run: python3 tools/verify_independent.py
