@@ -522,3 +522,36 @@ No legacy edition is deleted. The root's prior-edition links will be labeled sup
 | Live content confirmation | Retrieved [canonical dashboard](https://kanlerxz87-cyber.github.io/RentincreaseSF1/), [independent assurance](https://kanlerxz87-cyber.github.io/RentincreaseSF1/assurance/index.html), and [Flagged for Review](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html) after deployment; confirmed the individual-owner effective-date license answer, 12 corrections, 23 sources, and 20 flags |
 
 The public result is the corrected canonical dashboard and assurance layer described above. Older editions remain available only as superseded archives. No unresolved private fact was filled or hidden to obtain the merge. This record is being landed in a follow-up documentation PR on the same platform-bound branch.
+
+---
+
+# Session Addendum — `arena/b1b42b89-rentincreasesf1` (2026-11-08)
+
+- **Session ID / Branch:** `arena/b1b42b89-rentincreasesf1` (platform-pinned branch; this session may not create `session-<id>/<task>` branches).
+- **Claimed first, before writing:** yes — this section was committed and pushed before any other file was touched.
+- **Disjoint scope:** `verification/**` (new independent re-verification record), `tools/verify_independent.py`, and this append-only section of `COORDINATION.md`. This session does **not** edit `index.html`, `hub/**`, `assurance/**`, `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `integration/**`, `site/**`, `research/**`, or the root Markdown files owned by earlier sessions. Any correction needed inside `hub/**` is logged here as a request rather than written directly.
+
+## Situation found at claim time
+
+`origin/main` = `903f649`. The canonical dashboard is already published and live at
+<https://kanlerxz87-cyber.github.io/RentincreaseSF1/> (Pages API: `status: built`, source `main` `/`).
+PRs #1–#16 are merged; PR #7 and PR #3 remain open and stale but touch no file this session needs.
+Every existing verification suite passes locally (`check_links`, `check_site`, `verify_hub`,
+`verify_assurance`, `integration/verify`, `dashboard/verify`, `audit/verify_all`).
+
+Because a canonical, verified, source-linked site already exists, this session does **not** add a
+seventh competing edition. It adds an **independent re-verification record** that re-fetches each
+load-bearing official source and re-checks each published claim and every dollar figure against the
+live text, then publishes the result at `/verification/`.
+
+## Task board (this session)
+
+| ID | Task | Status | Owner | File scope |
+| --- | --- | --- | --- | --- |
+| B1 | Read board, record claim, push before writing | done | `arena/b1b42b89` | `COORDINATION.md` |
+| B2 | Re-fetch each official source live and re-check verbatim quotes | in progress | `arena/b1b42b89` | `verification/**` |
+| B3 | Recompute all published dollar figures and notice dates independently | in progress | `arena/b1b42b89` | `verification/**` |
+| B4 | Repo-wide privacy sweep; confirm no raw personal identifiers in published files | in progress | `arena/b1b42b89` | `verification/**` |
+| B5 | Publish `/verification/` independent re-verification dashboard with per-claim source links | pending | `arena/b1b42b89` | `verification/**` |
+| B6 | Automated gate `tools/verify_independent.py` (source-per-row, links, privacy, arithmetic) | pending | `arena/b1b42b89` | `tools/verify_independent.py` |
+| B7 | Log requests to the hub owner instead of editing `hub/**`; PR, merge, confirm Pages, record result | pending | `arena/b1b42b89` | `COORDINATION.md` |
