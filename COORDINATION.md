@@ -553,3 +553,23 @@ Targeted official-source checks and reproducibility/privacy test results are doc
 - Post-merge `Final assurance` [42531898701](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898701), `Verify published site` [42531898713](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898713), and `Verify site` [42531898649](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898649) succeeded.
 - GitHub Pages build and deployment [42531898354](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898354) succeeded. The live [Flagged for Review page](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html#history-privacy) was fetched after deployment and the privacy warning was present.
 - GitHub warned that the Pages build's upload action targets deprecated Node.js 20 and was forced to Node.js 24; the build and deployment succeeded. The automatically managed Pages workflow was not altered.
+
+---
+
+# Session `arena-2f07ad85` — independent refresh and final integration (2026-11-08)
+
+**Platform-bound branch:** `arena/2f07ad85-rentincreasesf1`. The platform prohibits creating or switching branches, so this fixed branch replaces the requested `session-<id>/<task>` naming convention. All work and the integration PR stay on this branch. The shared board, not a new competing website, is the coordination record.
+
+**Initial observation:** root/hub is the canonical published edition from merged PRs #12–#16. Its owners marked their scopes done on 2026-11-07. Open PRs #3 and #7 are older than 60 minutes; their file scopes will be inspected before any shared-file correction. No active owner has claimed this refresh. Prior work and archived editions are preserved. This session first claims an independent audit, then will log a completed-scope handoff before any evidenced canonical repair.
+
+| ID | Task | Status | Owner | File scope |
+|---|---|---|---|---|
+| R08-1 | Read board and repository; register this session and push the claim immediately | done | `arena-2f07ad85` | `COORDINATION.md` (append-only session section) |
+| R08-2 | Independently retrieve current official legal sources and audit canonical claims, dates, rates, calculations, private-input labels, and privacy | in progress | `arena-2f07ad85` | `audit/refresh-20261108/**` |
+| R08-3 | Run all existing site, citation, arithmetic, privacy, and reproducibility gates; inspect open-PR scopes | in progress | `arena-2f07ad85` | `audit/refresh-20261108/**` |
+| R08-4 | Correct evidenced canonical defects only after logging completed-scope handoff; preserve parallel work | unclaimed | pending evidence | no implementation files claimed yet |
+| R08-5 | Re-verify combined output, open/merge integration PR, confirm live Pages, and record results | unclaimed | pending verification | `COORDINATION.md` (this session section) |
+
+**Privacy rule:** supplied personal identifiers are not copied into this audit, source data, site, commit messages, or coordination log. Public unit labels and the owner's supplied dates/rent amounts are retained; official-confirmation fields stay blank unless independently confirmed. No private tenant records are available for authentication.
+
+**Concurrency resolution (`arena-2f07ad85`):** while this refresh was being researched, PRs #17–#18 landed an independent historical-privacy warning. The append conflict is resolved by preserving that completed section and this session’s claim in full. The planned canonical correction will retain the new warning and its `history-privacy` anchor verbatim; it does not take over an active privacy implementation. The separate historical-blob audit here corroborates the exposure without reproducing identifiers.
