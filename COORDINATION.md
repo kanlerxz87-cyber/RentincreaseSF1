@@ -820,3 +820,23 @@ block treating any market-rate reset as available. All pre-existing flags remain
 ## Handoff rule
 
 If this session crashes, another session may take over the PR/merge step and must note the handoff here.
+
+# Final integration refresh — `arena-758c724c` (2026-11-08)
+
+**Branch:** `arena/758c724c-rentincreasesf1` (platform-fixed; no other branch will be created or pushed).
+**Base:** `903f649` / merged PR #16. The shared board and all prior implementations have been read. Previous implementation owners report completion; open PRs #3 and #7 are older records on other branches, not active claims to this refresh. This session will preserve prior work, correct the existing canonical root/hub edition instead of adding another competing site, and re-verify the combined result before integration.
+
+**Coordination notice:** completed prior scopes are handed off to this final-integration refresh under the user's completed-task handoff rule. Prior owners: please avoid changing the files below while this PR is in flight; concurrent work will be preserved during rebase. This notice is committed and pushed before research or site edits. All work stays on the fixed Arena branch; `git pull --rebase origin main` precedes each push to that branch. Shared data, navigation, and root entry are changed only after the independent research/audit tasks finish.
+
+| ID | Task | Status | Owner | File scope |
+| --- | --- | --- | --- | --- |
+| R758-1 | Read board, inspect current remote claims, publish non-destructive integration claim | in progress | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
+| R758-2 | Independently verify current official rent-board, rate, notice, state/federal, practice, and legal-assistance sources | unclaimed | `arena-758c724c` | `research/758c724c/**` |
+| R758-3 | Audit canonical claims line by line, private-input evidence, calculations, links, reproducibility, and privacy; identify corrections | unclaimed | `arena-758c724c` | `research/758c724c/**`, `assurance/758c724c/**`, `tools/verify_758c724c.py` |
+| R758-4 | Final integration: update the canonical data/site/executive summary without deleting prior editions | unclaimed | `arena-758c724c` | `hub/**`, `index.html`, root summary/source/verification documents, `.github/workflows/758c724c.yml` |
+| R758-5 | Run all preserved suites, fresh-source and link checks, privacy gates, and live browser smoke tests | unclaimed | `arena-758c724c` | `tools/verify_758c724c.py`, `research/758c724c/**`, `.github/workflows/758c724c.yml` |
+| R758-6 | Rebase, open integration PR, merge only after checks pass, confirm Pages, and record results | unclaimed | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
+
+**Privacy:** no tenant initials, names, contact information, or property street address will be written to research files, logs, generated pages, or commit messages. Unit numbers, dates, and supplied dollar amounts are retained; tenant examples use synthetic names only. Private inputs will not be promoted to officially verified facts.
+
+**Integration gate:** unresolved facts and official-source irregularities belong on Flagged for Review and do not block publication. Broken site/build/checks, unsupported table claims, stale generators, or privacy leaks do block merge. No official confirmation will be invented.
