@@ -291,7 +291,7 @@ index_body = """
     <a class="cardlink" href="@@/hub/notice.html"><strong>Notice &amp; reasons</strong><span>Written contents, personal/mail timing, defensible bases, and a scenario-only drafting aid.</span></a>
     <a class="cardlink" href="@@/hub/practice.html"><strong>Owner practice</strong><span>Owner-neutral duties, an accurately labeled DOJ enforcement example, and practices not established by official data.</span></a>
     <a class="cardlink" href="@@/hub/fair-housing.html"><strong>One unit or both</strong><span>Why different treatment is not automatically discrimination—and why identical treatment is not immunity.</span></a>
-    <a class="cardlink" href="@@/hub/review.html"><strong>Tenant-lawyer test</strong><span>Thirteen review checks covering license, lease, ledger, repairs, retaliation, notice, and neutral selection.</span></a>
+    <a class="cardlink" href="@@/hub/review.html"><strong>Tenant-lawyer test</strong><span>{n} review checks covering license, lease, ledger, repairs, retaliation, occupant status, notice, and neutral selection.</span></a>
     <a class="cardlink" href="@@/hub/flags.html"><strong>Flagged for Review</strong><span>{flag_count} unresolved facts, source irregularities, and explicit blanks.</span></a>
     <a class="cardlink" href="@@/hub/sources.html"><strong>Sources</strong><span>{source_count} official sources with verbatim supporting passages and retrieval dates.</span></a>
     <a class="cardlink" href="assurance/index.html"><strong>Independent assurance</strong><span>What the final audit changed, what was recomputed, and which risks remain open.</span></a>
@@ -364,9 +364,10 @@ q_rows = [
     ["What is reasonable and normal under local, state, and federal law?", "The routine local scenario is the published 1.6% annual allowance. Properly proven banked amounts are separate. The 8.8% state cap does not apply to these locally controlled units; federal fair-housing rules still apply. No official ZIP-specific market norm was located.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S05", "S09", "S10", "S14"])],
     ["How do corporate and individual owners handle increases?", "The same SF duties apply. A DOJ enforcement example documents allegations about portfolio-scale pricing tools, not universal corporate behavior; no official SF behavior-by-owner-type dataset was located.", '<a href="@@/hub/practice.html">Owner practice</a>', src_links(["S02", "S16", "S22"])],
     ["How should tenants be told, and what reasons are defensible?", "Use written notice under Civil Code §827 with dollar amount, percentage, effective date, and annual/banked details; add five calendar days for California mail. Use the published allowance or proven banked basis, not retaliation or a roommate surcharge.", '<a href="@@/hub/notice.html">Notice &amp; reasons</a>', src_links(["S08", "S21", "S02"])],
-    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. Thirteen checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, and service evidence. Arithmetic alone is not a legal clearance.", '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23"])],
+    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {n} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, and service evidence. Arithmetic alone is not a legal clearance.", '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23"])],
     ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', src_links(["S13", "S14", "S15"])],
-    ["What is still unverified?", "Twenty flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.", '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
+    ["Does Unit 1's April 2026 occupant change allow a market-rate reset?", "No, on the reported facts. One original occupant remained, and both reset routes are keyed to the last original occupant leaving. Whether a §6.14 notice was served, and whether the incoming occupant is a co-tenant or a subtenant, are open private facts.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S27", "S28", "S29"])],
+    ["What is still unverified?", "{n} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.", '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
 ]
 q_table = table(["Question", "Short answer", "Detail", "Source"], q_rows, cls="data-table")
 
@@ -387,6 +388,7 @@ index_html = page(
         u2_serve=longdate(N["U2"]["serve_by"].isoformat()), u2_mail=longdate(N["U2"]["mail_by"].isoformat()),
         unit_table=unit_table, q_table=q_table,
         flag_count=len(DATA["flags"]), source_count=len(DATA["sources"]),
+        n=len(DATA["review_rows"]),
         s03=src_links(["S03"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
         s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
         s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
@@ -567,6 +569,20 @@ u2_rows = [
 ]
 u2_table = table(["Item", "Value", "Basis and source"], u2_rows, cls="data-table")
 
+occupancy_rows_html = []
+for r in DATA["occupancy_rows"]:
+    occupancy_rows_html.append([
+        "<strong>{}</strong>".format(esc(r["situation"])),
+        esc(r["rule"]),
+        esc(r["effect"]),
+        src_links(r["sources"]),
+    ])
+occupancy_table = table(["Situation", "What the official rule says", "Effect on these units", "Source"],
+                        occupancy_rows_html,
+                        caption="Occupant changes are governed by Rules and Regulations §6.14 and Civil Code §1954.53(d). "
+                                "Every row is quoted or paraphrased from the linked official page.",
+                        cls="data-table")
+
 limits_body = """
 <section>
   <h2>What “reasonable and normal” can mean here<span class="sub">A routine planning scenario is not an official market average or a legal clearance.</span></h2>
@@ -596,10 +612,18 @@ limits_body = """
   {bank_table}
   <div class="callout"><p><strong>Banking rule used here:</strong> skipped allowances can be preserved under Rule 4.12, then added without compounding or rounding up. The 24-month guidance and 12-month rule measure different events; February 1, 2027 satisfies both for Unit 1's scenario. {s04} {s07}</p></div>
 </section>
+<section>
+  <h2>Occupant changes, §6.14 and Costa-Hawkins<span class="sub">Why Unit 1's April 2026 change does not reset the rent, and what still needs documenting.</span></h2>
+  <p>Unit 1 was reported with three occupants at the February 2025 lease start and two on 1 April 2026, one of them a replacement. Under the official rules, a market-rate reset is keyed to the <em>last original occupant</em> leaving. On the reported facts one original occupant remained, so the 1.6% allowance still governs. Two private facts remain open and are flagged: whether a §6.14 notice was served (<a href="@@/hub/flags.html#H-23">H-23</a>), and whether the incoming occupant is a co-tenant or a subtenant (<a href="@@/hub/flags.html#H-24">H-24</a>).</p>
+  {occupancy_table}
+  <div class="callout red"><p><strong>Do not read this as permission to reset the rent.</strong> Nothing here establishes that either route is available. If the last original occupant later vacates, re-run the whole analysis from the records and consider the optional Rent Board determination petition first. {s29}</p></div>
+</section>
 
 """.format(layer_table=layer_table, rate_table=rate_table, u1_table=u1_table, u2_table=u2_table,
-           bank_table=bank_table, u1_base=money(N["U1"]["base"]), u2_base=money(N["U2"]["base"]),
-           u1_banked=money(N["U1"]["banked_amt"]), s04=src_links(["S04"]), s07=src_links(["S07"]))
+           bank_table=bank_table, occupancy_table=occupancy_table,
+           u1_base=money(N["U1"]["base"]), u2_base=money(N["U2"]["base"]),
+           u1_banked=money(N["U1"]["banked_amt"]), s04=src_links(["S04"]), s07=src_links(["S07"]),
+           s29=src_links(["S29"]))
 
 limits_html = page(
     "hub/limits.html",
@@ -799,7 +823,7 @@ for r in DATA["review_rows"]:
         src_links(r["sources"]),
     ])
 review_table = table(["#", "What a tenant-side lawyer checks", "Evidence needed", "Where this file stands", "Source"], review_rows_html,
-                     caption="Thirteen checks. Official rules and arithmetic can be verified here; actual legal sufficiency requires private records and notice evidence.", cls="data-table")
+                     caption="{n} checks. Official rules and arithmetic can be verified here; actual legal sufficiency requires private records and notice evidence.".format(n=len(DATA["review_rows"])), cls="data-table")
 
 review_body = """
 <section>
@@ -833,7 +857,7 @@ review_body = """
 review_html = page(
     "hub/review.html",
     "Tenant-lawyer review test — SF Rent Increase Compliance",
-    "Thirteen tenant-side review checks and the evidence still needed before any notice could be defended.",
+    "Tenant-side review checks and the evidence still needed before any notice could be defended.",
     hero_block(
         "Question 6 of 6 · withstanding scrutiny",
         "Would a San Francisco tenant lawyer find a defect?",
@@ -857,7 +881,7 @@ for f in DATA["flags"]:
         esc(f["action"]),
     ])
 flag_table = table(["ID", "Severity", "Item", "Detail and effect", "Official source", "Action for reviewer"], flag_rows,
-                   caption="Twenty items. High items can change an amount or prevent an increase; low items include source and repository irregularities.", cls="data-table")
+                   caption="{n} items. High items can change an amount or prevent an increase; low items include source and repository irregularities.".format(n=len(DATA["flags"])), cls="data-table")
 
 flags_body = """
 <section>

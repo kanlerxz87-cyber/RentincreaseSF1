@@ -265,6 +265,36 @@
    "quote": "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant's rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes. Type: Ordinance. Status: Pending Committee Action. Introduced: 9/15/2026. In control: Land Use and Transportation Committee. Final action: (none). Enactment date: (none).",
    "used_for": "Pending cap that would directly limit a large banked catch-up such as the Unit 2 scenario. Recorded as proposed legislation only; status re-checked 2026-11-08.",
    "retrieved": "2026-11-08"
+  },
+  {
+   "id": "S27",
+   "title": "Rent Increases Under Section 6.14 and Costa-Hawkins",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — Rent Board rule summary",
+   "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+   "quote": "Rules and Regulations Section 6.14 provides for an unlimited rent increase on remaining occupants when the last original occupant vacates the unit, as long as the landlord timely served all remaining occupants with a written \"6.14 notice.\" … The 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy. Generally, sixty days is considered reasonable. A 6.14 notice can be served on any subsequent occupant, whether the subsequent occupant is a subtenant or a co-tenant. … In addition, a co-tenant, as opposed to a subtenant, is not subject to such a rent increase, regardless of when the co-tenant moved in. A co-tenant is someone who has an oral or written agreement with the landlord, or who has become a tenant by the conduct of the parties such as the landlord's acceptance of rent.",
+   "used_for": "What an occupant change does and does not allow: the §6.14 notice, the sixty-day reasonableness benchmark, and the co-tenant versus subtenant distinction.",
+   "retrieved": "2026-11-08"
+  },
+  {
+   "id": "S28",
+   "title": "Rent Board Rules and Regulations, Part VI — §6.14 Establishing Rental Rates for Subsequent Occupants",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — Rent Board rules and regulations",
+   "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
+   "quote": "Failure to give such a notice within 60 days of the landlord's actual knowledge of the occupancy by the subsequent occupant(s) establishes a rebuttable presumption that notice was not given within a reasonable period of time; or (2) The landlord is entitled to establish a new base rent under the Costa Hawkins Rental Housing Act, California Civil Code Section 1954.53(d), even if no notice was served on the subsequent occupant(s) pursuant to subsection (d)(1) above.",
+   "used_for": "The exact sixty-day rebuttable-presumption rule, and that Costa-Hawkins can apply even where no 6.14 notice was served.",
+   "retrieved": "2026-11-08"
+  },
+  {
+   "id": "S29",
+   "title": "Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — agency guidance",
+   "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+   "quote": "A landlord is not required to file a petition with the Rent Board for approval of a rent increase pursuant to Section 6.14 or Costa-Hawkins Section 1954.53(d). However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination that either or both sections authorize a rent increase. … Finally, Section 6.14 requires the last original occupant to \"vacate\" the unit, while Costa-Hawkins only requires the last original occupant to no longer \"permanently reside\" in the unit.",
+   "used_for": "That no pre-filing is required, that an optional determination petition exists, and the vacate versus permanently-reside distinction.",
+   "retrieved": "2026-11-08"
   }
  ],
  "rates": [
@@ -1203,6 +1233,17 @@
    "sources": [
     "S23"
    ]
+  },
+  {
+   "n": 14,
+   "test": "If occupants changed, was a proper §6.14 notice served, and is an original occupant still in the unit?",
+   "evidence": "The April 2026 change documents; any 6.14 notice and proof of service; the agreement showing co-tenant or subtenant status.",
+   "result": "needs evidence",
+   "sources": [
+    "S27",
+    "S28",
+    "S29"
+   ]
   }
  ],
  "flags": [
@@ -1465,6 +1506,96 @@
     "S26"
    ],
    "action": "Re-check the Legistar record for File #261020 immediately before serving any banked catch-up above 10%, and phase a large banked amount over multiple years if it has been enacted."
+  },
+  {
+   "id": "H-23",
+   "severity": "medium",
+   "item": "Whether a §6.14 notice was served on the occupant who joined Unit 1 in April 2026",
+   "detail": "A 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy; sixty days is generally considered reasonable, and Rule 6.14(d)(1) makes failure within 60 days of actual knowledge a rebuttable presumption of untimeliness. The reported change was 1 April 2026, so the benchmark fell around 31 May 2026. No notice, proof of service, or record of non-service was supplied for review.",
+   "effect": "If the owner later wants the §6.14 route when the last original occupant vacates, an untimely notice may bar it. Under Rule 6.14(d)(2) the Costa-Hawkins route may still be available even without a 6.14 notice, subject to its own limits.",
+   "sources": [
+    "S27",
+    "S28",
+    "S29"
+   ],
+   "action": "Locate any 6.14 notice and its proof of service, or record the date the owner first learned of the occupancy and why no notice was served."
+  },
+  {
+   "id": "H-24",
+   "severity": "medium",
+   "item": "Whether the occupant who joined Unit 1 in April 2026 is a co-tenant or a subtenant",
+   "detail": "Costa-Hawkins does not reach a co-tenant who moved in after the original occupant, regardless of when they moved in; a co-tenant is someone with an oral or written agreement with the landlord, or whom the landlord has treated as a tenant by the acceptance of rent or other conduct. A 6.14 notice, by contrast, can be served on either a subtenant or a co-tenant.",
+   "effect": "The label does not change the current 1.6% scenario, but it decides whether any later market-rate reset is available and by which route.",
+   "sources": [
+    "S27",
+    "S29"
+   ],
+   "action": "Check whether the April 2026 instrument added the occupant to the lease, and whether rent has been accepted directly from them."
+  }
+ ],
+ "occupancy_rows": [
+  {
+   "situation": "An original occupant is still in the unit",
+   "rule": "Both routes are keyed to the last original occupant leaving. Section 6.14 requires that the last original occupant \"vacate\"; Costa-Hawkins requires that the last original occupant no longer \"permanently reside\" in the unit.",
+   "effect": "On the reported facts one original Unit 1 occupant remained after 1 April 2026, so no market-rate reset is available and the 1.6% allowance governs. Continuous occupancy still needs documents (H-06).",
+   "sources": [
+    "S27",
+    "S29",
+    "S28"
+   ]
+  },
+  {
+   "situation": "A new occupant joined while an original occupant remained",
+   "rule": "A landlord may not charge more rent solely because an additional occupant joined, even if the lease or rental agreement provides for the additional charge.",
+   "effect": "Unit 1 is reported at $3,995.00 both before and after the 1 April 2026 change. That is consistent with the rule and must not change simply because occupancy changed.",
+   "sources": [
+    "S05",
+    "S02"
+   ]
+  },
+  {
+   "situation": "Preserving a future reset under §6.14",
+   "rule": "A 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy; sixty days is generally considered reasonable. Failure to serve it within 60 days of actual knowledge establishes a rebuttable presumption that it was not served within a reasonable time.",
+   "effect": "The reported change was 1 April 2026, so the sixty-day benchmark fell around 31 May 2026, before this review. Whether a notice was served, and whether any presumption can be rebutted, is a private fact (H-23).",
+   "sources": [
+    "S27",
+    "S28"
+   ]
+  },
+  {
+   "situation": "§6.14 is not the only route",
+   "rule": "Section 6.14(d)(2) states that the landlord is entitled to establish a new base rent under Costa-Hawkins even if no 6.14 notice was served on the subsequent occupant.",
+   "effect": "A missed or late 6.14 notice does not by itself end the analysis. Costa-Hawkins has its own limits, including that it does not reach a co-tenant who moved in after the original occupant (H-24).",
+   "sources": [
+    "S28",
+    "S27"
+   ]
+  },
+  {
+   "situation": "Co-tenant or subtenant?",
+   "rule": "A co-tenant is not subject to a Costa-Hawkins increase regardless of when the co-tenant moved in. A co-tenant is someone with an oral or written agreement with the landlord, or whom the landlord has treated as a tenant by the acceptance of rent or other conduct. A 6.14 notice, by contrast, can be served on either a subtenant or a co-tenant.",
+   "effect": "If the incoming Unit 1 occupant was added to the lease, or the owner has accepted rent directly from them, they may be a co-tenant. That status is a private fact and changes which route, if any, is available later (H-24).",
+   "sources": [
+    "S27",
+    "S29"
+   ]
+  },
+  {
+   "situation": "No pre-filing is required for either route",
+   "rule": "A landlord is not required to file a petition for approval of a §6.14 or Costa-Hawkins increase, but may file for a determination; a tenant may file a petition alleging an unlawful rent increase.",
+   "effect": "If either route is ever relied on, the optional determination petition is a way to test it before serving. This dashboard does not establish that either route is available here.",
+   "sources": [
+    "S29"
+   ]
+  },
+  {
+   "situation": "Effect on the annual and banked scenarios",
+   "rule": "None of the above changes the 1.6% annual allowance while the current tenancies continue. It only matters if the last original occupant later leaves.",
+   "effect": "Unit 1's reported scenarios stand as calculated. If the remaining original occupant later vacates, the analysis changes entirely and must be re-run from the records; do not reuse these figures.",
+   "sources": [
+    "S27",
+    "S06"
+   ]
   }
  ]
 }

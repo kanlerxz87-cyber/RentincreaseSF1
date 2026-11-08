@@ -27,13 +27,13 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 |---|---|
 | `index.html` | Landing dashboard; individual-owner answer first; archived editions clearly labeled superseded |
 | `hub/licensing.html` | Housing Inventory, automatic license generation, late reporting, effective-date gate, correct sequence, and the separate Business Registration Certificate question |
-| `hub/limits.html` | Local/state/federal layers, complete Form 571 table, conditional calculations |
+| `hub/limits.html` | Local/state/federal layers, complete Form 571 table, conditional calculations, and the §6.14 / Costa-Hawkins occupant-change rules |
 | `hub/notice.html` | Notice contents, personal/mail arithmetic, lawful bases, scenario-only drafting aid |
 | `hub/practice.html` | Owner-neutral duties, SF algorithm ban, accurately bounded DOJ enforcement example |
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
 | `hub/review.html` | 13 tenant-side review checks; no attorney verdict |
-| `hub/flags.html` | 22 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 26 official sources with supporting passages and per-source retrieval dates |
+| `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
+| `hub/sources.html` | 29 official sources with supporting passages and per-source retrieval dates |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
@@ -52,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,394 canonical checks** and **1,649 assurance checks**, including 199 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 26 live-source manifest entries (23 retrieved 2026-11-07, 3 retrieved 2026-11-08), and a privacy scan of 171 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,545 canonical checks** and **1,742 assurance checks**, including 210 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 29 live-source manifest entries (23 retrieved 2026-11-07, 6 retrieved 2026-11-08), and a privacy scan of 171 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

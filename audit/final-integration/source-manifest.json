@@ -180,5 +180,26 @@
     "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
     "retrieved": "2026-11-08",
     "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S27",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S28",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S29",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
   }
 ]
