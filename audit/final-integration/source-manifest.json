@@ -159,5 +159,26 @@
     "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
     "retrieved": "2026-11-07",
     "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S24",
+    "publisher": "SF Office of the Treasurer & Tax Collector",
+    "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S25",
+    "publisher": "SF Office of the Treasurer & Tax Collector",
+    "url": "https://sftreasurer.org/business/register-business",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S26",
+    "publisher": "San Francisco Board of Supervisors (Legistar)",
+    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
+    "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
   }
 ]

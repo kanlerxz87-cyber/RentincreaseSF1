@@ -102,12 +102,17 @@ check(assurance_rows == len(AUDIT["corrections"]) + 4 + 4 + len(AUDIT["residual_
 
 # Official source registry and live-retrieval manifest are complete and bounded.
 source_ids = [s["id"] for s in HUB["sources"]]
-check(len(source_ids) == len(set(source_ids)) == 23, "expected 23 unique official sources")
+check(len(source_ids) == len(set(source_ids)) >= 26, "expected at least 26 unique official sources")
 check(len(MANIFEST) == len(source_ids), "source manifest length mismatch")
 manifest_by_id = {m["id"]: m for m in MANIFEST}
 allowed_hosts = {
     "www.sf.gov", "sf.gov", "leginfo.legislature.ca.gov", "www4.courts.ca.gov",
     "www.hud.gov", "hud.gov", "www.justice.gov", "justice.gov",
+    # City of San Francisco official publishers, added 2026-11-08 with live retrieval:
+    # sftreasurer.org  -> SF Office of the Treasurer & Tax Collector (Business Registration
+    #                     Certificate and lessor-of-residential-real-estate guidance)
+    # sfgov.legistar.com -> the Board of Supervisors' legislation portal, reached from sf.gov/bos
+    "sftreasurer.org", "sfgov.legistar.com",
 }
 for s in HUB["sources"]:
     sid = s["id"]
@@ -117,7 +122,11 @@ for s in HUB["sources"]:
     if sid in manifest_by_id:
         m = manifest_by_id[sid]
         check(m["url"] == s["url"], f"{sid}: manifest URL mismatch")
-        check(m["retrieved"] == "2026-11-07", f"{sid}: retrieval date mismatch")
+        check(m["retrieved"] in ("2026-11-07", "2026-11-08"),
+              f"{sid}: retrieval date {m['retrieved']} is not a recorded live-verification date")
+        # The manifest must carry the date this source was actually fetched, not a blanket date.
+        check(m["retrieved"] == s.get("retrieved"),
+              f"{sid}: manifest date {m['retrieved']} != registry date {s.get('retrieved')}")
         check(m["result"] == "Retrieved and read from official publisher", f"{sid}: retrieval result missing")
     for field in ("title", "publisher", "level", "quote", "used_for"):
         check(bool(str(s.get(field, "")).strip()), f"{sid}: empty {field}")
@@ -162,7 +171,7 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
       "every Unit 2 banked component must remain conditional")
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
-check(len(HUB["flags"]) == 20, "expected 20 canonical flags")
+check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
 check(len(HUB["review_rows"]) == 13, "expected 13 review checks")
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")

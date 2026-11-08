@@ -13,6 +13,10 @@ An anonymized, official-source review for two reported rent-controlled units in 
 
 Official sources: [SF Administrative Code §37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) and [Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
 
+**The Rent Increase License is not the only City registration, and the two are commonly confused.** A **Business Registration Certificate** is issued by the Office of the Treasurer & Tax Collector, is a general business-tax registration, and does not affect whether a rent increase is lawful. On the reported two units in one building, the Tax Collector's own guidance points to *no* business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. The carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination ([lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate), [register a business](https://sftreasurer.org/business/register-business), flag `H-21`), not as a settled fact.
+
+**Before any large banked catch-up:** Board of Supervisors [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) would cap banked and capital-improvement increases at 10% per year for three years. Re-checked on Legistar on 2026-11-08: **Pending Committee Action — not law**, no final action, no enactment date. It is not applied to any figure here, but the Unit 2 combined scenario is 13.1%, above that threshold (flag `H-22`).
+
 The published current annual allowance is **1.6% for March 1, 2026–February 28, 2027**. [Rent Board Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf)
 
 All dollar results in this repository are **conditional scenario arithmetic**, not certified current lawful rents or permission to serve notice. Unit 1’s April 2026 fixed-term/month-to-month status is unknown. Unit 2’s $3,150 is supplied only as its June 2019 lease-start rent, not expressly as current base. Both ledgers, both licenses, and official coverage require private review.
@@ -22,14 +26,14 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | Path | Purpose |
 |---|---|
 | `index.html` | Landing dashboard; individual-owner answer first; archived editions clearly labeled superseded |
-| `hub/licensing.html` | Housing Inventory, automatic license generation, late reporting, effective-date gate, correct sequence |
+| `hub/licensing.html` | Housing Inventory, automatic license generation, late reporting, effective-date gate, correct sequence, and the separate Business Registration Certificate question |
 | `hub/limits.html` | Local/state/federal layers, complete Form 571 table, conditional calculations |
 | `hub/notice.html` | Notice contents, personal/mail arithmetic, lawful bases, scenario-only drafting aid |
 | `hub/practice.html` | Owner-neutral duties, SF algorithm ban, accurately bounded DOJ enforcement example |
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
 | `hub/review.html` | 13 tenant-side review checks; no attorney verdict |
-| `hub/flags.html` | 20 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 23 official sources with supporting passages |
+| `hub/flags.html` | 22 unresolved facts and source/repository irregularities; official-confirmation blanks |
+| `hub/sources.html` | 26 official sources with supporting passages and per-source retrieval dates |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
@@ -48,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,336 canonical checks** and **1,556 assurance checks**, including 194 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 23 live-source manifest entries, and a privacy scan of 170 current text files.
+The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,394 canonical checks** and **1,649 assurance checks**, including 199 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 26 live-source manifest entries (23 retrieved 2026-11-07, 3 retrieved 2026-11-08), and a privacy scan of 171 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

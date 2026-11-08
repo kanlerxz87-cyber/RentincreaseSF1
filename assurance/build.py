@@ -79,9 +79,12 @@ for fid in AUDIT["residual_flag_ids"]:
 residual_table = table(["Residual flag", "Effect", "Required private review", "Official source"], residual_rows,
                        f'Selected high-impact and source-interpretation flags. The canonical Flagged for Review page contains all {len(HUB["flags"])}.')
 
+# Each source carries the date it was actually retrieved and read, so a later
+# session adding a source cannot inherit a stale blanket date.
 manifest = [{
     "id": s["id"], "publisher": s["publisher"], "url": s["url"],
-    "retrieved": AUDIT["retrieved"], "result": "Retrieved and read from official publisher"
+    "retrieved": s.get("retrieved", AUDIT["retrieved"]),
+    "result": "Retrieved and read from official publisher"
 } for s in HUB["sources"]]
 with open(os.path.join(ROOT, "audit", "final-integration", "source-manifest.json"), "w", encoding="utf-8") as fh:
     json.dump(manifest, fh, indent=2, ensure_ascii=False)
@@ -121,7 +124,7 @@ page = f'''<!DOCTYPE html>
 <section>
   <h2>Verification evidence<span class="sub">Local reproducibility and content gates; live official retrieval is separately manifested.</span></h2>
   <ul>
-    <li><strong>Source manifest:</strong> <code>audit/final-integration/source-manifest.json</code> records all {len(HUB['sources'])} official URLs retrieved and read on {esc(AUDIT['retrieved'])}.</li>
+    <li><strong>Source manifest:</strong> <code>audit/final-integration/source-manifest.json</code> records all {len(HUB['sources'])} official URLs, each with the date it was actually retrieved and read: {esc(", ".join(f"{k} ({v})" for k, v in sorted({r: sum(1 for m in manifest if m["retrieved"] == r) for r in {m["retrieved"] for m in manifest}}.items())))}.</li>
     <li><strong>Canonical generation:</strong> <code>python3 hub/build.py</code> regenerates the root and eight hub pages.</li>
     <li><strong>Assurance generation:</strong> <code>python3 assurance/build.py</code> regenerates this page and the source manifest.</li>
     <li><strong>Content gates:</strong> <code>python3 tools/verify_hub.py</code> and <code>python3 tools/verify_assurance.py</code> check internal links, source/flag citations, arithmetic, dates, conditional labels, and privacy.</li>

@@ -369,12 +369,60 @@ for page, doc in docs.items():
             fail(f"{page}: stale categorical claim: {phrase}")
         ok()
 
-if len(sources) != 23:
-    fail(f"expected 23 official sources, found {len(sources)}")
-if len(DATA["flags"]) != 20:
-    fail(f"expected 20 flags, found {len(DATA['flags'])}")
+# Floors, not exact pins: a later session may add sources/flags, but may never
+# silently drop the ones already verified. Each addition below is also asserted
+# positively further down, so removing one is a failure rather than a renumber.
+if len(sources) < 26:
+    fail(f"expected at least 26 official sources, found {len(sources)}")
+if len(DATA["flags"]) < 22:
+    fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
 if len(DATA["review_rows"]) != 13:
     fail(f"expected 13 review checks, found {len(DATA['review_rows'])}")
+
+# ---- G1/G2: the second licence (Business Registration Certificate) must stay answered
+by_id = {s["id"]: s for s in sources}
+for sid, host, needle in (
+    ("S24", "sftreasurer.org", "fewer than four units"),
+    ("S25", "sftreasurer.org", "fewer than four units"),
+    ("S26", "sfgov.legistar.com", "Pending Committee Action"),
+):
+    if sid not in by_id:
+        fail(f"required source {sid} missing from the registry")
+    else:
+        if host not in by_id[sid]["url"]:
+            fail(f"source {sid}: URL is not on {host}: {by_id[sid]['url']}")
+        if needle not in by_id[sid]["quote"]:
+            fail(f"source {sid}: verbatim quote no longer contains '{needle}'")
+        ok()
+licensing_q = " ".join(s["question"] for s in DATA["licensing_steps"])
+for needle in (
+    "only licence an individual owner needs",
+    "need a Business Registration Certificate",
+    "become required",
+):
+    if needle not in licensing_q:
+        fail(f"licensing Q&A no longer answers: {needle}")
+    ok()
+if len(DATA["licensing_steps"]) < 10:
+    fail(f"expected at least 10 licensing Q&A rows, found {len(DATA['licensing_steps'])}")
+
+# ---- G3/G5: verbatim Rule 4.12 text and the pending cap must remain in the record
+flag_by_id = {f["id"]: f for f in DATA["flags"]}
+for fid, needles in (
+    ("H-01", ("A full 12 months must have elapsed", "only be given at the time of an annual increase",
+              "24 full months pass without any rent increase")),
+    ("H-21", ("by reason of that fact alone", "payroll expense")),
+    ("H-22", ("261020", "Pending Committee Action", "10% per year", "not law")),
+):
+    if fid not in flag_by_id:
+        fail(f"required flag {fid} missing")
+        continue
+    for n in needles:
+        if n not in flag_by_id[fid]["detail"]:
+            fail(f"flag {fid}: detail no longer contains '{n}'")
+        ok()
+if "S26" not in flag_by_id.get("H-22", {}).get("sources", []):
+    fail("flag H-22 must cite the Legistar record directly (S26)")
 for field, needle in (
     (DATA["units"]["U2"]["base_status"], "lease-start"),
     (DATA["units"]["U2"]["base_status"], "not expressly as the current base rent"),
