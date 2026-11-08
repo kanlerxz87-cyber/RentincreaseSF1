@@ -702,3 +702,121 @@ fails if the manifest and registry disagree. The manifest now reads 23 rows at 2
 `tools/verify_assurance.py` 1,649 / 0; `tools/check_links.py` OK; `tools/check_site.py` 781 / 0;
 `integration/verify.py` 57 rows; `audit/verify_all.py` 137 rows; `dashboard/verify.py` OK;
 `review/verify.py` all passed. Both generators are reproducible with no committed-output drift.
+
+---
+
+# Session Addendum — `arena/a86bd8dc-rentincreasesf1` (2026-11-08)
+
+**Session ID:** `arena-a86bd8dc` · **Branch:** `arena/a86bd8dc-rentincreasesf1` (platform-pinned; no other
+branch may be created, switched to, or pushed from this session). `git pull --rebase origin main` is run
+before every push.
+
+## ⚠️ Merge conflict encountered and resolved — nothing discarded
+
+**What happened.** Work began from `main` at `903f649`. While this session was working, `origin/main`
+advanced to `3434f9f` (PRs #17, #18, #19 from `arena/816b4801` and `arena/d998600f`), which edited the
+**same canonical files** (`hub/data.json`, `hub/build.py`, `tools/verify_hub.py`,
+`tools/verify_assurance.py`, `assurance/build.py`, `index.html`, `hub/*.html`, and the shared Markdown).
+`git pull --rebase origin main` therefore conflicted in 12 files.
+
+**A process error is recorded honestly:** the pull was run as `git pull --rebase … | tail -5 && git push …`.
+The pipeline masked the rebase's exit code, so the push ran while the tree was mid-rebase. That push only
+created the remote branch and did **not** publish any conflicted content. The rebase was aborted
+(`git rebase --abort`), my commit was preserved via `git show fdc1098:<path>` copies, and the branch was
+reset to `origin/main` so my work could be re-applied cleanly on top. No merge command will be run through
+a pipe again.
+
+**The collision.** Both sessions independently appended three new sources and two new flags:
+
+| ID | Their session (merged first) | This session |
+|---|---|---|
+| S24 | SF Treasurer — Information for Lessors of Residential Real Estate | ~~§6.14 summary page~~ → renumbered **S27** |
+| S25 | SF Treasurer — Register a Business | ~~Rules Part VI §6.14~~ → renumbered **S28** |
+| S26 | Board of Supervisors File #261020 (pending ordinance) | ~~§6.14/C-H petitions~~ → renumbered **S29** |
+| H-21 | Business Registration Certificate determination is conditional | ~~6.14 notice timing~~ → renumbered **H-23** |
+| H-22 | Pending 10% cap on banked increases — re-check before serving | ~~co-tenant vs subtenant~~ → renumbered **H-24** |
+
+**Resolution: their IDs were kept as merged; mine were renumbered.** Nothing from either session was
+discarded. Every citation, flag cross-reference, and review-row source in this session's additions was
+remapped accordingly. Their H-22 (high) is directly relevant to this session's Unit 2 work: the 13.1%
+combined scenario is above the proposed 10% cap, and the ordinance is recorded as **pending, not law**,
+with no figure changed.
+
+**Convergent change:** both sessions independently made the same fix to `assurance/build.py` — recording a
+per-source retrieval date instead of a blanket date. Their version was kept.
+
+## Claimed file scope (claimed before writing)
+
+| Scope | Purpose |
+|---|---|
+| `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html` | Canonical addition: occupant-change rules |
+| `assurance/index.html`, `audit/final-integration/source-manifest.json` | Regenerated (their generator was kept) |
+| `tools/verify_hub.py`, `tools/verify_assurance.py` | Count/structure gates updated for the merged data |
+| `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md` | Shared Markdown entry points reconciled |
+| `COORDINATION.md` | This addendum only |
+
+**Not edited:** `docs/**`, `docs/v2/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`,
+`site/**`, `research/**`, `data/**`, `build/**`, `audit/session-816b4801/**`, `.github/workflows/**`.
+`review/build.py` was run as part of the preserved suite and regenerated only a footer date stamp in
+another session's archive; that incidental diff was reverted.
+
+## Official verification performed (2026-11-08)
+
+Re-fetched and read from the official publisher: [Sec. 37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing)
+(two-unit buildings report annually by 1 March; no individual-owner exemption; licence suspended during
+non-compliance and restored prospectively), [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory)
+("a landlord must have a current rent increase license on file … before any annual or banked rent increase
+can go into effect"), [Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco)
+(1.6% for 1 Mar 2026 – 28 Feb 2027; base rent only; no rounding up; 30/90-day notice; additional-occupant
+prohibition), [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) (additive, no
+compounding, no Board approval), [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf)
+(full table re-read row by row), [Rent Board Fee](https://www.sf.gov/rent-board-fee) ($59.00 per dwelling
+unit; $29.50 recoverable from tenants in occupancy on 1 November), [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827),
+[Rules Part VI §6.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications),
+[§6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins),
+[§6.14/C-H petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins).
+
+## Independent recomputation — including a caught false positive
+
+Every rate-to-anniversary mapping was re-derived from Form 571 and cross-checked against three official
+Rent Board worked examples (June 2023 move-in; August 2022 move-in; the "new anniversary date" example).
+
+**This session nearly logged a false error.** The first pass read 2020-06-01 as falling in the
+3/1/19–2/29/20 period and flagged the published 1.8% as a one-year shift. That was wrong: 1 June 2020
+falls inside 3/1/20–2/28/21, so 1.8% is correct. The published figures were re-confirmed and left
+unchanged: Unit 1 $63.92 / $119.85; Unit 2 $50.40 / $412.65. Banking availability was re-tested against
+the official 12-month rule; Unit 2's 2026-06-01 allowance is not banked by the 2027-02-28 scenario date
+and is lost, matching the official "permanently lost" example.
+
+## Gap found and filled
+
+The canonical edition covered Costa-Hawkins only in general terms and omitted Rules §6.14, its written
+notice requirement, the 60-day benchmark, and the co-tenant/subtenant distinction — all directly engaged
+by Unit 1, where one of three original occupants remained after 1 April 2026. Added: sources **S27–S29**,
+a seven-row occupancy table on `hub/limits.html`, flags **H-23** and **H-24**, review check **14**, a
+landing-page question row, and executive-summary section 4. All page counts are now generated from
+`hub/data.json` rather than hard-coded, so pages cannot drift from the data again.
+
+## Verification results
+
+| Suite | Result |
+|---|---|
+| `python3 hub/build.py` | 9 pages; arithmetic unchanged |
+| `python3 tools/verify_hub.py` | **1,545 checks, 0 errors**; 210 claim rows source/flag-linked; 29/29 sources cited |
+| `python3 tools/verify_assurance.py` | **1,742 checks, 0 errors**; 29/29 manifest rows; 171 files privacy-scanned |
+| `python3 tools/check_links.py` | OK |
+| `python3 build/build.py && python3 tools/check_site.py` | 781 checks, 0 errors |
+| `python3 integration/verify.py` | PASS, 57 source-linked rows |
+| `python3 dashboard/verify.py` | OK |
+| `python3 audit/verify_all.py` | VERIFICATION PASSED, 137 source-linked rows |
+| `python3 review/build.py && python3 review/verify.py` | PASSED (incidental date-stamp diff reverted) |
+
+## Irregularities
+
+No arithmetic or source error found. Two new **unresolved private facts** published on
+[Flagged for Review](hub/flags.html) as **H-23** and **H-24** (medium). Neither blocks the merge; both
+block treating any market-rate reset as available. All pre-existing flags remain open.
+
+## Handoff rule
+
+If this session crashes, another session may take over the PR/merge step and must note the handoff here.

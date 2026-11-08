@@ -376,8 +376,8 @@ if len(sources) < 26:
     fail(f"expected at least 26 official sources, found {len(sources)}")
 if len(DATA["flags"]) < 22:
     fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
-if len(DATA["review_rows"]) != 13:
-    fail(f"expected 13 review checks, found {len(DATA['review_rows'])}")
+if len(DATA["review_rows"]) != 14:
+    fail(f"expected 14 review checks, found {len(DATA['review_rows'])}")
 
 # ---- G1/G2: the second licence (Business Registration Certificate) must stay answered
 by_id = {s["id"]: s for s in sources}
@@ -449,6 +449,45 @@ if "scenario date 1 February 2027" not in docs["index.html"]:
     fail("index.html: Unit 1 scenario date missing")
 if "before</em> serving notice" not in docs["index.html"]:
     fail("index.html: recommended pre-notice license workflow missing")
+
+# ----------------------------------------------------------------- occupant-change block
+occ = DATA.get("occupancy_rows", [])
+if len(occ) != 7:
+    fail(f"expected 7 occupancy rows, found {len(occ)}")
+ok()
+valid_ids = {s["id"] for s in sources}
+for i, r in enumerate(occ, 1):
+    for field in ("situation", "rule", "effect", "sources"):
+        if not str(r.get(field, "")).strip():
+            fail(f"occupancy row {i}: empty field '{field}'")
+        ok()
+    for sid in r["sources"]:
+        if sid not in valid_ids:
+            fail(f"occupancy row {i}: unknown source id {sid}")
+        ok()
+        if f"sources.html#{sid}" not in docs["hub/limits.html"]:
+            fail(f"occupancy row {i}: source {sid} not rendered on hub/limits.html")
+        ok()
+    label = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", r["situation"]))).strip()
+    if label not in re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", docs["hub/limits.html"]))):
+        fail(f"occupancy row {i}: not rendered on hub/limits.html")
+    ok()
+
+for sid in ("S27", "S28", "S29", "H-23", "H-24"):
+    if sid.startswith("S") and sid not in valid_ids:
+        fail(f"missing source {sid}")
+    ok()
+for sid in ("S27", "S28", "S29"):
+    if not any(f"sources.html#{sid}" in doc for doc in docs.values()):
+        fail(f"{sid}: registered but never cited")
+    ok()
+for fid in ("H-23", "H-24"):
+    if fid not in {f["id"] for f in DATA["flags"]}:
+        fail(f"missing flag {fid}")
+    ok()
+    if not any(f"flags.html#{fid}" in doc for doc in docs.values()):
+        fail(f"{fid}: not cross-linked from canonical content")
+    ok()
 
 # ----------------------------------------------------------------- summary
 print(f"pages checked: {len(PAGES)}")

@@ -172,7 +172,7 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
 check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
-check(len(HUB["review_rows"]) == 13, "expected 13 review checks")
+check(len(HUB["review_rows"]) == 14, "expected 14 review checks")
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")

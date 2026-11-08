@@ -1,6 +1,6 @@
 # Executive summary — San Francisco rent increases, Outer Sunset 94122
 
-**Verified:** 2026-11-07, extended 2026-11-08 (Business Registration Certificate, verbatim Rule 4.12, pending File #261020)
+**Verified:** 2026-11-07, extended 2026-11-08 (Business Registration Certificate, verbatim Rule 4.12, pending File #261020, occupant-change rules §6.14 / Costa-Hawkins)
 **Canonical dashboard:** [root `index.html`](index.html) · [independent assurance](assurance/index.html) · [Flagged for Review](hub/flags.html)
 **Privacy:** Tenant identities and the street address are withheld. Dates and dollar amounts supplied in the brief are retained as anonymized scenario inputs.
 
@@ -60,7 +60,23 @@ These dates do not resolve fixed-term, current-base, ledger, license, coverage, 
 
 Section 37.3(b)(5) states a null-and-void rule, but Rule 4.10(b) contains an amount-based exception and Rule 4.12(b) expressly says omission of banked dates does not itself void the increase. Include every item rather than relying on an exception; do not describe every omission as automatically void. [§37.3](https://www.sf.gov/information--sec-373-rent-limitations) · [Rules 4.10/4.12](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring)
 
-## 4. What is reasonable and normal
+## 4. Unit 1's April 2026 occupant change — what it does and does not allow
+
+The brief reports three occupants at the February 1, 2025 lease start and two on April 1, 2026, one of them a replacement. On those reported facts **one original occupant remained, so the unit did not become vacant and the rent cannot be reset to market.** Both market-rate routes are keyed to the *last original occupant* leaving, and they are not the same test:
+
+- **Rent Board Rules §6.14** allows an unlimited increase on remaining occupants when the last original occupant **vacates** — but only if the landlord timely served each subsequent occupant a written "6.14 notice" stating that a new tenancy is created for rent purposes when the last original occupant leaves. The notice must be served within a reasonable time after the landlord knows or should have known of the occupancy; sixty days is generally considered reasonable. Failing to serve it within 60 days of actual knowledge establishes a rebuttable presumption that it was not served in time. [§6.14 summary](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) · [Rules Part VI §6.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications)
+- **Costa-Hawkins (Civil Code §1954.53(d))** allows an unlimited increase when the last original occupant no longer **permanently resides** in the unit — a lower bar than "vacates" — but only against a lawful subtenant or assignee who moved in after January 1, 1996. It does **not** reach a co-tenant, regardless of when the co-tenant moved in. A co-tenant is someone with an oral or written agreement with the landlord, or whom the landlord has treated as a tenant by accepting rent or other conduct. [§6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) · [Determination petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins)
+
+| Item | Why it matters here | Official basis |
+|---|---|---|
+| The 1.6% allowance still governs Unit 1 | On the reported facts an original occupant remains, so no reset is available and the annual/banked scenarios in section 2 stand. | [§6.14](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) · [Petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) |
+| Whether a 6.14 notice was served on the occupant who joined April 1, 2026 | The sixty-day benchmark fell around May 31, 2026 — before this review. No notice or proof of service was supplied. An untimely notice may bar the §6.14 route later; under §6.14(d)(2) the Costa-Hawkins route may still be available even without a 6.14 notice. Flag **H-23**. | [Rules §6.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications) · [§6.14 summary](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) |
+| Whether the incoming occupant is a co-tenant or a subtenant | If the April 2026 instrument added them to the lease, or rent has been accepted directly from them, they may be a co-tenant — and Costa-Hawkins does not reach a co-tenant. A 6.14 notice, by contrast, can be served on either. Flag **H-24**. | [§6.14 summary](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) · [Petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) |
+| No additional-occupant charge | Rent is reported unchanged at $3,995.00 across the change. Charging more solely because an occupant joined is prohibited even if the lease permits the charge. | [Rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) · [§37.3](https://www.sf.gov/information--sec-373-rent-limitations) |
+
+Neither route is established as available here, and nothing in this summary is permission to reset the rent. If the last original occupant later leaves, re-run the entire analysis from the records. A landlord is not required to petition before using either route, but may file for a determination — and a tenant may petition alleging an unlawful rent increase. [Determination petitions](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins)
+
+## 5. What is reasonable and normal
 
 - **Routine planning scenario:** the published 1.6% annual allowance, after all legal gates. Properly supported banked amounts are separate and may exceed the current annual percentage.
 - **No official ZIP-specific market norm:** no official “normal increase” for 94122 was located. That value stays blank; commercial listings are not substituted.
@@ -69,7 +85,7 @@ Section 37.3(b)(5) states a null-and-void rule, but Rule 4.10(b) contains an amo
 - **State layer:** the 8.8% AB 1482 figure for August 1, 2026–July 31, 2027 does not apply to units already under the lower SF annual-increase regime. [Civil Code §1947.12(d)(3)](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1947.12&lawCode=CIV) · [SF AB 1482 guidance](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482)
 - **Federal layer:** the Fair Housing Act governs discriminatory rental terms. This scoped review located no general federal percentage cap for private unsubsidized housing; subsidy-specific rules were not evaluated. [HUD Fair Housing Act overview](https://www.hud.gov/helping-americans/fair-housing-act-overview)
 
-## 5. Corporate and individual-owner practices
+## 6. Corporate and individual-owner practices
 
 The same core SF duties apply regardless of corporate form. San Francisco prohibits covered algorithmic devices that use nonpublic competitor data to recommend rents or occupancy; general property-management software is not banned merely because it is software. [§37.10C](https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited)
 
@@ -77,7 +93,7 @@ DOJ’s November 24, 2025 RealPage announcement provides an enforcement example 
 
 No official SF dataset measuring typical increase behavior by individual versus corporate owners was located. Do not turn that absence into a stereotype. Use the same per-unit controls in either case: current reporting/license evidence, actual lease and ledger, reproducible calculation, neutral selection, timely notice, and proof of service.
 
-## 6. One unit or both; discrimination and retaliation
+## 7. One unit or both; discrimination and retaliation
 
 Raising one unit and not the other is **not automatically discrimination**. Selecting a unit because of a protected characteristic, retaliating, or acting in bad faith can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should not be raised merely for symmetry. [FEHA §12955](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955) · [42 U.S.C. §3604](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) · [§37.10B](https://www.sf.gov/information--sec-3710b-tenant-harassment)
 
@@ -85,15 +101,15 @@ Use a neutral method for both units: actual lease, verified base rent, last incr
 
 Civil Code §1942.5 is not an automatic 180-day moratorium on every increase. It addresses retaliation under stated conditions, preserves lawful cause, and contains a good-faith-ground provision. Screen the history rather than claiming either automatic illegality or automatic clearance. Separately, a qualifying Failure to Repair and Maintain petition can defer an annual increase and is due no later than 60 days after the tenant receives the notice. [§1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV) · [repair petitions](https://www.sf.gov/information--failure-repair-and-maintain-petitions)
 
-## 7. Tenant-side scrutiny and official review resources
+## 8. Tenant-side scrutiny and official review resources
 
-The canonical [13-point review](hub/review.html) covers coverage, license, rate, base composition, arithmetic, lease authority/12-month spacing, banking, notice, itemisation, retaliation, discrimination/algorithm use, tenant verification, and repairs. Arithmetic verification is not attorney acceptance.
+The canonical [14-point review](hub/review.html) covers coverage, license, rate, base composition, arithmetic, lease authority/12-month spacing, banking, notice, itemisation, retaliation, discrimination/algorithm use, occupant status, tenant verification, and repairs. Arithmetic verification is not attorney acceptance.
 
 Tenants can petition the Rent Board without a lawyer. The Board also publishes legal-assistance referrals, including a Sunset office. That listing does **not** guarantee every tenant free representation for notice review; provider eligibility, scope, capacity, and cost must be confirmed. [Rent Board referral listing](https://www.sf.gov/reports--january-2025--rent-board-referral-listing)
 
-## 8. Items that block treating a scenario as notice-ready
+## 9. Items that block treating a scenario as notice-ready
 
-See all 20 items on [Flagged for Review](hub/flags.html). The highest-impact items are:
+See all 24 items on [Flagged for Review](hub/flags.html). The highest-impact items are:
 
 | Flag | Missing fact | Official source explaining why it matters |
 |---|---|---|
@@ -103,6 +119,7 @@ See all 20 items on [Flagged for Review](hub/flags.html). The highest-impact ite
 | H-04 | Current license for each unit | [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) · [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) |
 | H-05 | Official coverage and exemption review | [SF rental-law overview](https://www.sf.gov/learn-about-san-francisco-rental-laws) |
 | H-09 | Repair, protected-activity, and petition history | [§1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV) · [repair petitions](https://www.sf.gov/information--failure-repair-and-maintain-petitions) |
+| H-23 / H-24 | Whether a §6.14 notice was served on the incoming Unit 1 occupant, and whether that occupant is a co-tenant or a subtenant | [Rules §6.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications) · [§6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) |
 | H-19 | Official Rent Board worked-example year-label errors | [Rent-increase page](https://www.sf.gov/learn-about-rent-increases-san-francisco) · [banking page](https://www.sf.gov/information--banked-rent-increases) · [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf) |
 
 **Recommendation:** do not serve either notice from the dollar illustrations alone. Resolve the high-severity flags, replace scenario inputs with verified records, and have the actual notice reviewed for the specific lease and banking facts.

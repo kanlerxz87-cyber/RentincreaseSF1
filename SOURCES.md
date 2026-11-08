@@ -1,10 +1,10 @@
 # Official source registry
 
-**Retrieved and read:** 2026-11-07
+**Retrieved and read:** 2026-11-07 (S01–S23) and 2026-11-08 (S24–S29)
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 23 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 29 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
@@ -31,6 +31,12 @@ All 23 sources are official government publications. Commercial listings and blo
 | S21 | California Legislative Information — [California Code of Civil Procedure §1013(a) — service by mail](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP) | The California-mail planning periods and the fact that longer extensions can apply outside California; the site does not assume every mailing is within California. |
 | S22 | United States Department of Justice, Antitrust Division — [Justice Department Requires RealPage to End the Sharing of Competitively Sensitive Information and Alignment of Pricing Among Competitors](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and) | A documented federal enforcement example involving portfolio-scale pricing tools. Allegations and a proposed settlement are not generalized into claims about every corporate landlord or a final adjudication. |
 | S23 | San Francisco Rent Board (SF.gov) — [Failure to Repair and Maintain Petitions](https://www.sf.gov/information--failure-repair-and-maintain-petitions) | Repair/habitability review independent of arithmetic and the 60-day tenant petition window. |
+| S24 | SF Office of the Treasurer & Tax Collector — [Information for Lessors of Residential Real Estate](https://sftreasurer.org/information-lessors-residential-real-estate) | The second licence question: whether an individual owner of a small residential building needs a Business Registration Certificate, and the Gross Receipts filing threshold. |
+| S25 | SF Office of the Treasurer & Tax Collector — [Register a Business — who must register](https://sftreasurer.org/business/register-business) | The registration triggers and the express sub-four-unit carve-out for residential rental income (H-21). |
+| S26 | San Francisco Board of Supervisors (Legistar) — [File #261020 — Cap On Rent Increases for Rent-Controlled Units](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Proposed — not law. Would cap banked/capital-improvement increases at 10% per year; status re-checked 2026-11-08 (H-22). |
+| S27 | San Francisco Rent Board (SF.gov) — [Rent Increases Under Section 6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) | Occupant change: the §6.14 notice, the sixty-day reasonableness benchmark, and the co-tenant versus subtenant distinction (H-24). |
+| S28 | San Francisco Rent Board (SF.gov) — [Rent Board Rules and Regulations, Part VI — §6.14 Establishing Rental Rates for Subsequent Occupants](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications) | The exact sixty-day rebuttable-presumption rule and the alternative Costa-Hawkins route that needs no 6.14 notice (H-23). |
+| S29 | San Francisco Rent Board (SF.gov) — [Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | No pre-filing is required for either route; an optional determination petition exists; §6.14 requires "vacate" while Costa-Hawkins requires no longer "permanently reside". |
 
 ## Source cautions
 
@@ -39,5 +45,8 @@ All 23 sources are official government publications. Commercial listings and blo
 - **S20:** the official California guide supplies the fixed-term rule; current statutes and the actual lease still control the case-specific result.
 - **S22:** the DOJ announcement describes allegations and a proposed settlement, not universal corporate behavior or a final adjudication.
 - **S19:** a referral listing is not a guarantee of free representation for every tenant or issue.
+- **S24 / S25:** the Business Registration Certificate is a tax registration, not the Rent Increase License; the sub-four-unit carve-out is conditional on other business activity (H-21).
+- **S26:** a pending ordinance is not law. It is recorded for re-checking only and is not applied to any figure.
+- **S27 / S28 / S29:** §6.14 and Costa-Hawkins are alternatives with different triggers and different notice conditions. Section 6.14(d)(2) preserves the Costa-Hawkins route even where no 6.14 notice was served, but Costa-Hawkins does not reach a co-tenant who moved in after the original occupant. Nothing here establishes that either route is available for these units (H-23, H-24).
 
 Owner-brief dates and amounts are not official facts. They remain labeled as scenario inputs throughout the canonical site.

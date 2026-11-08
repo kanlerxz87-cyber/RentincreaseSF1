@@ -11,7 +11,7 @@ The final audit read the canonical data and generated prose, re-fetched official
 
 Evidence classes are kept separate:
 
-1. **Official rule/rate:** directly supported by one of the 23 registered official sources.
+1. **Official rule/rate:** directly supported by one of the 29 registered official sources.
 2. **Owner-brief input:** a date or amount supplied for the two units, not an official record.
 3. **Conditional arithmetic:** reproducible calculation on an owner-brief input and an official percentage.
 4. **Official confirmation:** private license, parcel, lease, or ledger evidence that was unavailable; the public cell is blank and flagged.
@@ -20,7 +20,7 @@ No personal identity is used in the current site or verification data.
 
 ## Official-source verification
 
-All **23/23** registered sources were retrieved and read from their official publishers on 2026-11-07. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+All **29/29** registered sources were retrieved and read from their official publishers: S01–S23 on 2026-11-07 and S24–S29 on 2026-11-08. Each source carries its own retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
 
 Notable checks:
 
@@ -62,9 +62,9 @@ Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 | Check | Result at verification |
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
-| `python3 assurance/build.py` | Assurance page and 23-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,336 checks; 0 errors**; 194 claim-table rows with source/flag links |
-| `python3 tools/verify_assurance.py` | **1,556 checks; 0 errors**; 33 assurance rows with official sources |
+| `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,545 checks; 0 errors**; 210 claim-table rows with source/flag links |
+| `python3 tools/verify_assurance.py` | **1,742 checks; 0 errors**; 33 assurance rows with official sources |
 | Current-text privacy scan | **170 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
@@ -108,7 +108,7 @@ The 12-row public correction register is rendered at [`assurance/index.html`](as
 
 ## Remaining limitations
 
-The canonical [Flagged for Review](hub/flags.html) contains 20 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
+The canonical [Flagged for Review](hub/flags.html) contains 24 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
 
 **No scenario is certified as notice-ready. No lawful current maximum or attorney/advocate acceptance is asserted.**
 
@@ -117,4 +117,4 @@ The canonical [Flagged for Review](hub/flags.html) contains 20 items. High-sever
 - [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` as `3fbd5e195330babacbd5e1568e287171ee4f8e93` after all three PR workflows passed.
 - Post-merge `Verify site` run `42416341845`, `Verify published site` run `42416341852`, and `Final assurance` run `42416341861` all succeeded.
 - GitHub Pages build/deployment run `42416341186` succeeded; the Pages API reported `built` for `main` `/`.
-- The deployed root, `assurance/index.html`, and `hub/flags.html` were retrieved after deployment and confirmed to contain the corrected license answer, 12 corrections, 23 official sources, and 20 flags.
+- The deployed root, `assurance/index.html`, and `hub/flags.html` were retrieved after deployment and confirmed to contain the corrected license answer, 12 corrections, 29 official sources, and 24 flags.
