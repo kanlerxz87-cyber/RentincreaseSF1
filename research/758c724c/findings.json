@@ -9,8 +9,8 @@
       "sources": [
         "S01",
         "S03",
-        "S25",
-        "S38"
+        "S27",
+        "S40"
       ],
       "status": "Corrected"
     },
@@ -20,7 +20,8 @@
       "finding": "The Treasurer exception applies only by reason of rental income from one structure with fewer than four units (or specified condo/co-op facts); other business activity can trigger registration. Two supplied units do not establish the total building unit count.",
       "sources": [
         "S24",
-        "S37"
+        "S25",
+        "S39"
       ],
       "status": "Corrected; H-21"
     },
@@ -74,7 +75,7 @@
       "sources": [
         "S08",
         "S21",
-        "S36"
+        "S38"
       ],
       "status": "Corrected; H-24"
     },
@@ -93,7 +94,7 @@
       "finding": "Rule 13.14 makes an annual/banked increase effective while unlicensed entirely null and void; filing restores future authority prospectively and does not retroactively validate the void increase. Otherwise lawful banking rights are preserved.",
       "sources": [
         "S01",
-        "S25"
+        "S27"
       ],
       "status": "Corrected"
     },
@@ -112,9 +113,9 @@
       "item": "Bond passthroughs",
       "finding": "No property-specific dollar amount is established. Actual tenancy commencement, net taxable value, total units and applicable tax bills are missing. Official 2026–27 factors are 0.0044 for FY2018–19 and 0.0041 for FY2024–25 only if those are the actual commencement years.",
       "sources": [
-        "S27",
-        "S28",
-        "S39"
+        "S29",
+        "S30",
+        "S41"
       ],
       "status": "H-22; amount blank"
     },
@@ -123,9 +124,9 @@
       "item": "Worksheet date error",
       "finding": "The 2026–27 bond worksheet says small-building licensing applies to increases effective on or after March 1, 2022; Rule 13.14 and §37.15 say March 1, 2023. Use the ordinance/rule and flag the form.",
       "sources": [
-        "S28",
-        "S25",
-        "S38"
+        "S30",
+        "S27",
+        "S40"
       ],
       "status": "H-23"
     },
@@ -135,7 +136,7 @@
       "finding": "The Board convenience text lists Ordinance 3-26 effective February 9, 2026; the official publisher history lists February 8, 2026. This does not change the 2026–27 annual rate, but the discrepancy is published rather than silently resolved.",
       "sources": [
         "S02",
-        "S39"
+        "S41"
       ],
       "status": "H-25"
     },
@@ -147,8 +148,8 @@
         "S13",
         "S14",
         "S15",
-        "S31",
-        "S32"
+        "S33",
+        "S34"
       ],
       "status": "Qualified analysis"
     },
@@ -169,7 +170,7 @@
       "sources": [
         "S19",
         "S23",
-        "S30"
+        "S32"
       ],
       "status": "No attorney clearance"
     },
@@ -189,7 +190,7 @@
       "finding": "The website uses placeholders and preserves supplied dates/amounts. Official Housing Inventory submissions require truthful owner/business contact information and are public; placeholders must not be submitted to the City.",
       "sources": [
         "S03",
-        "S38"
+        "S40"
       ],
       "status": "Website anonymized; official filing caveat"
     },
@@ -201,6 +202,22 @@
         "S03"
       ],
       "status": "Repository finding; no legal source needed"
+    },
+    {
+      "id": "F-20",
+      "item": "Pending banked-increase cap is not law",
+      "finding": "Legistar File #261020 was independently re-fetched on 2026-11-08: Pending Committee Action, no final action, no enactment date. The proposed 10% cap is not applied to current arithmetic; re-check before any large catch-up.",
+      "sources": [
+        "S26"
+      ],
+      "status": "Preserved from concurrent PR #19; H-22"
+    },
+    {
+      "id": "F-21",
+      "item": "Concurrent work preserved",
+      "finding": "PR #19 merged after this session’s initial claim. Its S24-S26 sources, H-21/H-22 flags, licensing rows, and documentation are preserved; this session’s unique additions are renumbered S27-S41.",
+      "sources": [],
+      "status": "Repository coordination record"
     }
   ]
 }
