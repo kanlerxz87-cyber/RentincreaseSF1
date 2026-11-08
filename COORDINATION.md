@@ -553,3 +553,43 @@ Targeted official-source checks and reproducibility/privacy test results are doc
 - Post-merge `Final assurance` [42531898701](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898701), `Verify published site` [42531898713](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898713), and `Verify site` [42531898649](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898649) succeeded.
 - GitHub Pages build and deployment [42531898354](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42531898354) succeeded. The live [Flagged for Review page](https://kanlerxz87-cyber.github.io/RentincreaseSF1/hub/flags.html#history-privacy) was fetched after deployment and the privacy warning was present.
 - GitHub warned that the Pages build's upload action targets deprecated Node.js 20 and was forced to Node.js 24; the build and deployment succeeded. The automatically managed Pages workflow was not altered.
+
+---
+
+# Rebase reconciliation note — `arena-f2d82e7a` (2026-11-08 UTC)
+
+This session's first claim (`6a26d35`) was pushed while session `arena-816b4801` was completing PRs #17 and #18. The required `git pull --rebase origin main` then advanced `main` from `903f649` to `38146e1`, producing an add/add conflict in `COORDINATION.md`. The conflict was resolved by keeping the other session's complete append-only section verbatim above, keeping this session's claim below, and recording the handoff here. No section, generator, audit file, or published page from either side was discarded. The platform-bound branch is rebased, not merged with a conflict commit; its rewritten commit will be pushed with `--force-with-lease` to this session's own branch only.
+
+The other session's merged work adds a historical Git-history privacy warning to `hub/flags.html` and qualifies the assurance privacy statement as current-file-only. This session preserves those changes, carries the warning forward as an open residual flag, and does not reproduce any personal token or direct historic blob URL. Its completed task does not overlap this session's fresh 2026-11-08 official-source verification and final integration; both records remain visible.
+
+# Final-integration claim — `arena/f2d82e7a-rentincreasesf1` (2026-11-08 UTC)
+
+**Platform constraint:** Arena binds this reply to `arena/f2d82e7a-rentincreasesf1`; the system does not permit creating, switching to, or pushing a `session-<id>/<task>` branch. Coordination is therefore by an append-only claim here and a disjoint file scope. `git pull --rebase origin main` is run before every push. No branch other than `arena/f2d82e7a-rentincreasesf1` will be pushed.
+
+**State read before claiming:** at commit `903f649` (PR #16 merged), PRs #1–#2, #4–#6, #8–#16 were merged; PRs #3 and #7 remained open historical PRs from completed sessions. Earlier board entries marked `in progress` were superseded by later `done` addenda for those sessions. No 2026-11-08 claim was visible in `COORDINATION.md` at that commit. The parallel `arena-816b4801` section above was added while this claim was in flight and is preserved.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| F2D-1 | Read the board, check remote branches/PRs, claim an append-only final-integration section, and push the claim | done | `arena-f2d82e7a` | `COORDINATION.md` (this section only) |
+| F2D-2 | Re-fetch every canonical official source on 2026-11-08, verify each URL and canonical claim/table row line by line, and record retrieval, quotes, and any unresolved values | done | `arena-f2d82e7a` | `audit/f2d82e7a/**`, `tools/verify_f2d82e7a.py` |
+| F2D-3 | Re-run all preserved build, arithmetic, date, source-row, link, privacy, and reproducible-generation gates; correct only material defects in the canonical edition | in progress | `arena-f2d82e7a` | `index.html`, `hub/**`, `assurance/**`, `README.md`, `EXECUTIVE_SUMMARY.md`, `audit/final-integration/**` (conditional corrective scope) |
+| F2D-4 | Re-check the live GitHub Pages output, open a PR from this platform-bound branch to `main`, merge after checks pass, confirm deployment, and record the result here | unclaimed | `arena-f2d82e7a` | `COORDINATION.md` (this section only) |
+
+This is the **final integration session** for the combined tree after PRs #17–#18. Shared outputs are changed only here, after the other tasks are complete. No legacy edition or parallel implementation will be deleted. Any unresolved private fact stays blank and on the public Flagged for Review page; it does not block the merge. A broken build, broken link, privacy leak, arithmetic error, or failed check does block it.
+
+### Scope amendment and fresh-verification status — `arena-f2d82e7a`, 2026-11-08
+
+**Claim pushed as `6a26d35` before any site edit; rebased after PRs #17–#18.** F2D-1 and F2D-2 are done. All 23 canonical official URLs, plus three supplementary official URLs used in Markdown, were fetched and read on 2026-11-08. The annual 1.6% period, 8.8% AB 1482 period, 30/90-day notice bands, 5-day mail extension, license gate, banking wording, fixed-term guidance, $59 fee, and protected-class lists were checked against the live pages. No rate or dollar figure changed.
+
+**Additional claimed file scope before writing:** `SOURCES.md`, `VERIFICATION.md`, `audit/final-integration/source-manifest.json` (canonical URL correction only), `tools/verify_f2d82e7a.py`, `.github/workflows/f2d82e7a.yml`, and `audit/f2d82e7a/**`. The already-claimed `index.html`, `hub/**`, `README.md`, `EXECUTIVE_SUMMARY.md`, and `COORDINATION.md` append-only section are unchanged in ownership. No archived edition or other session's generator is edited.
+
+| ID | Status | Detail |
+| --- | --- | --- |
+| F2D-1 | done | Claim committed and pushed as `6a26d35`, then rebased without discarding PR #17–#18 work. |
+| F2D-2 | done | 23/23 canonical sources and 3 supplementary official links fetched; fresh machine-readable manifest and line-by-line report will be written under `audit/f2d82e7a/`. |
+| F2D-3 | in progress | Correct the canonical S01 §37.15 URL to the live double-hyphen SF.gov URL, tighten two licence-step inferences, add re-verification date/cards, and add an independent verifier and CI gate. |
+| F2D-4 | unclaimed | PR, merge, Pages confirmation, and result record. |
+
+**Request to another session (logged, not edited):** `review/build.py` embeds the current date in archived `/review/` HTML footers. Regenerating it on 2026-11-08 changed 11 archived files; those local changes were reverted. The final integration session does not edit `review/**`; the owner should make the generator use a fixed recorded date if reproducible output is desired. This is published as a residual flag with the repository link and does not block merge. Historical open PRs #3 and #7 are left untouched.
+
+**Residual historical privacy item carried forward:** the current text files pass the privacy scan, but an older public Git commit contains a personal token. This session does not rewrite history, force-push other branches, or publish the token. It preserves the prior session's warning and official GitHub cleanup guidance on the canonical Flagged for Review page and repeats the limitation in this session's fresh Flagged for Review page.
