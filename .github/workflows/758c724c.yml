@@ -1,0 +1,56 @@
+name: Session 758c724c verification
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    env:
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Regenerate canonical, assurance, review, and companion editions
+        run: |
+          python3 hub/build.py
+          python3 assurance/build.py
+          python3 review/build.py
+          python3 build/build.py
+      - name: Fail on stale generated output
+        run: |
+          if ! git diff --quiet -- index.html hub/ assurance/ audit/final-integration/source-manifest.json review/ docs/v2/; then
+            echo "::error::Generated output is stale. Run the builders and commit the result."
+            git diff --stat -- index.html hub/ assurance/ audit/final-integration/source-manifest.json review/ docs/v2/
+            exit 1
+          fi
+      - name: Canonical, assurance, and session gates
+        run: |
+          python3 tools/verify_hub.py
+          python3 tools/verify_assurance.py
+          python3 tools/verify_758c724c.py
+      - name: Preserved link and legacy suites
+        run: |
+          python3 tools/check_links.py
+          python3 tools/check_site.py
+          python3 integration/verify.py
+          python3 dashboard/verify.py
+          python3 audit/verify_all.py
+          python3 review/verify.py
+      - name: Local HTTP smoke test
+        run: |
+          python3 -m http.server 8000 --bind 127.0.0.1 >/tmp/http.log 2>&1 &
+          echo $! > /tmp/http.pid
+          sleep 1
+          for path in / /hub/licensing.html /hub/limits.html /hub/notice.html /hub/practice.html /hub/fair-housing.html /hub/review.html /hub/flags.html /hub/sources.html /assurance/index.html /assurance/758c724c/index.html; do
+            curl -fsS "http://127.0.0.1:8000$path" >/dev/null
+          done
+          kill "$(cat /tmp/http.pid)"

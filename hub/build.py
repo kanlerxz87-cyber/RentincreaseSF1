@@ -250,7 +250,7 @@ index_body = """
     <h3>Yes. Each tenant-occupied unit needs a current Rent Increase License before an annual or banked increase takes effect — even when the owner is one individual with no corporation.</h3>
     <p>San Francisco Administrative Code §37.15 contains no individual-owner or two-unit exemption. Report each unit through the annual <strong>Housing Inventory</strong>; after substantial reporting compliance, the Rent Board automatically generates the unit's license. Reporting is free. There is <strong>no separate per-increase approval application</strong>, and an ordinary annual/banked notice goes to the tenant, not to the Rent Board.</p>
     <p><strong>Timing, precisely:</strong> the official hard cutoff is a current license on the increase's <strong>effective date</strong>, not necessarily the day the notice is served. Best practice is to complete/update reporting and confirm the license <em>before</em> serving notice so a correctable omission does not become an unenforceable increase. Late reporting is allowed, but restoration is prospective; the tenant does not owe the increase for unlicensed suspension months. The license does not have to be attached to the notice.</p>
-    <p><strong>Two different City registrations are often confused — only one gates the rent increase.</strong> The <strong>Rent Increase License</strong> comes from the Rent Board's Housing Inventory and is what makes an annual or banked increase enforceable. A <strong>Business Registration Certificate</strong> comes from the Office of the Treasurer &amp; Tax Collector, is a general business-tax registration, and does not affect the lawfulness of a rent increase. On the reported two units in one building, the Tax Collector's own guidance points to <em>no</em> business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. That carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination {s24} {s25} and logged as {h21}, not as a settled fact.</p>
+    <p><strong>Two different City registrations are often confused — only one gates the rent increase.</strong> The <strong>Rent Increase License</strong> comes from the Rent Board's Housing Inventory and is what makes an annual or banked increase enforceable. A <strong>Business Registration Certificate</strong> comes from the Office of the Treasurer &amp; Tax Collector as a general business-tax registration; do not treat one registration as satisfying the other. Whether this owner needs one is <strong>not established</strong>: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register, but the brief supplies two rent-controlled units, not the total structure unit count or other business activity. Other San Francisco business activity, payroll expense, or short-term rental income can trigger registration. Confirm the facts before relying on the exception {s24} {s25} {s42}; logged as {h21}.</p>
     <p><strong>Use this order:</strong> confirm coverage and lease terms → reconcile the full rent ledger → submit/update the Housing Inventory and confirm both licenses → calculate the amount → serve a conforming written notice → verify the license remains current on the effective date and retain proof. <a href="@@/hub/licensing.html">Full step-by-step answer and official links →</a></p>
     <p><strong>Before any large banked catch-up:</strong> Board of Supervisors File #261020 would cap banked and capital-improvement increases at 10% per year for three years. Re-checked on Legistar on 8 November 2026: <strong>Pending Committee Action — not law</strong>, no final action and no enactment date {s26}. It is not applied to any figure here, but the Unit 2 combined scenario is 13.1%, above that threshold, so re-check the record before serving. Logged as {h22}.</p>
   </div>
@@ -316,12 +316,14 @@ index_body = """
   <thead><tr><th scope="col">Official-confirmation value</th><th scope="col">Confirmed value</th><th scope="col">Why blank</th><th scope="col">Source / flag</th></tr></thead>
   <tbody>
     <tr><td>Current Rent Increase License for each unit</td><td></td><td>Private Rent Board Portal status was not available.</td><td><a href="@@/hub/flags.html#H-04">H-04</a> {s03}</td></tr>
-    <tr><td>Certificate of occupancy and exemption check</td><td></td><td>The brief reports a 1940 two-unit rent-controlled building; no parcel record was supplied.</td><td><a href="@@/hub/flags.html#H-05">H-05</a> {s18}</td></tr>
+    <tr><td>Certificate of occupancy and exemption check</td><td></td><td>The brief reports a 1940 building and two rent-controlled units; no parcel record or total unit count was supplied.</td><td><a href="@@/hub/flags.html#H-05">H-05</a> {s18}</td></tr>
     <tr><td>Unit 1 fixed-term/month-to-month and escalation terms</td><td></td><td>The April 2026 instrument was not supplied.</td><td><a href="@@/hub/flags.html#H-17">H-17</a> {s20}</td></tr>
     <tr><td>Unit 2 current base rent and no-prior-increase history</td><td></td><td>$3,150.00 is supplied only as the 2019 lease-start rent.</td><td><a href="@@/hub/flags.html#H-18">H-18</a>, <a href="@@/hub/flags.html#H-03">H-03</a> {s05}</td></tr>
     <tr><td>2027–28 SF annual allowance</td><td></td><td>Not published as of the verification date.</td><td><a href="@@/hub/flags.html#H-08">H-08</a> {s06}</td></tr>
     <tr><td>Official 94122 “normal” market increase</td><td></td><td>No official ZIP-specific value was located; commercial listings were not substituted.</td><td><a href="@@/hub/flags.html#H-10">H-10</a> {s05}</td></tr>
     <tr><td>Official SF behavior rates by owner type</td><td></td><td>No official comparative dataset was located.</td><td><a href="@@/hub/flags.html#H-11">H-11</a> {s22}</td></tr>
+    <tr><td>Total structure units / business-registration determination</td><td></td><td>Two reported rent-controlled units do not establish the total unit count or other business activity.</td><td><a href="@@/hub/flags.html#H-21">H-21</a> {s24} {s25} {s42}</td></tr>
+    <tr><td>Bond passthrough amount and worksheet inputs</td><td></td><td>Actual tenancy commencement, net taxable value, and unit count were not supplied; no amount is inferred.</td><td><a href="@@/hub/flags.html#H-25">H-25</a> {s32} {s33}</td></tr>
   </tbody></table></div>
 </section>
 
@@ -367,8 +369,9 @@ q_rows = [
     ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {n} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, and service evidence. Arithmetic alone is not a legal clearance.", '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23"])],
     ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', src_links(["S13", "S14", "S15"])],
     ["Does Unit 1's April 2026 occupant change allow a market-rate reset?", "No, on the reported facts. One original occupant remained, and both reset routes are keyed to the last original occupant leaving. Whether a §6.14 notice was served, and whether the incoming occupant is a co-tenant or a subtenant, are open private facts.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S27", "S28", "S29"])],
-    ["What is still unverified?", "{n} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.", '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
+    ["What is still unverified?", "{flag_count} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.", '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
 ]
+q_rows.insert(-1, ["Is the Rent Board license the only City registration?", "No. Business Registration is a separate Treasurer question. The fewer-than-four-units-in-one-structure exception depends on total unit count and other business activity; it is not established by two reported units.", '<a href="@@/hub/licensing.html">Licence &amp; Board</a>', src_links(["S24", "S25", "S42"])])
 q_table = table(["Question", "Short answer", "Detail", "Source"], q_rows, cls="data-table")
 
 index_html = page(
@@ -378,7 +381,7 @@ index_html = page(
     hero_block(
         "Executive summary · verified {}".format(DATA["meta"]["retrieved"]),
         "Raising the rent on two 1940 flats in the Outer Sunset — what the Rent Board requires, and what the numbers actually are",
-        "The brief reports a two-unit 1940 rent-controlled building. On that scope, local law supplies the annual allowance and state law supplies notice rules; official parcel coverage, private lease terms, ledgers, and licenses remain separately unverified.",
+        "The brief reports two rent-controlled units in a 1940 building. On that scope, local law supplies the annual allowance and state law supplies notice rules; official parcel coverage, private lease terms, ledgers, and licenses remain separately unverified.",
         ["ZIP 94122 · owner-brief facts", "Reported 1940 / rent-controlled", "1.6% to 28 Feb 2027", "{} official sources".format(len(DATA["sources"])), "Conditional calculations only"],
     ),
     index_body.format(
@@ -392,6 +395,7 @@ index_html = page(
         s03=src_links(["S03"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
         s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
         s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
+        s32=src_links(["S32"]), s33=src_links(["S33"]), s42=src_links(["S42"]),
         h21='<a href="@@/hub/flags.html#H-21">H-21</a>', h22='<a href="@@/hub/flags.html#H-22">H-22</a>',
         b_ok=badge("ok", "Verified"), b_calc=badge("calc", "Calculated"),
         b_flag=badge("flag", "Flag"), b_unv=badge("unv", "Unverified"),
@@ -498,7 +502,7 @@ licensing_html = page(
     hero_block(
         "Question 1 of 6 · the rent increase licence",
         "Do you have to apply to the Rent Board before raising the rent?",
-        "You need the licence — but not the application you were probably imagining. Here is the exact duty, the exact mechanism, and the exact consequence of skipping it, for a sole owner of a two-unit building in 94122.",
+        "You need the licence — but not the application you were probably imagining. Here is the exact duty, the exact mechanism, and the exact consequence of skipping it, for an individual owner with two reported rent-controlled units in 94122.",
         ["§37.15", "§37.3", "Housing Inventory", "Free licence", "Required on the effective date"],
     ),
     licensing_body,
@@ -642,7 +646,7 @@ limits_html = page(
 notice_rows_html = []
 for r in DATA["notice_rows"]:
     notice_rows_html.append([esc(r["item"]), esc(r["detail"]), src_links(r["sources"])])
-notice_table = table(["Required element", "Detail", "Source"], notice_rows_html, cls="data-table")
+notice_table = table(["Element and status", "Detail", "Source"], notice_rows_html, cls="data-table")
 
 deadline_rows = [
     ["Unit 1 — annual-only scenario", money(N["U1"]["annual_amt"]), "30 days", longdate(N["U1"]["short_serve_by"].isoformat()), longdate(N["U1"]["short_mail_by"].isoformat()), longdate(N["U1"]["effective"].isoformat()), src_links(["S08", "S20", "S21"])],
@@ -862,7 +866,7 @@ review_html = page(
         "Question 6 of 6 · withstanding scrutiny",
         "Would a San Francisco tenant lawyer find a defect?",
         "Run the review before notice. Official rates and arithmetic are reproducible; lease, ledger, license, repair, retaliation, and service facts remain open.",
-        ["13 checks", "No attorney verdict", "Evidence before service"],
+        ["{} checks".format(len(DATA["review_rows"])), "No attorney verdict", "Evidence before service"],
     ),
     review_body,
 )
@@ -905,17 +909,20 @@ flags_body = """
     <tr><td>Market “normal” increase for 94122</td><td></td><td>No official value located; do not substitute commercial listings.</td><td>{s05}<br><a href="@@/hub/flags.html#H-10">H-10</a></td></tr>
     <tr><td>2027–28 allowance</td><td></td><td>Future Form 571 when officially published.</td><td>{s06}<br><a href="@@/hub/flags.html#H-08">H-08</a></td></tr>
     <tr><td>Corporate versus individual behavior rate</td><td></td><td>No official SF comparative dataset located.</td><td>{s22}<br><a href="@@/hub/flags.html#H-11">H-11</a></td></tr>
+    <tr><td>Total structure units / business-registration determination</td><td></td><td>Confirm total units and other business activity; two reported units are not a building count.</td><td>{s24} {s25} {s42}<br><a href="@@/hub/flags.html#H-21">H-21</a></td></tr>
+    <tr><td>Bond passthrough amount</td><td></td><td>Actual commencement years, net taxable value, and unit count are missing; worksheet factors alone are not a dollar amount.</td><td>{s32} {s33}<br><a href="@@/hub/flags.html#H-25">H-25</a></td></tr>
   </tbody></table></div>
 </section>
 
 """.format(flag_table=flag_table, s03=src_links(["S03"]), s04=src_links(["S04"]),
            s05=src_links(["S05"]), s06=src_links(["S06"]), s18=src_links(["S18"]),
-           s20=src_links(["S20"]), s22=src_links(["S22"]))
+           s20=src_links(["S20"]), s22=src_links(["S22"]), s24=src_links(["S24"]),
+           s25=src_links(["S25"]), s32=src_links(["S32"]), s33=src_links(["S33"]), s42=src_links(["S42"]))
 
 flags_html = page(
     "hub/flags.html",
     "Flagged for Review — SF Rent Increase Compliance",
-    "Twenty flagged private facts, source distinctions, and repository irregularities, each linked to official material.",
+    "Flagged private facts, source distinctions, and repository irregularities, each linked to official material.",
     hero_block(
         "Flagged for Review · {} items".format(len(DATA["flags"])),
         "Where the record is incomplete or easy to misread",
@@ -936,13 +943,14 @@ for s in DATA["sources"]:
             esc(s["url"]), esc(s["title"]), esc(s["publisher"]), esc(s["level"])),
         "&ldquo;{}&rdquo;".format(esc(s["quote"])),
         esc(s["used_for"]),
+        esc(s.get("retrieved", DATA["meta"]["retrieved"])),
     ])
-src_table = table(["ID", "Source", "Verbatim quote used", "Used for"], src_rows,
-                  caption="All twenty-three sources were fetched and read on 7 November 2026. The quote column holds the passage used.", cls="source-table")
+src_table = table(["ID", "Source", "Supporting passage", "Used for", "Retrieved"], src_rows,
+                  caption="All {} official sources were fetched and read on their recorded dates. Supporting excerpts may normalize whitespace or typographic punctuation; blank lines separate passages.".format(len(DATA["sources"])), cls="source-table")
 
 sources_body = """
 <section>
-  <h2>Source registry<span class="sub">Twenty-three official sources. Commercial sources are not used for legal values or market conclusions.</span></h2>
+  <h2>Source registry<span class="sub">Official sources only. Commercial sources are not used for legal values or market conclusions.</span></h2>
   <p>Every claim-table row links to official material or an explicit flag. Official rules and rates are distinguished from owner-brief scenario inputs. Unsupported official-confirmation values are blank. <a href="@@/hub/flags.html#H-01">H-01</a> reconciles the banking measuring points; <a href="@@/hub/flags.html#H-19">H-19</a> flags the agencies' own worked-example year errors.</p>
   {src_table}
 </section>
@@ -950,12 +958,11 @@ sources_body = """
 <section>
   <h2>Publisher coverage<span class="sub">City, state and federal.</span></h2>
   <dl class="kv">
-    <dt>San Francisco Rent Board / SF.gov</dt><dd>14 sources: ordinance, adopted Rules, Form 571, current guidance, fees, repairs, and referral resources.</dd>
-    <dt>California Legislative Information</dt><dd>6 statutes: Civil Code §§827, 1942.5, 1947.12, 1954.53, Code of Civil Procedure §1013, and Government Code §12955.</dd>
-    <dt>California Department of Real Estate</dt><dd>1 official state guide: fixed-term and notice guidance.</dd>
-    <dt>Federal official sources</dt><dd>HUD Fair Housing Act overview and DOJ's accurately labeled RealPage proposed-settlement announcement.</dd>
+    <dt>San Francisco official publishers</dt><dd>Rent Board ordinance/rules/guidance/forms, Treasurer business-registration guidance, Legistar File #261020, and American Legal (identified by the Board as the official code publisher).</dd>
+    <dt>California official sources</dt><dd>California Legislative Information statutes and the California Courts-hosted California Tenants guide.</dd>
+    <dt>Federal official sources</dt><dd>HUD Fair Housing Act overview, DOJ’s accurately labeled RealPage proposed-settlement announcement, and GovInfo’s 42 U.S.C. §3604.</dd>
   </dl>
-  <p class="small">The federal statute behind the HUD page, 42 U.S.C. §3604, was cited in an earlier edition through the Office of Law Revision Counsel site; that URL returned &ldquo;Page Not Found&rdquo; when checked on 7 November 2026, so this edition cites the HUD overview page, which was fetched and reads as quoted. The broken link is repaired in the repository and logged as H-14.</p>
+  <p class="small">The federal statute behind the HUD page, 42 U.S.C. §3604, is now linked directly through GovInfo (S37). An earlier Office of Law Revision Counsel URL returned “Page Not Found” when checked; that broken link is logged as H-14. The Board’s convenience compilation is not the official code record; American Legal is the identified official publisher (S38, S42–S44).</p>
 </section>
 
 <section>
@@ -973,12 +980,12 @@ sources_body = """
 sources_html = page(
     "hub/sources.html",
     "Sources — SF Rent Increase Compliance",
-    "The twenty-three official sources behind the legal analysis and conditional calculations, with supporting passages and retrieval dates.",
+    "The official sources behind the legal analysis and conditional calculations, with supporting passages and per-source retrieval dates.",
     hero_block(
         "Verification · {} official sources".format(len(DATA["sources"])),
         "Every claim, traced to the sentence it came from",
-        "City ordinance and agency guidance, California statutes, and federal fair-housing material. Each source was fetched on 7 November 2026; the quote column holds the exact sentence used.",
-        ["14 SF Rent Board", "6 California statutes + 1 state guide", "2 federal official sources"],
+        "City ordinance and agency guidance, California statutes, and federal fair-housing material. Each row records the date it was fetched and read; supporting excerpts may normalize whitespace or typographic punctuation.",
+        ["City / state / federal", "Per-source retrieval dates", "Official publishers only"],
     ),
     sources_body,
 )

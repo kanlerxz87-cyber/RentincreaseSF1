@@ -102,7 +102,7 @@ check(assurance_rows == len(AUDIT["corrections"]) + 4 + 4 + len(AUDIT["residual_
 
 # Official source registry and live-retrieval manifest are complete and bounded.
 source_ids = [s["id"] for s in HUB["sources"]]
-check(len(source_ids) == len(set(source_ids)) >= 26, "expected at least 26 unique official sources")
+check(len(source_ids) == len(set(source_ids)) >= 44, "expected at least 44 unique official sources")
 check(len(MANIFEST) == len(source_ids), "source manifest length mismatch")
 manifest_by_id = {m["id"]: m for m in MANIFEST}
 allowed_hosts = {
@@ -113,6 +113,8 @@ allowed_hosts = {
     #                     Certificate and lessor-of-residential-real-estate guidance)
     # sfgov.legistar.com -> the Board of Supervisors' legislation portal, reached from sf.gov/bos
     "sftreasurer.org", "sfgov.legistar.com",
+    # Official code publisher identified by the Rent Board, federal statute text, and City document CDN:
+    "codelibrary.amlegal.com", "www.govinfo.gov", "media.api.sf.gov",
 }
 for s in HUB["sources"]:
     sid = s["id"]
@@ -172,7 +174,7 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
 check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
-check(len(HUB["review_rows"]) == 14, "expected 14 review checks")
+check(len(HUB["review_rows"]) >= 16, "expected at least 16 review checks")
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")

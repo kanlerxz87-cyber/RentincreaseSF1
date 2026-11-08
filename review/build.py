@@ -79,7 +79,7 @@ def shell(title, body, current):
 </div>
 </main>
 <footer>
-  Generated {datetime.date.today().isoformat()} · Sources: SF Rent Board / SF.gov, California Legislative Information, U.S. GPO.
+  Generated {SITE.get("generated", "2026-11-07")} · Sources: SF Rent Board / SF.gov, California Legislative Information, U.S. GPO.
 </footer>
 </body>
 </html>

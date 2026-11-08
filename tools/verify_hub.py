@@ -372,12 +372,12 @@ for page, doc in docs.items():
 # Floors, not exact pins: a later session may add sources/flags, but may never
 # silently drop the ones already verified. Each addition below is also asserted
 # positively further down, so removing one is a failure rather than a renumber.
-if len(sources) < 26:
-    fail(f"expected at least 26 official sources, found {len(sources)}")
-if len(DATA["flags"]) < 22:
-    fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
-if len(DATA["review_rows"]) != 14:
-    fail(f"expected 14 review checks, found {len(DATA['review_rows'])}")
+if len(sources) < 44:
+    fail(f"expected at least 44 official sources, found {len(sources)}")
+if len(DATA["flags"]) < 28:
+    fail(f"expected at least 28 flags, found {len(DATA['flags'])}")
+if len(DATA["review_rows"]) < 16:
+    fail(f"expected at least 16 review checks, found {len(DATA['review_rows'])}")
 
 # ---- G1/G2: the second licence (Business Registration Certificate) must stay answered
 by_id = {s["id"]: s for s in sources}
@@ -441,7 +441,7 @@ for flag_id in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
     if not any(f"flags.html#{flag_id}" in doc for doc in docs.values()):
         fail(f"{flag_id}: not cross-linked from canonical content")
     ok()
-for rel, minimum in (("index.html", 7), ("hub/flags.html", 8)):
+for rel, minimum in (("index.html", 9), ("hub/flags.html", 10)):
     if docs[rel].count("<td></td>") < minimum:
         fail(f"{rel}: unsupported official-confirmation cells were filled instead of left blank")
     ok()

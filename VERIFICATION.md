@@ -1,38 +1,40 @@
-# Final integration verification record
+# Verification record
 
-**Verification date:** 2026-11-07
+**Verification date:** 2026-11-08
 **Canonical edition:** root `index.html` + `hub/`
 **Independent assurance:** `assurance/` + `audit/final-integration/`
-**Branch:** `arena/1abdce92-rentincreasesf1`
+**Session refresh:** `research/758c724c/` + `assurance/758c724c/`
+**Branch:** `arena/758c724c-rentincreasesf1`
 
 ## Scope and evidentiary standard
 
-The final audit read the canonical data and generated prose, re-fetched official material, corrected overstatements in the existing generator, regenerated the site, and independently recomputed every scenario and service date. Earlier editions remain preserved as superseded archives; this record does not claim that every historical sentence was re-certified.
+The refresh read the shared coordination board, preserved concurrently merged PR #19 and PR #20 work, re-fetched official material, corrected the existing canonical generator/data, regenerated the site, and independently recomputed every scenario and service date. Earlier editions remain preserved as superseded archives; this record does not claim that every historical sentence was re-certified.
 
 Evidence classes are kept separate:
 
-1. **Official rule/rate:** directly supported by one of the 29 registered official sources.
+1. **Official rule/rate:** directly supported by one of the 44 registered official sources.
 2. **Owner-brief input:** a date or amount supplied for the two units, not an official record.
 3. **Conditional arithmetic:** reproducible calculation on an owner-brief input and an official percentage.
-4. **Official confirmation:** private license, parcel, lease, or ledger evidence that was unavailable; the public cell is blank and flagged.
+4. **Official confirmation:** private license, parcel, lease, ledger, unit-count, occupant-change, or passthrough evidence that was unavailable; the public cell is blank and flagged.
 
-No personal identity is used in the current site or verification data.
+No personal identity is used in the current site or verification data. Official Housing Inventory filings require truthful owner/contact information and are public; website placeholders are not for official filings.
 
 ## Official-source verification
 
-All **29/29** registered sources were retrieved and read from their official publishers: S01–S23 on 2026-11-07 and S24–S29 on 2026-11-08. Each source carries its own retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+All **44/44** registered sources have recorded retrieval dates and were read from official publishers or the City’s identified official code publisher. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
 
 Notable checks:
 
-- Individual-owner reporting and effective-date license gate: [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) + [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
-- Current 1.6% rate and all historical rates: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
-- Banking and notice text, including Rule 4.12(b)’s express non-void provision: [Rules Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring).
-- Fixed-term limitation: [California Tenants guide](https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf).
-- Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
-- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV).
-- Corporate-practice example, accurately labeled as allegations/proposed settlement: [DOJ RealPage announcement](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and).
+- Individual-owner reporting and effective-date license gate: [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing), [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory), [Rule 13.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent).
+- Current 1.6% rate and historical rates: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
+- Separate Treasurer business-registration question: [lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate), [Register a Business](https://sftreasurer.org/business/register-business), [§853](https://codelibrary.amlegal.com/codes/san_francisco/latest/sf_business/0-0-0-1875).
+- Pending banked-cap proposal, not law: [Legistar File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770).
+- Occupant-change rules preserved from PR #20: [§6.14 / Costa-Hawkins overview](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins), [Rule 6.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications), [determination petition](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins).
+- Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827), [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
+- Bond passthrough conditions and worksheet irregularity: [bond worksheets](https://www.sf.gov/information--general-obligation-bond-passthrough-worksheets), [2026–27 worksheet](https://media.api.sf.gov/documents/538_2026-2027_Bond_Measure_Worksheet_10.26.pdf).
+- Federal fair-housing statute: [42 U.S.C. §3604 via GovInfo](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm).
 
-Official Rent Board worked-example year-label errors were not copied. Form 571 controls every rate period; the discrepancies are public as H-19.
+Official-source irregularities are published rather than silently copied: worked-example year errors (H-19), bond worksheet phase-in dates (H-26), multiple-year notice shorthand (H-27), and Ordinance 3-26 effective-date discrepancy (H-28).
 
 ## Arithmetic independently recomputed
 
@@ -49,7 +51,7 @@ Service-date subtraction was independently checked:
 
 | Scenario | Effective date | Personal service | California mail | Official basis |
 |---|---|---|---|---|
-| Unit 1 annual or combined | 2027-02-01 | 2027-01-02 (30 days) | 2026-12-28 (35 days) | [§827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP) |
+| Unit 1 annual or combined | 2027-02-01 | 2027-01-02 (30 days) | 2026-12-28 (35 days) | [§827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP) |
 | Unit 2 annual-only | 2027-02-28 | 2027-01-29 (30 days) | 2027-01-24 (35 days) | Same statutes |
 | Unit 2 combined | 2027-02-28 | 2026-11-30 (90 days) | 2026-11-25 (95 days) | Same statutes |
 
@@ -62,21 +64,16 @@ Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 | Check | Result at verification |
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
-| `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,545 checks; 0 errors**; 210 claim-table rows with source/flag links |
-| `python3 tools/verify_assurance.py` | **1,742 checks; 0 errors**; 33 assurance rows with official sources |
-| Current-text privacy scan | **170 files; no forbidden personal token** |
+| `python3 assurance/build.py` | Assurance page and 44-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,806 checks; 0 errors**; 231 claim-table rows with source/flag links |
+| `python3 tools/verify_assurance.py` | **2,118 checks; 0 errors**; 33 assurance rows with official sources |
+| Current-text privacy scan | **177 files; no forbidden personal token** |
+| `python3 review/build.py && python3 review/verify.py` | Archived review edition reproducible after pinning its generation date; all checks passed |
 | `git diff --check` | No whitespace errors |
 
-The canonical verifier checks internal links/anchors, navigation, source registry completeness and use, every claim-table row’s source/flag citation, official dollar/rate traceability, service dates, placeholders, corrected categorical-label regressions, required flags, and explicit official-confirmation blanks.
-
-The independent verifier additionally checks all canonical and assurance links, assurance-row sources, official-host allowlisting, manifest agreement, private-input caveats, conditional Unit 2 components, stale-overstatement absence, required blank cells, and current-text privacy across the repository.
-
-CI reproduces both builds and fails on stale output through [`.github/workflows/assurance.yml`](.github/workflows/assurance.yml).
+The session gate `tools/verify_758c724c.py` and workflow `.github/workflows/758c724c.yml` add research-registry, row-citation, blank-cell, reproducibility, and legacy-suite checks. CI reproduces builds and fails on stale output.
 
 ## Preserved legacy suites
-
-The following existing checks are retained and run during integration:
 
 ```bash
 python3 tools/check_links.py
@@ -87,34 +84,14 @@ python3 audit/verify_all.py
 python3 review/build.py && python3 review/verify.py
 ```
 
-Passing an archived edition’s own suite does not mean every archived legal statement was accepted into the canonical edition. Corrections and their official bases are enumerated in [`audit/final-integration/findings.json`](audit/final-integration/findings.json).
-
-## Corrections made by the final audit
-
-The 12-row public correction register is rendered at [`assurance/index.html`](assurance/index.html). It covers:
-
-- effective-date versus notice-date license timing;
-- Unit 2 lease-start versus current-base labeling;
-- Unit 1 fixed-term contingency;
-- reconciliation of banking measuring points;
-- Rule 4.10/4.12 notice exceptions;
-- fact-specific retaliation and repair analysis;
-- limits of free-representation claims;
-- fair-housing neutrality without safe-harbour claims;
-- accurately bounded corporate-practice evidence;
-- official worked-example year errors;
-- separation of Rent Board Fee recovery from license/base rent;
-- blank market-normal and owner-behavior values.
+Passing an archived edition’s own suite does not mean every archived legal statement was accepted into the canonical edition.
 
 ## Remaining limitations
 
-The canonical [Flagged for Review](hub/flags.html) contains 24 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
+The canonical [Flagged for Review](hub/flags.html) contains 28 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), official coverage (H-05), and bond passthrough inputs (H-25). Business-registration facts remain conditional (H-21). File #261020 is pending, not enacted (H-22). Occupant-change notice and co-tenant/subtenant facts remain open (H-23/H-24).
 
 **No scenario is certified as notice-ready. No lawful current maximum or attorney/advocate acceptance is asserted.**
 
-## Pull request and deployment result
+## Deployment history
 
-- [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` as `3fbd5e195330babacbd5e1568e287171ee4f8e93` after all three PR workflows passed.
-- Post-merge `Verify site` run `42416341845`, `Verify published site` run `42416341852`, and `Final assurance` run `42416341861` all succeeded.
-- GitHub Pages build/deployment run `42416341186` succeeded; the Pages API reported `built` for `main` `/`.
-- The deployed root, `assurance/index.html`, and `hub/flags.html` were retrieved after deployment and confirmed to contain the corrected license answer, 12 corrections, 29 official sources, and 24 flags.
+Prior integration PRs #15, #16, #19, and #20 merged and confirmed GitHub Pages for `main` root. This refresh records its own PR/check/Pages result in `COORDINATION.md` after merge. The public entry remains <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.

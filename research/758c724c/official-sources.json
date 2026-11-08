@@ -347,17 +347,16 @@
   {
     "id": "S24",
     "title": "Information for Lessors of Residential Real Estate",
-    "publisher": "San Francisco Office of the Treasurer & Tax Collector",
-    "level": "local",
+    "publisher": "SF Office of the Treasurer & Tax Collector",
+    "level": "Local — Tax Collector guidance",
     "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
-    "quote": "A person receiving rental income in connection with the operation of a cooperative housing corporation, as defined in Section 216(b) of the Internal Revenue Code of 1986, as amended; one residential structure consisting of fewer than four units; or one residential condominium is not, by reason of that fact alone, required to obtain a business registration certificate. If the same person engages in other business activities or incurs payroll expense, a business registration certificate may be required.",
-    "used_for": "Separate Treasurer business-registration analysis from the free Rent Increase License; conditional fewer-than-four-units exception.",
+    "quote": "A person receiving rental income in connection with the operation of a cooperative housing corporation … ; one residential structure consisting of fewer than four units; or one residential condominium is not, by reason of that fact alone, required to obtain a business registration certificate. If the same person engages in other business activities or incurs payroll expense, a business registration certificate may be required. … If you are a lessor of residential real estate in San Francisco, you must file a return unless you lease fewer than 4 units in any individual building.",
+    "used_for": "The second licence question: whether an individual owner of a small residential building needs a Business Registration Certificate, and the Gross Receipts filing threshold.",
     "retrieved": "2026-11-08",
-    "location": "Registration Exemption for Certain Persons Receiving Rental Income",
-    "verification_method": "Official page fetched and cited passage read",
     "official": true,
-    "quote_note": "Verbatim excerpts; blank lines separate non-contiguous passages.",
-    "excerpt_sha256": "cf0afa85e494316f43c0e259c0563dbdf2ee7e8b2bc6f9c8e942b0f6ae9fa45a"
+    "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
+    "excerpt_sha256": "151840c7040f979d90f8015be2fd38efcdd9a641a4e4be44d49e0b70fc7862d4",
+    "location": "Lessor guidance and fewer-than-four-units registration exception"
   },
   {
     "id": "S25",
@@ -365,14 +364,13 @@
     "publisher": "SF Office of the Treasurer & Tax Collector",
     "level": "Local — Tax Collector guidance",
     "url": "https://sftreasurer.org/business/register-business",
-    "quote": "Unless otherwise required, you do not need to register if your only business is the receipt of rental income in connection with the operation of any of the following:\n\n1. A cooperative housing corporation, as defined in Section 216(b) of the Internal Revenue Code of 1986, as amended;\n2. One residential structure consisting of fewer than four units; or\n3. One residential condominium.",
+    "quote": "Own or lease real or personal property within San Francisco for business purposes (except for rental income received in connection with the operation of one residential structure consisting of fewer than four units, one residential condominium, or a cooperative housing association). … Unless otherwise required, you do not need to register if your only business is the receipt of rental income in connection with the operation of any of the following: … 2. One residential structure consisting of fewer than four units.",
     "used_for": "The registration triggers and the express sub-four-unit carve-out for residential rental income.",
     "retrieved": "2026-11-08",
-    "location": "Who needs to register in San Francisco?",
-    "verification_method": "Official page fetched and cited passage read",
     "official": true,
     "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
-    "excerpt_sha256": "9bb7ef0d52fb896660f99668d07e8ed46f013c9ce47d24338196ae1a47954e28"
+    "excerpt_sha256": "41c6ef04c5a50558d636c3a334c482c122dcb5db954ff552c47793a369e09ee8",
+    "location": "Who needs to register in San Francisco"
   },
   {
     "id": "S26",
@@ -380,17 +378,61 @@
     "publisher": "San Francisco Board of Supervisors (Legistar)",
     "level": "Local — proposed ordinance (NOT law)",
     "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
-    "quote": "File #: 261020 Version: 1\n\nStatus: Pending Committee Action\n\nOrdinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant’s rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes.\n\nFinal action: [blank]\nEnactment date: [blank]",
+    "quote": "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant's rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes. Type: Ordinance. Status: Pending Committee Action. Introduced: 9/15/2026. In control: Land Use and Transportation Committee. Final action: (none). Enactment date: (none).",
     "used_for": "Pending cap that would directly limit a large banked catch-up such as the Unit 2 scenario. Recorded as proposed legislation only; status re-checked 2026-11-08.",
     "retrieved": "2026-11-08",
-    "location": "Legislation Details, Version 1, status/history fields",
-    "verification_method": "Official Legistar page fetched and cited fields read",
     "official": true,
-    "quote_note": "Supporting excerpts; blank lines separate passages. Blank official fields are explicitly marked.",
-    "excerpt_sha256": "4fc5b5daf5ae1c3a19e72962a7aef6b03f768109c4f18bd6fdda1b5aa2b59d68"
+    "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
+    "excerpt_sha256": "c31cb4fda504d8866d29f27deadcbba5318ef3e6a5b26a70bd171bc20f79e844",
+    "location": "Legislation Details, Version 1, status/history fields"
   },
   {
     "id": "S27",
+    "title": "Rent Increases Under Section 6.14 and Costa-Hawkins",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "level": "Local — Rent Board rule summary",
+    "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+    "quote": "Rules and Regulations Section 6.14 provides for an unlimited rent increase on remaining occupants when the last original occupant vacates the unit, as long as the landlord timely served all remaining occupants with a written \"6.14 notice.\"\n\nThe 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy. Generally, sixty days is considered reasonable. A 6.14 notice can be served on any subsequent occupant, whether the subsequent occupant is a subtenant or a co-tenant.",
+    "used_for": "What an occupant change does and does not allow: the §6.14 notice, the sixty-day reasonableness benchmark, and the co-tenant versus subtenant distinction.",
+    "retrieved": "2026-11-08",
+    "official": true,
+    "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
+    "location": "Overview paragraphs on §6.14 notice and co-tenant/subtenant distinction",
+    "verification_method": "Official page fetched and cited passage read",
+    "excerpt_sha256": "a1dcaf0bea0d7cbf7bc9c3551f24441f503b8e5d577e237562b17771e19aca04"
+  },
+  {
+    "id": "S28",
+    "title": "Rent Board Rules and Regulations, Part VI — §6.14 Establishing Rental Rates for Subsequent Occupants",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "level": "Local — Rent Board rules and regulations",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
+    "quote": "(1) “Original occupant(s)” means one or more individuals who took possession of a unit with the express consent of the landlord at the time that the base rent for the unit was first established with respect to the vacant unit.\n\n(3) “Co-occupant” for purposes of this Section 6.14 only, is a subsequent occupant who has a rental agreement directly with the owner.\n\nFailure to give such a notice within 60 days of the landlord’s actual knowledge of the occupancy by the subsequent occupant(s) establishes a rebuttable presumption that notice was not given within a reasonable period of time.",
+    "used_for": "The exact sixty-day rebuttable-presumption rule, and that Costa-Hawkins can apply even where no 6.14 notice was served.",
+    "retrieved": "2026-11-08",
+    "official": true,
+    "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
+    "location": "Section 6.14(a) definitions and (b) 60-day rebuttable presumption",
+    "verification_method": "Official page fetched and cited passage read",
+    "excerpt_sha256": "d3d2e45bb8d281bee9b71a2414b418916e289d927e02119d8ca5b7b739eed78d"
+  },
+  {
+    "id": "S29",
+    "title": "Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "level": "Local — agency guidance",
+    "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
+    "quote": "Section 6.14 requires the service of a written notice upon the subsequent occupant when he or she first moves into the unit. Such notices are not a prerequisite to a Costa-Hawkins rent increase.\n\nA landlord is not required to file a petition with the Rent Board for approval of a rent increase pursuant to Section 6.14 or Costa-Hawkins Section 1954.53(d). However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination.",
+    "used_for": "That no pre-filing is required, that an optional determination petition exists, and the vacate versus permanently-reside distinction.",
+    "retrieved": "2026-11-08",
+    "official": true,
+    "quote_note": "Supporting excerpts; blank lines separate passages. Whitespace and typographic punctuation may be normalized.",
+    "location": "Distinctions between §6.14 and Costa-Hawkins; optional determination petition",
+    "verification_method": "Official page fetched and cited passage read",
+    "excerpt_sha256": "a3492e835eb47aed92a1d1c48e4beb2f0a35c7539e7e1beb46729219e49cc86a"
+  },
+  {
+    "id": "S30",
     "title": "Rent Board Rules and Regulations: Part XIII — Reporting Obligations",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -405,7 +447,7 @@
     "excerpt_sha256": "7d1278e984de14b1ac73347fec3ed07135bfeab1c86c97082bb8142b7d0e4aa8"
   },
   {
-    "id": "S28",
+    "id": "S31",
     "title": "Landlord petitions and passthroughs",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -420,7 +462,7 @@
     "excerpt_sha256": "b42352577ffd48844032e233cf0d22c28f08955a72138c56bafaff53694cf29d"
   },
   {
-    "id": "S29",
+    "id": "S32",
     "title": "General Obligation Bond Passthrough Worksheets",
     "publisher": "San Francisco Rent Board / Controller",
     "level": "local",
@@ -435,7 +477,7 @@
     "excerpt_sha256": "42708a1979e06f38dce5bd2baf2ab51f4a93c474ce6a8e638b3f660b29b38a99"
   },
   {
-    "id": "S30",
+    "id": "S33",
     "title": "2026-27 Bond Measure Passthrough Worksheet",
     "publisher": "San Francisco Controller / Rent Board",
     "level": "local",
@@ -450,7 +492,7 @@
     "excerpt_sha256": "25dcfc52c386564b9cbc6c0a8d9c7a09297dac4ec97eebcd417e5677fa8f7910"
   },
   {
-    "id": "S31",
+    "id": "S34",
     "title": "Recover part of your Rent Board fee from the tenant",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -465,7 +507,7 @@
     "excerpt_sha256": "43f49e3f284e681a3dfc82e42c405c878acfae92204f2f92bffebdb601a489e8"
   },
   {
-    "id": "S32",
+    "id": "S35",
     "title": "Report an unlawful rent increase or request a review of your rent history",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -480,7 +522,7 @@
     "excerpt_sha256": "8392e8c4615a85b906aa871add8d4275435145b4f0f1a454226f14751aab2aa3"
   },
   {
-    "id": "S33",
+    "id": "S36",
     "title": "Civil Code §51 — Unruh Civil Rights Act",
     "publisher": "California Legislative Information",
     "level": "state",
@@ -495,7 +537,7 @@
     "excerpt_sha256": "665be43fdf9d56b5b583a572cf07c44ccda147816de82b5eaf3e9d39294cbe38"
   },
   {
-    "id": "S34",
+    "id": "S37",
     "title": "42 U.S.C. §3604 — Discrimination in sale or rental of housing",
     "publisher": "Office of the Law Revision Counsel / GovInfo",
     "level": "federal",
@@ -510,7 +552,7 @@
     "excerpt_sha256": "4fa804679f7a790c02c98fc3ccba13594449eb93dd6dc906560d7dba7f03e8e9"
   },
   {
-    "id": "S35",
+    "id": "S38",
     "title": "Rent Ordinance — current compilation index",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -525,7 +567,7 @@
     "excerpt_sha256": "64d67648e56c925ffc015cb5f7a7105321f66bb63109750c61e2ec748b2673b6"
   },
   {
-    "id": "S36",
+    "id": "S39",
     "title": "Rent Board Rules and Regulations — current compilation index",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -540,7 +582,7 @@
     "excerpt_sha256": "471c5bafeea2dd72dee9c3e6a33912a7d01a2f6ad72a88748990db338b29121c"
   },
   {
-    "id": "S37",
+    "id": "S40",
     "title": "Speak with a Rent Board counselor",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -555,7 +597,7 @@
     "excerpt_sha256": "978e442ac32e57410b7c7b8f6a2e5d934e5248dfdfd98a4c9bae091b83546321"
   },
   {
-    "id": "S38",
+    "id": "S41",
     "title": "Annual rent increase for multiple years",
     "publisher": "San Francisco Rent Board",
     "level": "local",
@@ -570,7 +612,7 @@
     "excerpt_sha256": "3a1f2a90701681fd75834eeccc96c2a77f796890e67d8398647ab74a3c0827ec"
   },
   {
-    "id": "S39",
+    "id": "S42",
     "title": "Business and Tax Regulations Code §853 — Registration Certificate Required",
     "publisher": "San Francisco / American Legal Publishing (official code publisher)",
     "level": "local",
@@ -585,7 +627,7 @@
     "excerpt_sha256": "5f856b206b71112e8e3dd3955dc41252c6612b23056227c032ed0390459940b4"
   },
   {
-    "id": "S40",
+    "id": "S43",
     "title": "Administrative Code §37.15 — Reporting Obligations; Licensing",
     "publisher": "San Francisco / American Legal Publishing (official code publisher)",
     "level": "local",
@@ -600,7 +642,7 @@
     "excerpt_sha256": "eb2d0eb1f99b60da67d1da57edc844e5b25cff7e00fd7437e3ff01c7f8649465"
   },
   {
-    "id": "S41",
+    "id": "S44",
     "title": "Administrative Code §37.3 — Rent Limitations",
     "publisher": "San Francisco / American Legal Publishing (official code publisher)",
     "level": "local",

@@ -13,7 +13,7 @@ An anonymized, official-source review for two reported rent-controlled units in 
 
 Official sources: [SF Administrative Code §37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) and [Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
 
-**The Rent Increase License is not the only City registration, and the two are commonly confused.** A **Business Registration Certificate** is issued by the Office of the Treasurer & Tax Collector, is a general business-tax registration, and does not affect whether a rent increase is lawful. On the reported two units in one building, the Tax Collector's own guidance points to *no* business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. The carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination ([lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate), [register a business](https://sftreasurer.org/business/register-business), flag `H-21`), not as a settled fact.
+**The Rent Increase License is not the only City registration, and the two are commonly confused.** A **Business Registration Certificate** is issued by the Office of the Treasurer & Tax Collector, is a general business-tax registration; do not treat one registration as satisfying the other. Whether this owner needs one is **not established**: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register, but the brief supplies two rent-controlled units, not the total structure unit count or other business activity. The carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination ([lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate), [register a business](https://sftreasurer.org/business/register-business), flag `H-21`), not as a settled fact.
 
 **Before any large banked catch-up:** Board of Supervisors [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) would cap banked and capital-improvement increases at 10% per year for three years. Re-checked on Legistar on 2026-11-08: **Pending Committee Action — not law**, no final action, no enactment date. It is not applied to any figure here, but the Unit 2 combined scenario is 13.1%, above that threshold (flag `H-22`).
 
@@ -31,13 +31,13 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/notice.html` | Notice contents, personal/mail arithmetic, lawful bases, scenario-only drafting aid |
 | `hub/practice.html` | Owner-neutral duties, SF algorithm ban, accurately bounded DOJ enforcement example |
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
-| `hub/review.html` | 13 tenant-side review checks; no attorney verdict |
-| `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 29 official sources with supporting passages and per-source retrieval dates |
+| `hub/review.html` | 16 tenant-side review checks; no attorney verdict |
+| `hub/flags.html` | 28 unresolved facts and source/repository irregularities; official-confirmation blanks |
+| `hub/sources.html` | 44 official sources with supporting passages and per-source retrieval dates |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
-| `audit/final-integration/` | Machine-readable findings and 23-source live-retrieval manifest |
+| `audit/final-integration/` | Machine-readable findings and 44-source live-retrieval manifest |
 | `tools/verify_hub.py` | Canonical link, source, arithmetic, privacy, and corrected-label regression checks |
 | `tools/verify_assurance.py` | Independent cross-checks plus current-text privacy scan across the repository |
 | `.github/workflows/assurance.yml` | Rebuild and verification gate on pull requests and `main` |
@@ -52,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,545 canonical checks** and **1,742 assurance checks**, including 210 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 29 live-source manifest entries (23 retrieved 2026-11-07, 6 retrieved 2026-11-08), and a privacy scan of 171 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,806 canonical checks** and **2,118 assurance checks**, including 231 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 44 live-source manifest entries with per-source retrieval dates, and a privacy scan of 177 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 
@@ -67,6 +67,7 @@ python3 integration/verify.py
 python3 dashboard/verify.py
 python3 audit/verify_all.py
 python3 review/build.py && python3 review/verify.py
+python3 tools/verify_758c724c.py
 ```
 
 These legacy suites validate their own editions; they do not certify every archived legal statement against the corrected canonical analysis.

@@ -832,9 +832,9 @@ If this session crashes, another session may take over the PR/merge step and mus
 | --- | --- | --- | --- | --- |
 | R758-1 | Read board, inspect current remote claims, publish non-destructive integration claim | done | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
 | R758-2 | Independently verify current official rent-board, rate, notice, state/federal, practice, and legal-assistance sources | done | `arena-758c724c` | `research/758c724c/**` |
-| R758-3 | Audit canonical claims line by line, private-input evidence, calculations, links, reproducibility, and privacy; identify corrections | in progress | `arena-758c724c` | `research/758c724c/**`, `assurance/758c724c/**`, `tools/verify_758c724c.py` |
-| R758-4 | Final integration: update the canonical data/site/executive summary without deleting prior editions | unclaimed | `arena-758c724c` | `hub/**`, `index.html`, root summary/source/verification documents, `.github/workflows/758c724c.yml` |
-| R758-5 | Run all preserved suites, fresh-source and link checks, privacy gates, and live browser smoke tests | unclaimed | `arena-758c724c` | `tools/verify_758c724c.py`, `research/758c724c/**`, `.github/workflows/758c724c.yml` |
+| R758-3 | Audit canonical claims line by line, private-input evidence, calculations, links, reproducibility, and privacy; identify corrections | done | `arena-758c724c` | `research/758c724c/**`, `assurance/758c724c/**`, `tools/verify_758c724c.py` |
+| R758-4 | Final integration: update the canonical data/site/executive summary without deleting prior editions | in progress | `arena-758c724c` | `hub/**`, `index.html`, root summary/source/verification documents, `.github/workflows/758c724c.yml` |
+| R758-5 | Run all preserved suites, fresh-source and link checks, privacy gates, and live browser smoke tests | in progress | `arena-758c724c` | `tools/verify_758c724c.py`, `research/758c724c/**`, `.github/workflows/758c724c.yml` |
 | R758-6 | Rebase, open integration PR, merge only after checks pass, confirm Pages, and record results | unclaimed | `arena-758c724c` | `COORDINATION.md` (this addendum only) |
 
 **Privacy:** no tenant initials, names, contact information, or property street address will be written to research files, logs, generated pages, or commit messages. Unit numbers, dates, and supplied dollar amounts are retained; tenant examples use synthetic names only. Private inputs will not be promoted to officially verified facts.
@@ -855,3 +855,18 @@ If this session crashes, another session may take over the PR/merge step and mus
 `git pull --rebase origin main` found that PR #19 (`arena-d998600f`) merged after this session's initial claim. The rebase conflict in this board was resolved by preserving the entire G1–G7 addendum and this session's addendum. No concurrent implementation was discarded. The research registry was then reconciled to preserve PR #19's S24–S26 (Treasurer lessor guidance, business registration, and Legistar File #261020) and H-21/H-22; this session's unique additions are renumbered S27–S41. Legistar was independently re-fetched and still shows Pending Committee Action, no final action, and no enactment date. The proposed cap is not applied to current arithmetic.
 
 The final integration will build on the merged PR #19 canonical data rather than overwrite it. Remaining corrections include direct official links on every table row, unsupported two-unit-building/business-registration wording, additional source/form irregularities, bond-passthrough blanks, privacy boundary for public Housing Inventory filings, and the archived review generator's date drift.
+
+
+### R758 integration implementation record — 2026-11-08
+
+- **Additional claim before writing:** `review/build.py` and `review/data/site.json` are claimed solely to fix the archived generator’s wall-clock date drift. The committed edition date is pinned; no archived legal content is rewritten.
+- **Canonical integration:** built on merged PR #19 rather than overwriting it. Canonical registry now has 41 sources, 26 flags, 15 simulated review checks, 10 licensing Q&A rows, 10 process steps, 12 notice elements, and 11 reason rows. Every claim row carries official source links; unsupported unit-count/registration and bond inputs remain blank.
+- **Corrections:** business registration is not inferred from two reported units; late license filing is not a retroactive cure; bond passthroughs use worksheets rather than an approval petition; fee recovery is conditional and separate; the multiple-year 30/35-day shorthand is not used for >10% increases; bond worksheet phase-in and Ordinance 3-26 date discrepancies are flagged.
+- **Local gates before commit:** `verify_hub` 1,655 checks / 0 errors; `verify_assurance` 2,024 / 0; preserved link/site/integration/dashboard/audit/review suites pass; `git diff --check` clean. The session gate’s drift check is expected to fail until these intended generated changes are committed; it will be rerun immediately after commit.
+
+
+### R758 second concurrency reconciliation — after PR #20 merged
+
+A second `git pull --rebase origin main` found PR #20 (`arena-a86bd8dc`) merged during integration. Its occupant-change work is preserved: S27–S29, H-23/H-24, the seven-row occupancy table, review check 14, and the landing/executive occupant-change analysis. This session’s unique additions were renumbered again to S30–S44 and H-25–H-28. The §6.14/Costa-Hawkins pages were independently re-fetched; no market-rate reset is supported on the reported Unit 1 facts because one original occupant remained.
+
+Final canonical shape after reconciliation: 44 sources, 28 flags, 16 simulated review checks, 10 licensing Q&A rows, 10 process steps, 12 notice elements, 11 reason rows, and the preserved 7-row occupancy table. Local gates after reconciliation: `verify_hub` 1,806 checks / 0 errors; `verify_assurance` 2,118 / 0; 44/44 manifest rows; 177 current text files privacy-scanned. The session gate and preserved suites will be rerun after the rebase is completed and committed.
