@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line-by-Line Repository Audit — SF 94122 Rent Increase Compliance Guide</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div>
+        <div class="brand-title">San Francisco Rent Increase Compliance Dashboard — Outer Sunset 94122</div>
+        <div class="brand-subtitle">1940 Two-Unit Rent-Controlled Building &middot; Privacy-First Anonymized Edition &middot; Live-Verified 2026-11-10</div>
+      </div>
+      <div class="topbar-badges">
+        <span class="pill pill-green">Current Annual Cap: 1.6% (3/1/26&ndash;2/28/27)</span>
+        <span class="pill pill-amber">Nov. 9, 2026 File #261020 Alert Included</span>
+        <span class="pill">33 Official .gov Sources</span>
+      </div>
+    </div>
+  </header>
+  <div class="nav-wrap">
+    <nav class="main-nav" aria-label="Primary category navigation">
+      <a href="index.html" class="">Executive Summary</a>
+      <a href="licensing.html" class="">Rent Board License</a>
+      <a href="units-and-rates.html" class="">Units 1 &amp; 2 Rates</a>
+      <a href="legal-framework.html" class="">94122 Legal Matrix</a>
+      <a href="market-practices.html" class="">Corporate vs. Individual</a>
+      <a href="tenant-notice.html" class="">Notice &amp; Reasons</a>
+      <a href="lawyer-scrutiny.html" class="">Lawyer Audit &amp; Fair Housing</a>
+      <a href="repo-audit.html" class="active">Repo Audit</a>
+      <a href="sources.html" class="">Official Sources (33)</a>
+      <a href="flagged-for-review.html" class="">Flagged for Review</a>
+    </nav>
+  </div>
+  <main class="container">
+    <section class="hero">
+      <h1>Repository-Wide Line-by-Line Verification Audit</h1>
+      <p>Every repository directory, canonical dataset, and root Markdown file checked against live official sources on 2026-11-10.</p>
+    </section>
+    <div class="filter-bar">
+      <input id="table-filter" class="filter-input" type="search" placeholder="Filter any table row on this page (e.g., license, 1.6%, Unit 2, 90-day, 261020)..." aria-label="Filter table rows">
+      <span id="filter-count" class="section-desc" style="margin:0;"></span>
+    </div>
+    <section class="section-card">
+      <div class="section-header">
+        <h2>Line-by-Line Repository Verification Audit (Verified 2026-11-10)</h2>
+      </div>
+      <p class="section-desc">Independent verification of existing repository files, arithmetic, source URLs, archived editions, and privacy compliance against live official government sources.</p>
+      <div class="table-wrap">
+        <table class="guide-table">
+          <thead>
+            <tr>
+              <th>Audit ID</th>
+              <th>Repository File / Scope</th>
+              <th>Verification Status</th>
+              <th>Line-by-Line Finding &amp; Resolution</th>
+              <th>Official Source</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr id="RA-5D4-01">
+            <td><strong>RA-5D4-01</strong></td>
+            <td><code>hub/data.json, index.html, hub/*.html (Canonical Root Dashboard)</code></td>
+            <td><span class="badge badge-low">Verified Accurate</span></td>
+            <td>All arithmetic ($63.92, $119.85, $50.40, $412.65), Form 571 percentages (1982–2027), § 37.15 licensing rules, &lt;4-unit Treasurer distinction, § 6.14/Costa-Hawkins occupant rules, and the Nov. 9, 2026 File #261020 retroactive-cutoff warning match official primary sources live-fetched on 2026-11-10.</td>
+            <td><a class="src-link" href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener">San Francisco Rent Board (GS-08)</a><span class="src-sub"><a href="sources.html#GS-08">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-02">
+            <td><strong>RA-5D4-02</strong></td>
+            <td><code>README.md (Root Documentation — Reconciled on 2026-11-10)</code></td>
+            <td><span class="badge badge-low">Verified Reconciled</span></td>
+            <td>Initial audit at 709e07a spotted stale count summaries (&#x27;13 review checks&#x27;, &#x27;23-source manifest&#x27;, &#x27;1,545/1,742 checks&#x27;); following rebase onto main @ 86c3a84, concurrent PRs #30/#34 updated README.md to &#x27;14 tenant-side review checks&#x27;, &#x27;29-source live-retrieval manifest&#x27;, and &#x27;1,592 canonical / 1,812 assurance checks&#x27;.</td>
+            <td><a class="src-link" href="https://www.sf.gov/information/sec-3715-reporting-obligations-licensing" target="_blank" rel="noopener">San Francisco Rent Board (GS-01)</a><span class="src-sub"><a href="sources.html#GS-01">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-03">
+            <td><strong>RA-5D4-03</strong></td>
+            <td><code>SOURCES.md &amp; VERIFICATION.md (Root Source &amp; Verification Records)</code></td>
+            <td><span class="badge badge-low">Verified Reconciled</span></td>
+            <td>Initial audit at 709e07a flagged 2026-11-07/08 header dates; following rebase onto main @ 86c3a84, SOURCES.md and VERIFICATION.md reflect full 2026-11-10 live verification across all 29 canonical sources, and all 29 external URLs resolve cleanly to official government hosts.</td>
+            <td><a class="src-link" href="https://www.sf.gov/learn-about-rent-increases-san-francisco" target="_blank" rel="noopener">San Francisco Rent Board (GS-09)</a><span class="src-sub"><a href="sources.html#GS-09">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-04">
+            <td><strong>RA-5D4-04</strong></td>
+            <td><code>EXECUTIVE_SUMMARY.md (Lines 29, 86) &amp; VERIFICATION.md (Line 33)</code></td>
+            <td><span class="badge badge-low">Verified Resolving (Minor URL Query Formatting Variance)</span></td>
+            <td>Links to Civil Code § 1942.5 include a trailing period (&#x27;sectionNum=1942.5.&#x27;). Live fetch on 2026-11-10 confirmed leginfo.legislature.ca.gov resolves both &#x27;1942.5.&#x27; and &#x27;1942.5&#x27; to Civil Code § 1942.5, though canonical hub/data.json uses &#x27;sectionNum=1942.5&#x27;.</td>
+            <td><a class="src-link" href="https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&amp;sectionNum=1942.5" target="_blank" rel="noopener">California Legislative Information (GS-24)</a><span class="src-sub"><a href="sources.html#GS-24">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-05">
+            <td><strong>RA-5D4-05</strong></td>
+            <td><code>Superseded Pre-Nov-9 Editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/)</code></td>
+            <td><span class="badge badge-medium">Flagged — Superseded Archive (Pre-Nov-9, 2026 Rent Board Warning)</span></td>
+            <td>Archived editions built Nov 6–7, 2026 predate the SF Rent Board&#x27;s November 9, 2026 official warning on sf.gov that pending File #261020 (10%/yr banked cap) would apply retroactively to banked notices served on or after September 15, 2026 if enacted as proposed. Root index.html properly labels those directories as superseded archives.</td>
+            <td><a class="src-link" href="https://www.sf.gov/information--banked-rent-increases" target="_blank" rel="noopener">San Francisco Rent Board (GS-10)</a><span class="src-sub"><a href="sources.html#GS-10">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-06">
+            <td><strong>RA-5D4-06</strong></td>
+            <td><code>Archived Editions — Business Registration Certificate Omission</code></td>
+            <td><span class="badge badge-medium">Flagged — Superseded Archive Gap (Resolved in Canonical Hub &amp; /guide/)</span></td>
+            <td>Pre-PR #19 archived editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/) answered only the Rent Board § 37.15 license question without addressing the separate SF Treasurer &lt;4-unit Business Registration Certificate rule.</td>
+            <td><a class="src-link" href="https://sftreasurer.org/information-lessors-residential-real-estate" target="_blank" rel="noopener">San Francisco Office of the Treasurer &amp; Tax Collector (GS-04)</a><span class="src-sub"><a href="sources.html#GS-04">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-07">
+            <td><strong>RA-5D4-07</strong></td>
+            <td><code>review/build.py (Non-Deterministic Footer Date Stamp)</code></td>
+            <td><span class="badge badge-medium">Flagged — Build Reproducibility Caveat in Archived Edition</span></td>
+            <td>Running review/build.py on a later calendar date updates a date stamp in review/*.html using the current date rather than a pinned dataset date. Preserved untouched per disjoint scope rules.</td>
+            <td><a class="src-link" href="https://www.sf.gov/rent-board-housing-inventory" target="_blank" rel="noopener">San Francisco Rent Board (GS-02)</a><span class="src-sub"><a href="sources.html#GS-02">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-08">
+            <td><strong>RA-5D4-08</strong></td>
+            <td><code>Official SF.gov Worked-Example Year Labels vs. Form 571</code></td>
+            <td><span class="badge badge-medium">Flagged — Official Agency Webpage Typo (Form 571 Controls)</span></td>
+            <td>Live fetch of sf.gov &#x27;Learn about rent increases&#x27; and &#x27;Banked rent increases&#x27; on 2026-11-10 confirmed minor year-label typos inside SF.gov&#x27;s narrative examples (e.g., &#x27;in effect on June 1, 2025 is 1.6%&#x27; where June 1, 2026 is meant, and &#x27;August 1, 2024 (1.4%)&#x27; where August 1, 2025 is meant). Official Form 571 PDF controls every rate period.</td>
+            <td><a class="src-link" href="https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf" target="_blank" rel="noopener">San Francisco Rent Board (GS-08)</a><span class="src-sub"><a href="sources.html#GS-08">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          <tr id="RA-5D4-09">
+            <td><strong>RA-5D4-09</strong></td>
+            <td><code>Current Tracked Repository Files vs. Public Git Commit History (Privacy)</code></td>
+            <td><span class="badge badge-medium">Current Tree PASS (0 Personal Tokens) / Historical Commit Flagged</span></td>
+            <td>SHA-256 digest and regex privacy scan across 100% of current tracked files confirms zero tenant names, initials, emails, or street addresses. As flagged in PR #17, an early pre-redaction Git commit in public history contained raw initials; rewriting history requires repository-admin / GitHub Support action outside single-branch PR workflows.</td>
+            <td><a class="src-link" href="https://www.sf.gov/rent-board-housing-inventory" target="_blank" rel="noopener">San Francisco Rent Board (GS-02)</a><span class="src-sub"><a href="sources.html#GS-02">Verbatim excerpt &rarr;</a></span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div><strong>Privacy &amp; Evidentiary Notice:</strong> Strict anonymization: all tenant names, initials, street addresses, and private contact details are excluded from all public files. Placeholder labels (Tenant A through Tenant F) are used throughout while keeping all reported dates and dollar amounts exact.</div>
+    <div style="margin-top:6px;">Informational compliance research verified line-by-line against official municipal, state, and federal government publications retrieved on 2026-11-10. Not legal advice and not a certification to serve notice; private lease, ledger, parcel, and license records must be verified directly by the property owner. &middot; <a href="flagged-for-review.html">View Flagged for Review (15 Blank Unverified Inputs)</a> &middot; <a href="sources.html">View All 33 Official Sources</a> &middot; <a href="../index.html">Repository Root Hub</a></div>
+  </footer>
+  <script src="assets/app.js"></script>
+</body>
+</html>

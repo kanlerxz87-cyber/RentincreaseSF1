@@ -1,0 +1,814 @@
+{
+  "meta": {
+    "edition": "SF Rent Increase Executive Guide & Verification Dashboard (/guide/)",
+    "session_id": "arena/5d4a1320-rentincreasesf1",
+    "verified_date": "2026-11-10",
+    "location": "Outer Sunset, San Francisco, CA 94122",
+    "building_year": 1940,
+    "unit_count": 2,
+    "privacy_policy": "Strict anonymization: all tenant names, initials, street addresses, and private contact details are excluded from all public files. Placeholder labels (Tenant A through Tenant F) are used throughout while keeping all reported dates and dollar amounts exact.",
+    "disclaimer": "Informational compliance research verified line-by-line against official municipal, state, and federal government publications retrieved on 2026-11-10. Not legal advice and not a certification to serve notice; private lease, ledger, parcel, and license records must be verified directly by the property owner."
+  },
+  "forefront_license_qa": [
+    {
+      "question": "As an individual property owner (not a corporation or LLC) of a 2-unit 1940 building, do I still need to report to the SF Rent Board and obtain a Rent Increase License?",
+      "short_answer": "YES — Mandatory under SF Admin. Code § 37.15 (Zero Small-Owner Exemption)",
+      "detail": "San Francisco Administrative Code § 37.15 applies to ALL owners of rent-controlled residential units regardless of whether you own as a natural person, family trust, LLC, or corporation. Buildings with 1–9 residential units became subject to mandatory Housing Inventory reporting on March 1, 2023, with annual updates due March 1 every year. Reporting is free online 24/7 via portal.sfrb.org and automatically generates your unit's Rent Increase License.",
+      "source_id": "GS-01"
+    },
+    {
+      "question": "Must I inform the Rent Board and hold the license BEFORE notifying tenants of a rent increase, or before the effective date?",
+      "short_answer": "Statutory Hard Gate = Effective Date; Best Practice to Prevent Challenge = BEFORE Serving Notice",
+      "detail": "Under § 37.15(e) and official Housing Inventory guidance, a rent increase notice is unenforceable unless the landlord holds a current Rent Increase License on the EFFECTIVE DATE of the increase (any suspended period is permanently uncollectible and restoration is prospective only). However, because tenants and free SF tenant lawyers can check your license status on portal.sfrb.org the same day they receive your notice, completing your Housing Inventory filing and downloading your active Rent Increase License PDF BEFORE serving the tenant notice eliminates any licensing challenge up front.",
+      "source_id": "GS-02"
+    },
+    {
+      "question": "Do I submit the rent increase notice itself to the Rent Board or ask the Rent Board to approve the annual/banked increase?",
+      "short_answer": "NO — Standard Annual & Banked Notices Go Only to the Tenant",
+      "detail": "Once your unit's Housing Inventory is current and your Rent Increase License is active on portal.sfrb.org, you do NOT file standard annual allowable (1.6%) or banked (Rule 4.12) rent increase notices with the Rent Board, and you do NOT need to attach a copy of the license to the tenant's notice. Rent Board petitions are only required for special above-cap increases (such as Capital Improvement or Operating & Maintenance petitions).",
+      "source_id": "GS-02"
+    },
+    {
+      "question": "Do I also need a San Francisco 'Business Registration Certificate' from the Treasurer & Tax Collector for a 2-unit residential building?",
+      "short_answer": "CONDITIONAL NO — Exempt if Sole SF Business Activity Is Leasing <4 Residential Units in One Building",
+      "detail": "Many individual owners confuse the Rent Board's Rent Increase License (REQUIRED) with the Treasurer & Tax Collector's Business Registration Certificate. Official SF Treasurer guidance states that a person receiving long-term residential rental income from 'one residential structure consisting of fewer than four units' is NOT, by reason of that fact alone, required to obtain a Business Registration Certificate or file Gross Receipts Tax returns — PROVIDED you have no short-term rentals (e.g., Airbnb), no SF payroll expense, and no other SF business activity. On the Rent Board Portal, the 'Business registration number, if any' field is optional when exempt.",
+      "source_id": "GS-04"
+    },
+    {
+      "question": "How does the annual SF Rent Board Fee ($59.00/unit for 2026–2027) relate to the free Rent Increase License?",
+      "short_answer": "Separate Annual Obligation on the Same Portal ($59.00/Unit Due March 1)",
+      "detail": "Housing Inventory reporting (which generates the Rent Increase License) is $0 / free, whereas the Rent Board Fee is $59.00 per dwelling unit for 2026–2027 (due March 1; 5%/month late penalty up to 15%). Requesting a fee exemption does NOT satisfy Housing Inventory reporting. After paying the $59.00 fee in full, you may optionally recover 50% ($29.50) from tenants in occupancy as of November 1 via security-deposit interest offset or a separate 30-day bill — never rolled into base rent.",
+      "source_id": "GS-06"
+    },
+    {
+      "question": "Is there any new or pending San Francisco law right now (November 2026) that affects banked rent increases?",
+      "short_answer": "YES — Pending BOS File #261020 & Nov. 9, 2026 Rent Board Retroactivity Warning",
+      "detail": "On November 9, 2026, the SF Rent Board posted an official warning on sf.gov that the Board of Supervisors is considering File No. 261020 (status on 2026-11-10: Pending Committee Action — NOT enacted law). If enacted as proposed, it would cap combined banked + capital-improvement increases at 10% per year for 3 years AND apply retroactively to banked increases noticed on or after September 15, 2026. This has zero impact on 1.6% annual increases or Unit 1's 1.4% banked scenario, but directly impacts Unit 2's 11.5% full-banked scenario.",
+      "source_id": "GS-09"
+    }
+  ],
+  "step_by_step_process": [
+    {
+      "step": "Step 1",
+      "phase": "Before Logging In",
+      "action": "Gather Basic Property & Tenancy Details (Keep Personal Tenant Info Internal)",
+      "beginner_instructions": "For each of the two units, note: (a) owner or designated habitability contact name, business mailing address, phone, and email; (b) Business Registration Number 'if any' (leave blank if exempt under the <4-unit residential structure rule); (c) approximate unit square footage in 250 sq. ft. increments (good-faith estimate permitted; check SF Property Information Map if unsure); (d) bedroom and bathroom count; (e) occupancy start date (Feb 1, 2025 for Unit 1; Jun 1, 2019 for Unit 2); and (f) current base rent in $250 increments plus which utilities (water/sewer, trash, gas, electricity) are included in base rent.",
+      "cost_or_deadline": "$0 preparation; annual statutory deadline March 1 (late submissions accepted without monetary fine)",
+      "source_id": "GS-02"
+    },
+    {
+      "step": "Step 2",
+      "phase": "Rent Board Portal Account",
+      "action": "Create or Log Into Your Property Owner Account at portal.sfrb.org",
+      "beginner_instructions": "Go to https://portal.sfrb.org/ and click 'Create an Account' (or 'Login') under Property Owners/Managers. Link your Outer Sunset (94122) parcel/APN using the PIN from your Rent Board mailed notice or request PIN/parcel linking through the portal or 311 (415-701-2311). For a 2-unit building, use the simple 'Individual Unit' web form — do NOT use the 5+ unit Excel bulk upload template.",
+      "cost_or_deadline": "$0 / Available online 24/7",
+      "source_id": "GS-03"
+    },
+    {
+      "step": "Step 3",
+      "phase": "Housing Inventory Filing",
+      "action": "Submit the Housing Inventory for Unit 1 and Unit 2 Under Penalty of Perjury",
+      "beginner_instructions": "Select Unit 1 ('Non-Owner Occupied' / tenant-occupied), enter the required unit facts, review, and submit under penalty of perjury. Repeat for Unit 2. Note that Housing Inventory submissions are public record as to unit characteristics and owner business contact info (do not enter private tenant SSNs or irrelevant personal notes). Update owner/manager contact details within 30 days of any future change.",
+      "cost_or_deadline": "$0 / Free online filing; generates license immediately upon submission",
+      "source_id": "GS-01"
+    },
+    {
+      "step": "Step 4",
+      "phase": "License Confirmation & Fee Check",
+      "action": "Download Both Rent Increase Licenses & Verify Rent Board Fee ($59.00/Unit) Status",
+      "beginner_instructions": "Immediately after submitting the Housing Inventory for each tenant-occupied unit, confirm that the Portal shows an ACTIVE 'Rent Increase License' for Unit 1 and Unit 2 and save dated PDF/screenshot copies to your records. While in portal.sfrb.org, verify that the annual Rent Board Fee ($59.00 per dwelling unit for 2026–2027, due March 1) is paid in full so no delinquency or late penalty accrues.",
+      "cost_or_deadline": "License: $0 | Rent Board Fee: $59.00/unit ($118.00 total for 2 units) due March 1",
+      "source_id": "GS-06"
+    },
+    {
+      "step": "Step 5",
+      "phase": "Private Record & Legal Audit",
+      "action": "Verify Both Written Leases, Complete Rent Ledgers, Habitability, & Pending File #261020",
+      "beginner_instructions": "Before calculating any increase: (1) check Unit 1's April 1, 2026 agreement to confirm whether it is month-to-month or a fixed-term lease (fixed-term leases bar mid-term increases unless expressly permitted); (2) audit Unit 2's full payment ledger since June 1, 2019 to confirm whether base rent is still $3,150.00 with zero intervening increases; (3) confirm zero unabated DBI/health citations (Civ. Code § 1942.4) and zero open repair requests (Form 516B deferral risk) or 180-day retaliation triggers (Civ. Code § 1942.5); and (4) check Legistar File #261020 if considering >10% banked increases.",
+      "cost_or_deadline": "Mandatory pre-notice legal & factual gate",
+      "source_id": "GS-23"
+    },
+    {
+      "step": "Step 6",
+      "phase": "Exact Calculation",
+      "action": "Compute Increase on Base Rent Only — Add Percentages (Never Compound, Never Round Up)",
+      "beginner_instructions": "Use the Form 571 rate in effect on the EFFECTIVE date of the increase (1.6% for effective dates March 1, 2026 – February 28, 2027). Multiply current base rent (excluding temporary utility/fee passthroughs) by the exact percentage. If adding banked years, sum the percentages first (never compound year-over-year) and never round up to the nearest dollar.",
+      "cost_or_deadline": "1.6% current annual rate (effective 2026-03-01 through 2027-02-28)",
+      "source_id": "GS-08"
+    },
+    {
+      "step": "Step 7",
+      "phase": "Written Tenant Notice & Service",
+      "action": "Serve Itemized Written Notice via Personal Delivery or USPS Mail (Never Email Alone)",
+      "beginner_instructions": "Draft a clean written notice stating old base rent, dollar increase, percentage increase, new base rent, effective date, and an explicit breakdown of the annual portion vs. banked portion (with banked anniversary dates per Rule 4.12(b)). Serve EVERY adult tenant via (A) personal hand delivery (at least 30 days before effective date for <=10%, or 90 days for >10%), OR (B) USPS First-Class Mail within California (+5 calendar days = at least 35 days for <=10%, or 95 days for >10%, with date & place of mailing noted per CCP § 1013(b)). Keep signed proof of service.",
+      "cost_or_deadline": "30/35 days (<=10%) or 90/95 days (>10% in 12 months)",
+      "source_id": "GS-21"
+    },
+    {
+      "step": "Step 8",
+      "phase": "Effective Date & Ongoing Compliance",
+      "action": "Re-Confirm Active License on the Effective Date & Renew Housing Inventory Every March 1",
+      "beginner_instructions": "Because the March 1 annual Housing Inventory cycle falls right around late-February/March effective dates, log into portal.sfrb.org before March 1 each year to renew both units so your Rent Increase License never lapses on or after the effective date. Update your rent ledger with the new base rent and new anniversary date.",
+      "cost_or_deadline": "Annual renewal by March 1 each year",
+      "source_id": "GS-01"
+    }
+  ],
+  "units": [
+    {
+      "unit_id": "Unit 1",
+      "neighborhood": "Outer Sunset, San Francisco, CA 94122",
+      "year_built": 1940,
+      "initial_lease_start": "2025-02-01",
+      "initial_tenants_placeholder": "Tenant A, Tenant B, Tenant C (3 original occupants)",
+      "continuing_tenancy_date": "2026-04-01",
+      "current_tenants_placeholder": "Tenant A (continuing original occupant) & Tenant D (replacement/incoming occupant)",
+      "reported_rent": "3995.00",
+      "occupancy_analysis": "Partial change in occupancy on April 1, 2026: original occupant Tenant A remains in lawful possession, so NO vacancy decontrol reset is permitted under Costa-Hawkins (Cal. Civ. Code § 1954.53(d)(3)) or SF Rent Board Rule 6.14, and NO surcharge may be added for incoming occupant Tenant D (SF Admin. Code § 37.3(a)(11); Rule 6.13).",
+      "key_open_facts": "Must inspect the April 1, 2026 written instrument to verify whether it created a new fixed term (blocking increases until expiration) or continues month-to-month, whether Tenant D became a co-tenant or subtenant, and whether a written § 6.14 notice was served within 60 days (~May 31, 2026).",
+      "source_id": "GS-18"
+    },
+    {
+      "unit_id": "Unit 2",
+      "neighborhood": "Outer Sunset, San Francisco, CA 94122",
+      "year_built": 1940,
+      "initial_lease_start": "2019-06-01",
+      "initial_tenants_placeholder": "Tenant E & Tenant F (2 original occupants)",
+      "continuing_tenancy_date": "Continuous since 2019-06-01 (reported)",
+      "current_tenants_placeholder": "Tenant E & Tenant F",
+      "reported_rent": "3150.00",
+      "occupancy_analysis": "Long-term continuous tenancy since June 1, 2019. Assuming a 1-year initial lease converted to month-to-month and zero rent increases were imposed from June 2019 through November 2026, six annual allowances (June 1 anniversaries 2020–2025 totaling 11.5%) would be banked under current enacted law.",
+      "key_open_facts": "Brief states $3,150.00 at the June 1, 2019 lease start; owner must verify from rent ledger that $3,150.00 is still the current base rent with zero intervening increases, and must weigh the Nov. 9, 2026 Rent Board warning on pending File #261020 (proposed 10%/yr banked cap retroactive to notices served on/after Sept. 15, 2026).",
+      "source_id": "GS-10"
+    }
+  ],
+  "scenarios": [
+    {
+      "scenario_id": "U1-A",
+      "unit": "Unit 1",
+      "label": "Scenario 1A — Standard Annual Increase Only (Most Defensible Baseline)",
+      "base_rent": "3995.00",
+      "annual_pct": "1.6",
+      "banked_pct": "0.0",
+      "total_pct": "1.6",
+      "annual_dollars": "63.92",
+      "banked_dollars": "0.00",
+      "total_increase_dollars": "63.92",
+      "new_base_rent": "4058.92",
+      "illustrative_effective_date": "2027-02-01",
+      "personal_service_days": 30,
+      "personal_service_deadline": "2027-01-02",
+      "ca_mail_days": 35,
+      "ca_mail_deadline": "2026-12-28",
+      "file_261020_exposure": "None (0.0% banked; pure annual CPI allowance)",
+      "conditions": "Requires active § 37.15 license, confirmation that April 1, 2026 tenancy is month-to-month (not an unexpired fixed-term lease barring increases), and >=12 months since any prior rent increase.",
+      "source_id": "GS-08"
+    },
+    {
+      "scenario_id": "U1-B",
+      "unit": "Unit 1",
+      "label": "Scenario 1B — Annual (1.6%) + 1 Skipped Banked Year (1.4% from Feb 1, 2026) on Feb 1, 2027",
+      "base_rent": "3995.00",
+      "annual_pct": "1.6",
+      "banked_pct": "1.4",
+      "total_pct": "3.0",
+      "annual_dollars": "63.92",
+      "banked_dollars": "55.93",
+      "total_increase_dollars": "119.85",
+      "new_base_rent": "4114.85",
+      "illustrative_effective_date": "2027-02-01",
+      "personal_service_days": 30,
+      "personal_service_deadline": "2027-01-02",
+      "ca_mail_days": 35,
+      "ca_mail_deadline": "2026-12-28",
+      "file_261020_exposure": "Low / Under 10% Cap (1.4% banked is well below proposed 10% banked ceiling)",
+      "conditions": "Effective Feb 1, 2027 satisfies both SF.gov's 24-full-month no-increase rule (from Feb 1, 2025) and Rule 4.12(a)'s 12-month elapsed rule (from Feb 1, 2026). Requires month-to-month status, active license, and itemizing 1.4% banked (basis date 2026-02-01) + 1.6% annual.",
+      "source_id": "GS-12"
+    },
+    {
+      "scenario_id": "U2-A",
+      "unit": "Unit 2",
+      "label": "Scenario 2A — Conservative Annual Increase Only (Zero Pending-Ordinance Risk)",
+      "base_rent": "3150.00",
+      "annual_pct": "1.6",
+      "banked_pct": "0.0",
+      "total_pct": "1.6",
+      "annual_dollars": "50.40",
+      "banked_dollars": "0.00",
+      "total_increase_dollars": "50.40",
+      "new_base_rent": "3200.40",
+      "illustrative_effective_date": "2027-02-28",
+      "personal_service_days": 30,
+      "personal_service_deadline": "2027-01-29",
+      "ca_mail_days": 35,
+      "ca_mail_deadline": "2027-01-24",
+      "file_261020_exposure": "None (0.0% banked; unused banked allowances remain banked for future years)",
+      "conditions": "Requires verifying $3,150.00 is current base rent, month-to-month status, and active § 37.15 license. Imposing on Feb 28, 2027 locks in the published 1.6% rate before March 1, 2027.",
+      "source_id": "GS-08"
+    },
+    {
+      "scenario_id": "U2-B",
+      "unit": "Unit 2",
+      "label": "Scenario 2B — Enacted-Law Maximum: 6 Skipped Banked Years (11.5%) + Current Annual (1.6%)",
+      "base_rent": "3150.00",
+      "annual_pct": "1.6",
+      "banked_pct": "11.5",
+      "total_pct": "13.1",
+      "annual_dollars": "50.40",
+      "banked_dollars": "362.25",
+      "total_increase_dollars": "412.65",
+      "new_base_rent": "3562.65",
+      "illustrative_effective_date": "2027-02-28",
+      "personal_service_days": 90,
+      "personal_service_deadline": "2026-11-30",
+      "ca_mail_days": 95,
+      "ca_mail_deadline": "2026-11-25",
+      "file_261020_exposure": "HIGH WATCH — 11.5% banked exceeds proposed 10%/yr banked cap in pending File #261020 (proposed retroactive to notices on/after 2026-09-15)",
+      "conditions": "Requires zero increases since June 1, 2019 (6 banked June 1 anniversaries: 1.8% + 0.7% + 2.3% + 3.6% + 1.7% + 1.4% = 11.5%), active license, 90-day personal / 95-day CA mail notice (>10% trigger under Civ. Code § 827(b)(3)), and re-checking File #261020 before serving.",
+      "source_id": "GS-10"
+    },
+    {
+      "scenario_id": "U2-C",
+      "unit": "Unit 2",
+      "label": "Scenario 2C — Partial-Banked Hedge: 10.0% Banked Portion + 1.6% Current Annual (1.5% Kept Banked)",
+      "base_rent": "3150.00",
+      "annual_pct": "1.6",
+      "banked_pct": "10.0",
+      "total_pct": "11.6",
+      "annual_dollars": "50.40",
+      "banked_dollars": "315.00",
+      "total_increase_dollars": "365.40",
+      "new_base_rent": "3515.40",
+      "illustrative_effective_date": "2027-02-28",
+      "personal_service_days": 90,
+      "personal_service_deadline": "2026-11-30",
+      "ca_mail_days": 95,
+      "ca_mail_deadline": "2026-11-25",
+      "file_261020_exposure": "Hedged — Keeps banked portion at exactly 10.0% while retaining remaining 1.5% banked under Rule 4.12 partial-banking rules (verify final enacted text of File #261020)",
+      "conditions": "Under SF.gov partial-increase rules, using 10.0% of the 11.5% banked pool leaves 1.5% banked for a future anniversary. Because total increase is 11.6% (>10%), 90-day personal / 95-day CA mail notice is still required under Civ. Code § 827(b)(3).",
+      "source_id": "GS-10"
+    }
+  ],
+  "unit2_banked_breakdown": [
+    {
+      "anniversary_date": "2020-06-01",
+      "form_571_window": "2020-03-01 to 2021-02-28",
+      "pct": "1.8",
+      "dollar_on_3150": "56.70",
+      "status": "Conditional banked component #1 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "2021-06-01",
+      "form_571_window": "2021-03-01 to 2022-02-28",
+      "pct": "0.7",
+      "dollar_on_3150": "22.05",
+      "status": "Conditional banked component #2 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "2022-06-01",
+      "form_571_window": "2022-03-01 to 2023-02-28",
+      "pct": "2.3",
+      "dollar_on_3150": "72.45",
+      "status": "Conditional banked component #3 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "2023-06-01",
+      "form_571_window": "2023-03-01 to 2024-02-29",
+      "pct": "3.6",
+      "dollar_on_3150": "113.40",
+      "status": "Conditional banked component #4 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "2024-06-01",
+      "form_571_window": "2024-03-01 to 2025-02-28",
+      "pct": "1.7",
+      "dollar_on_3150": "53.55",
+      "status": "Conditional banked component #5 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "2025-06-01",
+      "form_571_window": "2025-03-01 to 2026-02-28",
+      "pct": "1.4",
+      "dollar_on_3150": "44.10",
+      "status": "Conditional banked component #6 (if zero increase imposed since 2019-06-01)",
+      "source_id": "GS-08"
+    },
+    {
+      "anniversary_date": "Current Period (Effective <= 2027-02-28)",
+      "form_571_window": "2026-03-01 to 2027-02-28",
+      "pct": "1.6",
+      "dollar_on_3150": "50.40",
+      "status": "Current annual allowable increase (resets future anniversary date to effective date; June 1, 2026 is NOT separately banked if imposed before June 1, 2027)",
+      "source_id": "GS-09"
+    }
+  ],
+  "form_571_recent_rates": [
+    {"period": "March 1, 2027 – February 29, 2028", "rate": "", "notes": "UNPUBLISHED as of 2026-11-10 (published annually by March 1; left blank per verification protocol)", "source_id": "GS-08"},
+    {"period": "March 1, 2026 – February 28, 2027", "rate": "1.6%", "notes": "Current active SF Rent Board allowable annual increase (60% of Bay Area CPI-U)", "source_id": "GS-08"},
+    {"period": "March 1, 2025 – February 28, 2026", "rate": "1.4%", "notes": "Prior annual period (applies to Feb 1, 2026 Unit 1 & Jun 1, 2025 Unit 2 anniversaries)", "source_id": "GS-08"},
+    {"period": "March 1, 2024 – February 28, 2025", "rate": "1.7%", "notes": "Applies to Jun 1, 2024 Unit 2 anniversary", "source_id": "GS-08"},
+    {"period": "March 1, 2023 – February 29, 2024", "rate": "3.6%", "notes": "Applies to Jun 1, 2023 Unit 2 anniversary", "source_id": "GS-08"},
+    {"period": "March 1, 2022 – February 28, 2023", "rate": "2.3%", "notes": "Applies to Jun 1, 2022 Unit 2 anniversary", "source_id": "GS-08"},
+    {"period": "March 1, 2021 – February 28, 2022", "rate": "0.7%", "notes": "Applies to Jun 1, 2021 Unit 2 anniversary", "source_id": "GS-08"},
+    {"period": "March 1, 2020 – February 28, 2021", "rate": "1.8%", "notes": "Applies to Jun 1, 2020 Unit 2 anniversary (12 months after Jun 1, 2019 move-in)", "source_id": "GS-08"},
+    {"period": "March 1, 2019 – February 29, 2020", "rate": "2.6%", "notes": "In effect on Unit 2's June 1, 2019 lease start (not bankable; first increase allowed 12 months after lease start)", "source_id": "GS-08"}
+  ],
+  "occupant_change_rules": [
+    {
+      "rule_topic": "Partial Occupancy Change (Original Tenant Remains — Unit 1 on April 1, 2026)",
+      "governing_law": "Cal. Civ. Code § 1954.53(d)(3); SF Rent Board Rule 6.14",
+      "effect_on_unit_1": "Because original occupant Tenant A remains in lawful possession after Tenant B and Tenant C departed, NO market-rate vacancy reset is permitted. Rent remains subject to the 1.6% annual cap.",
+      "source_id": "GS-18"
+    },
+    {
+      "rule_topic": "Prohibition on 'Extra Roommate' Rent Surcharge",
+      "governing_law": "SF Admin. Code § 37.3(a)(11); Rent Board Rule 6.13",
+      "effect_on_unit_1": "Charging additional rent solely because Tenant D moved in is unlawful and void as contrary to public policy — even if the written lease expressly states an additional-occupant charge.",
+      "source_id": "GS-16"
+    },
+    {
+      "rule_topic": "Written '6.14 Notice' Within 60 Days of Knowledge",
+      "governing_law": "SF Rent Board Rules Part VI § 6.14(b)",
+      "effect_on_unit_1": "To preserve a future § 6.14 reset right if original occupant Tenant A eventually vacates, the owner must serve a written § 6.14 notice on Tenant D within a reasonable time (60 days = ~May 31, 2026; missing 60 days creates a rebuttable presumption of untimeliness).",
+      "source_id": "GS-16"
+    },
+    {
+      "rule_topic": "Co-Tenant vs. Subtenant Distinction Under Costa-Hawkins",
+      "governing_law": "Cal. Civ. Code § 1954.53(d)(2); SF Rent Board § 6.14 / Costa-Hawkins Guidance",
+      "effect_on_unit_1": "Costa-Hawkins allows a market reset when the last original occupant no longer permanently resides ONLY against a post-1996 subtenant/assignee — NEVER against a co-tenant who signed an agreement with the owner or paid rent directly accepted by the owner.",
+      "source_id": "GS-15"
+    },
+    {
+      "rule_topic": "Optional Rent Board Determination Petition (Form 537)",
+      "governing_law": "SF Rent Board § 6.14 / Costa-Hawkins Petition Guidance",
+      "effect_on_unit_1": "Pre-approval is not mandatory before serving a § 6.14/Costa-Hawkins increase after ALL original occupants depart, but landlords may file Form 537 for an advance determination and tenants may petition to void an unwarranted reset.",
+      "source_id": "GS-17"
+    }
+  ],
+  "legal_framework": [
+    {
+      "level": "Local (SF — 94122)",
+      "authority": "SF Admin. Code Ch. 37 (§§ 37.2, 37.3)",
+      "rule_summary": "Applies to multi-unit buildings built on or before June 13, 1979 (including this 1940 2-unit Outer Sunset building). Caps annual increases at 60% of Bay Area CPI-U (1.6% for 3/1/26–2/28/27; statutory ceiling 7.0%), once per 12 months on base rent only.",
+      "applies_to_units": "YES — Controlling cap for both Unit 1 and Unit 2 (subject to parcel/exemption verification)",
+      "source_id": "GS-11"
+    },
+    {
+      "level": "Local (SF — 94122)",
+      "authority": "SF Admin. Code § 37.15 (Housing Inventory & Rent Increase License)",
+      "rule_summary": "Requires annual reporting by March 1 on portal.sfrb.org for all residential units (1–9 unit buildings operative March 1, 2023). Suspends rent-increase authority during non-compliance; restoration is prospective only.",
+      "applies_to_units": "YES — Mandatory for individual owners of 2-unit buildings",
+      "source_id": "GS-01"
+    },
+    {
+      "level": "Local (SF — 94122)",
+      "authority": "SF Rent Board Rules §§ 4.10 & 4.12 (Banking & Itemized Notice)",
+      "rule_summary": "Allows banking skipped post-4/1/1982 annual increases (additive, never compounded, never rounded up; imposed only at time of an annual increase). Requires written breakdown of annual vs. banked portions and basis dates.",
+      "applies_to_units": "YES — Governs Scenario 1B, Scenario 2B, and Scenario 2C",
+      "source_id": "GS-12"
+    },
+    {
+      "level": "Local (SF — Pending)",
+      "authority": "BOS File No. 261020 & Nov. 9, 2026 SF Rent Board Warning",
+      "rule_summary": "Proposed ordinance (Pending Committee Action on 2026-11-10 — NOT law) capping banked + capital-improvement increases at 10%/yr for 3 years; if enacted as drafted, applies retroactively to banked increases noticed on/after Sept. 15, 2026.",
+      "applies_to_units": "WATCH FOR UNIT 2 — Directly affects Unit 2's 11.5% banked scenario if enacted",
+      "source_id": "GS-13"
+    },
+    {
+      "level": "Local (SF — 94122)",
+      "authority": "SF Admin. Code §§ 37.10B (Harassment) & 37.10C (Algorithmic Pricing Ban)",
+      "rule_summary": "§ 37.10B prohibits bad-faith coercion, discrimination, and retaliation (treble damages + attorney's fees). § 37.10C bans revenue-management software using nonpublic competitor data ($1,000/month/unit penalty + attorney's fees).",
+      "applies_to_units": "YES — Applies to all SF landlords (individual and corporate)",
+      "source_id": "GS-30"
+    },
+    {
+      "level": "Local (SF — Tax)",
+      "authority": "SF Bus. & Tax Regs. Code (Treasurer Lessor Guidance)",
+      "rule_summary": "Exempts owners whose sole SF business activity is long-term residential leasing of ONE structure with fewer than 4 units from Business Registration Certificate and Gross Receipts Tax filing.",
+      "applies_to_units": "CONDITIONAL EXEMPTION — Applies if owner has no STR, payroll, or other SF business",
+      "source_id": "GS-04"
+    },
+    {
+      "level": "Local (94122 Market Norm)",
+      "authority": "Official Government Market-Normal Rent Increase Dataset for ZIP 94122",
+      "rule_summary": "No official municipal, state, or federal statistical series publishes a 'normal market rent increase' specific to ZIP 94122; for rent-controlled tenancies, SF Form 571 (1.6%) + proven Rule 4.12 banking IS the legal norm.",
+      "applies_to_units": "Official 94122 market-average figure left BLANK (unverified; commercial blogs excluded)",
+      "source_id": "GS-09"
+    },
+    {
+      "level": "State (California)",
+      "authority": "Tenant Protection Act of 2019 — AB 1482 (Cal. Civ. Code § 1947.12)",
+      "rule_summary": "Caps non-exempt state rentals at 5% + local CPI (8.8% in SF for 8/1/2026–7/31/2027), but § 1947.12(d)(3) expressly EXEMPTS units subject to stricter local rent control like SF Ch. 37.",
+      "applies_to_units": "DOES NOT APPLY — Preempted by SF's stricter 1.6% cap (do NOT use 8.8%!)",
+      "source_id": "GS-19"
+    },
+    {
+      "level": "State (California)",
+      "authority": "Costa-Hawkins Rental Housing Act (Cal. Civ. Code §§ 1954.52, 1954.53)",
+      "rule_summary": "Allows initial market rent on true full vacancies, but § 1954.53(d)(3) bars vacancy resets during partial occupant turnover when any original tenant remains in lawful possession.",
+      "applies_to_units": "YES — Bars market reset on Unit 1's April 1, 2026 partial occupant change",
+      "source_id": "GS-18"
+    },
+    {
+      "level": "State (California)",
+      "authority": "Cal. Civ. Code § 827 & Code Civ. Proc. § 1013 (Notice & Mail Service)",
+      "rule_summary": "Requires written notice delivered personally or by USPS mail: 30 days (<=10% increase) or 90 days (>10% cumulative in 12 months), plus +5 calendar days for mail within California (+10 out-of-state, +20 outside US).",
+      "applies_to_units": "YES — Controls service method and notice lead time for both units",
+      "source_id": "GS-21"
+    },
+    {
+      "level": "State (California)",
+      "authority": "Cal. Civ. Code §§ 1942.4 (Habitability Bar), 1942.5 (Retaliation), 51 (Unruh) & Gov. Code § 12955 (FEHA)",
+      "rule_summary": "Bars rent increases when >35-day unabated housing citations exist (§ 1942.4); bars retaliatory increases within 180 days of protected complaints (§ 1942.5); bars discrimination across all state protected classes including source of income.",
+      "applies_to_units": "YES — Core legal defenses audited by SF tenant attorneys",
+      "source_id": "GS-24"
+    },
+    {
+      "level": "Federal (United States)",
+      "authority": "Federal Fair Housing Act (42 U.S.C. § 3604) & Sherman Act (DOJ Enforcement)",
+      "rule_summary": "Prohibits discriminatory rental pricing, terms, or harassment based on race, color, religion, national origin, sex, familial status, or disability; no general federal rent-increase cap exists for unsubsidized private housing.",
+      "applies_to_units": "YES — Governs non-discrimination (subsidy status unverified and flagged)",
+      "source_id": "GS-28"
+    }
+  ],
+  "corporate_vs_individual": [
+    {
+      "dimension": "Ownership Footprint (Federal Statistical Context)",
+      "corporate_practice": "Under the U.S. Census / HUD 2024 Rental Housing Finance Survey (RHFS), institutional entities (REITs, LPs, LLCs, corporations) overwhelmingly concentrate in 50+ unit buildings managed by professional third-party or in-house compliance teams.",
+      "individual_practice": "2–4 unit residential buildings (like a 1940 2-unit Outer Sunset flat building) are predominantly owned by individual ('mom-and-pop') or family-trust owners self-managing without dedicated compliance staff.",
+      "compliance_takeaway": "SF Admin. Code Ch. 37 applies identical legal rules to both — individual owners receive NO leniency on licensing, arithmetic, or service rules.",
+      "source_id": "GS-33"
+    },
+    {
+      "dimension": "Annual CPI Increases vs. Multi-Year Banking",
+      "corporate_practice": "Automated property-management calendars issue the exact Form 571 annual CPI increase (e.g., 1.6%) every 12 months on schedule, preventing large banked backlogs and avoiding the 90-day (>10%) notice tier.",
+      "individual_practice": "Individual owners frequently leave rents unchanged for many years for stable tenants (as seen in Unit 2 since 2019) and later consider a multi-year banked catch-up — triggering 90/95-day notices and exposure to pending caps like File #261020.",
+      "compliance_takeaway": "Adopting predictable, modest annual Form 571 adjustments (or disciplined partial banking) reduces tenant shock and legal scrutiny.",
+      "source_id": "GS-10"
+    },
+    {
+      "dimension": "Housing Inventory (§ 37.15) & Rent Board Fee ($59.00)",
+      "corporate_practice": "Centralized compliance staff batch-submit 5+ unit Housing Inventory templates and pay $59.00/unit fees before March 1 every year, storing timestamped license PDFs per unit.",
+      "individual_practice": "Most frequent mom-and-pop failure point: many small owners are unaware that 1–9 unit reporting began March 1, 2023, serving notices while unlicensed — rendering the increase unenforceable during suspension.",
+      "compliance_takeaway": "Complete Individual Unit reporting on portal.sfrb.org and save both active license PDFs BEFORE serving any notice.",
+      "source_id": "GS-02"
+    },
+    {
+      "dimension": "Pricing Software & Algorithmic Tools (§ 37.10C & DOJ v. RealPage)",
+      "corporate_practice": "In non-rent-controlled markets, large operators widely used algorithmic revenue-management tools (e.g., RealPage, subject to DOJ's Nov. 24, 2025 proposed antitrust consent judgment). In SF, Admin. Code § 37.10C strictly BANS using algorithmic devices reliant on nonpublic competitor data.",
+      "individual_practice": "Individual owners rely on Form 571 for rent-controlled renewals and public listings for vacant units. Using prohibited algorithmic pricing software carries $1,000/month/unit penalties plus tenant attorney's fees.",
+      "compliance_takeaway": "Never use prohibited algorithmic rent-setting tools; rely strictly on official Rent Board Form 571 percentages for existing tenants.",
+      "source_id": "GS-31"
+    },
+    {
+      "dimension": "Above-Cap Cost Recovery (Capital Improvements & Passthroughs)",
+      "corporate_practice": "Institutional landlords routinely file Rent Board Capital Improvement Petitions (§ 37.7), Operating & Maintenance Petitions, Water Revenue Bond passthroughs, and 50% Rent Board Fee ($29.50) offsets with CPA-grade documentation.",
+      "individual_practice": "Individual owners rarely file formal petitions unless performing major seismic/roof/system replacements, and sometimes mistakenly mix fee passthroughs into base rent (which is unlawful).",
+      "compliance_takeaway": "Keep base-rent increases strictly separate from any optional $29.50 Rent Board Fee bill or utility passthrough.",
+      "source_id": "GS-07"
+    },
+    {
+      "dimension": "Official SF Dataset on Increase Frequency by Owner Type",
+      "corporate_practice": "No official SF Rent Board or Census table publishes San Francisco rent-increase rates broken down by corporate vs. individual landlord status.",
+      "individual_practice": "Official SF owner-type increase rate value is left BLANK and flagged rather than inferred from advocacy or industry anecdotes.",
+      "compliance_takeaway": "Evaluate your rent increase against statutory compliance (15-point lawyer audit), not unverified industry averages.",
+      "source_id": "GS-02"
+    }
+  ],
+  "notice_protocol": [
+    {
+      "element": "1. Written Form & Addressees",
+      "requirement": "Must be in writing and addressed to all adult tenants of record on the rental agreement (using neutral, professional business language).",
+      "statutory_basis": "Cal. Civ. Code § 827(a)–(b)",
+      "common_trap_to_avoid": "Never issue a rent increase orally, by text message, by email alone, or addressed to only one roommate.",
+      "source_id": "GS-21"
+    },
+    {
+      "element": "2. Base Rent, Dollar Increase, Percentage & New Base Rent",
+      "requirement": "State current base rent (excluding temporary passthroughs), exact dollar amount of increase, exact percentage of increase, and resulting new monthly base rent — never rounded up.",
+      "statutory_basis": "SF Rent Board Guidance; Admin. Code § 37.3; Rule 4.10(a)",
+      "common_trap_to_avoid": "Rounding $63.92 up to $64.00 or $4,058.92 up to $4,059.00 exceeds the 1.6% cap and triggers tenant petitions.",
+      "source_id": "GS-09"
+    },
+    {
+      "element": "3. Effective Date & Applicable Form 571 Rate",
+      "requirement": "Specify the exact effective date (at least 12 months after lease start or last rent increase) and apply the Form 571 rate in force ON THAT EFFECTIVE DATE (1.6% for 3/1/2026–2/28/2027).",
+      "statutory_basis": "SF Admin. Code § 37.3(a)(1); Form 571",
+      "common_trap_to_avoid": "Serving a notice in February 2027 that takes effect March 1, 2027 or later requires the 2027–2028 Form 571 rate (not yet published as of 2026-11-10).",
+      "source_id": "GS-08"
+    },
+    {
+      "element": "4. Itemization of Annual vs. Banked Portions & Basis Dates",
+      "requirement": "State separately which portion reflects the current annual increase and which portion reflects banked increases, listing each banked anniversary period/date. (Note: Rule 4.12(b) & Rule 4.10(b) state omitting banked dates does not void an otherwise within-cap increase, but full itemization prevents administrative hearings.)",
+      "statutory_basis": "SF Rent Board Rules §§ 4.10(a)(1), 4.10(b), 4.12(b)",
+      "common_trap_to_avoid": "Compounding banked percentages year-over-year instead of adding them, or lumping banked + annual without showing the breakdown.",
+      "source_id": "GS-12"
+    },
+    {
+      "element": "5. Lawful Service Method & Lead-Time Calculation",
+      "requirement": "Serve ONLY by (A) personal hand delivery to each tenant (30 days if <=10%; 90 days if >10% cumulative in 12 months), OR (B) USPS First-Class Mail with postage paid (+5 calendar days within CA = 35 days if <=10%, 95 days if >10%; +10 days out-of-state; +20 days international) bearing a notation of date and place of mailing.",
+      "statutory_basis": "Cal. Civ. Code § 827(b)(1)–(3); CCP § 1013(a)–(b)",
+      "common_trap_to_avoid": "Posting on the door ('nail and mail') or emailing is NOT valid service under Civ. Code § 827(b)(1)! Build in 3–5 extra buffer days before the statutory deadline.",
+      "source_id": "GS-22"
+    },
+    {
+      "element": "6. Lawful & Reasonable Business Reason Statement",
+      "requirement": "No hardship excuse is needed for a Form 571 annual/banked adjustment. If stating a reason, cite the neutral statutory allowance ('Annual allowable rent adjustment pursuant to SF Admin. Code § 37.3(a) and Form 571 in connection with standard building operating, tax, insurance, and maintenance costs').",
+      "statutory_basis": "SF Admin. Code § 37.3(a)(1)–(2); Cal. Civ. Code § 1942.5(f)–(g)",
+      "common_trap_to_avoid": "NEVER cite an added roommate (§ 37.3(a)(11)), repair costs requested by the tenant (§ 1942.5), or threats that the tenant should move out (§ 37.10B).",
+      "source_id": "GS-24"
+    }
+  ],
+  "lawyer_scrutiny_checklist": [
+    {"check_no": "01", "category": "Jurisdiction & Coverage", "lawyer_question": "Is the 1940 2-unit 94122 building covered by SF Rent Ordinance Ch. 37 without a government-subsidy or substantial-rehabilitation exemption?", "status_here": "Needs Parcel/Lease Check (Flag FG-05)", "how_to_pass": "Confirm pre-6/13/1979 2-unit residential Certificate of Occupancy/parcel record and confirm neither household holds a rent-regulating subsidy.", "source_id": "GS-14"},
+    {"check_no": "02", "category": "Licensing (§ 37.15)", "lawyer_question": "Did the landlord hold an active Rent Increase License on portal.sfrb.org on the effective date (and ideally before serving notice)?", "status_here": "Owner Must Verify & Save PDF (Flag FG-01)", "how_to_pass": "Submit 2026 Housing Inventory on portal.sfrb.org for BOTH units before serving notice and renew before March 1, 2027.", "source_id": "GS-01"},
+    {"check_no": "03", "category": "Fixed-Term Lease Authority", "lawyer_question": "Is the tenancy periodic (month-to-month), or is it locked inside an unexpired fixed-term lease without an express rent-increase clause?", "status_here": "HIGH PRIORITY — Inspect Unit 1's April 1, 2026 Agreement (Flag FG-02)", "how_to_pass": "Read both signed leases and Unit 1's April 1, 2026 document; never impose an increase taking effect before a fixed term expires.", "source_id": "GS-23"},
+    {"check_no": "04", "category": "12-Month Spacing", "lawyer_question": "Will at least 12 full months have elapsed since the tenancy began or since the last rent increase took effect?", "status_here": "Verify Ledgers (Flags FG-03, FG-04)", "how_to_pass": "Confirm zero increases within 12 months prior to the chosen effective date.", "source_id": "GS-09"},
+    {"check_no": "05", "category": "Base Rent Purity", "lawyer_question": "Was the percentage applied strictly to base rent, excluding any temporary utility, water-bond, or $29.50 Rent Board Fee passthroughs?", "status_here": "Verify Unit 1 ($3,995) & Unit 2 ($3,150) Ledgers (Flag FG-04)", "how_to_pass": "Reconcile initial lease rent and all prior notices; keep any $29.50 Rent Board Fee bill completely separate from base rent.", "source_id": "GS-09"},
+    {"check_no": "06", "category": "Form 571 Rate Window", "lawyer_question": "Does the notice use the Form 571 rate in effect on the EFFECTIVE DATE (1.6% through Feb 28, 2027), rather than an expired or unpublished rate?", "status_here": "Verified for Effective Dates <= 2027-02-28 (Flag FG-08 for >= 2027-03-01)", "how_to_pass": "Use 1.6% only for increases taking effect on or before February 28, 2027; wait for the 2027–28 Form 571 sheet for effective dates on/after March 1, 2027.", "source_id": "GS-08"},
+    {"check_no": "07", "category": "Exact Cent Arithmetic & No Rounding", "lawyer_question": "Are banked percentages added (never compounded) and is the dollar figure truncated/exact to the cent without rounding up?", "status_here": "Verified Exact ($63.92, $119.85, $50.40, $412.65, $365.40)", "how_to_pass": "Use exact two-decimal figures ($3,995 × 1.6% = $63.92; $3,150 × 1.6% = $50.40); never round up.", "source_id": "GS-12"},
+    {"check_no": "08", "category": "Banking Eligibility & Pending File #261020", "lawyer_question": "Did 12/24 full months pass for each banked year, AND has pending BOS File #261020 (10% banked cap retroactive to Sept. 15, 2026 notices if enacted) been checked?", "status_here": "CRITICAL WATCH for Unit 2 Scenario 2B (11.5% banked) (Flag FG-06)", "how_to_pass": "For Unit 1, wait until >= Feb 1, 2027 if banking 1.4%. For Unit 2, check Legistar File #261020 status immediately before serving or use Scenario 2A (1.6%) / 2C (<=10% banked).", "source_id": "GS-10"},
+    {"check_no": "09", "category": "Banking Breakdown & Basis Dates", "lawyer_question": "Does the notice specify the annual vs. banked dollar/percentage portions and each banked anniversary date?", "status_here": "Built Into Notice Protocol", "how_to_pass": "List each banked anniversary period and percentage explicitly on the written notice per Rule 4.10(a)(1) & Rule 4.12(b).", "source_id": "GS-12"},
+    {"check_no": "10", "category": "Occupant-Change Compliance (Unit 1)", "lawyer_question": "Was any unlawful surcharge added for Tenant D on April 1, 2026, or was an improper Costa-Hawkins/§ 6.14 reset attempted while Tenant A remains?", "status_here": "Verified Compliant at $3,995.00 (Flags FG-09, FG-10 for future)", "how_to_pass": "Maintain $3,995.00 base across April 1, 2026 and apply only standard Form 571 increases while Tenant A resides in Unit 1.", "source_id": "GS-15"},
+    {"check_no": "11", "category": "Statutory Service & Lead Time", "lawyer_question": "Was the notice served personally or by USPS mail (not email/posting alone) with full 30/35 or 90/95 calendar days plus CCP § 1013(b) mailing notation?", "status_here": "Verified Deadlines Computed", "how_to_pass": "Serve via personal delivery or USPS First-Class Mail with certificate of mailing 3–5 days ahead of the 30/35-day or 90/95-day cutoff.", "source_id": "GS-21"},
+    {"check_no": "12", "category": "Substandard Citation Bar (Civ. Code § 1942.4)", "lawyer_question": "Are there any unabated DBI, Health, or Fire code notices of violation older than 35 days on the building or units?", "status_here": "Unverified Private/DBI Fact (Flag FG-11)", "how_to_pass": "Check SF DBI Permit/Complaint Tracking and abate any open code violations before issuing any rent increase notice.", "source_id": "GS-25"},
+    {"check_no": "13", "category": "Failure to Repair Deferral Risk (Form 516B)", "lawyer_question": "Are there any uncompleted tenant maintenance/repair requests that could allow the tenant to defer the increase within 60 days of receipt?", "status_here": "Unverified Maintenance History (Flag FG-11)", "how_to_pass": "Complete all pending habitability/maintenance repairs in writing before serving a rent increase notice.", "source_id": "GS-26"},
+    {"check_no": "14", "category": "180-Day Retaliation Screen (Civ. Code § 1942.5)", "lawyer_question": "Did the tenant make a good-faith repair complaint, agency report, or tenant-rights assertion within the past 180 days?", "status_here": "Unverified Complaint History (Flag FG-12)", "how_to_pass": "Audit all emails/texts/letters from the prior 180 days; document neutral, calendar-driven business reasons per § 1942.5(f)–(g).", "source_id": "GS-24"},
+    {"check_no": "15", "category": "Fair Housing, Anti-Harassment & § 37.10C", "lawyer_question": "Was unit selection neutral across protected classes (FEHA, Unruh, FHA, § 37.10B), free of bad-faith pressure to vacate, and set without banned § 37.10C software?", "status_here": "Addressed by Uniform Neutral Policy", "how_to_pass": "Apply one uniform written building-wide rule to both units based solely on objective lease/anniversary eligibility and Form 571.", "source_id": "GS-29"}
+  ],
+  "one_vs_both_units": [
+    {
+      "option": "Option 1 — Apply One Uniform, Objective Policy to BOTH Eligible Units (Recommended Best Practice)",
+      "legality": "Lawful & Lowest Fair-Housing / Retaliation Litigation Risk",
+      "lawyer_view": "In a 2-unit building, raising both eligible units under the exact same written rule (e.g., applying the published 1.6% Form 571 annual increase to each periodic tenancy upon eligibility) eliminates any 'comparator household' claim under FEHA (Gov. Code § 12955), Unruh (Civ. Code § 51), Federal FHA (42 U.S.C. § 3604), or SF § 37.10B(a)(9) that one household was singled out based on race, age, familial status, disability, sexual orientation, or source of income.",
+      "caveat": "NEVER raise an legally INELIGIBLE unit (e.g., if Unit 1 is mid-fixed-term lease) merely to force simultaneous notices — instead, document in writing that Unit 2 receives its eligible adjustment now and Unit 1 receives the identical formula on the date its fixed term expires.",
+      "source_id": "GS-29"
+    },
+    {
+      "option": "Option 2 — Raise Only Unit 2 Now & Defer Unit 1 Based on Documented Objective Lease/Tenure Facts",
+      "legality": "Lawful IF Grounded Strictly in Objective, Non-Discriminatory Contract/Tenure Criteria",
+      "lawyer_view": "Raising one unit is NOT automatically unlawful discrimination. If Unit 1's April 1, 2026 agreement is a 12-month fixed term (running through March 31, 2027) or is already near 2025 market ($3,995) while Unit 2 has had zero adjustments since June 1, 2019 ($3,150), an SF tenant lawyer will examine whether the distinction is objective and documented.",
+      "caveat": "If both units are month-to-month and legally eligible, selectively raising only one household without a contemporaneous, neutral written rationale creates avoidable evidentiary risk if the raised household belongs to a protected class or recently requested repairs.",
+      "source_id": "GS-28"
+    },
+    {
+      "option": "Option 3 — Selective Increase Motivated by Protected Trait, Roommate Change, or Repair Request",
+      "legality": "UNLAWFUL — Severe Statutory Damages & Fee-Shifting Exposure",
+      "lawyer_view": "Selecting a unit because of a protected characteristic (FHA / FEHA / Unruh), because Tenant D moved into Unit 1 (§ 37.3(a)(11)), to pressure below-market tenants to vacate (§ 37.10B(a)(5)), or in retaliation for a habitability complaint (Civ. Code § 1942.5) exposes the owner to treble damages, statutory penalties, injunctions, and mandatory tenant attorney's fees.",
+      "caveat": "Never make oral or written remarks linking a rent increase to tenant demographics, occupancy changes, or repair costs.",
+      "source_id": "GS-30"
+    }
+  ],
+  "repo_audit_findings": [
+    {
+      "audit_id": "RA-5D4-01",
+      "file_or_scope": "hub/data.json, index.html, hub/*.html (Canonical Root Dashboard)",
+      "finding_status": "Verified Accurate",
+      "details": "All arithmetic ($63.92, $119.85, $50.40, $412.65), Form 571 percentages (1982–2027), § 37.15 licensing rules, <4-unit Treasurer distinction, § 6.14/Costa-Hawkins occupant rules, and the Nov. 9, 2026 File #261020 retroactive-cutoff warning match official primary sources live-fetched on 2026-11-10.",
+      "source_id": "GS-08"
+    },
+    {
+      "audit_id": "RA-5D4-02",
+      "file_or_scope": "README.md (Root Documentation — Reconciled on 2026-11-10)",
+      "finding_status": "Verified Reconciled",
+      "details": "Initial audit at 709e07a spotted stale count summaries ('13 review checks', '23-source manifest', '1,545/1,742 checks'); following rebase onto main @ 86c3a84, concurrent PRs #30/#34 updated README.md to '14 tenant-side review checks', '29-source live-retrieval manifest', and '1,592 canonical / 1,812 assurance checks'.",
+      "source_id": "GS-01"
+    },
+    {
+      "audit_id": "RA-5D4-03",
+      "file_or_scope": "SOURCES.md & VERIFICATION.md (Root Source & Verification Records)",
+      "finding_status": "Verified Reconciled",
+      "details": "Initial audit at 709e07a flagged 2026-11-07/08 header dates; following rebase onto main @ 86c3a84, SOURCES.md and VERIFICATION.md reflect full 2026-11-10 live verification across all 29 canonical sources, and all 29 external URLs resolve cleanly to official government hosts.",
+      "source_id": "GS-09"
+    },
+    {
+      "audit_id": "RA-5D4-04",
+      "file_or_scope": "EXECUTIVE_SUMMARY.md (Lines 29, 86) & VERIFICATION.md (Line 33)",
+      "finding_status": "Verified Resolving (Minor URL Query Formatting Variance)",
+      "details": "Links to Civil Code § 1942.5 include a trailing period ('sectionNum=1942.5.'). Live fetch on 2026-11-10 confirmed leginfo.legislature.ca.gov resolves both '1942.5.' and '1942.5' to Civil Code § 1942.5, though canonical hub/data.json uses 'sectionNum=1942.5'.",
+      "source_id": "GS-24"
+    },
+    {
+      "audit_id": "RA-5D4-05",
+      "file_or_scope": "Superseded Pre-Nov-9 Editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/)",
+      "finding_status": "Flagged — Superseded Archive (Pre-Nov-9, 2026 Rent Board Warning)",
+      "details": "Archived editions built Nov 6–7, 2026 predate the SF Rent Board's November 9, 2026 official warning on sf.gov that pending File #261020 (10%/yr banked cap) would apply retroactively to banked notices served on or after September 15, 2026 if enacted as proposed. Root index.html properly labels those directories as superseded archives.",
+      "source_id": "GS-10"
+    },
+    {
+      "audit_id": "RA-5D4-06",
+      "file_or_scope": "Archived Editions — Business Registration Certificate Omission",
+      "finding_status": "Flagged — Superseded Archive Gap (Resolved in Canonical Hub & /guide/)",
+      "details": "Pre-PR #19 archived editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/) answered only the Rent Board § 37.15 license question without addressing the separate SF Treasurer <4-unit Business Registration Certificate rule.",
+      "source_id": "GS-04"
+    },
+    {
+      "audit_id": "RA-5D4-07",
+      "file_or_scope": "review/build.py (Non-Deterministic Footer Date Stamp)",
+      "finding_status": "Flagged — Build Reproducibility Caveat in Archived Edition",
+      "details": "Running review/build.py on a later calendar date updates a date stamp in review/*.html using the current date rather than a pinned dataset date. Preserved untouched per disjoint scope rules.",
+      "source_id": "GS-02"
+    },
+    {
+      "audit_id": "RA-5D4-08",
+      "file_or_scope": "Official SF.gov Worked-Example Year Labels vs. Form 571",
+      "finding_status": "Flagged — Official Agency Webpage Typo (Form 571 Controls)",
+      "details": "Live fetch of sf.gov 'Learn about rent increases' and 'Banked rent increases' on 2026-11-10 confirmed minor year-label typos inside SF.gov's narrative examples (e.g., 'in effect on June 1, 2025 is 1.6%' where June 1, 2026 is meant, and 'August 1, 2024 (1.4%)' where August 1, 2025 is meant). Official Form 571 PDF controls every rate period.",
+      "source_id": "GS-08"
+    },
+    {
+      "audit_id": "RA-5D4-09",
+      "file_or_scope": "Current Tracked Repository Files vs. Public Git Commit History (Privacy)",
+      "finding_status": "Current Tree PASS (0 Personal Tokens) / Historical Commit Flagged",
+      "details": "SHA-256 digest and regex privacy scan across 100% of current tracked files confirms zero tenant names, initials, emails, or street addresses. As flagged in PR #17, an early pre-redaction Git commit in public history contained raw initials; rewriting history requires repository-admin / GitHub Support action outside single-branch PR workflows.",
+      "source_id": "GS-02"
+    }
+  ],
+  "flagged_items": [
+    {
+      "flag_id": "FG-01",
+      "severity": "High",
+      "item": "SF Rent Board Rent Increase License Status (Unit 1 & Unit 2)",
+      "owner_brief_input": "Owner asks whether license is required for individual owner",
+      "official_confirmed_value": "",
+      "status": "Unverified — Must Confirm in portal.sfrb.org",
+      "explanation": "Individual 2-unit owners must report annually into the Housing Inventory (§ 37.15) and hold an active Rent Increase License on the increase's effective date (best practice: confirm & save PDF before serving notice).",
+      "source_id": "GS-01"
+    },
+    {
+      "flag_id": "FG-02",
+      "severity": "High",
+      "item": "Unit 1 April 1, 2026 Tenancy Instrument (Fixed-Term vs. Month-to-Month)",
+      "owner_brief_input": "Continuing tenancy April 1, 2026 @ $3,995/mo (Tenant A & Tenant D)",
+      "official_confirmed_value": "",
+      "status": "Unverified — Private Lease Record Required",
+      "explanation": "Under California law, rent cannot be raised during an active fixed-term lease unless the lease expressly allows mid-term increases. If April 1, 2026 created a new 12-month fixed term, no increase can take effect before April 1, 2027.",
+      "source_id": "GS-23"
+    },
+    {
+      "flag_id": "FG-03",
+      "severity": "High",
+      "item": "Unit 1 Complete Rent Ledger & Exact Anniversary Date",
+      "owner_brief_input": "Initial lease Feb 1, 2025 @ $3,995/mo; April 1, 2026 @ $3,995/mo",
+      "official_confirmed_value": "",
+      "status": "Unverified — Private Ledger Required",
+      "explanation": "Confirms zero intervening increases or passthroughs occurred since February 1, 2025 and confirms whether February 1, 2027 satisfies both the 24-month no-increase guidance and Rule 4.12(a)'s 12-month elapsed banking rule.",
+      "source_id": "GS-12"
+    },
+    {
+      "flag_id": "FG-04",
+      "severity": "High",
+      "item": "Unit 2 Current Base Rent & Post-2019 Increase/Passthrough History",
+      "owner_brief_input": "Last lease start June 1, 2019 @ $3,150/mo (Tenant E & Tenant F)",
+      "official_confirmed_value": "",
+      "status": "Unverified — Private Ledger Required",
+      "explanation": "The brief reports $3,150.00 as the June 1, 2019 lease-start rent without expressly confirming zero increases or passthroughs occurred between 2019 and 2026. All Unit 2 banked figures (11.5% / $362.25) depend strictly on zero prior increases.",
+      "source_id": "GS-10"
+    },
+    {
+      "flag_id": "FG-05",
+      "severity": "High",
+      "item": "Parcel Certificate of Occupancy & Rent Ordinance Coverage / Exemptions",
+      "owner_brief_input": "94122 Outer Sunset, built 1940, 2 rent-controlled units",
+      "official_confirmed_value": "",
+      "status": "Unverified — Parcel Address Withheld for Privacy",
+      "explanation": "Street address/APN is intentionally kept internal for privacy, so DBI Certificate of Occupancy, legal unit status, substantial-rehabilitation history, and government rent-subsidy exemptions could not be checked in public records.",
+      "source_id": "GS-14"
+    },
+    {
+      "flag_id": "FG-06",
+      "severity": "High",
+      "item": "Pending BOS File #261020 & Nov. 9, 2026 Rent Board Retroactivity Warning (10% Banked Cap)",
+      "owner_brief_input": "Unit 2 multi-year banked catch-up inquiry (11.5% banked + 1.6% annual = 13.1%)",
+      "official_confirmed_value": "",
+      "status": "Pending Committee Action (NOT Law on 2026-11-10) — Re-Check Before Serving",
+      "explanation": "File #261020 has no final action or enactment date on 2026-11-10, so enacted law remains uncapped. However, SF.gov's Nov. 9, 2026 notice warns that if enacted as proposed, the 10%/yr banked cap would apply retroactively to banked notices served on or after September 15, 2026.",
+      "source_id": "GS-13"
+    },
+    {
+      "flag_id": "FG-07",
+      "severity": "Medium",
+      "item": "SF Treasurer Business Registration Certificate Exemption Conditions",
+      "owner_brief_input": "Individual property owner (2 residential units in 1 building)",
+      "official_confirmed_value": "",
+      "status": "Unverified — Depends on Owner's Other SF Activities",
+      "explanation": "Leasing <4 residential units in one SF building is exempt by itself, but short-term rentals (Airbnb), SF payroll expense, commercial units, or other SF business activity can trigger mandatory Business Registration.",
+      "source_id": "GS-04"
+    },
+    {
+      "flag_id": "FG-08",
+      "severity": "Medium",
+      "item": "SF Rent Board Allowable Annual Rate for March 1, 2027 – February 29, 2028",
+      "owner_brief_input": "Future rent increase planning into 2027",
+      "official_confirmed_value": "",
+      "status": "Unverified — Not Yet Published by SF Rent Board",
+      "explanation": "Current published Form 571 covers March 1, 2026 – February 28, 2027 (1.6%). Any notice taking effect on or after March 1, 2027 must use the 2027–2028 rate once published (never inferred).",
+      "source_id": "GS-08"
+    },
+    {
+      "flag_id": "FG-09",
+      "severity": "Medium",
+      "item": "Unit 1 Written 'Section 6.14 Notice' Service & Proof (60-Day Benchmark)",
+      "owner_brief_input": "Tenant D joined Unit 1 continuing tenancy on April 1, 2026",
+      "official_confirmed_value": "",
+      "status": "Unverified — Owner File Check Required",
+      "explanation": "No market reset applies today because Tenant A remains. Whether a written § 6.14 notice was served on Tenant D within 60 days of knowledge (~May 31, 2026) affects only future rights if Tenant A ever vacates.",
+      "source_id": "GS-16"
+    },
+    {
+      "flag_id": "FG-10",
+      "severity": "Medium",
+      "item": "Unit 1 Incoming Occupant Legal Status (Co-Tenant vs. Subtenant)",
+      "owner_brief_input": "Continuing tenancy: Tenant A and Tenant D on April 1, 2026",
+      "official_confirmed_value": "",
+      "status": "Unverified — Depends on Lease Signature & Direct Rent Acceptance",
+      "explanation": "If Tenant D signed an agreement with the owner or paid rent directly accepted by the owner, Tenant D is likely a co-tenant immune from a future Costa-Hawkins § 1954.53(d) reset even after Tenant A departs.",
+      "source_id": "GS-15"
+    },
+    {
+      "flag_id": "FG-11",
+      "severity": "High",
+      "item": "Building Habitability, DBI Citations (Civ. Code § 1942.4) & Open Repair Requests (Form 516B)",
+      "owner_brief_input": "Not stated in owner brief",
+      "official_confirmed_value": "",
+      "status": "Unverified — Owner & DBI Inspection Check Required",
+      "explanation": "An unabated >35-day code citation bars issuing a rent increase notice (Civ. Code § 1942.4), and incomplete requested repairs allow tenants to petition within 60 days to defer the increase (Form 516B).",
+      "source_id": "GS-25"
+    },
+    {
+      "flag_id": "FG-12",
+      "severity": "High",
+      "item": "180-Day Protected Tenant Activity / Retaliation History (Civ. Code § 1942.5)",
+      "owner_brief_input": "Not stated in owner brief",
+      "official_confirmed_value": "",
+      "status": "Unverified — Owner Communications Audit Required",
+      "explanation": "Owner must verify whether either unit raised tenantability complaints, DBI inspections, or tenant-rights claims within the preceding 180 days before serving notice.",
+      "source_id": "GS-24"
+    },
+    {
+      "flag_id": "FG-13",
+      "severity": "Low",
+      "item": "Unit Bedroom/Bathroom Counts, Square Footage & Included Utilities (For Housing Inventory)",
+      "owner_brief_input": "Not stated in owner brief",
+      "official_confirmed_value": "",
+      "status": "Unverified — Owner Supplies on portal.sfrb.org",
+      "explanation": "Admin. Code § 37.15(b)(2) requires reporting bedroom/bathroom count, approximate sq. ft. (250 sq. ft. bands), and utilities included in base rent when filing the Housing Inventory.",
+      "source_id": "GS-02"
+    },
+    {
+      "flag_id": "FG-14",
+      "severity": "Low",
+      "item": "Official 'Normal Market Rent Increase' Statistic for ZIP Code 94122",
+      "owner_brief_input": "Inquiry into reasonable and normal increases in 94122",
+      "official_confirmed_value": "",
+      "status": "Unverified — No Official Government Dataset Exists",
+      "explanation": "No government agency publishes a ZIP-94122 market rent-increase average; commercial listing blogs are excluded. For SF rent-controlled units, Form 571 (1.6%) + lawful Rule 4.12 banking defines the legal norm.",
+      "source_id": "GS-09"
+    },
+    {
+      "flag_id": "FG-15",
+      "severity": "Low",
+      "item": "Official SF Dataset Comparing Corporate vs. Individual Landlord Increase Rates",
+      "owner_brief_input": "Inquiry comparing big real estate corporations vs. individual SF owners",
+      "official_confirmed_value": "",
+      "status": "Unverified — No Official SF Agency Breakdown Exists",
+      "explanation": "Neither the SF Rent Board nor the U.S. Census RHFS publishes SF rent-increase percentages stratified by owner entity type; cell left blank per zero-hallucination protocol.",
+      "source_id": "GS-33"
+    },
+    {
+      "flag_id": "FG-16",
+      "severity": "Low",
+      "item": "Banking Wording Comparison: SF.gov '24 Full Months' vs. Rule 4.12(a) '12 Months Elapsed'",
+      "owner_brief_value_note": "Unit 1 Feb 1, 2027 scenario",
+      "owner_brief_input": "Unit 1 initial lease Feb 1, 2025; first skipped anniversary Feb 1, 2026",
+      "official_confirmed_value": "Both satisfied on 2027-02-01 (see explanation)",
+      "status": "Reconciled Statutory/Guidance Nuance — Flagged for Transparency",
+      "explanation": "SF.gov's banking page states 24 full months must pass without any increase (measured from lease start/last increase), while enacted Rule 4.12(a) states 12 full months must elapse from when the skipped annual increase could have been imposed. Both reach February 1, 2027 for Unit 1.",
+      "source_id": "GS-12"
+    },
+    {
+      "flag_id": "FG-17",
+      "severity": "Low",
+      "item": "SF.gov Worked-Example Year-Label Typos vs. Official Form 571",
+      "owner_brief_input": "Cross-check of official SF.gov webpages on 2026-11-10",
+      "official_confirmed_value": "Form 571 PDF controls (1.6% = 3/1/26–2/28/27; 1.4% = 3/1/25–2/28/26)",
+      "status": "Confirmed Agency Webpage Typo — Flagged for Manual Review",
+      "explanation": "Two narrative worked examples on sf.gov misprint an example year label while still doing arithmetic from Form 571's exact percentages. Always cite Form 571 for rate windows.",
+      "source_id": "GS-08"
+    },
+    {
+      "flag_id": "FG-18",
+      "severity": "Medium",
+      "item": "Historical Public Git Commit Privacy Warning (Current Working Tree 100% Clean)",
+      "owner_brief_input": "Repository-wide audit on 2026-11-10",
+      "official_confirmed_value": "0 personal tokens in current files; historical commit flagged",
+      "status": "Open Repo Governance Item — Flagged for Owner Review",
+      "explanation": "Current tracked files across the entire repository contain zero personal identifiers, but an early pre-redaction Git commit in public history contained raw initials (purging history requires repository-admin / GitHub Support action outside single-branch PR workflows).",
+      "source_id": "GS-02"
+    }
+  ]
+}
