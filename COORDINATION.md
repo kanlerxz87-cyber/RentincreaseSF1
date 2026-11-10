@@ -853,3 +853,61 @@ published on the canonical Flagged for Review page only if it requires a canonic
 claimed in a follow-up addendum first).
 
 *(Merge result and PR links are recorded below once known.)*
+
+## Fresh-eyes verification record (2026-11-10, local, this sandbox)
+
+* **Suites re-run on `main` @ `5c21915` + this branch:** `build/build.py` + `tools/check_site.py`
+  → 781 checks, 0 errors. `tools/check_links.py` → OK. `hub/build.py` + `tools/verify_hub.py`
+  → 1,545 checks, 0 errors. `assurance/build.py` + `tools/verify_assurance.py` → 1,742 checks, 0 errors.
+  `integration/verify.py` → PASS. `dashboard/verify.py` → OK. `audit/verify_all.py` → PASSED.
+  `review/verify.py` → PASSED. Both generators are byte-reproducible (`git diff --stat` empty after rebuild).
+* **Arithmetic independently re-derived** with exact rational arithmetic (`fractions.Fraction`, not the
+  shared `Decimal` code): Unit 1 annual $3,995 × 1.6% = $63.92 → $4,058.92; Unit 1 banked scenario 3.0%
+  = $119.85 → $4,114.85 (extra component 1.4% = $55.93). Unit 2 annual $3,150 × 1.6% = $50.40 →
+  $3,200.40; Unit 2 combined 13.1% = $412.65 → $3,562.65 (banked extra 11.5% = $362.25). All published
+  figures reproduced exactly.
+* **Canonical source registry domain check:** all 29 URLs in `hub/data.json` resolve to official domains
+  only — sf.gov (17), leginfo.legislature.ca.gov (6), sftreasurer.org (2), sfgov.legistar.com (1, official
+  Board of Supervisors legislative portal), hud.gov (1), justice.gov (1), courts.ca.gov (1). No commercial
+  or unofficial host is registered as a source.
+* **Personal-data scan of tracked text (177 files):** zero email-like tokens; the only phone-like token
+  is the SF Rent Board's public agency number quoted in source citations (not personal data). The shared
+  SHA-256 digest scan in `tools/check_links.py` reports no personal tokens. Current files contain no
+  tenant names/initials/addresses; the known **historical Git-exposure item remains open** (an earlier
+  public commit contains tenant initials) and is published on the canonical Flagged for Review page; it
+  cannot be remediated from a normal PR workflow.
+* **Live deploy state (GitHub API):** `GET /repos/kanlerxz87-cyber/RentincreaseSF1/pages` →
+  `status: built`, `build_type: legacy`, source `main` / root `/`, `https_enforced: true`. Latest
+  `pages build and deployment` run 42533815279 and all three PR workflows on the merge commit completed
+  `success`. No open PRs. The live root URL is
+  <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>. (This sandbox's network allowlist does not
+  include `kanlerxz87-cyber.github.io`, so the published HTML was verified via the Pages API `built`
+  status plus byte-reproducible local builds, not by fetching the live page.)
+* **Landing page spot check:** `<title>` and first content block forefront the individual-owner Rent
+  Board license question, as the brief requires; the answer (yes — §37.15 licensure gate, no
+  individual-owner exemption) is above the fold with official links.
+* **Hygiene performed:** deleted stray `pr_body.md` (pre-merge body of PR #14, superseded by the merged
+  result; content preserved in the PR itself) and two tracked `__pycache__/*.pyc` artifacts; added a root
+  `.gitignore` (`__pycache__/`, `*.pyc`, `*.pyo`, `.DS_Store`). No source, figure, page, data file, or
+  workflow was edited.
+
+## Irregularities noted this session
+
+1. **Open (unchanged):** historical Git-history exposure of tenant initials — open, published on
+   Flagged for Review; remediation requires GitHub Support / history rewrite and is outside a normal PR.
+2. **Repo hygiene (fixed here):** two tracked `.pyc` files and a stray PR body were committed by earlier
+   sessions; both removed in this session's PR. No content was lost.
+3. **No source, arithmetic, figure, or privacy defect was found in the canonical edition** in this pass.
+   The pending Board File #261020 (proposed 10% cap on banked/capital-improvement increases, 13.1% Unit 2
+   scenario sits above it) remains **Pending Committee Action — not law** and is published as flag `H-22`;
+   re-check Legistar before any large banked increase is served.
+4. **Not legal advice; not permission to serve notice.** Both licenses, ledgers, lease status, and
+   coverage remain owner-verified private facts; scenario arithmetic only.
+
+## Pull request / merge record (this session)
+
+| Item | Value |
+|---|---|
+| PR | *(to be recorded after opening)* |
+| Merge result | *(to be recorded after merge)* |
+| Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
