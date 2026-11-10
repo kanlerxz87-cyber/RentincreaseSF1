@@ -1191,3 +1191,23 @@ published. These files therefore cannot stay published as they are.
 
 No other session has claimed any of these paths (checked against `main` at `7dad58d` and the three open
 pull requests #29, #32, #34, none of which touches them).
+
+---
+
+# Session Addendum — `arena/5d4a1320-rentincreasesf1` (2026-11-10 UTC)
+
+- **Session ID / Branch:** `arena/5d4a1320-rentincreasesf1` (platform-bound branch; per platform rules, all commits, pushes, and PRs stay on this fixed branch).
+- **Disjoint Exclusive File Scope:** `guide/**`, `audit/session-5d4a1320/**`, and append-only `COORDINATION.md`.
+- **Non-overlap with concurrent active claims:** Concurrent sessions (`arena-54b96b1f`, `arena-39dd26a4`, `arena-a7c16645`) hold active claims (<60 minutes old) on `hub/**`, `index.html`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, and root Markdown files (`README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`). Per `COORDINATION.md` rules, this session does **not** edit any file in those scopes or in earlier archived scopes (`docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `site/**`, `research/**`). Any shared-file cross-link request is logged here instead.
+
+## Task Board (`arena/5d4a1320-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `5D4-T1` | Read `COORDINATION.md`, inspect concurrent claims, claim disjoint scope (`guide/**`, `audit/session-5d4a1320/**`), commit and push immediately | done | `arena/5d4a1320-rentincreasesf1` | `COORDINATION.md` |
+| `5D4-T2` | Live primary-source verification on `2026-11-10` across official `.gov` / municipal / state / federal publishers (SF Rent Board `§37.15` license & Housing Inventory, Nov 9 2026 Rent Board notice & Legistar File `#261020`, `Form 571` rates, `Rule 4.10`/`4.12` banking, `Rule 6.14` / Costa-Hawkins, `§37.10B`/`§37.10C`, SF Treasurer `<4 units` lessor rules, Cal. Civ. Code `§§827, 1942.4, 1942.5, 1947.12, 1954.52, 1954.53`, CCP `§1013`, FEHA `Gov. Code §12955`, Unruh `Civ. Code §51`, Federal FHA `42 U.S.C. §3604`, HUD/Census RHFS, U.S. DOJ *RealPage*) | in progress | `arena/5d4a1320-rentincreasesf1` | `audit/session-5d4a1320/sources.json`, `audit/session-5d4a1320/SOURCES.md` |
+| `5D4-T3` | Line-by-line repository audit verifying existing repo claims/figures/links against live official sources and flagging any irregularities | in progress | `arena/5d4a1320-rentincreasesf1` | `audit/session-5d4a1320/REPO_AUDIT.md`, `audit/session-5d4a1320/site_data.json` |
+| `5D4-T4` | Anonymized Executive Summary forefronting the individual-owner Rent Board license & step-by-step walkthrough, plus full Unit 1 & Unit 2 analysis (`94122` Outer Sunset, 1940 building), corporate vs. individual landlord practices, tenant notice protocol, SF tenant-lawyer red-team review, and 1-unit vs. 2-unit Fair Housing analysis | in progress | `arena/5d4a1320-rentincreasesf1` | `audit/session-5d4a1320/EXECUTIVE_SUMMARY.md`, `audit/session-5d4a1320/site_data.json` |
+| `5D4-T5` | Clean, user-friendly static dashboard at `/guide/` (`guide/index.html` + 9 category subpages including `guide/flagged-for-review.html` with blank official-confirmation cells on all unverified items and an official source link on every table row) | pending | `arena/5d4a1320-rentincreasesf1` | `guide/**` |
+| `5D4-T6` | Automated deterministic build + line-by-line link, anchor, citation-per-row, exact-cent arithmetic, blank-unverified-cell, and SHA-256 privacy verification + full repo CI check | pending | `arena/5d4a1320-rentincreasesf1` | `guide/build.py`, `guide/verify.py`, `audit/session-5d4a1320/VERIFICATION.md` |
+| `5D4-T7` | Rebase onto `origin/main`, open PR to `main`, verify CI green, merge PR without waiting, confirm GitHub Pages deployment, and record PR & deploy result here | pending | `arena/5d4a1320-rentincreasesf1` | `COORDINATION.md` (append-only) |
