@@ -59,7 +59,7 @@
     "id": "S09",
     "publisher": "California Legislative Information",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -73,35 +73,35 @@
     "id": "S11",
     "publisher": "California Legislative Information",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S12",
     "publisher": "California Legislative Information",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S13",
     "publisher": "California Legislative Information",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S14",
     "publisher": "U.S. Department of Housing and Urban Development",
     "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S15",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--sec-3710b-tenant-harassment",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -136,28 +136,28 @@
     "id": "S20",
     "publisher": "California Department of Real Estate (official publication; hosted by California Courts)",
     "url": "https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S21",
     "publisher": "California Legislative Information",
     "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S22",
     "publisher": "United States Department of Justice, Antitrust Division",
     "url": "https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S23",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -171,7 +171,7 @@
     "id": "S25",
     "publisher": "SF Office of the Treasurer & Tax Collector",
     "url": "https://sftreasurer.org/business/register-business",
-    "retrieved": "2026-11-08",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -192,14 +192,49 @@
     "id": "S28",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
-    "retrieved": "2026-11-08",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S29",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
-    "retrieved": "2026-11-08",
+    "retrieved": "2026-11-10",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S30",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+    "retrieved": "2026-11-10",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S31",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/",
+    "retrieved": "2026-11-10",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S32",
+    "publisher": "U.S. Government Publishing Office (govinfo.gov)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+    "retrieved": "2026-11-10",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S33",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
+    "retrieved": "2026-11-10",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S34",
+    "publisher": "U.S. Census Bureau & U.S. HUD (census.gov)",
+    "url": "https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   }
 ]

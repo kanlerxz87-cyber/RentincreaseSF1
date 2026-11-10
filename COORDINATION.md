@@ -1012,3 +1012,34 @@ to banked increases noticed on or after **15 September 2026**. That date is in t
 today, which makes the pending ordinance more directly relevant to a notice served now than the
 previous wording conveyed. It is still **not law** (Legistar: Pending Committee Action, no final
 action). No figure is changed; the item is published as flag `H-22` and in the landing-page warning.
+
+---
+
+# Session Addendum — `arena/4700b525-rentincreasesf1` (`2026-11-10` full verification & bugfix pass)
+
+- **Session ID / Branch:** `arena/4700b525-rentincreasesf1` (platform-pinned branch; no other branch may be created, switched to, or pushed from this session). `git pull --rebase origin main` is run before every push.
+- **Claimed Scope (`2026-11-10`, completed scopes handed off non-destructively):**
+  - `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`, and append-only `COORDINATION.md`.
+- **Untouched / Preserved Archives:** `docs/**`, `docs/v1/**`, `docs/v2/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `site/**`, `research/**`, `data/**`, `build/**`, `audit/session-816b4801/**`, `audit/data/**`, `.github/workflows/**`.
+
+## Findings prompting this update (`2026-11-10` line-by-line audit)
+
+1. **Template bug in `hub/build.py` / `index.html`:** `q_rows` left unformatted `{n}` literals in `index.html` (`"{n} checks remain"` and `"{n} flags"`).
+2. **Stale hardcoded counts and dates across `hub/build.py` and `README.md`:** `hub/review.html` pill (`13 checks` vs 14), `hub/flags.html` meta (`Twenty` vs 24), `hub/sources.html` (`Twenty-three` / `23` / `7 November 2026` / `14 SF Rent Board` vs live registry counts and `10 November 2026`), and `README.md` (`13 tenant-side review checks`, `23-source`).
+3. **New live `2026-11-09` / `2026-11-10` official developments:**
+   - **SF Rent Board November 9, 2026 notice & Legistar File #261020 (`S04`, `S05`, `S26`, `H-22`):** File #261020 remains `Pending Committee Action` (`10/7/2026` last history, not law), and the Rent Board explicitly warns that as currently drafted (`Leg Ver1` / `Leg Dig Ver1`) the temporary 10%/yr cap on banked + capital-improvement increases would apply to **banked rent increases noticed on or after September 15, 2026** (through December 31, 2029, with excess amounts deferred to January 1, 2030+).
+   - **Adopted Rules & Regulations Part XIII §13.14 (`S30`), Noncompliance Notice (`S33`), 2027 Fee/Inventory Notice (`S31`), 42 U.S.C. §3604 on U.S. GPO (`S32`), and 2024 Census/HUD RHFS (`S34`):** Live-fetched on `2026-11-10` alongside full re-verification of `S01`–`S29`.
+   - **Malformed URL fix:** Trailing period in `CIVIL CODE §1942.5.` (`sectionNum=1942.5.`) corrected in `EXECUTIVE_SUMMARY.md` and `VERIFICATION.md`.
+
+| ID | Task | Status | Scope |
+|---|---|---|---|
+| `A47-T1` | Live-verify all 29 existing sources + 5 additional official `.gov` sources on `2026-11-10` | done | `hub/data.json` |
+| `A47-T2` | Fix literal placeholder defect, stale counts/dates, and add `2026-11-09`/`2026-11-10` regulatory updates | done | `hub/data.json`, `hub/build.py`, `index.html`, `hub/*.html` |
+| `A47-T3` | Update assurance register, retrieval manifest, and strengthen verification gates against unformatted placeholders | done | `assurance/build.py`, `assurance/index.html`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py` |
+| `A47-T4` | Reconcile root Markdown docs, run all canonical + preserved legacy suites, push, PR to `main`, merge, verify GitHub Pages deploy | in progress | `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`, `COORDINATION.md` |
+
+## Verification results (`2026-11-10`, local post-rebase onto `origin/main` `3a07761`)
+
+- `python3 tools/verify_hub.py`: **1,700 checks, 0 errors** (`9` pages, `210` claim-table rows, `34/34` sources cited, `0` rejected dollar figures, zero unformatted template placeholders, zero raw initials/emails).
+- `python3 tools/verify_assurance.py`: **1,961 checks, 0 errors** (`10` canonical + assurance pages, `35` assurance rows, `34/34` manifest rows dated `2026-11-10`, `170` current text files privacy-scanned).
+- `python3 tools/check_links.py`, `python3 tools/check_site.py` (`781` checks), `python3 integration/verify.py` (`57` rows), `python3 dashboard/verify.py` (`42` sources), `python3 audit/verify_all.py` (`137` rows), and `python3 review/verify.py` (`11` pages) all passed cleanly.

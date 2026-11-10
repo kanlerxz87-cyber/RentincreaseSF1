@@ -1,6 +1,6 @@
 {
-  "retrieved": "2026-11-07",
-  "scope": "Independent final assurance of the canonical root and hub edition. No personal identifiers; no attorney review; no private-record inference.",
+  "retrieved": "2026-11-10",
+  "scope": "Independent final assurance and 2026-11-10 live re-verification of the canonical root and hub edition. No personal identifiers; no attorney review; no private-record inference.",
   "corrections": [
     {
       "id": "A-01",
@@ -85,7 +85,14 @@
       "finding": "No official ZIP-specific normal market increase or SF behavior-by-owner-type dataset was located. The 1.6% annual allowance is a routine planning scenario, not an official market average or guarantee of acceptance.",
       "sources": ["S05", "S06", "S22"],
       "flags": ["H-10", "H-11", "H-13"]
+    },
+    {
+      "id": "A-13",
+      "item": "2026-11-10 live verification, File #261020 retroactive trigger, §13.14 & 2027 deadlines, and template/count fixes",
+      "finding": "Re-fetched all 29 prior official sources plus 5 additional official .gov sources (Rules Part XIII §13.14, 2027 Fee/Inventory Notice, 42 U.S.C. §3604 on U.S. GPO, Noncompliance Notice, and 2024 Census/HUD RHFS CB26-TPS.12). Added the November 9, 2026 Rent Board warning and draft File #261020 text applying the 10%/yr cap retroactively to banked notices provided on or after September 15, 2026 (through Dec 31, 2029), plus the December 14, 2026 2027 fee-exemption cutoff. Fixed unformatted literal placeholders in index.html, stale counts/dates in hub/review.html, hub/flags.html, hub/sources.html, assurance/index.html, and README.md, and trailing-dot Civil Code §1942.5 links.",
+      "sources": ["S26", "S30", "S31", "S32", "S33", "S34"],
+      "flags": ["H-22", "H-04", "H-14", "H-11"]
     }
   ],
-  "residual_flag_ids": ["H-17", "H-18", "H-03", "H-02", "H-04", "H-05", "H-06", "H-07", "H-09", "H-01", "H-15", "H-19", "H-20"]
+  "residual_flag_ids": ["H-22", "H-17", "H-18", "H-03", "H-02", "H-04", "H-05", "H-06", "H-07", "H-09", "H-01", "H-15", "H-19", "H-20"]
 }

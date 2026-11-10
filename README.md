@@ -15,9 +15,7 @@ Official sources: [SF Administrative Code §37.15](https://www.sf.gov/informatio
 
 **The Rent Increase License is not the only City registration, and the two are commonly confused.** A **Business Registration Certificate** is issued by the Office of the Treasurer & Tax Collector, is a general business-tax registration, and does not affect whether a rent increase is lawful. On the reported two units in one building, the Tax Collector's own guidance points to *no* business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. The carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination ([lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate), [register a business](https://sftreasurer.org/business/register-business), flag `H-21`), not as a settled fact.
 
-**November 10 update:** The [Rent Board](https://www.sf.gov/information--banked-rent-increases) warns that File #261020, if enacted as proposed, would apply to banked increases noticed on or after September 15, 2026. It is not law and may change. Unit 2’s scenario includes 11.5% banked, before the separate annual allowance; do not treat it as permission to serve.
-
-**Before any large banked catch-up:** Board of Supervisors [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) would cap banked and capital-improvement increases at 10% per year for three years. Re-checked on Legistar on 2026-11-08: **Pending Committee Action — not law**, no final action, no enactment date. It is not applied to any figure here, but the Unit 2 combined scenario is 13.1%, above that threshold (flag `H-22`).
+**Before any large banked catch-up (November 9, 2026 Rent Board alert):** Board of Supervisors [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) would cap combined banked and capital-improvement increases at 10% per year through December 31, 2029 (with excess banked amounts carried over to January 1, 2030+) and add Housing Inventory reporting of prior-12-month banked increases. Re-checked live on Legistar and SF.gov on 2026-11-10: **Pending Committee Action — not law** (last history: 2026-10-07 Youth Commission response; no final action, no enactment date). Critically, the Rent Board's [November 9, 2026 notice](https://www.sf.gov/information--banked-rent-increases) and draft File #261020 text state that **if enacted as currently proposed, the 10% limit would apply retroactively to banked rent increases noticed on or after September 15, 2026**. It is not applied to any figure here, but Unit 2's combined scenario is 13.1% (11.5% banked alone), so noticing a >10% banked catch-up now carries retroactive legislative risk if enacted as drafted (flag `H-22`). Also note the **Monday, December 14, 2026** Request for Exemption deadline for the 2027 Rent Board Fee (separate from the March 1, 2027 Housing Inventory deadline) ([2027 Informational Notice](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/)).
 
 The published current annual allowance is **1.6% for March 1, 2026–February 28, 2027**. [Rent Board Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf)
 
@@ -33,14 +31,14 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/notice.html` | Notice contents, personal/mail arithmetic, lawful bases, scenario-only drafting aid |
 | `hub/practice.html` | Owner-neutral duties, SF algorithm ban, accurately bounded DOJ enforcement example |
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
-| `hub/review.html` | 13 tenant-side review checks; no attorney verdict |
+| `hub/review.html` | 14 tenant-side review checks; no attorney verdict |
 | `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 29 official sources with supporting passages and per-source retrieval dates |
+| `hub/sources.html` | 34 official sources with supporting passages and per-source retrieval dates (live-verified 2026-11-10) |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
-| `audit/final-integration/` | Machine-readable findings and 23-source live-retrieval manifest |
-| `tools/verify_hub.py` | Canonical link, source, arithmetic, privacy, and corrected-label regression checks |
+| `audit/final-integration/` | Machine-readable findings and 34-source live-retrieval manifest |
+| `tools/verify_hub.py` | Canonical link, source, arithmetic, privacy, template-placeholder, and corrected-label regression checks |
 | `tools/verify_assurance.py` | Independent cross-checks plus current-text privacy scan across the repository |
 | `.github/workflows/assurance.yml` | Rebuild and verification gate on pull requests and `main` |
 
@@ -54,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification, the suites passed **1,545 canonical checks** and **1,742 assurance checks**, including 210 source/flag-linked canonical claim rows, 33 source-linked assurance rows, 29 live-source manifest entries (23 retrieved 2026-11-07, 6 retrieved 2026-11-08), and a privacy scan of 171 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-10`), the suites passed **1,700 canonical checks** and **1,961 assurance checks**, including 210 source/flag-linked canonical claim rows, 35 source-linked assurance rows, 34 live-source manifest entries (all 34 retrieved and verified 2026-11-10), and a privacy scan of 170 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

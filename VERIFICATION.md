@@ -1,17 +1,17 @@
 # Final integration verification record
 
-**Verification date:** 2026-11-07
+**Verification date:** 2026-11-10 (original final audit 2026-11-07; full live re-verification 2026-11-10)
 **Canonical edition:** root `index.html` + `hub/`
 **Independent assurance:** `assurance/` + `audit/final-integration/`
-**Branch:** `arena/1abdce92-rentincreasesf1`
+**Branch:** `arena/4700b525-rentincreasesf1` (following merged PR #15 / `3fbd5e1` through PR #20)
 
 ## Scope and evidentiary standard
 
-The final audit read the canonical data and generated prose, re-fetched official material, corrected overstatements in the existing generator, regenerated the site, and independently recomputed every scenario and service date. Earlier editions remain preserved as superseded archives; this record does not claim that every historical sentence was re-certified.
+The final audit read the canonical data and generated prose, re-fetched official material, corrected overstatements in the existing generator, regenerated the site, and independently recomputed every scenario and service date. On 2026-11-10, all 29 prior official sources plus 5 additional official `.gov` sources were re-fetched live, template/count defects were fixed, and the November 9, 2026 Rent Board File #261020 alert (`September 15, 2026` retroactive notice trigger), adopted Rule §13.14, and the December 14, 2026 2027 Rent Board Fee exemption cutoff were incorporated. Earlier editions remain preserved as superseded archives; this record does not claim that every historical sentence was re-certified.
 
 Evidence classes are kept separate:
 
-1. **Official rule/rate:** directly supported by one of the 29 registered official sources.
+1. **Official rule/rate:** directly supported by one of the 34 registered official sources.
 2. **Owner-brief input:** a date or amount supplied for the two units, not an official record.
 3. **Conditional arithmetic:** reproducible calculation on an owner-brief input and an official percentage.
 4. **Official confirmation:** private license, parcel, lease, or ledger evidence that was unavailable; the public cell is blank and flagged.
@@ -20,17 +20,20 @@ No personal identity is used in the current site or verification data.
 
 ## Official-source verification
 
-All **29/29** registered sources were retrieved and read from their official publishers: S01–S23 on 2026-11-07 and S24–S29 on 2026-11-08. Each source carries its own retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+All **34/34** registered sources were live-fetched and verified from their official publishers on **2026-11-10** (S01–S34). Each source carries its retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
 
 Notable checks:
 
-- Individual-owner reporting and effective-date license gate: [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) + [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
+- Individual-owner reporting and effective-date license gate (plus preserved banking rights): [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) + [Rule §13.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) + [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory) + [Noncompliance Notice](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory).
+- 2027 Rent Board Fee exemption cutoff (`December 14, 2026`) and `March 1, 2027` Housing Inventory deadline: [Rent Board Fee](https://www.sf.gov/rent-board-fee) + [2027 Informational Notice](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/).
+- Pending File #261020 (`Pending Committee Action`, not law) and November 9, 2026 Rent Board warning regarding the September 15, 2026 retroactive notice trigger in `Leg Ver1` / `Leg Dig Ver1`: [Legistar File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) + [Banked rent increases](https://www.sf.gov/information--banked-rent-increases).
 - Current 1.6% rate and all historical rates: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
 - Banking and notice text, including Rule 4.12(b)’s express non-void provision: [Rules Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring).
 - Fixed-term limitation: [California Tenants guide](https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf).
 - Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
-- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV).
-- Corporate-practice example, accurately labeled as allegations/proposed settlement: [DOJ RealPage announcement](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and).
+- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV).
+- Fair Housing Act federal statute and HUD guidance: [42 U.S.C. §3604 (U.S. GPO)](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) + [HUD overview](https://www.hud.gov/helping-americans/fair-housing-act-overview).
+- Corporate-practice example and national ownership dataset: [DOJ RealPage announcement](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and) + [2024 Census/HUD RHFS (CB26-TPS.12)](https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html).
 
 Official Rent Board worked-example year-label errors were not copied. Form 571 controls every rate period; the discrepancies are public as H-19.
 
@@ -62,9 +65,9 @@ Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 | Check | Result at verification |
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
-| `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,545 checks; 0 errors**; 210 claim-table rows with source/flag links |
-| `python3 tools/verify_assurance.py` | **1,742 checks; 0 errors**; 33 assurance rows with official sources |
+| `python3 assurance/build.py` | Assurance page and 34-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,700 checks; 0 errors**; 210 claim-table rows with source/flag links |
+| `python3 tools/verify_assurance.py` | **1,961 checks; 0 errors**; 35 assurance rows with official sources |
 | Current-text privacy scan | **170 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
@@ -89,11 +92,11 @@ python3 review/build.py && python3 review/verify.py
 
 Passing an archived edition’s own suite does not mean every archived legal statement was accepted into the canonical edition. Corrections and their official bases are enumerated in [`audit/final-integration/findings.json`](audit/final-integration/findings.json).
 
-## Corrections made by the final audit
+## Corrections made by the final audit and 2026-11-10 update
 
-The 12-row public correction register is rendered at [`assurance/index.html`](assurance/index.html). It covers:
+The 13-row public correction register is rendered at [`assurance/index.html`](assurance/index.html). It covers:
 
-- effective-date versus notice-date license timing;
+- effective-date versus notice-date license timing (Rule §13.14 and preserved banking rights);
 - Unit 2 lease-start versus current-base labeling;
 - Unit 1 fixed-term contingency;
 - reconciliation of banking measuring points;
@@ -101,10 +104,11 @@ The 12-row public correction register is rendered at [`assurance/index.html`](as
 - fact-specific retaliation and repair analysis;
 - limits of free-representation claims;
 - fair-housing neutrality without safe-harbour claims;
-- accurately bounded corporate-practice evidence;
+- accurately bounded corporate-practice evidence (DOJ + 2024 Census/HUD RHFS);
 - official worked-example year errors;
-- separation of Rent Board Fee recovery from license/base rent;
-- blank market-normal and owner-behavior values.
+- separation of Rent Board Fee recovery (`December 14, 2026` exemption cutoff) from license/base rent;
+- blank market-normal and owner-behavior values;
+- `2026-11-10` live re-verification, File #261020 September 15, 2026 retroactive notice trigger warning, template `{n}` placeholder repair, and stale count/date/URL fixes (`A-13`).
 
 ## Remaining limitations
 

@@ -1,10 +1,10 @@
 # Official source registry
 
-**Retrieved and read:** 2026-11-07 (S01–S23) and 2026-11-08 (S24–S29)
+**Retrieved and read live:** 2026-11-10 (all 34 official sources S01–S34 live-fetched and verified against official government publishers)
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 29 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 34 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
@@ -33,20 +33,26 @@ All 29 sources are official government publications. Commercial listings and blo
 | S23 | San Francisco Rent Board (SF.gov) — [Failure to Repair and Maintain Petitions](https://www.sf.gov/information--failure-repair-and-maintain-petitions) | Repair/habitability review independent of arithmetic and the 60-day tenant petition window. |
 | S24 | SF Office of the Treasurer & Tax Collector — [Information for Lessors of Residential Real Estate](https://sftreasurer.org/information-lessors-residential-real-estate) | The second licence question: whether an individual owner of a small residential building needs a Business Registration Certificate, and the Gross Receipts filing threshold. |
 | S25 | SF Office of the Treasurer & Tax Collector — [Register a Business — who must register](https://sftreasurer.org/business/register-business) | The registration triggers and the express sub-four-unit carve-out for residential rental income (H-21). |
-| S26 | San Francisco Board of Supervisors (Legistar) — [File #261020 — Cap On Rent Increases for Rent-Controlled Units](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Proposed — not law. Would cap banked/capital-improvement increases at 10% per year; status re-checked 2026-11-08 (H-22). |
+| S26 | San Francisco Board of Supervisors (Legistar) — [File #261020 — Cap On Rent Increases for Rent-Controlled Units](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) | Proposed — not law. Caps combined banked/capital-improvement increases at 10% per year through Dec. 31, 2029, with a retroactive September 15, 2026 notice trigger in Leg Ver1 / Leg Dig Ver1; status re-checked live 2026-11-10 (H-22). |
 | S27 | San Francisco Rent Board (SF.gov) — [Rent Increases Under Section 6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) | Occupant change: the §6.14 notice, the sixty-day reasonableness benchmark, and the co-tenant versus subtenant distinction (H-24). |
 | S28 | San Francisco Rent Board (SF.gov) — [Rent Board Rules and Regulations, Part VI — §6.14 Establishing Rental Rates for Subsequent Occupants](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications) | The exact sixty-day rebuttable-presumption rule and the alternative Costa-Hawkins route that needs no 6.14 notice (H-23). |
 | S29 | San Francisco Rent Board (SF.gov) — [Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | No pre-filing is required for either route; an optional determination petition exists; §6.14 requires "vacate" while Costa-Hawkins requires no longer "permanently reside". |
+| S30 | San Francisco Rent Board (SF.gov) — [Rent Board Rules and Regulations, Part XIII — §13.14 Licensing – Notice of Rent Increase](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) | Adopted regulation establishing that the effective date (not service date) governs rent-increase licensing and that unlicensed null-and-void notices do not forfeit banking rights (H-04). |
+| S31 | San Francisco Rent Board (SF.gov) — [Notification of 2027 Rent Board Fee and Housing Inventory Requirements](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/) | Live 2027 cycle deadlines: Monday, December 14, 2026 Rent Board Fee exemption cutoff, March 1, 2027 Housing Inventory deadline, and mutual non-substitution. |
+| S32 | U.S. Government Publishing Office (govinfo.gov) — [42 U.S.C. §3604 — Discrimination in the sale or rental of housing](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) | Direct federal Fair Housing Act statutory text governing rental terms, conditions, and notices across federal protected classes alongside HUD S14 (H-14). |
+| S33 | San Francisco Rent Board (SF.gov) — [Notice of Owner Noncompliance with Housing Inventory](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory) | Confirms Portal address/APN license lookup and tenant enforcement via Tenant Summary Petition (before effective date) or Unlawful Rent Increase Petition (after effective date) (H-04). |
+| S34 | U.S. Census Bureau & U.S. HUD (census.gov) — [2024 Rental Housing Finance Survey (RHFS) Release CB26-TPS.12 (Feb. 19, 2026)](https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html) | Most recent official federal rental-property dataset; tracks national property, mortgage, and ownership-entity structure rather than SF 94122 rate-increase behavior (H-11). |
 
 ## Source cautions
 
+- **S04 / S05 / S26 (November 9, 2026 alert):** File #261020 remains Pending Committee Action and is NOT law, but the Rent Board warns (and `Leg Ver1` confirms) that if enacted as drafted it applies retroactively to banked rent increases noticed on or after September 15, 2026 (H-22).
 - **S04 / S07:** banking guidance and Rule 4.12 use different measuring points. They are read together; February 1, 2027 satisfies both for the conditional Unit 1 scenario.
 - **S05 / S04:** some official worked-example year labels are internally inconsistent. Form 571 (S06) controls the periods and rates.
 - **S20:** the official California guide supplies the fixed-term rule; current statutes and the actual lease still control the case-specific result.
-- **S22:** the DOJ announcement describes allegations and a proposed settlement, not universal corporate behavior or a final adjudication.
+- **S22 / S34:** the DOJ announcement describes allegations and a proposed settlement, not universal corporate behavior or a final adjudication; the 2024 Census/HUD RHFS tracks national property/mortgage/ownership-entity structure, not SF 94122 rent-increase behavior.
 - **S19:** a referral listing is not a guarantee of free representation for every tenant or issue.
 - **S24 / S25:** the Business Registration Certificate is a tax registration, not the Rent Increase License; the sub-four-unit carve-out is conditional on other business activity (H-21).
-- **S26:** a pending ordinance is not law. It is recorded for re-checking only and is not applied to any figure.
+- **S17 / S30 / S31 / S33:** Rule §13.14 makes the effective date (not service date) the legal license test while preserving banking rights; tenants can check Portal status and file Summary or Unlawful Increase Petitions; 2027 Fee exemption requests close Monday, December 14, 2026 and never substitute for March 1, 2027 Housing Inventory reporting.
 - **S27 / S28 / S29:** §6.14 and Costa-Hawkins are alternatives with different triggers and different notice conditions. Section 6.14(d)(2) preserves the Costa-Hawkins route even where no 6.14 notice was served, but Costa-Hawkins does not reach a co-tenant who moved in after the original occupant. Nothing here establishes that either route is available for these units (H-23, H-24).
 
 Owner-brief dates and amounts are not official facts. They remain labeled as scenario inputs throughout the canonical site.
