@@ -1012,3 +1012,34 @@ to banked increases noticed on or after **15 September 2026**. That date is in t
 today, which makes the pending ordinance more directly relevant to a notice served now than the
 previous wording conveyed. It is still **not law** (Legistar: Pending Committee Action, no final
 action). No figure is changed; the item is published as flag `H-22` and in the landing-page warning.
+
+---
+
+---
+
+# Session Addendum — `arena/bfd568c0` (2026-11-10)
+
+## Claim — official status refresh
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Refresh proposed-cap status and source dates; task scope superseded by integrated PR #22 before duplicate content changes were applied | resolved by PR #22 | `arena/bfd568c0` | `hub/data.json`, `hub/build.py`, generated `index.html`, `hub/sources.html`, `hub/flags.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, this addendum only |
+
+**Claim rationale.** The official Rent Board page was updated on 2026-11-09 with a notice about proposed File #261020 and a proposed applicability date for banked increase notices. This is a material change since the canonical data was last verified on 2026-11-08. No other session scope is being edited. The branch is platform-pinned to `arena/bfd568c0-rentincreasesf1`; this task stays on that branch.
+
+**Independent source check:** on 2026-11-10, re-fetched SF Rent Board `Learn about rent increases` (including its 2026-11-09 alert) and the official Legistar record for File #261020. Confirmed the Rent Board says the file is not enacted and subject to change; Legistar shows `Pending Committee Action`, no final action, and no enactment date. Session `arena/54b96b1f` independently integrated the same update as PR #22 before this session applied content edits; its merged work was retained instead of duplicated.
+
+**Rebase coordination note:** `origin/main` advanced while this session was working: PR #21 was merged by PR #23, PR #22 integrated the same proposed-cap refresh, and PR #27 re-verified 16 official sources. Append-only coordination entries conflicted during rebase; records from sessions 379bda6c, 54b96b1f, 68f1fe88, and this session are preserved. No source, page, data, or verification work from another session was discarded or re-applied.
+
+
+**Final disposition:** PR #22 (<https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/22>) completed this session's intended public update, with its own official source citations, verification, merge, and publication. This branch will not duplicate changes to `hub/data.json`, generated pages, or verification gates.
+
+## Final verification and publication handoff — `arena/bfd568c0` (2026-11-10)
+
+* **Official re-check performed independently:** SF Rent Board [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) and [Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) both carry the November 9, 2026 proposed-changes notice. It says File #261020 is **not enacted and subject to change**; if enacted as currently proposed, it would apply to banked increases noticed on/after September 15, 2026 and capital-improvement increases based on petitions filed on/after that date. [Legistar](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770) rechecked 2026-11-10 still shows Pending Committee Action, with no final action or enactment date.
+* **No duplicate website patch:** concurrent PR [#22](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/22) integrated the same proposed-cap status update and H-22 before this session's content edits were retained. PR [#27](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/27) subsequently re-fetched 16 official sources on 2026-11-10, refreshed individual dates, confirmed no rate/date/figure/legal conclusion changed, and fixed a markdown table rendering issue in the executive summary. PR #22 merged at `2026-11-10T05:43:23Z`; PR [#25](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/25) recorded that integration. Annual-only figures and conditional banked scenarios remain unchanged; pending legislation is not applied as current law.
+* **Local verification on the combined current tree (after PR #27):** regenerated `hub/build.py` and `assurance/build.py` with no committed-output drift; `tools/verify_hub.py` **1,551 checks / 0 errors**; `tools/verify_assurance.py` **1,749 / 0**; `tools/check_links.py` OK; `tools/check_site.py` **781 / 0**; `integration/verify.py` PASS (57 rows); `audit/verify_all.py` PASS (137 rows); `dashboard/verify.py` OK; `review/verify.py` PASS. Conditional arithmetic unchanged: U1 $63.92 annual / $119.85 combined; U2 $50.40 annual / $412.65 combined. Current-file privacy checks passed; historic Git exposure of tenant initials remains flagged and is not erased by anonymizing current pages.
+* **Publication:** GitHub Pages API reports `status=built`, legacy source `main` / root `/`, HTTPS enforced. After PR #27, deployment [42764370075](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42764370075), `Verify site` [42764371238](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42764371238), `Final assurance` [42764371210](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42764371210), and `Verify published site` [42764371506](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42764371506) succeeded on `main` commit `3a077617adad93096c7f574882717122ca4c4d15`. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.
+* **Disposition:** the requested site and update are live through PR #22, and all current integration checks pass. This branch adds only the coordination record; no redundant PR for already-merged site content is opened. Unresolved private facts and legal/source cautions remain on the Flagged for Review page.
+
+**PR #28 conflict resolution log:** The first `gh pr merge 28 --merge` attempt was rejected because `main` had advanced to PR #27 and GitHub reported a non-clean merge. This session ran `git pull --rebase origin main`; only the append-only `COORDINATION.md` conflicted. The PR #27 source-audit record and this session's record were both preserved, with no site or data changes discarded. The branch was rebased and its checks must pass again before merge.
