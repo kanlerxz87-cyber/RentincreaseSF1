@@ -1,0 +1,82 @@
+[
+  {
+    "id": "RA-BA23-01",
+    "target": "hub/data.json (S26, H-22) & index.html",
+    "severity": "Medium — Incomplete Official Detail",
+    "status": "Flagged for Review (Cross-Session Request Logged)",
+    "finding": "Canonical S26 and H-22 note pending Board of Supervisors File No. 261020 and the November 9, 2026 SF.gov retroactive-notice box, but omit three material mechanics from the official City Attorney Legislative Digest (Leg Dig Ver1): (1) the 10% cap applies to Banked + Capital Improvement increases relative to the lowest base rent in effect during the previous 12 months (distinct from the 1.6% annual CPI allowance); (2) the proposed cap sunsets December 31, 2029; and (3) banked amounts exceeding 10% are NOT forfeited — they accumulate and could be imposed on or after January 1, 2030, as otherwise permitted by law.",
+    "source_id": "CS13"
+  },
+  {
+    "id": "RA-BA23-02",
+    "target": "README.md (lines 20, 42, 46, 57)",
+    "severity": "Low — Stale Metadata / Count Drift",
+    "status": "Flagged for Review (Cross-Session Request Logged)",
+    "finding": "Line 20 states File #261020 was re-checked on 2026-11-08 (whereas S26 in hub/data.json was updated to 2026-11-10 in PR #22); line 42 describes audit/final-integration/ as a '23-source live-retrieval manifest' (it has 29 entries); line 46 says '13 tenant-side review checks' (hub/data.json has 14); and line 57 quotes 1,545 canonical / 1,742 assurance checks across 171 files (actual on main @ 6376c19: 1,551 / 1,748 across 170 files) and says '23 retrieved 2026-11-07, 6 retrieved 2026-11-08' (whereas 5 entries now carry 2026-11-10).",
+    "source_id": "CS12"
+  },
+  {
+    "id": "RA-BA23-03",
+    "target": "SOURCES.md (lines 3, 39) & VERIFICATION.md (lines 3, 23, 66–67)",
+    "severity": "Low — Stale Retrieval Dates & Check Counts",
+    "status": "Flagged for Review (Cross-Session Request Logged)",
+    "finding": "SOURCES.md line 3 and VERIFICATION.md line 23 still state S01–S23 were retrieved on 2026-11-07 and S24–S29 on 2026-11-08, and SOURCES.md line 39 lists File #261020 as re-checked 2026-11-08, drifting from hub/data.json and source-manifest.json after PR #22 updated S03, S04, S05, S10, and S26 to 2026-11-10.",
+    "source_id": "CS02"
+  },
+  {
+    "id": "RA-BA23-04",
+    "target": "EXECUTIVE_SUMMARY.md (line 21)",
+    "severity": "Low — Mixed Date Stamps in Header Callouts",
+    "status": "Flagged for Review (Cross-Session Request Logged)",
+    "finding": "Line 19 adds a 2026-11-10 Rent Board warning callout, while the immediately following callout on line 21 still says 'Legistar status on 2026-11-08: Pending Committee Action — not law' even though Legistar File #261020 was re-verified on 2026-11-10 with the same Pending Committee Action status.",
+    "source_id": "CS12"
+  },
+  {
+    "id": "RA-BA23-05",
+    "target": "hub/data.json (S17) & hub/licensing.html",
+    "severity": "Low — Upcoming 2027 Fee Exemption Deadline Omitted",
+    "status": "Documented in /compliance/",
+    "finding": "Official SF Rent Board Fee guidance fetched on 2026-11-10 specifies that the deadline to submit a Request for Exemption for the 2027 Rent Board Fee cycle is December 14, 2026 (for bills due March 1, 2027). Canonical S17 quotes the $59.00 / $29.50 2026–27 fee and March 1 deadline accurately, and /compliance/ adds the December 14, 2026 exemption-window cutoff for completeness.",
+    "source_id": "CS06"
+  },
+  {
+    "id": "RA-BA23-06",
+    "target": "Superseded Archived Editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/)",
+    "severity": "Medium — Pre-Nov-9-2026 Snapshot Drift",
+    "status": "Correctly Labeled Superseded on Root",
+    "finding": "All seven earlier parallel-session editions were generated on 2026-11-06 or 2026-11-07 prior to the SF Rent Board's November 9, 2026 notice on sf.gov/learn-about-rent-increases-san-francisco and sf.gov/information--banked-rent-increases warning that pending File No. 261020, if enacted as drafted, would apply retroactively to banked rent increases noticed on or after September 15, 2026. Root index.html properly labels those archives as superseded.",
+    "source_id": "CS09"
+  },
+  {
+    "id": "RA-BA23-07",
+    "target": "review/build.py",
+    "severity": "Low — Non-Idempotent Date Footer in Superseded Archive",
+    "status": "Verified Benign (Not Invoked by CI)",
+    "finding": "Running review/build.py on a date after 2026-11-07 updates a dynamic date stamp in the archived review/ footer. Preserved CI workflows run review/verify.py without overwriting committed HTML; compliance/build.py uses deterministic data-driven dates only.",
+    "source_id": "CS08"
+  },
+  {
+    "id": "RA-BA23-08",
+    "target": "Official SF.gov Web Worked Examples (Topic 050 & Topic 503)",
+    "severity": "Medium — Official Agency Webpage Year Typos",
+    "status": "Verified — Form 571 Controls",
+    "finding": "Live 2026-11-10 fetch confirms SF.gov 'Learn about rent increases' says 'The annual allowable increase in effect on June 1, 2025 is 1.6%' inside an example for a June 1, 2026 increase (June 1, 2025 was 1.4% per Form 571), and SF.gov 'Banked rent increases' says 'in effect on August 1, 2024 (1.4%)' inside an August 1, 2025 example (August 1, 2024 was 1.7%). Official Form 571 PDF is internally consistent and controls.",
+    "source_id": "CS08"
+  },
+  {
+    "id": "RA-BA23-09",
+    "target": "Current Repository Tree vs. Historical Git Commits (Privacy Audit)",
+    "severity": "High — Historical Git Commit Exposure Remains Open",
+    "status": "Current Tree Clean (0 Tokens); History Flagged",
+    "finding": "SHA-256 digest and regex privacy scan across 100% of current tracked files on main @ 6376c19 confirms zero tenant initials, names, emails, or street addresses. However, pre-redaction commits from 2026-11-06 remain in public Git history because platform single-branch rules prohibit force-pushing rewritten history across main.",
+    "source_id": "CS02"
+  },
+  {
+    "id": "RA-BA23-10",
+    "target": "Canonical Arithmetic, Form 571 Schedule, and Statutory Citations (hub/data.json & assurance/)",
+    "severity": "Verified Clean — Zero Arithmetic or Rate Defects",
+    "status": "Independently Re-Confirmed (2026-11-10)",
+    "finding": "All 46 Form 571 rate periods (4/1/1982–2/28/2027), every conditional Unit 1 figure ($63.92, $55.93, $119.85, $4,058.92, $4,114.85), every conditional Unit 2 figure ($50.40, $362.25, $412.65, $3,200.40, $3,562.65), and every 30/35/90/95-day service deadline in hub/data.json recompute identically under both Decimal and exact rational Fraction arithmetic.",
+    "source_id": "CS08"
+  }
+]
