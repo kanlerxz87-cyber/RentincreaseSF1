@@ -118,3 +118,89 @@ The canonical [Flagged for Review](hub/flags.html) contains 24 items. High-sever
 - Post-merge `Verify site` run `42416341845`, `Verify published site` run `42416341852`, and `Final assurance` run `42416341861` all succeeded.
 - GitHub Pages build/deployment run `42416341186` succeeded; the Pages API reported `built` for `main` `/`.
 - The deployed root, `assurance/index.html`, and `hub/flags.html` were retrieved after deployment and confirmed to contain the corrected license answer, 12 corrections, 29 official sources, and 24 flags.
+
+---
+
+# Dated re-verification — 2026-11-10
+
+**Session:** `arena/68f1fe88-rentincreasesf1` · **Base:** `main` @ `7eb20dc` · **Result: no claim, figure,
+date or rate changed.**
+
+This pass re-opened every load-bearing official source against the text the site publishes, instead of
+trusting the earlier sessions' notes. Sixteen sources were re-fetched and read in full on **2026-11-10**:
+S01, S02, S03, S04, S05, S06, S07, S08, S10, S16, S17, S18, S19, S24, S26, S27. Ten sources stand at
+their 2026-11-07 retrieval date and three at 2026-11-08; their published passages were left unchanged
+because they were not re-opened in this pass. Every source keeps its own retrieval date.
+
+## What was checked, and the outcome
+
+| Claim as published | Official text re-read | Outcome |
+|---|---|---|
+| 1.6% for increases effective 1 Mar 2026 – 28 Feb 2027 | Form 571, and the learn-about-rent-increases page | Matches |
+| Complete 1982–2027 rate table (46 rows) | Form 571 full table, read row by row | Every row matches |
+| No individual-owner or small-building exemption from reporting/licence | §37.15 (a)–(e) | Matches: duty attaches to "owners"; licence suspended during non-compliance and restored prospectively |
+| Licence is automatic after reporting, free, and need not be attached to the notice | Housing Inventory page + licence FAQ | Matches |
+| Hard gate is a current licence on the **effective date**, not the notice date | Housing Inventory "Deadline" block | Matches |
+| One increase per 12 months; 30-day notice at ≤10%, 90 days above 10%; +5 days if mailed | §37.3(a), Civil Code §827(b)(2)–(3), CCP §1013 | Matches |
+| Notice must state dollar amount, percentage, effective date, and which part is banked | Learn-about page, banked page, §4.10(a), §4.12(b) | Matches |
+| Banked amounts are added, never compounded, never rounded up, and need no Board approval | Banked page + §4.12(a) | Matches |
+| No surcharge merely because an additional occupant moved in | Learn-about page "Additional occupants" | Matches |
+| AB 1482 is 8.8% for SF (1 Aug 2026 – 31 Jul 2027) and does **not** apply to units under the local cap | AB 1482 page | Matches exactly |
+| Rent Board Fee is $59.00 per dwelling unit, $29.50 recoverable, due 1 March | Rent Board Fee page | Matches |
+| Coverage date test is units built on or before 13 June 1979 | Learn about SF rental laws | Matches |
+| Algorithmic-device ban binds "a landlord" and needs no corporate form | §37.10C (a)–(d) | Matches |
+| Business Registration Certificate: sub-four-unit carve-out is conditional | Treasurer lessor guidance | Matches: "by reason of that fact alone", other activity may trigger registration |
+| File #261020 is pending, not law, no enactment date | Legistar record | Matches: Status "Pending Committee Action", Final action blank, Enactment date blank |
+| Discriminatory rent increase is bad-faith harassment | §37.10B(a)(9) | Matches |
+| Certified O&M increase capped at 7% above the annual allowance | §6.10(d) | Matches |
+| §6.14 notice served on later occupants within a reasonable time (~60 days); co-tenants are outside Costa-Hawkins | §6.14 / Costa-Hawkins page | Matches |
+| Free legal help is a referral list, not guaranteed representation | Rent Board Referral Listing | Matches: "The Rent Board cannot refer you to individual attorneys"; Sunset office listed |
+
+## Arithmetic re-derived independently
+
+Recomputed from the transcribed Form 571 table with cent truncation (never rounding up), not with the
+repository's own helper:
+
+| Scenario | Result | Reproduces published? |
+|---|---|---|
+| Unit 1 annual, 1.6% × $3,995.00 | $63.92 → $4,058.92 | Yes |
+| Unit 1 skipped 1.4% (available 2026-02-01) | $55.93 | Yes |
+| Unit 1 combined 3.0% | $119.85 → $4,114.85 | Yes |
+| Unit 2 six skipped components 1.8+0.7+2.3+3.6+1.7+1.4 | 11.5% = $362.25 | Yes |
+| Unit 2 annual 1.6% | $50.40 → $3,200.40 | Yes |
+| Unit 2 combined 13.1% | $412.65 → $3,562.65 | Yes |
+| Unit 2 2026-06-01 allowance vs 2027-02-28 effective date | 272 days elapsed — **not** banked, lost | Yes, matches the flag |
+| Notice dates: 2027-02-01 − 30/−35 days; 2027-02-28 − 90/−95 days | 2027-01-02, 2026-12-28, 2026-11-30, 2026-11-25 | Yes |
+
+## Privacy
+
+Published files contain no tenant names, initials, street address, or contact details; placeholders are
+used and the supplied dates and dollar amounts are unchanged. Re-scanned all current text files
+(170 files) plus a targeted search for the supplied initials and for any street-address pattern: no hits.
+The pre-existing flag about tenant initials in earlier **Git history** remains open and is not fixed by a
+current-file scan; the human-readable repository now contains nine commits, none of which adds such text.
+
+## Gates re-run on the combined tree (2026-11-10)
+
+| Suite | Result |
+|---|---|
+| `hub/build.py` | 9 pages; arithmetic unchanged |
+| `assurance/build.py` | `assurance/index.html` + 29 manifest rows |
+| `tools/verify_hub.py` | **1,551 checks, 0 errors**; 210 cited rows; 29/29 sources cited |
+| `tools/verify_assurance.py` | **1,748 checks, 0 errors**; 29/29 manifest; 170 files privacy-scanned |
+| `tools/check_links.py` | OK — 10 published + 7 archived pages, no personal tokens |
+| `build/build.py` + `tools/check_site.py` | 781 checks, 0 errors |
+| `integration/verify.py` | PASS, 57 source-linked rows |
+| `dashboard/verify.py` | OK |
+| `audit/verify_all.py` | VERIFICATION PASSED, 137 rows |
+| `review/build.py` + `review/verify.py` | PASSED (regenerated footer date reverted, as before) |
+
+## Flagged for review — nothing new, nothing closed
+
+All 24 existing flags remain open and are published on the Flagged for Review page. This pass added no
+new irregularity and closed none. The one item refreshed is `H-22`: the Rent Board's **9 November 2026**
+notice states that, if File #261020 is enacted as currently proposed, it would apply to banked increases
+noticed on or after **15 September 2026** — a date already past. The ordinance is still not law, no
+figure changes, and the flag now says plainly that a notice served today could be affected if the
+proposal becomes law as described. Unverified official-confirmation cells (licence status, parcel
+coverage, current base rents, ledgers, lease status) remain blank.
