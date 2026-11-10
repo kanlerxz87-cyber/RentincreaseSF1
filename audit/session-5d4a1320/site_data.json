@@ -573,16 +573,16 @@
     },
     {
       "audit_id": "RA-5D4-02",
-      "file_or_scope": "README.md (Lines 44, 49, 62 — Minor Count Drift)",
-      "finding_status": "Flagged — Minor Documentation Count Drift",
-      "details": "Root README.md states '13 tenant-side review checks' (actual in hub/data.json: 14), '23-source live-retrieval manifest' (actual in source-manifest.json: 29), and '1,545 canonical checks and 1,742 assurance checks' (actual after PR #22: 1,551 and 1,748). Logged in COORDINATION.md without editing concurrent session's claimed file.",
+      "file_or_scope": "README.md (Root Documentation — Reconciled on 2026-11-10)",
+      "finding_status": "Verified Reconciled",
+      "details": "Initial audit at 709e07a spotted stale count summaries ('13 review checks', '23-source manifest', '1,545/1,742 checks'); following rebase onto main @ 86c3a84, concurrent PRs #30/#34 updated README.md to '14 tenant-side review checks', '29-source live-retrieval manifest', and '1,592 canonical / 1,812 assurance checks'.",
       "source_id": "GS-01"
     },
     {
       "audit_id": "RA-5D4-03",
-      "file_or_scope": "SOURCES.md & VERIFICATION.md (Retrieval Date Summary Header)",
-      "finding_status": "Flagged — Minor Header Date Drift",
-      "details": "Root SOURCES.md and VERIFICATION.md headers list retrieval dates '2026-11-07 (S01–S23) and 2026-11-08 (S24–S29)', whereas PR #22 updated S03, S04, S05, S10, and S26 in hub/data.json and source-manifest.json to '2026-11-10'. All 29 URLs resolve cleanly.",
+      "file_or_scope": "SOURCES.md & VERIFICATION.md (Root Source & Verification Records)",
+      "finding_status": "Verified Reconciled",
+      "details": "Initial audit at 709e07a flagged 2026-11-07/08 header dates; following rebase onto main @ 86c3a84, SOURCES.md and VERIFICATION.md reflect full 2026-11-10 live verification across all 29 canonical sources, and all 29 external URLs resolve cleanly to official government hosts.",
       "source_id": "GS-09"
     },
     {
@@ -803,11 +803,11 @@
     {
       "flag_id": "FG-18",
       "severity": "Medium",
-      "item": "Historical Public Git Commit Privacy Warning & Minor Root Markdown Drift",
+      "item": "Historical Public Git Commit Privacy Warning (Current Working Tree 100% Clean)",
       "owner_brief_input": "Repository-wide audit on 2026-11-10",
       "official_confirmed_value": "0 personal tokens in current files; historical commit flagged",
       "status": "Open Repo Governance Item — Flagged for Owner Review",
-      "explanation": "Current tracked files across the entire repository contain zero personal identifiers, but an early pre-redaction Git commit in public history contained raw initials (requires GitHub Support / admin history rewrite to purge), and root README.md/SOURCES.md have minor count/date drift logged in RA-5D4-02/03.",
+      "explanation": "Current tracked files across the entire repository contain zero personal identifiers, but an early pre-redaction Git commit in public history contained raw initials (purging history requires repository-admin / GitHub Support action outside single-branch PR workflows).",
       "source_id": "GS-02"
     }
   ]

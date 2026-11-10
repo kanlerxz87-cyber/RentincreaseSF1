@@ -69,16 +69,16 @@
           </tr>
           <tr id="RA-5D4-02">
             <td><strong>RA-5D4-02</strong></td>
-            <td><code>README.md (Lines 44, 49, 62 — Minor Count Drift)</code></td>
-            <td><span class="badge badge-medium">Flagged — Minor Documentation Count Drift</span></td>
-            <td>Root README.md states &#x27;13 tenant-side review checks&#x27; (actual in hub/data.json: 14), &#x27;23-source live-retrieval manifest&#x27; (actual in source-manifest.json: 29), and &#x27;1,545 canonical checks and 1,742 assurance checks&#x27; (actual after PR #22: 1,551 and 1,748). Logged in COORDINATION.md without editing concurrent session&#x27;s claimed file.</td>
+            <td><code>README.md (Root Documentation — Reconciled on 2026-11-10)</code></td>
+            <td><span class="badge badge-low">Verified Reconciled</span></td>
+            <td>Initial audit at 709e07a spotted stale count summaries (&#x27;13 review checks&#x27;, &#x27;23-source manifest&#x27;, &#x27;1,545/1,742 checks&#x27;); following rebase onto main @ 86c3a84, concurrent PRs #30/#34 updated README.md to &#x27;14 tenant-side review checks&#x27;, &#x27;29-source live-retrieval manifest&#x27;, and &#x27;1,592 canonical / 1,812 assurance checks&#x27;.</td>
             <td><a class="src-link" href="https://www.sf.gov/information/sec-3715-reporting-obligations-licensing" target="_blank" rel="noopener">San Francisco Rent Board (GS-01)</a><span class="src-sub"><a href="sources.html#GS-01">Verbatim excerpt &rarr;</a></span></td>
           </tr>
           <tr id="RA-5D4-03">
             <td><strong>RA-5D4-03</strong></td>
-            <td><code>SOURCES.md &amp; VERIFICATION.md (Retrieval Date Summary Header)</code></td>
-            <td><span class="badge badge-medium">Flagged — Minor Header Date Drift</span></td>
-            <td>Root SOURCES.md and VERIFICATION.md headers list retrieval dates &#x27;2026-11-07 (S01–S23) and 2026-11-08 (S24–S29)&#x27;, whereas PR #22 updated S03, S04, S05, S10, and S26 in hub/data.json and source-manifest.json to &#x27;2026-11-10&#x27;. All 29 URLs resolve cleanly.</td>
+            <td><code>SOURCES.md &amp; VERIFICATION.md (Root Source &amp; Verification Records)</code></td>
+            <td><span class="badge badge-low">Verified Reconciled</span></td>
+            <td>Initial audit at 709e07a flagged 2026-11-07/08 header dates; following rebase onto main @ 86c3a84, SOURCES.md and VERIFICATION.md reflect full 2026-11-10 live verification across all 29 canonical sources, and all 29 external URLs resolve cleanly to official government hosts.</td>
             <td><a class="src-link" href="https://www.sf.gov/learn-about-rent-increases-san-francisco" target="_blank" rel="noopener">San Francisco Rent Board (GS-09)</a><span class="src-sub"><a href="sources.html#GS-09">Verbatim excerpt &rarr;</a></span></td>
           </tr>
           <tr id="RA-5D4-04">
