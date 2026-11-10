@@ -1234,3 +1234,32 @@ pull requests #29, #32, #34, none of which touches them).
 | **Post-Merge `main` CI** | `Verify site` ✅ (run `42766241059`), `Verify published site` ✅ (run `42766241395`), `Final assurance` ✅ (run `42766241128`) |
 | **GitHub Pages Deploy** | `pages build and deployment` ✅ (run `42766240601`); Pages API `status=built`, `https_enforced=true`, source `main /`. Live-fetched and verified at <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/> and <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/flagged-for-review.html>. |
 
+---
+
+# Session Addendum — `arena/ba230459-rentincreasesf1` (2026-11-10 UTC)
+
+**Session ID:** `arena-ba230459` · **Branch:** `arena/ba230459-rentincreasesf1` (platform-pinned branch; per environment rules, no other branch may be created, switched to, or pushed). `git pull --rebase origin main` is executed before every push.
+
+## Concurrent-session check, rebase log & non-overlapping claim (filed before writing any scope files)
+
+- **Rebase conflict log (1–6):** During claim and build pushes, `origin/main` advanced through PRs #22–#36 (`7eb20dc`..`734394e`), producing append-only conflicts at the tail of `COORDINATION.md` only (zero conflicts in `compliance/**` or `audit/session-ba230459/**`). Every concurrent session's record (`arena-54b96b1f`, `arena-379bda6c`, `arena-68f1fe88`, `arena-bfd568c0`, `arena-7ab74b3e`, `arena-39dd26a4`, `arena-ba4924e8`, `arena-5d4a1320`) was preserved 100% verbatim and this section was appended below them; zero lines were discarded.
+- **Disjoint scope selection:** Multiple concurrent sessions actively claimed `hub/**`, `index.html`, `assurance/**`, `audit/final-integration/**`, legacy archives, and root Markdown files (<60 minutes old). Per the parallel-sessions rule (*never start a task another session has claimed; keep scopes non-overlapping; log cross-scope requests in COORDINATION.md instead of editing*), this session claims strictly disjoint file scopes:
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `BA23-T1` | Live 2026-11-10 line-by-line verification of 37 official SF, California, and Federal primary sources (`sf.gov`, `portal.sfrb.org`, `sftreasurer.org`, `sfgov.legistar.com`, `leginfo.legislature.ca.gov`, `courts.ca.gov`, `govinfo.gov`, `hud.gov`, `justice.gov`, `census.gov`) | done | `arena-ba230459` | `audit/session-ba230459/sources_2026_11_10.json`, `compliance/data/sources.json` |
+| `BA23-T2` | Line-by-line repository verification audit against live official sources; record any stale text, broken links, or newly updated official guidance | done | `arena-ba230459` | `audit/session-ba230459/REPO_AUDIT.md`, `compliance/data/repo_audit.json` |
+| `BA23-T3` | Strictly anonymized Executive Summary (individual-owner Rent Board license process at forefront) and conditional Unit 1 & Unit 2 94122 analysis (placeholder names only; exact dates & dollar amounts; blank official-confirmation cells for unverified private inputs) | done | `arena-ba230459` | `compliance/EXECUTIVE_SUMMARY.md`, `compliance/data/site_data.json` |
+| `BA23-T4` | Clean, dashboard-style GitHub Pages edition at `/compliance/` (landing page + categorized subpages + `compliance/flagged.html` + `compliance/sources.html`, with an official source link on every table row) | done | `arena-ba230459` | `compliance/build.py`, `compliance/index.html`, `compliance/*.html`, `compliance/assets/**`, `compliance/README.md` |
+| `BA23-T5` | Automated line-by-line link, anchor, citation-per-row, exact rational/decimal arithmetic, blank-cell, and SHA-256 privacy verification + full existing CI suite compatibility check | done | `arena-ba230459` | `compliance/verify.py`, `audit/session-ba230459/VERIFICATION.md` |
+| `BA23-T6` | Rebase onto `origin/main`, log any cross-session requests, open and merge PR from `arena/ba230459-rentincreasesf1` to `main`, confirm GitHub Pages deployment, and record PR & deploy result here | in progress | `arena-ba230459` | `COORDINATION.md` (append-only) |
+
+**Explicitly not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `site/**`, `research/**`, `data/**`, `build/**`, `tools/**`, `.github/workflows/**`, and shared root Markdown files claimed by active concurrent sessions.
+
+### Verification summary & cross-session requests (`arena-ba230459`, 2026-11-10 UTC)
+
+- **New `/compliance/` verification suite (`compliance/verify.py`):** **PASS — 3,277 checks, 0 errors** across 10 deterministic HTML pages, **235/235** table rows carrying direct `https://` official `.gov`/City-portal links + resolving `#CSxx` anchors, **16/16** physically blank (`<td></td>`) unverified confirmation cells on both `compliance/index.html` and `compliance/flagged.html`, dual `Decimal` + `Fraction` scenario math (`U1-A` `$63.92`, `U1-B` `$119.85`, `U2-A` `$50.40`, `U2-B` `$412.65`, `U2-C` `$365.40`), `datetime.date` service deadlines, 46-row `Form 571` parity with `hub/data.json`, and SHA-256 + regex privacy scanning.
+- **Preserved CI & repository suites:** `tools/verify_hub.py` (**1,592 checks / 0 errors**), `tools/verify_assurance.py` (**1,812 checks / 0 errors**, 192 current text files privacy-scanned), `tools/check_links.py` (OK), `tools/check_site.py` (**781 checks / 0 errors**), `integration/verify.py` (PASS), `dashboard/verify.py` (OK), `audit/verify_all.py` (OK), `review/verify.py` (PASS), and local HTTP server smoke test (**14/14 URLs 200 OK**).
+- **Optional cross-session requests for future shared-file maintainers (logged without editing claimed files):**
+  1. Consider linking `/compliance/` from `README.md`'s repository directory table alongside the preserved companion editions.
+  2. Consider adding `Cal. Civ. Code §1942.4` (35-day unabated housing citation rent-increase bar), `SF Rent Board Topic 363` (confirming financial hardship deferral applies to passthroughs/O&M rather than annual/banked CPI increases), and Unit 2 partial-banked `Scenario U2-C` (`10.0%` banked + `1.6%` annual = `11.6%` / `+$365.40`, retaining `1.5%` banked) to `hub/data.json` if a future canonical pass is run.

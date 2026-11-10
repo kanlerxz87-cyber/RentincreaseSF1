@@ -1,0 +1,82 @@
+[
+  {
+    "id": "RA-BA23-01",
+    "target": "hub/data.json (29 sources) vs. /compliance/ (37 sources)",
+    "severity": "Enhancement — 8 Additional Primary Authorities Added in /compliance/",
+    "status": "Added & Verified Live in /compliance/ (2026-11-10)",
+    "finding": "Canonical hub/data.json registers 29 official sources (all verified clean on main @ 7dad58d). Our /compliance/ edition adds 8 additional primary official sources fetched live on 2026-11-10: Cal. Civ. Code §1942.4 (35-day unabated housing citation rent-increase bar), Cal. Civ. Code §51 (Unruh Civil Rights Act), SF BOS File #261020 Legislative Digest PDF (Leg Dig Ver1), SF Rent Board Topic 301 (Landlord Petitions & Passthroughs), SF Rent Board Topic 363 (Tenant Financial Hardship non-applicability to annual/banked CPI increases), 42 U.S.C. §3604 GPO text, 2024 HUD/Census Rental Housing Finance Survey (CBDRB-FY25-0428), and direct Rent Board Portal documentation.",
+    "source_id": "CS25"
+  },
+  {
+    "id": "RA-BA23-02",
+    "target": "hub/data.json (S26, H-22) & Unit 2 Catch-Up Modeling",
+    "severity": "Medium — Legislative-Risk Scenario Added in /compliance/",
+    "status": "Resolved on Canonical in PR #30 + Extended Scenario U2-C in /compliance/",
+    "finding": "Initial audit on 6376c19 flagged missing File #261020 Legislative Digest details (10% of lowest prior-12-month base rent cap on Banked + Capital Improvement increases through Dec. 31, 2029, with excess banked % preserved for Jan. 1, 2030+); concurrent PR #30 added those text notes to hub/data.json. In /compliance/, we additionally model Scenario U2-C (10.0% partial banked = $315.00 + 1.6% annual = $50.40 -> 11.6% / +$365.40 / $3,515.40, retaining 1.5% banked under Rule 4.12) alongside annual-only (1.6% / +$50.40) and enacted-law full catch-up (13.1% / +$412.65).",
+    "source_id": "CS13"
+  },
+  {
+    "id": "RA-BA23-03",
+    "target": "README.md, SOURCES.md, VERIFICATION.md, EXECUTIVE_SUMMARY.md",
+    "severity": "Low — Metadata Drift Audited & Confirmed Repaired in PR #30",
+    "status": "Verified Clean on main @ 7dad58d",
+    "finding": "Initial audit on 6376c19 detected stale counts and dates ('23-source manifest', '13 checks', 1,545/1,742 check counts, and mixed 2026-11-08 File #261020 dates). Re-audit after rebasing onto main @ 7dad58d confirms concurrent PR #30 reconciled those root Markdown files to 29 sources, 14 checks, 2026-11-10 retrieval dates, and 1,592 / 1,812 check counts.",
+    "source_id": "CS12"
+  },
+  {
+    "id": "RA-BA23-04",
+    "target": "VERIFICATION.md (lines 127–136 vs. lines 23 & 211)",
+    "severity": "Low — Historical Multi-Session Section Layering",
+    "status": "Flagged for Reader Clarity",
+    "finding": "VERIFICATION.md preserves sequential session sections in one file: lines 23 & 211 state all 29/29 sources were live-verified on 2026-11-10 (PR #30), whereas an earlier appended section at lines 127–136 ('Dated re-verification — 2026-11-10' from PR #27) still describes 16 sources re-fetched and 13 left at 2026-11-07/08. Both are accurate historical records of their respective PRs, but readers should treat the PR #30 section (29/29) as controlling.",
+    "source_id": "CS02"
+  },
+  {
+    "id": "RA-BA23-05",
+    "target": "Superseded Archived Editions (docs/, docs/v2/, dashboard/, portal/, integration/, review/, site/)",
+    "severity": "Medium — Pre-Nov-9-2026 Snapshot Drift",
+    "status": "Labeled Superseded — Flagged for Manual Reviewers",
+    "finding": "All seven preserved historical editions were generated on 2026-11-06 or 2026-11-07, prior to the SF Rent Board's November 9, 2026 warning box on sf.gov/learn-about-rent-increases-san-francisco and sf.gov/information--banked-rent-increases regarding proposed File No. 261020's September 15, 2026 retroactive banked-notice cutoff. Reviewers should use root index.html or /compliance/, not the pre-Nov-9 archives.",
+    "source_id": "CS09"
+  },
+  {
+    "id": "RA-BA23-06",
+    "target": "review/build.py",
+    "severity": "Low — Non-Idempotent Date Stamp in Superseded Archive Builder",
+    "status": "Verified Benign (Not Invoked by CI)",
+    "finding": "Re-running review/build.py on a later calendar date rewrites a dynamic date footer in review/*.html, whereas verify.yml requires clean '*.html' diffs. CI invokes review/verify.py only; compliance/build.py uses strictly deterministic JSON-stored dates.",
+    "source_id": "CS08"
+  },
+  {
+    "id": "RA-BA23-07",
+    "target": "Official SF.gov Web Worked Examples (Topic 050 & Topic 503)",
+    "severity": "Medium — Official Agency Webpage Year-Label Typos",
+    "status": "Verified — Form 571 Controls",
+    "finding": "Live 2026-11-10 read confirms SF.gov 'Learn about rent increases' states 'The annual allowable increase in effect on June 1, 2025 is 1.6%' inside a June 1, 2026 example (June 1, 2025 was 1.4% per Form 571), and SF.gov 'Banked rent increases' states 'in effect on August 1, 2024 (1.4%)' inside an August 1, 2025 example (August 1, 2024 was 1.7%). Official Form 571 PDF is internally consistent and controls.",
+    "source_id": "CS08"
+  },
+  {
+    "id": "RA-BA23-08",
+    "target": "SF Rent Board Rules §4.12(a) vs. SF.gov Banking Webpage Phrasing",
+    "severity": "Low — Statutory vs. Plain-English Measuring Point Nuance",
+    "status": "Reconciled Without Conflict",
+    "finding": "SF.gov's banking guide says a skipped increase is banked only if 'at least 24 full months pass without any rent increase,' while Rule 4.12(a) says 'A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed.' Both describe the same first-banked-year milestone from different starting points (24 months from initial lease start = 12 months after the first skipped 12-month anniversary).",
+    "source_id": "CS11"
+  },
+  {
+    "id": "RA-BA23-09",
+    "target": "Current Repository Tree vs. Historical Git Commits (Privacy Audit)",
+    "severity": "High — Historical Git Commit Exposure Remains Open",
+    "status": "Current Tree Clean (0 Tokens); History Flagged",
+    "finding": "SHA-256 digest and regex privacy scan across 100% of current tracked text files on main @ 7dad58d confirms zero tenant initials, names, emails, or street addresses. However, pre-redaction commits from 2026-11-06 remain in public Git commit history because platform single-branch rules prohibit force-pushing rewritten history across main.",
+    "source_id": "CS02"
+  },
+  {
+    "id": "RA-BA23-10",
+    "target": "Canonical Arithmetic, Form 571 Schedule, and Statutory Citations (hub/data.json & assurance/)",
+    "severity": "Verified Clean — Zero Arithmetic or Rate Defects",
+    "status": "Independently Re-Confirmed (2026-11-10)",
+    "finding": "All 46 Form 571 rate periods (4/1/1982–2/28/2027), every conditional Unit 1 figure ($63.92, $55.93, $119.85, $4,058.92, $4,114.85), every conditional Unit 2 figure ($50.40, $362.25, $412.65, $3,200.40, $3,562.65), and every 30/35/90/95-day service deadline recompute identically under both Decimal and exact rational Fraction arithmetic.",
+    "source_id": "CS08"
+  }
+]
