@@ -1165,3 +1165,29 @@ it over and note the handoff here.
 `arena-54b96b1f` now records its task as **done**, so the canonical scope it held is released. This
 session still treats those files as not its own: anything it finds there is logged under L4 first, and
 is applied only through a completed-scope handoff recorded in this addendum before the write.
+| 2026-11-10 | Second rebase. `main` had advanced to `7dad58d` (PRs #23–#33; sessions `arena-68f1fe88`, `arena/bfd568c0`, `arena/7ab74b3e` and others, all on the canonical files). Same single add/add conflict in `COORDINATION.md`. | Resolved by script: upstream file taken verbatim, this addendum re-appended, with an assertion that upstream is a byte-exact prefix of the result. No other file conflicted. Branch re-pushed with `--force-with-lease`, which rewrites this session's own branch only. |
+
+## Claim extension (logged before writing) — commercial sourcing found in three legacy locations
+
+A census of every link in every published HTML and Markdown file (clickable links and URLs that appear
+only as text) shows that three legacy locations rest on **commercial websites, not official sources**:
+
+| Location | Files | Citations to official hosts | Citations to non-official hosts |
+| --- | --- | --- | --- |
+| `site/` (served live at `/site/`; linked from nowhere) | 7 HTML | 23 | **211**, across 11 commercial hosts; none is a clickable link |
+| `research/` | 4 Markdown | 13 | **142** |
+| `docs/v1/executive_summary.md` | 1 Markdown | 6 | **47** |
+| `docs/v2/` | 13 HTML | 328 | 17 (a legal-text mirror, a non-profit, one commercial site) |
+| every other edition, and the canonical edition | — | all | 0 |
+
+Session `arena/b43dc55e` asked on 2026-11-06 (`RA-03`, `RA-09`) for these files to be cleaned by their
+owning scope. No session did, and every session today lists them as "preserved unchanged". The owner's
+rule is that a value which cannot be confirmed from an official source is left blank and flagged, never
+published. These files therefore cannot stay published as they are.
+
+| ID | Task | Status | Owner | File scope |
+| --- | --- | --- | --- | --- |
+| L6 | Withdraw the commercially sourced content from publication: replace each `site/*.html` page, each `research/*.md` file and `docs/v1/executive_summary.md` with a short withdrawal notice that links to the canonical dashboard and names the last commit at which the original text can still be read. **Nothing is removed from Git history.** | in progress | `arena-ba4924e8` | `site/**`, `research/**`, `docs/v1/executive_summary.md` |
+
+No other session has claimed any of these paths (checked against `main` at `7dad58d` and the three open
+pull requests #29, #32, #34, none of which touches them).
