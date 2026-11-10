@@ -920,7 +920,7 @@ The platform fixes this session to `arena/54b96b1f-rentincreasesf1`; no separate
 
 | Task | Status | Owner | File scope |
 | --- | --- | --- | --- |
-| Current official-source audit, correct material issues, build/test and publish | in progress | `arena-54b96b1f` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `tools/verify_hub.py`, `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py`, `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, and this addendum; only as needed |
+| Current official-source audit, correct material issues, build/test and publish | done; flags need review | `arena-54b96b1f` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `tools/verify_hub.py`, `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py`, `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, and this addendum; only as needed |
 
 No personal identifying information from the request will be added to public files. User-provided case details are not official records and must remain explicitly unverified.
 
@@ -936,3 +936,10 @@ Publishing record: pull request and result to be appended after completion.
 
 **Rebase handoff:** While this session was working, `main` advanced to PR #21 (session `arena-379bda6c`, disjoint hygiene scope). The two append-only task-board entries conflicted during rebase. Both entries were preserved; no other files conflicted or were discarded. All verification was rerun on the combined tree.
 
+## Pull request and deployment record
+
+- [PR #22](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/22) **merged** 2026-11-10 at 05:43:23 UTC; merge commit `7eb20dcca3357aa81a9248a8afdee1496a9961f7`.
+- All three PR verification workflows and all three main-branch verification workflows passed. GitHub Pages [deployment run 42763893528](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42763893528) succeeded for that merge commit; the Pages API reported `built`. The live domain cannot be directly fetched from this sandbox's outbound allowlist, so this confirmation is via GitHub's deployment and Pages APIs, not a browser fetch.
+- The branch push after rebasing the already-published claim required `--force-with-lease`; it rewrote only this session's branch and preserved the concurrently merged session's work.
+
+A second append conflict occurred when PR #23 merged while the deployment record was in flight. The other session’s PR #21 record and this session’s PR #22 record were both preserved; no other files conflicted.
