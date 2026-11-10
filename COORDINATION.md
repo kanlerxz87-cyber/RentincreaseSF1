@@ -1112,3 +1112,56 @@ The completed canonical/assurance scopes are formally taken over only for this f
 - **A39-5:** in progress; PR and deployment results will be recorded below.
 
 **Concurrency resolution:** while A39 was pushing, PRs #21–#27 landed, including an independent 16-source 2026-11-10 refresh and the same November 9 proposal warning. The rebase conflicted in the task board and canonical files. The newer `main` versions were retained, including its more precise 11.5%-banked/1.6%-annual wording and all 16 refreshed retrieval dates. A39 then reapplied only non-duplicative work: two `{n}` counter fixes, review check 15, S05's exact warning passage, documentation reconciliation, and regression checks. Both task-board records were preserved; no concurrent work was discarded.
+
+---
+
+# Session addendum — `arena-ba4924e8` (2026-11-10 UTC)
+
+**Branch:** `arena/ba4924e8-rentincreasesf1` (platform-bound; a `session-<id>/<task>` branch cannot be
+created, switched to or pushed from this session). `git pull --rebase origin main` is run before every push.
+
+## Why this claim is shaped the way it is
+
+Read before claiming: `main` at `5c21915` (PR #20) and the remote branch list. A concurrent session,
+**`arena-54b96b1f`**, pushed a claim at 2026-11-10 05:40 UTC covering the canonical edition
+(`hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `tools/verify_hub.py`, `assurance/**`,
+`audit/final-integration/**`, `tools/verify_assurance.py`, `EXECUTIVE_SUMMARY.md`, `README.md`,
+`SOURCES.md`, `VERIFICATION.md`). **This session does not edit any of those files.** Anything it finds
+in them is logged below as a request, not applied.
+
+That leaves one part of the owner's "review the repo line by line" instruction that no session has
+taken: the **eight superseded editions that GitHub Pages still serves** (76 HTML pages under `docs/`,
+`docs/v1/`, `docs/v2/`, `dashboard/`, `portal/`, `review/`, `site/`, `integration/`). Every earlier
+record describes them as "preserved, not re-certified line by line", and the canonical landing page
+itself says they contain known overstatements — yet seven of the eight carry no notice on the page,
+so a reader who lands on one directly cannot tell it is out of date.
+
+## Claims (exclusive file scope, claimed before writing)
+
+| ID | Task | Status | Owner | File scope |
+| --- | --- | --- | --- | --- |
+| L1 | Live official-source verification on 2026-11-10 of the facts the owner's questions turn on (licence / Housing Inventory, current rate, banking, notice, state and federal layers, pending legislation); sources and findings recorded | in progress | `arena-ba4924e8` | `audit/session-ba4924e8/**` |
+| L2 | Line-by-line review of the eight superseded editions against those official sources; record every statement that conflicts with an official source; mark every superseded page as superseded with a link to the canonical dashboard. **No edition is deleted.** | in progress | `arena-ba4924e8` | `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `site/**`, `integration/**`, `build/build.py`, `audit/build_dashboard.py`, `audit/verify_all.py`, `tools/check_links.py`, `tools/check_site.py`, new files under `tools/` named `*_ba4924e8*` or `legacy_*`, `.github/workflows/pages.yml`, `.github/workflows/verify.yml` — each only as needed |
+| L3 | Triage of unmerged session branches whose claims are more than 60 minutes old with no pull request, for verified findings that never reached `main` (read-only on those branches) | in progress | `arena-ba4924e8` | `audit/session-ba4924e8/**` |
+| L4 | Requests to the canonical owner for anything found in files this session does not own | in progress | `arena-ba4924e8` | `COORDINATION.md` (this addendum only) |
+| L5 | Rebase, run every existing suite, pull request to `main`, merge, confirm Pages, record the result | pending | `arena-ba4924e8` | `COORDINATION.md` (this addendum only) |
+
+**Not claimed / not touched:** everything in `arena-54b96b1f`'s scope listed above; `data/**`,
+`research/**`, `archive/**`, `audit/data/**`, `audit/*.md`, `audit/session-816b4801/**`.
+
+**Privacy:** no personal identifier from the owner's brief is written to any file, commit message or
+pull request by this session. Unit and tenant references use placeholders only; dates and dollar
+amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit, any session may take
+it over and note the handoff here.
+
+## Rebase log (`arena-ba4924e8`)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| 2026-11-10 | First `git pull --rebase origin main` before pushing this claim. `main` had advanced from `5c21915` to `7eb20dc`: PR #21 (`arena-379bda6c`, hygiene) and PR #22 (`arena-54b96b1f`, canonical update for the Rent Board's 9 November notice on File #261020) both merged while this session was reading the board. One add/add conflict, in `COORDINATION.md` only. | Both upstream addenda kept **verbatim** — checked programmatically: the upstream file is a byte-exact prefix of the resolved file — and this addendum appended after them. Nothing discarded. No other file conflicted. |
+
+`arena-54b96b1f` now records its task as **done**, so the canonical scope it held is released. This
+session still treats those files as not its own: anything it finds there is logged under L4 first, and
+is applied only through a completed-scope handoff recorded in this addendum before the write.
