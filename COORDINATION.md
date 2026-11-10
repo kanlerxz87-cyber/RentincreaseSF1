@@ -1043,3 +1043,24 @@ action). No figure is changed; the item is published as flag `H-22` and in the l
 * **Disposition:** the requested site and update are live through PR #22, and all current integration checks pass. This branch adds only the coordination record; no redundant PR for already-merged site content is opened. Unresolved private facts and legal/source cautions remain on the Flagged for Review page.
 
 **PR #28 conflict resolution log:** The first `gh pr merge 28 --merge` attempt was rejected because `main` had advanced to PR #27 and GitHub reported a non-clean merge. This session ran `git pull --rebase origin main`; only the append-only `COORDINATION.md` conflicted. The PR #27 source-audit record and this session's record were both preserved, with no site or data changes discarded. The branch was rebased and its checks must pass again before merge.
+---
+
+# Session Addendum — `arena/7ab74b3e-rentincreasesf1` (2026-11-10 UTC)
+
+**Platform-bound branch:** `arena/7ab74b3e-rentincreasesf1`. No other branch is created, switched to, or pushed. All prior merged work (PRs #1–#25) and concurrent documentation PR #26 (`COORDINATION.md`-only) are preserved.
+
+## Scope claim (recorded before content/code edits)
+
+Prior canonical/assurance work by `arena-54b96b1f` is marked `done` on `main` (`22d62a5`) and `arena-379bda6c` only has a `COORDINATION.md` merge-record PR (#26) open. This session claims a full 29-source live re-verification (`2026-11-10`) and defect/completeness repair pass over the canonical dashboard, independent assurance layer, and root documentation:
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| R1 | Live-fetch and verify all 29 registered sources (`S01`–`S29`), File #261020 legislative text (`Leg Ver1` / `Leg Dig Ver1`), and cross-referenced official rules (`§6.14`, `42 U.S.C. §3604`, Rent Board Fee) on `2026-11-10` | done | `arena-7ab74b3e` | `COORDINATION.md` (this addendum) |
+| R2 | Update `hub/data.json` (`meta.retrieved`, all 29 source `retrieved` dates, exact File #261020 text details including `§37.3(h)` 10%-of-lowest-12-month-base cap, Dec 31 2029 sunset / Jan 1 2030 carryover, `§37.15(b)(2)(F)` reporting amendment, `§6.14(b)/(c)/(d)` distinction, and `2026-12-14` 2027 Rent Board fee exemption deadline) | in progress | `arena-7ab74b3e` | `hub/data.json` |
+| R3 | Fix `hub/assets/style.css` syntax bug (`font-size1.02rem` → `font-size:1.02rem`), fix stale hardcoded counts/dates/publisher breakdown in `hub/build.py` (`13 checks`, `Twenty flagged`, `twenty-three`, `14 SF Rent Board`, `2026-11-07`), and surface File #261020 + Nov 9 warning on `hub/limits.html` & `hub/notice.html` plus `2026-12-14` fee exemption deadline on `hub/licensing.html`; rebuild `index.html` and `hub/*.html` | in progress | `arena-7ab74b3e` | `hub/assets/style.css`, `hub/build.py`, `index.html`, `hub/*.html` |
+| R4 | Update `audit/final-integration/findings.json`, `assurance/build.py`, `assurance/index.html`, and `audit/final-integration/source-manifest.json` for `2026-11-10` full-registry re-verification and `H-22` inclusion; update `tools/verify_hub.py` and `tools/verify_assurance.py` with regression guards for dynamic counts | in progress | `arena-7ab74b3e` | `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py` |
+| R5 | Fix broken step table in `EXECUTIVE_SUMMARY.md` and reconcile `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, and `VERIFICATION.md` with `2026-11-10` results and current counts (`29` sources, `24` flags, `14` review checks) | in progress | `arena-7ab74b3e` | `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| R6 | Run all verification suites (`verify_hub`, `verify_assurance`, `check_links`, `check_site`, `integration/verify`, `dashboard/verify`, `audit/verify_all`, `review/verify`), HTTP smoke check, `git pull --rebase origin main`, PR, merge, and live Pages confirmation | pending | `arena-7ab74b3e` | `COORDINATION.md` (this addendum) |
+
+**Preserved unchanged:** all archived editions (`docs/`, `docs/v2/`, `dashboard/`, `portal/`, `integration/`, `review/`, `site/`, `research/`, `data/`, `build/`, `audit/` outside `audit/final-integration/`), `.github/workflows/**`, and `.gitignore`.
+
