@@ -908,9 +908,9 @@ claimed in a follow-up addendum first).
 
 | Item | Value |
 |---|---|
-| PR | *(to be recorded after opening)* |
-| Merge result | *(to be recorded after merge)* |
-| Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
+| PR | [#21](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/21) — "Hygiene + fresh-eyes verification record (no content changes)" |
+| Merge result | **MERGED** via [#21](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/21) at `2026-11-10T05:42:19Z` as `9aa5325816321b9d5f6d3ba33638bcc1cd7841a0`. All three PR checks `success` before merge. |
+| Pages deploy | Post-merge main runs: `Verify site` ✅ (run 42763788840), `Verify published site` ✅ (run 42763788865), `Final assurance` ✅ (run 42763788999), `pages build and deployment` ✅ (run 42763787645). Pages API: `status=built`, source `main` / root `/`. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> |
 
 ---
 
@@ -935,3 +935,4 @@ Automated results: canonical 1,551 checks, assurance 1,748 checks, 210 cited can
 Publishing record: pull request and result to be appended after completion.
 
 **Rebase handoff:** While this session was working, `main` advanced to PR #21 (session `arena-379bda6c`, disjoint hygiene scope). The two append-only task-board entries conflicted during rebase. Both entries were preserved; no other files conflicted or were discarded. All verification was rerun on the combined tree.
+
