@@ -911,3 +911,27 @@ claimed in a follow-up addendum first).
 | PR | *(to be recorded after opening)* |
 | Merge result | *(to be recorded after merge)* |
 | Pages deploy | *(to be recorded after the GitHub Pages build is confirmed)* |
+
+---
+
+# Session addendum — `arena-54b96b1f` (2026-11-10 UTC)
+
+The platform fixes this session to `arena/54b96b1f-rentincreasesf1`; no separate session branch can be created. Prior integration claims are older than 60 minutes and the last integrated work was merged as PR #20. This session takes over final integration and current-source review; earlier work is preserved. Check for newer concurrent claims before modifying overlapping files.
+
+| Task | Status | Owner | File scope |
+| --- | --- | --- | --- |
+| Current official-source audit, correct material issues, build/test and publish | in progress | `arena-54b96b1f` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `tools/verify_hub.py`, `assurance/**`, `audit/final-integration/**`, `tools/verify_assurance.py`, `EXECUTIVE_SUMMARY.md`, `README.md`, `SOURCES.md`, `VERIFICATION.md`, and this addendum; only as needed |
+
+No personal identifying information from the request will be added to public files. User-provided case details are not official records and must remain explicitly unverified.
+
+## Integration findings and verification — 2026-11-10
+
+Task status: **done; outstanding items need review**. The prior integrated dashboard remains canonical. Official sources re-read in this session: [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory), [banking](https://www.sf.gov/information--banked-rent-increases), [annual increases](https://www.sf.gov/learn-about-rent-increases-san-francisco), [AB 1482](https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482), and [File 261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770). Other source retrieval dates remain those recorded by previous sessions; this session does not claim to have re-read all sources or checked the live response of every external link.
+
+The November 9 Rent Board notice says that if File 261020 is enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026. As of the retrieval, Legistar showed Pending Committee Action and no enactment date. Updated H-22 and the homepage, separating the illustrative 11.5% banked portion from the 1.6% annual component; no enactment or legal maximum is assumed. Made annual-only illustrations equally prominent for both units. Confirmed the individual-owner license/effective-date distinction and the reported 1.6% rate; no private license, current rent, coverage, lease or ledger was independently verified.
+
+Automated results: canonical 1,551 checks, assurance 1,748 checks, 210 cited canonical rows, 29 registered/cited sources; internal links and anchors passed; companion 781 checks, integration 57 rows, dashboard and audit/review suites passed. Automated source links do not prove all external URLs are currently reachable or independently validate every legal claim. The previous sessions' flagged legal and source ambiguities remain open. **Privacy:** the current public site is anonymized, but prior public Git history contains tenant initials; removing it requires separate repository-history remediation and cannot be guaranteed by a current-file scan. The existing public privacy flag remains open.
+
+Publishing record: pull request and result to be appended after completion.
+
+**Rebase handoff:** While this session was working, `main` advanced to PR #21 (session `arena-379bda6c`, disjoint hygiene scope). The two append-only task-board entries conflicted during rebase. Both entries were preserved; no other files conflicted or were discarded. All verification was rerun on the combined tree.
