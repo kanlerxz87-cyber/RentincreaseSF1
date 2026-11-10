@@ -943,3 +943,19 @@ Publishing record: pull request and result to be appended after completion.
 - The branch push after rebasing the already-published claim required `--force-with-lease`; it rewrote only this session's branch and preserved the concurrently merged session's work.
 
 A second append conflict occurred when PR #23 merged while the deployment record was in flight. The other session’s PR #21 record and this session’s PR #22 record were both preserved; no other files conflicted.
+
+## Post-merge note — concurrent integration during this session (2026-11-10)
+
+While this session's record PR was open, parallel session `arena-54b96b1f` merged PR #22 (`7eb20dc`)
+updating the proposed File #261020 warning and the canonical dashboard. This session's record PR (#23)
+was rebased onto that merge; the `COORDINATION.md` append-only conflict was resolved by preserving both
+sessions' entries verbatim (no other file conflicted). Suites re-run on the combined tree:
+`tools/verify_hub.py` 1,551 checks / 0 errors; `tools/verify_assurance.py` 1,748 checks / 0 errors —
+matching the concurrent session's reported counts. Rebase pushed as `4ce16fb`.
+
+* PR [#23](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/23) recorded PR #21's merge/deploy and
+  was **MERGED** via [#23](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/23) at
+  `2026-11-10T05:44:13Z` as `709e07adaa2894da899f6ef31823020e75a0dd46` (all three PR checks `success`).
+* Post-merge main @ `709e07a`: `Verify site` ✅, `Verify published site` ✅, `Final assurance` ✅,
+  `pages build and deployment` ✅. Pages API: `status=built`, source `main` / root `/`.
+  Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>
