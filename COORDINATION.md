@@ -1012,3 +1012,26 @@ to banked increases noticed on or after **15 September 2026**. That date is in t
 today, which makes the pending ordinance more directly relevant to a notice served now than the
 previous wording conveyed. It is still **not law** (Legistar: Pending Committee Action, no final
 action). No figure is changed; the item is published as flag `H-22` and in the landing-page warning.
+
+---
+
+---
+
+---
+
+# Session Addendum — `arena/bfd568c0` (2026-11-10)
+
+## Claim — official status refresh
+
+| Task | Status | Owner | File scope |
+|---|---|---|---|
+| Refresh proposed-cap status and source dates; task scope superseded by integrated PR #22 before duplicate content changes were applied | resolved by PR #22 | `arena/bfd568c0` | `hub/data.json`, `hub/build.py`, generated `index.html`, `hub/sources.html`, `hub/flags.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, this addendum only |
+
+**Claim rationale.** The official Rent Board page was updated on 2026-11-09 with a notice about proposed File #261020 and a proposed applicability date for banked increase notices. This is a material change since the canonical data was last verified on 2026-11-08. No other session scope is being edited. The branch is platform-pinned to `arena/bfd568c0-rentincreasesf1`; this task stays on that branch.
+
+**Independent source check:** on 2026-11-10, re-fetched SF Rent Board `Learn about rent increases` (including its 2026-11-09 alert) and the official Legistar record for File #261020. Confirmed the Rent Board says the file is not enacted and subject to change; Legistar shows `Pending Committee Action`, no final action, and no enactment date. Session `arena/54b96b1f` independently integrated the same update as PR #22 before this session applied content edits; its merged work was retained instead of duplicated.
+
+**Rebase coordination note:** `origin/main` advanced while this session was working: PR #21 was merged by PR #23, and PR #22 independently integrated the same official-source refresh. During rebase, append-only coordination entries conflicted; records from sessions 379bda6c, 54b96b1f, and this session are preserved. No source, page, data, or verification work from the integrated PR #22 was discarded or re-applied.
+
+
+**Final disposition:** PR #22 (<https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/22>) completed this session's intended public update, with its own official source citations, verification, merge, and publication. This branch will not duplicate changes to `hub/data.json`, generated pages, or verification gates.
