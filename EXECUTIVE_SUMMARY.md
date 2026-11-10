@@ -1,6 +1,6 @@
 # Executive summary — San Francisco rent increases, Outer Sunset 94122
 
-**Verified:** 2026-11-07, extended 2026-11-08 (Business Registration Certificate, verbatim Rule 4.12, pending File #261020, occupant-change rules §6.14 / Costa-Hawkins)
+**Verified:** 2026-11-07, extended 2026-11-08 (Business Registration Certificate, verbatim Rule 4.12, pending File #261020, occupant-change rules §6.14 / Costa-Hawkins), refreshed 2026-11-10 (Rent Board File #261020 notice posted 2026-11-09; 30 official sources)
 **Canonical dashboard:** [root `index.html`](index.html) · [independent assurance](assurance/index.html) · [Flagged for Review](hub/flags.html)
 **Privacy:** Tenant identities and the street address are withheld. Dates and dollar amounts supplied in the brief are retained as anonymized scenario inputs.
 

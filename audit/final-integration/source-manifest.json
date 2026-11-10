@@ -24,14 +24,14 @@
     "id": "S04",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--banked-rent-increases",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S05",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
-    "retrieved": "2026-11-07",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -178,7 +178,7 @@
     "id": "S26",
     "publisher": "San Francisco Board of Supervisors (Legistar)",
     "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
-    "retrieved": "2026-11-08",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -200,6 +200,13 @@
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
     "retrieved": "2026-11-08",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S30",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+    "retrieved": "2026-11-10",
     "result": "Retrieved and read from official publisher"
   }
 ]

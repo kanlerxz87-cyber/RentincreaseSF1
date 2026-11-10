@@ -6,6 +6,7 @@ An anonymized, official-source review for two reported rent-controlled units in 
 **Executive summary:** [`EXECUTIVE_SUMMARY.md`](EXECUTIVE_SUMMARY.md)
 **Flagged for Review:** [`hub/flags.html`](hub/flags.html)
 **Independent assurance:** [`assurance/index.html`](assurance/index.html)
+**Latest verification:** 2026-11-10 · 30 official sources
 
 ## Answer first
 

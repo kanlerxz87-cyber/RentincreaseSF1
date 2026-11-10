@@ -2,7 +2,7 @@
  "meta": {
   "title": "SF Rent Increase Compliance Dashboard",
   "subtitle": "Two rent-controlled flats, Outer Sunset, San Francisco 94122 — built 1940",
-  "retrieved": "2026-11-08",
+  "retrieved": "2026-11-10",
   "note": "Official rules and rates are quoted from sources fetched and read on the retrieval date. Private lease, ledger, license, and coverage facts are not independently verified. Dollar amounts are conditional scenario arithmetic using the owner-brief amounts, not certified lawful maxima or permission to serve notice. Unsupported official-confirmation cells are blank and flagged. Tenant names and initials are replaced with placeholders; supplied dates and dollar amounts are unchanged. This is a research summary, not legal advice."
  },
  "sources": [
@@ -42,9 +42,9 @@
    "publisher": "San Francisco Rent Board (SF.gov)",
    "level": "Local — agency guidance",
    "url": "https://www.sf.gov/information--banked-rent-increases",
-   "quote": "A landlord may raise the rent once every 12 months by the allowed annual increase. … A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost and cannot be imposed at a later date. … Banked increases do not have to be approved by the Rent Board, but must be calculated correctly. They cannot be compounded or prorated. … There is no limit on how much can be banked.",
-   "used_for": "Banking: the 24-month no-increase statement, partial increases, no Board approval, no compounding, and notice contents. Read with Rule 4.12(a), which measures 12 months from when the skipped allowance became available (H-01).",
-   "retrieved": "2026-11-07"
+   "quote": "Notice: Proposed Changes to Rent Increase Limitations. Posted November 9, 2026. The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year. If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026. This legislation has not been enacted and is subject to change. --- A landlord may raise the rent once every 12 months by the allowed annual increase. … A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost and cannot be imposed at a later date. … Banked increases do not have to be approved by the Rent Board, but must be calculated correctly. They cannot be compounded or prorated. … There is no limit on how much can be banked.",
+   "used_for": "Banking: the 24-month no-increase statement, partial increases, no Board approval, no compounding, and notice contents. Read with Rule 4.12(a), which measures 12 months from when the skipped allowance became available (H-01). Now also carries the Rent Board's own File #261020 notice (H-22).",
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S05",
@@ -52,9 +52,9 @@
    "publisher": "San Francisco Rent Board (SF.gov)",
    "level": "Local — agency guidance",
    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
-   "quote": "The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027. … A landlord can impose the first annual increase 12 months after the date the tenant's lease began. … 90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10% … Rent increases cannot be rounded up to the nearest dollar. … A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a tenant's unit.",
+   "quote": "Notice: Proposed Changes to Rent Increase Limitations. Posted November 9, 2026. The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year. If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026. This legislation has not been enacted and is subject to change. --- The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027. … A landlord can impose the first annual increase 12 months after the date the tenant's lease began. … 90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10% … Rent increases cannot be rounded up to the nearest dollar. … A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a tenant's unit.",
    "used_for": "Current rate, first/annual timing, base-rent calculation, notice periods, no rounding, and additional occupants. Official worked-example year labels contain errors cross-checked against Form 571 (H-19).",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S06",
@@ -263,8 +263,8 @@
    "level": "Local — proposed ordinance (NOT law)",
    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
    "quote": "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant's rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes. Type: Ordinance. Status: Pending Committee Action. Introduced: 9/15/2026. In control: Land Use and Transportation Committee. Final action: (none). Enactment date: (none).",
-   "used_for": "Pending cap that would directly limit a large banked catch-up such as the Unit 2 scenario. Recorded as proposed legislation only; status re-checked 2026-11-08.",
-   "retrieved": "2026-11-08"
+   "used_for": "Pending cap that would directly limit a large banked catch-up such as the Unit 2 scenario. Now also confirmed by the Rent Board's own notice posted 2026-11-09 (S30). Status re-checked on Legistar 2026-11-10: still Pending Committee Action.",
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S27",
@@ -295,6 +295,16 @@
    "quote": "A landlord is not required to file a petition with the Rent Board for approval of a rent increase pursuant to Section 6.14 or Costa-Hawkins Section 1954.53(d). However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination that either or both sections authorize a rent increase. … Finally, Section 6.14 requires the last original occupant to \"vacate\" the unit, while Costa-Hawkins only requires the last original occupant to no longer \"permanently reside\" in the unit.",
    "used_for": "That no pre-filing is required, that an optional determination petition exists, and the vacate versus permanently-reside distinction.",
    "retrieved": "2026-11-08"
+  },
+  {
+   "id": "S30",
+   "title": "Proposed Changes to Rent Increase Limitations — Rent Board Notice (File No. 261020)",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — agency notice on proposed legislation",
+   "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+   "quote": "Notice: Proposed Changes to Rent Increase Limitations. Posted November 9, 2026. The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year. If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026. This legislation has not been enacted and is subject to change.",
+   "used_for": "The Rent Board's own notice, posted on both the rent-increases and banked-increases pages on 2026-11-09, confirming the proposed 10% cap and its retroactive application to banked increases noticed on or after 2026-09-15. This is not enactment; it is a warning to landlords and tenants.",
+   "retrieved": "2026-11-10"
   }
  ],
  "rates": [
@@ -1499,13 +1509,14 @@
   {
    "id": "H-22",
    "severity": "high",
-   "item": "Pending ordinance would cap banked increases at 10% per year — re-check before serving any large catch-up",
-   "detail": "Board of Supervisors File #261020 would amend the Administrative Code so that banked rent increases and capital improvement rent increases \"may not increase a tenant's rent by more than a total of 10% per year, for the next three years\". Re-checked on Legistar on 2026-11-08: Status \"Pending Committee Action\", introduced 2026-09-15, in the Land Use and Transportation Committee, sponsors Sauter, Chan and Mahmood, with no final action, no enactment date and no enactment number. It is proposed legislation, not law, and no figure in this repository applies it.",
-   "effect": "The Unit 2 scenario total of 13.1% exceeds 10%. If enacted as introduced, that catch-up could not be imposed in a single year. The annual allowable increase itself is unaffected.",
+   "item": "Proposed ordinance would cap banked + capital-improvement increases at 10% per year — confirmed by Rent Board notice on 2026-11-09, applies retroactively to notices on/after 2026-09-15",
+   "detail": "Board of Supervisors File #261020 would amend the Administrative Code so that banked rent increases and capital improvement rent increases \"may not increase a tenant's rent by more than a total of 10% per year, for the next three years\". Re-checked on Legistar on 2026-11-10: Status \"Pending Committee Action\", introduced 2026-09-15, in the Land Use and Transportation Committee, sponsors Sauter, Chan and Mahmood, with no final action, no enactment date and no enactment number. On 2026-11-09, the Rent Board posted a notice on both its rent-increases and banked-increases pages confirming the proposal. If enacted as currently proposed, the 10% cap would apply to banked rent increases noticed on or after September 15, 2026 — the same date the legislation was introduced. This is proposed legislation, not law, and subject to change.",
+   "effect": "The Unit 2 scenario total of 13.1% exceeds 10%. If enacted as proposed, any banked catch-up noticed today would already be subject to the cap because the retroactive application date (2026-09-15) has passed. The annual allowable increase itself (1.6%) is unaffected, and banked amounts could potentially be phased over multiple years at ≤10% per year.",
    "sources": [
-    "S26"
+    "S26",
+    "S30"
    ],
-   "action": "Re-check the Legistar record for File #261020 immediately before serving any banked catch-up above 10%, and phase a large banked amount over multiple years if it has been enacted."
+   "action": "Re-check the Legistar record for File #261020 and the Rent Board pages immediately before serving any banked catch-up above 10%. If enacted, phase a large banked amount over multiple years at no more than 10% combined banked + capital-improvement per year. The retroactive application date has already passed."
   },
   {
    "id": "H-23",
