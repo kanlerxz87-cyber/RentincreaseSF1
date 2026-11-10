@@ -1211,7 +1211,7 @@ pull requests #29, #32, #34, none of which touches them).
 | `5D4-T5` | Clean, user-friendly static dashboard at `/guide/` (`guide/index.html` + 9 category subpages including `guide/flagged-for-review.html` with 15 strictly blank official-confirmation cells and an official source link on all 174 table rows) | done | `arena/5d4a1320-rentincreasesf1` | `guide/**` |
 | `5D4-T6` | Automated deterministic build + line-by-line link, anchor, citation-per-row, exact rational/calendar arithmetic, blank-unverified-cell, and SHA-256 privacy verification (`1,060 checks, 0 errors`) + full repo CI check | done | `arena/5d4a1320-rentincreasesf1` | `guide/build.py`, `guide/verify.py`, `audit/session-5d4a1320/VERIFICATION.md` |
 | `5D4-REV` | 15 unverified private/unpublished items (`FG-01`–`FG-15`, blank official-confirmation cells) + 3 source/governance flags (`FG-16`–`FG-18`) published on `guide/flagged-for-review.html` (non-blocking) | needs review | `arena/5d4a1320-rentincreasesf1` | `guide/flagged-for-review.html` |
-| `5D4-T7` | Rebase onto `origin/main`, open PR to `main`, verify CI green, merge PR without waiting, confirm GitHub Pages deployment, and record PR & deploy result here | in progress | `arena/5d4a1320-rentincreasesf1` | `COORDINATION.md` (append-only) |
+| `5D4-T7` | Rebase onto `origin/main`, open PR to `main`, verify CI green, merge PR without waiting, confirm GitHub Pages deployment, and record PR & deploy result here | done | `arena/5d4a1320-rentincreasesf1` | `COORDINATION.md` (append-only) |
 
 ## Verification, Official Sources & Rebase Log (`arena/5d4a1320-rentincreasesf1`)
 
@@ -1223,3 +1223,14 @@ pull requests #29, #32, #34, none of which touches them).
 - **Irregularities Logged (`RA-5D4-01`–`RA-5D4-09` & `FG-01`–`FG-18`):** (1) Pending BOS File `#261020` (`Pending Committee Action` on `2026-11-10`, not law) carries a new Nov. 9, 2026 `sf.gov` warning of proposed retroactive application to banked notices served on/after Sept. 15, 2026 — `/guide/` adds Scenario `U2-C` (`10.0%` banked + `1.6%` annual = `11.6%`, `$365.40/mo` -> `$3,515.40/mo`, keeping `1.5%` banked) alongside `U2-A` (`1.6%`) and `U2-B` (`13.1%`); (2) pre-Nov-9 archived editions predate the Nov. 9 warning; (3) `sf.gov` narrative worked examples contain year-label typos controlled by `Form 571`; (4) current files pass 100% of SHA-256 privacy scans (`0` hits), while historical pre-redaction Git exposure remains flagged for admin history cleanup.
 - **Cross-Scope Log (No Claimed Files Edited):** Optional future navigation link from root `index.html` / `README.md` to `/guide/` is logged here rather than editing files claimed by concurrent sessions.
 - **Rebase Conflict Resolution Log:** During `git pull --rebase origin main` (`709e07a -> 86c3a84`), an append-only conflict occurred at the end of `COORDINATION.md` against concurrently merged PRs `#25`–`#35`. Resolved cleanly by preserving 100% of every concurrent session's `COORDINATION.md` records verbatim and placing this `arena/5d4a1320-rentincreasesf1` addendum after them; zero other files conflicted.
+
+## Pull Request, Merge & GitHub Pages Deployment Record (`arena/5d4a1320-rentincreasesf1`)
+
+| Item | Result |
+|---|---|
+| **Pull Request** | [PR #36](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/36) — *"Add live-verified /guide/ compliance dashboard & 2026-11-10 primary-source audit"* |
+| **Pre-Merge CI** | `Verify site` ✅ (run `42766147512`), `Verify published site` ✅ (run `42766147328`), `Final assurance` ✅ (run `42766147158`) |
+| **Merge Result** | **MERGED** into `main` at `2026-11-10T06:06:01Z` as commit `734394ed6e6e656d033830333fb9bd8004211f21` |
+| **Post-Merge `main` CI** | `Verify site` ✅ (run `42766241059`), `Verify published site` ✅ (run `42766241395`), `Final assurance` ✅ (run `42766241128`) |
+| **GitHub Pages Deploy** | `pages build and deployment` ✅ (run `42766240601`); Pages API `status=built`, `https_enforced=true`, source `main /`. Live-fetched and verified at <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/> and <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/flagged-for-review.html>. |
+
