@@ -52,8 +52,8 @@
    "publisher": "San Francisco Rent Board (SF.gov)",
    "level": "Local — agency guidance",
    "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
-   "quote": "The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027. … A landlord can impose the first annual increase 12 months after the date the tenant's lease began. … 90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10% … Rent increases cannot be rounded up to the nearest dollar. … A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a tenant's unit.",
-   "used_for": "Current rate, first/annual timing, base-rent calculation, notice periods, no rounding, and additional occupants. Official worked-example year labels contain errors cross-checked against Form 571 (H-19).",
+   "quote": "The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027. … Notice: Proposed Changes to Rent Increase Limitations — Posted November 9, 2026 … If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026. This legislation has not been enacted and is subject to change. … A landlord can impose the first annual increase 12 months after the date the tenant's lease began. … 90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10% … Rent increases cannot be rounded up to the nearest dollar. … A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a tenant's unit.",
+   "used_for": "Current rate, first/annual timing, base-rent calculation, notice periods, no rounding, and additional occupants. Official worked-example year labels contain errors cross-checked against Form 571 (H-19). Also confirms the November 9, 2026 proposed-changes warning and its September 15 notice date (H-22).",
    "retrieved": "2026-11-10"
   },
   {
@@ -1243,6 +1243,17 @@
     "S27",
     "S28",
     "S29"
+   ]
+  },
+  {
+   "n": 15,
+   "test": "Has proposed File #261020 changed before a banked increase is noticed or imposed?",
+   "evidence": "Re-read the Rent Board warning and Legistar final text/status. The 2026-11-09 agency warning says the proposal would cover banked increases noticed on or after 2026-09-15; early service is not a verified workaround.",
+   "result": "needs evidence",
+   "sources": [
+    "S04",
+    "S05",
+    "S26"
    ]
   }
  ],

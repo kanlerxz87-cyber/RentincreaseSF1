@@ -1085,3 +1085,30 @@ Prior canonical/assurance work by `arena-54b96b1f` is marked `done` on `main` (`
 - PR #28 changed only this coordination log; rent-increase guidance and site content were already delivered through PR #22 and re-verified through PR #27.
 
 **Rebase coordination note:** while PR #31 was open, PR #30 merged a separate 29-source re-verification and maintenance update. The append-only coordination records conflicted; both session 7ab74b3e's audit record and this session's PR #28 merge record are retained verbatim. No audit work or site changes were discarded.
+
+---
+
+# Final current-state integration — `arena-39dd26a4` (2026-11-10)
+
+**Platform-bound branch:** `arena/39dd26a4-rentincreasesf1`; the requested per-task branch names cannot be used in this environment. No open PR or active session claim exists. All earlier implementations are preserved.
+
+| ID | Task | Status | Exclusive file scope |
+|---|---|---|---|
+| A39-1 | Re-read primary law and current Rent Board guidance; recheck pending File #261020 | in progress | `audit/session-39dd26a4/**` |
+| A39-2 | Correct the canonical dashboard for the Rent Board's new 2026-11-09 proposed-retroactivity warning and any reproducibility defects | unclaimed until A39-1 source audit complete | `hub/data.json`, `hub/build.py`, generated `index.html`, `hub/**` |
+| A39-3 | Rebuild assurance artifacts, update retrieval manifest and verification gates without weakening them | pending | `assurance/**`, `audit/final-integration/source-manifest.json`, `tools/verify_hub.py`, `tools/verify_assurance.py` |
+| A39-4 | Reconcile executive summary/source/verification documents and run every canonical and preserved suite | pending | `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| A39-5 | PR from the platform-bound branch to main, merge, confirm Pages, record results | pending | `COORDINATION.md` (this addendum) |
+
+The completed canonical/assurance scopes are formally taken over only for this final corrective integration because their previous tasks are done and CI requires synchronized registry, generator, and verifier changes. No archived edition will be edited or deleted. All personal identifiers remain excluded from current files; historical privacy remains an explicit open flag.
+
+### A39 completion record before PR
+
+- **A39-1 — done:** Re-read the Rent Board's current increase guidance and Legistar File #261020 on 2026-11-10. New official finding: the Rent Board posted a 2026-11-09 warning that the proposal, if enacted, would cover banked increases noticed on or after 2026-09-15. Legistar still says Pending Committee Action, with no final action or enactment date. Sources and exact findings: `audit/session-39dd26a4/README.md`, S05/S26.
+- **A39-2 — done:** Added the warning to the canonical landing, limits, notice, flag, and 15-point lawyer-review content. No current-law percentage or dollar calculation changed. Corrected two literal `{n}` landing-page cells to generated counts.
+- **A39-3 — done:** Regenerated all canonical/assurance outputs and the 29-row manifest with actual per-source dates. Added regression checks for the new warning, citations, review count, and template defect.
+- **A39-4 — done:** Reconciled all root Markdown entry points. Canonical 1,599 checks / 0 errors (211 cited rows); assurance 1,760 / 0 (171 current text files privacy-scanned). Main archive 10 pages + 7 archived OK; companion 781 / 0; integration 57 rows OK; dashboard 42 sources OK; portal 137 rows OK; review archive all checks passed. Incidental archived footer-date regeneration was reverted. `git diff --check` clean.
+- **Irregularities:** Published on `hub/flags.html`; the new proposed-retroactivity warning is H-22. Historical Git privacy remains open and is not misrepresented as fixed by current-file scans. No unverified private value was filled.
+- **A39-5:** in progress; PR and deployment results will be recorded below.
+
+**Concurrency resolution:** while A39 was pushing, PRs #21–#27 landed, including an independent 16-source 2026-11-10 refresh and the same November 9 proposal warning. The rebase conflicted in the task board and canonical files. The newer `main` versions were retained, including its more precise 11.5%-banked/1.6%-annual wording and all 16 refreshed retrieval dates. A39 then reapplied only non-duplicative work: two `{n}` counter fixes, review check 15, S05's exact warning passage, documentation reconciliation, and regression checks. Both task-board records were preserved; no concurrent work was discarded.
