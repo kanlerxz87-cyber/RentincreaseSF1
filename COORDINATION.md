@@ -989,11 +989,11 @@ information architecture, page set, and every published dollar figure are left a
 
 | ID | Task | Status | Owner |
 | --- | --- | --- | --- |
-| T1 | Re-fetch and read every core official source; confirm or correct each quoted claim | in progress | `arena-68f1fe88` |
-| T2 | Independently recompute every published dollar figure and date from Form 571 and the notice rules | in progress | `arena-68f1fe88` |
-| T3 | Confirm the individual-owner Rent Board licence answer is correct and stated first on the landing page | in progress | `arena-68f1fe88` |
-| T4 | Confirm anonymisation (no names/initials/address) across current published files | in progress | `arena-68f1fe88` |
-| T5 | Re-run every suite on the combined tree, open the integration PR, merge, confirm Pages deploy | not started | `arena-68f1fe88` |
+| T1 | Re-fetch and read every core official source; confirm or correct each quoted claim | **done** — 16 sources re-read 2026-11-10, no correction needed | `arena-68f1fe88` |
+| T2 | Independently recompute every published dollar figure and date from Form 571 and the notice rules | **done** — all 8 figures and 4 service dates reproduce to the cent | `arena-68f1fe88` |
+| T3 | Confirm the individual-owner Rent Board licence answer is correct and stated first on the landing page | **done** — verified against §37.15 + Housing Inventory; it is the first section | `arena-68f1fe88` |
+| T4 | Confirm anonymisation (no names/initials/address) across current published files | **done** — 170 files scanned, no hits | `arena-68f1fe88` |
+| T5 | Re-run every suite on the combined tree, open the integration PR, merge, confirm Pages deploy | **done** — PR #27 merged, Pages `built` | `arena-68f1fe88` |
 
 ## Findings so far (2026-11-10 live re-fetch)
 
@@ -1012,10 +1012,6 @@ to banked increases noticed on or after **15 September 2026**. That date is in t
 today, which makes the pending ordinance more directly relevant to a notice served now than the
 previous wording conveyed. It is still **not law** (Legistar: Pending Committee Action, no final
 action). No figure is changed; the item is published as flag `H-22` and in the landing-page warning.
-
----
-
----
 
 # Session Addendum — `arena/bfd568c0` (2026-11-10)
 
@@ -1071,3 +1067,70 @@ Prior canonical/assurance work by `arena-54b96b1f` is marked `done` on `main` (`
 
 **Preserved unchanged:** all archived editions (`docs/`, `docs/v2/`, `dashboard/`, `portal/`, `integration/`, `review/`, `site/`, `research/`, `data/`, `build/`, `audit/` outside `audit/final-integration/`), `.github/workflows/**`, and `.gitignore`.
 
+---
+
+## Completion record (2026-11-10)
+
+**Outcome: no rate, date, dollar figure, path, or legal conclusion changed.** This was a
+verify-and-refresh pass, not a rewrite. The single substantive defect found was a markdown rendering
+error, fixed in `EXECUTIVE_SUMMARY.md` (step 9 of the owner action list was separated from its table by
+a blank line, so it rendered as broken text rather than a row).
+
+### Sources re-read live this session (2026-11-10)
+
+S01 §37.15 · S02 §37.3 · S03 Housing Inventory · S04 banked increases · S05 learn about rent increases ·
+S06 Form 571 (full 1982–2027 table, read row by row) · S07 Rules Part IV §§4.10/4.12 · S08 Civil Code
+§827 · S10 AB 1482 · S15 §37.10B(a)(9) · S16 §37.10C · S17 Rent Board Fee · S18 13 June 1979 date test ·
+S19 referral listing · S24 Treasurer lessor guidance · S26 File #261020 (Legistar) · S27 §6.14 /
+Costa-Hawkins · S28 §6.10(d) · S29 §6.14 petition page · plus HUD Fair Housing Act (S14) and the
+Failure to Repair page (S23). Ten sources keep their 2026-11-07 date and three their 2026-11-08 date
+because they were not re-opened in this pass.
+
+### Verification performed
+
+| Check | Result |
+| --- | --- |
+| Every published dollar figure re-derived from a freshly transcribed Form 571 table, cent truncation, not the repo's helper | $63.92 / $55.93 / $119.85 / $412.65 / $362.25 / $4,058.92 / $4,114.85 / $3,562.65 — all match |
+| Unit 2's 2026-06-01 allowance vs the 2027-02-28 effective date | 272 days elapsed — **not** banked; matches the published flag |
+| Service-date arithmetic (30/35 and 90/95 days) | 2027-01-02, 2026-12-28, 2026-11-30, 2026-11-25 — all match |
+| `verify_hub.py` | 1,551 checks, 0 errors; 210 cited rows; 29/29 sources |
+| `verify_assurance.py` | 1,749 checks, 0 errors; 170 files privacy-scanned |
+| `check_links.py` / `check_site.py` | OK / 781 checks, 0 errors |
+| `integration/verify.py` · `dashboard/verify.py` · `audit/verify_all.py` · `review/verify.py` | PASS · OK · PASSED · PASSED |
+| All 10 published pages + `assurance/` over HTTP | 200 |
+
+### Irregularities
+
+**None new, none closed.** All 24 pre-existing flags remain open and published on the Flagged for
+Review page. One was **refreshed**: the Rent Board's 9 November 2026 notice says that, if File #261020
+is enacted as currently proposed, it would apply to banked increases noticed on or after **15 September
+2026** — a date already past. The ordinance remains unpublished law-in-waiting (Legistar: Pending
+Committee Action, no final action, no enactment date). No figure applies it; flag `H-22` and the
+landing page now say plainly that a notice served today could be affected if it becomes law as
+described. Unverified official-confirmation cells stay blank (H-02, H-03, H-04, H-05, H-17, H-18).
+
+### Merge conflict encountered and resolved — nothing discarded
+
+While this session worked, `main` advanced from `7eb20dc` to `6376c19` (PRs #23 and #26, sessions
+`arena-54b96b1f` and `arena-379bda6c`). The rebase conflicted in **one file only**, `COORDINATION.md`,
+because both sides appended to the end. Resolution: the other sessions' PR #22 and PR #23
+deployment records were kept verbatim and this session's claim was appended below them. No other file
+conflicted and no content from either side was dropped. All suites were re-run on the combined tree
+after the rebase.
+
+### Pull request and deployment result
+
+- [PR #27](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/27) — **MERGED** at
+  `2026-11-10T05:47:59Z` as `3a077617adad93096c7f574882717122ca4c4d15`.
+- All three PR checks passed (`verify` ×3: runs 42764282705, 42764282706, 42764282856).
+- Post-merge `main` @ `3a07761`: `Verify site` ✅, `Verify published site` ✅, `Final assurance` ✅,
+  `pages build and deployment` ✅ (run 42764370075).
+- Pages API: `status=built`, source `main` / root `/`. Live entry:
+  <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> — re-fetched after deployment and confirmed to
+  show `core research through 2026-11-10` and the refreshed File #261020 warning.
+
+### Handoff
+
+No work is left in progress. If a later session re-runs this audit, note that the GitHub Pages CDN can
+serve a stale copy for a short period after a deploy; bypass the cache with a query string when
+confirming what is live.
