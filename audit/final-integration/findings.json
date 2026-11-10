@@ -1,6 +1,6 @@
 {
-  "retrieved": "2026-11-07",
-  "scope": "Independent final assurance of the canonical root and hub edition. No personal identifiers; no attorney review; no private-record inference.",
+  "retrieved": "2026-11-10",
+  "scope": "Independent final assurance of the canonical root and hub edition; all 29 registered sources live-verified on 2026-11-10. No personal identifiers; no attorney review; no private-record inference.",
   "corrections": [
     {
       "id": "A-01",
@@ -87,5 +87,5 @@
       "flags": ["H-10", "H-11", "H-13"]
     }
   ],
-  "residual_flag_ids": ["H-17", "H-18", "H-03", "H-02", "H-04", "H-05", "H-06", "H-07", "H-09", "H-01", "H-15", "H-19", "H-20"]
+  "residual_flag_ids": ["H-17", "H-18", "H-03", "H-02", "H-04", "H-05", "H-06", "H-07", "H-09", "H-01", "H-15", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"]
 }

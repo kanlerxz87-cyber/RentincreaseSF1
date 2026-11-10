@@ -94,7 +94,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12",
    "quote": "(a)(1) … an owner … shall not, over the course of any 12-month period, increase the gross rental rate … more than 5 percent plus the percentage change in the cost of living, or 10 percent, whichever is lower … (d) This section shall not apply to the following … (3) Housing subject to rent or price control through a public entity's valid exercise of its police power … that restricts annual increases in the rental rate to an amount less than that provided in subdivision (a).",
    "used_for": "Why the state cap does not apply to locally controlled units, and the statutory basis of the exemption.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S10",
@@ -114,7 +114,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1954.53",
    "quote": "(d)(2) If the original occupant or occupants who took possession … no longer permanently reside there, an owner may increase the rent by any amount allowed by this section … (d)(3) This subdivision does not apply to partial changes in occupancy of a dwelling or unit where one or more of the occupants of the premises … remains an occupant in lawful possession.",
    "used_for": "Unit 1: why the April 2026 tenant change is a partial change of occupancy, so no vacancy rent reset.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S12",
@@ -124,7 +124,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
    "quote": "(a) If the lessor retaliates against the lessee because of the exercise by the lessee of the lessee’s rights under this chapter or because of his or her complaint to an appropriate agency as to tenantability of a dwelling, and if the lessee of a dwelling is not in default as to the payment of his or her rent, the lessor may not … increase the rent … within 180 days of any of the following … (f) This section does not limit in any way … the lessor’s right to do any of the acts described in subdivision (a) or (d) for any lawful cause. … (g) … if the notice of … rent increase … states the ground upon which the lessor, in good faith, seeks to … increase rent … If the statement is controverted, the lessor shall establish its truth at the trial or other hearing.",
    "used_for": "Retaliation screening: protected activity, the listed 180-day events, rent-default condition, lawful cause, and good-faith-ground provisions. It is not an automatic 180-day moratorium on every increase.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S13",
@@ -134,7 +134,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955",
    "quote": "(a) For the owner of any housing accommodation to discriminate against or harass any person because of the race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, or genetic information of that person.",
    "used_for": "The state protected-class list applied to the 'one unit or both' question.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S14",
@@ -144,7 +144,7 @@
    "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
    "quote": "The Fair Housing Act protects people from discrimination when they are renting or buying a home … The Fair Housing Act prohibits discrimination in housing because of: Race, Color, National Origin, Religion, Sex, Familial Status, Disability.",
    "used_for": "The federal protected classes and the federal complaint route.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S15",
@@ -154,7 +154,7 @@
    "url": "https://www.sf.gov/information--sec-3710b-tenant-harassment",
    "quote": "(a) No landlord … shall do any of the following in bad faith … (5) Influence or attempt to influence a tenant to vacate … through fraud, intimidation or coercion … (9) Violate any law which prohibits discrimination … (c)(5) … money damages of not less than three times actual damages … and … reasonable attorney's fees and costs.",
    "used_for": "What turns a rent increase into harassment, and the exposure if it does.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S16",
@@ -172,8 +172,8 @@
    "publisher": "San Francisco Rent Board (SF.gov)",
    "level": "Local — agency guidance",
    "url": "https://www.sf.gov/rent-board-fee",
-   "quote": "For the 2026-2027 tax year, the fee is: $59.00 per dwelling unit … Deadline: March 1 of each year. … Once you have paid the Rent Board fee in full, you can recover 50 percent of the fee from the tenants in occupancy of each unit if the tenant has been living in the unit as of November 1 of the applicable tax year. … You may not recover any penalty fees.",
-   "used_for": "Per-unit fee, separate recovery conditions, November 1 occupancy, full payment, and the annual deadline; distinct from the free license and from base rent.",
+   "quote": "For the 2026-2027 tax year, the fee is: $59.00 per dwelling unit … Deadline: March 1 of each year. … The deadline to submit a Request for Exemption for the 2027 Rent Board fee is December 14, 2026. Units without a valid and approved exemption will be billed for the Rent Board fee, due by March 1, 2027. … Once you have paid the Rent Board fee in full, you can recover 50 percent of the fee from the tenants in occupancy of each unit if the tenant has been living in the unit as of November 1 of the applicable tax year. … You may not recover any penalty fees.",
+   "used_for": "Per-unit fee, separate recovery conditions, November 1 occupancy, full payment, March 1 deadline, and the December 14, 2026 exemption-request deadline for 2027; distinct from the free license and from base rent.",
    "retrieved": "2026-11-10"
   },
   {
@@ -204,7 +204,7 @@
    "url": "https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf",
    "quote": "For rental agreements with a fixed term (i.e., 6 months, 1 year, 2 years, etc.), the landlord cannot increase the rent during the rental term unless the rental agreement permits rent increases. Rent may be increased if the rental agreement is renewed.",
    "used_for": "Unit 1 fixed-term contingency (H-17). The April 1, 2026 instrument must be checked before using the February 1, 2027 scenario.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S21",
@@ -214,7 +214,7 @@
    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP",
    "quote": "Service is complete at the time of the deposit, but any period of notice … shall be extended five calendar days, upon service by mail, if the place of address and the place of mailing is within the State of California, 10 calendar days if either the place of mailing or the place of address is outside the State of California but within the United States … and 20 calendar days if either the place of mailing or the place of address is outside the United States …",
    "used_for": "The California-mail planning periods and the fact that longer extensions can apply outside California; the site does not assume every mailing is within California.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S22",
@@ -224,7 +224,7 @@
    "url": "https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and",
    "quote": "The Justice Department’s Antitrust Division filed a proposed settlement today … As alleged in Plaintiffs’ complaint, RealPage’s revenue management software has relied on nonpublic, competitively sensitive information shared by landlords to set rental prices. … If approved by the court, the proposed consent judgment would require RealPage to …",
    "used_for": "A documented federal enforcement example involving portfolio-scale pricing tools. Allegations and a proposed settlement are not generalized into claims about every corporate landlord or a final adjudication.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S23",
@@ -234,7 +234,7 @@
    "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
    "quote": "A tenant may petition for a deferral of the annual rent increase if the landlord has failed to perform requested repairs, replacement or maintenance as required by state and/or local law. … The petition must be filed no later than 60 days following the tenant’s receipt of the rent increase notice. … If the petition is granted, the proposed rent increase will be deferred or postponed until the requested repairs are made.",
    "used_for": "Repair/habitability review independent of arithmetic and the 60-day tenant petition window.",
-   "retrieved": "2026-11-07"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S24",
@@ -254,7 +254,7 @@
    "url": "https://sftreasurer.org/business/register-business",
    "quote": "Own or lease real or personal property within San Francisco for business purposes (except for rental income received in connection with the operation of one residential structure consisting of fewer than four units, one residential condominium, or a cooperative housing association). … Unless otherwise required, you do not need to register if your only business is the receipt of rental income in connection with the operation of any of the following: … 2. One residential structure consisting of fewer than four units.",
    "used_for": "The registration triggers and the express sub-four-unit carve-out for residential rental income.",
-   "retrieved": "2026-11-08"
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S26",
@@ -262,8 +262,8 @@
    "publisher": "San Francisco Board of Supervisors (Legistar)",
    "level": "Local — proposed ordinance (NOT law)",
    "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
-   "quote": "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant's rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes. Type: Ordinance. Status: Pending Committee Action. Introduced: 9/15/2026. In control: Land Use and Transportation Committee. Final action: (none). Enactment date: (none).",
-   "used_for": "Proposed cap; Legistar status re-checked 2026-11-10. Rent Board guidance S04 and S05 describes potential application to notices given on or after September 15, 2026 if enacted as proposed.",
+   "quote": "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant's rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes. Type: Ordinance. Status: Pending Committee Action. Introduced: 9/15/2026. In control: Land Use and Transportation Committee. Final action: (none). Enactment date: (none). … Proposed §37.3(h) (Leg Ver1): may not impose banked rent increases under Section 37.3(a)(2), and/or rent increases based on any of the types of capital improvements described in Section 37.3(a)(3), that cause a tenant's rent to increase by more than a total of 10% of the lowest base rent that was in effect at any time during the 12 months immediately preceding the date the increase takes effect … This 10% limit shall apply to banked rent increases based on rent increase notices provided on or after September 15, 2026 … and shall remain in effect until December 31, 2029 unless extended by ordinance. A landlord may accumulate rent increases exceeding 10% per year … and may impose such increases to take effect on or after January 1, 2030 … Proposed §37.15(b)(2)(F): whether any banked rent increases were imposed under Section 37.3(a)(2) during the previous 12 months.",
+   "used_for": "Proposed cap and Housing Inventory banked-reporting amendment; Legistar detail and Leg Ver1/Leg Dig Ver1 re-checked 2026-11-10. Rent Board notices on S04 and S05 warn of proposed retroactive application to banked notices provided on or after September 15, 2026 if enacted as proposed.",
    "retrieved": "2026-11-10"
   },
   {
@@ -282,9 +282,9 @@
    "publisher": "San Francisco Rent Board (SF.gov)",
    "level": "Local — Rent Board rules and regulations",
    "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications",
-   "quote": "Failure to give such a notice within 60 days of the landlord's actual knowledge of the occupancy by the subsequent occupant(s) establishes a rebuttable presumption that notice was not given within a reasonable period of time; or (2) The landlord is entitled to establish a new base rent under the Costa Hawkins Rental Housing Act, California Civil Code Section 1954.53(d), even if no notice was served on the subsequent occupant(s) pursuant to subsection (d)(1) above.",
-   "used_for": "The exact sixty-day rebuttable-presumption rule, and that Costa-Hawkins can apply even where no 6.14 notice was served.",
-   "retrieved": "2026-11-08"
+   "quote": "§6.14(b) Co-occupants who commenced occupancy before, on or after January 1, 1996: Failure to give such a notice within 60 days of the landlord's actual knowledge of the occupancy by the subsequent occupant(s) establishes a rebuttable presumption that notice was not given within a reasonable period of time. … §6.14(c) Subsequent Occupants who are not Co-occupants and who commenced occupancy on or after January 1, 1996, where the last Original Occupant vacated on or after April 25, 2000: … unless the subsequent occupant proves that the landlord waived his or her right to increase the rent by … (2) Failing, within 90 days of receipt of written notice … or actual knowledge that the last original occupant no longer permanently resides at the unit … to serve written notice of a rent increase or a reservation of the right to increase the rent at a later date … §6.14(d)(2) The landlord is entitled to establish a new base rent under the Costa Hawkins Rental Housing Act, California Civil Code Section 1954.53(d), even if no notice was served on the subsequent occupant(s).",
+   "used_for": "Distinguishes §6.14(b) (co-occupants: 60-day initial notice presumption), §6.14(c) (non-co-occupants where last original occupant vacates on or after April 25, 2000: 90-day post-vacancy reservation/waiver window), and Costa-Hawkins under Civil Code §1954.53(d).",
+   "retrieved": "2026-11-10"
   },
   {
    "id": "S29",
@@ -294,7 +294,7 @@
    "url": "https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins",
    "quote": "A landlord is not required to file a petition with the Rent Board for approval of a rent increase pursuant to Section 6.14 or Costa-Hawkins Section 1954.53(d). However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination that either or both sections authorize a rent increase. … Finally, Section 6.14 requires the last original occupant to \"vacate\" the unit, while Costa-Hawkins only requires the last original occupant to no longer \"permanently reside\" in the unit.",
    "used_for": "That no pre-filing is required, that an optional determination petition exists, and the vacate versus permanently-reside distinction.",
-   "retrieved": "2026-11-08"
+   "retrieved": "2026-11-10"
   }
  ],
  "rates": [
@@ -713,7 +713,7 @@
   {
    "step": 6,
    "question": "Is the licence the same thing as the annual Rent Board fee?",
-   "answer": "No. The licence is free and comes from the Housing Inventory report. The fee is separate: $59.00 per dwelling unit for the 2026-2027 tax year, due 1 March, of which up to $29.50 may be recovered from tenants. The Rent Board states expressly that requesting a fee exemption does not satisfy the Housing Inventory requirement.",
+   "answer": "No. The licence is free and comes from the Housing Inventory report. The fee is separate: $59.00 per dwelling unit for the 2026-2027 tax year, due 1 March, of which up to $29.50 may be recovered from tenants. For the 2027 Rent Board fee (due 1 March 2027), the Rent Board states a December 14, 2026 deadline to submit a Request for Exemption. Requesting a fee exemption does not satisfy the Housing Inventory requirement.",
    "status": "verified",
    "sources": [
     "S17",
@@ -1500,8 +1500,8 @@
    "id": "H-22",
    "severity": "high",
    "item": "Pending ordinance would cap banked increases at 10% per year — re-check before serving any large catch-up",
-   "detail": "Board of Supervisors File #261020 would cap the combined banked and capital-improvement increases at 10% per year for three years. Legistar on 2026-11-10 shows Pending Committee Action, no final action and no enactment date: proposed, not law. In its November 9 notice, the Rent Board says that if enacted as currently proposed it would apply to banked increases noticed on or after September 15, 2026, and capital-improvement petitions filed on or after that date. It may change.",
-   "effect": "Unit 2’s conditional scenario includes 11.5% banked plus a 1.6% annual allowance (13.1% total); the banked component alone exceeds 10%. The interaction with other charges and the final enacted text must be reviewed; no enactment is assumed.",
+   "detail": "Board of Supervisors File #261020 would add §37.3(h) capping combined banked (§37.3(a)(2)) and capital-improvement (§37.3(a)(3)) increases at 10% per year of the lowest base rent in effect during the preceding 12 months through December 31, 2029 (unless extended), with excess amounts accumulated for imposition on or after January 1, 2030, and would amend §37.15(b)(2)(F) to require Housing Inventory reporting of banked increases imposed in the prior 12 months. Legistar on 2026-11-10 shows Pending Committee Action (Land Use and Transportation Committee; introduced 2026-09-15; Youth Commission response 2026-10-07), no final action and no enactment date: proposed, not law. In its November 9, 2026 notice, the Rent Board warns that if enacted as currently proposed it would apply to banked increases noticed on or after September 15, 2026, and capital-improvement petitions filed on or after that date. It is subject to change.",
+   "effect": "Unit 2's conditional scenario includes 11.5% banked plus a 1.6% annual allowance (13.1% total); the banked component alone exceeds 10%. Unit 2's illustrative 90-day notice dates (November 25 / November 30, 2026) fall on or after September 15, 2026, so any notice served now would fall inside the proposed lookback window if enacted as drafted. The interaction with other charges and the final enacted text must be reviewed; no enactment is assumed.",
    "sources": [
     "S26",
     "S04",
@@ -1513,8 +1513,8 @@
    "id": "H-23",
    "severity": "medium",
    "item": "Whether a §6.14 notice was served on the occupant who joined Unit 1 in April 2026",
-   "detail": "A 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy; sixty days is generally considered reasonable, and Rule 6.14(d)(1) makes failure within 60 days of actual knowledge a rebuttable presumption of untimeliness. The reported change was 1 April 2026, so the benchmark fell around 31 May 2026. No notice, proof of service, or record of non-service was supplied for review.",
-   "effect": "If the owner later wants the §6.14 route when the last original occupant vacates, an untimely notice may bar it. Under Rule 6.14(d)(2) the Costa-Hawkins route may still be available even without a 6.14 notice, subject to its own limits.",
+   "detail": "Under Rent Board Rules §6.14(b), for a co-occupant (someone with a direct rental agreement with the owner), a 6.14 notice must be served within a reasonable time after actual knowledge; failing to serve within 60 days establishes a rebuttable presumption of untimeliness. The reported change was 1 April 2026, so that sixty-day benchmark fell around 31 May 2026. By contrast, if the incoming occupant is NOT a co-occupant (a subtenant/roommate without a direct agreement), §6.14(c) governs post-April 25, 2000 departures and focuses on whether the landlord waives a reset by failing to serve an increase or reservation of rights within 90 days after written notice or actual knowledge that the last original occupant vacated (whereas §6.14(d) applies only to pre-April 25, 2000 departures). No notice, proof of service, or record of non-service was supplied for review.",
+   "effect": "If the incoming occupant is treated as a co-occupant and the owner later wants the §6.14(b) route when the last original occupant vacates, an untimely notice may bar it. If the occupant is a post-1996 subtenant (not a co-occupant), §6.14(c) and Civil Code §1954.53(d) have separate waiver and notice standards.",
    "sources": [
     "S27",
     "S28",
@@ -1557,7 +1557,7 @@
   },
   {
    "situation": "Preserving a future reset under §6.14",
-   "rule": "A 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy; sixty days is generally considered reasonable. Failure to serve it within 60 days of actual knowledge establishes a rebuttable presumption that it was not served within a reasonable time.",
+   "rule": "Under Rent Board guidance and Rules §6.14(b), a 6.14 notice on a co-occupant must be served within a reasonable time after actual knowledge of the occupancy (60 days establishes a rebuttable presumption). For a non-co-occupant subtenant where the last original occupant vacates on or after April 25, 2000, Rules §6.14(c) turns on post-vacancy waiver—such as failing within 90 days of written notice or actual knowledge to serve an increase or reserve rights (§6.14(d) covers pre-April 25, 2000 departures).",
    "effect": "The reported change was 1 April 2026, so the sixty-day benchmark fell around 31 May 2026, before this review. Whether a notice was served, and whether any presumption can be rebutted, is a private fact (H-23).",
    "sources": [
     "S27",
@@ -1566,7 +1566,7 @@
   },
   {
    "situation": "§6.14 is not the only route",
-   "rule": "Section 6.14(d)(2) states that the landlord is entitled to establish a new base rent under Costa-Hawkins even if no 6.14 notice was served on the subsequent occupant.",
+   "rule": "Where an occupant is a post-1996 lawful subtenant or assignee (not a co-tenant), Civil Code §1954.53(d) and Rules §6.14(c)/(d)(2) permit establishing a new base rent when the last original occupant no longer permanently resides, even without an initial 6.14 notice, unless waived.",
    "effect": "A missed or late 6.14 notice does not by itself end the analysis. Costa-Hawkins has its own limits, including that it does not reach a co-tenant who moved in after the original occupant (H-24).",
    "sources": [
     "S28",

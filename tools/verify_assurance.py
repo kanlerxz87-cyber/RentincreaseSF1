@@ -173,9 +173,16 @@ check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28"
       "current official rate period mismatch")
 check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
 check(len(HUB["review_rows"]) == 14, "expected 14 review checks")
-for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20"):
+for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")
+
+# Root documentation regression guards
+readme_text = (ROOT / "README.md").read_text(encoding="utf-8")
+exec_text = (ROOT / "EXECUTIVE_SUMMARY.md").read_text(encoding="utf-8")
+check("13 tenant-side" not in readme_text, "README.md: stale 13-check review count")
+check("23-source" not in readme_text, "README.md: stale 23-source manifest count")
+check("\n\n| 9 |" not in exec_text, "EXECUTIVE_SUMMARY.md: broken blank line before step 9 in table")
 
 # The exact overstatements corrected by this audit must not return.
 for rel in PAGES[:-1]:
