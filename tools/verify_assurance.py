@@ -172,7 +172,13 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
 check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
-check(len(HUB["review_rows"]) == 14, "expected 14 review checks")
+check(len(HUB["review_rows"]) == 15, "expected 15 review checks")
+check(HUB["review_rows"][-1]["sources"] == ["S04", "S05", "S26"], "pending-ordinance review check missing")
+check("noticed on or after September 15, 2026" in next(s for s in HUB["sources"] if s["id"] == "S05")["quote"],
+      "Rent Board proposed-retroactivity warning missing from source registry")
+check("noticed on or after 15 September 2026" in docs["index.html"],
+      "proposed-retroactivity warning missing from landing page")
+check("{n}" not in docs["index.html"], "unrendered template placeholder on landing page")
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")

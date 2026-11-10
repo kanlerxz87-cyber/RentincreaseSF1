@@ -376,8 +376,8 @@ if len(sources) < 26:
     fail(f"expected at least 26 official sources, found {len(sources)}")
 if len(DATA["flags"]) < 22:
     fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
-if len(DATA["review_rows"]) != 14:
-    fail(f"expected 14 review checks, found {len(DATA['review_rows'])}")
+if len(DATA["review_rows"]) != 15:
+    fail(f"expected 15 review checks, found {len(DATA['review_rows'])}")
 
 # ---- G1/G2: the second licence (Business Registration Certificate) must stay answered
 by_id = {s["id"]: s for s in sources}
@@ -423,6 +423,12 @@ for fid, needles in (
         ok()
 if "S26" not in flag_by_id.get("H-22", {}).get("sources", []):
     fail("flag H-22 must cite the Legistar record directly (S26)")
+if "S05" not in flag_by_id.get("H-22", {}).get("sources", []):
+    fail("flag H-22 must cite the Rent Board's proposed-retroactivity warning (S05)")
+if "noticed on or after 15 September 2026" not in docs["index.html"]:
+    fail("landing page omits the proposed notice-date reach of File #261020")
+if "{n}" in docs["index.html"]:
+    fail("landing page contains an unrendered template placeholder")
 for field, needle in (
     (DATA["units"]["U2"]["base_status"], "lease-start"),
     (DATA["units"]["U2"]["base_status"], "not expressly as the current base rent"),
