@@ -1085,3 +1085,19 @@ Prior canonical/assurance work by `arena-54b96b1f` is marked `done` on `main` (`
 - PR #28 changed only this coordination log; rent-increase guidance and site content were already delivered through PR #22 and re-verified through PR #27.
 
 **Rebase coordination note:** while PR #31 was open, PR #30 merged a separate 29-source re-verification and maintenance update. The append-only coordination records conflicted; both session 7ab74b3e's audit record and this session's PR #28 merge record are retained verbatim. No audit work or site changes were discarded.
+
+---
+
+# Final current-state integration — `arena-39dd26a4` (2026-11-10)
+
+**Platform-bound branch:** `arena/39dd26a4-rentincreasesf1`; the requested per-task branch names cannot be used in this environment. No open PR or active session claim exists. All earlier implementations are preserved.
+
+| ID | Task | Status | Exclusive file scope |
+|---|---|---|---|
+| A39-1 | Re-read primary law and current Rent Board guidance; recheck pending File #261020 | in progress | `audit/session-39dd26a4/**` |
+| A39-2 | Correct the canonical dashboard for the Rent Board's new 2026-11-09 proposed-retroactivity warning and any reproducibility defects | unclaimed until A39-1 source audit complete | `hub/data.json`, `hub/build.py`, generated `index.html`, `hub/**` |
+| A39-3 | Rebuild assurance artifacts, update retrieval manifest and verification gates without weakening them | pending | `assurance/**`, `audit/final-integration/source-manifest.json`, `tools/verify_hub.py`, `tools/verify_assurance.py` |
+| A39-4 | Reconcile executive summary/source/verification documents and run every canonical and preserved suite | pending | `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| A39-5 | PR from the platform-bound branch to main, merge, confirm Pages, record results | pending | `COORDINATION.md` (this addendum) |
+
+The completed canonical/assurance scopes are formally taken over only for this final corrective integration because their previous tasks are done and CI requires synchronized registry, generator, and verifier changes. No archived edition will be edited or deleted. All personal identifiers remain excluded from current files; historical privacy remains an explicit open flag.
