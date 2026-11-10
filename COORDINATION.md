@@ -1234,3 +1234,24 @@ pull requests #29, #32, #34, none of which touches them).
 | **Post-Merge `main` CI** | `Verify site` ✅ (run `42766241059`), `Verify published site` ✅ (run `42766241395`), `Final assurance` ✅ (run `42766241128`) |
 | **GitHub Pages Deploy** | `pages build and deployment` ✅ (run `42766240601`); Pages API `status=built`, `https_enforced=true`, source `main /`. Live-fetched and verified at <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/> and <https://kanlerxz87-cyber.github.io/RentincreaseSF1/guide/flagged-for-review.html>. |
 
+---
+
+# Session Addendum — `arena/ba230459-rentincreasesf1` (2026-11-10 UTC)
+
+**Session ID:** `arena-ba230459` · **Branch:** `arena/ba230459-rentincreasesf1` (platform-pinned branch; per environment rules, no other branch may be created, switched to, or pushed). `git pull --rebase origin main` is executed before every push.
+
+## Concurrent-session check, rebase log & non-overlapping claim (filed before writing any scope files)
+
+- **Rebase conflict log (1–6):** During claim and build pushes, `origin/main` advanced through PRs #22–#36 (`7eb20dc`..`734394e`), producing append-only conflicts at the tail of `COORDINATION.md` only (zero conflicts in `compliance/**` or `audit/session-ba230459/**`). Every concurrent session's record (`arena-54b96b1f`, `arena-379bda6c`, `arena-68f1fe88`, `arena-bfd568c0`, `arena-7ab74b3e`, `arena-39dd26a4`, `arena-ba4924e8`, `arena-5d4a1320`) was preserved 100% verbatim and this section was appended below them; zero lines were discarded.
+- **Disjoint scope selection:** Multiple concurrent sessions actively claimed `hub/**`, `index.html`, `assurance/**`, `audit/final-integration/**`, legacy archives, and root Markdown files (<60 minutes old). Per the parallel-sessions rule (*never start a task another session has claimed; keep scopes non-overlapping; log cross-scope requests in COORDINATION.md instead of editing*), this session claims strictly disjoint file scopes:
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `BA23-T1` | Live 2026-11-10 line-by-line verification of 37 official SF, California, and Federal primary sources (`sf.gov`, `portal.sfrb.org`, `sftreasurer.org`, `sfgov.legistar.com`, `leginfo.legislature.ca.gov`, `courts.ca.gov`, `govinfo.gov`, `hud.gov`, `justice.gov`, `census.gov`) | done | `arena-ba230459` | `audit/session-ba230459/sources_2026_11_10.json`, `compliance/data/sources.json` |
+| `BA23-T2` | Line-by-line repository verification audit against live official sources; record any stale text, broken links, or newly updated official guidance | done | `arena-ba230459` | `audit/session-ba230459/REPO_AUDIT.md`, `compliance/data/repo_audit.json` |
+| `BA23-T3` | Strictly anonymized Executive Summary (individual-owner Rent Board license process at forefront) and conditional Unit 1 & Unit 2 94122 analysis (placeholder names only; exact dates & dollar amounts; blank official-confirmation cells for unverified private inputs) | in progress | `arena-ba230459` | `compliance/EXECUTIVE_SUMMARY.md`, `compliance/data/site_data.json` |
+| `BA23-T4` | Clean, dashboard-style GitHub Pages edition at `/compliance/` (landing page + categorized subpages + `compliance/flagged.html` + `compliance/sources.html`, with an official source link on every table row) | pending | `arena-ba230459` | `compliance/build.py`, `compliance/index.html`, `compliance/*.html`, `compliance/assets/**`, `compliance/README.md` |
+| `BA23-T5` | Automated line-by-line link, anchor, citation-per-row, exact rational/decimal arithmetic, blank-cell, and SHA-256 privacy verification + full existing CI suite compatibility check | pending | `arena-ba230459` | `compliance/verify.py`, `audit/session-ba230459/VERIFICATION.md` |
+| `BA23-T6` | Rebase onto `origin/main`, log any cross-session requests, open and merge PR from `arena/ba230459-rentincreasesf1` to `main`, confirm GitHub Pages deployment, and record PR & deploy result here | pending | `arena-ba230459` | `COORDINATION.md` (append-only) |
+
+**Explicitly not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `site/**`, `research/**`, `data/**`, `build/**`, `tools/**`, `.github/workflows/**`, and shared root Markdown files claimed by active concurrent sessions. Any recommended updates to shared files will be logged below as cross-session requests.
