@@ -1,9 +1,9 @@
 # Final integration verification record
 
-**Verification date:** 2026-11-07
+**Verification date:** 2026-11-10 (full 29-source live re-verification and repair pass; prior baseline PR #15 verified 2026-11-07)
 **Canonical edition:** root `index.html` + `hub/`
 **Independent assurance:** `assurance/` + `audit/final-integration/`
-**Branch:** `arena/1abdce92-rentincreasesf1`
+**Branch:** `arena/7ab74b3e-rentincreasesf1`
 
 ## Scope and evidentiary standard
 
@@ -20,13 +20,16 @@ No personal identity is used in the current site or verification data.
 
 ## Official-source verification
 
-All **29/29** registered sources were retrieved and read from their official publishers: S01–S23 on 2026-11-07 and S24–S29 on 2026-11-08. Each source carries its own retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+All **29/29** registered sources were re-fetched and verified live from their official publishers on **2026-11-10** (originally retrieved 2026-11-07 for S01–S23 and 2026-11-08 for S24–S29), alongside File #261020's legislative attachments (`Leg Ver1` / `Leg Dig Ver1`) and `42 U.S.C. §3604` on GovInfo. Each source carries its retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
 
-Notable checks:
+Notable checks (`2026-11-10`):
 
 - Individual-owner reporting and effective-date license gate: [§37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing) + [Housing Inventory](https://www.sf.gov/rent-board-housing-inventory).
-- Current 1.6% rate and all historical rates: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
+- Current 1.6% rate and all 46 historical periods: [Form 571](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf).
+- November 9, 2026 official Rent Board warning and BOS File #261020 (`Pending Committee Action — not law`), including proposed `§37.3(h)` (10% of lowest 12-month base rent cap through Dec 31, 2029, carryover Jan 1, 2030, retroactive to banked notices provided on or after Sept 15, 2026) and proposed `§37.15(b)(2)(F)` banked reporting: [Banked rent increases](https://www.sf.gov/information--banked-rent-increases) + [Learn about rent increases](https://www.sf.gov/learn-about-rent-increases-san-francisco) + [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770).
+- 2026–27 Rent Board Fee ($59.00/unit, 50% tenant recovery if in occupancy Nov 1, due March 1) and the **December 14, 2026** exemption-request deadline for the 2027 fee: [Rent Board Fee](https://www.sf.gov/rent-board-fee).
 - Banking and notice text, including Rule 4.12(b)’s express non-void provision: [Rules Part IV](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring).
+- Occupant-change subsection distinctions (`§6.14(b)` co-occupants 60-day initial notice presumption vs. `§6.14(c)` non-co-occupants 90-day post-vacancy reservation/waiver rule vs. `§6.14(d)` pre-April 25, 2000 departures and Costa-Hawkins): [Rules Part VI](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications).
 - Fixed-term limitation: [California Tenants guide](https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf).
 - Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
 - Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV).
@@ -59,12 +62,12 @@ These are scenario calculations, not universal last-safe dates or legal clearanc
 
 Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 
-| Check | Result at verification |
+| Check | Result at verification (`2026-11-10`) |
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
 | `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,545 checks; 0 errors**; 210 claim-table rows with source/flag links |
-| `python3 tools/verify_assurance.py` | **1,742 checks; 0 errors**; 33 assurance rows with official sources |
+| `python3 tools/verify_hub.py` | **1,592 checks; 0 errors**; 210 claim-table rows with source/flag links |
+| `python3 tools/verify_assurance.py` | **1,812 checks; 0 errors**; 37 assurance rows with official sources |
 | Current-text privacy scan | **170 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
@@ -108,11 +111,11 @@ The 12-row public correction register is rendered at [`assurance/index.html`](as
 
 ## Remaining limitations
 
-The canonical [Flagged for Review](hub/flags.html) contains 24 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), and official coverage (H-05). Repair and protected-activity history also remains open (H-09).
+The canonical [Flagged for Review](hub/flags.html) contains 24 items. High-severity unknowns include Unit 1 lease status (H-17), Unit 2 current base/history (H-18/H-03), Unit 1 anniversary/history (H-02), both licenses (H-04), official coverage (H-05), and pending BOS File #261020 (H-22). Repair and protected-activity history (H-09) and Unit 1 occupant-change records (H-23/H-24) also remain open.
 
 **No scenario is certified as notice-ready. No lawful current maximum or attorney/advocate acceptance is asserted.**
 
-## Pull request and deployment result
+## Initial PR #15 deployment record (2026-11-07)
 
 - [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` as `3fbd5e195330babacbd5e1568e287171ee4f8e93` after all three PR workflows passed.
 - Post-merge `Verify site` run `42416341845`, `Verify published site` run `42416341852`, and `Final assurance` run `42416341861` all succeeded.
@@ -204,3 +207,17 @@ noticed on or after **15 September 2026** — a date already past. The ordinance
 figure changes, and the flag now says plainly that a notice served today could be affected if the
 proposal becomes law as described. Unverified official-confirmation cells (licence status, parcel
 coverage, current base rents, ledgers, lease status) remain blank.
+
+## Defects repaired and full-registry update (2026-11-10, `arena/7ab74b3e-rentincreasesf1`)
+
+- Repaired invalid CSS property (`font-size1.02rem` → `font-size:1.02rem`) in `hub/assets/style.css`.
+- Replaced stale hardcoded counts and retrieval dates in `hub/build.py` (`13 checks` → dynamic `14 checks`; `Twenty flagged` → dynamic `24 flagged`; `twenty-three` / `14 SF Rent Board` / `7 November 2026` → dynamic `29` sources with accurate City/State/Federal counts and `10 November 2026` retrieval).
+- Surfaced pending BOS File #261020 and the Rent Board's November 9, 2026 retroactive notice warning (`September 15, 2026` cutoff; `10%` of lowest 12-month base rent through `December 31, 2029`; carryover `January 1, 2030`; proposed `§37.15(b)(2)(F)` banked reporting) on `hub/limits.html`, `hub/notice.html`, `hub/licensing.html`, `index.html`, and `H-22`.
+- Surfaced the **December 14, 2026** 2027 Rent Board Fee exemption-request deadline (`S17`) on `hub/licensing.html` and `EXECUTIVE_SUMMARY.md`.
+- Refined `S28`, `H-23`, and occupant-change tables to distinguish `§6.14(b)` (co-occupants: 60-day initial notice presumption) from `§6.14(c)` (non-co-occupants, post-April 25, 2000 departures: 90-day post-vacancy reservation/waiver window) and `§6.14(d)` (pre-April 25, 2000 departures).
+- Repaired the broken Markdown table row gap before step 9 in `EXECUTIVE_SUMMARY.md` and reconciled counts (`14` checks, `29` manifest entries) in `README.md`.
+
+## Pull request and deployment history
+
+- Initial final-integration baseline: [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` (`3fbd5e195330babacbd5e1568e287171ee4f8e93`); followed by PRs #16–#27 on `main` (through `3a07761`).
+- Current `2026-11-10` full 29-source live re-verification and repair pass is tracked in [`COORDINATION.md`](COORDINATION.md) under `arena/7ab74b3e-rentincreasesf1`.

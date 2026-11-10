@@ -491,11 +491,42 @@ for fid in ("H-23", "H-24"):
 
 # November 9 agency warning: a proposal can affect notices served before enactment.
 h22 = flag_by_id.get("H-22", {})
-for phrase in ("September 15, 2026", "11.5%", "not law"):
+for phrase in ("September 15, 2026", "11.5%", "not law", "December 31, 2029", "January 1, 2030"):
     if phrase not in str(h22):
         raise SystemExit("H-22 missing proposed-cap warning: " + phrase)
 if "S04" not in h22.get("sources", []):
     raise SystemExit("H-22 must cite the Rent Board warning")
+for page_name in ("hub/limits.html", "hub/notice.html"):
+    for needle in ("261020", "15 September 2026", "not law", "flags.html#H-22"):
+        if needle not in docs[page_name]:
+            fail(f"{page_name}: missing File #261020 / Sept 15 warning ({needle})")
+        ok()
+
+# CSS validity and dynamic count / deadline consistency regressions
+css_text = open(os.path.join(ROOT, "hub", "assets", "style.css"), encoding="utf-8").read()
+if "font-size1." in css_text:
+    fail("hub/assets/style.css: invalid missing colon in font-size")
+ok()
+if f"{len(DATA['review_rows'])} checks" not in docs["hub/review.html"] or "13 checks" in docs["hub/review.html"]:
+    fail("hub/review.html: stale review-row check count")
+ok()
+if f"{len(DATA['flags'])} flagged" not in docs["hub/flags.html"] or "Twenty flagged" in docs["hub/flags.html"]:
+    fail("hub/flags.html: stale flag count in description")
+ok()
+for stale_src in ("twenty-three", "Twenty-three", "14 SF Rent Board"):
+    if stale_src in docs["hub/sources.html"]:
+        fail(f"hub/sources.html: stale source count text: {stale_src}")
+    ok()
+if f"{len(sources)} official sources" not in docs["hub/sources.html"]:
+    fail("hub/sources.html: missing current official source count")
+ok()
+source_by_id = {s["id"]: s for s in sources}
+if "14 December 2026" not in docs["hub/licensing.html"] or "December 14, 2026" not in str(source_by_id["S17"]):
+    fail("missing 2027 Rent Board fee exemption deadline (2026-12-14)")
+ok()
+if "6.14(b)" not in str(source_by_id["S28"]) or "6.14(c)" not in str(source_by_id["S28"]):
+    fail("S28: missing §6.14(b)/(c) co-occupant vs non-co-occupant distinction")
+ok()
 
 # ----------------------------------------------------------------- summary
 print(f"pages checked: {len(PAGES)}")
