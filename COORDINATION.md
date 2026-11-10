@@ -820,3 +820,36 @@ block treating any market-rate reset as available. All pre-existing flags remain
 ## Handoff rule
 
 If this session crashes, another session may take over the PR/merge step and must note the handoff here.
+
+---
+
+# Session Addendum — `arena/379bda6c-rentincreasesf1` (2026-11-10)
+
+**Session ID:** `arena-379bda6c` · **Branch:** `arena/379bda6c-rentincreasesf1` (platform-pinned; no other
+branch may be created, switched to, or pushed from this session). `git pull --rebase origin main` is run
+before every push.
+
+## Claim (filed before any file write)
+
+| Scope | Purpose |
+|---|---|
+| `pr_body.md` (delete) | Stray pre-merge PR body of PR #14, superseded by the merged result; no content needed |
+| `audit/__pycache__/build_dashboard.cpython-311.pyc`, `tools/__pycache__/check_links.cpython-311.pyc` (delete) | Tracked build artifacts that should never have been committed |
+| `.gitignore` (add) | Ignore `__pycache__/` and `*.pyc` at the root so artifacts stop being tracked |
+| `COORDINATION.md` | This addendum only (append-only) |
+
+**Explicitly not claimed / not edited:** `index.html`, `hub/**`, `assurance/**`, `docs/**`, `docs/v2/**`,
+`dashboard/**`, `portal/**`, `integration/**`, `review/**`, `site/**`, `research/**`, `data/**`,
+`build/**`, `audit/**` (except the one `.pyc` deletion), `tools/**` (except the one `.pyc` deletion),
+`.github/workflows/**`, all shared Markdown.
+
+## Purpose of this session
+
+Fresh-eyes pass on the completed, already-merged integration (main @ `5c21915`, PRs #4–#20, Pages `built`):
+re-run every published suite, independently re-verify the arithmetic with an independent method, spot-check
+the canonical landing page, perform the repo hygiene cleanup claimed above, and record the outcome. No
+published figure, source, or claim is changed by this session. Any irregularity found is appended here and
+published on the canonical Flagged for Review page only if it requires a canonical-file edit (which would be
+claimed in a follow-up addendum first).
+
+*(Merge result and PR links are recorded below once known.)*
