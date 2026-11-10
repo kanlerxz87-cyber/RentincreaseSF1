@@ -489,6 +489,14 @@ for fid in ("H-23", "H-24"):
         fail(f"{fid}: not cross-linked from canonical content")
     ok()
 
+# November 9 agency warning: a proposal can affect notices served before enactment.
+h22 = flag_by_id.get("H-22", {})
+for phrase in ("September 15, 2026", "11.5%", "not law"):
+    if phrase not in str(h22):
+        raise SystemExit("H-22 missing proposed-cap warning: " + phrase)
+if "S04" not in h22.get("sources", []):
+    raise SystemExit("H-22 must cite the Rent Board warning")
+
 # ----------------------------------------------------------------- summary
 print(f"pages checked: {len(PAGES)}")
 print(f"claim-table rows with an official source or flag link: {citation_rows}")

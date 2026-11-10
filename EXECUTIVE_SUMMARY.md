@@ -10,6 +10,8 @@
 >
 > **Do not confuse it with the second City registration.** A **Business Registration Certificate** comes from the Office of the Treasurer & Tax Collector, is a general business-tax registration, and has no effect on whether a rent increase is lawful. On the reported two units in one building the Tax Collector's guidance points to *no* business registration — rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register — but the carve-out is conditional and is published as a conditional determination ([lessor guidance](https://sftreasurer.org/information-lessors-residential-real-estate) · [register a business](https://sftreasurer.org/business/register-business) · flag `H-21`).
 >
+> **Update 2026-11-10:** The Rent Board states that, if the pending proposal is enacted as currently proposed, it would apply to banked increases noticed on or after September 15, 2026. It is not law and may change. The Unit 2 illustration includes an 11.5% banked portion; do not use it to serve notice without checking the final law and obtaining advice. [Rent Board warning](https://www.sf.gov/information--banked-rent-increases).
+
 > **Before any large banked catch-up**, re-check Board of Supervisors [File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770), which would cap banked and capital-improvement increases at 10% per year for three years. Legistar status on 2026-11-08: **Pending Committee Action — not law**. Not applied to any figure here (flag `H-22`).
 
 ## 1. What the owner should do, in order

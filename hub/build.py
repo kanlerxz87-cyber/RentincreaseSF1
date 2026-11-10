@@ -212,7 +212,7 @@ def page(filename: str, title: str, description: str, hero: str, body: str) -> s
 <footer class="site-footer">
   <div class="wrap">
     <p><strong>Anonymised.</strong> Tenant names and initials are replaced with placeholders. Dates and dollar amounts are unchanged, as instructed.</p>
-    <p><strong>Verified {retrieved}.</strong> Official rules and rates were re-fetched on that date. Dollar results are conditional scenario arithmetic using owner-brief inputs, not certified lawful maxima. Unsupported official-confirmation cells are blank and listed on <a href="@@/hub/flags.html">Flagged for Review</a>.</p>
+    <p><strong>Core research through {retrieved}; selected sources updated later.</strong> See the source registry for each retrieval date. Dollar results are conditional scenario arithmetic using owner-brief inputs, not certified lawful maxima. Unsupported official-confirmation cells are blank and listed on <a href="@@/hub/flags.html">Flagged for Review</a>.</p>
     <p><strong>Not legal advice.</strong> San Francisco Rent Board counseling is free on 415-252-4600; confirm the licence status, the current rate and any notice before serving it.</p>
   </div>
 </footer>
@@ -252,7 +252,7 @@ index_body = """
     <p><strong>Timing, precisely:</strong> the official hard cutoff is a current license on the increase's <strong>effective date</strong>, not necessarily the day the notice is served. Best practice is to complete/update reporting and confirm the license <em>before</em> serving notice so a correctable omission does not become an unenforceable increase. Late reporting is allowed, but restoration is prospective; the tenant does not owe the increase for unlicensed suspension months. The license does not have to be attached to the notice.</p>
     <p><strong>Two different City registrations are often confused — only one gates the rent increase.</strong> The <strong>Rent Increase License</strong> comes from the Rent Board's Housing Inventory and is what makes an annual or banked increase enforceable. A <strong>Business Registration Certificate</strong> comes from the Office of the Treasurer &amp; Tax Collector, is a general business-tax registration, and does not affect the lawfulness of a rent increase. On the reported two units in one building, the Tax Collector's own guidance points to <em>no</em> business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. That carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination {s24} {s25} and logged as {h21}, not as a settled fact.</p>
     <p><strong>Use this order:</strong> confirm coverage and lease terms → reconcile the full rent ledger → submit/update the Housing Inventory and confirm both licenses → calculate the amount → serve a conforming written notice → verify the license remains current on the effective date and retain proof. <a href="@@/hub/licensing.html">Full step-by-step answer and official links →</a></p>
-    <p><strong>Before any large banked catch-up:</strong> Board of Supervisors File #261020 would cap banked and capital-improvement increases at 10% per year for three years. Re-checked on Legistar on 8 November 2026: <strong>Pending Committee Action — not law</strong>, no final action and no enactment date {s26}. It is not applied to any figure here, but the Unit 2 combined scenario is 13.1%, above that threshold, so re-check the record before serving. Logged as {h22}.</p>
+    <p><strong>Before any large banked catch-up:</strong> Board of Supervisors File #261020 would cap combined banked and capital-improvement increases at 10% per year for three years. On 10 November 2026 Legistar showed <strong>Pending Committee Action — not law</strong> {s26}. The Rent Board warns that, if enacted as proposed, it would apply to banked increases <strong>noticed on or after 15 September 2026</strong> {s04}. Unit 2’s illustrative banked portion alone is 11.5%; do not rely on this scenario to serve notice. Re-check the proposal and seek advice. Logged as {h22}.</p>
   </div>
   <div class="callout red"><p><strong>Privacy alert:</strong> The current site uses placeholders, but earlier public Git history contains tenant initials. Current-file scans do not remove or check historical copies. See <a href="@@/hub/flags.html#history-privacy">the privacy review flag</a>.</p></div>
   <div class="callout red">
@@ -272,9 +272,9 @@ index_body = """
     <div class="note">1.6% on reported {u1_base} → {u1_annual_rent}, scenario date {u1_eff}. The 3.0% scenario adds {u1_banked}; both require lease, ledger, license, and timing review.</div>
   </div>
   <div class="kpi">
-    <div class="label">Unit 2 — combined illustration</div>
-    <div class="value">{u2_total}<small> / mo</small></div>
-    <div class="note">13.1% on the 2019 lease-start amount {u2_base} → {u2_total_rent}. Current base and zero-prior-increase history are not verified.</div>
+    <div class="label">Unit 2 — annual-only illustration</div>
+    <div class="value">{u2_annual}<small> / mo</small></div>
+    <div class="note">1.6% on the 2019 lease-start amount {u2_base}. Current base, history, timing, and license are unverified. A separate 13.1% combined scenario ({u2_total} → {u2_total_rent}) is not a recommendation and must not be used to serve notice.</div>
   </div>
   <div class="kpi warn">
     <div class="label">Illustrative 90-day date</div>
@@ -376,7 +376,7 @@ index_html = page(
     "SF Rent Increase Compliance Dashboard — Outer Sunset 94122",
     "Official-source dashboard on rent increases for two rent-controlled San Francisco units built in 1940: the Rent Board licence, the 1.6% allowance, banked increases, notice rules, and every figure traced to an official link.",
     hero_block(
-        "Executive summary · verified {}".format(DATA["meta"]["retrieved"]),
+        "Executive summary · core research through {} · updates dated by source".format(DATA["meta"]["retrieved"]),
         "Raising the rent on two 1940 flats in the Outer Sunset — what the Rent Board requires, and what the numbers actually are",
         "The brief reports a two-unit 1940 rent-controlled building. On that scope, local law supplies the annual allowance and state law supplies notice rules; official parcel coverage, private lease terms, ledgers, and licenses remain separately unverified.",
         ["ZIP 94122 · owner-brief facts", "Reported 1940 / rent-controlled", "1.6% to 28 Feb 2027", "{} official sources".format(len(DATA["sources"])), "Conditional calculations only"],
@@ -384,12 +384,12 @@ index_html = page(
     index_body.format(
         u1_annual=money(u1["annual_amt"]), u1_base=money(u1["base"]), u1_annual_rent=money(u1["annual_rent"]),
         u1_banked=money(u1["banked_amt"]), u1_eff=longdate(DATA["calculations"]["U1"]["annual_effective"]),
-        u2_total=money(u2["total_amt"]), u2_base=money(u2["base"]), u2_total_rent=money(u2["total_rent"]),
+        u2_annual=money(u2["annual_amt"]), u2_total=money(u2["total_amt"]), u2_base=money(u2["base"]), u2_total_rent=money(u2["total_rent"]),
         u2_serve=longdate(N["U2"]["serve_by"].isoformat()), u2_mail=longdate(N["U2"]["mail_by"].isoformat()),
         unit_table=unit_table, q_table=q_table,
         flag_count=len(DATA["flags"]), source_count=len(DATA["sources"]),
         n=len(DATA["review_rows"]),
-        s03=src_links(["S03"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
+        s03=src_links(["S03"]), s04=src_links(["S04"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
         s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
         s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
         h21='<a href="@@/hub/flags.html#H-21">H-21</a>', h22='<a href="@@/hub/flags.html#H-22">H-22</a>',
