@@ -1,0 +1,406 @@
+{
+  "session": "arena-ba4924e8",
+  "retrieved": "2026-11-10",
+  "method": "Each URL below was fetched from the official publisher and read in full by this session on the retrieval date. 'passages' are copied from the retrieved text. 'canonical_id' is the matching id in hub/data.json where one exists. Nothing here is taken from memory or from a commercial site.",
+  "sources": [
+    {
+      "id": "V01",
+      "canonical_id": "S03",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "The Rent Board Housing Inventory",
+      "url": "https://www.sf.gov/rent-board-housing-inventory",
+      "passages": [
+        "All owners of residential property are required to report.",
+        "If you own residential property, you are required to report into the Housing Inventory online through the Rent Board Portal. Property owners who have tenants will receive a rent increase license after the submission.",
+        "Reporting is free and can be done online 24/7.",
+        "If your unit is covered under rent control, you will need to comply with the Housing Inventory requirements before any annual or banked rent increase notice goes into effect.",
+        "March 1 of every year. You can still make a Housing Inventory submission and receive a rent increase license after the deadline. However, your rent increase notice will not be enforceable without having a rent increase license on the effective date of the notice.",
+        "The Rent Board does not assess monetary penalties for filing after the deadline.",
+        "The information entered in the housing inventory submission is public.",
+        "If you are a property owner, once you have reported into the Housing Inventory, a rent increase license will be automatically generated for non-owner occupied units. A landlord must have a current rent increase license on file with the Rent Board before any annual or banked rent increase can go into effect. The rent increase license does not need to be included with your rent increase notice.",
+        "If you are a tenant, you can search the Rent Board Portal to see if your landlord is up to date with their rent increase license.",
+        "Reporting requirements began March 1, 2023 for condominiums and units in buildings with fewer than 10 units.",
+        "You will need to set up an account and use the PIN number on your Annual Notice to add property to your account."
+      ],
+      "confirms": "Reporting duty applies to all owners; licence is generated automatically after reporting; the hard test is a licence on the effective date of the notice; reporting is free; late filing is possible with no monetary penalty; tenants can look the licence up; the submission is public."
+    },
+    {
+      "id": "V02",
+      "canonical_id": "S01",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Sec. 37.15 - Reporting Obligations; Licensing (S.F. Administrative Code, Chapter 37)",
+      "url": "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing",
+      "passages": [
+        "(a)  Owners of residential dwelling units subject to this Chapter 37 shall be required to report certain information about their units to the Rent Board, as set forth in subsections (b) and (c). In the case of a unit owned by multiple owners, reporting by a single owner shall suffice.",
+        "For condominium units and units in buildings with fewer than 10 units, the information shall be reported commencing March 1, 2023 and updated annually by March 1 of each successive year. Unit information shall also be updated within 30 days of any change in the name or business contact information of the owner or designated property manager.",
+        "The Rent Board shall not use the information to operate a rental registry within the meaning of California Civil Code Sections 1947.7 – 1947.8.",
+        "(e) If a landlord has substantially complied with the obligation to report information about a rental unit as required under this Section 37.15, the landlord shall receive a license to impose rent increases on tenants in that unit under Sections 37.3(a)(1)-(2). If the landlord has not substantially complied with the reporting obligation, then the license to impose rent increases shall be temporarily suspended during the period of the landlord’s noncompliance. Upon receipt of the required information from the landlord, the suspension shall be terminated, and the license to impose rent increases shall be restored prospectively, but a tenant shall not be obligated to pay the increased rent for months during the period of suspension.",
+        "[Added by Ord. No. 265-20, effective January 18, 2021]"
+      ],
+      "confirms": "The duty falls on 'owners of residential dwelling units'; the text contains no exemption for an individual owner or for a two-unit building. Licence follows substantial compliance; suspension during non-compliance; restoration is prospective only."
+    },
+    {
+      "id": "V03",
+      "canonical_id": "S05",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Learn about rent increases in San Francisco",
+      "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
+      "passages": [
+        "The allowed rent increase percentage in San Francisco is 1.6%. The percentage is effective March 1, 2026 through February 28, 2027.",
+        "Posted November 9, 2026 The San Francisco Board of Supervisors is considering legislation (File No. 261020) that would temporarily limit the combined amount of banked rent increases and capital improvement rent increases that may be imposed on rent-controlled units to 10% per year.",
+        "If enacted as currently proposed, the legislation would apply to banked rent increases noticed on or after September 15, 2026, and capital improvement rent increases based on petitions filed with the Rent Board on or after September 15, 2026.",
+        "This legislation has not been enacted and is subject to change.",
+        "Under the San Francisco Rent Ordinance, a landlord can only increase a tenant’s rent by a certain percentage once every 12 months.",
+        "A landlord must get a rent increase license before imposing annual allowable and/or banked rent increases on a tenant. To get a rent increase license, a landlord must first report into the Rent Board Housing Inventory. This is effective July 1, 2022 (or March 1, 2023 for condominiums and buildings with 1-9 residential units).",
+        "This amount is based on 60% of the increase in the Consumer Price Index for All Urban Consumers in the Bay Area.",
+        "Landlords must calculate the rent increase on the tenant’s base rent only.",
+        "Rent increases cannot be rounded up to the nearest dollar.",
+        "A landlord can impose the first annual increase 12 months after the date the tenant’s lease began.",
+        "If a landlord increases the rent more than 12 months later, the effective date of the increase becomes the tenant’s new anniversary date. The landlord must wait at least 12 months to increase the rent again.",
+        "30-day written notice of the proposed rent increase",
+        "90-day written notice if the increase (either by itself or combined with another increase in the same year) is more than 10%",
+        "If the notice is mailed, the landlord must give the tenant 5 more days.",
+        "The landlord should use the percentage that will be in effect on the date of the increase, not the percentage in effect on the date they serve the notice.",
+        "A landlord cannot charge additional rent simply because a new (or additional) roommate has moved into a unit with the existing tenant. This is an unlawful rent increase, even if the lease or rental agreement provides for the additional charge.",
+        "However, the owner did not “bank” the 1.4% increase from June 1, 2025 because a full 12 months has not elapsed between the date it first became available on June 1, 2025, and the date of the rent increase on May 1, 2026",
+        "The 1.4% rent increase is permanently lost due to the change in anniversary date",
+        "Changes to the anniversary date may result in the loss of an annual increase. Many owners give annual and banked rent increases on the same date each year to avoid possible issues."
+      ],
+      "confirms": "Current rate and its window; licence requirement; base-rent-only, no rounding up; 12-month rule and anniversary date; 30/90-day notice plus 5 days if mailed; no roommate surcharge; how a skipped increase is lost when the anniversary date moves; the 9 November 2026 notice about File No. 261020."
+    },
+    {
+      "id": "V04",
+      "canonical_id": "S04",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Banked rent increases",
+      "url": "https://www.sf.gov/information--banked-rent-increases",
+      "passages": [
+        "A skipped increase is only banked if at least 24 full months pass without any rent increase. If less than 24 months pass, the skipped increase is lost and cannot be imposed at a later date.",
+        "Once an increase is properly banked, it does not expire. A landlord may impose it on a future anniversary date, or at another time when they are allowed to raise the rent (as long as at least 12 months have passed since the last increase). This may create a new anniversary date.",
+        "A landlord does not have to impose the maximum allowed increase.",
+        "If only part of the allowable increase is used, the rest is banked. The remaining portion may be imposed at a later time, after at least 12 months have passed, or on a future anniversary date.",
+        "There is no limit on how much can be banked",
+        "Banked increases do not expire during a tenancy",
+        "Banked increases do not carry over to a new tenant",
+        "Banked increases do not have to be approved by the Rent Board, but must be calculated correctly. They cannot be compounded or prorated.",
+        "To calculate the total banked rent increase, add the percentage amounts for each year banked together. Then multiply the banked percentage amount by the tenant’s current base rent.",
+        "Which part of the increase is banked"
+      ],
+      "confirms": "Banking test, no expiry, partial increases allowed with the remainder banked, percentages added and never compounded, no Rent Board approval needed, the notice should say which part is banked. The page also carries the 9 November 2026 notice about File No. 261020."
+    },
+    {
+      "id": "V05",
+      "canonical_id": "S06",
+      "publisher": "San Francisco Rent Board (SF.gov, PDF)",
+      "title": "Form 571 - Allowable Annual Rent Increases (3/1/26 - 2/28/27)",
+      "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
+      "passages": [
+        "A landlord may increase the tenant’s base rent once every 12 months by the amount of the allowable annual rent increase without filing a petition at the Rent Board. Effective March 1, 2026 through February 28, 2027, the allowable annual increase amount is 1.6%."
+      ],
+      "rate_table_read": [
+        [
+          "3/1/26 – 2/28/27",
+          "1.6%"
+        ],
+        [
+          "3/1/25 – 2/28/26",
+          "1.4%"
+        ],
+        [
+          "3/1/24 – 2/28/25",
+          "1.7%"
+        ],
+        [
+          "3/1/23 – 2/29/24",
+          "3.6%"
+        ],
+        [
+          "3/1/22 – 2/28/23",
+          "2.3%"
+        ],
+        [
+          "3/1/21 – 2/28/22",
+          "0.7%"
+        ],
+        [
+          "3/1/20 – 2/28/21",
+          "1.8%"
+        ],
+        [
+          "3/1/19 – 2/29/20",
+          "2.6%"
+        ]
+      ],
+      "confirms": "Every rate used in the unit arithmetic, and that an ordinary annual increase needs no petition."
+    },
+    {
+      "id": "V06",
+      "canonical_id": "S07",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Rent Board Rules and Regulations, Part IV - Sections 4.10 (Notice) and 4.12 (Banking)",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring",
+      "passages": [
+        "(a)        Those landlords not seeking a rental increase which exceeds the limitations set forth in Section 37.3 of the Rent Ordinance shall inform the tenant in writing on or before the date the notice is given of the following: (1)        Which portion of the rent increase reflects the annual increase, and/or banked amount, if any;",
+        "(b)        Any rent increase which does not conform with the provisions of this Section shall render the entire rent increase null and void, unless the amount requested equals no more than the allowable annual and banked rent increase(s)",
+        "(a)        A landlord who refrains from imposing an annual rent increase, or any portion thereof, may accumulate said increase and impose that amount on or after the tenant's subsequent rent increase anniversary date; however, the rent may be increased only one time every twelve (12) months. This banked amount may only be given at the time of an annual increase.",
+        "A full 12 months must have elapsed from the date that an annual rent increase, or a portion thereof, could have been imposed before this banking section becomes applicable. Banked increases shall not be compounded and shall not be rounded up",
+        "(b)        In order to impose an accumulated rent increase the landlord shall:  (1) inform the tenant, on or before the date upon which the landlord gives the tenant legal notice, which portion of the rent increase reflects banked amount, and (2) the dates upon which said banked amount is based; provided, however, that failure to include such information shall not render the increase null and void."
+      ],
+      "confirms": "What the written notice must itemise; when a non-conforming notice is void and when it is not; the 12-month banking test; no compounding, no rounding up."
+    },
+    {
+      "id": "V07",
+      "canonical_id": "S26",
+      "publisher": "San Francisco Board of Supervisors (Legistar)",
+      "title": "File #261020 - Administrative Code - Cap On Rent Increases for Rent-Controlled Units",
+      "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
+      "passages": [
+        "Ordinance amending the Administrative Code to provide that banked rent increases and capital improvement rent increases for rent-controlled units may not increase a tenant’s rent by more than a total of 10% per year, for the next three years; and making various non-substantive changes."
+      ],
+      "record_fields_read": {
+        "File #": "261020",
+        "Version": "1",
+        "Type": "Ordinance",
+        "Status": "Pending Committee Action",
+        "Introduced": "9/15/2026",
+        "In control": "Land Use and Transportation Committee",
+        "On agenda": "",
+        "Final action": "",
+        "Enactment date": "",
+        "Enactment #": "",
+        "Latest history row": "10/7/2026 - Youth Commission - RESPONSE RECEIVED"
+      },
+      "confirms": "The ordinance is pending and is not law. The four blank fields are blank on the official record."
+    },
+    {
+      "id": "V08",
+      "canonical_id": null,
+      "publisher": "San Francisco Board of Supervisors (Legistar attachment)",
+      "title": "File No. 261020 - Legislative Digest (Version 1)",
+      "url": "https://sfgov.legistar.com/View.ashx?M=F&ID=15865647&GUID=CC09B796-4675-4A7D-9960-85FE239F7FBB",
+      "passages": [
+        "The Rent Ordinance does not limit the amount of Banked Increases that a landlord can impose.",
+        "The ordinance would set a combined 10% cap on Banked Increases and Capital Improvement Increases. Specifically, a landlord could not impose Banked Increases and/or Capital Improvement Increases that caused a tenant’s rent to increase by more than 10% of the lowest base rent that was in effect during the previous 12 months.",
+        "The 10% cap would apply to Banked Increases based on rent increase notices that landlords provided to their tenants on or after September 15, 2026, and to Capital Improvement petitions that landlords filed with the Rent Board on or after that date, and would remain in effect until December 31, 2029.",
+        "A landlord would be able to accumulate Banked Increases and Capital Improvement Increases that exceeded 10% during the time when the 10% limit would remain in effect, and could impose those excess increases on or after January 1, 2030, as otherwise permitted by law."
+      ],
+      "confirms": "How the proposed cap would be measured (10% of the lowest base rent in the previous 12 months), what it would cover (banked and capital-improvement increases; the digest does not name the annual allowable increase), the look-back date, the end date, and that excess would be deferred rather than forfeited. NEW SOURCE: not in the canonical registry."
+    },
+    {
+      "id": "V09",
+      "canonical_id": "S08",
+      "publisher": "California Legislative Information",
+      "title": "California Civil Code Section 827",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827",
+      "passages": [
+        "(b) (1) In all leases of a residential dwelling, commercial real property by a qualified commercial tenant, or of any interest therein, from week to week, month to month, or other period less than a month, the landlord may increase the rent provided in the lease or rental agreement, upon giving written notice to the tenant, as follows, by either of the following procedures: (A) By delivering a copy to the tenant personally. (B) By serving a copy by mail under the procedures prescribed in Section 1013 of the Code of Civil Procedure.",
+        "(2) If the proposed rent increase for that tenant is 10 percent or less of the rental amount charged to that tenant at any time during the 12 months before the effective date of the increase, either in and of itself or when combined with any other rent increases for the 12 months before the effective date of the increase, the notice shall be delivered at least 30 days before the effective date of the increase, and subject to Section 1013 of the Code of Civil Procedure if served by mail.",
+        "(3) (A) If the proposed rent increase for that tenant is greater than 10 percent of the rental amount charged to that tenant at any time during the 12 months before the effective date of the increase, either in and of itself or when combined with any other rent increases for the 12 months before the effective date of the increase, the notice shall be delivered at least 90 days before the effective date of the increase, and subject to Section 1013 of the Code of Civil Procedure if served by mail."
+      ],
+      "confirms": "Written notice; personal delivery or mail; 30 days at 10 percent or less, 90 days above 10 percent; and that subdivision (b) is written for week-to-week and month-to-month tenancies."
+    },
+    {
+      "id": "V10",
+      "canonical_id": "S10",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "The California Tenant Protection Act of 2019 (AB 1482)",
+      "url": "https://www.sf.gov/reports--california-tenant-protection-act-2019-ab-1482",
+      "passages": [
+        "The maximum rent increase for units under AB 1482 from August 1, 2026 to July 31, 2027 is 8.8% in San Francisco.",
+        "This does NOT apply for units under the rent increase limitations of the San Francisco Rent Ordinance.",
+        "Limits annual rent increases to no more than 5% + local CPI (CPI = inflation rate), or 10% whichever is lower.",
+        "Units that are already subject to a local rent control ordinance that restricts annual rent increases to an amount less than 5% + CPI.",
+        "The current applicable CPI increase for San Francisco (that is, from August 1, 2026 to July 31, 2027), is 3.8%. Thus, the maximum annual increase for units subject to AB 1482 is currently 8.8% (5% + 3.8%)."
+      ],
+      "confirms": "The state cap figure and that it does not apply to units under the San Francisco Rent Ordinance's rent increase limits."
+    },
+    {
+      "id": "V11",
+      "canonical_id": "S17",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "The Rent Board Fee",
+      "url": "https://www.sf.gov/rent-board-fee",
+      "passages": [
+        "Please note that requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements.",
+        "For the 2026-2027 tax year, the fee is: $59.00 per dwelling unit",
+        "If you pay the Rent Board fee in full, you may be able to collect 50% of the fee from your tenants, which is $29.50 per dwelling unit or $14.75 per guest unit.",
+        "March 1 of each year for the Rent Board Fee.",
+        "A 5% late penalty will be added to the amount of the fee every month following March 1 (for a maximum penalty of 15%).",
+        "Once you have paid the Rent Board fee in full, you can recover 50 percent of the fee from the tenants in occupancy of each unit if the tenant has been living in the unit as of November 1 of the applicable tax year."
+      ],
+      "confirms": "Fee amount, due date, late penalty, tenant share, and that the fee is separate from Housing Inventory reporting."
+    },
+    {
+      "id": "V12",
+      "canonical_id": null,
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Report an unlawful rent increase or request a review of your rent history",
+      "url": "https://www.sf.gov/report-unlawful-rent-increase-or-request-review-your-rent-history/",
+      "passages": [
+        "If you believe a rent increase is unlawful or want to know if your current rent is lawful, you may file a petition alleging an unlawful rent increase and/or requesting a determination of the lawful rent.",
+        "There is no charge for filing the petition",
+        "There is no time limit for filing a petition",
+        "Attach documents to your petition that show the date and amount of any relevant rent increases, such as the original lease, rent increase notices, rent receipts, money order receipts and/or canceled rent checks.",
+        "The hearing process is designed so that no one needs an attorney, although parties are entitled to have an attorney or other authorized representative assist them at the hearing."
+      ],
+      "confirms": "How a tenant challenges an increase: a free petition with no filing deadline, decided on the rent history and documents. NEW SOURCE: not in the canonical registry."
+    },
+    {
+      "id": "V13",
+      "canonical_id": "S27",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Rent Increases Under Section 6.14 And Costa-Hawkins",
+      "url": "https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins",
+      "passages": [
+        "Rules and Regulations Section 6.14 provides for an unlimited rent increase on remaining occupants when the last original occupant vacates the unit, as long as the landlord timely served all remaining occupants with a written \"6.14 notice.\"",
+        "The 6.14 notice must be served on each subsequent occupant within a reasonable time after the landlord knows or should have known of the occupancy. Generally, sixty days is considered reasonable.",
+        "In addition, a co-tenant, as opposed to a subtenant, is not subject to such a rent increase, regardless of when the co-tenant moved in. A co-tenant is someone who has an oral or written agreement with the landlord, or who has become a tenant by the conduct of the parties such as the landlord's acceptance of rent."
+      ],
+      "confirms": "Both market-rate reset routes turn on the last original occupant leaving; neither is engaged while an original occupant remains."
+    },
+    {
+      "id": "V14",
+      "canonical_id": "S12",
+      "publisher": "California Legislative Information",
+      "title": "California Civil Code Section 1942.5",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1942.5",
+      "passages": [
+        "(a) If the lessor retaliates against the lessee because of the exercise by the lessee of the lessee’s rights under this chapter or because of the lessee’s complaint to an appropriate agency as to tenantability of a dwelling, and if the lessee of a dwelling is not in default as to the payment of rent, the lessor may not recover possession of a dwelling in any action or proceeding, cause the lessee to quit involuntarily, increase the rent, or decrease any services within 180 days of any of the following:",
+        "(b) A lessee may not invoke subdivision (a) more than once in any 12-month period.",
+        "(d) Notwithstanding subdivision (a), it is unlawful for a lessor to increase rent, decrease services, cause a lessee to quit involuntarily, bring an action to recover possession, or threaten to do any of those acts, for the purpose of retaliating against the lessee because the lessee has lawfully organized or participated in a lessees’ association or an organization advocating lessees’ rights or has lawfully and peaceably exercised any rights under the law.",
+        "(f) This section does not limit in any way the exercise by the lessor of the lessor’s rights under any lease or agreement or any law pertaining to the hiring of property or the lessor’s right to do any of the acts described in subdivision (a) or (d) for any lawful cause."
+      ],
+      "confirms": "The 180-day retaliation rule, its conditions, and the lawful-cause proviso.",
+      "irregularity": "The canonical registry's S12 passage reads 'because of his or her complaint' and 'payment of his or her rent'. The text served by the official site on 2026-11-10 reads 'because of the lessee’s complaint' and 'payment of rent'. The meaning is the same; the registered passage is not word-for-word the text now published."
+    },
+    {
+      "id": "V15",
+      "canonical_id": "S13",
+      "publisher": "California Legislative Information",
+      "title": "California Government Code Section 12955",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=GOV&sectionNum=12955",
+      "passages": [
+        "It shall be unlawful: (a) For the owner of any housing accommodation to discriminate against or harass any person because of the race, color, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, source of income, disability, veteran or military status, or genetic information of that person.",
+        "(f) For any owner of housing accommodations to harass, evict, or otherwise discriminate against any person in the sale or rental of housing accommodations when the owner’s dominant purpose is retaliation against a person who has opposed practices unlawful under this section"
+      ],
+      "confirms": "The state list of protected characteristics. The test is the reason for the treatment, not whether every unit was treated identically."
+    },
+    {
+      "id": "V16",
+      "canonical_id": "S14",
+      "publisher": "U.S. Department of Housing and Urban Development",
+      "title": "Housing Discrimination Under the Fair Housing Act",
+      "url": "https://www.hud.gov/helping-americans/fair-housing-act-overview",
+      "passages": [
+        "Housing discrimination is illegal in nearly all housing, including private housing, public housing, and housing that receives federal funding.",
+        "The Fair Housing Act protects people from discrimination when they are renting or buying a home, getting a mortgage, seeking housing assistance, or engaging in other housing-related activities.",
+        "The Fair Housing Act prohibits discrimination in housing because of: Race Color National Origin Religion Sex Familial Status Disability"
+      ],
+      "confirms": "The federal protected characteristics. Federal law sets no percentage limit on a private rent increase; this page states none."
+    },
+    {
+      "id": "V17",
+      "canonical_id": "S16",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Sec. 37.10C - Use and Sale of Algorithmic Devices Prohibited",
+      "url": "https://www.sf.gov/information--sec-3710c-use-and-sale-algorithmic-devices-prohibited",
+      "passages": [
+        "(b) Prohibition on Use. It shall be unlawful for a landlord to use an algorithmic device described in subdivision (a) when setting rents or occupancy levels for residential dwelling units in San Francisco.",
+        "''Algorithmic device\" means a device, commonly known as revenue management software, that uses one or more algorithms to perform calculations of non-public competitor data concerning local or statewide rents or occupancy levels, for the purpose of advising a landlord on whether to leave a unit vacant or on the amount of rent that the landlord may obtain for that unit.",
+        "(2) A tenant may file a civil action for violations of subsection (b), for injunctive relief, money damages. and/or civil penalties of up to $1,000 per violation.",
+        "[Added by Ord. No. 224-24, effective October 14, 2024; amended by Ord. No. 169-25, effective October 6, 2025]"
+      ],
+      "confirms": "Revenue-management software fed by non-public competitor data may not be used to set San Francisco rents, by any landlord of any size."
+    },
+    {
+      "id": "V18",
+      "canonical_id": "S23",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Failure to Repair and Maintain Petitions",
+      "url": "https://www.sf.gov/information--failure-repair-and-maintain-petitions",
+      "passages": [
+        "A tenant may petition for a deferral of the annual rent increase if the landlord has failed to perform requested repairs, replacement or maintenance as required by state and/or local law.",
+        "If the petition is granted, the proposed rent increase will be deferred or postponed until the requested repairs are made.",
+        "The petition must be filed no later than 60 days following the tenant's receipt of the rent increase notice.",
+        "The petition will not be granted if the repairs were completed before the effective date of the rent increase."
+      ],
+      "confirms": "Outstanding repair requests are a direct route to deferring an otherwise correct annual increase."
+    },
+    {
+      "id": "V19",
+      "canonical_id": "S24",
+      "publisher": "San Francisco Office of the Treasurer & Tax Collector",
+      "title": "Information for Lessors of Residential Real Estate",
+      "url": "https://sftreasurer.org/information-lessors-residential-real-estate",
+      "passages": [
+        "A person receiving rental income in connection with the operation of a cooperative housing corporation, as defined in Section 216(b) of the Internal Revenue Code of 1986, as amended; one residential structure consisting of fewer than four units; or one residential condominium is not, by reason of that fact alone, required to obtain a business registration certificate.  If the same person engages in other business activities or incurs payroll expense, a business registration certificate may be required.",
+        "If you are a lessor of residential real estate in San Francisco, you must file a return unless you lease fewer than 4 units in any individual building."
+      ],
+      "confirms": "The Business Registration Certificate is a different registration from the Rent Board licence, and the fewer-than-four-units carve-out is conditional."
+    },
+    {
+      "id": "V20",
+      "canonical_id": "S18",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Learn about San Francisco rental laws",
+      "url": "https://www.sf.gov/learn-about-san-francisco-rental-laws",
+      "passages": [
+        "Many residential units built on or before June 13, 1979 have both rent control and eviction protection.",
+        "If your unit was built before June 14, 1979, and is not used as a single family dwelling, it may have both: Rent control Eviction protection",
+        "Some units are hard to classify. If you are unsure about your unit then you should speak with a Rent Board counselor.",
+        "Rent Board counselor 415-252-4600 Weekday free counseling hours (9 am to noon and 1 to 4pm)"
+      ],
+      "confirms": "Why a building reported as built in 1940 with two units is expected to be covered, and that coverage of a specific unit should still be confirmed.",
+      "irregularity": "The official page itself carries a stale example: 'the allowed rent increase percentage for 2024 to February 28, 2025 is 1.7%'. The current figure, on the Rent Board's rent-increase page and Form 571, is 1.6% through February 28, 2027."
+    },
+    {
+      "id": "V21",
+      "canonical_id": "S22",
+      "publisher": "United States Department of Justice, Antitrust Division",
+      "title": "Justice Department Requires RealPage to End the Sharing of Competitively Sensitive Information and Alignment of Pricing Among Competitors (press release 25-1111, November 24, 2025)",
+      "url": "https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and",
+      "passages": [
+        "The Justice Department’s Antitrust Division filed a proposed settlement today to resolve the United States’ claims against RealPage Inc. as part of its ongoing enforcement against algorithmic coordination, information sharing, and other anticompetitive practices in rental housing markets across the country.",
+        "As alleged in Plaintiffs’ complaint, RealPage’s revenue management software has relied on nonpublic, competitively sensitive information shared by landlords to set rental prices.",
+        "At the conclusion of the public comment period, the U.S. District Court for the Middle District of North Carolina may enter the final judgment upon finding it is in the public interest."
+      ],
+      "confirms": "An official record of allegations about pricing software used by large property managers. It is a proposed settlement of allegations, not a finding about every corporate landlord."
+    },
+    {
+      "id": "V22",
+      "canonical_id": "S21",
+      "publisher": "California Legislative Information",
+      "title": "California Code of Civil Procedure Section 1013",
+      "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP",
+      "passages": [
+        "Service is complete at the time of the deposit, but any period of notice and any right or duty to do any act or make any response within any period or on a date certain after service of the document, which time period or date is prescribed by statute or rule of court, shall be extended five calendar days, upon service by mail, if the place of address and the place of mailing is within the State of California"
+      ],
+      "confirms": "Five extra calendar days when the notice is mailed within California."
+    },
+    {
+      "id": "V23",
+      "canonical_id": "S02",
+      "publisher": "San Francisco Rent Board (SF.gov)",
+      "title": "Sec. 37.3 - Rent Limitations (S.F. Administrative Code, Chapter 37)",
+      "url": "https://www.sf.gov/information--sec-373-rent-limitations",
+      "passages": [
+        "(1) Annual Rent Increase. On March 1 of each year, the Board shall publish the increase in the CPI for the preceding 12 months, as made available by the U.S. Department of Labor. A landlord who has reported the required information about their rental unit to the Rent Board as set forth in Section 37.15 shall have a license to impose annually a rent increase which does not exceed a tenant's base rent by more than 60% of said published increase. In no event, however, shall the allowable annual increase be greater than 7%.",
+        "(2) Banking. A landlord who refrains from imposing an annual rent increase or any portion thereof may accumulate said increase and, subject to Section 37.15, impose that amount on the tenant's subsequent rent increase anniversary dates."
+      ],
+      "confirms": "The ordinance itself ties both the annual and the banked increase to Section 37.15 reporting. Only the first of five parts of this long section was re-read today; subsections (b)(5) and (a)(11) quoted in the canonical registry were not re-read by this session."
+    }
+  ],
+  "not_reread_by_this_session": {
+    "note": "Canonical sources this session did NOT re-read on 2026-11-10. Their last recorded retrieval dates in hub/data.json stand; this session makes no claim about them.",
+    "canonical_ids": [
+      "S09",
+      "S11",
+      "S15",
+      "S19",
+      "S20",
+      "S25",
+      "S28",
+      "S29"
+    ]
+  }
+}
