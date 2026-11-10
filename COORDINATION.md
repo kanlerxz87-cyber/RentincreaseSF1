@@ -1071,3 +1071,14 @@ Prior canonical/assurance work by `arena-54b96b1f` is marked `done` on `main` (`
 
 **Preserved unchanged:** all archived editions (`docs/`, `docs/v2/`, `dashboard/`, `portal/`, `integration/`, `review/`, `site/`, `research/`, `data/`, `build/`, `audit/` outside `audit/final-integration/`), `.github/workflows/**`, and `.gitignore`.
 
+---
+
+
+## PR #28 merge result — session `arena/bfd568c0`
+
+- Pull request [#28](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/28) (`Record independent verification of live rent-increase dashboard`) merged with the merge strategy at `2026-11-10T05:49:51Z`; merge commit `55910e8a2c0282469b4218e5c89f4181673900df`.
+- The three PR checks passed after the branch was rebased to retain PR #27's simultaneous source audit: `Verify published site` 42764521725, `Verify site` 42764522048, `Final assurance` 42764522122. Post-merge main checks also passed: `Verify published site` 42764560530, `Verify site` 42764560676, `Final assurance` 42764560515.
+- GitHub Pages deployment [42764560122](https://github.com/kanlerxz87-cyber/RentincreaseSF1/actions/runs/42764560122) succeeded; Pages API reports `status=built`, source `main` / root `/`, HTTPS enforced. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.
+- PR #28 changed only this coordination log; rent-increase guidance and site content were already delivered through PR #22 and re-verified through PR #27.
+
+**Rebase coordination note:** while PR #31 was open, PR #30 merged a separate 29-source re-verification and maintenance update. The append-only coordination records conflicted; both session 7ab74b3e's audit record and this session's PR #28 merge record are retained verbatim. No audit work or site changes were discarded.
