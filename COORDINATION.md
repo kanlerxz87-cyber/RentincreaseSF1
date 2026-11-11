@@ -1732,6 +1732,14 @@ No owner/tenant identity, contact detail or street address is added. The current
 
 **Remaining flagged irregularities:** historical public Git copies; unknown current licenses and actual property/lease/ledger facts; no official ZIP-specific market norm or owner-type behavior figure; File #261020's pending status; no attorney review. No unverified number was filled in.
 
-**Rebase log:** On 2026-11-11, while rebasing onto `origin/main` advanced by PR #43/#45 to `fea6e0e`, the first claim commit conflicted only in append-only `COORDINATION.md`. Resolution preserved the full upstream file verbatim and re-appended this session's claim; the remaining commits replayed cleanly. No other session's files or records were discarded, and no conflict markers remain.
+**Rebase/conflict log:** Repeated `git pull --rebase origin main` attempts encountered append-only `COORDINATION.md` conflicts as PRs #43, #45–#47, #51–#53, and #44 were merged in rapid succession. Each time, this session preserved the current upstream file verbatim and re-appended its own claim/record; all source/content changes replayed cleanly, no other session's work was discarded, and no conflict markers remain. The final branch was rebased onto `main` at `4b77262` before the successful PR #50 merge.
 
-**Pull request / deployment:** this session will open and merge a PR from its fixed branch after checks pass. Exact PR, merge commit, post-merge workflow, and Pages deployment result will be appended in a follow-up record after those events; this avoids claiming a deployment before it exists.
+**Pull request, merge, and deployment:**
+
+| Item | Result |
+|---|---|
+| Pull Request | [PR #50](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/50) — *Warn owners that Rent Board Housing Inventory submissions are public* |
+| Pre-merge checks | `Verify site`, `Verify published site`, and `Final assurance` all passed for head `eb6e694`; runs `42959193279`, `42959193239`, `42959193257` |
+| Merge result | **MERGED** at `2026-11-11T04:26:24Z` into `main` as `bf88b67e6a546e8213d90cdf0a3b072b523cbcf1` |
+| Post-merge checks | `Verify site` ✅ (`42959248505`), `Verify published site` ✅ (`42959248595`), `Final assurance` ✅ (`42959248484`) |
+| GitHub Pages | `pages build and deployment` ✅ (`42959247130`); Pages API reported `status=built`, HTTPS enforced, source `main /`, updated `2026-11-11T04:26:49Z`. Published URL: https://kanlerxz87-cyber.github.io/RentincreaseSF1/ |
