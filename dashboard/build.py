@@ -665,6 +665,21 @@ No build service, network access, or third-party Python package is required.
     write("README.md", readme)
 
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 def main() -> None:
     build_index()
     build_summary()
@@ -679,6 +694,7 @@ def main() -> None:
     build_flagged()
     build_repo()
     build_markdown()
+    _legacy_notice("dashboard")
     print(f"Built dashboard: {len(SOURCES)} sources, {len(FACTS)} facts, {len(CASE)} case facts, {len(FLAGS)} flags, {len(SCENARIOS)} scenarios")
 
 

@@ -1064,6 +1064,21 @@ def build_sources_md() -> str:
     return "\n".join(lines)
 
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 def main() -> None:
     GUIDE_DIR.mkdir(parents=True, exist_ok=True)
     pages = {
@@ -1081,6 +1096,7 @@ def main() -> None:
     for name, content in pages.items():
         (GUIDE_DIR / name).write_text(content, encoding="utf-8")
     (AUDIT_DIR / "SOURCES.md").write_text(build_sources_md(), encoding="utf-8")
+    _legacy_notice("guide")
     print(f"Built {len(pages)} deterministic HTML pages in guide/ and SOURCES.md ({len(SOURCES_LIST)} official sources).")
 
 

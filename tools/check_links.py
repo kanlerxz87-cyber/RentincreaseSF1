@@ -8,6 +8,10 @@ Checks performed:
   4. every external URL cited in the site is registered in data/sources.csv
   5. all CSV files parse and have a consistent column count
   6. no tenant initials or street-address markers appear in published files
+  7. every superseded edition still served by GitHub Pages carries the on-page
+     "superseded edition" notice, a noindex tag and a direct official link on
+     every table row, and the withdrawn early draft stays withdrawn
+     (tools/legacy_notice.py --check)
 
 Exits non-zero if any check fails.
 """
@@ -158,6 +162,18 @@ def check_privacy(files: list[Path]) -> None:
                 errors.append(f"{f.name}: contains what looks like an {label}: {match}")
 
 
+def check_legacy_notice() -> int:
+    """Superseded editions must say so on the page (see tools/legacy_notice.py)."""
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(ROOT / "tools" / "legacy_notice.py"))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    for problem in module.check():
+        errors.append(f"superseded edition: {problem}")
+    return len(module.all_archived_pages())
+
+
 def main() -> int:
     files = html_files()
     archived = archive_files()
@@ -170,6 +186,7 @@ def main() -> int:
     check_sources(files)
     check_csv_consistency()
     check_privacy(files + archived)
+    superseded = check_legacy_notice()
 
     for w in warnings:
         print(f"warn: {w}")
@@ -180,7 +197,7 @@ def main() -> int:
         return 1
     print(f"OK: {len(files)} published pages (+{len(archived)} archived), all internal links "
           f"and anchors resolve, all CSVs consistent, all external citations registered, "
-          f"no personal tokens")
+          f"no personal tokens; {superseded} superseded pages carry the notice and direct official links")
     return 0
 
 

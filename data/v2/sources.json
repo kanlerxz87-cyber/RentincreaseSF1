@@ -241,11 +241,11 @@
     },
     {
       "id": "S30",
-      "publisher": "Cornell Legal Information Institute (text of 42 U.S.C.)",
-      "title": "42 U.S.C. Sec. 3604 - Discrimination in the sale or rental of housing",
-      "url": "https://www.law.cornell.edu/uscode/text/42/3604",
+      "publisher": "U.S. Government Publishing Office (govinfo.gov)",
+      "title": "42 U.S.C. Sec. 3604 - Discrimination in the sale or rental of housing and other prohibited practices",
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
       "tier": "official-primary",
-      "verified": "Statute text fetched 2026-11-06. (b) bars discrimination in the terms, conditions or privileges of rental because of a protected characteristic. No federal rent ceiling appears in the section."
+      "verified": "Official text fetched 2026-11-11; it replaces a university-hosted copy of the same section that this edition cited until then. (b) bars discrimination in the terms, conditions, or privileges of sale or rental of a dwelling because of race, color, religion, sex, familial status, or national origin; (f) covers handicap. No federal rent ceiling appears in the section."
     },
     {
       "id": "S31",
@@ -265,11 +265,11 @@
     },
     {
       "id": "S33",
-      "publisher": "Eviction Defense Collaborative (EDC)",
-      "title": "Legal Assistance for Tenants",
-      "url": "https://evictiondefense.org/legal-assistance-services/",
-      "tier": "official-org",
-      "verified": "Page fetched 2026-11-06. EDC describes itself as lead organization of the City's Tenant Right to Counsel program and provides free representation; legal line (415) 659-9184."
+      "publisher": "San Francisco Rent Board (SF.gov PDF)",
+      "title": "Form 1007 - Notice to Tenant Required by Rent Ordinance Sec. 37.9(c)",
+      "url": "https://www.sf.gov/sites/default/files/2023-08/1007%20Notice%20to%20Tenant%20Req%27d%20by%2037.%209(c)-Eng-Sp-Ch-Viet-Rus-Tag%5B74%5D.pdf",
+      "tier": "official-guidance",
+      "verified": "Official form (rev. 2/9/26) fetched 2026-11-11; it replaces a non-profit organisation's own web page that this edition cited until then. The form must be attached to every notice to terminate tenancy and tells the tenant: 'You are eligible for free assistance through the Tenant Right to Counsel Program', with intake through the Eviction Defense Collaborative. It concerns eviction, not a rent increase by itself."
     },
     {
       "id": "S34",

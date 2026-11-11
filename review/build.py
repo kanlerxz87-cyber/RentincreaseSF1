@@ -288,6 +288,21 @@ def build_flagged():
     body.append("</tbody></table></div>")
     write_page("pages/flagged.html", "Flagged for Review", "".join(body), "pages/flagged.html")
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 if __name__ == "__main__":
     build_index()
     build_license()
@@ -300,4 +315,5 @@ if __name__ == "__main__":
     build_lawyer()
     build_sources()
     build_flagged()
+    _legacy_notice("review")
     print("done")

@@ -84,13 +84,5 @@
       "note": "No defensible ZIP-level market rent was obtained. HUD's interactive FMR lookup returned an empty result in this session and the Census API required a key. No market figure is used anywhere on this site, and none is needed: the lawful cap does not depend on market rent."
     }
   ],
-  "secondary_sources": [
-    {
-      "id": "secondary-01",
-      "publisher": "ReLISTO (San Francisco property manager)",
-      "title": "San Francisco Rent Increase 2026: What the 1.6% Allowable Increase Means for Landlords and Tenants",
-      "url": "https://www.relisto.com/blog/san-francisco-rent-increase-2026",
-      "note": "Commercial source, fetched 2026-11-06. It agrees with the Rent Board on 1.6% and on the missing October 2025 CPI as the reason for the estimated figure, and explains the geometric-mean method. It does NOT describe how owners set rents, so it is not cited for that. Retained here only as corroboration of the 1.6% figure."
-    }
-  ]
+  "secondary_sources": []
 }

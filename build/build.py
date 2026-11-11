@@ -778,8 +778,7 @@ def build_sources():
     {table(["ID","Publisher","Document","Tier","What it was verified for"], rows)}
     <section>
       <h2>Commercial sources</h2>
-      <p>Listed for transparency. None of these was used to establish a value. One is retained only because it independently corroborates the 1.6% figure; it does not describe owner practice, so it is not cited for that.</p>
-      {table(["ID","Publisher","Document","Note"], srows)}
+      {('<p>Listed for transparency. None of these was used to establish a value.</p>' + table(["ID","Publisher","Document","Note"], srows)) if srows else '<p><strong>None.</strong> A property-management page that this edition once listed as corroboration of the 1.6% figure was removed on 11 November 2026. No value on this site ever depended on it: the figure comes from the Rent Board.</p>'}
     </section>
     <section>
       <h2>Sources that were specifically not relied on</h2>
@@ -915,6 +914,21 @@ def build_reconciliation():
                 "What the three published editions of this analysis agree on, and where they legitimately differ.", body)
 
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 def main():
     written = [
         build_index(), build_summary(), build_answers(), build_calculations(),
@@ -922,6 +936,7 @@ def main():
         build_rates(), build_flags(), build_sources(), build_method(),
         build_reconciliation(),
     ]
+    _legacy_notice("docs/v2")
     print("wrote %d pages: %s" % (len(written), ", ".join(written)))
 
 

@@ -1474,6 +1474,21 @@ def build_sources(site_data: dict, sources: dict[str, dict], sources_list: list[
     )
 
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 def main() -> None:
     site_data, sources_by_id, repo_audit = load_inputs()
     sources_list = json.loads((DATA_DIR / "sources.json").read_text(encoding="utf-8"))
@@ -1494,6 +1509,7 @@ def main() -> None:
     for filename, html_text in outputs.items():
         (COMPLIANCE_DIR / filename).write_text(html_text, encoding="utf-8")
 
+    _legacy_notice("compliance")
     print(f"compliance/build.py: generated {len(outputs)} deterministic HTML pages.")
 
 

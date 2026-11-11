@@ -598,6 +598,21 @@ def load_json(name: str):
     return json.loads((DATA_DIR / name).read_text(encoding="utf-8"))
 
 
+def _legacy_notice(edition):
+    """Superseded-edition notice and direct official links (tools/legacy_notice.py).
+
+    Run as the last build step so that a rebuild reproduces the committed pages.
+    """
+    import importlib.util
+    from pathlib import Path as _Path
+    here = _Path(__file__).resolve()
+    tool = next(p / "tools" / "legacy_notice.py" for p in here.parents if (p / "tools" / "legacy_notice.py").is_file())
+    spec = importlib.util.spec_from_file_location("legacy_notice", str(tool))
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    module.apply_edition(edition)
+
+
 def build_all() -> None:
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     ASSETS_DIR.mkdir(parents=True, exist_ok=True)
@@ -803,6 +818,7 @@ def build_all() -> None:
     (OUT_DIR / "sources.html").write_text(
         render_layout("sources.html", PAGES[9][1], PAGES[9][2], sources_inner), encoding="utf-8"
     )
+    _legacy_notice("portal")
 
 
 if __name__ == "__main__":
