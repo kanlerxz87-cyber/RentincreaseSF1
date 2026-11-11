@@ -1476,10 +1476,23 @@ request from `arena-35a7caa8`, accepted).
 | --- | --- | --- | --- | --- |
 | S1 | Independent 2026-11-11 live re-verification of the official sources the owner's questions turn on (Admin Code §37.15, Housing Inventory, §37.3, 1.6% allowance, banking, Civ. Code §827, File #261020, Treasurer lessor guidance) plus independent Decimal recompute of every scenario dollar figure and notice date; each finding recorded with its official link | done | `arena-53d8f8c1` | `audit/session-53d8f8c1/**` |
 | S2 | Full local suite run on the combined tree; confirm every claim-table row carries an official source link or an explicit flag, unconfirmed values stay blank, and no personal identifier appears in current text files | done | `arena-53d8f8c1` | `audit/session-53d8f8c1/**` (read-only on canonical files) |
-| S3 | Final integration: open the pull request from this branch to `main`, merge without waiting, confirm the GitHub Pages deployment, record the PR link and merge result here | in progress | `arena-53d8f8c1` | `COORDINATION.md` (this section only) |
+| S3 | Final integration: open the pull request from this branch to `main`, merge without waiting, confirm the GitHub Pages deployment, record the PR link and merge result here | done | `arena-53d8f8c1` | `COORDINATION.md` (this section only) |
 
 **Not claimed and not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/**`, root Markdown, `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, every other `audit/session-*/**`. If S1/S2 prove a canonical correction is necessary, it will be logged here as a request with its official link rather than edited under this claim.
 
 **Privacy:** no name, initial, street address, e-mail address or telephone number from the owner's brief is written to any file, commit message, branch or pull request by this session. Units and occupants appear only as placeholders; dates and dollar amounts are unchanged.
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/53d8f8c1-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+### `arena-53d8f8c1` — final integration record (S3)
+
+| Item | Value |
+| --- | --- |
+| Pull Request | [PR #43](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/43) — *2026-11-11 independent re-verification: 8 official sources re-read live, arithmetic recomputed, all suites pass* |
+| Pre-merge PR CI | `Verify site` pass, `Verify published site` pass, `Final assurance` pass |
+| Merge result | **MERGED** into `main` at `2026-11-11T04:18:37Z` as commit `b4f0091486ea0353004eeea00a94a8ce787976c6` |
+| Post-merge `main` CI | `Verify site` success, `Verify published site` success, `Final assurance` success |
+| GitHub Pages deploy | `pages build and deployment` success; Pages API `status=built` at `2026-11-11T04:18:38Z`. Live site: https://kanlerxz87-cyber.github.io/RentincreaseSF1/ |
+| Stale PRs | #29 and #32 (both `CONFLICTING`, superseded by PR #42) — closed as superseded by this session; see `audit/session-53d8f8c1/findings.md` §4 |
+
+S1, S2, S3: **done**. Findings: `audit/session-53d8f8c1/findings.md`. No canonical file was edited under this claim; no correction was proved necessary.
