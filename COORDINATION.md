@@ -1816,3 +1816,27 @@ No owner/tenant identity, contact detail or street address is added. The current
 | Status | R1–R4 **done**. Independent verification recorded on `main`. |
 
 **Note on the live canonical integrators:** PR #47 (S30/S31) and PR #48 (S32/S33) are merged; PR #49 (`arena/c119d0f9`, S34) remains open and CONFLICTING and needs a rebase onto `main`. This session's PR did not touch any canonical file, so it neither blocks nor competes with PR #49. The single outstanding request — carry S34 (2024 RHFS) into the registry — remains with PR #49's owner.
+**Pull request / deployment (this session):** the pull request from this fixed branch is [PR #48](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/48). Its merge commit, post-merge workflow results and the Pages deployment are appended in a follow-up record once they exist, so this board never claims a deployment before it happens.
+
+---
+
+# Session Addendum — `arena/fb3db9a1-rentincreasesf1` (2026-11-11 UTC)
+
+- **Session ID / Branch:** `arena-fb3db9a1` / `arena/fb3db9a1-rentincreasesf1` (platform-pinned branch; no other branch may be created, switched to, or pushed). `git pull --rebase origin main` is executed before every push.
+- **Concurrent-session inspection (`git fetch origin '+refs/heads/*:refs/remotes/origin/*'` at `04:17–04:19 UTC`):** Multiple active concurrent sessions (`arena-8bcddc6b`, `arena-1c0f33a9`, `arena-9abeed44`, `arena-992eb322`, `arena-3e212173`, `arena-53d8f8c1`, `arena-91d7d694`, `arena-95499767`, `arena-c119d0f9`, `arena-e5dc4547`) hold active claims (<60 minutes old) covering `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/**`, root Markdown (`README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`), and legacy archives (`docs/**`, `site/**`, `research/**`, etc.).
+- **Strictly Disjoint Exclusive File Scope:** `handbook/**`, `audit/session-fb3db9a1/**`, and append-only `COORDINATION.md` (published live on GitHub Pages at `https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/`). Zero files owned or claimed by any concurrent or earlier session are edited; any shared-file recommendations are logged below as cross-session requests.
+- **Rebase Conflict Resolution Log:** Append-only conflicts at the end of `COORDINATION.md` (`b4f0091 -> 7858076`) as concurrent session claims merged to `main` were resolved by preserving 100% of upstream `origin/main` verbatim (verified byte-exact prefix) and appending this section after it; zero lines discarded.
+
+## Task Board (`arena/fb3db9a1-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `FB3-T1` | Read `COORDINATION.md`, inspect all active remote branches, claim strictly disjoint scope (`handbook/**`, `audit/session-fb3db9a1/**`), commit and push immediately | done | `arena/fb3db9a1-rentincreasesf1` | `COORDINATION.md` (append-only) |
+| `FB3-T2` | Live `2026-11-11` primary-source verification across 42 official SF, California, and Federal `.gov` / municipal / statutory publishers | done | `arena/fb3db9a1-rentincreasesf1` | `audit/session-fb3db9a1/sources_2026_11_11.json`, `handbook/data/sources.json` |
+| `FB3-T3` | Line-by-line repository verification audit across canonical (`index.html`, `hub/**`, `assurance/**`, root Markdown) and preserved editions; verify math, citations, URLs, and privacy; flag irregularities | done | `arena/fb3db9a1-rentincreasesf1` | `audit/session-fb3db9a1/REPO_AUDIT.md`, `handbook/data/repo_audit.json` |
+| `FB3-T4` | Strictly anonymized Executive Summary forefronting the individual-owner Rent Board license & beginner step-by-step walkthrough, plus Unit 1 & Unit 2 (`94122` Outer Sunset, 1940 building) calculations, corporate vs. individual landlord practices, tenant notification & valid reasons, SF tenant-lawyer red-team audit, and 1-unit vs. 2-unit Fair Housing analysis | in progress | `arena/fb3db9a1-rentincreasesf1` | `handbook/EXECUTIVE_SUMMARY.md`, `handbook/data/site_data.json` |
+| `FB3-T5` | Clean, user-friendly GitHub Pages dashboard at `/handbook/` (`handbook/index.html` + categorized subpages + `handbook/flagged-for-review.html` + `handbook/sources.html`, with a direct official source link on every table row and blank cells for all unverified values) | in progress | `arena/fb3db9a1-rentincreasesf1` | `handbook/**` |
+| `FB3-T6` | Automated deterministic generator + line-by-line link, anchor, citation-per-row, exact rational/decimal arithmetic, blank-unverified-cell, and SHA-256 privacy verifier + full repository CI suite verification | pending | `arena/fb3db9a1-rentincreasesf1` | `handbook/build.py`, `handbook/verify.py`, `audit/session-fb3db9a1/VERIFICATION.md` |
+| `FB3-T7` | Rebase onto `origin/main`, confirm zero broken links & green CI, open and merge PR from `arena/fb3db9a1-rentincreasesf1` to `main`, confirm GitHub Pages deployment, and record PR & deploy result here | pending | `arena/fb3db9a1-rentincreasesf1` | `COORDINATION.md` (append-only) |
+
+**Privacy & Handoff Rule:** Zero personal identifiers (names, initials, street addresses, emails, phone numbers) appear anywhere in files, commits, or PR metadata; placeholder names only; dates and dollar amounts preserved verbatim. If this claim is >60 minutes old with no commits on `arena/fb3db9a1-rentincreasesf1`, another session may take over and note the handoff here.
