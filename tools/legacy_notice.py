@@ -15,7 +15,7 @@ This utility makes those archived pages safe to land on:
                governs it, labelled as context and as NOT independently verified.
              * A row that records repository history is labelled as a repository record.
 3. WITHDRAWN the earliest draft (``site/``, ``research/``, ``docs/v1/executive_summary.md``)
-             relied on commercial websites.  Those files are replaced by a short
+             took most of its statements from commercial websites.  Those files are replaced by a short
              withdrawal notice.  Nothing is removed from Git history.
 
 The transformation is deterministic and idempotent.  Each edition's generator calls
@@ -342,7 +342,7 @@ def withdrawn_html(target: str) -> str:
 <main data-legacy-notice="withdrawn" style="max-width:44rem;margin:0 auto;padding:3rem 1.25rem">
 <p style="margin:0 0 .5rem;font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;color:#8a5a00">Withdrawn {WITHDRAWN_DATE}</p>
 <h1 style="margin:0 0 1rem;font-size:1.9rem;line-height:1.2">This page has been withdrawn</h1>
-<p>It was an early draft that relied on commercial websites (property-management, software and law-firm pages) instead of official sources. It also applied the 1.6% annual allowance to an increase dated June 1, 2027, although the Rent Board has published that rate only for increases that take effect through February 28, 2027. It has been taken out of publication so that nobody relies on it.</p>
+<p>It was an early draft that took most of its statements from commercial websites (property-management, software and law-firm pages) rather than from official sources. It also applied the 1.6% annual allowance to an increase dated June 1, 2027, although the Rent Board has published that rate only for increases that take effect through February 28, 2027. It has been taken out of publication so that nobody relies on it.</p>
 <p style="margin:1.5rem 0"><a href="../{target}" style="display:inline-block;padding:.7rem 1.1rem;background:#0b4f8a;color:#fff;border-radius:6px;text-decoration:none;font-weight:600">Open the current page on this topic</a></p>
 <p><a href="../{CURRENT_HOME}" style="{LINK_STYLE}">Dashboard home</a> &middot; <a href="../{CURRENT_FLAGS}" style="{LINK_STYLE}">Flagged for Review</a> &middot; <a href="../{CURRENT_SOURCES}" style="{LINK_STYLE}">Official sources</a></p>
 <p style="font-size:.9rem;color:#4a5560">The current dashboard cites government publishers only. Anything that could not be confirmed from one is left blank and flagged.</p>
@@ -360,8 +360,8 @@ def withdrawn_md(rel: str) -> str:
 <!--legacy-notice-->
 This early research note was withdrawn from publication on {WITHDRAWN_DATE}.
 
-It cited commercial websites (property-management, software and law-firm pages) instead of official
-sources. The pages built from these notes also applied the 1.6% annual allowance to an increase dated
+It took most of its statements from commercial websites (property-management, software and law-firm
+pages) rather than from official sources. The pages built from these notes also applied the 1.6% annual allowance to an increase dated
 June 1, 2027, although the Rent Board has published that rate only for increases that take effect
 through February 28, 2027. The note has been taken out of publication so that nobody relies on it.
 
