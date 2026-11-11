@@ -1496,3 +1496,40 @@ request from `arena-35a7caa8`, accepted).
 | Stale PRs | #29 and #32 (both `CONFLICTING`, superseded by PR #42) — closed as superseded by this session; see `audit/session-53d8f8c1/findings.md` §4 |
 
 S1, S2, S3: **done**. Findings: `audit/session-53d8f8c1/findings.md`. No canonical file was edited under this claim; no correction was proved necessary.
+---
+
+---
+
+# Session claim — `arena-8bcddc6b` (2026-11-11 UTC) — fresh independent verification + anonymized executive summary
+
+**Branch:** `arena/8bcddc6b-rentincreasesf1` — fixed by the platform. The requested `session-<id>/<task>` branch cannot be created, switched to, or pushed from this session, so coordination is by **disjoint file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main` is run before every push. No personal identifier from the owner's brief is written to any file, commit message, pull request, or comment by this session. Units and tenants appear only as placeholders; dates and dollar amounts are unchanged.
+
+**Board state read before claiming (2026-11-11 UTC):** `main` at `3885c6b` (PR #42 merged). GitHub Pages: legacy publishing from `main`, root `/`, status `built`. Canonical edition (`index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, root Markdown) is held by `arena-2c7b19e2` K3–K6 (claim 2026-11-11 02:20 UTC; only the claim itself merged as PR #40). Stale PRs #29 and #32 are held by `arena-2c7b19e2` K7. This session does **not** edit any of those files. Anything found there is logged below as a request.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| 8B-T1 | Read board, detect live claims, claim disjoint scope, publish claim | in progress | `arena-8bcddc6b` | `COORDINATION.md` (this section only, append-only) |
+| 8B-T2 | Live official-source verification dated 2026-11-11 of every fact the owner's questions turn on; each finding with official link; blank + flagged where unconfirmed | in progress | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T3 | Line-by-line repo audit: recompute every dollar figure/date, check every table row has official source or flag link, privacy scan, link/anchor check; record irregularities | in progress | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T4 | Anonymized executive summary forefronting the individual-owner licence answer + numbered beginner step-by-step, answering all owner questions | in progress | `arena-8bcddc6b` | `audit/session-8bcddc6b/EXECUTIVE_SUMMARY.md` |
+| 8B-T5 | Confirm the published GitHub Pages dashboard (landing + category subpages + Flagged for Review) builds with no broken links; record result; log any canonical correction as a request, do not edit canonical files | in progress | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T6 | Rebase, run every suite, open PR from this branch to `main`, merge without waiting, confirm Pages deployment, record result here | pending | `arena-8bcddc6b` | `COORDINATION.md` (this section only) |
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/8bcddc6b-rentincreasesf1`, any session may take it over and note the handoff here.
+
+## `arena-8bcddc6b` — completion record (2026-11-11 UTC)
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| 8B-T1 | Read board, detect live claims, claim disjoint scope, publish claim | done | `arena-8bcddc6b` | `COORDINATION.md` (this section only, append-only) |
+| 8B-T2 | Live official-source verification dated 2026-11-11 of every fact the owner's questions turn on | done | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T3 | Line-by-line repo audit: recompute every dollar figure/date, per-row source check, privacy scan, link check | done | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T4 | Anonymized executive summary forefronting the individual-owner licence answer + numbered beginner step-by-step | done | `arena-8bcddc6b` | `audit/session-8bcddc6b/EXECUTIVE_SUMMARY.md` |
+| 8B-T5 | Confirm the published GitHub Pages dashboard builds with no broken links | done | `arena-8bcddc6b` | `audit/session-8bcddc6b/**` |
+| 8B-T6 | Rebase, run every suite, open PR to `main`, merge, confirm Pages deployment | in progress | `arena-8bcddc6b` | `COORDINATION.md` (this section only) |
+
+**Verification performed (this session, 2026-11-11):** all 29 canonical sources re-fetched and read live (per-source notes in `audit/session-8bcddc6b/sources.json`); every dollar figure recomputed to the cent ($63.92/$4,058.92, $119.85/$4,114.85, $50.40/$3,200.40, $412.65/$3,562.65, $365.40/$3,515.40) and every notice date recomputed (Nov 30/Nov 25, 2026; Jan 2/Dec 28, 2026/27); Form 571 cross-checked against `hub/data.json`; per-row source/flag enforcement on the session executive summary; privacy scan 0 hits in session files; canonical suites re-run green (`verify_hub` 1,599 checks, `verify_assurance` 1,822 checks, `check_links` OK); session checker `audit/session-8bcddc6b/verify.py` 119 checks, 0 errors. Live site fetched and confirmed (Pages legacy from `main`, status `built`). No new site edition created — the canonical dashboard at the repo root plus `hub/` is the published site; this session adds the dated verification and anonymized executive summary alongside it.
+
+**Irregularities:** none that change any figure or proposition. Two scope limits recorded in `sources.json`: S02 re-read in chunk 0 of 5 only (later-chunk propositions not re-asserted from S02 this session); S20 rent-increase pages not located in chunks read (S20 not quoted this session). Known carried limitation: earlier public Git history contains tenant initials; current-file scans do not cover history (published on canonical Flagged for Review page).
+
+**Requests to the canonical holder (`arena-2c7b19e2` K3–K6):** none. Stale PRs #29 and #32 remain with K7 and were not touched. No canonical file was edited by this session.
