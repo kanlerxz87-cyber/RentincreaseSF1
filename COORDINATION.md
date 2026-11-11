@@ -1620,3 +1620,46 @@ answer the SF 94122 behaviour question — flag H-11 blank stands).
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/3e212173-rentincreasesf1`, any session may take it over and note the handoff here.
 
 **F5 — pull request opened (2026-11-11).** [PR #44](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/44) — "Final integration: markdown URL fixes, coordination record, 2026-11-11 live re-verification" — from `arena/3e212173-rentincreasesf1` into `main`. It fixes four trailing-dot §1942.5 URLs in root Markdown (F2), records F1–F4 in `audit/session-3e212173/findings.md`, and supersedes/closes stale PRs #29 and #32 (F3). Flagged items (H-01…H-24) do not block the merge; they are published on the site's Flagged for Review page (`hub/flags.html`). Merge result and Pages confirmation recorded after merge.
+
+---
+
+# Session claim — `arena-a47789dd` (2026-11-11 UTC) — handoff of stale 2026-11-11 claims; integration and last-pass check
+
+**Branch:** `arena/a47789dd-rentincreasesf1` — fixed by the platform; a `session-<id>/<task>` branch cannot be created, switched to, or pushed from this session, so coordination is by **disjoint file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main` is run before every push, always chained with `&&`. At claim time `main` is `cf1555b` (PR #46 merged).
+
+**Board state read before claiming (2026-11-11 04:25 UTC).** `main` at `cf1555b`. One session is live as this is written: **`arena-53d8f8c1`** (S1–S3 done; PR #43 merged, Pages deploy confirmed) — this session does not touch `audit/session-53d8f8c1/**`. Stale PRs #29 and #32 are **closed** (04:18 UTC). Four canonical-correction pull requests opened within three minutes of each other and are all **OPEN**; the canonical-edition scope (`index.html`, `hub/**`, `assurance/**`, root Markdown, `tools/verify_*.py`, `audit/final-integration/**`) is theirs, not this session's:
+
+| PR | Session | Headline |
+| --- | --- | --- |
+| #44 | `arena-3e212173` | final integration pass; markdown URL fixes; closes stale PRs |
+| #47 | `arena-e5dc4547` | registry 29→31: S30 Rule §13.14, S31 Notice of Owner Noncompliance |
+| #48 | `arena-992eb322` | registry →33: §13.14, 2027 fee/Inventory notice, 42 U.S.C. §3604, FHA |
+| #49 | `arena-c119d0f9` | registry →34: §13.14, fee notice, §3604 GPO, Noncompliance notice, 2024 RHFS |
+
+This session does **not** edit any file those PRs touch. Overlapping items from the 2026-11-11 audits that none of the four PRs carries (checked by grepping each PR's diff for the quoted passage) are logged as **requests** (A4 below), not applied here.
+
+**Handoff takeovers (all > 60 minutes since last commit, rule applied):**
+
+| Stale claim | Last commit (UTC) | State | This session's action |
+| --- | --- | --- | --- |
+| `arena-2c7b19e2` K3–K6 (canonical corrections) | 02:16:08 (claim only) | Superseded by live PRs #47/#48/#49 | **Not taken.** Superseded; requests logged in A4 |
+| `arena-ae42c2ce` AE-1 (official 94122 benchmarks) | 02:19:17 (claim only) | No work commits | Bounded note as **A5**, `audit/session-a47789dd/**` only |
+| `arena-ae42c2ce` AE-5 / `arena-2c7b19e2` K8 (final integration) | n/a | Pending | Covered by **A6** |
+| `arena-4329d908` Q1–Q3, Q6 (legacy withdrawal / supersession marking) | 02:40:34 | Work complete on branch, never merged, no PR | Taken over as **A1** |
+| `arena-35a7caa8` A35-1 (independent audit tooling) | 02:26:21 | Work complete on branch, never merged, no PR | Taken over as **A2** |
+| Stale PRs #29 / #32 | closed 04:18 UTC | Closed | Nothing to do; **A3 withdrawn** |
+
+**Privacy:** no name, initial, street address, e-mail address or telephone number from the owner's brief is written to any file, commit message, pull request or comment. Units and occupants appear only as placeholders; dates and dollar amounts are unchanged.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| A1 | Integrate the completed, unmerged work of `arena-4329d908` (superseded-edition notices + `noindex`, direct official links on archived rows, withdrawal of the commercially sourced draft, `tools/legacy_notice.py`, its audit record) via this branch and a pull request; resolve only merge conflicts, discarding nothing | in progress | `arena-a47789dd` | the files its branch already touches (legacy editions, `tools/legacy_notice.py`, `tools/check_links.py`, `build/**`, `data/v2/**`, `data/sources.csv`, `site/**`, `research/**`, `docs/v1/executive_summary.md`, `audit/session-4329d908/**`) plus `COORDINATION.md` (this section) |
+| A2 | Integrate the completed, unmerged independent audit of `arena-35a7caa8` (`audit/session-35a7caa8/**`) via the same pull request | in progress | `arena-a47789dd` | `audit/session-35a7caa8/**` only |
+| A3 | ~~Triage stale PRs #29 and #32~~ | withdrawn — already closed as of 04:18 UTC | — | — |
+| A4 | Post one consolidated request comment on PRs #47, #48, #49 listing the verified audit items none of them carries (direct official links on canonical table rows; F-03/F-04 quotation wordings; S20 publisher-page citation; 42 U.S.C. §3604 discriminatory-effect analysis basis — Gov. Code §12955.8(b) / 24 CFR §100.500; the 1992 one-of-two-rates footnote; the §6.14(b) actual-knowledge clock label; the §37.10C narrower-class label; H-21 wording; the draft-notice lawyer-review row; the Unit 2 10% + 1.6% = 11.6% / $365.40 / $3,515.40 conditional scenario under File #261020 as drafted), each with its official link; record the same on the board | pending | `arena-a47789dd` | comments on PRs #47, #48, #49 (no repository file) |
+| A5 | Bounded official-benchmark note (Form 571 published increase history already in `hub/data.json`; any official SF/94122 market-norm dataset searched and, if none found, recorded as none); official publishers only; benchmark context is not legal cover | pending | `arena-a47789dd` | `audit/session-a47789dd/**` |
+| A6 | Final last-pass check after the open PRs land: combined tree builds with no broken links, every table row carries an official source link or an explicit flag, suites green, GitHub Pages deploy confirmed; fix anything broken only under a fresh sub-claim logged here first; record the result | pending | `arena-a47789dd` | `COORDINATION.md` (this section only); fixes require a fresh claim |
+
+**Not claimed and not edited:** `audit/session-53d8f8c1/**`; `audit/session-8bcddc6b/**`; `audit/session-3e212173/**`; `audit/session-e5dc4547/**`; `audit/session-992eb322/**`; `audit/session-c119d0f9/**`; `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, root Markdown, `.github/workflows/**`, `hub/assets/**` (held by live PRs #47/#48/#49).
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/a47789dd-rentincreasesf1`, any session may take it over and note the handoff here.
