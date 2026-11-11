@@ -1732,4 +1732,6 @@ No owner/tenant identity, contact detail or street address is added. The current
 
 **Remaining flagged irregularities:** historical public Git copies; unknown current licenses and actual property/lease/ledger facts; no official ZIP-specific market norm or owner-type behavior figure; File #261020's pending status; no attorney review. No unverified number was filled in.
 
+**Rebase log:** On 2026-11-11, while rebasing onto `origin/main` advanced by PR #43/#45 to `fea6e0e`, the first claim commit conflicted only in append-only `COORDINATION.md`. Resolution preserved the full upstream file verbatim and re-appended this session's claim; the remaining commits replayed cleanly. No other session's files or records were discarded, and no conflict markers remain.
+
 **Pull request / deployment:** this session will open and merge a PR from its fixed branch after checks pass. Exact PR, merge commit, post-merge workflow, and Pages deployment result will be appended in a follow-up record after those events; this avoids claiming a deployment before it exists.
