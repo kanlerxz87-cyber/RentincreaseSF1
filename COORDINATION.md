@@ -1754,3 +1754,50 @@ No owner/tenant identity, contact detail or street address is added. The current
 | Post-merge `main` checks (`7858076`) | `Verify site` ✅, `Verify published site` ✅, `Final assurance` ✅ — created `2026-11-11T04:31:11Z` |
 | GitHub Pages | `pages build and deployment` ✅ (created `2026-11-11T04:31:10Z`); Pages API `status=built`, `https_enforced=true`, source `main /` |
 | Live check after deploy | `https://kanlerxz87-cyber.github.io/RentincreaseSF1/index.html?v=992eb322` re-fetched and read: header reads **"live-verified 2026-11-11"**, the source pill reads **"33 official sources"**, and the licence answer, the pending File #261020 warning and the Housing Inventory privacy warning all render. `hub/sources.html` serves the registry with per-source read dates. (A first fetch without a cache-busting parameter returned the previous 29-source build from the CDN cache — noted here so a later reader does not mistake it for a failed deploy.) |
+
+
+---
+
+# Session claim — `arena-717dd220` (2026-11-11 UTC) — independent final verification & request log
+
+**Branch:** `arena/717dd220-rentincreasesf1` (fixed by the platform). Coordination is by **disjoint file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main` is run before every push, always chained with `&&`, never through a pipe.
+
+## Board state read before claiming (2026-11-11 ~04:35 UTC, re-read after each rebase)
+
+* `main` at `74ccba5` (PR #48 + #55 merged). Canonical site (root `index.html` + `hub/**`) is built, verified, and live on GitHub Pages. Registry now **33 sources**: S30 (§13.14) and S31 (Noncompliance) added by PR #47 (`arena-e5dc4547`); **S32 (42 U.S.C. §3604, govinfo.gov) and S33 (Notice of Owner Noncompliance) added by PR #48** (`arena/992eb322`, merged 2026-11-11T04:31:08Z). S34 (2024 RHFS) remains pending under PR #49 (`arena/c119d0f9`, open, CONFLICTING).
+* **Stale PRs #29 and #32 are already CLOSED** as superseded (by `arena-e5dc4547` E5-2 and `arena-3e212173` F3). This session does not reopen or edit them.
+* **PR #32's verified content is being integrated by others:** S30/S31 via PR #47, S32/S33 via PR #48, S34 pending via PR #49. `arena-e8d3cb0f` (PR #53) published official benchmarks for the two blank answers (H-10/H-11) in `benchmarks/**`.
+* **Conclusion:** the canonical integration of PR #32's verified content is already in progress / done under live claims. This session therefore **does not edit** `index.html`, `hub/**`, `assurance/**`, the verifiers, or root Markdown. It contributes an **independent** verification pass and a request log in its own scope.
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| R1 | Append claim; rebase onto `main`; commit and push immediately | done | `arena-717dd220` | `COORDINATION.md` (this section only) |
+| R2 | **Independent 2026-11-11 live verification** of the load-bearing facts and the live published site: re-fetch the key official sources (§37.15, Housing Inventory, §13.14, 1.6% allowance, banking, §827, File #261020, Treasurer lessor guidance, govinfo.gov §3604, noncompliance notice, RHFS), independently recompute every scenario dollar figure and notice date with `Decimal`, and fetch the live GitHub Pages pages to confirm they serve and carry official source links | done | `arena-717dd220` | `audit/session-717dd220/**` |
+| R3 | **Request log** for the canonical holders: record any verified finding not yet in `main`, each with its official link; edit nothing under this claim | done | `arena-717dd220` | `audit/session-717dd220/**`; this section |
+| R4 | **Final confirmation** of the current live state: re-run every suite on the combined `main`, confirm no broken link, an official link on every table row, and anonymisation; confirm the GitHub Pages deployment; record the result. This session edits no canonical file, so it does not block or compete with the live canonical integrators (PR #48 merged; PR #49 open) | done | `arena-717dd220` | `audit/session-717dd220/**`; `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/**`, `.github/workflows/**`, root Markdown, `benchmarks/**`, `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, `archive/**`, every other `audit/session-*/**`.
+
+**Privacy:** no name, initial, street address, e-mail address or telephone number from the owner's brief is written to any file, commit message, branch or pull request by this session. Units and occupants appear only as placeholders; dates and dollar amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/717dd220-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+## `arena-717dd220` — completion record (2026-11-11 UTC)
+
+**R2 — independent verification (done).** 7 official sources re-read live on 2026-11-11 (§37.15 S01, Housing Inventory S03, §13.14 S30, 2027 notice S31, §3604 S32, Noncompliance S33, RHFS S34) — all confirmed against the canonical text. Every scenario dollar figure and notice date recomputed independently with `Decimal` — **every value matches the canonical site** ($63.92/$4,058.92, $55.93, $119.85/$4,114.85, $50.40/$3,200.40, $362.25, $412.65/$3,562.65; notice dates Nov 30/Nov 25 2026, Jan 2/Dec 28 2026/27, Jan 29/Jan 24 2027). Local suites on the 33-source tree: `verify_hub` 1,627/0, `verify_assurance` 1,902/0, `check_links` OK, `check_site` 781/0. Live GitHub Pages fetched (landing + sources.html serve 33 linked official sources; a non-cache-busted fetch returns the prior 31-source CDN build, a known artifact documented by `arena-992eb322`). Findings: `audit/session-717dd220/findings.md`, `sources.json`.
+
+**R3 — request log (done).** S32 (§3604) and S33 (Noncompliance) already in `main` via PR #48 — verified live, no action needed. **One outstanding request:** S34 (2024 RHFS) to be carried into the registry by PR #49 (`arena/c119d0f9`, open) when its branch is rebased. The `uscode.house.gov` string remains only inside flag H-14's documentation text; the active federal-statute source is S32 at govinfo.gov — no link-repair request needed.
+
+**R4 — final confirmation (done, current live state).** GitHub Pages `built`, source `main /`, HTTPS enforced (latest build 2026-11-11T04:34:18Z). Suites green on the combined tree. The canonical integration of S30–S34 is owned by PR #47 (done), PR #48 (done) and PR #49 (open); this session edits no canonical file and does not block or compete with them.
+
+**Triage of stale PRs #29 / #32:** already closed as superseded by `arena-e5dc4547` (E5-2) and `arena-3e212173` (F3). Re-confirmed: PR #32's §13.14 (S30) and Noncompliance/2027 (S31) content is in `main`; S32–S33 are in `main` (PR #48); S34 is pending under PR #49. Nothing further to carry from PR #32.
+
+**Independent read of the owner's questions** (full text on the live site):
+* **Individual owner vs. corporation:** yes — report each tenant-occupied unit via the Housing Inventory and hold a current Rent Increase License on the effective date. §37.15 has no individual-owner/two-unit exemption; adopted Rule §13.14 sets the effective-date (not service-date) test; unlicensed increases are null and void (banking rights preserved). Ordinary annual/banked notices go to the tenant, not the Board for approval.
+* **Reasonable/normal:** the published 1.6% annual allowance (Mar 1, 2026 – Feb 28, 2027) plus valid banked percentages, added without compounding. No official 94122 market-normal figure (H-10, blank/flagged).
+* **How owners handle increases:** same SF duties bind every owner; 42 U.S.C. §3604 + FEHA govern non-discrimination; no official SF owner-type behavior dataset (H-11, blank/flagged).
+* **One unit or both:** different treatment is not automatically discrimination; identical treatment is not immunity; neutral, documented, ledger-based selection matters. No attorney verdict promised.
+
+**Privacy:** no name, initial, street address, e-mail or telephone number from the owner's brief written to any file, commit, branch or PR by this session. Placeholders only; dates and dollar amounts unchanged.
