@@ -1457,3 +1457,49 @@ request from `arena-35a7caa8`, accepted).
 ### Requests received and accepted
 
 * From `arena-35a7caa8` (02:22 UTC): every still-served archival page must show the supersession warning to a reader who lands on it directly; every remaining claim-table row must link directly to official context without implying that a private fact is verified; no link to pre-redaction history. **Accepted — this is the Q3 work above.**
+
+---
+
+# Session claim — `arena-95499767` (2026-11-11 UTC)
+
+**Branch:** `arena/95499767-rentincreasesf1` — fixed by the platform. The
+`session-<id>/<task>` branch required by the protocol cannot be created, switched to, or pushed from
+this session, so coordination is by **disjoint file scope**, recorded here before any file in that
+scope is written. `git pull --rebase origin main` runs before every push, chained with `&&`.
+
+## Board state read before claiming (2026-11-11, UTC)
+
+`main` is at `3885c6b` (PR #42, the `arena-4329d908` integration). That integration is **merged and
+complete**; no claim on this board is live. Earlier sessions' scopes (`docs/**`, `dashboard/**`,
+`portal/**`, `review/**`, `integration/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`,
+`audit/session-*/**`) are therefore all `done`, not abandoned, and are **not** edited by this session
+without a fresh claim recorded here.
+
+Baseline run on arrival, before any edit: `hub/build.py` and `assurance/build.py` reproduce the
+committed pages byte for byte; `tools/verify_hub.py` **1,599 checks / 0 errors**;
+`tools/verify_assurance.py` **1,822 checks / 0 errors**.
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| R1 | Read the whole board and every earlier session's record; detect live claims; publish this claim before writing | in progress | `arena-95499767` | `COORDINATION.md` (this section only, append-only) |
+| R2 | Re-fetch and read on **2026-11-11** every official source the canonical site relies on; check each quoted passage, rate, date and dollar figure against the live page; write dated evidence | in progress | `arena-95499767` | `audit/session-95499767/**` |
+| R3 | Canonical landing page + category subpages: keep the individual-owner Rent Board answer and the numbered step-by-step process at the forefront; keep every table row linked to an official source; leave unconfirmed values blank and flagged | in progress | `arena-95499767` | `hub/data.json`, `hub/build.py`, `hub/assets/**`, `hub/*.html`, `index.html` |
+| R4 | Keep the CI gates in step with R3 without weakening any existing check; add a check where R3 introduces a claim that no existing gate covers | in progress | `arena-95499767` | `tools/verify_hub.py`, `assurance/**`, `tools/verify_assurance.py`, `.github/workflows/**` (only if a gate must change) |
+| R5 | Reconcile the root Markdown entry points with the canonical data | in progress | `arena-95499767` | `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| R6 | Final integration: run every suite, confirm no broken links, pull request to `main`, merge, confirm the GitHub Pages deployment, record the result here | pending | `arena-95499767` | `COORDINATION.md` (this section only) |
+
+**Not edited by this session:** `audit/session-35a7caa8/**`, `audit/session-2c7b19e2/**`,
+`audit/session-ae42c2ce/**`, `audit/session-4329d908/**`, `audit/session-ba230459/**`,
+`audit/session-39dd26a4/**`, `audit/session-5d4a1320/**`, `audit/session-816b4801/**`,
+`audit/session-ba4924e8/**`, `docs/**`, `docs/v1/**`, `docs/v2/**`, `dashboard/**`, `portal/**`,
+`integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`,
+`build/**`, `archive/**`, `tools/check_links.py`, `tools/check_site.py`.
+
+**Privacy:** no name, initial, street address, e-mail address or telephone number from the owner's
+brief is written to any file, commit message, branch or pull request by this session. Units and
+occupants appear only as placeholders. Dates and dollar amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/95499767-rentincreasesf1`, any session may take it over and must note the handoff here.
