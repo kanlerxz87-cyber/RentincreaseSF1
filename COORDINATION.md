@@ -1533,3 +1533,35 @@ S1, S2, S3: **done**. Findings: `audit/session-53d8f8c1/findings.md`. No canonic
 **Irregularities:** none that change any figure or proposition. Two scope limits recorded in `sources.json`: S02 re-read in chunk 0 of 5 only (later-chunk propositions not re-asserted from S02 this session); S20 rent-increase pages not located in chunks read (S20 not quoted this session). Known carried limitation: earlier public Git history contains tenant initials; current-file scans do not cover history (published on canonical Flagged for Review page).
 
 **Requests to the canonical holder (`arena-2c7b19e2` K3–K6):** none. Stale PRs #29 and #32 remain with K7 and were not touched. No canonical file was edited by this session.
+
+---
+
+---
+
+# Session claim — `arena-e5dc4547` (2026-11-11 UTC)
+
+**Branch:** `arena/e5dc4547-rentincreasesf1` — fixed by the platform. The requested
+`session-<id>/<task>` branch cannot be created, switched to, or pushed from this session, so
+coordination is by **disjoint file scope**, recorded here before any file in that scope is written.
+`git pull --rebase origin main` is run before every push, chained with `&&` so a failed rebase stops
+the push. No personal identifier from the owner's brief is written to any file, commit message, pull
+request, or comment by this session. Units and tenants appear only as placeholders; dates and dollar
+amounts are unchanged.
+
+**Board state read before claiming (2026-11-11):** `main` at `3885c6b` (PR #42 merged). Only
+`origin/main` remains as a remote branch. Two pull requests are open and stale: **#29**
+(`arena/68f1fe88-rentincreasesf1`, COORDINATION.md only, CONFLICTING) and **#32**
+(`arena/4700b525-rentincreasesf1`, canonical files, CONFLICTING). The canonical edition
+(`index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, verifiers, root Markdown) was
+last live-verified 2026-11-10 with 29/29 sources. No live session currently holds a claim on the
+scopes below; the last claims (`arena-ae42c2ce` AE-1..AE-5, `arena-4329d908` Q1..Q6) were merged
+via PRs #41 and #42.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| E5-1 | **Fresh 2026-11-11 live re-verification** of every load-bearing fact behind the owner's questions (Rent Board licence / Housing Inventory, current 1.6% allowance and full Form 571 table, banking, notice, state AB 1482 and federal layers, pending File #261020, Rent Board Fee, §6.14 / Costa-Hawkins), each finding recorded with its official link; independent recomputation of all scenario arithmetic and service dates; full verification-suite run on the combined tree | in progress | `arena-e5dc4547` | `audit/session-e5dc4547/**`; this section |
+| E5-2 | **Triage of stale open pull requests #29 and #32**: determine whether any verified finding in them is missing from `main`; merge or close each with the reason recorded | in progress | `arena-e5dc4547` | `audit/session-e5dc4547/**`; comments on PRs #29 and #32 |
+| E5-3 | **Integration and publish**: if E5-1 finds any error, fix it under a fresh claim recorded here first (canonical files); otherwise record-only. Open the pull request from this branch to `main`, merge without waiting, confirm the GitHub Pages deployment, record the PR link and merge result | pending | `arena-e5dc4547` | this section; canonical files only if claimed here before editing |
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/e5dc4547-rentincreasesf1`, any session may take it over and note the handoff here.
