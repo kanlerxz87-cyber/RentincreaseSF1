@@ -252,3 +252,44 @@ URL typo in `EXECUTIVE_SUMMARY.md`/`VERIFICATION.md`, and the stale `14-point` r
 cited, 211 claim rows); `tools/verify_assurance.py` **1,852 checks, 0 errors** (31/31 manifest, 214
 files privacy-scanned); all preserved legacy suites pass. The `review/build.py` footer-date rebuild
 artifact was reverted, as before. All 24 flags remain open; no scenario is certified notice-ready.
+---
+
+# Dated addendum — 2026-11-11 (`arena-1c0f33a9`)
+
+**Result: no rate, date, dollar figure, quote, or legal conclusion changed.** All 29
+pre-existing sources (S01–S29) were re-fetched and read live from their official
+publishers on **2026-11-11**; every registered quote and every claim built on them
+stands as written (per-source notes in
+[`audit/session-1c0f33a9/verification-2026-11-11.md`](audit/session-1c0f33a9/verification-2026-11-11.md)).
+The two sources added earlier the same day (S30 Rule §13.14, S31 noncompliance
+notice) were independently corroborated live by this session. Registry dates:
+S01–S29 moved to 2026-11-11; all 31 manifest rows now carry 2026-11-11.
+
+Two observations, both recorded and neither blocking:
+
+1. **File #261020 "Comment Ltrs" attachment.** Legistar on 2026-11-11 still shows
+   `Pending Committee Action` (Ver. 1, no final action, no enactment date, history
+   unchanged), but a sixth attachment titled "Comment Ltrs" is now listed. Its
+   content was not reviewed; H-22, the S26 `used_for` note, the builder warning
+   strings, and the root Markdown now record the 2026-11-11 re-check and the
+   unreviewed attachment. The "pending — not law" conclusion is unchanged.
+2. **Stale-PR triage completed.** PRs #29 and #32 were closed unmergeable; #32's
+   five proposed sources were all re-verified live by this session. Two are
+   registered (S30/S31, via PR #47); the 2027 notice, §3604 registry entry, and
+   RHFS release were deliberately declined with recorded reasons (redundant /
+   covered / out of scope), which this session concurs with after independent
+   review. Full record: [`audit/session-1c0f33a9/pr-triage.md`](audit/session-1c0f33a9/pr-triage.md).
+   No PR is reopened.
+
+Also fixed: the missing S30/S31 rows in the `SOURCES.md` compact index.
+`EXECUTIVE_SUMMARY.md`, `README.md`, and `SOURCES.md` headers now state the
+2026-11-11 full re-verification. All scenario arithmetic was recomputed
+independently to the cent
+([`audit/session-1c0f33a9/arithmetic.md`](audit/session-1c0f33a9/arithmetic.md)).
+
+**Gates re-run on the combined tree (2026-11-11):** `hub/build.py` (9 pages) and
+`assurance/build.py` (31 manifest rows) regenerate cleanly;
+`tools/verify_hub.py` **1,611 checks, 0 errors** (31/31 sources cited, 211 claim
+rows); `tools/verify_assurance.py` **1,852 checks, 0 errors** (31/31 manifest,
+223 files privacy-scanned); all preserved legacy suites pass (see COORDINATION.md
+J5 record). All 24 flags remain open; no scenario is certified notice-ready.

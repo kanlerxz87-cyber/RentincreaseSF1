@@ -52,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-10`), the suites passed **1,592 canonical checks** and **1,812 assurance checks**, including 210 source/flag-linked canonical claim rows, 37 source-linked assurance rows, 29 live-source manifest entries (all 29 live-verified `2026-11-10`), and a privacy scan of 170 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-11`), the suites passed **1,611 canonical checks** and **1,852 assurance checks**, including 211 source/flag-linked canonical claim rows, 37 source-linked assurance rows, 31 live-source manifest entries (all 31 live-verified `2026-11-11`), and a privacy scan of 223 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

@@ -971,7 +971,7 @@ sources_body = """
     <dt>California Department of Real Estate</dt><dd>{ca_guide_count} official state guide: fixed-term and notice guidance.</dd>
     <dt>Federal official sources</dt><dd>{fed_count} sources: HUD Fair Housing Act overview (cross-checked against 42 U.S.C. §3604 on GovInfo) and DOJ's accurately labeled RealPage proposed-settlement announcement.</dd>
   </dl>
-  <p class="small">The federal statute behind the HUD page, 42 U.S.C. §3604, was cited in an earlier edition through the Office of Law Revision Counsel site; that URL returned &ldquo;Page Not Found&rdquo; when checked on 7 November 2026, so this edition cites the HUD overview page, which was live-verified again on 10 November 2026 (and 42 U.S.C. §3604 was additionally verified on GovInfo). The broken link is repaired in the repository and logged as H-14.</p>
+  <p class="small">The federal statute behind the HUD page, 42 U.S.C. §3604, was cited in an earlier edition through the Office of Law Revision Counsel site; that URL returned &ldquo;Page Not Found&rdquo; when checked on 7 November 2026, so this edition cites the HUD overview page, which was live-verified again on 11 November 2026 (and 42 U.S.C. §3604 was additionally verified on GovInfo). The broken link is repaired in the repository and logged as H-14.</p>
 </section>
 
 <section>

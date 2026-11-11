@@ -1635,3 +1635,90 @@ answer the SF 94122 behaviour question — flag H-11 blank stands).
 | Flags | No new flags; site's Flagged for Review page (`hub/flags.html`) continues to list H-01…H-24 |
 
 F1–F5: **done**. Findings: `audit/session-3e212173/findings.md`.
+
+---
+
+# Session claim — `arena-1c0f33a9` (2026-11-11 UTC)
+
+**Branch:** `arena/1c0f33a9-rentincreasesf1` (fixed by the platform; a `session-<id>/<task>`
+branch cannot be created, switched to, or pushed from this session). `git pull --rebase`
+is run before every push. No personal identifier from the owner's brief is written to any
+file, commit message, pull request, or comment by this session.
+
+**Board state read before claiming (2026-11-11 ~04:20 UTC):** `main` at `3885c6b`
+(PR #42). `git branch -r` shows **only** `origin/main` — every prior session branch has
+been merged and deleted, so **no live concurrent claim exists**; all earlier Q/K/AE
+claims are merged history. Two pull requests are open and stale: #29 (trivial
+COORDINATION record, `CONFLICTING`, head branch deleted) and #32 (2026-11-10
+verification + sources S30–S34, `CONFLICTING`, head branch deleted; its S30–S34 sources
+are **not** on `main`). GitHub Pages: legacy build from `main` root `/`, status `built`,
+live at `https://kanlerxz87-cyber.github.io/RentincreaseSF1/`. Canonical edition on
+`main`: 29 sources / 24 flags, retrieved 2026-11-10. The Q2/Q3 legacy-notice
+implementation (PR #42 title) did not land in the tree: `tools/legacy_notice.py` and
+`audit/session-4329d908/` are absent and `site/**` + `research/**` are still published
+in full — taken over below as J3/J4 (handoff: merged claim with no delivered work and
+no live branch).
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| J1 | Dated 2026-11-11 live re-verification of the decision-critical official sources (licence/Housing Inventory, current allowance, banking, notice, §37.15/§37.3, fee, Treasurer lessor guidance, File #261020 status) — each finding recorded with its official link | in progress | `arena-1c0f33a9` | `audit/session-1c0f33a9/**` |
+| J2 | Triage of stale PRs #29 and #32: live re-verify PR #32's five unmerged sources (Rule §13.14, 2027 fee/inventory notice, GPO 42 U.S.C. §3604, noncompliance notice, RHFS release); carry forward what an official source confirms; close both PRs with recorded reasons | in progress | `arena-1c0f33a9` | `audit/session-1c0f33a9/**`; PR comments/close actions on GitHub (no repo file) |
+| J3 | Carry-forward into the canonical edition (only what J1/J2 verify live): new sources/flags via `hub/data.json`, rebuild, re-run gates; update dated retrieval notes | pending | `arena-1c0f33a9` | `hub/data.json`, generated `index.html` + `hub/*.html`, `assurance/**`, `audit/final-integration/**`, root Markdown (`README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md`) — claimed here because no live session holds them |
+| J4 | Handoff takeover of Q2/Q3 legacy work: reader-visible superseded notice + `noindex` on still-served archived editions, CI-safe (generator-emitted where a reproducibility gate exists); `site/**` + `research/**` commercial-content withdrawal notices. Row-level official-link retrofit is out of scope; remaining gaps stay published as flags | pending | `arena-1c0f33a9` | `tools/legacy_notice.py` (new), archived generators + archived HTML only as listed in the J4 note before first write; no canonical-file edit beyond J3 |
+| J5 | Final integration: rebase, run every suite, confirm no broken links + privacy, open PR to `main`, merge, confirm Pages deploy, record result | pending | `arena-1c0f33a9` | `COORDINATION.md` (this section only) |
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/1c0f33a9-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+## `arena-1c0f33a9` — J3 scope extension (recorded 2026-11-11 before any write)
+
+J1 is complete: all 29 canonical sources re-fetched and read live on 2026-11-11
+(all quotes confirmed, no change required) plus the 5 unmerged PR #32 sources
+verified live with accurate quotes. Carry-forward (J3) additionally requires:
+
+* `hub/build.py` — cite S30–S34 from canonical pages (the assurance gate fails a
+  registered-but-unused source); update the two hardcoded "10 November 2026"
+  Legistar re-check strings to 11 November 2026. No other logic change.
+* `tools/verify_assurance.py` — allow retrieval date `2026-11-11` (line ~125) and
+  add official hosts `govinfo.gov` / `census.gov` (+www) for S32/S34. No check
+  removed or weakened.
+* `audit/final-integration/findings.json` — already in J3 scope; hand-maintained
+  `retrieved`/`scope` strings updated to 34 sources / 2026-11-11 (manifest itself
+  is builder-generated).
+
+No live session holds any of these files (all prior branches merged and deleted).
+`tools/verify_hub.py` needs no change (floors + dynamic counts; no host allowlist).
+
+## `arena-1c0f33a9` — rebase log (2026-11-11)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| ~05:30 | `main` advanced `3885c6b` → `fea6e0e` (PRs #43, #45, session `arena-53d8f8c1`: independent 8-source re-verification + integration record; closed stale PRs #29/#32 as superseded) while J1 fetches were in progress. Rebase of the J1–J5 claim commit stopped on an add/add conflict in `COORDINATION.md`. | Rebase aborted; branch reset to `origin/main` (`fea6e0e`); upstream `COORDINATION.md` kept verbatim with this session's two appended sections re-applied unchanged below the `arena-53d8f8c1` record. No other session's work touched or discarded. `arena-53d8f8c1` is fully done (S1/S2/S3) with no live branch, so no scope conflicts with J1–J5; its PR #32 "superseded" close is independently re-triaged under J2 below. |
+
+## `arena-1c0f33a9` — second rebase log + J3 pivot (2026-11-11)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| ~06:00 | `main` advanced `fea6e0e` → `33fe8af` (PR #47, sessions `arena-8bcddc6b` + `arena-e5dc4547`) while J1/J2 commits were being pushed. Rebase stopped on the same COORDINATION append-conflict. | Same routine: rebase aborted; branch reset to `origin/main`; upstream `COORDINATION.md` kept verbatim; this session's sections re-applied; audit files restored from the pre-reset commit. Nothing discarded from any session. |
+
+**J3 pivot after PR #47 (recorded before any canonical write).** PR #47 ported two
+of PR #32's findings as canonical S30 (Rule §13.14) and S31 (noncompliance notice),
+retrieved 2026-11-11, and **deliberately declined** the other three with recorded
+reasons (2027 notice redundant via S17/S03; §3604 URL already in exec-summary §7
+with S14 covering the federal layer; RHFS national data that leaves H-11 blank).
+This session's live fetches today corroborate the S30/S31 quotes verbatim, and this
+session **concurs** with the three declinations (reasons in
+`audit/session-1c0f33a9/pr-triage.md` §4). J3 therefore adds **no** new sources.
+J3 now = (a) bump S01–S29 retrieval dates + `meta.retrieved` to 2026-11-11 on the
+strength of this session's full live re-read; (b) H-22 re-check date + "Comment
+Ltrs" attachment note; (c) builder "10 November 2026" Legistar strings → 11
+November; (d) rebuild + re-verify; (e) dated root-Markdown updates. The earlier J3
+extension line about "adding S30–S34" is superseded by this paragraph; the
+`verify_assurance.py` date-allowlist edit is already done by PR #47, and the host
+allowlist needs no change since no govinfo/census source is added.
+
+## `arena-1c0f33a9` — third rebase log (2026-11-11)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| ~06:30 | `main` advanced `33fe8af` → `8926820` (PR #52, session `arena-3e212173`, F1–F5 all done: independent 9-source 2026-11-11 verification incl. all five PR #32 sources, §1942.5 URL fix, PR triage). Disjoint files only (`COORDINATION.md`, `audit/session-3e212173/**`). Rebase stopped on the COORDINATION append-conflict. | Rebase aborted; branch reset to `origin/main`; upstream `COORDINATION.md` kept verbatim; this session's sections re-applied; all J1/J2/J3 files restored byte-identical from the pre-reset commit (verified: no diff vs `afcf156` outside `COORDINATION.md`). Nothing discarded. `arena-3e212173` corroborates this session's live verification (third independent read of the five PR #32 sources) and makes no request of this session. |
