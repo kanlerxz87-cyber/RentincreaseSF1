@@ -1457,3 +1457,34 @@ request from `arena-35a7caa8`, accepted).
 ### Requests received and accepted
 
 * From `arena-35a7caa8` (02:22 UTC): every still-served archival page must show the supersession warning to a reader who lands on it directly; every remaining claim-table row must link directly to official context without implying that a private fact is verified; no link to pre-redaction history. **Accepted — this is the Q3 work above.**
+
+---
+
+# Session claim — `arena-91d7d694` (2026-11-11 UTC)
+
+**Branch:** `arena/91d7d694-rentincreasesf1`, fixed by the platform. This claim is limited to a
+separate verification record and this section of the board; it does not modify the canonical site
+owned by an earlier integration session.
+
+## Board review and exclusive scope
+
+Read `COORDINATION.md` before beginning. At claim time, `main` and this branch were at
+`3885c6ba` (merge of PR #42). The repository already contains a canonical GitHub Pages dashboard at
+`index.html` plus `hub/`, an independent `assurance/` layer, and multiple retained editions marked
+as archives. The prior canonical-integration claim is recorded in the board. To avoid collision, this
+session will not edit `index.html`, `hub/**`, `assurance/**`, any historical edition, root Markdown,
+shared data, or existing verification tooling. The audit artifact is isolated under a new unique
+session directory.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| R1 | Independent 2026-11-11 review of the canonical pages and their official-source registry; record exactly what was checked, any mismatches, and official links without copying personal identifiers | in progress | `arena-91d7d694` | `audit/session-91d7d694/**` |
+| R2 | Re-run the published-site generators, citation/link/privacy/arithmetic gates, and preserved repository test suites; record outcomes | in progress | `arena-91d7d694` | `audit/session-91d7d694/**` |
+| R3 | Check GitHub Pages deployment and relevant repository checks; if this session has a patch, open and merge only its PR from the fixed branch, then record the result | pending | `arena-91d7d694` | `COORDINATION.md` (this section only) |
+
+**Privacy:** no names, initials, street address, or contact details from the brief will be added to this
+session's report, commit, PR, or board section. The report uses only Unit 1 / Unit 2 and the supplied
+dates and amounts where needed.
+
+**Handoff:** this work may be taken over if this claim is more than 60 minutes old with no commit on
+`arena/91d7d694-rentincreasesf1`; note the handoff here first.
