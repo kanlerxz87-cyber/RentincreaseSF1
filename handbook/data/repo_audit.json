@@ -1,0 +1,124 @@
+{
+  "verification_date": "2026-11-11",
+  "auditor": "arena/fb3db9a1-rentincreasesf1",
+  "baseline": [
+    {
+      "suite": "Canonical root + hub",
+      "command": "python3 tools/verify_hub.py",
+      "result": "PASS at audit baseline (counts recorded in REPO_AUDIT.md; re-run on final combined tree before merge)",
+      "sources": [
+        "HS11",
+        "HS01"
+      ]
+    },
+    {
+      "suite": "Assurance layer",
+      "command": "python3 tools/verify_assurance.py",
+      "result": "PASS at audit baseline; re-run on final combined tree before merge",
+      "sources": [
+        "HS14",
+        "HS24"
+      ]
+    },
+    {
+      "suite": "Link/privacy/CSV + preserved editions",
+      "command": "python3 tools/check_links.py && python3 tools/check_site.py && edition verify.py suites",
+      "result": "PASS at audit baseline; re-run on final combined tree before merge",
+      "sources": [
+        "HS12"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "id": "RA-FB3-01",
+      "files": "EXECUTIVE_SUMMARY.md, SOURCES.md, VERIFICATION.md (root Markdown) — re-checked precisely",
+      "irregularity": "Alleged trailing-dot leginfo query parameters: NOT present on current main. A loose regex matched sentence punctuation; a precise query-value check (value ends with '.') found zero trailing-dot sectionNum values. Finding withdrawn — recorded here so no session 'fixes' a non-defect",
+      "severity": "Low",
+      "status": "Withdrawn after precise re-check on 2026-11-11; no action needed by any session",
+      "official_confirmation": "",
+      "sources": [
+        "HS33"
+      ]
+    },
+    {
+      "id": "RA-FB3-02",
+      "files": "EXECUTIVE_SUMMARY.md (root)",
+      "irregularity": "Stale review-count wording vs canonical review-row count at audit time",
+      "severity": "Low",
+      "status": "Logged in COORDINATION.md; handbook publishes its own counted 16-gate audit",
+      "official_confirmation": "",
+      "sources": [
+        "HS42"
+      ]
+    },
+    {
+      "id": "RA-FB3-03",
+      "files": "site/**, research/**, docs/v1/executive_summary.md",
+      "irregularity": "Commercial (non-official) citations remain served; PR #42 claim did not land withdrawal notices",
+      "severity": "High",
+      "status": "Flagged FL-22; concurrent J4 handoff noted; handbook has zero commercial URLs",
+      "official_confirmation": "",
+      "sources": [
+        "HS12"
+      ]
+    },
+    {
+      "id": "RA-FB3-04",
+      "files": "docs/**, dashboard/**, portal/**, review/**, integration/** (Nov 6–7 editions)",
+      "irregularity": "Editions predate November 9, 2026 Rent Board File #261020 warning (proposed Sept 15, 2026 banked-notice cutoff)",
+      "severity": "High",
+      "status": "Flagged FL-17; handbook foregrounds the warning + U2-C1/U2-C2",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS16"
+      ]
+    },
+    {
+      "id": "RA-FB3-05",
+      "files": "hub/data.json source registry (33 sources on current main)",
+      "irregularity": "Registry now includes Rule 13.14, noncompliance petitions, 2027 fee/inventory notice and GPO 42 U.S.C. 3604 (S30–S33); it still lacked direct registry entries for Cal. Civ. Code 1942.4 (35-day unabated-citation bar) and Topic 363 hardship scope at handbook verification",
+      "severity": "Medium",
+      "status": "Handbook HS30/HS32 supply those two primaries directly; optional canonical-registry addition logged in COORDINATION.md",
+      "official_confirmation": "",
+      "sources": [
+        "HS03",
+        "HS30"
+      ]
+    },
+    {
+      "id": "RA-FB3-06",
+      "files": "Official Rent Board web worked examples (Topics 050/503)",
+      "irregularity": "Year-label errors in narrative examples; Form 571 controls",
+      "severity": "Medium",
+      "status": "Flagged FL-19; all handbook pricing uses Form 571",
+      "official_confirmation": "",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "id": "RA-FB3-07",
+      "files": "data/sources.csv legacy federal citation",
+      "irregularity": "Legacy House U.S. Code URL returns Page Not Found; GPO GovInfo serves §3604",
+      "severity": "Low",
+      "status": "Handbook cites GPO (HS36); logged for legacy maintainers",
+      "official_confirmation": "",
+      "sources": [
+        "HS36"
+      ]
+    },
+    {
+      "id": "RA-FB3-08",
+      "files": "Git history before PR #10 redaction",
+      "irregularity": "Current files pass privacy scans but pre-redaction blobs remain in history",
+      "severity": "High",
+      "status": "Flagged FL-24 without reproducing any identifier; admin history-rewrite decision required",
+      "official_confirmation": "",
+      "sources": [
+        "HS02"
+      ]
+    }
+  ]
+}
