@@ -31,9 +31,9 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/notice.html` | Notice contents, personal/mail arithmetic, lawful bases, scenario-only drafting aid |
 | `hub/practice.html` | Owner-neutral duties, SF algorithm ban, accurately bounded DOJ enforcement example |
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
-| `hub/review.html` | 14 tenant-side review checks; no attorney verdict |
+| `hub/review.html` | 15 tenant-side review checks; no attorney verdict |
 | `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 29 official sources with supporting passages and per-source retrieval dates |
+| `hub/sources.html` | 31 official sources with supporting passages and per-source retrieval dates |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |

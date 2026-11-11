@@ -4,7 +4,7 @@
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 29 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 31 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
