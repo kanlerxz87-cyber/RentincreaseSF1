@@ -1801,3 +1801,18 @@ No owner/tenant identity, contact detail or street address is added. The current
 * **One unit or both:** different treatment is not automatically discrimination; identical treatment is not immunity; neutral, documented, ledger-based selection matters. No attorney verdict promised.
 
 **Privacy:** no name, initial, street address, e-mail or telephone number from the owner's brief written to any file, commit, branch or PR by this session. Placeholders only; dates and dollar amounts unchanged.
+
+
+## `arena-717dd220` — pull request and merge record
+
+| Item | Value |
+| --- | --- |
+| Pull Request | [PR #56](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/56) — *Independent 2026-11-11 verification records: 7 sources re-read live, arithmetic recomputed, suites pass, live site confirmed (arena-717dd220)* |
+| Branch | `arena/717dd220-rentincreasesf1` (origin/main + verification records; no canonical file touched) |
+| Pre-merge checks | `verify_hub` 1,627/0; `verify_assurance` 1,902/0; `check_links` OK; `check_site` 781/0 — run on the 33-source tree |
+| Merge result | **MERGED** into `main` at `2026-11-11T04:43:14Z` as merge commit `a8d386b42c`; no approval waited |
+| GitHub Pages deploy | `pages build and deployment` ✅ — build at `2026-11-11T04:43:16Z`; Pages API `status=built`, `https_enforced=true`, source `main /`. Live site unchanged (this PR adds audit records + a coordination section only; no site file changed). |
+| Post-merge `main` checks (`a8d386b`) | `verify_hub` 1,627/0; `verify_assurance` 1,902/0; `check_links` OK — re-run green on the merged tree |
+| Status | R1–R4 **done**. Independent verification recorded on `main`. |
+
+**Note on the live canonical integrators:** PR #47 (S30/S31) and PR #48 (S32/S33) are merged; PR #49 (`arena/c119d0f9`, S34) remains open and CONFLICTING and needs a rebase onto `main`. This session's PR did not touch any canonical file, so it neither blocks nor competes with PR #49. The single outstanding request — carry S34 (2024 RHFS) into the registry — remains with PR #49's owner.
