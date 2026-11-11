@@ -1,6 +1,6 @@
 # Official source registry
 
-**Retrieved and read:** All 29 registered sources live-verified 2026-11-10 (originally retrieved 2026-11-07 for S01–S23 and 2026-11-08 for S24–S29)
+**Retrieved and read:** All 29 registered sources re-fetched and re-read live on **2026-11-11** (independent re-verification by `arena-95499767`; prior passes 2026-11-07, 2026-11-08 and 2026-11-10). Audit record: [`audit/session-95499767/VERIFICATION-2026-11-11.md`](audit/session-95499767/VERIFICATION-2026-11-11.md)
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
@@ -46,7 +46,7 @@ All 29 sources are official government publications. Commercial listings and blo
 - **S22:** the DOJ announcement describes allegations and a proposed settlement, not universal corporate behavior or a final adjudication.
 - **S19:** a referral listing is not a guarantee of free representation for every tenant or issue.
 - **S24 / S25:** the Business Registration Certificate is a tax registration, not the Rent Increase License; the sub-four-unit carve-out is conditional on other business activity (H-21).
-- **S26:** a pending ordinance is not law (`Pending Committee Action` on `2026-11-10`). Note the Rent Board's `2026-11-09` warning that if enacted as currently proposed, the 10% cap would apply retroactively to banked notices provided on or after `2026-09-15` (H-22). It is not applied to any figure.
+- **S26:** a pending ordinance is not law (`Pending Committee Action` on `2026-11-11`). Note the Rent Board's `2026-11-09` warning that if enacted as currently proposed, the 10% cap would apply retroactively to banked notices provided on or after `2026-09-15` (H-22). It is not applied to any figure.
 - **S27 / S28 / S29:** §6.14 and Costa-Hawkins are alternatives with different triggers and different notice conditions. Within §6.14, §6.14(b) applies the 60-day initial notice presumption to co-occupants, §6.14(c) applies post-vacancy 90-day reservation/waiver rules to post-1996 non-co-occupants for departures on or after April 25, 2000, and §6.14(d) covers pre-April 25, 2000 departures. Costa-Hawkins does not reach a co-tenant who moved in after the original occupant. Nothing here establishes that either route is available for these units (H-23, H-24).
 
 Owner-brief dates and amounts are not official facts. They remain labeled as scenario inputs throughout the canonical site.

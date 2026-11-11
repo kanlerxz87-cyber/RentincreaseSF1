@@ -221,3 +221,46 @@ coverage, current base rents, ledgers, lease status) remain blank.
 
 - Initial final-integration baseline: [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` (`3fbd5e195330babacbd5e1568e287171ee4f8e93`); followed by PRs #16–#27 on `main` (through `3a07761`).
 - Current `2026-11-10` full 29-source live re-verification and repair pass is tracked in [`COORDINATION.md`](COORDINATION.md) under `arena/7ab74b3e-rentincreasesf1`.
+---
+
+# Dated re-verification — 2026-11-11
+
+**Session:** `arena-95499767` · **Branch:** `arena/95499767-rentincreasesf1` · **Baseline:** `3885c6b`
+**Full record:** [`audit/session-95499767/VERIFICATION-2026-11-11.md`](audit/session-95499767/VERIFICATION-2026-11-11.md)
+
+A fourth independent pass re-fetched **all 29** registered sources on **2026-11-11** and compared every
+quoted passage, rate row, date and dollar figure against the live page.
+
+**Result: 29/29 confirmed. No quote, rate, date or figure was found to be wrong.** The 46-row Form 571
+rate table was machine-compared row by row against `hub/data.json` and matched **46/46**, including both
+1992 sub-periods and every leap-year end date. Every scenario figure reproduced to the cent
+($63.92 / $55.93 / $119.85 / $50.40 / $412.65 / $362.25 → $4,058.92, $4,114.85, $3,200.40, $3,562.65).
+
+## Corrections applied in this pass
+
+| # | Correction |
+| --- | --- |
+| C-1 | Added the **AB 1482 two-unit owner-occupied exemption**, Civil Code §1947.12(d)(6), which the site did not record at all. It is published as a **conditional, unresolved** item (`H-25`), not as an established fact, because the brief never says whether the owner occupied either unit. It changes no figure: §1947.12(d)(3) already removes locally controlled units from the state cap. |
+| C-2 | The Housing Inventory base-rent field is now described exactly as §37.15(b)(2)(F) and the Rent Board page state it — "in $250.00 increments" — instead of a paraphrase. |
+| C-3 | `meta.retrieved` and every source `retrieved` date advanced to **2026-11-11**, the date the sources were actually re-read. |
+
+## Scoped negative finding, re-tested and retained
+
+The site states that no official ZIP-specific "normal increase" for 94122 exists and that commercial
+averages are not substituted. This was re-tested. HUD does publish Fair Market Rents, but an FMR is a
+Section 8 payment-standard benchmark, not a lawful or customary rent-increase figure for a
+rent-controlled unit, and the commercially published dollar values found in search were **not** used.
+`hub/limits.html` now says this explicitly rather than leaving the omission unexplained. The value
+stays blank and flagged `H-10`.
+
+## Gates re-run on the combined tree (2026-11-11)
+
+| Gate | Result |
+| --- | --- |
+| `hub/build.py` + `assurance/build.py` | reproduce committed output byte for byte (determinism re-checked by rebuilding twice) |
+| `tools/verify_hub.py` | **1,605 checks / 0 errors**, 212 source- or flag-linked claim rows |
+| `tools/verify_assurance.py` | **1,828 checks / 0 errors**, 29/29 manifest rows, 215 files privacy-scanned |
+| `tools/check_links.py` | OK — 10 published pages, all links and anchors resolve |
+| `tools/check_site.py` | **781 checks / 0 errors** |
+| `integration/verify.py` · `dashboard/verify.py` · `review/verify.py` | PASS · OK · PASS |
+| `compliance/verify.py` · `audit/verify_all.py` | PASS (3,277 checks) · PASS | 

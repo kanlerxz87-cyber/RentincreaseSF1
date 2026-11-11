@@ -122,7 +122,9 @@ for s in HUB["sources"]:
     if sid in manifest_by_id:
         m = manifest_by_id[sid]
         check(m["url"] == s["url"], f"{sid}: manifest URL mismatch")
-        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10"),
+        # 2026-11-11 added by session arena-95499767: every source was re-fetched and re-read on
+        # that date and the audit record is audit/session-95499767/VERIFICATION-2026-11-11.md.
+        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10", "2026-11-11"),
               f"{sid}: retrieval date {m['retrieved']} is not a recorded live-verification date")
         # The manifest must carry the date this source was actually fetched, not a blanket date.
         check(m["retrieved"] == s.get("retrieved"),
