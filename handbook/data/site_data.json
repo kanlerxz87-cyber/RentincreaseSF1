@@ -1,0 +1,996 @@
+{
+  "meta": {
+    "verification_date": "2026-11-11",
+    "title": "San Francisco Rent Increase Compliance Handbook",
+    "property": {
+      "area": "Outer Sunset",
+      "zip": "94122",
+      "year_built": 1940,
+      "units": 2,
+      "reported_status": "Rent-controlled building (reported; parcel/exemption verification still required)"
+    },
+    "privacy": "Anonymized placeholders only; dates and dollar amounts preserved exactly as supplied."
+  },
+  "units": [
+    {
+      "id": "U1",
+      "label": "Unit 1",
+      "lease_start": "2025-02-01",
+      "lease_start_label": "February 1, 2025",
+      "base_rent": "3995.00",
+      "base_rent_label": "$3,995.00",
+      "base_status": "Supplied scenario input for February 1, 2025 and April 1, 2026; current base-rent composition still requires lease/ledger verification",
+      "occupants_initial": [
+        "Placeholder Tenant 1A",
+        "Placeholder Tenant 1B",
+        "Placeholder Tenant 1C"
+      ],
+      "occupants_current": [
+        "Placeholder Tenant 1A (continuing original occupant)",
+        "Placeholder Tenant 1D (replacement/subsequent occupant from April 1, 2026)"
+      ],
+      "change_date": "2026-04-01",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12",
+        "HS21"
+      ]
+    },
+    {
+      "id": "U2",
+      "label": "Unit 2",
+      "lease_start": "2019-06-01",
+      "lease_start_label": "June 1, 2019",
+      "base_rent": "3150.00",
+      "base_rent_label": "$3,150.00",
+      "base_status": "Supplied only as June 1, 2019 lease-start rent; not expressly certified as current base rent",
+      "occupants_initial": [
+        "Placeholder Tenant 2A",
+        "Placeholder Tenant 2B"
+      ],
+      "occupants_current": [
+        "Placeholder Tenant 2A",
+        "Placeholder Tenant 2B"
+      ],
+      "change_date": "",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12"
+      ]
+    }
+  ],
+  "rates": [
+    {
+      "period": "March 1, 2019 – February 29, 2020",
+      "start": "2019-03-01",
+      "end": "2020-02-29",
+      "pct": "2.6",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2020 – February 28, 2021",
+      "start": "2020-03-01",
+      "end": "2021-02-28",
+      "pct": "1.8",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2021 – February 28, 2022",
+      "start": "2021-03-01",
+      "end": "2022-02-28",
+      "pct": "0.7",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2022 – February 28, 2023",
+      "start": "2022-03-01",
+      "end": "2023-02-28",
+      "pct": "2.3",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2023 – February 29, 2024",
+      "start": "2023-03-01",
+      "end": "2024-02-29",
+      "pct": "3.6",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2024 – February 28, 2025",
+      "start": "2024-03-01",
+      "end": "2025-02-28",
+      "pct": "1.7",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2025 – February 28, 2026",
+      "start": "2025-03-01",
+      "end": "2026-02-28",
+      "pct": "1.4",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "period": "March 1, 2026 – February 28, 2027",
+      "start": "2026-03-01",
+      "end": "2027-02-28",
+      "pct": "1.6",
+      "sources": [
+        "HS11",
+        "HS12"
+      ]
+    },
+    {
+      "period": "March 1, 2027 – February 29, 2028",
+      "start": "2027-03-01",
+      "end": "2028-02-29",
+      "pct": "",
+      "sources": [
+        "HS11"
+      ]
+    }
+  ],
+  "calculations": [
+    {
+      "id": "U1-A",
+      "unit": "U1",
+      "label": "Unit 1 — annual only",
+      "base": "3995.00",
+      "components": [
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Rate in force March 1, 2026 – February 28, 2027",
+          "dollar": "63.92"
+        }
+      ],
+      "total_pct": "1.6",
+      "effective": "2027-02-01",
+      "effective_label": "February 1, 2027 (scenario)",
+      "notice_days": 30,
+      "status": "Conditional illustration — not notice-ready until lease, ledger, licence and repair/retaliation checks pass",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "63.92",
+      "new_rent": "4058.92",
+      "personal_iso": "2027-01-02",
+      "personal_label": "2 January 2027",
+      "mail_iso": "2026-12-28",
+      "mail_label": "28 December 2026"
+    },
+    {
+      "id": "U1-B",
+      "unit": "U1",
+      "label": "Unit 1 — annual + conditional skipped 2026 banked",
+      "base": "3995.00",
+      "components": [
+        {
+          "label": "Banked — skipped February 1, 2026 anniversary",
+          "pct": "1.4",
+          "basis": "Rate period March 1, 2025 – February 28, 2026; only on/after February 1, 2027 on assumed history",
+          "dollar": "55.93"
+        },
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Rate in force March 1, 2026 – February 28, 2027",
+          "dollar": "63.92"
+        }
+      ],
+      "total_pct": "3.0",
+      "effective": "2027-02-01",
+      "effective_label": "February 1, 2027 (earliest scenario date)",
+      "notice_days": 30,
+      "status": "Conditional illustration — valid only if no intervening increase and lease permits increase on that date",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS13",
+        "HS15",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "119.85",
+      "new_rent": "4114.85",
+      "personal_iso": "2027-01-02",
+      "personal_label": "2 January 2027",
+      "mail_iso": "2026-12-28",
+      "mail_label": "28 December 2026"
+    },
+    {
+      "id": "U2-A",
+      "unit": "U2",
+      "label": "Unit 2 — annual only",
+      "base": "3150.00",
+      "components": [
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Rate in force March 1, 2026 – February 28, 2027",
+          "dollar": "50.40"
+        }
+      ],
+      "total_pct": "1.6",
+      "effective": "2027-02-28",
+      "effective_label": "February 28, 2027 (latest date in 1.6% window)",
+      "notice_days": 30,
+      "status": "Conditional illustration — assumes $3,150.00 is still current base rent",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "50.40",
+      "new_rent": "3200.40",
+      "personal_iso": "2027-01-29",
+      "personal_label": "29 January 2027",
+      "mail_iso": "2027-01-24",
+      "mail_label": "24 January 2027"
+    },
+    {
+      "id": "U2-B",
+      "unit": "U2",
+      "label": "Unit 2 — enacted-law conditional maximum banked + annual (high caution)",
+      "base": "3150.00",
+      "components": [
+        {
+          "label": "Banked — June 1, 2020 anniversary",
+          "pct": "1.8",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "56.70"
+        },
+        {
+          "label": "Banked — June 1, 2021 anniversary",
+          "pct": "0.7",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "22.05"
+        },
+        {
+          "label": "Banked — June 1, 2022 anniversary",
+          "pct": "2.3",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "72.45"
+        },
+        {
+          "label": "Banked — June 1, 2023 anniversary",
+          "pct": "3.6",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "113.40"
+        },
+        {
+          "label": "Banked — June 1, 2024 anniversary",
+          "pct": "1.7",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "53.55"
+        },
+        {
+          "label": "Banked — June 1, 2025 anniversary",
+          "pct": "1.4",
+          "basis": "Assumes skipped; ledger proof required",
+          "dollar": "44.10"
+        },
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Rate in force March 1, 2026 – February 28, 2027",
+          "dollar": "50.40"
+        }
+      ],
+      "total_pct": "13.1",
+      "effective": "2027-02-28",
+      "effective_label": "February 28, 2027 (scenario)",
+      "notice_days": 90,
+      "status": "High caution — assumes zero increases since June 1, 2019; banked 11.5% exceeds proposed 10% cap in pending File #261020",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS13",
+        "HS15",
+        "HS16",
+        "HS17",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "412.65",
+      "new_rent": "3562.65",
+      "personal_iso": "2026-11-30",
+      "personal_label": "30 November 2026",
+      "mail_iso": "2026-11-25",
+      "mail_label": "25 November 2026"
+    },
+    {
+      "id": "U2-C1",
+      "unit": "U2",
+      "label": "Unit 2 — pending-cap-safe partial banked (10.0% banked) + annual",
+      "base": "3150.00",
+      "components": [
+        {
+          "label": "Banked imposed now (partial; 1.5% remains banked)",
+          "pct": "10.0",
+          "basis": "Chosen to match proposed §37.3(h) 10% banked+capital cap; remainder preserved",
+          "dollar": "315.00"
+        },
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Annual §37.3(a)(1) allowance is outside proposed banked+capital cap text",
+          "dollar": "50.40"
+        }
+      ],
+      "total_pct": "11.6",
+      "effective": "2027-02-28",
+      "effective_label": "February 28, 2027 (scenario)",
+      "notice_days": 90,
+      "status": "Conditional illustration — still >10% total, so 90/95-day notice; reduces File #261020 banked-cap exposure if ledger confirms bank",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS13",
+        "HS17",
+        "HS18",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "365.40",
+      "new_rent": "3515.40",
+      "personal_iso": "2026-11-30",
+      "personal_label": "30 November 2026",
+      "mail_iso": "2026-11-25",
+      "mail_label": "25 November 2026"
+    },
+    {
+      "id": "U2-C2",
+      "unit": "U2",
+      "label": "Unit 2 — 30-day-notice-eligible partial banked (8.4% banked) + annual",
+      "base": "3150.00",
+      "components": [
+        {
+          "label": "Banked imposed now (partial; 3.1% remains banked)",
+          "pct": "8.4",
+          "basis": "8.4 + 1.6 = 10.0% total; remainder preserved for a future anniversary",
+          "dollar": "264.60"
+        },
+        {
+          "label": "Annual allowable (effective-date rate)",
+          "pct": "1.6",
+          "basis": "Rate in force March 1, 2026 – February 28, 2027",
+          "dollar": "50.40"
+        }
+      ],
+      "total_pct": "10.0",
+      "effective": "2027-02-28",
+      "effective_label": "February 28, 2027 (scenario; February 1, 2027 also shown in notice table)",
+      "notice_days": 30,
+      "status": "Conditional illustration — total is 10.0% or less, so Civil Code §827 30/35-day band applies if no other increase in look-back",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS13",
+        "HS24",
+        "HS25"
+      ],
+      "increase": "315.00",
+      "new_rent": "3465.00",
+      "personal_iso": "2027-01-29",
+      "personal_label": "29 January 2027",
+      "mail_iso": "2027-01-24",
+      "mail_label": "24 January 2027"
+    }
+  ],
+  "steps": [
+    {
+      "n": 1,
+      "action": "Confirm coverage and lease authority",
+      "details": "Confirm pre-June 14, 1979 occupancy/coverage and no exemption on parcel records; read both leases. For Unit 1 decide whether April 1, 2026 created a fixed term (no mid-term increase unless expressly allowed) or month-to-month tenancy.",
+      "sources": [
+        "HS19",
+        "HS26"
+      ]
+    },
+    {
+      "n": 2,
+      "action": "Reconcile base rent, ledger and repair history",
+      "details": "Prove current base rent (base only, excluding temporary passthroughs), every prior increase/passthrough, anniversary dates, open repair requests, inspections and citations. Screen the 35-day unabated-citation bar before any notice.",
+      "sources": [
+        "HS12",
+        "HS30",
+        "HS31"
+      ]
+    },
+    {
+      "n": 3,
+      "action": "Create the owner account on the Rent Board Portal",
+      "details": "Create an account at portal.sfrb.org under Property Owners/Managers and link the property by APN/PIN; call 311 (415-701-2311 outside SF) if PIN help is needed.",
+      "sources": [
+        "HS05",
+        "HS06"
+      ]
+    },
+    {
+      "n": 4,
+      "action": "Submit the Individual Unit Housing Inventory report for each unit",
+      "details": "Use Individual Unit (not the 5+ unit Excel bulk template). Report per unit under penalty of perjury: owner/manager habitability contact, business registration number if any, approx. sq ft in 250-ft increments, bedrooms/baths, occupancy/vacancy dates, base rent in $250 increments and landlord-paid utilities. Good-faith approximations are protected.",
+      "sources": [
+        "HS01",
+        "HS02",
+        "HS03"
+      ]
+    },
+    {
+      "n": 5,
+      "action": "Download and save each unit's Rent Increase License; verify publicly",
+      "details": "Download the license PDF for Unit 1 and Unit 2 and re-check status by address/APN search. The license need not be attached to the tenant notice, but must be current on the effective date.",
+      "sources": [
+        "HS02",
+        "HS04",
+        "HS05"
+      ]
+    },
+    {
+      "n": 6,
+      "action": "Separate the Rent Board Fee from the free licence",
+      "details": "Check the $59.00 per dwelling unit fee for 2026–27 (due March 1). Note December 14, 2026 deadline for a 2027 fee exemption request if any unit qualifies. Never fold the 50% ($29.50) recovery into base rent; recover only as the fee pages direct after full payment.",
+      "sources": [
+        "HS06",
+        "HS07",
+        "HS08"
+      ]
+    },
+    {
+      "n": 7,
+      "action": "Apply one neutral written policy and compute without rounding up",
+      "details": "Use the Form 571 rate in force on the effective date, on base rent only. Add banked percentages additively; never compound or round up. Keep the written policy, ledger and worksheet with the notice file.",
+      "sources": [
+        "HS11",
+        "HS12",
+        "HS15"
+      ]
+    },
+    {
+      "n": 8,
+      "action": "Draft the complete written notice",
+      "details": "State current base, dollar increase, percentage, new base, effective date, and the annual vs banked split with banked basis dates. Include every §37.3(b)/Rule 4.10 item rather than relying on non-voidness provisos.",
+      "sources": [
+        "HS14",
+        "HS15"
+      ]
+    },
+    {
+      "n": 9,
+      "action": "Serve by a statutory method and keep proof",
+      "details": "Personal delivery or USPS mail under CCP §1013 only. Allow 30 days (35 by CA mail) at 10% or less, 90 days (95 by CA mail) above 10%, counting other increases in the 12-month look-back. Keep proof of service / certificate of mailing with mailing notation.",
+      "sources": [
+        "HS24",
+        "HS25"
+      ]
+    },
+    {
+      "n": 10,
+      "action": "Re-verify on the effective date and renew annually",
+      "details": "Re-check licence status on the effective date, renew Housing Inventory by March 1 each year, and update owner/manager contact changes within 30 days. Re-check File #261020 before any banked notice.",
+      "sources": [
+        "HS01",
+        "HS03",
+        "HS16"
+      ]
+    }
+  ],
+  "flags": [
+    {
+      "id": "FL-01",
+      "severity": "High",
+      "item": "Unit 2 current base rent not certified",
+      "missing": "Lease + full ledger proving $3,150.00 is still the current base rent and what it includes",
+      "effect": "Every Unit 2 dollar figure is conditional until proved",
+      "action": "Verify from lease/ledger before using any Unit 2 scenario",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS11"
+      ]
+    },
+    {
+      "id": "FL-02",
+      "severity": "High",
+      "item": "Unit 2 prior-increase history (bank) unproved",
+      "missing": "Every increase notice/ledger entry since June 1, 2019",
+      "effect": "Any prior increase reduces or eliminates the assumed 11.5% bank and can change notice band/anniversary",
+      "action": "Rebuild the bank year-by-year from records only",
+      "official_confirmation": "",
+      "sources": [
+        "HS13",
+        "HS15"
+      ]
+    },
+    {
+      "id": "FL-03",
+      "severity": "High",
+      "item": "Unit 1 fixed-term vs month-to-month status unknown",
+      "missing": "April 1, 2026 instrument: term, expiry and any escalation clause",
+      "effect": "A closed fixed term can bar a February 1, 2027 increase entirely",
+      "action": "Read the instrument; if fixed without escalation, wait for a lawful date and re-price at the then-current rate",
+      "official_confirmation": "",
+      "sources": [
+        "HS26",
+        "HS11"
+      ]
+    },
+    {
+      "id": "FL-04",
+      "severity": "High",
+      "item": "Rent Increase License status per unit unverified here",
+      "missing": "Dated Portal licence evidence for Unit 1 and Unit 2 covering the effective date",
+      "effect": "No licence on the effective date = entire annual/banked increase null and void; tenant owes nothing for suspension months",
+      "action": "Complete Step 4–5 and save dated PDFs before serving; re-check on effective date",
+      "official_confirmation": "",
+      "sources": [
+        "HS01",
+        "HS02",
+        "HS03",
+        "HS04"
+      ]
+    },
+    {
+      "id": "FL-05",
+      "severity": "High",
+      "item": "Pending File #261020 could retroactively cap banked increases",
+      "missing": "Final enacted text/status after November 11, 2026 check (then: Pending Committee Action)",
+      "effect": "Banked notices on/after September 15, 2026 above the proposed 10% banked+capital cap face rollback exposure; excess preserved only for 2030+ if enacted as drafted",
+      "action": "Re-check Legistar + Rent Board warning immediately before any banked notice; consider U2-C1/U2-C2",
+      "official_confirmation": "",
+      "sources": [
+        "HS16",
+        "HS17",
+        "HS18",
+        "HS12"
+      ]
+    },
+    {
+      "id": "FL-06",
+      "severity": "Medium",
+      "item": "Coverage/exemption not confirmed on parcel records",
+      "missing": "Property Information Map / Rent Board confirmation for the 1940 building and each unit",
+      "effect": "An exempt unit falls outside the local cap analysis",
+      "action": "Confirm coverage before relying on Form 571 figures",
+      "official_confirmation": "",
+      "sources": [
+        "HS19"
+      ]
+    },
+    {
+      "id": "FL-07",
+      "severity": "Medium",
+      "item": "Base-rent composition (services vs passthroughs) undocumented",
+      "missing": "What $3,995.00 / $3,150.00 include (parking/storage/utilities/passthroughs)",
+      "effect": "Bundled temporary charges change the lawful dollar amount",
+      "action": "Itemize base vs temporary charges from lease/ledger",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS14"
+      ]
+    },
+    {
+      "id": "FL-08",
+      "severity": "Medium",
+      "item": "Unit 1 anniversary / prior-increase history incomplete",
+      "missing": "2025 lease, April 2026 paperwork, every later notice and full ledger",
+      "effect": "Changes anniversary, available bank and service calendar",
+      "action": "Prove last-increase date before fixing an effective date",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS15"
+      ]
+    },
+    {
+      "id": "FL-09",
+      "severity": "Medium",
+      "item": "Whether a §6.14 notice was served on Placeholder Tenant 1D",
+      "missing": "Any §6.14 notice + proof/date of service (60-day benchmark ~May 31, 2026 if co-occupant route)",
+      "effect": "Does not change today's 1.6% math while Tenant 1A remains; can decide a future reset claim",
+      "action": "Locate or reconstruct the service record; get advice before asserting any future reset",
+      "official_confirmation": "",
+      "sources": [
+        "HS21",
+        "HS22",
+        "HS23"
+      ]
+    },
+    {
+      "id": "FL-10",
+      "severity": "Medium",
+      "item": "Placeholder Tenant 1D status: co-tenant vs subtenant/assignee",
+      "missing": "Agreement + rent-acceptance/conduct evidence classifying Tenant 1D",
+      "effect": "Costa-Hawkins never reaches a co-tenant; §6.14 can reach either if timely noticed",
+      "action": "Classify from documents/conduct; do not label by convenience",
+      "official_confirmation": "",
+      "sources": [
+        "HS21",
+        "HS22",
+        "HS29"
+      ]
+    },
+    {
+      "id": "FL-11",
+      "severity": "Medium",
+      "item": "Repair, citation and petition history unscreened",
+      "missing": "Repair requests, DBI/DPH inspections/citations, Failure-to-Repair or other petitions",
+      "effect": "35-day unabated citation bars notice; qualifying repair petition (60 days after notice) can defer the increase",
+      "action": "Complete repairs and clear citations before serving; calendar the 60-day window",
+      "official_confirmation": "",
+      "sources": [
+        "HS30",
+        "HS31"
+      ]
+    },
+    {
+      "id": "FL-12",
+      "severity": "Medium",
+      "item": "Retaliation screen (180-day + general) not yet performed on facts",
+      "missing": "180-day timeline of complaints/inspections/proceedings, rent-default status, lawful-cause/good-faith record",
+      "effect": "Retaliatory increases are unlawful even if arithmetic is correct; no blanket clearance or blanket ban applies",
+      "action": "Build a dated timeline before selecting units/dates",
+      "official_confirmation": "",
+      "sources": [
+        "HS33"
+      ]
+    },
+    {
+      "id": "FL-13",
+      "severity": "Medium",
+      "item": "One-unit vs both-units selection must be documented as neutral",
+      "missing": "Written neutral policy + per-unit eligibility reasons fixed before service",
+      "effect": "Protected-trait, retaliatory or bad-faith selection creates FEHA/Unruh/FHA/§37.10B exposure; identical treatment is not a safe harbour for an ineligible unit",
+      "action": "Use lease/base/anniversary/rate/bank records only; keep the policy with both files",
+      "official_confirmation": "",
+      "sources": [
+        "HS34",
+        "HS35",
+        "HS36",
+        "HS40"
+      ]
+    },
+    {
+      "id": "FL-14",
+      "severity": "Medium",
+      "item": "Business Registration Certificate facts incomplete",
+      "missing": "Whether owner has other SF business activity, payroll, additional buildings or any short-term rental",
+      "effect": "<4-unit carve-out applies only 'by reason of that fact alone'; other activity can require registration (separate from rent validity)",
+      "action": "Confirm with Treasurer guidance; enter BAN in Inventory only if any",
+      "official_confirmation": "",
+      "sources": [
+        "HS09",
+        "HS10"
+      ]
+    },
+    {
+      "id": "FL-15",
+      "severity": "Low",
+      "item": "No official SF dataset: corporate vs individual increase behaviour",
+      "missing": "Official dataset measuring typical annual/banking behaviour by owner type in SF/94122",
+      "effect": "Behaviour comparison stays qualitative; do not substitute industry averages or stereotypes",
+      "action": "None — leave blank; rely on per-unit records",
+      "official_confirmation": "",
+      "sources": [
+        "HS37",
+        "HS38",
+        "HS41"
+      ]
+    },
+    {
+      "id": "FL-16",
+      "severity": "Low",
+      "item": "No official ZIP-94122 'normal/market' increase figure",
+      "missing": "Official permissible/typical market increase for covered units in 94122",
+      "effect": "Value stays blank; Form 571 ceiling is the only verified benchmark",
+      "action": "Do not import commercial listing averages",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS11"
+      ]
+    },
+    {
+      "id": "FL-17",
+      "severity": "High",
+      "item": "Legacy editions predate November 9, 2026 File #261020 warning",
+      "missing": "Updated warning in editions generated November 6–7, 2026 (docs/dashboard/portal/review/integration families)",
+      "effect": "Readers of preserved editions miss the proposed September 15, 2026 banked-notice cutoff",
+      "action": "Use this handbook/canonical dashboard for decisions; legacy pages are archives",
+      "official_confirmation": "",
+      "sources": [
+        "HS12",
+        "HS13",
+        "HS16"
+      ]
+    },
+    {
+      "id": "FL-18",
+      "severity": "Medium",
+      "item": "Rent Board Fee payment / exemption status per unit unverified",
+      "missing": "Portal fee balance, payment proof and any approved exemption for Unit 1 and Unit 2 (incl. December 14, 2026 deadline for the 2027 cycle if any unit qualifies)",
+      "effect": "Fee arrears accrue 5%/month late penalties (max 15%) separately from the free licence; an unproved exemption cannot be assumed",
+      "action": "Check fee status on the Portal; pay or file any exemption request by its deadline; never fold the 50% recovery into base rent",
+      "official_confirmation": "",
+      "sources": [
+        "HS06",
+        "HS07",
+        "HS08"
+      ]
+    },
+    {
+      "id": "FL-19",
+      "severity": "Low",
+      "item": "Official worked-example year-label errors on Rent Board web pages",
+      "missing": "Corrected narrative examples (Form 571 periods control)",
+      "effect": "Copying example years misstates which rate applies",
+      "action": "Always price from Form 571, never from example prose",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12",
+        "HS13"
+      ]
+    },
+    {
+      "id": "FL-20",
+      "severity": "Medium",
+      "item": "Free tenant representation not guaranteed",
+      "missing": "Provider-by-provider eligibility, scope, cost and capacity confirmation",
+      "effect": "Referral listing (incl. Sunset 94122 office) is a directory, not a promise of free representation for notice review",
+      "action": "Tenants confirm directly; owners must not promise representation",
+      "official_confirmation": "",
+      "sources": [
+        "HS42",
+        "HS04"
+      ]
+    },
+    {
+      "id": "FL-21",
+      "severity": "Low",
+      "item": "2027–28 annual rate unpublished at verification",
+      "missing": "Form 571 rate effective March 1, 2027",
+      "effect": "Any scenario effective after February 28, 2027 cannot be priced yet",
+      "action": "Leave blank; re-check Form 571 on/after March 1, 2027",
+      "official_confirmation": "",
+      "sources": [
+        "HS11",
+        "HS12"
+      ]
+    },
+    {
+      "id": "FL-22",
+      "severity": "High",
+      "item": "Commercially sourced legacy pages still served (site/ + research/)",
+      "missing": "Withdrawal/supersession treatment claimed by a concurrent session (J4) but not yet on main at audit time",
+      "effect": "Non-official citations remain reachable outside the canonical/handbook editions",
+      "action": "Do not rely on site/research for law; use official links in this handbook",
+      "official_confirmation": "",
+      "sources": [
+        "HS12"
+      ]
+    },
+    {
+      "id": "FL-23",
+      "severity": "Medium",
+      "item": "Service-date arithmetic assumes timely, provable service",
+      "missing": "Actual proof of service / mailing certificate, holiday/weekend handling and 12-month look-back totals",
+      "effect": "Late or unprovable service moves the earliest lawful effective date",
+      "action": "Serve well before the last date; retain proof with the notice copy",
+      "official_confirmation": "",
+      "sources": [
+        "HS24",
+        "HS25"
+      ]
+    },
+    {
+      "id": "FL-24",
+      "severity": "High",
+      "item": "Pre-redaction Git history remains reachable",
+      "missing": "History rewrite (e.g., filter-repo) by a repository administrator — outside any single session's safe scope",
+      "effect": "Current files pass privacy scans, but old blobs persist in history; never link to pre-redaction revisions",
+      "action": "Disclosed without reproducing any identifier; admin decision required",
+      "official_confirmation": "",
+      "sources": [
+        "HS02"
+      ]
+    }
+  ],
+  "review": [
+    {
+      "n": 1,
+      "test": "Coverage: is each unit under Chapter 37 rent control?",
+      "evidence": "1940 build date + parcel/exemption check per unit",
+      "result": "Needs evidence",
+      "sources": [
+        "HS19",
+        "HS06"
+      ]
+    },
+    {
+      "n": 2,
+      "test": "Licence: current Rent Increase License on the effective date?",
+      "evidence": "Dated Portal licence PDFs for Unit 1 and Unit 2",
+      "result": "Needs evidence",
+      "sources": [
+        "HS01",
+        "HS02",
+        "HS03",
+        "HS04"
+      ]
+    },
+    {
+      "n": 3,
+      "test": "Rate: Form 571 percentage in force on the effective date?",
+      "evidence": "1.6% for March 1, 2026 – February 28, 2027; blank after that",
+      "result": "Verified (in-window scenarios)",
+      "sources": [
+        "HS11",
+        "HS12"
+      ]
+    },
+    {
+      "n": 4,
+      "test": "Base: applied to base rent only, no rounding up?",
+      "evidence": "Lease/ledger split of base vs temporary passthroughs; cent-exact worksheet",
+      "result": "Needs evidence",
+      "sources": [
+        "HS12",
+        "HS14",
+        "HS15"
+      ]
+    },
+    {
+      "n": 5,
+      "test": "Lease + 12 months: does the lease allow an increase now?",
+      "evidence": "Both leases/amendments; last-increase dates; Unit 1 April 2026 term analysis",
+      "result": "Needs evidence",
+      "sources": [
+        "HS26",
+        "HS12"
+      ]
+    },
+    {
+      "n": 6,
+      "test": "Banking: each banked point actually skipped and eligible?",
+      "evidence": "Year-by-year ledger + Form 571 periods; 24-month guidance and Rule 4.12 12-month points both checked",
+      "result": "Needs evidence",
+      "sources": [
+        "HS11",
+        "HS13",
+        "HS15"
+      ]
+    },
+    {
+      "n": 7,
+      "test": "Pending law: File #261020 re-checked before banked notice?",
+      "evidence": "Legistar status/final text + Rent Board warning on the day of service",
+      "result": "Needs evidence at service",
+      "sources": [
+        "HS16",
+        "HS17",
+        "HS18"
+      ]
+    },
+    {
+      "n": 8,
+      "test": "Notice content: annual vs banked split with basis dates?",
+      "evidence": "Final notice copy showing dollars, %, new base, effective date and banked dates",
+      "result": "Needs evidence (draft)",
+      "sources": [
+        "HS14",
+        "HS15"
+      ]
+    },
+    {
+      "n": 9,
+      "test": "Service: §827 method + §1013 mail time + proof?",
+      "evidence": "Proof of service / mailing certificate; 30/35 or 90/95-day count incl. look-back",
+      "result": "Needs evidence at service",
+      "sources": [
+        "HS24",
+        "HS25"
+      ]
+    },
+    {
+      "n": 10,
+      "test": "Habitability bar: any 35-day unabated citation?",
+      "evidence": "DBI/DPH citation search + abatement proof",
+      "result": "Needs evidence",
+      "sources": [
+        "HS30"
+      ]
+    },
+    {
+      "n": 11,
+      "test": "Repairs: any open request that could defer the increase?",
+      "evidence": "Repair log; completion before effective date; 60-day petition calendar",
+      "result": "Needs evidence",
+      "sources": [
+        "HS31",
+        "HS22"
+      ]
+    },
+    {
+      "n": 12,
+      "test": "Hardship scope correctly understood?",
+      "evidence": "Confirm no hardship deferral is claimed for annual/banked CPI (passthrough/O&M only)",
+      "result": "Verified (scope)",
+      "sources": [
+        "HS32"
+      ]
+    },
+    {
+      "n": 13,
+      "test": "Retaliation: 180-day + general anti-retaliation screen clean on facts?",
+      "evidence": "Dated protected-activity timeline, rent status, lawful-cause record",
+      "result": "Needs evidence",
+      "sources": [
+        "HS33",
+        "HS34"
+      ]
+    },
+    {
+      "n": 14,
+      "test": "Discrimination/harassment: neutral selection, no push-out motive?",
+      "evidence": "Written neutral policy fixed before service; no protected-trait input; no algorithmic pricing",
+      "result": "Needs evidence",
+      "sources": [
+        "HS34",
+        "HS35",
+        "HS36",
+        "HS39",
+        "HS40",
+        "HS37"
+      ]
+    },
+    {
+      "n": 15,
+      "test": "Occupants: original occupant remains; no roommate surcharge; §6.14 record kept?",
+      "evidence": "2025 lease + April 2026 documents, occupancy proof, any §6.14 notice, Tenant 1D classification",
+      "result": "Needs evidence",
+      "sources": [
+        "HS21",
+        "HS22",
+        "HS23",
+        "HS29",
+        "HS14"
+      ]
+    },
+    {
+      "n": 16,
+      "test": "Tenant can verify/challenge without a lawyer?",
+      "evidence": "Notice file points to Portal lookup, Rent Board petitions (518/516C/516B) and referral listing; no promise of free counsel",
+      "result": "Verified (routes exist)",
+      "sources": [
+        "HS04",
+        "HS05",
+        "HS31",
+        "HS42"
+      ]
+    }
+  ]
+}
