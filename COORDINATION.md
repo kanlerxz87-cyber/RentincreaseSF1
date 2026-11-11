@@ -1335,3 +1335,56 @@ to by placeholders only. Dates and dollar amounts are unchanged.
 
 If this claim is more than 60 minutes old with no new commit on `arena/2c7b19e2-rentincreasesf1`, any
 session may take it over and must note the handoff here.
+
+---
+
+# Session claim — `arena-ae42c2ce` (2026-11-11 UTC)
+
+**Branch:** `arena/ae42c2ce-rentincreasesf1` (fixed by the platform; a `session-<id>/<task>` branch cannot be
+created, switched to, or pushed from this session). `git pull --rebase origin main` is run before every push,
+never through a pipe and always chained with `&&`, so a failed rebase stops the push.
+
+## Claim collision on arrival — resolved by yielding (nothing was written outside this file)
+
+Four sessions started within four minutes of each other. This session's first claim (commit `51cd7c2`, pushed
+02:16:22 UTC) covered the canonical dashboard and the superseded editions. Reading every remote branch
+immediately after the push showed that each of those scopes had already been claimed, seconds to minutes
+earlier, on branches that had not yet reached `main`:
+
+| Scope | Earlier claim (commit time, UTC) | This session's action |
+| --- | --- | --- |
+| Canonical dashboard: `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, root Markdown | `arena-35a7caa8` A35-2a/2b (`ded815e`, 02:14:37); also `arena-2c7b19e2` K3–K6 (`9c44557`, 02:16:08, PR #40) | **Withdrawn.** Not edited by this session. |
+| Withdrawal of commercially sourced legacy content: `site/**`, `research/**`, `docs/v1/executive_summary.md` | `arena-4329d908` Q2 (`778360a`, 02:15:40) | **Withdrawn.** Not edited by this session. |
+| Review and marking of superseded editions: `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `integration/**`, `guide/**`, `compliance/**` | `arena-4329d908` Q3 (same commit) took over the task; it will list any file edit before writing | **Withdrawn.** Not edited by this session. |
+| Triage of open PRs #29 and #32 | `arena-4329d908` Q4, `arena-2c7b19e2` K7, `arena-35a7caa8` | **Withdrawn.** |
+
+No file other than this section of `COORDINATION.md` had been written when the collision was found.
+**Note for the two canonical holders:** `arena-35a7caa8` (02:14:37) and `arena-2c7b19e2` (02:16:08) both claim
+`hub/data.json`, `hub/build.py`, `index.html`, the verifiers and the root Markdown. This session takes
+neither side and edits none of those files; it only records that the overlap exists so both can see it.
+
+## Narrowed claim — work no live session has claimed
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| AE-1 | **Official benchmarks the canonical edition leaves blank.** Flags `H-10` ("official 94122 normal market increase") and `H-11` ("official behaviour by owner type") are published as blank because no official figure had been located. Search official publishers only (SF Rent Board statistics and allowable-increase history, DataSF, U.S. BLS, HUD, U.S. Census Bureau) for data that answers "what is reasonable and normal" and "how owners handle increases"; record each figure with its official link, or record that none exists. Nothing is inferred | in progress | `arena-ae42c2ce` | `audit/session-ae42c2ce/**` |
+| AE-2 | **Triage of unmerged session branches that have no open pull request** (13 branches), read-only, for verified findings that never reached `main`. **Handoff:** takes over `arena-ba4924e8` task L3 (claim older than 60 minutes, no commit since 2026-11-10 05:59 UTC); no live session has taken L3 | in progress | `arena-ae42c2ce` | `audit/session-ae42c2ce/**` |
+| AE-3 | **Privacy outside the current tree.** Every earlier scan covers current files only. Check pull-request titles, bodies and comments, commit messages and branch tips for identifiers from the owner's brief, using digests so that no identifier is written anywhere; redact any text GitHub lets a repository admin edit; give the owner a runbook for what cannot be fixed from a pull request | in progress | `arena-ae42c2ce` | `audit/session-ae42c2ce/**`; pull-request and comment text on GitHub (no repository file) |
+| AE-4 | **Independent 2026-11-11 check of the answer to each of the owner's questions** against the official text, written up as dated findings and as a request list for the canonical holders (below). No canonical file is edited | in progress | `arena-ae42c2ce` | `audit/session-ae42c2ce/**`; this section |
+| AE-5 | **Last-pass integration check**, started only after the live canonical and legacy claims above are recorded `done` (or are 60 minutes stale): confirm the combined `main` builds, has no broken link, has a direct official link on every table row, and is anonymised; fix anything broken under a fresh claim written here first; pull request, merge, Pages confirmation, record | pending | `arena-ae42c2ce` | to be claimed here before any write |
+
+## Requests to the canonical holders (`arena-35a7caa8`, `arena-2c7b19e2`)
+
+*(Appended as findings are verified. Each request carries its official link.)*
+
+## Rebase log (`arena-ae42c2ce`)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| 2026-11-11 02:19 | **Process slip, recorded as it happened.** The first rebase onto `main` (advanced to `f0864bb` when PR #40 landed the `arena-2c7b19e2` claim) stopped on an add/add conflict in `COORDINATION.md`. The command had been chained with `;` instead of `&&`, so `git push` still ran. It pushed only this session's own two claim commits to this session's own branch — no conflict markers, no other file, nothing on `main`. | Rebase aborted. Branch rebuilt on `origin/main`: upstream `COORDINATION.md` kept **verbatim** (checked: the upstream file is a byte-exact prefix of the result) with this section appended as a single commit. Own branch re-pushed with `--force-with-lease`. All later pushes use `&&`. |
+
+**Privacy:** no personal identifier from the owner's brief is written to any file, commit message, pull
+request or comment. Units and tenants appear only as placeholders; dates and dollar amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit, any session may take it over
+and note the handoff here.
