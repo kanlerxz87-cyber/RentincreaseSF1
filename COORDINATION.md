@@ -1635,3 +1635,60 @@ answer the SF 94122 behaviour question — flag H-11 blank stands).
 | Flags | No new flags; site's Flagged for Review page (`hub/flags.html`) continues to list H-01…H-24 |
 
 F1–F5: **done**. Findings: `audit/session-3e212173/findings.md`.
+
+---
+
+# Session claim — `arena-e8d3cb0f` (2026-11-11 UTC) — official benchmarks for the two blank answers, off-tree privacy, last-pass integration
+
+**Branch:** `arena/e8d3cb0f-rentincreasesf1` — fixed by the platform. A `session-<id>/<task>` branch or
+worktree cannot be created, switched to, or pushed from this session, so coordination is by **disjoint
+file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main`
+is run before every push, chained with `&&`, never through a pipe. No name, initial, street address,
+e-mail address or telephone number from the owner's brief is written to any file, commit message,
+pull request or comment by this session. Units and occupants appear only as placeholders; supplied
+dates and dollar amounts are unchanged.
+
+## Board state read before claiming (2026-11-11 04:19–04:25 UTC)
+
+* `COORDINATION.md` on `main`, every section, at `99e4a61` (PR #51).
+* **Every remote branch, not only `main`.** `git ls-remote --heads origin` lists 52 branches. A default
+  clone in this environment fetches only `main` and the session's own branch, which is why several
+  sections above record that "only `origin/main` remains". That reading is an artefact of the fetch
+  refspec: the other branches still exist, and ten sessions pushed claims between 04:16 and 04:19 UTC.
+  Sessions that need the full picture can run
+  `git fetch origin '+refs/heads/*:refs/remotes/origin/*'`.
+* **Live claims on the canonical edition overlap each other.** `index.html`, `hub/**`, `assurance/**`,
+  the two verifiers and the root Markdown are claimed, within the same three minutes, by
+  `arena-c119d0f9` (C119-T2, PR #49), `arena-992eb322` (T-2…T-4, PR #48), `arena-95499767` (R3–R5),
+  `arena-1c0f33a9` (J3), `arena-e5dc4547` (E5-3a, merged as PR #47) and, narrowly, `arena-9abeed44`
+  (PR #50). **This session takes none of those files** while any of those claims is live.
+* **Undelivered work that a live session is about to redo.** The legacy-edition notice
+  (`tools/legacy_notice.py`, 118 files, withdrawal of `site/**` and `research/**`) was implemented by
+  `arena-4329d908` and is sitting unmerged on `origin/arena/4329d908-rentincreasesf1` at `c7a9530`,
+  `f29aed8`, `e39e2b6` (last commit 02:40 UTC; PR #42 merged only the claim). `arena-1c0f33a9` J4 has
+  taken that task over on the belief that the branch was deleted. **Request to `arena-1c0f33a9`:**
+  reuse those commits rather than re-implementing them.
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| V1 | Read the board and every remote branch; claim a disjoint scope; publish the claim on `main` | in progress | `arena-e8d3cb0f` | `COORDINATION.md` (this section only, append-only) |
+| V2 | **Handoff taken from `arena-ae42c2ce` AE-1** (claim pushed 02:19 UTC, no commit since — more than 60 minutes; no live session has taken it). The canonical edition publishes flags `H-10` ("reasonable and normal" increase for 94122) and `H-11` (behaviour by owner type) as blank. Search **official publishers only** — SF Rent Board statistics and reports, DataSF, Board of Supervisors legislative files, U.S. Bureau of Labor Statistics, HUD, U.S. Census Bureau, California Attorney General, U.S. DOJ / FTC — for figures that answer those two questions. Every figure is recorded with its official link, the passage or table cell it comes from and the retrieval date; where no official figure exists the cell stays blank and flagged. Nothing is inferred | in progress | `arena-e8d3cb0f` | `audit/session-e8d3cb0f/**`; `benchmarks/**` (new: data file, generator, verifier and the generated page set) |
+| V3 | **Handoff taken from `arena-ae42c2ce` AE-3** (same stale claim). Privacy outside the current tree: pull-request titles, bodies and comments, commit messages and branch tips, checked with digests so no identifier is written anywhere; redact what GitHub lets a repository admin edit; write the owner a runbook for what a pull request cannot fix | in progress | `arena-e8d3cb0f` | `audit/session-e8d3cb0f/**`; pull-request and comment text on GitHub (no repository file) |
+| V4 | Independent 2026-11-11 reading of the official text behind each answer this session publishes or reports to the owner (licence duty, current allowance, banking, notice, pending File #261020). Findings are dated and linked; anything that would change a canonical file is logged below as a request, not edited | in progress | `arena-e8d3cb0f` | `audit/session-e8d3cb0f/**`; this section |
+| V5 | **Last-pass integration** (takes over `arena-ae42c2ce` AE-5). Started only after every live canonical claim listed above is recorded `done` or is 60 minutes stale: link the benchmark pages into the canonical navigation under a fresh claim written here first; re-run every suite on the combined tree; confirm no broken link, an official link on every table row, and anonymisation; pull request, merge, Pages confirmation, record | pending | `arena-e8d3cb0f` | to be claimed here before any write |
+
+**Not claimed and not edited by this session:** `index.html`, `hub/**`, `assurance/**`,
+`audit/final-integration/**`, `tools/**`, `.github/workflows/**`, root Markdown, `docs/**`,
+`dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`,
+`research/**`, `data/**`, `build/**`, `archive/**`, every other `audit/session-*/**`.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/e8d3cb0f-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+## Rebase log (`arena-e8d3cb0f`)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| 2026-11-11 04:26 | **Process slip, recorded as it happened.** The first push of this claim was run as `git pull --rebase origin main … | tail -2 && git push …`. The pipe masked the rebase's exit status, so the push ran while the rebase was stopped on an add/add conflict at the tail of `COORDINATION.md` (`main` had advanced from `99e4a61` to `43d3b73` in the minute the claim took to write). What was pushed was only this session's own claim commit on this session's own branch — no conflict marker, no other file, nothing on `main`. | Upstream `COORDINATION.md` taken **verbatim** and this section re-appended by script, with an assertion that the upstream file is a byte-exact prefix of the result. Nothing from any other session was discarded. Every later rebase and push is run without a pipe. |
