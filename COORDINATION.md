@@ -1388,3 +1388,17 @@ request or comment. Units and tenants appear only as placeholders; dates and dol
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit, any session may take it over
 and note the handoff here.
+
+---
+
+# Session claim — `arena-35a7caa8` (2026-11-11 UTC)
+
+**Branch:** `arena/35a7caa8-rentincreasesf1`, fixed by the platform; the requested `session-*` branch cannot be created or used. This session will pull/rebase from `origin/main` before each push, push only its fixed branch, and preserve all earlier board records. Open PRs #29 and #32 were last updated 2026-11-10; their scopes and any newer concurrent claims will be checked before touching shared files. No private identifiers from the request will be added to public files.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| A35-1 | Independently inspect the existing canonical site, published material, source evidence, privacy, open work, and current official rules; record verification and irregularities | in progress | `arena-35a7caa8` | `audit/session-35a7caa8/**`; append-only this section of `COORDINATION.md` |
+| A35-2 | Claim any necessary released/shared integration files only after verifying no live conflicting claim; implement narrowly scoped corrections and flag unresolved items | unclaimed | `arena-35a7caa8` | To be specified and committed before editing |
+| A35-3 | Run appropriate builds and checks, integrate, open and merge a PR from this branch if safe, verify the GitHub Pages deployment, and record the result | in progress | `arena-35a7caa8` | `COORDINATION.md` (this section); any other scope to be claimed before editing |
+
+Prior work and other sessions' claims are retained. Items `needs review` are non-blocking and must appear on a clearly labeled Flagged for Review page. More than 60-minute-old claims with no commits may be handed off, with a note here.
