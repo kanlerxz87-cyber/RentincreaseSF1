@@ -4,7 +4,7 @@
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 31 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 33 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
@@ -50,3 +50,5 @@ All 31 sources are official government publications. Commercial listings and blo
 - **S27 / S28 / S29:** §6.14 and Costa-Hawkins are alternatives with different triggers and different notice conditions. Within §6.14, §6.14(b) applies the 60-day initial notice presumption to co-occupants, §6.14(c) applies post-vacancy 90-day reservation/waiver rules to post-1996 non-co-occupants for departures on or after April 25, 2000, and §6.14(d) covers pre-April 25, 2000 departures. Costa-Hawkins does not reach a co-tenant who moved in after the original occupant. Nothing here establishes that either route is available for these units (H-23, H-24).
 
 Owner-brief dates and amounts are not official facts. They remain labeled as scenario inputs throughout the canonical site.
+| S32 | San Francisco Rent Board (SF.gov) — [Notification of Rent Board Fee and Housing Inventory Requirements (2027 cycle)](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement) | Separates the two 2027 obligations: fee-exemption request by **Monday, December 14, 2026**; Housing Inventory report by **March 1, 2027**. No licence until reporting is complete, and a fee exemption does not satisfy inventory reporting. Read 2026-11-11. |
+| S33 | U.S. Government Publishing Office (GovInfo) — [42 U.S.C. §3604 — Discrimination in the sale or rental of housing](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) | Enacted federal text: §3604(b) reaches the "terms, conditions, or privileges" of a rental — which covers a rent increase — and §3604(f)(2) covers handicap. Read 2026-11-11. |

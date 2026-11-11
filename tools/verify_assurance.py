@@ -113,6 +113,9 @@ allowed_hosts = {
     #                     Certificate and lessor-of-residential-real-estate guidance)
     # sfgov.legistar.com -> the Board of Supervisors' legislation portal, reached from sf.gov/bos
     "sftreasurer.org", "sfgov.legistar.com",
+    # U.S. Government Publishing Office, added 2026-11-11 after live retrieval of the
+    # enacted text of 42 U.S.C. §3604 (federal Fair Housing Act).
+    "www.govinfo.gov", "govinfo.gov",
 }
 for s in HUB["sources"]:
     sid = s["id"]

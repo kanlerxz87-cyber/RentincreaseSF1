@@ -1,6 +1,6 @@
 # Executive summary — San Francisco rent increases, Outer Sunset 94122
 
-**Verified:** 2026-11-10 (full 29-source live re-verification; prior snapshots 2026-11-07 and 2026-11-08 covering Business Registration Certificate, verbatim Rule 4.12, pending File #261020, and occupant-change rules §6.14 / Costa-Hawkins), extended 2026-11-11 (13 load-bearing sources re-read live with no change; two new official sources added: adopted Rule §13.14 and the Notice of Owner Noncompliance — registry now 31 sources)
+**Verified:** 2026-11-10 (full 29-source live re-verification; prior snapshots 2026-11-07 and 2026-11-08 covering Business Registration Certificate, verbatim Rule 4.12, pending File #261020, and occupant-change rules §6.14 / Costa-Hawkins), extended 2026-11-11 (13 load-bearing sources re-read live with no change; four new official sources added: adopted Rule §13.14, the Notice of Owner Noncompliance, the 2027 fee/Housing Inventory notice — which separates the 14 December 2026 exemption window from the 1 March 2027 report — and the enacted text of 42 U.S.C. §3604 — registry now 33 sources)
 **Canonical dashboard:** [root `index.html`](index.html) · [independent assurance](assurance/index.html) · [Flagged for Review](hub/flags.html)
 **Privacy:** Tenant identities and the street address are withheld. Dates and dollar amounts supplied in the brief are retained as anonymized scenario inputs.
 

@@ -33,7 +33,7 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
 | `hub/review.html` | 15 tenant-side review checks; no attorney verdict |
 | `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 31 official sources with supporting passages and per-source retrieval dates |
+| `hub/sources.html` | 33 official sources with supporting passages and per-source retrieval dates |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
@@ -52,7 +52,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-10`), the suites passed **1,592 canonical checks** and **1,812 assurance checks**, including 210 source/flag-linked canonical claim rows, 37 source-linked assurance rows, 29 live-source manifest entries (all 29 live-verified `2026-11-10`), and a privacy scan of 170 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-11`), the suites passed **1,627 canonical checks** and **1,902 assurance checks**, including 211 source/flag-linked canonical claim rows, 39 source-linked assurance rows, 33 live-source manifest entries (each dated with the pass that read it, `2026-11-07` to `2026-11-11`), and a privacy scan of 222 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

@@ -215,5 +215,19 @@
     "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
     "retrieved": "2026-11-11",
     "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S32",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+    "retrieved": "2026-11-11",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S33",
+    "publisher": "U.S. Government Publishing Office (GovInfo)",
+    "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+    "retrieved": "2026-11-11",
+    "result": "Retrieved and read from official publisher"
   }
 ]
