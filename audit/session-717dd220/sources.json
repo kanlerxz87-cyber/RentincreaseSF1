@@ -1,0 +1,99 @@
+{
+  "session": "arena-717dd220",
+  "date": "2026-11-11",
+  "scope": "audit/session-717dd220/** only; no canonical file edited",
+  "privacy": "placeholders only; dates and supplied dollar amounts unchanged",
+  "state_at_writing": "main at 74ccba5 (PR #48 + #55 merged); registry 33 sources (S30/S31 via PR #47, S32/S33 via PR #48); S34 pending under PR #49",
+  "sources_reverified_live": [
+    {
+      "id": "S01",
+      "title": "Sec. 37.15 — Reporting Obligations; Licensing",
+      "url": "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing",
+      "retrieved": "2026-11-11",
+      "status": "in_main",
+      "confirms": "Reporting duty; annual March 1 deadline (buildings <10 units from March 1, 2023); license on substantial compliance; suspension/prospective restoration; no individual-owner or two-unit exemption."
+    },
+    {
+      "id": "S03",
+      "title": "The Rent Board Housing Inventory",
+      "url": "https://www.sf.gov/rent-board-housing-inventory",
+      "retrieved": "2026-11-11",
+      "status": "in_main",
+      "confirms": "All owners required to report; free; license auto-generated for non-owner-occupied units; current license on effective date; license need not accompany notice; March 1 deadline."
+    },
+    {
+      "id": "S30",
+      "title": "Rent Board Rules and Regulations, Part XIII — §13.14 Licensing",
+      "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+      "retrieved": "2026-11-11",
+      "status": "in_main",
+      "confirms": "Effective date (not service date) governs licensing validity; unlicensed increase null and void; banking rights preserved; applies on/after July 1, 2022 (March 1, 2023 for buildings <10 units)."
+    },
+    {
+      "id": "S31",
+      "title": "Notification of 2027 Rent Board Fee and Housing Inventory Requirements",
+      "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/",
+      "retrieved": "2026-11-11",
+      "status": "in_main",
+      "confirms": "2027 fee exemption deadline Monday December 14, 2026; Housing Inventory deadline March 1, 2027; fee exemption and inventory reporting mutually non-substituting; unlicensed increases null and void."
+    },
+    {
+      "id": "S32",
+      "title": "42 U.S.C. §3604 — Fair Housing Act",
+      "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+      "retrieved": "2026-11-11",
+      "status": "in_main (PR #48)",
+      "confirms": "Primary federal statute text; discrimination in rental terms/conditions/privileges and notices prohibited; federal protected classes."
+    },
+    {
+      "id": "S33",
+      "title": "Notice of Owner Noncompliance with Housing Inventory",
+      "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
+      "retrieved": "2026-11-11",
+      "status": "in_main (PR #48)",
+      "confirms": "Portal address/APN license lookup; unlicensed increase null and void; Tenant Petition for Unlawful Rent Increase (after) / Tenant Summary Petition (before)."
+    },
+    {
+      "id": "S34",
+      "title": "2024 Rental Housing Finance Survey (RHFS) release CB26-TPS.12",
+      "url": "https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html",
+      "retrieved": "2026-11-11",
+      "status": "pending under PR #49 (arena/c119d0f9, open)",
+      "confirms": "Released February 19, 2026; national property/mortgage/ownership-entity structure; does not measure SF 94122 rate-increase behavior (supports H-11 blank)."
+    }
+  ],
+  "arithmetic_recompute": {
+    "method": "Decimal, additive (add, never compound; no rounding up)",
+    "U1_annual_1.6": "63.92 -> 4058.92",
+    "U1_banked_1.4": "55.93",
+    "U1_combined_3.0": "119.85 -> 4114.85",
+    "U2_annual_1.6": "50.40 -> 3200.40",
+    "U2_banked_11.5": "362.25",
+    "U2_combined_13.1": "412.65 -> 3562.65",
+    "notice_dates": "U1 Feb1 2027 -30/35 = Jan2 2027 / Dec28 2026; U2 Feb28 2027 -30/35 = Jan29 2027 / Jan24 2027; U2 13.1% Feb28 2027 -90/95 = Nov30 2026 / Nov25 2026",
+    "all_match_site": true
+  },
+  "suites": {
+    "verify_hub": "1627 checks, 0 errors",
+    "verify_assurance": "1902 checks, 0 errors",
+    "check_links": "OK",
+    "check_site": "781 checks, 0 errors"
+  },
+  "live_site": {
+    "pages_source": "main /",
+    "status": "built",
+    "https_enforced": true,
+    "latest_build": "2026-11-11T04:34:18Z",
+    "sources_count": 33,
+    "cache_note": "non-cache-busted fetch returns prior 31-source CDN build; cache-busted fetch serves 33 sources (documented by arena-992eb322)"
+  },
+  "request_log": [
+    "S34 (2024 RHFS) to be carried into the registry by PR #49 (arena/c119d0f9, open) when rebased",
+    "uscode.house.gov remains only in H-14 documentation text; active federal statute source is S32 at govinfo.gov — no link-repair request needed"
+  ],
+  "irregularities": [
+    "File #261020 pending — not law (H-22)",
+    "Unresolved private facts — Unit 1 lease status, Unit 2 base, ledgers, licenses, coverage, H-10/H-11 blanks",
+    "Historical privacy — earlier Git history may contain tenant initials"
+  ]
+}
