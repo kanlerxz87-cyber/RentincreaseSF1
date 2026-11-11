@@ -1705,3 +1705,19 @@ dates and dollar amounts are unchanged.
 | A9-2 | If A9-1 finds a necessary correction, request it from the canonical holder before editing; if no correction is required, provide a concise completion record and do not create a redundant edition | pending | `arena-9abeed44` | `audit/session-9abeed44/**`; this appended section only |
 
 **Verification/finish rule:** do not label a fact verified without a current official source; unsupported private or official-confirmation values stay blank and flagged. All commands, source URLs, outcomes, and irregularities will be recorded under `audit/session-9abeed44/`. Before every push, rebase onto `origin/main` and push only `arena/9abeed44-rentincreasesf1`.
+
+## `arena-9abeed44` — stale canonical-scope handoff and exact correction scope (2026-11-11 UTC)
+
+At the time of handoff, the canonical claim `K3`–`K8` owned by `arena-2c7b19e2` had no branch commit after its initial claim at `2026-11-11T02:16:08Z` (remote head `9c44557e`); the claim is older than 60 minutes. The other earlier audit claims were also checked against their remote branch heads. This session takes over **only the focused, non-duplicative privacy disclosure below**, not the other sessions' audit, archive, PR-triage, or review work. The official Housing Inventory page fetched on 2026-11-11 expressly says submitted inventory information is public and, for a non-owner-occupied unit, requires owner or designated-manager name and business contact information. This material privacy fact is presently mentioned in a licensing Q&A answer, but not surfaced as a prominent warning before the reporting workflow or in the executive summary.
+
+**Exact files claimed before writing:**
+
+| File | Limited change |
+|---|---|
+| `hub/build.py` | Add an accessible, source-linked privacy warning before the inventory workflow and in the landing page, without changing the legal steps or inferred personal data |
+| `hub/licensing.html`, `index.html` | Regenerate only from `hub/build.py` / current data |
+| `EXECUTIVE_SUMMARY.md` | Add the verified public-inventory privacy caution at the reporting step |
+| `audit/session-9abeed44/**` | Dated source and verification record |
+| `COORDINATION.md` | This append-only handoff, completion record, and deployment/PR result |
+
+No owner/tenant identity, contact detail or street address is added. The current Git history privacy flag remains open; this narrow correction does not rewrite history or claim to remove past exposure. Before the next push, this branch will be rebased onto `origin/main` and only this branch will be pushed.
