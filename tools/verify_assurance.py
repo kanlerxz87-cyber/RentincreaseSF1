@@ -102,7 +102,7 @@ check(assurance_rows == len(AUDIT["corrections"]) + 4 + 4 + len(AUDIT["residual_
 
 # Official source registry and live-retrieval manifest are complete and bounded.
 source_ids = [s["id"] for s in HUB["sources"]]
-check(len(source_ids) == len(set(source_ids)) >= 26, "expected at least 26 unique official sources")
+check(len(source_ids) == len(set(source_ids)) >= 34, "expected at least 34 unique official sources")
 check(len(MANIFEST) == len(source_ids), "source manifest length mismatch")
 manifest_by_id = {m["id"]: m for m in MANIFEST}
 allowed_hosts = {
@@ -113,6 +113,10 @@ allowed_hosts = {
     #                     Certificate and lessor-of-residential-real-estate guidance)
     # sfgov.legistar.com -> the Board of Supervisors' legislation portal, reached from sf.gov/bos
     "sftreasurer.org", "sfgov.legistar.com",
+    # Federal official publishers, added 2026-11-10 with live retrieval:
+    # www.govinfo.gov  -> U.S. Government Publishing Office statutory text of 42 U.S.C. §3604
+    # www.census.gov   -> U.S. Census Bureau / HUD 2024 Rental Housing Finance Survey (CB26-TPS.12)
+    "www.govinfo.gov", "www.census.gov",
 }
 for s in HUB["sources"]:
     sid = s["id"]
@@ -122,7 +126,7 @@ for s in HUB["sources"]:
     if sid in manifest_by_id:
         m = manifest_by_id[sid]
         check(m["url"] == s["url"], f"{sid}: manifest URL mismatch")
-        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10"),
+        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10", "2026-11-11"),
               f"{sid}: retrieval date {m['retrieved']} is not a recorded live-verification date")
         # The manifest must carry the date this source was actually fetched, not a blanket date.
         check(m["retrieved"] == s.get("retrieved"),
@@ -171,7 +175,7 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
       "every Unit 2 banked component must remain conditional")
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
-check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
+check(len(HUB["flags"]) >= 24, "expected at least 24 canonical flags")
 check(len(HUB["review_rows"]) == 15, "expected 15 review checks")
 check(HUB["review_rows"][-1]["sources"] == ["S04", "S05", "S26"], "pending-ordinance review check missing")
 check("noticed on or after September 15, 2026" in next(s for s in HUB["sources"] if s["id"] == "S05")["quote"],
@@ -182,6 +186,10 @@ check("{n}" not in docs["index.html"], "unrendered template placeholder on landi
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")
+
+# Reject unformatted Python placeholder tokens (such as {n}) in any canonical HTML page.
+for rel, doc in docs.items():
+    check(not re.search(r"\{[a-z_]+\}", doc), f"{rel}: unformatted template placeholder found")
 
 # Root documentation regression guards
 readme_text = (ROOT / "README.md").read_text(encoding="utf-8")

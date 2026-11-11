@@ -249,8 +249,9 @@ index_body = """
   <div class="answer">
     <h3>Yes. Each tenant-occupied unit needs a current Rent Increase License before an annual or banked increase takes effect — even when the owner is one individual with no corporation.</h3>
     <p>San Francisco Administrative Code §37.15 contains no individual-owner or two-unit exemption. Report each unit through the annual <strong>Housing Inventory</strong>; after substantial reporting compliance, the Rent Board automatically generates the unit's license. Reporting is free. There is <strong>no separate per-increase approval application</strong>, and an ordinary annual/banked notice goes to the tenant, not to the Rent Board.</p>
-    <p><strong>Timing, precisely:</strong> the official hard cutoff is a current license on the increase's <strong>effective date</strong>, not necessarily the day the notice is served. Best practice is to complete/update reporting and confirm the license <em>before</em> serving notice so a correctable omission does not become an unenforceable increase. Late reporting is allowed, but restoration is prospective; the tenant does not owe the increase for unlicensed suspension months. The license does not have to be attached to the notice.</p>
+    <p><strong>Timing, precisely:</strong> under adopted Rent Board Rule §13.14, the official hard cutoff is a current license on the increase's <strong>effective date</strong>, not the day the notice is served {s30}. Best practice is to complete/update reporting and confirm the license <em>before</em> serving notice so a correctable omission does not become an unenforceable increase. Late reporting is allowed, restoration is prospective, the tenant does not owe the increase for unlicensed suspension months, and Rule §13.14 specifies that an unlicensed null-and-void notice does not destroy underlying banking rights. The license does not have to be attached to the notice.</p>
     <p><strong>Two different City registrations are often confused — only one gates the rent increase.</strong> The <strong>Rent Increase License</strong> comes from the Rent Board's Housing Inventory and is what makes an annual or banked increase enforceable. A <strong>Business Registration Certificate</strong> comes from the Office of the Treasurer &amp; Tax Collector, is a general business-tax registration, and does not affect the lawfulness of a rent increase. On the reported two units in one building, the Tax Collector's own guidance points to <em>no</em> business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. That carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination {s24} {s25} and logged as {h21}, not as a settled fact.</p>
+    <p><strong>2027 Rent Board Fee exemption vs Housing Inventory:</strong> the 2027 Informational Notice sets <strong>Monday, 14 December 2026</strong> as the Request for Exemption deadline for the 2027 Rent Board Fee (unless an Assessor Homeowners' Exemption applies) and <strong>1 March 2027</strong> for both annual Housing Inventory reporting and the 2027 Fee bill. Requesting a fee exemption does not satisfy Housing Inventory reporting, and reporting does not satisfy a fee-exemption request {s17} {s31}.</p>
     <p><strong>Use this order:</strong> confirm coverage and lease terms → reconcile the full rent ledger → submit/update the Housing Inventory and confirm both licenses → calculate the amount → serve a conforming written notice → verify the license remains current on the effective date and retain proof. <a href="@@/hub/licensing.html">Full step-by-step answer and official links →</a></p>
     <p><strong>Before any large banked catch-up:</strong> Board of Supervisors File #261020 would cap combined banked and capital-improvement increases at 10% per year of the lowest base rent in effect during the preceding 12 months through 31 December 2029 (carryover on/after 1 January 2030), and would add banked-increase reporting to §37.15(b)(2)(F). On 10 November 2026 Legistar showed <strong>Pending Committee Action — not law</strong> {s26}. On 9 November 2026 the Rent Board posted a formal notice warning that, if enacted as currently proposed, the 10% cap would apply to banked increases <strong>noticed on or after 15 September 2026</strong> {s04} {s05}. Unit 2’s illustrative banked portion alone is 11.5%; do not rely on this scenario to serve notice. Re-check the proposal and seek advice. Logged as {h22}.</p>
   </div>
@@ -315,13 +316,13 @@ index_body = """
   <caption>Blank means not independently confirmed, not zero and not “verified.”</caption>
   <thead><tr><th scope="col">Official-confirmation value</th><th scope="col">Confirmed value</th><th scope="col">Why blank</th><th scope="col">Source / flag</th></tr></thead>
   <tbody>
-    <tr><td>Current Rent Increase License for each unit</td><td></td><td>Private Rent Board Portal status was not available.</td><td><a href="@@/hub/flags.html#H-04">H-04</a> {s03}</td></tr>
+    <tr><td>Current Rent Increase License for each unit</td><td></td><td>Private Rent Board Portal status was not available.</td><td><a href="@@/hub/flags.html#H-04">H-04</a> {s03} {s30} {s33}</td></tr>
     <tr><td>Certificate of occupancy and exemption check</td><td></td><td>The brief reports a 1940 two-unit rent-controlled building; no parcel record was supplied.</td><td><a href="@@/hub/flags.html#H-05">H-05</a> {s18}</td></tr>
     <tr><td>Unit 1 fixed-term/month-to-month and escalation terms</td><td></td><td>The April 2026 instrument was not supplied.</td><td><a href="@@/hub/flags.html#H-17">H-17</a> {s20}</td></tr>
     <tr><td>Unit 2 current base rent and no-prior-increase history</td><td></td><td>$3,150.00 is supplied only as the 2019 lease-start rent.</td><td><a href="@@/hub/flags.html#H-18">H-18</a>, <a href="@@/hub/flags.html#H-03">H-03</a> {s05}</td></tr>
     <tr><td>2027–28 SF annual allowance</td><td></td><td>Not published as of the verification date.</td><td><a href="@@/hub/flags.html#H-08">H-08</a> {s06}</td></tr>
     <tr><td>Official 94122 “normal” market increase</td><td></td><td>No official ZIP-specific value was located; commercial listings were not substituted.</td><td><a href="@@/hub/flags.html#H-10">H-10</a> {s05}</td></tr>
-    <tr><td>Official SF behavior rates by owner type</td><td></td><td>No official comparative dataset was located.</td><td><a href="@@/hub/flags.html#H-11">H-11</a> {s22}</td></tr>
+    <tr><td>Official SF behavior rates by owner type</td><td></td><td>No official comparative dataset was located (2024 Census/HUD RHFS tracks national property/mortgage structure only).</td><td><a href="@@/hub/flags.html#H-11">H-11</a> {s22} {s34}</td></tr>
   </tbody></table></div>
 </section>
 
@@ -360,12 +361,12 @@ unit_table = table(
 )
 
 q_rows = [
-    ["Must an individual owner inform the Rent Board and obtain a license before notifying tenants?", "Each unit needs a current license on the increase's effective date; complete reporting before notice as the safer sequence. No separate per-increase approval or notice filing is required for ordinary annual/banked increases.", '<a href="@@/hub/licensing.html">Licence &amp; Board</a>', src_links(["S01", "S03", "S04"])],
-    ["What is reasonable and normal under local, state, and federal law?", "The routine local scenario is the published 1.6% annual allowance. Properly proven banked amounts are separate. The 8.8% state cap does not apply to these locally controlled units; federal fair-housing rules still apply. No official ZIP-specific market norm was located.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S05", "S09", "S10", "S14"])],
-    ["How do corporate and individual owners handle increases?", "The same SF duties apply. A DOJ enforcement example documents allegations about portfolio-scale pricing tools, not universal corporate behavior; no official SF behavior-by-owner-type dataset was located.", '<a href="@@/hub/practice.html">Owner practice</a>', src_links(["S02", "S16", "S22"])],
+    ["Must an individual owner inform the Rent Board and obtain a license before notifying tenants?", "Each unit needs a current license on the increase's effective date (Rule §13.14); complete reporting before notice as the safer sequence. No separate per-increase approval or notice filing is required for ordinary annual/banked increases.", '<a href="@@/hub/licensing.html">Licence &amp; Board</a>', src_links(["S01", "S03", "S04", "S30"])],
+    ["What is reasonable and normal under local, state, and federal law?", "The routine local scenario is the published 1.6% annual allowance. Properly proven banked amounts are separate (note pending File #261020). The 8.8% state cap does not apply to these locally controlled units; federal fair-housing rules (42 U.S.C. §3604) still apply. No official ZIP-specific market norm was located.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S05", "S09", "S10", "S14", "S32"])],
+    ["How do corporate and individual owners handle increases?", "The same SF duties apply. A DOJ enforcement example documents allegations about portfolio-scale pricing tools, not universal corporate behavior; 2024 Census/HUD RHFS tracks national property/mortgage structure rather than SF 94122 rates.", '<a href="@@/hub/practice.html">Owner practice</a>', src_links(["S02", "S16", "S22", "S34"])],
     ["How should tenants be told, and what reasons are defensible?", "Use written notice under Civil Code §827 with dollar amount, percentage, effective date, and annual/banked details; add five calendar days for California mail. Use the published allowance or proven banked basis, not retaliation or a roommate surcharge.", '<a href="@@/hub/notice.html">Notice &amp; reasons</a>', src_links(["S08", "S21", "S02"])],
-    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, service evidence, and the pending banked-increase proposal. Arithmetic alone is not a legal clearance.".format(len(DATA["review_rows"])), '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23"])],
-    ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', src_links(["S13", "S14", "S15"])],
+    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, service evidence, and the pending banked-increase proposal. Arithmetic alone is not a legal clearance.".format(len(DATA["review_rows"])), '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23", "S33"])],
+    ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', src_links(["S13", "S14", "S15", "S32"])],
     ["Does Unit 1's April 2026 occupant change allow a market-rate reset?", "No, on the reported facts. One original occupant remained, and both reset routes are keyed to the last original occupant leaving. Whether a §6.14 notice was served, and whether the incoming occupant is a co-tenant or a subtenant, are open private facts.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S27", "S28", "S29"])],
     ["What is still unverified?", "{} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.".format(len(DATA["flags"])), '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
 ]
@@ -390,8 +391,9 @@ index_html = page(
         flag_count=len(DATA["flags"]), source_count=len(DATA["sources"]),
         n=len(DATA["review_rows"]),
         s03=src_links(["S03"]), s04=src_links(["S04"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
-        s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
+        s17=src_links(["S17"]), s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
         s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
+        s30=src_links(["S30"]), s31=src_links(["S31"]), s33=src_links(["S33"]), s34=src_links(["S34"]),
         h21='<a href="@@/hub/flags.html#H-21">H-21</a>', h22='<a href="@@/hub/flags.html#H-22">H-22</a>',
         b_ok=badge("ok", "Verified"), b_calc=badge("calc", "Calculated"),
         b_flag=badge("flag", "Flag"), b_unv=badge("unv", "Unverified"),
@@ -428,7 +430,7 @@ proc_table = table(["Step", "Action", "What to do, and why", "Status", "Source"]
                    caption="The compliance sequence, in order. Steps 1 and 2 decide whether the rest is usable.", cls="data-table")
 
 challenge_rows = [
-    ["No current license on the effective date", "Authority is suspended; the tenant need not pay the increase for suspension months. Restoration is prospective.", src_links(["S01", "S03"])],
+    ["No current license on the effective date", "Under §37.15(e) and Rule §13.14, the entire increase is null and void; the tenant need not pay for suspension months and may file a Tenant Summary Petition (before effective date) or Unlawful Rent Increase Petition (for a refund). Restoration is prospective, and banking rights are not forfeited.", src_links(["S01", "S03", "S30", "S33"])],
     ["Annual/banked itemisation or banked dates omitted", "Include them. Section 37.3(b)(5) states a null-and-void rule, but Rule 4.10(b) has an amount-based exception and Rule 4.12(b) expressly says banked-date omission does not itself void the increase.", src_links(["S02", "S07"])],
     ["Wrong rate for the effective period, compounding, or rounding up", "The calculation exceeds the published allowance; use Form 571 and additive arithmetic.", src_links(["S05", "S06", "S07"])],
     ["Increase during a fixed term without an agreement permitting it", "Official state guidance says the rent cannot be increased during the fixed term; review Unit 1's April 2026 instrument.", src_links(["S20"])],
@@ -454,7 +456,7 @@ licensing_body = """
   <div class="answer">
     <h3>Yes — an individual owner needs a current license for each tenant-occupied unit. No — the Rent Board does not pre-approve each annual or banked increase.</h3>
     <p>The reporting duty applies to owners of units subject to Chapter 37, including buildings with fewer than 10 units. Corporate form is irrelevant. Once the owner substantially complies with reporting, a license is automatically generated for a non-owner-occupied unit. It is free and need not be attached to the tenant notice.</p>
-    <p><strong>Before notice or before effectiveness?</strong> The official rule is that a current license must be on file when the annual/banked increase goes into effect. Completing the inventory and confirming the license before serving notice is the recommended risk-control sequence, not a claim that the statute always makes pre-notice licensure the hard cutoff. Late submission is possible, but an increase is unenforceable for the unlicensed period and restoration is prospective.</p>
+    <p><strong>Before notice or before effectiveness?</strong> Under adopted Rent Board Rule §13.14, &ldquo;the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms&rdquo; — a current license must be on file when the annual/banked increase goes into effect {s30}. Completing the inventory and confirming the license before serving notice is the recommended risk-control sequence, not a claim that the statute always makes pre-notice licensure the hard cutoff. Late submission is possible, but an increase taking effect while unlicensed is null and void (without forfeiting banking rights) and restoration is prospective. Tenants can verify license history by address/APN in the Portal and file a Summary Petition before the effective date or an Unlawful Rent Increase Petition afterward {s33}.</p>
   </div>
   <div class="callout">
     <p><strong>Ordinary annual/banked route:</strong> report/update inventory → confirm license → verify lease and ledger → calculate → serve the tenant with a conforming notice → confirm licensure on the effective date. Do not send an ordinary annual/banked notice to the Board as an approval request. Separate petition-based increases have different procedures.</p>
@@ -483,7 +485,7 @@ licensing_body = """
   <ul>
     <li><strong>License status is blank.</strong> Check the Rent Board Portal before notice and again for the effective date. Note that pending BOS File #261020 (<em>Pending Committee Action — not law</em>) would also amend §37.15(b)(2)(F) to add Housing Inventory reporting of banked increases imposed in the prior 12 months. {s26} See <a href="@@/hub/flags.html#H-04">H-04</a>.</li>
     <li><strong>Reporting can be late.</strong> There is no monetary late-reporting penalty stated on the Housing Inventory page, but do not backdate or collect for an unlicensed period. {s03}</li>
-    <li><strong>The annual fee is separate — watch the 14 December 2026 exemption deadline.</strong> For the 2027 Rent Board fee (due 1 March 2027), any Request for Exemption must be submitted by <strong>14 December 2026</strong>. Exemptions, payment, and 50% recovery conditions must be checked independently; do not fold a recovery into base rent, and requesting a fee exemption does not satisfy Housing Inventory reporting. {s17}</li>
+    <li><strong>The annual fee is separate — watch the 14 December 2026 exemption deadline.</strong> For the 2027 Rent Board fee (due 1 March 2027), any Request for Exemption must be submitted by <strong>Monday, 14 December 2026</strong>. Exemptions, payment, and 50% recovery conditions must be checked independently; do not fold a recovery into base rent, and requesting a fee exemption does not satisfy Housing Inventory reporting, nor vice versa. {s17} {s31}</li>
     <li><strong>Separate City tax registration check (Q8–Q10 above).</strong> A Business Registration Certificate from the Treasurer &amp; Tax Collector is not a rent-increase license; on the reported two units in one building the sub-four-unit carve-out points to no registration unless other SF business activity, payroll expense, or short-term rentals trigger it. {s24} {s25} See <a href="@@/hub/flags.html#H-21">H-21</a>.</li>
   </ul>
 </section>
@@ -491,7 +493,8 @@ licensing_body = """
 """.format(lic_table=lic_table, proc_table=proc_table, challenge_table=challenge_table,
            not_licence_table=not_licence_table, s19=src_links(["S19"]),
            s03=src_links(["S03"]), s17=src_links(["S17"]),
-           s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]))
+           s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
+           s30=src_links(["S30"]), s31=src_links(["S31"]), s33=src_links(["S33"]))
 
 licensing_html = page(
     "hub/licensing.html",
@@ -545,7 +548,7 @@ layer_rows = [
     ["State — Costa-Hawkins, Civil Code §1954.53", "Vacancy rules depend on original occupants and partial changes in occupancy.", "The brief says one original Unit 1 occupant remains, so no vacancy reset is supported by that reported fact. Continuous occupancy and occupant status still require documents.", src_links(["S11", "S02"])],
     ["State — fixed-term guidance", "During a fixed term, rent cannot be increased unless the agreement permits it; renewal is another possible increase point.", "Unit 1's April 2026 instrument is indispensable. If an unmodified fixed term ends March 31, 2027, the February scenario is unavailable.", src_links(["S20"])],
     ["State — Civil Code §827 / CCP §1013", "30 days at ≤10%; 90 days above 10%; five extra calendar days for California-to-California mail, with longer extensions in other cases.", "Sets notice procedure, not permission to override a fixed term or missing license.", src_links(["S08", "S21"])],
-    ["Federal — fair housing", "The Fair Housing Act prohibits discrimination in rental terms and conditions. No general federal percentage cap for private unsubsidized housing was located in this scoped review; subsidy-specific rules were not evaluated.", "Owner-neutral selection and retaliation analysis still applies. This is a scoped negative finding, not a claim about every possible federal program.", src_links(["S14"])],
+    ["Federal — fair housing", "The Fair Housing Act (42 U.S.C. §3604) prohibits discrimination in rental terms, conditions, privileges, and notices across federal protected classes. No general federal percentage cap for private unsubsidized housing was located in this scoped review; subsidy-specific rules were not evaluated.", "Owner-neutral selection and retaliation analysis still applies. This is a scoped negative finding, not a claim about every possible federal program.", src_links(["S14", "S32"])],
 ]
 layer_table = table(["Level", "What it says", "Effect on these two units", "Source"], layer_rows, cls="data-table")
 
@@ -729,7 +732,7 @@ practice_table = table(["Topic", "Large / corporate owners", "Individual owners"
 practice_body = """
 <section>
   <h2>The honest answer about practice<span class="sub">Binding duties are verified; typical behavior by owner type is not.</span></h2>
-  <p>The same allowance, license, notice, banking, harassment, and fair-housing rules apply to an individual and a corporate landlord. San Francisco also prohibits covered algorithmic devices using nonpublic competitor data. No official dataset measuring typical increase behavior for San Francisco owners by corporate form was located; the value remains blank at <a href="@@/hub/flags.html#H-11">H-11</a>.</p>
+  <p>The same allowance, license, notice, banking, harassment, and fair-housing rules apply to an individual and a corporate landlord. San Francisco also prohibits covered algorithmic devices using nonpublic competitor data. While the U.S. Census Bureau and HUD released the 2024 Rental Housing Finance Survey (CB26-TPS.12) on 19 February 2026 tracking national property, mortgage, and ownership-entity structure {s34}, no official dataset measures typical rent-increase behavior for San Francisco owners by corporate form; the comparative rate remains blank at <a href="@@/hub/flags.html#H-11">H-11</a>.</p>
   <div class="answer"><h3>What an individual owner should take from this</h3><p>Use the same per-unit controls expected of any compliant operator: current reporting and license evidence, actual lease and ledger, reproducible calculation, neutral selection, timely notice, and proof of service. That is a recommendation, not a claim that small owners are inherently informal or large owners inherently compliant.</p></div>
 </section>
 <section>
@@ -751,7 +754,7 @@ practice_body = """
 
 """.format(practice_table=practice_table, s16=src_links(["S16"]), s09=src_links(["S09"]),
            s02=src_links(["S02"]), s01=src_links(["S01"]),
-           s22=src_links(["S22"]), s10=src_links(["S10"]))
+           s22=src_links(["S22"]), s10=src_links(["S10"]), s34=src_links(["S34"]))
 
 practice_html = page(
     "hub/practice.html",
@@ -777,7 +780,7 @@ fh_body = """
   <h2>One unit or both?<span class="sub">Different treatment is not automatically discrimination; identical treatment is not immunity.</span></h2>
   <div class="answer">
     <h3>Raising one unit and not the other is not, by itself, a fair-housing violation. The reason, evidence, and independent lawfulness of each increase control.</h3>
-    <p>Chapter 37 and the cited fair-housing statutes do not require parallel increases. They prohibit discrimination or harassment because of protected characteristics, and state/local law separately addresses retaliation and bad-faith conduct. Use verified lease terms, current base rent, anniversary, and banked history—not assumptions or protected traits.</p>
+    <p>Chapter 37 and the cited fair-housing statutes (FEHA Gov. Code §12955 and federal 42 U.S.C. §3604 {s13} {s14} {s32}) do not require parallel increases. They prohibit discrimination or harassment because of protected characteristics, and state/local law separately addresses retaliation and bad-faith conduct. Use verified lease terms, current base rent, anniversary, and banked history—not assumptions or protected traits.</p>
   </div>
   <p class="small">This is a reading of cited law, not a prediction or legal clearance. Unit 2's current base and both full histories remain unverified.</p>
 </section>
@@ -801,8 +804,8 @@ fh_body = """
 </section>
 
 """.format(fh_table=fh_table, u1_base=money(N["U1"]["base"]), u2_base=money(N["U2"]["base"]),
-           s02=src_links(["S02"]), s12=src_links(["S12"]), s16=src_links(["S16"]),
-           s05=src_links(["S05"]), s23=src_links(["S23"]))
+           s02=src_links(["S02"]), s12=src_links(["S12"]), s13=src_links(["S13"]), s14=src_links(["S14"]),
+           s16=src_links(["S16"]), s05=src_links(["S05"]), s23=src_links(["S23"]), s32=src_links(["S32"]))
 
 fair_housing_html = page(
     "hub/fair-housing.html",
@@ -848,7 +851,7 @@ review_body = """
 <section>
   <h2>Official tenant-review routes<span class="sub">Available routes are not a promise of free representation.</span></h2>
   <ul>
-    <li><strong>Check license reporting:</strong> the Housing Inventory page says tenants can search the Rent Board Portal for license status. {s03}</li>
+    <li><strong>Check license reporting:</strong> the Housing Inventory page and Noncompliance Notice explain that tenants can search the Rent Board Portal by address or APN for license status on the effective date, and file a Tenant Summary Petition (before effective date) or Unlawful Rent Increase Petition (after effective date). {s03} {s33}</li>
     <li><strong>Petition without counsel:</strong> the Rent Board expressly says a lawyer is not required. {s19}</li>
     <li><strong>Repair-based deferral:</strong> a qualifying Failure to Repair and Maintain petition is due no later than 60 days after receipt of the increase notice. {s23}</li>
     <li><strong>Referral resources:</strong> the official list includes Open Door Legal's Sunset office and other organizations. Contact the provider about eligibility, issue coverage, capacity, and cost; do not assume free representation. {s19}</li>
@@ -857,7 +860,7 @@ review_body = """
 </section>
 
 """.format(review_table=review_table, s03=src_links(["S03"]), s19=src_links(["S19"]),
-           s18=src_links(["S18"]), s23=src_links(["S23"]))
+           s18=src_links(["S18"]), s23=src_links(["S23"]), s33=src_links(["S33"]))
 
 review_html = page(
     "hub/review.html",
@@ -909,13 +912,13 @@ flags_body = """
     <tr><td>Both units' prior increases and banked entitlement</td><td></td><td>Every notice and payment record across the claimed period.</td><td>{s04}<br><a href="@@/hub/flags.html#H-02">H-02</a>, <a href="@@/hub/flags.html#H-03">H-03</a></td></tr>
     <tr><td>Market “normal” increase for 94122</td><td></td><td>No official value located; do not substitute commercial listings.</td><td>{s05}<br><a href="@@/hub/flags.html#H-10">H-10</a></td></tr>
     <tr><td>2027–28 allowance</td><td></td><td>Future Form 571 when officially published.</td><td>{s06}<br><a href="@@/hub/flags.html#H-08">H-08</a></td></tr>
-    <tr><td>Corporate versus individual behavior rate</td><td></td><td>No official SF comparative dataset located.</td><td>{s22}<br><a href="@@/hub/flags.html#H-11">H-11</a></td></tr>
+    <tr><td>Corporate versus individual behavior rate</td><td></td><td>No official SF comparative dataset located (2024 Census/HUD RHFS tracks national property/mortgage structure only).</td><td>{s22} {s34}<br><a href="@@/hub/flags.html#H-11">H-11</a></td></tr>
   </tbody></table></div>
 </section>
 
 """.format(flag_table=flag_table, s03=src_links(["S03"]), s04=src_links(["S04"]),
            s05=src_links(["S05"]), s06=src_links(["S06"]), s18=src_links(["S18"]),
-           s20=src_links(["S20"]), s22=src_links(["S22"]))
+           s20=src_links(["S20"]), s22=src_links(["S22"]), s34=src_links(["S34"]))
 
 flags_html = page(
     "hub/flags.html",

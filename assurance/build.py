@@ -31,7 +31,7 @@ def table(headers, rows, caption):
 correction_rows = [row([f'<strong>{esc(c["id"])} · {esc(c["item"])}</strong>', esc(c["finding"]), src(c["sources"]), flags(c["flags"]) or "—"])
                    for c in AUDIT["corrections"]]
 correction_table = table(["Correction", "Independent finding", "Official source", "Flag"], correction_rows,
-                         "Twelve corrections made after reading the canonical source data and generated pages line by line.")
+                         f"{len(AUDIT['corrections'])} corrections made after reading the canonical source data, generated pages, and 2026-11-11 official updates line by line.")
 
 scenario_rows = []
 for unit in ("U1", "U2"):

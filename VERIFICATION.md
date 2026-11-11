@@ -1,6 +1,6 @@
 # Final integration verification record
 
-**Verification date:** 2026-11-10 (full 29-source live re-verification and repair pass; prior baseline PR #15 verified 2026-11-07)
+**Verification date:** 2026-11-11 (full 34-source live re-verification: S01–S29 re-checked, S30–S34 integrated from PR #32; prior baseline 2026-11-10)
 **Canonical edition:** root `index.html` + `hub/`
 **Independent assurance:** `assurance/` + `audit/final-integration/`
 **Branch:** `arena/7ab74b3e-rentincreasesf1`
@@ -11,7 +11,7 @@ The final audit read the canonical data and generated prose, re-fetched official
 
 Evidence classes are kept separate:
 
-1. **Official rule/rate:** directly supported by one of the 29 registered official sources.
+1. **Official rule/rate:** directly supported by one of the 34 registered official sources.
 2. **Owner-brief input:** a date or amount supplied for the two units, not an official record.
 3. **Conditional arithmetic:** reproducible calculation on an owner-brief input and an official percentage.
 4. **Official confirmation:** private license, parcel, lease, or ledger evidence that was unavailable; the public cell is blank and flagged.
@@ -20,7 +20,7 @@ No personal identity is used in the current site or verification data.
 
 ## Official-source verification
 
-All **29/29** registered sources were re-fetched and verified live from their official publishers on **2026-11-10** (originally retrieved 2026-11-07 for S01–S23 and 2026-11-08 for S24–S29), alongside File #261020's legislative attachments (`Leg Ver1` / `Leg Dig Ver1`) and `42 U.S.C. §3604` on GovInfo. Each source carries its retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
+All **34/34** registered sources were re-fetched and verified live from their official publishers on **2026-11-11** (originally retrieved 2026-11-07 for S01–S23, 2026-11-08 for S24–S29, and 2026-11-10 for S30–S34), alongside File #261020's legislative attachments (`Leg Ver1` / `Leg Dig Ver1`) and `42 U.S.C. §3604` on GovInfo. Each source carries its retrieval date in `hub/data.json` and in the manifest, so a newly added source cannot inherit a stale blanket date. The registry is [`hub/data.json`](hub/data.json), the compact index is [`SOURCES.md`](SOURCES.md), and the machine-readable retrieval manifest is [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json).
 
 Notable checks (`2026-11-10`):
 
@@ -221,3 +221,25 @@ coverage, current base rents, ledgers, lease status) remain blank.
 
 - Initial final-integration baseline: [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` (`3fbd5e195330babacbd5e1568e287171ee4f8e93`); followed by PRs #16–#27 on `main` (through `3a07761`).
 - Current `2026-11-10` full 29-source live re-verification and repair pass is tracked in [`COORDINATION.md`](COORDINATION.md) under `arena/7ab74b3e-rentincreasesf1`.
+# Dated re-verification — 2026-11-11 (arena-c119d0f9, C119-T1/T2)
+
+All 34 sources fetched and read live from their official publishers on **2026-11-11**.
+No rate, date, figure, or legal conclusion changed since 2026-11-10. File #261020
+remains **Pending Committee Action — not law** (last history 10/7/2026 Youth
+Commission response; no final action, no enactment date).
+
+- **S01–S29 re-checked:** §37.15/§37.3, Housing Inventory, banking, 1.6% rate
+  (Form 571), Rules Part IV, Civ. Code §§827/1947.12/1954.53/1942.5, FEHA §12955,
+  HUD FHA, §§37.10B/37.10C, Rent Board Fee, rental laws, referral listing,
+  Tenants Guide, CCP §1013, DOJ RealPage, repair petitions, Treasurer guidance,
+  File #261020, §§6.14/Costa-Hawkins — all unchanged.
+- **S30–S34 integrated from PR #32** (previously unmerged; K7/Q4 triage never
+  landed content): Rule §13.14 (S30), 2027 Fee/Inventory notice (S31),
+  42 U.S.C. §3604 (S32), Noncompliance notice (S33), 2024 RHFS (S34).
+  Each quote verified verbatim against the live publisher on 2026-11-11.
+- **Retained from main (newer than PR #32):** 15 review rows (incl. #15 File
+  #261020 check), detailed S28 §6.14(b)/(c)/(d) quote, detailed H-22/H-23 text.
+- **Gates re-run:** `tools/verify_hub.py` **1,725 checks, 0 errors** (211
+  source/flag-linked rows, 34/34 cited); `tools/verify_assurance.py`
+  **1,982 checks, 0 errors** (34/34 manifest, 215 files privacy-scanned).
+  Line-by-line evidence: `audit/session-c119d0f9/VERIFICATION-2026-11-11.md`.

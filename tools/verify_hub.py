@@ -372,12 +372,23 @@ for page, doc in docs.items():
 # Floors, not exact pins: a later session may add sources/flags, but may never
 # silently drop the ones already verified. Each addition below is also asserted
 # positively further down, so removing one is a failure rather than a renumber.
-if len(sources) < 26:
-    fail(f"expected at least 26 official sources, found {len(sources)}")
-if len(DATA["flags"]) < 22:
-    fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
+if len(sources) < 34:
+    fail(f"expected at least 34 official sources, found {len(sources)}")
+if len(DATA["flags"]) < 24:
+    fail(f"expected at least 24 flags, found {len(DATA['flags'])}")
 if len(DATA["review_rows"]) != 15:
     fail(f"expected 15 review checks, found {len(DATA['review_rows'])}")
+
+# Reject unformatted placeholder strings (like literal '{n}') or stale hardcoded counts.
+for page, doc in docs.items():
+    if re.search(r"\{[a-z_]+\}", doc):
+        fail(f"{page}: unformatted template placeholder found")
+    ok()
+if "13 checks" in docs["hub/review.html"] or "15 checks" not in docs["hub/review.html"]:
+    fail("hub/review.html: review-check count pill mismatch")
+if "Twenty flagged" in docs["hub/flags.html"]:
+    fail("hub/flags.html: stale 'Twenty flagged' meta description")
+ok()
 
 # ---- G1/G2: the second licence (Business Registration Certificate) must stay answered
 by_id = {s["id"]: s for s in sources}
@@ -479,14 +490,27 @@ for i, r in enumerate(occ, 1):
         fail(f"occupancy row {i}: not rendered on hub/limits.html")
     ok()
 
-for sid in ("S27", "S28", "S29", "H-23", "H-24"):
+for sid in ("S27", "S28", "S29", "S30", "S31", "S32", "S33", "S34", "H-23", "H-24"):
     if sid.startswith("S") and sid not in valid_ids:
         fail(f"missing source {sid}")
     ok()
-for sid in ("S27", "S28", "S29"):
+for sid in ("S27", "S28", "S29", "S30", "S31", "S32", "S33", "S34"):
     if not any(f"sources.html#{sid}" in doc for doc in docs.values()):
         fail(f"{sid}: registered but never cited")
     ok()
+for sid, host, needle in (
+    ("S30", "www.sf.gov", "effective date of the rent increase, not the date of service"),
+    ("S31", "www.sf.gov", "December 14, 2026"),
+    ("S32", "www.govinfo.gov", "To discriminate against any person"),
+    ("S33", "www.sf.gov", "Tenant Summary Petition"),
+    ("S34", "www.census.gov", "2024 Rental Housing Finance Survey"),
+):
+    if sid in by_id:
+        if host not in by_id[sid]["url"]:
+            fail(f"source {sid}: URL is not on {host}")
+        if needle not in by_id[sid]["quote"]:
+            fail(f"source {sid}: quote missing '{needle}'")
+        ok()
 for fid in ("H-23", "H-24"):
     if fid not in {f["id"] for f in DATA["flags"]}:
         fail(f"missing flag {fid}")

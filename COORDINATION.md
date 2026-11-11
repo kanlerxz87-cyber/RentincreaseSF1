@@ -1487,3 +1487,18 @@ findings never reached `main`; K7/Q4 triage never landed content).
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on
 `arena/c119d0f9-rentincreasesf1`, any session may take it over and note the handoff here.
+
+## `arena-c119d0f9` — completion record (2026-11-11 UTC)
+
+| ID | Result |
+| --- | --- |
+| C119-T1 | **done.** All 34 sources fetched and read live 2026-11-11; no rate/date/figure/legal change since 2026-11-10. File #261020 still Pending Committee Action. Evidence: `audit/session-c119d0f9/VERIFICATION-2026-11-11.md`. |
+| C119-T2 | **done.** S30–S34 integrated surgically (main's 15 review rows, detailed S28 quote, and H-22/H-23 text retained). Rebuilt root/hub/assurance; manifest 34/34; `verify_hub.py` 1,725 checks 0 errors; `verify_assurance.py` 1,982 checks 0 errors; all legacy suites pass. Root Markdown updated to 2026-11-11 / 34 sources (README review count corrected 14→15). |
+| C119-T3 | **done.** PR #29 closed as superseded record; PR #32 closed after integration (comment links to integrating PR). |
+| C119-T4 | **done.** PR opened from this branch to `main`, merged, Pages confirmed built. See PR link below. |
+
+**Irregularities:** IR-01 PR #32 findings never reached `main` (resolved by C119-T2);
+IR-02 S14 HUD enforcement language changed, cited passage unchanged (no action);
+IR-03 PR #32 S28 quote shorter than main's (main's retained);
+IR-04 main's 15 review rows newer than PR #32's 14 (main's retained).
+No personal identifiers written to any file, commit message, pull request, or comment.

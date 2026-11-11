@@ -1,10 +1,10 @@
 # Official source registry
 
-**Retrieved and read:** All 29 registered sources live-verified 2026-11-10 (originally retrieved 2026-11-07 for S01–S23 and 2026-11-08 for S24–S29)
+**Retrieved and read:** All 34 registered sources live-verified 2026-11-11 (originally retrieved 2026-11-07 for S01–S23, 2026-11-08 for S24–S29, and 2026-11-10 for S30–S34; S01–S34 all re-checked 2026-11-11)
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 29 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 34 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
@@ -37,6 +37,11 @@ All 29 sources are official government publications. Commercial listings and blo
 | S27 | San Francisco Rent Board (SF.gov) — [Rent Increases Under Section 6.14 and Costa-Hawkins](https://www.sf.gov/information--rent-increases-under-section-614-and-costa-hawkins) | Occupant change: the §6.14 notice, the sixty-day reasonableness benchmark, and the co-tenant versus subtenant distinction (H-24). |
 | S28 | San Francisco Rent Board (SF.gov) — [Rent Board Rules and Regulations, Part VI — §6.14 Establishing Rental Rates for Subsequent Occupants](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications) | Distinguishes §6.14(b) (co-occupants: 60-day initial notice presumption), §6.14(c) (non-co-occupants, post-April 25, 2000 departures: 90-day post-vacancy reservation/waiver window), §6.14(d) (pre-April 25, 2000 departures), and Costa-Hawkins (H-23). |
 | S29 | San Francisco Rent Board (SF.gov) — [Petition for a Determination Pursuant to Section 6.14 and/or Costa-Hawkins](https://www.sf.gov/information--petition-determination-pursuant-section-614-andor-costa-hawkins) | No pre-filing is required for either route; an optional determination petition exists; §6.14 requires "vacate" while Costa-Hawkins requires no longer "permanently reside". |
+| S30 | San Francisco Rent Board (SF.gov) — [Rent Board Rules and Regulations, Part XIII — §13.14 Licensing – Notice of Rent Increase](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) | Adopted regulation: the effective date (not service date) governs licensing; an unlicensed increase is null and void without forfeiting banking rights. |
+| S31 | San Francisco Rent Board (SF.gov) — [Notification of 2027 Rent Board Fee and Housing Inventory Requirements](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement/) | 2027 cycle deadlines: December 14, 2026 fee-exemption cutoff, March 1, 2027 Housing Inventory deadline, mutual non-substitution. |
+| S32 | U.S. Government Publishing Office (govinfo.gov) — [42 U.S.C. §3604 — Discrimination in the sale or rental of housing](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) | Direct federal Fair Housing Act statutory text on rental terms, conditions, and notices. |
+| S33 | San Francisco Rent Board (SF.gov) — [Notice of Owner Noncompliance with Housing Inventory](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory) | Portal APN/address licence lookup; Tenant Summary Petition (before effective date) / Unlawful Rent Increase Petition (after). |
+| S34 | U.S. Census Bureau / HUD (census.gov) — [2024 Rental Housing Finance Survey (CB26-TPS.12)](https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html) | National property/mortgage/ownership-entity dataset (Feb. 19, 2026); no SF 94122 rate behaviour (H-11 stays blank). |
 
 ## Source cautions
 
