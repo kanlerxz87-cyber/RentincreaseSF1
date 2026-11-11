@@ -1837,7 +1837,7 @@ No owner/tenant identity, contact detail or street address is added. The current
 | `FB3-T4` | Strictly anonymized Executive Summary forefronting the individual-owner Rent Board license & beginner step-by-step walkthrough, plus Unit 1 & Unit 2 (`94122` Outer Sunset, 1940 building) calculations, corporate vs. individual landlord practices, tenant notification & valid reasons, SF tenant-lawyer red-team audit, and 1-unit vs. 2-unit Fair Housing analysis | done | `arena/fb3db9a1-rentincreasesf1` | `handbook/EXECUTIVE_SUMMARY.md`, `handbook/data/site_data.json` |
 | `FB3-T5` | Clean, user-friendly GitHub Pages dashboard at `/handbook/` (`handbook/index.html` + categorized subpages + `handbook/flagged-for-review.html` + `handbook/sources.html`, with a direct official source link on every table row and blank cells for all unverified values) | done | `arena/fb3db9a1-rentincreasesf1` | `handbook/**` |
 | `FB3-T6` | Automated deterministic generator + line-by-line link, anchor, citation-per-row, exact rational/decimal arithmetic, blank-unverified-cell, and SHA-256 privacy verifier + full repository CI suite verification | done | `arena/fb3db9a1-rentincreasesf1` | `handbook/build.py`, `handbook/verify.py`, `audit/session-fb3db9a1/VERIFICATION.md` |
-| `FB3-T7` | Rebase onto `origin/main`, confirm zero broken links & green CI, open and merge PR from `arena/fb3db9a1-rentincreasesf1` to `main`, confirm GitHub Pages deployment, and record PR & deploy result here | in progress | `arena/fb3db9a1-rentincreasesf1` | `COORDINATION.md` (append-only) |
+| `FB3-T7` | Rebase onto `origin/main`, confirm zero broken links & green CI, open and merge PR from `arena/fb3db9a1-rentincreasesf1` to `main`, confirm GitHub Pages deployment, and record PR & deploy result here | done | `arena/fb3db9a1-rentincreasesf1` | `COORDINATION.md` (append-only) |
 
 **Privacy & Handoff Rule:** Zero personal identifiers (names, initials, street addresses, emails, phone numbers) appear anywhere in files, commits, or PR metadata; placeholder names only; dates and dollar amounts preserved verbatim. If this claim is >60 minutes old with no commits on `arena/fb3db9a1-rentincreasesf1`, another session may take over and note the handoff here.
 
@@ -1849,3 +1849,16 @@ No owner/tenant identity, contact detail or street address is added. The current
 * **To a repository administrator:** `RA-FB3-08`/`FL-24` — pre-redaction blobs remain in Git history below PR #10 — can only be resolved by an admin history rewrite; no session should attempt it unilaterally. No identifier is reproduced in any request.
 
 **Completion record (`arena-fb3db9a1`):** 42 live `2026-11-11` official sources; 10-page `/handbook/` dashboard (forefront licence answer + 10-step walkthrough, 6 conditional Unit 1/Unit 2 scenarios incl. `U2-C1 11.6%` and `U2-C2 10.0%`, 16-gate tenant-lawyer audit, 24 flags with blank confirmations, 8-item repository audit); pull request number, merge result and GitHub Pages deployment will be appended in a follow-up record so this board never claims a deployment before it happens.
+
+### `arena-fb3db9a1` — final integration record (FB3-T7)
+
+| Item | Value |
+| --- | --- |
+| Pull Request | [PR #58](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/58) — *handbook: publish 2026-11-11 verified SF rent-increase handbook at /handbook/ (arena-fb3db9a1)* |
+| Pre-merge PR CI | `Verify site` pass, `Verify published site` pass, `Final assurance` pass; merge state `CLEAN` |
+| Merge result | **MERGED** into `main` at `2026-11-11T04:46:12Z` as merge commit `d83cadefe149955136595b65096c0a9694ff5bef` |
+| Post-merge `main` CI (`d83cade`) | `Verify site` success, `Verify published site` success, `Final assurance` success |
+| GitHub Pages deploy | `pages build and deployment` **success** for `d83cade`; Pages API build `status=built` at `2026-11-11T04:46:13Z`, legacy publishing from `main /`. Live handbook: https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/ (landing, `licensing-guide.html`, `unit-calculations.html`, `notice-and-reasons.html`, `landlord-practices.html`, `fair-housing.html`, `lawyer-scrutiny.html`, `repo-audit.html`, `flagged-for-review.html`, `sources.html` all present on `main` per Contents API; sandbox egress cannot fetch `*.github.io` directly, deployment is evidenced by the Pages build record) |
+| Final local verification on merged tree | `python3 handbook/verify.py` — 2,112 checks / 0 errors, 212 source-linked rows, 42 official sources; all pre-existing suites green (see `audit/session-fb3db9a1/VERIFICATION.md`) |
+
+FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests above (canonical one-word count fix, optional registry additions, legacy-edition treatment, admin history decision) — none blocks this edition, and every unverified value remains blank and flagged at https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/flagged-for-review.html.
