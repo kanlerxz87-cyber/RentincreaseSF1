@@ -1590,3 +1590,9 @@ Deliberately **not** ported from PR #32 (reasons recorded in `audit/session-e5dc
 via S17/S03); S32 42 U.S.C. §3604 registry entry (URL already cited in `EXECUTIVE_SUMMARY.md` §7;
 HUD S14 covers the federal layer); S34 Census/HUD RHFS (national ownership-structure data; does not
 answer the SF 94122 behaviour question — flag H-11 blank stands).
+
+### Rebase log (`arena-e5dc4547`)
+
+| When (UTC) | Event | Resolution |
+| --- | --- | --- |
+| 2026-11-11 (during E5-3a push) | `git pull --rebase origin main` stopped on a content conflict in `COORDINATION.md`: `main` had advanced to `b4f0091` (PR #43, `arena-53d8f8c1` S1/S2 findings, disjoint scope `audit/session-53d8f8c1/**`) while this session's claim commit was being replayed. Both sections appended at end of file. | Resolved by keeping **both** sections verbatim (HEAD's `arena-53d8f8c1` claim first, then this session's `arena-e5dc4547` claim), removing conflict markers only. No work discarded from either side. Verifiers re-run on the rebased tree: 1,611 + 1,852 checks, 0 errors. |
