@@ -1,91 +1,197 @@
 {
-  "retrieved": "2026-11-10",
-  "scope": "Independent final assurance of the canonical root and hub edition; all 29 registered sources live-verified on 2026-11-10. No personal identifiers; no attorney review; no private-record inference.",
-  "corrections": [
-    {
-      "id": "A-01",
-      "item": "License timing corrected",
-      "finding": "The hard gate is a current license on the increase's effective date. Completing Housing Inventory reporting before serving notice is the safer workflow, not a universal claim that notice itself is the statutory cutoff. Late reporting is prospective; ordinary annual/banked notices are not filed for Board approval.",
-      "sources": ["S01", "S03"],
-      "flags": ["H-04"]
-    },
-    {
-      "id": "A-02",
-      "item": "Unit 2 current-base claim removed",
-      "finding": "The brief supplies $3,150.00 only as the June 1, 2019 lease-start rent. All Unit 2 outputs are now labeled illustrations on that input; the official current-base confirmation is blank.",
-      "sources": ["S05", "S04"],
-      "flags": ["H-18", "H-03"]
-    },
-    {
-      "id": "A-03",
-      "item": "Fixed-term contingency added",
-      "finding": "Unit 1's April 1, 2026 instrument was not supplied. If it created an unmodified fixed term through March 31, 2027, the February 1 scenario is unavailable. A later effective date requires the unpublished future rate.",
-      "sources": ["S20", "S06"],
-      "flags": ["H-17", "H-08"]
-    },
-    {
-      "id": "A-04",
-      "item": "Banking measuring points reconciled",
-      "finding": "The 24-month guidance measures the no-increase period; Rule 4.12 measures 12 months from when the skipped allowance became available. February 1, 2027 satisfies both for the Unit 1 scenario. The actual ledger still controls availability.",
-      "sources": ["S04", "S07"],
-      "flags": ["H-01", "H-02"]
-    },
-    {
-      "id": "A-05",
-      "item": "Notice-void overstatement removed",
-      "finding": "Section 37.3(b)(5), Rule 4.10(b), and Rule 4.12(b) must be stated together. In particular, Rule 4.12(b) expressly says omission of banked dates does not itself render an increase null and void. Full itemisation remains the conservative practice.",
-      "sources": ["S02", "S07"],
-      "flags": ["H-15"]
-    },
-    {
-      "id": "A-06",
-      "item": "Retaliation analysis narrowed",
-      "finding": "Civil Code §1942.5 is not an automatic 180-day moratorium on every increase. Protected activity, statutory conditions, lawful cause, and any asserted good-faith ground require review. Repair petitions are a separate risk.",
-      "sources": ["S12", "S23"],
-      "flags": ["H-09"]
-    },
-    {
-      "id": "A-07",
-      "item": "Tenant legal-help claim bounded",
-      "finding": "The Rent Board says no lawyer is needed to petition and publishes referral resources. It does not guarantee every tenant free representation for notice review; provider eligibility, scope, capacity, and cost must be checked.",
-      "sources": ["S19", "S23"],
-      "flags": ["H-20"]
-    },
-    {
-      "id": "A-08",
-      "item": "Fair-housing conclusion qualified",
-      "finding": "Raising one unit is not automatically discrimination, and identical treatment is not immunity. Protected-class selection, retaliation, bad-faith conduct, and independent defects in either increase remain relevant.",
-      "sources": ["S13", "S14", "S15"],
-      "flags": []
-    },
-    {
-      "id": "A-09",
-      "item": "Corporate-practice evidence labeled",
-      "finding": "The DOJ RealPage announcement is used only as an enforcement example with allegations and a proposed settlement. It is not evidence that all corporate landlords behave alike. San Francisco's covered algorithm ban applies to individuals and corporations.",
-      "sources": ["S22", "S16"],
-      "flags": ["H-11"]
-    },
-    {
-      "id": "A-10",
-      "item": "Official example-year irregularities published",
-      "finding": "The Rent Board's current rent-increase and banking pages contain inconsistent worked-example year labels. Form 571 supplies the rate periods used here; erroneous example labels were not copied.",
-      "sources": ["S05", "S04", "S06"],
-      "flags": ["H-19"]
-    },
-    {
-      "id": "A-11",
-      "item": "Rent Board Fee separated from license and base rent",
-      "finding": "The 2026–27 dwelling-unit fee is $59.00 unless exempt. After full payment, 50% may be recoverable only from tenants in occupancy on the applicable November 1; penalties are not recoverable. It is separate from the free license and scenario base-rent arithmetic.",
-      "sources": ["S17", "S03"],
-      "flags": []
-    },
-    {
-      "id": "A-12",
-      "item": "Reasonableness and owner-behavior values remain blank",
-      "finding": "No official ZIP-specific normal market increase or SF behavior-by-owner-type dataset was located. The 1.6% annual allowance is a routine planning scenario, not an official market average or guarantee of acceptance.",
-      "sources": ["S05", "S06", "S22"],
-      "flags": ["H-10", "H-11", "H-13"]
-    }
-  ],
-  "residual_flag_ids": ["H-17", "H-18", "H-03", "H-02", "H-04", "H-05", "H-06", "H-07", "H-09", "H-01", "H-15", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"]
+ "retrieved": "2026-11-11",
+ "scope": "Independent final assurance of the canonical root and hub edition; all 33 registered sources live-verified on the date recorded for each (2026-11-07 to 2026-11-11). No personal identifiers; no attorney review; no private-record inference.",
+ "corrections": [
+  {
+   "id": "A-01",
+   "item": "License timing corrected",
+   "finding": "The hard gate is a current license on the increase's effective date. Completing Housing Inventory reporting before serving notice is the safer workflow, not a universal claim that notice itself is the statutory cutoff. Late reporting is prospective; ordinary annual/banked notices are not filed for Board approval.",
+   "sources": [
+    "S01",
+    "S03"
+   ],
+   "flags": [
+    "H-04"
+   ]
+  },
+  {
+   "id": "A-02",
+   "item": "Unit 2 current-base claim removed",
+   "finding": "The brief supplies $3,150.00 only as the June 1, 2019 lease-start rent. All Unit 2 outputs are now labeled illustrations on that input; the official current-base confirmation is blank.",
+   "sources": [
+    "S05",
+    "S04"
+   ],
+   "flags": [
+    "H-18",
+    "H-03"
+   ]
+  },
+  {
+   "id": "A-03",
+   "item": "Fixed-term contingency added",
+   "finding": "Unit 1's April 1, 2026 instrument was not supplied. If it created an unmodified fixed term through March 31, 2027, the February 1 scenario is unavailable. A later effective date requires the unpublished future rate.",
+   "sources": [
+    "S20",
+    "S06"
+   ],
+   "flags": [
+    "H-17",
+    "H-08"
+   ]
+  },
+  {
+   "id": "A-04",
+   "item": "Banking measuring points reconciled",
+   "finding": "The 24-month guidance measures the no-increase period; Rule 4.12 measures 12 months from when the skipped allowance became available. February 1, 2027 satisfies both for the Unit 1 scenario. The actual ledger still controls availability.",
+   "sources": [
+    "S04",
+    "S07"
+   ],
+   "flags": [
+    "H-01",
+    "H-02"
+   ]
+  },
+  {
+   "id": "A-05",
+   "item": "Notice-void overstatement removed",
+   "finding": "Section 37.3(b)(5), Rule 4.10(b), and Rule 4.12(b) must be stated together. In particular, Rule 4.12(b) expressly says omission of banked dates does not itself render an increase null and void. Full itemisation remains the conservative practice.",
+   "sources": [
+    "S02",
+    "S07"
+   ],
+   "flags": [
+    "H-15"
+   ]
+  },
+  {
+   "id": "A-06",
+   "item": "Retaliation analysis narrowed",
+   "finding": "Civil Code §1942.5 is not an automatic 180-day moratorium on every increase. Protected activity, statutory conditions, lawful cause, and any asserted good-faith ground require review. Repair petitions are a separate risk.",
+   "sources": [
+    "S12",
+    "S23"
+   ],
+   "flags": [
+    "H-09"
+   ]
+  },
+  {
+   "id": "A-07",
+   "item": "Tenant legal-help claim bounded",
+   "finding": "The Rent Board says no lawyer is needed to petition and publishes referral resources. It does not guarantee every tenant free representation for notice review; provider eligibility, scope, capacity, and cost must be checked.",
+   "sources": [
+    "S19",
+    "S23"
+   ],
+   "flags": [
+    "H-20"
+   ]
+  },
+  {
+   "id": "A-08",
+   "item": "Fair-housing conclusion qualified",
+   "finding": "Raising one unit is not automatically discrimination, and identical treatment is not immunity. Protected-class selection, retaliation, bad-faith conduct, and independent defects in either increase remain relevant.",
+   "sources": [
+    "S13",
+    "S14",
+    "S15"
+   ],
+   "flags": []
+  },
+  {
+   "id": "A-09",
+   "item": "Corporate-practice evidence labeled",
+   "finding": "The DOJ RealPage announcement is used only as an enforcement example with allegations and a proposed settlement. It is not evidence that all corporate landlords behave alike. San Francisco's covered algorithm ban applies to individuals and corporations.",
+   "sources": [
+    "S22",
+    "S16"
+   ],
+   "flags": [
+    "H-11"
+   ]
+  },
+  {
+   "id": "A-10",
+   "item": "Official example-year irregularities published",
+   "finding": "The Rent Board's current rent-increase and banking pages contain inconsistent worked-example year labels. Form 571 supplies the rate periods used here; erroneous example labels were not copied.",
+   "sources": [
+    "S05",
+    "S04",
+    "S06"
+   ],
+   "flags": [
+    "H-19"
+   ]
+  },
+  {
+   "id": "A-11",
+   "item": "Rent Board Fee separated from license and base rent",
+   "finding": "The 2026–27 dwelling-unit fee is $59.00 unless exempt. After full payment, 50% may be recoverable only from tenants in occupancy on the applicable November 1; penalties are not recoverable. It is separate from the free license and scenario base-rent arithmetic.",
+   "sources": [
+    "S17",
+    "S03"
+   ],
+   "flags": []
+  },
+  {
+   "id": "A-12",
+   "item": "Reasonableness and owner-behavior values remain blank",
+   "finding": "No official ZIP-specific normal market increase or SF behavior-by-owner-type dataset was located. The 1.6% annual allowance is a routine planning scenario, not an official market average or guarantee of acceptance.",
+   "sources": [
+    "S05",
+    "S06",
+    "S22"
+   ],
+   "flags": [
+    "H-10",
+    "H-11",
+    "H-13"
+   ]
+  },
+  {
+   "id": "A-13",
+   "item": "Licence deadlines split, and the federal statute cited from primary text",
+   "finding": "S32 confirms that the 2027 fee-exemption window (14 December 2026) and the Housing Inventory report (1 March 2027) are separate obligations, and that no licence issues until reporting is complete. S33 adds the enacted text of 42 U.S.C. §3604, so the federal layer rests on the statute itself as well as HUD's overview. The registry rises from 31 to 33 sources; no rate, date or dollar figure changes.",
+   "sources": [
+    "S14",
+    "S32",
+    "S33"
+   ],
+   "flags": [
+    "H-14"
+   ]
+  },
+  {
+   "id": "A-14",
+   "item": "Stale verification numbers in the repository README corrected",
+   "finding": "README.md still reported 1,592 canonical checks, 1,812 assurance checks and 29 manifest entries after the registry had grown. The counts are now the measured values for this pass and the registry size is stated as 33.",
+   "sources": [
+    "S01",
+    "S30",
+    "S31"
+   ],
+   "flags": []
+  }
+ ],
+ "residual_flag_ids": [
+  "H-17",
+  "H-18",
+  "H-03",
+  "H-02",
+  "H-04",
+  "H-05",
+  "H-06",
+  "H-07",
+  "H-09",
+  "H-01",
+  "H-15",
+  "H-19",
+  "H-20",
+  "H-21",
+  "H-22",
+  "H-23",
+  "H-24"
+ ]
 }

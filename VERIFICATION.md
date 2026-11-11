@@ -66,8 +66,8 @@ Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
 | `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,592 checks; 0 errors**; 210 claim-table rows with source/flag links |
-| `python3 tools/verify_assurance.py` | **1,812 checks; 0 errors**; 37 assurance rows with official sources |
+| `python3 tools/verify_hub.py` | **1,627 checks; 0 errors**; 211 claim-table rows with source/flag links; 33/33 sources cited |
+| `python3 tools/verify_assurance.py` | **1,902 checks; 0 errors**; 39 assurance rows with official sources; 33/33 manifest rows |
 | Current-text privacy scan | **170 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
@@ -252,3 +252,18 @@ URL typo in `EXECUTIVE_SUMMARY.md`/`VERIFICATION.md`, and the stale `14-point` r
 cited, 211 claim rows); `tools/verify_assurance.py` **1,852 checks, 0 errors** (31/31 manifest, 214
 files privacy-scanned); all preserved legacy suites pass. The `review/build.py` footer-date rebuild
 artifact was reverted, as before. All 24 flags remain open; no scenario is certified notice-ready.
+
+## Addendum — 2026-11-11 second pass (`arena/992eb322`)
+
+* **S32** added: the Rent Board's 2027 fee/Housing Inventory notice, read live 2026-11-11. It confirms the
+  two obligations are separate — a fee-exemption request by **Monday 14 December 2026**, and the Housing
+  Inventory report by **1 March 2027** — and that no licence issues until reporting is complete.
+* **S33** added: the enacted text of **42 U.S.C. §3604** on GovInfo, read live 2026-11-11. §3604(b)
+  reaches the "terms, conditions, or privileges" of a rental, which covers a rent increase; the federal
+  layer therefore no longer rests only on HUD's overview page.
+* `tools/verify_assurance.py` approves `www.govinfo.gov` as an official publisher. No check was removed or
+  loosened; the allowlist extension is for a source actually read.
+* Stale counts in `README.md` (1,592 / 1,812 / 29 manifest entries) replaced with the measured values for
+  this pass.
+* Registry: **31 → 33 sources.** No rate, date or dollar figure changed. Recorded as assurance
+  corrections `A-13` and `A-14`.

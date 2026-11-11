@@ -2,7 +2,7 @@
  "meta": {
   "title": "SF Rent Increase Compliance Dashboard",
   "subtitle": "Two rent-controlled flats, Outer Sunset, San Francisco 94122 — built 1940",
-  "retrieved": "2026-11-10",
+  "retrieved": "2026-11-11",
   "note": "Official rules and rates are quoted from sources fetched and read on the retrieval date. Private lease, ledger, license, and coverage facts are not independently verified. Dollar amounts are conditional scenario arithmetic using the owner-brief amounts, not certified lawful maxima or permission to serve notice. Unsupported official-confirmation cells are blank and flagged. Tenant names and initials are replaced with placeholders; supplied dates and dollar amounts are unchanged. This is a research summary, not legal advice."
  },
  "sources": [
@@ -314,6 +314,26 @@
    "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
    "quote": "If the unit is rent-controlled and you issued a rent increase that went into effect when no license was on record, your tenant may be entitled to a rent refund. … Check the Rent Board Portal to learn if there was a license on the effective date of your rent increase. If there was no Rent Increase License then fill out a Tenant Petition for Unlawful Rent Increase to challenge the Rent Increase Notice. If the rent increase has not yet gone into effect fill out a Tenant Summary Petition.",
    "used_for": "How a tenant checks licence status in the Portal (address or APN) and the two petition routes — Unlawful Rent Increase Petition after the effective date, Tenant Summary Petition before it — plus rent-refund exposure.",
+   "retrieved": "2026-11-11"
+  },
+  {
+   "id": "S32",
+   "title": "Notification of Rent Board Fee and Housing Inventory Requirements (2027 cycle)",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — agency notice",
+   "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
+   "quote": "2027 EXEMPTION WINDOW … Deadline to apply is Monday, December 14, 2026. Requesting a Rent Board Fee exemption does not satisfy Rent Board Housing Inventory reporting requirements. … 2. HOUSING INVENTORY REPORTING … Deadline to report: March 1, 2027, and annually by March 1 of each year … Landlords will not receive a license to impose annual and/or banked rent increases until reporting is complete. … Some rent increases given without a license will be null and void.",
+   "used_for": "The two separate 2027 deadlines: the fee-exemption request window closing 14 December 2026 and the Housing Inventory report due 1 March 2027 that generates the licence.",
+   "retrieved": "2026-11-11"
+  },
+  {
+   "id": "S33",
+   "title": "42 U.S.C. §3604 — Discrimination in the sale or rental of housing (U.S. Code, 2023 Edition)",
+   "publisher": "U.S. Government Publishing Office (GovInfo)",
+   "level": "Federal — enacted statute",
+   "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
+   "quote": "§3604 … it shall be unlawful— (b) To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling, or in the provision of services or facilities in connection therewith, because of race, color, religion, sex, familial status, or national origin. … (f)(2) To discriminate against any person in the terms, conditions, or privileges of sale or rental of a dwelling … because of a handicap of— (A) that person …",
+   "used_for": "The enacted federal text behind the HUD overview: the terms and conditions of a rental — which include a rent increase — may not differ because of a federal protected characteristic.",
    "retrieved": "2026-11-11"
   }
  ],
@@ -739,7 +759,8 @@
    "status": "verified",
    "sources": [
     "S17",
-    "S03"
+    "S03",
+    "S32"
    ]
   },
   {
@@ -864,7 +885,8 @@
    "status": "verified",
    "sources": [
     "S03",
-    "S17"
+    "S17",
+    "S32"
    ]
   }
  ],
@@ -1440,7 +1462,8 @@
    "detail": "Row S25 in data/sources.csv and docs/sources.html pointed at uscode.house.gov/view.xhtml, which returned \"Page Not Found\" when fetched on 2026-11-07. Replaced with the HUD Fair Housing Act overview page, which was fetched and reads as quoted.",
    "effect": "One prior citation was not verifiable in its published form.",
    "sources": [
-    "S14"
+    "S14",
+    "S33"
    ],
    "action": "Repaired in this session; review the diff."
   },
