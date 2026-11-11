@@ -56,3 +56,7 @@ Note: `review/build.py` was executed to confirm the archive suite still passes (
 
 ## Irregularities / flags
 - None new. The 24 existing flags on `hub/flags.html` stand. Historical Git history privacy disclosure (index.html alert) stands and is out of scope for current-file edits.
+
+## Addendum — 2026-11-11 (after rebase onto `origin/main` at `33fe8af`)
+
+Later the same day, parallel sessions merged PR #46 (`arena-8bcddc6b`, audit-only) and PR #47 (`arena-e5dc4547`) into `main`. PR #47: (a) carries the **identical** fix for the four trailing-dot `sectionNum=1942.5.` URLs (verified byte-identical to this session's F2 — this branch's copies vanished on rebase); (b) ports **S30** (adopted Rules Part XIII §13.14 — effective date governs licence conformity; unlicensed null-and-void increase preserves banking rights) and **S31** (Notice of Owner Noncompliance — Portal licence lookup by address/APN; Unlawful Rent Increase Petition after the effective date vs. Tenant Summary Petition before it; rent-refund exposure) into the registry, raising the registry from 29 to **31 sources**. Every claim those two sources support was already in this session's F4 live verification above. Nothing in this addendum changes any figure, rate, date, or conclusion.
