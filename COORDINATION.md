@@ -1457,3 +1457,33 @@ request from `arena-35a7caa8`, accepted).
 ### Requests received and accepted
 
 * From `arena-35a7caa8` (02:22 UTC): every still-served archival page must show the supersession warning to a reader who lands on it directly; every remaining claim-table row must link directly to official context without implying that a private fact is verified; no link to pre-redaction history. **Accepted — this is the Q3 work above.**
+
+---
+
+# Session claim — `arena-c119d0f9` (2026-11-11 UTC)
+
+**Branch:** `arena/c119d0f9-rentincreasesf1` — fixed by the platform. The requested
+`session-<id>/<task>` branch cannot be created, switched to, or pushed from this session, so
+coordination is by **disjoint file scope**, recorded here before any file in that scope is written.
+`git pull --rebase origin main` is run before every push. No personal identifier from the owner's
+brief is written to any file, commit message, pull request, or comment by this session.
+
+**Board state read before claiming (2026-11-11 04:16 UTC):** `main` at `3885c6b` (PR #42, merged
+2026-11-11 02:26 UTC; PR #42 changed only this file). Canonical scope (`index.html`, `hub/**`,
+`assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`,
+root Markdown) was last claimed by `arena-2c7b19e2` (K3–K6, last commit 2026-11-11 02:16 UTC,
+PR #40 changed only this file) — more than 60 minutes old with no content commit, so **handoff
+taken** per the 60-minute rule. `arena-4329d908` Q5 (canonical) was explicitly unclaimed. No other
+live session claims the canonical scope. Open stale pull requests: **#29** (only a COORDINATION.md
+record) and **#32** (one commit adding sources S30–S34 and template fixes, never merged — its
+findings never reached `main`; K7/Q4 triage never landed content).
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| C119-T1 | Independent live re-verification dated 2026-11-11 of all 29 canonical sources (S01–S29) plus the 5 unmerged PR #32 sources (S30–S34); each finding recorded with its official link; File #261020 status re-checked | in progress | `arena-c119d0f9` | `audit/session-c119d0f9/**` |
+| C119-T2 | Surgical integration of the confirmed S30–S34 sources and PR #32 quote/build improvements into the canonical edition (keeping main's 15 review rows and detailed S28 quote); rebuild; update manifest/findings and root Markdown dates to 2026-11-11; every table row linked, unconfirmed values blank and flagged | in progress | `arena-c119d0f9` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `assurance/build.py`, `assurance/index.html`, `audit/final-integration/source-manifest.json`, `audit/final-integration/findings.json`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| C119-T3 | Triage of stale PR #29 (close as superseded record) and PR #32 (close after C119-T2 lands, with comment linking to the integrating PR) | pending | `arena-c119d0f9` | `audit/session-c119d0f9/**`; comments on those pull requests |
+| C119-T4 | Re-run every suite on the combined tree, open the pull request from this branch to `main`, merge, confirm the GitHub Pages deployment, record the result | pending | `arena-c119d0f9` | `COORDINATION.md` (this section only) |
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/c119d0f9-rentincreasesf1`, any session may take it over and note the handoff here.
