@@ -1273,3 +1273,65 @@ pull requests #29, #32, #34, none of which touches them).
 | **Merge Result** | **MERGED** into `main` at `2026-11-10T06:10:19Z` as commit `f9162ca3f8a4e31f33192c661e835ffa36335536` |
 | **Post-Merge `main` CI** | `Verify site` ✅ (run `42766718003`), `Verify published site` ✅ (run `42766717995`), `Final assurance` ✅ (run `42766718044`) |
 | **GitHub Pages Deploy** | `pages build and deployment` ✅ (run `42766717295`); Pages API `status=built`, `https_enforced=true`, source `main /`. Live-fetched and verified at <https://kanlerxz87-cyber.github.io/RentincreaseSF1/compliance/> and <https://kanlerxz87-cyber.github.io/RentincreaseSF1/compliance/flagged.html>. |
+
+---
+
+# Session claim — `arena-2c7b19e2` (2026-11-11 UTC) — final integration of the canonical site
+
+**Branch:** `arena/2c7b19e2-rentincreasesf1`. The platform binds this session to that one branch; a
+`session-<id>/<task>` branch or worktree cannot be created, switched to, or pushed. Coordination is
+therefore by **disjoint file scope**, recorded here before any of those files is written.
+`git pull --rebase origin main` is run before every push, never through a pipe.
+
+## What was read before claiming (2026-11-11 02:13–02:20 UTC)
+
+* `COORDINATION.md` on `main` at `fcdef50` (PR #39), all 1,275 lines.
+* Every remote branch head and its last commit time. **One session is live:** `arena-35a7caa8`
+  pushed a claim to its own branch at 02:12:42 UTC (`bc35aba`, not yet on `main`). Its exclusive scope
+  is `audit/session-35a7caa8/**` plus its own section of this file. Its task A35-2 states the shared
+  integration files are **unclaimed** and "to be specified and committed before editing".
+  **This session does not write to `audit/session-35a7caa8/**`.**
+* Open pull requests: #29 (`arena-68f1fe88`, `COORDINATION.md` only) and #32 (`arena-4700b525`,
+  canonical files). Both were last updated 2026-11-10 05:52 UTC — more than 20 hours ago, with no
+  later commit — and both are `CONFLICTING` against `main`. Under the 60-minute rule they may be taken
+  over; the handoff is logged below.
+* Baseline on arrival, run locally: `hub/build.py` and `assurance/build.py` reproduce the committed
+  pages byte for byte; `tools/verify_hub.py` 1,599 checks / 0 errors; `tools/verify_assurance.py`
+  1,822 checks / 0 errors.
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| K1 | Read the board, detect live sessions, claim a disjoint scope, publish the claim on `main` | in progress | `arena-2c7b19e2` | `COORDINATION.md` (this section only, append-only) |
+| K2 | Re-fetch and read every official source behind the canonical site on 2026-11-11; check each quoted passage, rate, date and dollar figure line by line; record the evidence and every irregularity | in progress | `arena-2c7b19e2` | `audit/session-2c7b19e2/**` |
+| K3 | Canonical dashboard: apply any correction K2 proves necessary; put the individual-owner Rent Board licence answer and a numbered, plain-language, step-by-step process at the forefront of the landing page and executive summary; keep every table row linked to an official source; leave unconfirmed values blank and flagged | in progress | `arena-2c7b19e2` | `hub/data.json`, `hub/build.py`, `hub/assets/**`, `hub/*.html`, `index.html` |
+| K4 | Navigation: one landing page, category subpages, one clearly labelled Flagged for Review page; superseded editions listed in one place and marked as such. **No edition is deleted.** | in progress | `arena-2c7b19e2` | same as K3 |
+| K5 | Keep the verification gates and the assurance layer in step with K3/K4 without weakening any existing check | in progress | `arena-2c7b19e2` | `tools/verify_hub.py`, `tools/verify_assurance.py`, `assurance/**`, `audit/final-integration/**`, `.github/workflows/**` (only if a gate must change) |
+| K6 | Reconcile the root Markdown entry points with the canonical data | in progress | `arena-2c7b19e2` | `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| K7 | Takeover of stale PR #32 and PR #29: verify their findings independently and carry forward what an official source confirms; record what was and was not carried | in progress | `arena-2c7b19e2` | files in K3, K5, K6 only |
+| K8 | Final integration: rebase, run every suite, confirm no broken links, pull request to `main`, merge, confirm the GitHub Pages deployment, record the result here | not started | `arena-2c7b19e2` | `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited by this session:** `audit/session-35a7caa8/**`, `docs/**`, `dashboard/**`,
+`portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`,
+`data/**`, `build/**`, `archive/**`, `audit/data/**`, `audit/*.md`, every other `audit/session-*/**`,
+`tools/check_links.py`, `tools/check_site.py`.
+
+## Request to `arena-35a7caa8` (and any session that starts after this claim)
+
+The canonical files in K3, K5 and K6 are held by this session from 2026-11-11 02:20 UTC. Please do not
+edit them. If your audit finds something that needs to change in them, write it in your own section of
+this file or under `audit/session-35a7caa8/**`; this session reads your branch before it opens its
+integration pull request and will apply what an official source supports, crediting your finding.
+Your own scope will be preserved untouched through every rebase.
+
+## Privacy
+
+No name, initial, street address, e-mail address or telephone number from the owner's brief is written
+to any file, commit message, branch or pull request by this session. Units and occupants are referred
+to by placeholders only. Dates and dollar amounts are unchanged.
+
+## Handoff rule
+
+If this claim is more than 60 minutes old with no new commit on `arena/2c7b19e2-rentincreasesf1`, any
+session may take it over and must note the handoff here.
