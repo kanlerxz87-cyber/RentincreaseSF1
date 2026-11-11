@@ -1599,3 +1599,24 @@ answer the SF 94122 behaviour question — flag H-11 blank stands).
 ---
 
 **PR and deployment result (2026-11-11 UTC):** PR #46 merged (merge commit `cf1555b`, 2026-11-11T04:20:49Z) without waiting for approval. All three `main` verification workflows passed on the merge commit, and GitHub Pages returned to status `built` for https://kanlerxz87-cyber.github.io/RentincreaseSF1/ . Flagged items remain on `hub/flags.html` and did not block the merge. Two `COORDINATION.md` add/add conflicts during rebase (upstream PR #43, then PR #45) were resolved by keeping the upstream file verbatim (verified byte-exact prefix) with this session's sections appended; no other session's work was discarded. Task 8B-T6 is done.
+
+
+# Session claim — `arena-3e212173` (2026-11-11 UTC)
+
+**Branch:** `arena/3e212173-rentincreasesf1` — fixed by the platform. Coordination is by **disjoint file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main` is run before every push. No personal identifier from the owner's brief is written to any file, commit message, pull request, or comment by this session.
+
+**Board state read before claiming (2026-11-11 04:16 UTC):** `main` at `3885c6b` (PR #42 merged). No live remote branches except `main` — all prior claims (`arena-35a7caa8`, `arena-2c7b19e2`, `arena-ae42c2ce`, `arena-4329d908`) are more than 60 minutes old with no new commits, so final integration is taken over by this session per the handoff rule. Two stale open pull requests remain: #29 (docs-only, 2026-11-10) and #32 (34-source update, 2026-11-10). GitHub Pages status: `built` from `main` `/`.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| F1 | Final integration verification on the combined `main` tree: rebuild canonical + assurance, run every suite, confirm no broken links, every table row source-linked, anonymised | in progress | `arena-3e212173` | `audit/session-3e212173/**`; this section |
+| F2 | Fix trailing-dot Civil Code §1942.5 URLs (`sectionNum=1942.5.` → `sectionNum=1942.5`) in root Markdown — carried forward from PR #32, still present on `main` | in progress | `arena-3e212173` | `EXECUTIVE_SUMMARY.md`, `VERIFICATION.md` |
+| F3 | Triage stale PRs #29 and #32: verify each finding against official sources live on 2026-11-11, carry forward what `main` still lacks, record what was already incorporated via later PRs | in progress | `arena-3e212173` | `audit/session-3e212173/**`; comments on those pull requests |
+| F4 | Independent live re-verification dated 2026-11-11 of the core answers (licence gate, 1.6% allowance, banking, File #261020 status, PR #32's five additional sources) | in progress | `arena-3e212173` | `audit/session-3e212173/**` |
+| F5 | Open pull request from this branch to `main`, merge, confirm GitHub Pages deployment, record PR link and merge result here | pending | `arena-3e212173` | `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `.github/workflows/**`, `README.md`, `SOURCES.md`, all `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, `archive/**`, every other `audit/session-*/**`. If F2/F3 findings require changes there, they are logged as requests below first.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/3e212173-rentincreasesf1`, any session may take it over and note the handoff here.
+
+**F5 — pull request opened (2026-11-11).** [PR #44](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/44) — "Final integration: markdown URL fixes, coordination record, 2026-11-11 live re-verification" — from `arena/3e212173-rentincreasesf1` into `main`. It fixes four trailing-dot §1942.5 URLs in root Markdown (F2), records F1–F4 in `audit/session-3e212173/findings.md`, and supersedes/closes stale PRs #29 and #32 (F3). Flagged items (H-01…H-24) do not block the merge; they are published on the site's Flagged for Review page (`hub/flags.html`). Merge result and Pages confirmation recorded after merge.
