@@ -1692,3 +1692,46 @@ dates and dollar amounts are unchanged.
 | When (UTC) | Event | Resolution |
 | --- | --- | --- |
 | 2026-11-11 04:26 | **Process slip, recorded as it happened.** The first push of this claim was run as `git pull --rebase origin main … | tail -2 && git push …`. The pipe masked the rebase's exit status, so the push ran while the rebase was stopped on an add/add conflict at the tail of `COORDINATION.md` (`main` had advanced from `99e4a61` to `43d3b73` in the minute the claim took to write). What was pushed was only this session's own claim commit on this session's own branch — no conflict marker, no other file, nothing on `main`. | Upstream `COORDINATION.md` taken **verbatim** and this section re-appended by script, with an assertion that the upstream file is a byte-exact prefix of the result. Nothing from any other session was discarded. Every later rebase and push is run without a pipe. |
+
+---
+
+# Session claim — `arena-9abeed44` (2026-11-11 UTC)
+
+**Branch:** `arena/9abeed44-rentincreasesf1` (platform-pinned; no other branch will be created or switched to). No tenant identifier or street address from the user's brief will be added to repository text or PR metadata. Coordination uses a disjoint scope; `COORDINATION.md` is append-only for this session.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A9-1 | Independently re-run current canonical and preserved repository verification suites; live-check official primary-source links material to the user's core Rent Board/licence/rate/notice questions; record dated findings and any regressions without editing other sessions' scopes | done | `arena-9abeed44` | `audit/session-9abeed44/**`; this appended section only |
+| A9-2 | Take over the stale narrow canonical privacy-disclosure correction; foreground the official public Housing Inventory disclosure in the landing page, licensing page and executive summary, rebuild, verify, and record the result | done | `arena-9abeed44` | `hub/build.py`, generated `hub/licensing.html` and `index.html`, `EXECUTIVE_SUMMARY.md`, `audit/session-9abeed44/**`, this appended section only |
+
+**Verification/finish rule:** do not label a fact verified without a current official source; unsupported private or official-confirmation values stay blank and flagged. All commands, source URLs, outcomes, and irregularities will be recorded under `audit/session-9abeed44/`. Before every push, rebase onto `origin/main` and push only `arena/9abeed44-rentincreasesf1`.
+
+## `arena-9abeed44` — stale canonical-scope handoff and exact correction scope (2026-11-11 UTC)
+
+At the time of handoff, the canonical claim `K3`–`K8` owned by `arena-2c7b19e2` had no branch commit after its initial claim at `2026-11-11T02:16:08Z` (remote head `9c44557e`); the claim is older than 60 minutes. The other earlier audit claims were also checked against their remote branch heads. This session takes over **only the focused, non-duplicative privacy disclosure below**, not the other sessions' audit, archive, PR-triage, or review work. The official Housing Inventory page fetched on 2026-11-11 expressly says submitted inventory information is public and, for a non-owner-occupied unit, requires owner or designated-manager name and business contact information. This material privacy fact is presently mentioned in a licensing Q&A answer, but not surfaced as a prominent warning before the reporting workflow or in the executive summary.
+
+**Exact files claimed before writing:**
+
+| File | Limited change |
+|---|---|
+| `hub/build.py` | Add an accessible, source-linked privacy warning before the inventory workflow and in the landing page, without changing the legal steps or inferred personal data |
+| `hub/licensing.html`, `index.html` | Regenerate only from `hub/build.py` / current data |
+| `EXECUTIVE_SUMMARY.md` | Add the verified public-inventory privacy caution at the reporting step |
+| `audit/session-9abeed44/**` | Dated source and verification record |
+| `COORDINATION.md` | This append-only handoff, completion record, and deployment/PR result |
+
+No owner/tenant identity, contact detail or street address is added. The current Git history privacy flag remains open; this narrow correction does not rewrite history or claim to remove past exposure. Before the next push, this branch will be rebased onto `origin/main` and only this branch will be pushed.
+
+### `arena-9abeed44` — evidence, verification, and open flags
+
+**Official links re-fetched/read 2026-11-11:** [SF Admin. Code §37.15](https://www.sf.gov/information/sec-3715-reporting-obligations-licensing), [Rent Board Housing Inventory](https://www.sf.gov/rent-board-housing-inventory), [Form 571 (1.6%, 2026–27)](https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf), [SF rent-increase guidance](https://www.sf.gov/learn-about-rent-increases-san-francisco), [banked-increase guidance](https://www.sf.gov/information--banked-rent-increases), [California Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=827), [California Civil Code §1947.12](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1947.12), [Rent Board Rules Part IV §§4.10/4.12](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-iv-rent-increases-not-requiring), and [Legistar File #261020](https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770). Legistar still showed **Pending Committee Action**, with no final action or enactment date; the proposal is not law. Full extracted findings and scope limits: [`audit/session-9abeed44/VERIFICATION.md`](audit/session-9abeed44/VERIFICATION.md).
+
+**Correction delivered:** the official Housing Inventory page says submitted information is public. The current landing page, license page, and executive summary now warn that the portal can disclose the unit address and owner/manager contact, occupancy/unit details, and base-rent information; each warning links to official disclosure/rule pages. The website itself continues to publish no tenant/owner names, initials, contact details or street address. The pre-existing public-Git-history privacy flag remains open; no history rewrite or removal is claimed.
+
+**Verification after rebuild:** `hub/build.py` regenerated the two affected HTML pages among its 9 canonical pages. `tools/verify_hub.py`: 1,599 checks / 0 errors; `tools/verify_assurance.py`: 1,822 / 0; `integration/verify.py`: pass; `tools/check_links.py`: 781 / 0; `tools/check_site.py`: pass; `dashboard/verify.py`: pass; `audit/verify_all.py`: pass; `review/verify.py`: pass; `guide/verify.py`: 1,060 / 0; `compliance/verify.py`: 3,277 / 0; Python compilation, `git diff --check`, and explicit warning/source-link assertions: pass. Conditional scenario arithmetic remains unchanged; private license, coverage, lease and ledger facts remain blank/flagged.
+
+**Remaining flagged irregularities:** historical public Git copies; unknown current licenses and actual property/lease/ledger facts; no official ZIP-specific market norm or owner-type behavior figure; File #261020's pending status; no attorney review. No unverified number was filled in.
+
+**Rebase log:** On 2026-11-11, while rebasing onto `origin/main` advanced by PR #43/#45 to `fea6e0e`, the first claim commit conflicted only in append-only `COORDINATION.md`. Resolution preserved the full upstream file verbatim and re-appended this session's claim; the remaining commits replayed cleanly. No other session's files or records were discarded, and no conflict markers remain.
+
+**Pull request / deployment:** this session will open and merge a PR from its fixed branch after checks pass. Exact PR, merge commit, post-merge workflow, and Pages deployment result will be appended in a follow-up record after those events; this avoids claiming a deployment before it exists.
