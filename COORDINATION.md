@@ -1402,3 +1402,14 @@ and note the handoff here.
 | A35-3 | Run appropriate builds and checks, integrate, open and merge a PR from this branch if safe, verify the GitHub Pages deployment, and record the result | in progress | `arena-35a7caa8` | `COORDINATION.md` (this section); any other scope to be claimed before editing |
 
 Prior work and other sessions' claims are retained. Items `needs review` are non-blocking and must appear on a clearly labeled Flagged for Review page. More than 60-minute-old claims with no commits may be handed off, with a note here.
+
+## A35 completed-scope handoff and integration claim (2026-11-11 UTC)
+
+The current open PRs #29 and #32 last received commits on 2026-11-10 at approximately 05:52 UTC, more than 60 minutes before this claim; both are conflicting with current `main`. Their prior work will be preserved, and #32's independently verified Rule 13.14 finding will be incorporated without merging its stale branch or discarding later sessions' work. The previous canonical-integration claims are completed or stale under the board's handoff rule. No newer overlapping open PR was found. This session takes over only the following integration scopes, as needed:
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| A35-2a | Correct the unlicensed-increase consequence against adopted Rule 13.14, clarify the separate suspension rule and other source-backed issues; publish unresolved items | in progress | `arena-35a7caa8` | `hub/data.json`, `hub/build.py`, generated `hub/*.html`, root `index.html`, `README.md`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `VERIFICATION.md` |
+| A35-2b | Ensure canonical and assurance claim-table rows have direct links to their official sources and strengthen the reproducible build/privacy/source checks | in progress | `arena-35a7caa8` | `hub/build.py`, `hub/data.json`, generated `hub/*.html`, `index.html`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py` |
+
+**Initial irregularities verified:** [Rent Board Rule 13.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent) says an annual/banked increase effective while unlicensed is entirely null and void; the old Q5 wording suggests late filing cures the increase, which requires correction. The existing table-row verifier accepted local source-registry links rather than checking direct official links, although the brief requests an official-site link on every row. Source visits and test limitations will be recorded in the session audit rather than overstated.
