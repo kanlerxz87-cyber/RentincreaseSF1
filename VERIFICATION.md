@@ -32,7 +32,7 @@ Notable checks (`2026-11-10`):
 - Occupant-change subsection distinctions (`§6.14(b)` co-occupants 60-day initial notice presumption vs. `§6.14(c)` non-co-occupants 90-day post-vacancy reservation/waiver rule vs. `§6.14(d)` pre-April 25, 2000 departures and Costa-Hawkins): [Rules Part VI](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-vi-rent-increase-justifications).
 - Fixed-term limitation: [California Tenants guide](https://www4.courts.ca.gov/documents/California-Tenants-Guide.pdf).
 - Personal/mail notice and extensions: [Civil Code §827](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=827&lawCode=CIV) + [CCP §1013](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1013&lawCode=CCP).
-- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5.&lawCode=CIV).
+- Retaliation conditions and lawful-cause provisions: [Civil Code §1942.5](https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?sectionNum=1942.5&lawCode=CIV).
 - Corporate-practice example, accurately labeled as allegations/proposed settlement: [DOJ RealPage announcement](https://www.justice.gov/opa/pr/justice-department-requires-realpage-end-sharing-competitively-sensitive-information-and).
 
 Official Rent Board worked-example year-label errors were not copied. Form 571 controls every rate period; the discrepancies are public as H-19.
@@ -221,3 +221,34 @@ coverage, current base rents, ledgers, lease status) remain blank.
 
 - Initial final-integration baseline: [PR #15](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/15) merged at `2026-11-07T21:32:24Z` (`3fbd5e195330babacbd5e1568e287171ee4f8e93`); followed by PRs #16–#27 on `main` (through `3a07761`).
 - Current `2026-11-10` full 29-source live re-verification and repair pass is tracked in [`COORDINATION.md`](COORDINATION.md) under `arena/7ab74b3e-rentincreasesf1`.
+---
+
+# Dated addendum — 2026-11-11 (`arena-e5dc4547`)
+
+**Result: no rate, date, dollar figure, or legal conclusion changed.** Thirteen load-bearing sources
+were re-read live from their official publishers on **2026-11-11** (S01 §37.15, S02 §37.3, S03
+Housing Inventory, S04 banked increases, S05 learn about rent increases, S06 Form 571, S07 Rules
+Part IV §§4.10/4.12, S08 Civil Code §827, S10 AB 1482, S17 Rent Board Fee, S24 Treasurer lessor
+guidance, S26 File #261020, S27 §6.14/Costa-Hawkins). Every published claim checked matched the
+official text, including: the individual-owner reporting duty with no exemption; the effective-date
+licence gate; the 1.6% allowance and the full Form 571 table; banking (24-month guidance / 12-month
+Rule 4.12(a), no compounding, no rounding up); 30/90-day notice with +5 mail days; the 8.8% AB 1482
+figure and its inapplicability to locally controlled units; the $59.00 Rent Board Fee with the
+December 14, 2026 exemption deadline; the conditional sub-four-unit Business Registration carve-out;
+File #261020 still `Pending Committee Action — not law` (no final action, no enactment date); and
+the §6.14/Costa-Hawkins occupant-change tests. All scenario arithmetic and service dates were
+recomputed independently and reproduce to the cent.
+
+**Two findings missing from `main` were ported from stale PR #32** (CONFLICTING; closed as
+superseded — see `COORDINATION.md` E5-2/E5-3a), each live-verified 2026-11-11 and added to the
+registry as **S30** (adopted Rule §13.14: effective date governs; unlicensed null-and-void increase
+does not forfeit banking rights) and **S31** (Notice of Owner Noncompliance: Portal APN/address
+licence lookup; Unlawful Rent Increase Petition after the effective date vs. Tenant Summary Petition
+before it; rent-refund exposure). Registry: 29 → 31 sources. Also fixed: the `sectionNum=1942.5.`
+URL typo in `EXECUTIVE_SUMMARY.md`/`VERIFICATION.md`, and the stale `14-point` review count (15 rows).
+
+**Gates re-run on the combined tree (2026-11-11):** `hub/build.py` (9 pages) and `assurance/build.py`
+(31 manifest rows) regenerate cleanly; `tools/verify_hub.py` **1,611 checks, 0 errors** (31/31 sources
+cited, 211 claim rows); `tools/verify_assurance.py` **1,852 checks, 0 errors** (31/31 manifest, 214
+files privacy-scanned); all preserved legacy suites pass. The `review/build.py` footer-date rebuild
+artifact was reverted, as before. All 24 flags remain open; no scenario is certified notice-ready.

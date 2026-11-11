@@ -295,6 +295,26 @@
    "quote": "A landlord is not required to file a petition with the Rent Board for approval of a rent increase pursuant to Section 6.14 or Costa-Hawkins Section 1954.53(d). However, if a landlord is unsure whether a rent increase is justified, the landlord may file a petition at the Rent Board to seek a determination that either or both sections authorize a rent increase. … Finally, Section 6.14 requires the last original occupant to \"vacate\" the unit, while Costa-Hawkins only requires the last original occupant to no longer \"permanently reside\" in the unit.",
    "used_for": "That no pre-filing is required, that an optional determination petition exists, and the vacate versus permanently-reside distinction.",
    "retrieved": "2026-11-10"
+  },
+  {
+   "id": "S30",
+   "title": "Rent Board Rules and Regulations, Part XIII — §13.14 Licensing – Notice of Rent Increase",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — adopted regulations",
+   "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
+   "quote": "Any rent increase under Ordinance Sections 37.3(a)(1)-(2) purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used to determine whether or not the increase conforms with the provisions of this section. Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void. … with respect to condominium units and buildings with less than ten residential units, this section shall only apply to rent increases that are effective on or after March 1, 2023.",
+   "used_for": "The adopted regulation that the effective date (not the service date) governs licensing, and that an unlicensed null-and-void increase does not forfeit banking rights.",
+   "retrieved": "2026-11-11"
+  },
+  {
+   "id": "S31",
+   "title": "Notice of Owner Noncompliance with Housing Inventory",
+   "publisher": "San Francisco Rent Board (SF.gov)",
+   "level": "Local — agency guidance",
+   "url": "https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory",
+   "quote": "If the unit is rent-controlled and you issued a rent increase that went into effect when no license was on record, your tenant may be entitled to a rent refund. … Check the Rent Board Portal to learn if there was a license on the effective date of your rent increase. If there was no Rent Increase License then fill out a Tenant Petition for Unlawful Rent Increase to challenge the Rent Increase Notice. If the rent increase has not yet gone into effect fill out a Tenant Summary Petition.",
+   "used_for": "How a tenant checks licence status in the Portal (address or APN) and the two petition routes — Unlawful Rent Increase Petition after the effective date, Tenant Summary Petition before it — plus rent-refund exposure.",
+   "retrieved": "2026-11-11"
   }
  ],
  "rates": [
@@ -694,20 +714,22 @@
   {
    "step": 4,
    "question": "When must the licence exist?",
-   "answer": "A current licence must be on file before any annual or banked increase \"can go into effect\". It does not have to be attached to the notice, but it must be live on the effective date. The reporting deadline is 1 March every year; for a building with fewer than 10 units, reporting began on 1 March 2023.",
+   "answer": "A current licence must be on file before any annual or banked increase \"can go into effect\". It does not have to be attached to the notice, but it must be live on the effective date. Adopted Rule §13.14 states the gate expressly: the effective date, not the date of service, determines whether the increase conforms. The reporting deadline is 1 March every year; for a building with fewer than 10 units, reporting began on 1 March 2023.",
    "status": "verified",
    "sources": [
     "S03",
-    "S01"
+    "S01",
+    "S30"
    ]
   },
   {
    "step": 5,
    "question": "What happens if the unit was never reported?",
-   "answer": "The licence is \"temporarily suspended\" while the owner is not in compliance; it is restored prospectively once the information is filed, but the tenant is not obligated to pay the increased rent for the months during the suspension. That is the precise mechanism that makes an otherwise lawful increase challengeable — and it is cured by filing, not by anything in the notice.",
+   "answer": "The licence is \"temporarily suspended\" while the owner is not in compliance; it is restored prospectively once the information is filed, but the tenant is not obligated to pay the increased rent for the months during the suspension. Rule §13.14 adds that an unlicensed increase is null and void yet \"Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void.\" That is the precise mechanism that makes an otherwise lawful increase challengeable — and it is cured by filing, not by anything in the notice.",
    "status": "verified",
    "sources": [
-    "S01"
+    "S01",
+    "S30"
    ]
   },
   {
@@ -723,10 +745,11 @@
   {
    "step": 7,
    "question": "Can a tenant check whether the owner holds a licence?",
-   "answer": "Yes. The Rent Board states that a tenant can search the Rent Board Portal to see whether the landlord is up to date. The Housing Inventory information reported by owners is public.",
+   "answer": "Yes. The Rent Board states that a tenant can search the Rent Board Portal to see whether the landlord is up to date, by address or Assessor's Parcel Number, and can check whether a licence was on file on the effective date. The Housing Inventory information reported by owners is public. If there was no licence, the tenant may file a Tenant Petition for Unlawful Rent Increase after the effective date, or a Tenant Summary Petition before it, and may be entitled to a rent refund for an unlicensed increase that took effect.",
    "status": "verified",
    "sources": [
-    "S03"
+    "S03",
+    "S31"
    ]
   },
   {
