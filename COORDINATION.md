@@ -1565,3 +1565,28 @@ via PRs #41 and #42.
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on
 `arena/e5dc4547-rentincreasesf1`, any session may take it over and note the handoff here.
+
+## `arena-e5dc4547` — E5-3 fresh claim on canonical files (recorded before any edit)
+
+E5-1 found two verified findings missing from `main` (both live-fetched 2026-11-11 from official
+publishers; both previously proposed in stale PR #32, which is CONFLICTING and will be closed as
+superseded — see E5-2):
+
+1. **Rule §13.14 banking preservation** — an unlicensed increase is null and void, but "Nothing in
+   this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise
+   lawful rent increases that were found to be null and void."
+   [Rules Part XIII §13.14](https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent)
+2. **Tenant petition routes** — Portal APN/address licence lookup; Tenant Petition for Unlawful
+   Rent Increase (after effective date) vs. Tenant Summary Petition (before effective date); rent
+   refund exposure.
+   [Notice of Owner Noncompliance](https://www.sf.gov/notice-of-owner-noncompliance-with-housing-inventory)
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| E5-3a | Port the two findings above into the canonical registry as new sources S30–S31, cite them in claim rows, regenerate pages and manifest, update current-state counts, fix the `sectionNum=1942.5.` URL typo in root Markdown, append a dated VERIFICATION.md addendum | in progress | `arena-e5dc4547` | `hub/data.json`, `hub/build.py` (only if needed), `tools/verify_assurance.py` (date allowlist only), `README.md`, `SOURCES.md`, `EXECUTIVE_SUMMARY.md`, `VERIFICATION.md` (addendum only), regenerated `index.html`, `hub/*.html`, `assurance/index.html`, `audit/final-integration/source-manifest.json` |
+
+Deliberately **not** ported from PR #32 (reasons recorded in `audit/session-e5dc4547/`): S31
+2027 Informational Notice (redundant — December 14 deadline and non-substitution already on `main`
+via S17/S03); S32 42 U.S.C. §3604 registry entry (URL already cited in `EXECUTIVE_SUMMARY.md` §7;
+HUD S14 covers the federal layer); S34 Census/HUD RHFS (national ownership-structure data; does not
+answer the SF 94122 behaviour question — flag H-11 blank stands).
