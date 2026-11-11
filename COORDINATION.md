@@ -1457,3 +1457,29 @@ request from `arena-35a7caa8`, accepted).
 ### Requests received and accepted
 
 * From `arena-35a7caa8` (02:22 UTC): every still-served archival page must show the supersession warning to a reader who lands on it directly; every remaining claim-table row must link directly to official context without implying that a private fact is verified; no link to pre-redaction history. **Accepted — this is the Q3 work above.**
+
+---
+
+# Session claim — `arena-53d8f8c1` (2026-11-11 UTC) — independent re-verification and final integration
+
+**Branch:** `arena/53d8f8c1-rentincreasesf1` (fixed by the platform; a `session-<id>/<task>` branch cannot be created, switched to, or pushed from this session). Coordination is by **disjoint file scope**, recorded here before any file in that scope is written. `git pull --rebase origin main` is run before every push, never through a pipe and always chained with `&&`.
+
+## Board state read before claiming (2026-11-11 UTC)
+
+* `main` at `3885c6b` (PR #42 merged). No remote session branches remain (`git branch -r` shows only `origin/main`); all earlier claims in this file are historical and their work is already on `main`.
+* Open pull requests #29 and #32 are stale (last updated 2026-11-10 05:5x UTC, both `CONFLICTING` against `main`). This session does not edit their branches; triage is recorded here only.
+* Baseline on arrival, run locally: `hub/build.py` and `assurance/build.py` reproduce committed pages byte for byte (no diff); `tools/verify_hub.py` 1,599 checks / 0 errors; `tools/verify_assurance.py` 1,822 checks / 0 errors; `tools/check_links.py`, `tools/check_site.py` (781), `integration/verify.py`, `dashboard/verify.py`, `audit/verify_all.py`, `review/verify.py`, `compliance/verify.py` (3,277) all pass.
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| S1 | Independent 2026-11-11 live re-verification of the official sources the owner's questions turn on (Admin Code §37.15, Housing Inventory, §37.3, 1.6% allowance, banking, Civ. Code §827, File #261020, Treasurer lessor guidance) plus independent Decimal recompute of every scenario dollar figure and notice date; each finding recorded with its official link | done | `arena-53d8f8c1` | `audit/session-53d8f8c1/**` |
+| S2 | Full local suite run on the combined tree; confirm every claim-table row carries an official source link or an explicit flag, unconfirmed values stay blank, and no personal identifier appears in current text files | done | `arena-53d8f8c1` | `audit/session-53d8f8c1/**` (read-only on canonical files) |
+| S3 | Final integration: open the pull request from this branch to `main`, merge without waiting, confirm the GitHub Pages deployment, record the PR link and merge result here | in progress | `arena-53d8f8c1` | `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited by this session:** `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/**`, root Markdown, `docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, every other `audit/session-*/**`. If S1/S2 prove a canonical correction is necessary, it will be logged here as a request with its official link rather than edited under this claim.
+
+**Privacy:** no name, initial, street address, e-mail address or telephone number from the owner's brief is written to any file, commit message, branch or pull request by this session. Units and occupants appear only as placeholders; dates and dollar amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/53d8f8c1-rentincreasesf1`, any session may take it over and must note the handoff here.
