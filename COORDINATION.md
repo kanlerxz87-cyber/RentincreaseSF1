@@ -1692,3 +1692,16 @@ dates and dollar amounts are unchanged.
 | When (UTC) | Event | Resolution |
 | --- | --- | --- |
 | 2026-11-11 04:26 | **Process slip, recorded as it happened.** The first push of this claim was run as `git pull --rebase origin main … | tail -2 && git push …`. The pipe masked the rebase's exit status, so the push ran while the rebase was stopped on an add/add conflict at the tail of `COORDINATION.md` (`main` had advanced from `99e4a61` to `43d3b73` in the minute the claim took to write). What was pushed was only this session's own claim commit on this session's own branch — no conflict marker, no other file, nothing on `main`. | Upstream `COORDINATION.md` taken **verbatim** and this section re-appended by script, with an assertion that the upstream file is a byte-exact prefix of the result. Nothing from any other session was discarded. Every later rebase and push is run without a pipe. |
+
+---
+
+# Session claim — `arena-9abeed44` (2026-11-11 UTC)
+
+**Branch:** `arena/9abeed44-rentincreasesf1` (platform-pinned; no other branch will be created or switched to). No tenant identifier or street address from the user's brief will be added to repository text or PR metadata. Coordination uses a disjoint scope; `COORDINATION.md` is append-only for this session.
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| A9-1 | Independently re-run current canonical and preserved repository verification suites; live-check official primary-source links material to the user's core Rent Board/licence/rate/notice questions; record dated findings and any regressions without editing other sessions' scopes | in progress | `arena-9abeed44` | `audit/session-9abeed44/**`; this appended section only |
+| A9-2 | If A9-1 finds a necessary correction, request it from the canonical holder before editing; if no correction is required, provide a concise completion record and do not create a redundant edition | pending | `arena-9abeed44` | `audit/session-9abeed44/**`; this appended section only |
+
+**Verification/finish rule:** do not label a fact verified without a current official source; unsupported private or official-confirmation values stay blank and flagged. All commands, source URLs, outcomes, and irregularities will be recorded under `audit/session-9abeed44/`. Before every push, rebase onto `origin/main` and push only `arena/9abeed44-rentincreasesf1`.
