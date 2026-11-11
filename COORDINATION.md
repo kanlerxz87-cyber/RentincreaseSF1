@@ -1388,3 +1388,72 @@ request or comment. Units and tenants appear only as placeholders; dates and dol
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit, any session may take it over
 and note the handoff here.
+
+---
+
+# Session claim — `arena-4329d908` (2026-11-11 UTC)
+
+**Branch:** `arena/4329d908-rentincreasesf1` — fixed by the platform. The requested
+`session-<id>/<task>` branch cannot be created, switched to, or pushed from this session, so
+coordination is by **disjoint file scope**, recorded here before any file in that scope is written.
+`git pull --rebase origin main` is run before every push. No personal identifier from the owner's
+brief is written to any file, commit message, pull request, or comment by this session.
+
+**Board state read before claiming (2026-11-11 02:15 UTC):** `main` at `fcdef50` (PR #39). One live
+concurrent claim: **`arena-35a7caa8`** (pushed 02:12 UTC) holds `audit/session-35a7caa8/**` and its own
+section of this file, and has announced — but **not yet specified** — a later claim on shared
+integration files. This session does not touch `audit/session-35a7caa8/**`, and will re-read that
+session's branch before claiming any canonical file. Two pull requests are open and stale
+(#29 and #32, both last updated 2026-11-10 05:5x UTC). One claim is stale and undelivered:
+`arena-ba4924e8` tasks **L2** and **L6** (last commit 2026-11-10 05:59 UTC; only the claim itself was
+merged, as PR #35).
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| Q1 | Independent live official-source verification dated 2026-11-11 of every fact the owner's questions turn on (Rent Board licence / Housing Inventory, current allowance, banking, notice, state and federal layers, pending File #261020); each finding recorded with its official link | in progress | `arena-4329d908` | `audit/session-4329d908/**` |
+| Q2 | **Handoff taken** from `arena-ba4924e8` L6 (claim > 60 minutes old with no commits): withdraw from publication the legacy content that rests on commercial websites instead of official sources. Each file is replaced by a short withdrawal notice linking to the canonical dashboard. **Nothing is removed from Git history; no edition is deleted.** | in progress | `arena-4329d908` | `site/**`, `research/**`, `docs/v1/executive_summary.md` |
+| Q3 | **Handoff taken** from `arena-ba4924e8` L2: line-by-line review of the superseded editions that GitHub Pages still serves; record every statement that conflicts with an official source; make sure a reader who lands on a superseded page can tell it is superseded | in progress | `arena-4329d908` | `audit/session-4329d908/**` for the findings. Any edit to a legacy edition's files (`docs/**`, `dashboard/**`, `portal/**`, `review/**`, `integration/**`, `guide/**`, `compliance/**` and their generators) will be listed here **before** it is written |
+| Q4 | Triage of stale open pull requests #29 and #32: identify verified findings that never reached `main`; decide merge / close, with the reason recorded | in progress | `arena-4329d908` | `audit/session-4329d908/**`; comments on those pull requests |
+| Q5 | Canonical edition (`index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, root Markdown): **not claimed.** Anything found there is logged below as a request first, and is edited by this session only after a claim is recorded here and no live conflicting claim exists | unclaimed | — | — |
+| Q6 | Re-run every suite on the combined tree, open the pull request from this branch to `main`, merge, confirm the GitHub Pages deployment, record the result | pending | `arena-4329d908` | `COORDINATION.md` (this section only) |
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on
+`arena/4329d908-rentincreasesf1`, any session may take it over and note the handoff here.
+
+## `arena-4329d908` — claim collision on arrival, and the scope that results (2026-11-11 02:30 UTC)
+
+Four sessions started within four minutes. After the first push every remote branch was re-read. The
+other three sessions have all recorded the same resolution, repeated here so the board agrees with itself:
+
+| Scope | Holder | This session |
+| --- | --- | --- |
+| Canonical edition — `index.html`, `hub/**`, `assurance/**`, `audit/final-integration/**`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `.github/workflows/**`, root Markdown | `arena-2c7b19e2` (K3–K6) | **Not edited.** Findings go to that session as requests, below. Row Q5 stays unclaimed by this session. |
+| Stale pull requests #29 and #32 | `arena-2c7b19e2` (K7) holds the files those pull requests change | **Q4 is withdrawn** in favour of K7 so the same findings are not carried twice. |
+| Commercially sourced legacy content (Q2) and the superseded editions (Q3) | **this session** — `arena-35a7caa8` withdrew A35-2c and `arena-ae42c2ce` withdrew its first claim, both in favour of Q2/Q3 | **Held.** Exact files listed below before any of them is written. |
+| `audit/session-35a7caa8/**`, `audit/session-2c7b19e2/**`, `audit/session-ae42c2ce/**` | their sessions | Not edited. |
+
+### Q2 / Q3 — exact file scope, recorded before the first write
+
+**The problem being fixed.** GitHub Pages publishes the repository root, so ten earlier editions (96
+HTML pages) are still served next to the canonical dashboard. A row-level census
+(`audit/session-4329d908/census.py`) run on `main` at `774d0e4` found: **none of those 96 pages tells a
+reader it is superseded**; `site/` cites only commercial websites; `docs/v2/` still links three
+non-official hosts; and 264 table rows on archived pages carry no direct link to an official
+publisher (`docs/` 194, `docs/v2/` 28, `review/` 16, `site/` 17, `dashboard/` 9).
+
+| Files | What is done to them |
+| --- | --- |
+| `tools/legacy_notice.py` (**new**) | One shared, deterministic utility: writes the "superseded edition" notice and a `noindex` tag into every archived page, and gives each table row a direct link to the official publisher. Has a `--check` mode |
+| `build/build.py`, `dashboard/build.py`, `integration/build.py`, `review/build.py`, `guide/build.py`, `compliance/build.py`, `audit/build_dashboard.py` | One added call each, so that a rebuild reproduces the notice byte for byte. No other generator logic is changed |
+| `docs/*.html`, `docs/v1/*.html`, `docs/v2/*.html`, `dashboard/**/*.html`, `portal/*.html`, `review/**/*.html`, `integration/*.html`, `guide/*.html`, `compliance/*.html` | Notice added; rows given direct official links; statements that contradict an official source or the owner's brief corrected, each one recorded in `audit/session-4329d908/` |
+| `data/v2/*.json`, `data/sources.csv` | Non-official citations replaced by the official publisher of the same text |
+| `site/**`, `research/**`, `docs/v1/executive_summary.md` | **Withdrawn from publication** (Q2): each file is replaced by a short notice pointing to the canonical dashboard. Nothing is removed from Git history |
+| `tools/check_links.py`, `tools/check_site.py`, `dashboard/verify.py`, `integration/verify.py`, `review/verify.py`, `guide/verify.py`, `compliance/verify.py`, `audit/verify_all.py` | Touched **only** where a gate has to recognise the notice or enforce it. No existing check is removed or weakened; the notice check is added to a gate that CI already runs, so no workflow file needs to change |
+
+**Not done, deliberately:** no edition is deleted; no archived page is promoted as re-certified; no
+withdrawal notice links to a historical revision (earlier history may contain personal information —
+request from `arena-35a7caa8`, accepted).
+
+### Requests received and accepted
+
+* From `arena-35a7caa8` (02:22 UTC): every still-served archival page must show the supersession warning to a reader who lands on it directly; every remaining claim-table row must link directly to official context without implying that a private fact is verified; no link to pre-redaction history. **Accepted — this is the Q3 work above.**
