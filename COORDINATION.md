@@ -2079,3 +2079,31 @@ Two `COORDINATION.md` append conflicts with concurrent sessions (`arena-cab8cfbc
 ### Privacy
 
 Zero tenant names, initials, street addresses, e-mail addresses or personal phone numbers in any file, commit, PR title, PR body or branch name. Placeholders only (`Unit A`, `Unit B`, `Occupant 1..n`). Dates and dollar amounts preserved verbatim from the brief. The only telephone number on the site is the Rent Board's own published public counselling line, allow-listed explicitly in `decision/verify.py`.
+
+# Session Addendum — `arena/28b41043-rentincreasesf1` (2026-11-13)
+
+**Session ID / Branch:** `arena/28b41043-rentincreasesf1` — platform-pinned; no other branch may be created, switched to, or pushed from this session. `git pull --rebase origin main` is run before every push, chained with `&&` so a failed rebase stops the push.
+
+## Claimed scope (final integration session for the owner's current brief)
+
+| Scope | Purpose |
+|---|---|
+| `hub/data.json`, `hub/build.py`, `index.html`, `hub/*.html` | Add the state-versus-local 2023-law answer, a dedicated Suggestions page, expanded missing-information Q&A; keep all generator gates consistent |
+| `EXECUTIVE_SUMMARY.md`, `README.md` | Root entry-point reconciliation (state-vs-local box, suggestions pointer, source count 34→36) |
+| `COORDINATION.md` | This claim and the closing record only |
+
+**Not edited by this session:** `docs/**`, `docs/v1/**`, `docs/v2/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `handbook/**`, `assurance/**`, `audit/**`, `site/**`, `research/**`, `data/**`, `build/**`, `tools/verify_assurance.py`, `tools/check_links.py`, `tools/check_site.py`, `.github/workflows/**`.
+
+## Task board
+
+| ID | Task | Status | Owner | Scope |
+|---|---|---|---|---|
+| T1 | Claim scope and push claim immediately | done | `arena/28b41043` | `COORDINATION.md` |
+| T2 | Live-verify the state-versus-local 2023-law question (§37.15, Rent Ordinance page, SB 567 chaptered text) | done | `arena/28b41043` | `sf.gov`, California Legislative Information (fetched live) |
+| T3 | Add state-vs-local finding to landing page and licensing page | done | `arena/28b41043` | `index.html`, `hub/build.py` |
+| T4 | Build dedicated Suggestions page: decision paths, unsupported decisions, missing-information discovery, site-improvement suggestions | done | `arena/28b41043` | `hub/data.json`, `hub/build.py`, `hub/suggestions.html` |
+| T5 | Reconcile root Markdown entry points | done | `arena/28b41043` | `EXECUTIVE_SUMMARY.md`, `README.md` |
+| T6 | Rebuild site; run verify_hub, check_links, check_site, assurance; privacy sweep | done | `arena/28b41043` | canonical files |
+| T7 | Commit, push, open PR to main, merge, confirm GitHub Pages deploy, record result | in progress | `arena/28b41043` | branch + `COORDINATION.md` |
+
+**Privacy:** no tenant names, initials, street address, e-mail address, or telephone number added anywhere. Placeholders only (Tenants 1A/1B, 2A/2B); supplied dates and dollar amounts unchanged.
