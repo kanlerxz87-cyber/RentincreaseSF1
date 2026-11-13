@@ -10,6 +10,7 @@ Exits non-zero on any failure.
 
 from __future__ import annotations
 
+import hashlib
 import json
 import re
 import sys
@@ -266,9 +267,18 @@ FORBIDDEN = [
                 r"Moricaga|Pacheco|Ortega|Wawona|Vicente|Ulloa|Santiago|Avenue|Street)\b", re.I),
      "street address"),
 ]
-# Tenant initials from the owner's brief (case-sensitive, word-bounded).
-for tok in ("L O", "V N", "JP", "M T", "E R", "I S"):
-    FORBIDDEN.append((re.compile(r"\b" + re.escape(tok) + r"\b"), "tenant initials"))
+# Tenant initials are never written into this file. They are detected by SHA-256
+# digest, using the same six digests the repository's own check_links.py uses, so
+# the verifier can catch them without ever containing them.
+FORBIDDEN_HASHES = {
+    "01efd0141d7d80509ee44bbbb2dee48875711d55358bd9a91bf22d5208ffa93d",
+    "0b28c4215599de9c8f7019402d7eaeccc8cbdc5103aeca7427774222c2bf2f16",
+    "158dc33a8be8ae49804b3fa72e2e116edb683730b51752bdb552435f31f0ba5a",
+    "27c9478468718ed43669f8b2bbac3694d1f03287a6347d4c9adadc9d12f9ecf5",
+    "399ad8e221e6815cd19b54cd7f313335f9bab0ecc681615af552c64ea3901b0f",
+    "569ec6135d377e8ac326be2be2fd4cd8f3538fc3c23f33a89e81a4ed83671b7e",
+}
+INITIAL_TOKEN = re.compile(r"\b(?:[A-Z]{2}|[A-Z] [A-Z])\b")
 
 def privacy_scan(name: str, text: str) -> None:
     for pattern, label in FORBIDDEN:
@@ -277,8 +287,12 @@ def privacy_scan(name: str, text: str) -> None:
             if label == "telephone number" and token in AGENCY_LINES:
                 ok()
                 continue
-            snippet = text[max(0, m.start() - 60):m.end() + 60].replace("\n", " ")
-            fail("{}: possible {} — {!r}".format(name, label, snippet[:130]))
+            fail("{}: {!r} looks like a {}".format(name, token[:40], label))
+    for token in INITIAL_TOKEN.findall(text):
+        if hashlib.sha256(token.encode()).hexdigest() in FORBIDDEN_HASHES:
+            fail("{}: contains forbidden personal token".format(name))
+        else:
+            ok()
 
 
 for name, text in docs.items():
