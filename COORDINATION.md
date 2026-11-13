@@ -1862,3 +1862,57 @@ No owner/tenant identity, contact detail or street address is added. The current
 | Final local verification on merged tree | `python3 handbook/verify.py` — 2,112 checks / 0 errors, 212 source-linked rows, 42 official sources; all pre-existing suites green (see `audit/session-fb3db9a1/VERIFICATION.md`) |
 
 FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests above (canonical one-word count fix, optional registry additions, legacy-edition treatment, admin history decision) — none blocks this edition, and every unverified value remains blank and flagged at https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/flagged-for-review.html.
+
+---
+
+# Session claim — `arena/e2e14758` (2026-11-13 UTC) — FINAL INTEGRATION
+
+**Session ID / Branch:** `arena-e2e14758` / `arena/e2e14758-rentincreasesf1` (platform-pinned; no other
+branch is created, switched to, or pushed). `git pull --rebase origin main` is run before every push.
+
+## Pre-flight state inspection (2026-11-13 UTC)
+
+* `git log` / `git ls-remote --heads origin`: every remote session branch (`arena/*`) was last pushed on
+  **2026-11-11**. The newest claim of record (`arena-fb3db9a1`, FB3-T1–FB3-T7) is marked **done** with a
+  merged PR (#58) and a confirmed Pages deployment; PR #59 recorded it on `main`. No claim in this board
+  is younger than 60 minutes, and no session branch has a commit newer than 2026-11-11.
+* Therefore **every prior task is closed or stale**, and this session takes the protocol's
+  "final integration session" role: merge/re-verify the combined data, confirm the site builds with no
+  broken links, and publish to GitHub Pages.
+* Open pull request **#49** (`arena/c119d0f9`, "Integrate verified S30–S34 sources and 2026-11-11
+  re-verification") is `OPEN` / `CONFLICTING` / `DIRTY` against `main`. Its owning session is stale
+  (>60 min, no commits since 2026-11-11), so its one outstanding content item — registry source **S34**
+  (2024 RHFS) — is **taken over** here and carried into the canonical registry only if the cited official
+  URL is re-verified live on 2026-11-13. PR #49 will then be closed as superseded, with the reason
+  recorded below (no other session's work is discarded: its finding is preserved in
+  `audit/session-c119d0f9/` on its own branch and in this record).
+* Cross-session requests left open on the board by `arena-fb3db9a1` are addressed here where they are
+  within the final-integration scope: `RA-FB3-02` (root `EXECUTIVE_SUMMARY.md` review-check count),
+  `RA-FB3-05` (optional registry entries), `RA-FB3-01` (explicit **non**-request — trailing-dot URLs are
+  *not* to be "fixed").
+
+## Task board
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| E2-T1 | Read this board, inspect all remote branches and pull requests, claim the final-integration scope, commit and push the claim immediately | in progress | `arena-e2e14758` | `COORDINATION.md` (append-only section) |
+| E2-T2 | **Line-by-line repository review** of the canonical edition (`index.html`, `hub/**`, `assurance/**`), the root Markdown set, `tools/**`, the workflows and every archived edition: recompute every published figure, re-check every internal link and anchor, re-check every registered official URL, and record every irregularity with a source link | in progress | `arena-e2e14758` | `audit/session-e2e14758/**` |
+| E2-T3 | **Live re-verification of every registered official source** (2026-11-13): fetch each official URL, confirm the quoted passage still exists, and record the retrieval date and outcome per source. Any source that cannot be confirmed is not cited | in progress | `arena-e2e14758` | `audit/session-e2e14758/**`; `hub/data.json` (retrieved dates only, where re-verified) |
+| E2-T4 | **Close the brief's open gap: a dedicated Suggestions section/page** so a reviewer can read proposed improvements to the site and the decision, and choose a path before anything is implemented. Added to the canonical dashboard (`hub/suggestions.html`), the site navigation, the root executive summary and the assurance record | in progress | `arena-e2e14758` | `hub/data.json`, `hub/build.py`, `hub/suggestions.html`, `hub/assets/style.css`, `tools/verify_hub.py`, `index.html`, `EXECUTIVE_SUMMARY.md`, `assurance/**` |
+| E2-T5 | **Open-questions index** — a single ordered table of every question/information gap that must be answered before a rent increase decision can be made, each linked to its flag and to the official source that governs it | in progress | `arena-e2e14758` | `hub/data.json`, `hub/build.py`, `hub/suggestions.html`, `hub/flags.html`, `index.html`, `tools/verify_hub.py` |
+| E2-T6 | **Takeover of PR #49's outstanding item (S34)** and of the open cross-session requests `RA-FB3-02`, `RA-FB3-05`, `RA-FB3-01` | in progress | `arena-e2e14758` | `hub/data.json`, `hub/build.py`, `EXECUTIVE_SUMMARY.md`, `SOURCES.md`, `README.md`, `VERIFICATION.md`, `audit/final-integration/**` |
+| E2-T7 | **Privacy pass**: confirm zero tenant/owner identifiers, initials, street addresses, e-mails or phone numbers in every current file, in every generated page and in this session's commit metadata; anonymisation uses placeholders while supplied dates and dollar amounts are unchanged | in progress | `arena-e2e14758` | `audit/session-e2e14758/**`; `COORDINATION.md` (append-only) |
+| E2-T8 | **Final integration**: rebuild every generated edition, run every verification suite, confirm no broken link and an official link on every table row, open the pull request into `main`, merge it, confirm the GitHub Pages deployment, and record the pull-request link and merge result here | in progress | `arena-e2e14758` | `COORDINATION.md` (append-only); pull-request metadata |
+
+**Scope discipline.** This session edits only the files in the scope column above. It does not edit any
+archived edition (`docs/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`,
+`compliance/**`, `site/**`, `research/**`, `archive/**`, `handbook/**`, `build/**`, `data/**`), any other
+`audit/session-*/**` directory, or any workflow file. Every shared output it touches is a final-integration
+output that the board explicitly reserves for this role.
+
+**Privacy rule.** No name, initial, street address, e-mail or phone number from the owner's brief is
+written into any file, commit message, or pull-request title/body/comment by this session. Placeholder
+names only; supplied dates and dollar amounts are preserved exactly.
+
+**Handoff rule.** If this claim is more than 60 minutes old with no commit on
+`arena/e2e14758-rentincreasesf1`, another session may take it over and must note the handoff here.
