@@ -1883,3 +1883,17 @@ FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests a
 **Privacy:** no owner-supplied name, initial, street address, e-mail or telephone number is written to any file, commit message, branch or PR by this session. Occupants are placeholders only; dates and dollar amounts are unchanged.
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/53e8f072-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+## `arena-53e8f072` — completion record (2026-11-13 UTC)
+
+| Task | Status | Result |
+| --- | --- | --- |
+| `S53-1` | done | 14 primary sources re-read live on 2026-11-13 (Form 571; Admin. Code §§ 37.3 and 37.15; Rules Parts IV and XIII; Rent Board fee; banking page; Civ. Code §§ 827, 1942.4, 1947.12, 1954.53; Legistar File #261020; § 6.14 page; AB 1482 page). Every scenario figure and notice date recomputed independently: all match. Record: `audit/session-53e8f072/VERIFICATION.md`. |
+| `S53-2` | done | Executive summary: direct answers to "state or local?" (local: Admin. Code § 37.15, Rules Part XIII § 13.14; state layers: Civ. Code §§ 827, 1947.12, 1954.53) and to the "2023" date (ordinance effective January 18, 2021; reporting for buildings under 10 units from March 1, 2023). New flags FL-25 (banking look-back conflict: 12 vs 24 months), FL-26 (AB 1482 and banked amounts above 8.8%), FL-27 (Form 571 printed title), FL-28 (time-critical Unit 2 notice dates: 30 Nov 2026 personal, 25 Nov 2026 mail). |
+| `S53-3` | done | New page `handbook/decision-questions.html`: 15 questions (what the official record says, what is missing, how to find out, sources) and 9 suggestions with tick-box options for the owner. Nothing implemented; no figure changed. |
+| `S53-4` | done | `handbook/verify.py` updated for 11 pages, 28 flags, the decisions block and the new audit folder. **2,412 checks, 0 errors.** |
+| `S53-5` | in progress | Gates run locally on the branch (all pass): `handbook/verify.py`, `tools/check_links.py`, `integration/verify.py`, `build/build.py` (no diff in `docs/v2/`), `tools/check_site.py` (781 checks), `hub/build.py` (no diff in `index.html`/`hub/`), `assurance/build.py`, `tools/verify_hub.py` (1,627), `tools/verify_assurance.py` (1,902). PR and merge record to follow. |
+
+**Irregularities for owner review (all published on the Flagged for Review page, none blocks merge):** FL-25 banking look-back conflict; FL-26 AB 1482 / banked amounts above 8.8%; FL-27 Form 571 printed title; FL-28 time-critical notice dates; plus the sf.gov banking worked-example inconsistency (1.4% for August 2024 against Form 571's 1.7%, already FL-19).
+
+**Requests to other sessions / owner:** none edit a file owned by another session. The root hub (`index.html`) does not link to `/handbook/`; that change is held by the stale claim `arena-2c7b19e2` and is offered as option S-05 on the decisions page. `handbook/verify.py` is not run by any workflow in `.github/workflows/`; adding it is offered as option S-06 and needs a workflow change that this session did not make.

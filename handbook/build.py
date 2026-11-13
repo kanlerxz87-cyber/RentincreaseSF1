@@ -19,9 +19,11 @@ SOURCES = {s["id"]: s for s in json.loads((DATA / "sources.json").read_text(enco
 SITE = json.loads((DATA / "site_data.json").read_text(encoding="utf-8"))
 AUDIT = json.loads((DATA / "repo_audit.json").read_text(encoding="utf-8"))
 DATE = SITE["meta"]["verification_date"]
+RECHECK = SITE["meta"]["recheck"]["date"]
 
 PAGES = [
     ("index.html", "Owner Dashboard", ""),
+    ("decision-questions.html", "Decisions & Suggestions", str(len(SITE["decisions"]["questions"]))),
     ("licensing-guide.html", "Licence & Step-by-Step", ""),
     ("unit-calculations.html", "Unit Calculations", ""),
     ("notice-and-reasons.html", "Notice & Lawful Reasons", ""),
@@ -124,7 +126,7 @@ def layout(current: str, eyebrow: str, title: str, lead: str, body: str) -> str:
 <main class="main-content" id="main">
 <header class="page-header"><span class="eyebrow">{e(eyebrow)}</span><h1>{e(title)}</h1><p class="lead">{e(lead)}</p></header>
 {body}
-<footer class="site-footer"><span>Verified live {e(DATE)} against official publishers only. General information, not legal advice for a specific lease.</span><span><a href="EXECUTIVE_SUMMARY.md">Executive Summary (Markdown)</a> &middot; <a href="sources.html">Sources</a> &middot; <a href="flagged-for-review.html">Flagged for Review</a></span></footer>
+<footer class="site-footer"><span>Verified live {e(DATE)} against official publishers; primary sources re-read {e(RECHECK)}. General information, not legal advice for a specific lease.</span><span><a href="EXECUTIVE_SUMMARY.md">Executive Summary (Markdown)</a> &middot; <a href="sources.html">Sources</a> &middot; <a href="flagged-for-review.html">Flagged for Review</a></span></footer>
 </main>
 </div>
 <script src="assets/filter.js"></script>
@@ -187,6 +189,10 @@ def page_index() -> str:
 <p>Live Legistar check on {e(DATE)}: <strong>Pending Committee Action</strong>, no final action or enactment date. As proposed (Leg Ver1 / Leg Dig Ver1) it would cap combined banked + capital-improvement increases at 10% of the lowest base rent in the prior 12 months through December 31, 2029, for banked notices on or after September 15, 2026, preserving excess for January 1, 2030 or later. Any banked notice served now is after that proposed cutoff. Unit 2 therefore also shows partial-banked options U2-C1 and U2-C2. Re-check before serving.</p></div>
 {section("Conditional scenarios at a glance (not notice-ready)", "All dollar figures assume the supplied base rents and histories stated on the calculations page. Official confirmation is blank until leases, ledgers and Portal licences are proved.", table("index-calcs", ["Scenario", "Assumed base", "Additive components", "Total", "New base", "Effective / notice / status", "Official confirmation", "Official source"], calc_rows))}
 {section("Three different City requirements — do not confuse them", "", table("index-regs", ["Requirement", "Applies here?", "Cost / deadline", "Effect", "Official source"], reg_rows))}
+<div class="callout"><h2>Two direct answers (re-read {e(RECHECK)})</h2>
+<p><strong>Is the Rent Board requirement state or local law?</strong> Local. The Housing Inventory report and the Rent Increase License come from San Francisco&rsquo;s Rent Ordinance, Admin. Code &sect; 37.15 (added by Ord. No. 265-20, effective January 18, 2021), and Rent Board Rules Part XIII &sect; 13.14. State law applies on top of that: the notice periods in Civ. Code &sect; 827, and the statewide rules in Civ. Code &sect;&sect; 1947.12 and 1954.53. See the <a href="EXECUTIVE_SUMMARY.md">Executive Summary</a>.</p>
+<p><strong>The &ldquo;2023&rdquo; date:</strong> The ordinance took effect in 2021. Reporting began on March 1, 2023 for condominiums and buildings with fewer than 10 units, and the licence rule applies to increases effective on or after that date for those buildings. A 1&ndash;9 unit owner therefore must report and hold a licence; there is no individual-owner exemption.</p>
+<p><strong>Time-critical:</strong> For a 28 February 2027 increase above 10% (Unit 2 scenarios), the last service dates are <strong>30 November 2026</strong> (personal delivery) and <strong>25 November 2026</strong> (mail). Read the <a href="decision-questions.html">Decisions &amp; Suggestions</a> page before choosing any option.</p></div>
 <div class="callout callout-privacy"><h2>Privacy</h2><p>Tenant identities and any street address are withheld. Occupants appear only as placeholders (Unit 1: Placeholder Tenants 1A&ndash;1D; Unit 2: Placeholder Tenants 2A&ndash;2B). Dates and dollar amounts are exactly as supplied. Blank cells mean &ldquo;not confirmed from an official source or proved record&rdquo; &mdash; never a guess.</p></div>
 """
     return layout("index.html", "Owner dashboard", "What an individual owner must do before any rent increase", "Start with the licence answer, then work through calculations, notice, fair housing and the tenant-lawyer audit. Every table row links to its official source.", body)
@@ -413,7 +419,7 @@ def page_audit() -> str:
 def page_flagged() -> str:
     rows = [flag_row(f) for f in SITE["flags"]]
     body = f"""
-<div class="callout callout-alert"><h2>Flagged for Review — read this before serving anything</h2><p>{len(SITE['flags'])} items could not be confirmed from an official source or proved record on {e(DATE)}. Their official-confirmation cells are intentionally <strong>blank</strong>. Flags do not block reading the verified guidance; High-severity flags (notably FL-01–FL-05, FL-17, FL-22, FL-24) block treating any scenario dollar figure as notice-ready.</p></div>
+<div class="callout callout-alert"><h2>Flagged for Review — read this before serving anything</h2><p>{len(SITE['flags'])} items could not be confirmed from an official source or proved record on {e(DATE)}. Their official-confirmation cells are intentionally <strong>blank</strong>. Flags do not block reading the verified guidance; High-severity flags (notably FL-01–FL-05, FL-17, FL-22, FL-24, FL-25, FL-26, FL-28) block treating any scenario dollar figure as notice-ready.</p></div>
 {section("All flagged and unverified items", "Filter by unit, topic or severity. Resolve each item from the named record, then attach dated evidence to the unit file.", table("flags-main", ["Flag", "Item, missing record and effect", "Official confirmation", "Action required", "Official source"], rows, filterable=True))}
 """
     return layout("flagged-for-review.html", "Flagged for Review", "Flagged for Review: blanks that must stay blank", "If it is listed here, do not fill it in by inference. Prove it, price without it, or defer.", body)
@@ -437,8 +443,44 @@ def page_sources() -> str:
     return layout("sources.html", "Official sources", "Official source registry (42 sources)", "One row per live-verified official source. If a claim is not traceable to this registry, it is flagged — not asserted.", body)
 
 
+# ---------------------------------------------------------------- decisions
+def page_decisions() -> str:
+    dec = SITE["decisions"]
+    q_rows = []
+    for q in dec["questions"]:
+        q_rows.append(
+            f'<tr id="{e(q["id"])}"><td><strong>{e(q["id"])}</strong></td>'
+            f'<td>{e(q["question"])}</td>'
+            f'<td>{e(q["known"])}</td>'
+            f'<td>{e(q["unknown"])}</td>'
+            f'<td>{e(q["how"])}</td>'
+            f'<td class="src-cell">{src(q["sources"])}</td>'
+            f'<td>{e(q["status"])}</td></tr>'
+        )
+    s_rows = []
+    for s_ in dec["suggestions"]:
+        opts = "<br>".join(f"&#9744; {e(o)}" for o in s_["options"])
+        s_rows.append(
+            f'<tr id="{e(s_["id"])}"><td><strong>{e(s_["id"])}</strong><br>{e(s_["title"])}</td>'
+            f'<td>{e(s_["proposal"])}</td>'
+            f'<td>{opts}</td>'
+            f'<td>{e(s_["why"])}<br><em>Effort:</em> {e(s_["effort"])}</td>'
+            f'<td class="src-cell">{src(s_["sources"])}</td>'
+            f'<td>Owner choice: ________<br>Date: ________</td></tr>'
+        )
+    body = f"""
+<div class="callout callout-alert"><h2>Read first: nothing on this page changes a figure or a notice</h2>
+<p>{e(dec["intro"])}</p>
+<p><strong>Time-critical:</strong> the last service dates for a 28 February 2027 increase above 10% are <strong>25 November 2026</strong> (mail) and <strong>30 November 2026</strong> (personal delivery). Decide before then, or choose a later effective date.</p></div>
+{section("Questions to answer before deciding", "What the official record already says, what is missing, and how to find out. Filter by question or status. Every row links to the official source it relies on.", table("decision-questions", ["ID", "Question", "What the official record says", "What we do not have", "How to find out", "Official source", "Status"], q_rows, filterable=True))}
+{section("Suggestions: choose a path before anything is implemented", "Tick one option per suggestion. These are decision aids, not legal advice. Attorney review is recommended before any banked notice (S-08).", table("decision-suggestions", ["ID", "Suggestion", "Options (tick one)", "Why and effort", "Official source", "Owner decision"], s_rows, filterable=True))}
+"""
+    return layout("decision-questions.html", "Decisions & Suggestions", "Questions to answer, and paths to choose from, before any decision", "Work through the questions in order. Each one lists what the official record says, what is still missing, and where to find it. Suggestions are for the owner to choose from; none has been implemented.", body)
+
+
 BUILDERS = {
     "index.html": page_index,
+    "decision-questions.html": page_decisions,
     "licensing-guide.html": page_licensing,
     "unit-calculations.html": page_calcs,
     "notice-and-reasons.html": page_notice,
