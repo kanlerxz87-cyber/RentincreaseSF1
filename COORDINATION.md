@@ -1907,12 +1907,53 @@ FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests a
 
 | ID | Task | Status | Owner | Exclusive file scope |
 |---|---|---|---|---|
-| C1 | 2026-11-13 live re-verification of load-bearing official sources (AGA 1.6% rate window, §37.15, Housing Inventory, Rule §13.14, banking §4.12, notice §827, fee, File #261020 current status, Treasurer lessor guidance, federal fair-housing statute); refresh any stale status in the registry | in progress | `arena-cab8cfbc` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `audit/session-cab8cfbc/**` |
-| C2 | Verify the owner's "2023 law / inform the Rent Board" question (state vs local) from primary law; ensure the executive summary forefronts the licence answer + step-by-step process with official links | in progress | `arena-cab8cfbc` | `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `hub/data.json`, `index.html` |
-| C3 | Take over stale PR #49 scope: integrate S34 (2024 RHFS) only if verified live against the official publisher; otherwise record why it stays flagged | in progress | `arena-cab8cfbc` | `hub/data.json`, `audit/final-integration/source-manifest.json`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `assurance/build.py` |
-| C4 | Resolve outstanding cross-scope fix requests logged by `arena-fb3db9a1` (canonical "14-point" vs 15 rows) and re-run every suite | in progress | `arena-cab8cfbc` | `EXECUTIVE_SUMMARY.md`, `README.md` |
-| C5 | Line-by-line repo review; irregularities log with official links | in progress | `arena-cab8cfbc` | `audit/session-cab8cfbc/**` |
-| C6 | Final integration: PR to `main`, merge without waiting, confirm GitHub Pages deployment, record here | in progress | `arena-cab8cfbc` | `COORDINATION.md` (this section) |
+| C1 | 2026-11-13 live re-verification of load-bearing official sources (AGA 1.6% rate window, §37.15, Housing Inventory, Rule §13.14, banking §4.12, notice §827, fee, File #261020 current status, Treasurer lessor guidance, federal fair-housing statute); refresh any stale status in the registry | done | `arena-cab8cfbc` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `audit/session-cab8cfbc/**` |
+| C2 | Verify the owner's "2023 law / inform the Rent Board" question (state vs local) from primary law; ensure the executive summary forefronts the licence answer + step-by-step process with official links | done | `arena-cab8cfbc` | `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `hub/data.json`, `index.html` |
+| C3 | Take over stale PR #49 scope: integrate S34 (2024 RHFS) only if verified live against the official publisher; otherwise record why it stays flagged | done | `arena-cab8cfbc` | `hub/data.json`, `audit/final-integration/source-manifest.json`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `assurance/build.py` |
+| C4 | Resolve outstanding cross-scope fix requests logged by `arena-fb3db9a1` (canonical "14-point" vs 15 rows) and re-run every suite | done | `arena-cab8cfbc` | `EXECUTIVE_SUMMARY.md`, `README.md` |
+| C5 | Line-by-line repo review; irregularities log with official links | done | `arena-cab8cfbc` | `audit/session-cab8cfbc/**` |
+| C6 | Final integration: PR to `main`, merge without waiting, confirm GitHub Pages deployment, record here | done | `arena-cab8cfbc` | `COORDINATION.md` (this section) |
 
 **Privacy:** no name, initial, street address, e-mail or telephone number from the owner's brief is written to any file, commit, branch or pull request. Placeholders only; dates and dollar amounts unchanged.
 **Handoff rule:** if this claim is >60 minutes old with no commit on `arena/cab8cfbc-rentincreasesf1`, any session may take it over and note the handoff here.
+
+## `arena-cab8cfbc` — completion record (C1–C6, 2026-11-13 UTC)
+
+| ID | Result |
+|---|---|
+| C1 | **done.** Load-bearing subset re-read live 2026-11-13 from the official publishers (S01 §37.15 incl. the Ord. 265-20 enactment note and §37.15(c) March-1-2023 phase-in; S03 Housing Inventory; S04 banking + Nov 9 warning; S05 rates page 1.6%; S06 Form 571 full table re-matched row by row; S17 fee $59.00 + Dec 14 2026 exemption deadline; S26 Legistar File #261020 — **still Pending Committee Action, not law**; S30 Rule §13.14; S32 2027 notice naming Ordinance No. 265-20). No substantive quote change; four quotes extended with verbatim passages read today. Registry per-source dates refreshed; generator blanket-date wording corrected to per-source dates. |
+| C2 | **done.** The executive summary forefront now answers the owner's question directly: the reporting/licensing duty is **local** (S.F. Admin. Code §37.15, added by **Ord. No. 265-20, effective January 18, 2021**); for buildings with fewer than 10 units reporting began **March 1, 2023** (S01 §37.15(c), S03, S30) — that phase-in is the "2023 law" the owner read about, not a state law. Costa-Hawkins (§1954.53) and the Tenant Protection Act (§1947.12) are separate state layers imposing neither this licence nor this duty. Every sentence is backed by a registered quote. |
+| C3 | **done.** S34 (U.S. Census Bureau / HUD press release CB26-TPS.12, 2024 Rental Housing Finance Survey) re-fetched and read live 2026-11-13 and integrated (registry 33 → 34, manifest, `SOURCES.md`), cited only for the negative finding behind H-11: the dataset is national and carries no SF/94122 figure, so the market/owner-behaviour cells remain blank and flagged — a verified absence, not an omission. PR #49 closed with a takeover note (content preserved, nothing discarded); a follow-up comment corrects the integrating PR number to #62 after concurrent session `arena-53e8f072` merged an unrelated PR #60 mid-flight. |
+| C4 | **done.** `EXECUTIVE_SUMMARY.md` "14-point review" → 15 rows (RA-FB3-02 request closed); `README.md` "29-source" manifest row and `SOURCES.md` stale header corrected; `VERIFICATION.md` gate table refreshed. All suites re-run green (below). |
+| C5 | **done.** Line-by-line review recorded in `audit/session-cab8cfbc/findings.md` — 9 irregularities with dispositions (IR-1…IR-9): stale counts (fixed), generator blanket-date wording (fixed), S34 integration gap (taken over), File #261020 time-sensitivity (re-verified, re-check-before-service flag stays), historical pre-redaction blobs (admin-only; flagged on the site), verified blanks H-10/H-11 (left blank and flagged per the verification rule). |
+| C6 | **done.** See the pull request, merge, and deployment record below. |
+
+**Conflict resolution (append-only `COORDINATION.md`):** `git pull --rebase origin main` conflicted in
+`COORDINATION.md` because concurrent session `arena-53e8f072` (PR #60, handbook scope) appended its
+section while this session's claim was in flight. Resolution kept **both** sections byte-for-byte
+(`arena-53e8f072`'s first, then this session's); zero lines from either side discarded. After the
+rebase, every suite was re-run green on the combined tree before push.
+
+**Pull request, merge, and deployment record (this session):**
+
+| Item | Result |
+|---|---|
+| Pull request | [PR #62](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/62) — *2026-11-13 verification: S34 integrated (PR #49 takeover), File #261020 re-checked, state-vs-local 2023 answer, stale counts fixed (arena-cab8cfbc)* |
+| Pre-merge PR checks | `Verify site` ✅ · `Final assurance` ✅ · `Verify published site` ✅ (runs 43382472870 / 43382472893 / 43382472878) |
+| Merge result | **MERGED** into `main` at 2026-11-13 as merge commit `baf40009288343cb0aed96dab03f9b1bbb4ebb28` (no approval waited) |
+| Post-merge `main` checks | `Verify site` ✅ (43382545189) · `Final assurance` ✅ (43382545117) · `Verify published site` ✅ (43382545176) |
+| GitHub Pages | `pages build and deployment` ✅ (run 43382544385, conclusion `success`); Pages API `status=built`, `https_enforced=true`, source `main /`, URL https://kanlerxz87-cyber.github.io/RentincreaseSF1/ |
+| Live check after deploy | Landing page fetched and read after deployment: title **"Executive summary · live-verified 2026-11-13"**, pill **"34 official sources"**, the individual-owner licence answer at the forefront, the File #261020 warning carrying the "(re-checked 13 November 2026: unchanged)" note, and the historical-privacy alert all render. |
+| Local suites on the merged tree | `verify_hub` 1,633/0 · `verify_assurance` 1,916/0 · `check_links` OK · `check_site` 781/0 · `handbook/verify.py` 2,412/0 · `integration/verify.py` 57 rows · `audit/verify_all.py` 137 rows · `dashboard/verify.py` OK · `review/verify.py` PASS |
+
+**Open items carried forward (published on Flagged for Review; none blocks anything):** H-22 pending
+File #261020 (re-check before serving any banked notice); H-17 / H-18 / H-03 / H-02 lease, ledger and
+anniversary facts; H-04 licence status (portal.sfrb.org); H-05 coverage review; H-21 conditional
+Business Registration Certificate determination; H-10 / H-11 verified blanks; IR-8 historical
+pre-redaction blobs (repo-admin decision required).
+
+**Privacy:** no name, initial, street address, e-mail or telephone number from the owner's brief was
+written to any file, commit, branch, or pull request by this session. Placeholders only; supplied
+dates and dollar amounts unchanged.
+
+**Coordination-record PR:** this completion record reached `main` via [PR #63](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/63) (*coordination: record PR #62 merge and Pages deployment (arena-cab8cfbc)*), merged without waiting for approval; its merge result and the post-merge Pages build are in the GitHub pull-request record for #63.
