@@ -1862,3 +1862,24 @@ No owner/tenant identity, contact detail or street address is added. The current
 | Final local verification on merged tree | `python3 handbook/verify.py` — 2,112 checks / 0 errors, 212 source-linked rows, 42 official sources; all pre-existing suites green (see `audit/session-fb3db9a1/VERIFICATION.md`) |
 
 FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests above (canonical one-word count fix, optional registry additions, legacy-edition treatment, admin history decision) — none blocks this edition, and every unverified value remains blank and flagged at https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/flagged-for-review.html.
+
+---
+
+# Session claim — `arena-53e8f072` (`arena/53e8f072-rentincreasesf1`, 2026-11-13 UTC)
+
+- **Board state read before claiming (2026-11-13 ~06:45 UTC):** `git fetch` of all heads shows no commit in the last 48 h on any branch except `main` (PR #59, merged 2026-11-11 04:47 UTC) and the still-open PR #49 (`arena/c119d0f9`, last commit 2026-11-11 04:21 UTC). Every claim on this board is more than 60 minutes old with no live session, so this session takes over the **handbook edition** (`/handbook/`, completed by `arena-fb3db9a1`, PR #58 — merged) for a re-verification and correction pass. Handoff noted here per the board's rule. No active claim is overwritten.
+- **Branch:** the platform binds this session to `arena/53e8f072-rentincreasesf1`; no `session-*` branch is created. `git pull --rebase origin main` runs before every push.
+
+| Task | Description | Owner | Exclusive file scope |
+| --- | --- | --- | --- |
+| `S53-1` | Re-read the primary sources behind the owner's core questions on 2026-11-13 (Form 571, Admin. Code §§ 37.3 & 37.15, Rules Parts IV & XIII, Rent Board fee, banking, Civ. Code §§ 827, 1947.12, 1954.53, Legistar File #261020, § 6.14) and recompute every scenario figure and notice date | `arena-53e8f072` | `audit/session-53e8f072/**` |
+| `S53-2` | Correct and extend the handbook: direct "state or local?" and "2023" answers at the top of the executive summary; new flags for the banking look-back conflict, the AB 1482 interaction with banked increases, the Form 571 PDF title, and the time-critical notice dates | `arena-53e8f072` | `handbook/EXECUTIVE_SUMMARY.md`, `handbook/data/site_data.json` |
+| `S53-3` | New dashboard page `decision-questions.html`: questions to answer before deciding (known / unknown / how to find out, each with official links) and a suggestions section where the owner chooses a path before anything is implemented | `arena-53e8f072` | `handbook/build.py`, `handbook/decision-questions.html`, `handbook/index.html` and other generated `handbook/*.html` |
+| `S53-4` | Keep the verifier in step with S53-2/S53-3 without weakening any check | `arena-53e8f072` | `handbook/verify.py` |
+| `S53-5` | Integration: rebase, run every gate, open PR from this branch to `main`, merge, confirm the GitHub Pages deployment, record the result here | `arena-53e8f072` | `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited:** root `index.html` and `hub/**` (canonical hub, held by `arena-2c7b19e2`, stale), `docs/**`, `docs/v2/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, `archive/**`, `assurance/**`, `audit/session-*/**` (other than this session's folder), `tools/**`, root Markdown files, `.github/workflows/**`.
+
+**Privacy:** no owner-supplied name, initial, street address, e-mail or telephone number is written to any file, commit message, branch or PR by this session. Occupants are placeholders only; dates and dollar amounts are unchanged.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/53e8f072-rentincreasesf1`, any session may take it over and must note the handoff here.
