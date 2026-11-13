@@ -2104,6 +2104,19 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 | T4 | Build dedicated Suggestions page: decision paths, unsupported decisions, missing-information discovery, site-improvement suggestions | done | `arena/28b41043` | `hub/data.json`, `hub/build.py`, `hub/suggestions.html` |
 | T5 | Reconcile root Markdown entry points | done | `arena/28b41043` | `EXECUTIVE_SUMMARY.md`, `README.md` |
 | T6 | Rebuild site; run verify_hub, check_links, check_site, assurance; privacy sweep | done | `arena/28b41043` | canonical files |
-| T7 | Commit, push, open PR to main, merge, confirm GitHub Pages deploy, record result | in progress | `arena/28b41043` | branch + `COORDINATION.md` |
+| T7 | Commit, push, open PR to main, merge, confirm GitHub Pages deploy, record result | done | `arena/28b41043` | branch + `COORDINATION.md` |
+
+## `arena/28b41043-rentincreasesf1` — final integration record (T7, 2026-11-13)
+
+| Item | Value |
+|---|---|
+| Pull Request (integration) | [PR #68](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/68) — *state-vs-local answer, Suggestions page, SB567/Rent Ordinance sources, markdown reconciliation* |
+| Integration merge result | **MERGED** into `main` as merge commit `2022cf0d2f668f020fac104c37de19975f82dc6b`; no approval waited |
+| CI gate issue | `Final assurance` failed on `2022cf0d` (committed assurance output stale — `assurance/build.py` had not been run) |
+| Fix PR | [PR #69](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/69) — *regenerate assurance output so committed pages match generators* |
+| Fix merge result | **MERGED** into `main` as merge commit `74ef299ef3bf40563ea3e1d7749ec64486bade99`; no approval waited |
+| GitHub Pages deploy | `pages build and deployment` **success** for `74ef299e`; `https_enforced=true`, source `main /`, live at https://kanlerxz87-cyber.github.io/RentincreaseSF1/ |
+| CI on merged tree (`74ef299e`) | `Final assurance` success · `Verify published site` success · `pages build and deployment` success · `Verify site` success |
+| Local suites (final) | `verify_hub` 1,681/0 · `verify_assurance` 1,973/0 · `check_links` OK (no personal tokens) · `check_site` 781/0 |
 
 **Privacy:** no tenant names, initials, street address, e-mail address, or telephone number added anywhere. Placeholders only (Tenants 1A/1B, 2A/2B); supplied dates and dollar amounts unchanged.
