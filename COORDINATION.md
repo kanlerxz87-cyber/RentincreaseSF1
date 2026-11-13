@@ -2120,3 +2120,84 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 | Local suites (final) | `verify_hub` 1,681/0 · `verify_assurance` 1,973/0 · `check_links` OK (no personal tokens) · `check_site` 781/0 |
 
 **Privacy:** no tenant names, initials, street address, e-mail address, or telephone number added anywhere. Placeholders only (Tenants 1A/1B, 2A/2B); supplied dates and dollar amounts unchanged.
+
+---
+
+# Session claim — `arena-ccfb8e3c` (2026-11-13 UTC) — final integration, suggestions section, state-vs-local answer, PR #49 takeover
+
+**Branch:** `arena/ccfb8e3c-rentincreasesf1` (platform-pinned; no other branch will be created, switched to, or pushed). `git pull --rebase origin main` is run before every push, chained with `&&`, never through a pipe. No tenant/owner name, initial, street address, e-mail or telephone number from the owner's brief is written to any file, commit, pull request or comment by this session; placeholders only, dates and dollar amounts unchanged.
+
+## Board state read before claiming (2026-11-13 UTC)
+
+* `main` at `81b2349` (PR #59 merged). Full history unshallowed for this session (`git fetch --unshallow`) so merges are evaluated against the real graph.
+* Every remote branch's last commit is 2026-11-11 or earlier — **all prior claims are more than 60 minutes old with no commits**, so the board's handoff rule applies to the items below.
+* One open pull request: **#49** (`arena/c119d0f9`, S30–S34 integration), `CONFLICTING`, last commit 2026-11-11 04:20 UTC. It is taken over here **selectively**: its S31/S32/S33 id assignments differ from the ids already published on `main` (main: S31 = Noncompliance notice, S32 = 2027 fee/Housing Inventory notice, S33 = 42 U.S.C. §3604), so a wholesale merge would renumber published anchors. Only content absent from `main` is ported, under **main's** id scheme.
+* Suites green on the claimed base: `verify_hub` 1,627/0; `verify_assurance` 1,902/0; `check_links` OK; `check_site` 781/0.
+* GitHub Pages: legacy publishing from `main` / root, status `built`. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.
+
+## Handoffs taken (stale claims, per the 60-minute rule)
+
+| Prior claim | Owner | Why stale | What is taken |
+| --- | --- | --- | --- |
+| C119-T2 (PR #49) | `arena-c119d0f9` | Branch last commit 2026-11-11 04:20 UTC; PR CONFLICTING | Port S34 (2024 RHFS, census.gov — live-read 2026-11-13), the H-11/practice RHFS wording, the 2027-fee landing paragraph, verifier floor/placeholder checks — under main's existing S-ids |
+| V5 last-pass integration | `arena-e8d3cb0f` | Claim 2026-11-11 04:24 UTC, no V5 commit | This session performs the last-pass integration, suite re-run, PR, merge, Pages confirmation |
+| RA-FB3-02 | requested of canonical holders (`arena-fb3db9a1` → canonical) | Canonical holders' claims all stale | One-word fix in root `EXECUTIVE_SUMMARY.md`: "14-point" → "15-point" (registry holds 15 review rows) |
+| K3–K6 canonical | `arena-2c7b19e2` | Claim 2026-11-11 02:16 UTC, no content commit | Canonical files edited only under the claim below |
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
+| CC1 | Read the board, unshallow, inspect every remote branch and open PR, claim a disjoint scope, publish the claim | done | `arena-ccfb8e3c` | `COORDINATION.md` (this section only, append-only) |
+| CC2 | **Suggestions section**: new `hub/suggestions.html` — (a) site-improvement suggestions, each proposed-not-implemented and linked to the flag/source that motivates it; (b) a decision-gate table of the questions that must be answered before any rent-increase decision, with known/unknown status and official links — wired into the canonical nav | done | `arena-ccfb8e3c` | `hub/build.py`, generated `index.html` + `hub/*.html`, `hub/data.json` |
+| CC3 | **State-vs-local law answer**: verify §37.15 live (Ord. 265-20, effective 18 Jan 2021; <10-unit reporting commenced 1 March 2023), publish the answer on the landing page, licensing Q&A and root `EXECUTIVE_SUMMARY.md`, with official links | done | `arena-ccfb8e3c` | `hub/data.json`, `hub/build.py`, generated pages, `EXECUTIVE_SUMMARY.md` |
+| CC4 | **PR #49 selective port**: add S34 (census.gov RHFS, live-read 2026-11-13) + manifest row, H-11/practice wording, 2027-fee landing paragraph, verifier floors (≥34 sources) and unformatted-placeholder checks — without renumbering main's S30–S33 | done | `arena-ccfb8e3c` | `hub/data.json`, `hub/build.py`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `audit/final-integration/source-manifest.json` (S34 row only) |
+| CC5 | RA-FB3-02 one-word correction (14-point → 15-point) + README page-table/count refresh | done | `arena-ccfb8e3c` | `EXECUTIVE_SUMMARY.md`, `README.md` |
+| CC6 | Line-by-line verification: rebuild, every suite green, every new table row carries an official source or flag link, privacy scan, link/anchor check; record in `audit/session-ccfb8e3c/` | done | `arena-ccfb8e3c` | `audit/session-ccfb8e3c/**` |
+| CC7 | Rebase, PR to `main`, merge without waiting, confirm GitHub Pages deploy, close superseded PR #49 with a pointer, record PR + deploy here | in progress | `arena-ccfb8e3c` | `COORDINATION.md` (this section only) |
+
+**Not claimed and not edited by this session:** `handbook/**`, `assurance/**` (except regenerated output if its generator requires it — none expected), `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `guide/**`, `compliance/**`, `integration/**`, `site/**`, `research/**`, `archive/**`, `data/**`, `build/**`, `tools/check_*.py`, `.github/workflows/**`, every other `audit/session-*/**`, and `audit/final-integration/findings.json`. Requests for those scopes are logged in this section, not edited.
+
+**Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/ccfb8e3c-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+## `arena-ccfb8e3c` — completion record (2026-11-13 UTC)
+
+**CC1–CC6: done. CC7 in progress (PR opened below; merge + Pages result appended when confirmed).**
+
+### What this session found and fixed (line-by-line review; full detail in `audit/session-ccfb8e3c/VERIFICATION.md`)
+
+| # | Irregularity | Fix |
+| --- | --- | --- |
+| R-01 | **Published `hub/suggestions.html` shipped literal `{steps_table}` / `{missing_table}` / `{site_table}` placeholders** — all three decision tables (DS-01…08, MI-01…13, SS-01…06) were missing from the live page because `suggestions_body` was never `.format()`-ed | `hub/build.py` now formats the body with the three tables; page rebuilt (5,628 → 25,860 bytes, 27 cited rows) |
+| R-02 | The page was **absent from both verifiers' `PAGES` lists**, so no link/citation/placeholder/privacy check ever ran against it — every suite stayed green while R-01 was live | Added to `tools/verify_hub.py` and `tools/verify_assurance.py` `PAGES` (10 and 11 pages now checked) |
+| R-03 | **Suggestions missing from the site navigation** (nine-item `NAV`, nine-item `NAV_EXPECT`) | Tenth nav entry added between "Lawyer test" and "Flagged"; `NAV_EXPECT` + docstring updated |
+| R-04 | **`mixed_links()` emitted broken hrefs** (`href="…html"#S01 "` — anchor outside the attribute) | Format corrected to `href="{}#{}"`; every suggestion row now resolves to `sources.html#Sxx` / `flags.html#H-xx` |
+| R-05 | **Verifier floors stale** (≥26 sources / ≥22 flags vs actual 36 / 24) | Floors raised to 36 / 24 in both checkers |
+| R-06 | **No all-pages unformatted-placeholder guard** (only `"{n}"` on the landing page) | `{[a-z_]+}` regex guard added to both checkers (pattern ported from PR #49) |
+| R-07 | **PR #49 leftovers absent from `main`**: 2027-fee landing paragraph; practice-page RHFS/S34 negative finding | Ported under **main's** ids (fee paragraph cites S17 + S32, not PR #49's S31; practice cites S34). PR #49's unverifiable "(unless an Assessor Homeowners' Exemption applies)" clause **dropped** — it appears in no registered source quote |
+| R-08 | **Stale root-Markdown counts**: `SOURCES.md` "All 34" with no S35/S36 rows; `README.md` 34-source manifest + superseded suite totals; `VERIFICATION.md` gate table | All refreshed to this pass (36 sources incl. S35/S36 rows; 1,892 / 2,204 checks; 238 claim rows; 270 privacy-scanned files). Historical session narratives left verbatim |
+| R-09 | **S35/S36 unpinned** in `verify_hub` (the two sources carrying the state-vs-local answer) | Positive pins added: S35 `leginfo.legislature.ca.gov` / "Approved by the Governor September 30, 2023"; S36 `sf.gov` / "Chapter 37 of the San Francisco Administrative Code" |
+
+### Live source reads this session (2026-11-13)
+
+* **S01** `sf.gov/information/sec-3715-reporting-obligations-licensing` — full §37.15 text: <10-unit reporting commenced **1 March 2023**, annually by March 1; licence suspension/restoration mechanics; "[Added by Ord. No. 265-20, effective January 18, 2021]". Confirms the 2023 duty is **local**, not state.
+* **S34** `census.gov/newsroom/press-releases/2026/2024-rhfs-data.html` — CB26-TPS.12 (19 Feb 2026), RHFS is **national only**; no ZIP/94122 figure exists, so H-10/H-11 stay blank + flagged.
+
+### Gates on this tree (2026-11-13, `PYTHONDONTWRITEBYTECODE=1`)
+
+| Suite | Result |
+| --- | --- |
+| `hub/build.py` / `assurance/build.py` | regenerate cleanly, zero residual diff |
+| `tools/verify_hub.py` | **1,892 / 0** — 10 pages, 238 cited claim rows, 36/36 sources cited, 0 unsourced dollars |
+| `tools/verify_assurance.py` | **2,204 / 0** — 11 pages, 39 assurance rows, 36/36 manifest, 270 files privacy-scanned |
+| `tools/check_links.py` | OK — 10 published + 7 archived, all links/anchors resolve, no personal tokens |
+| `tools/check_site.py` | **781 / 0** |
+| `handbook/verify.py` | **2,412 / 0** |
+| `decision/verify.py` | OK — 0 failures |
+| `integration/verify.py` | PASS — 6 pages, 57 source-linked rows |
+| `build/build.py` | 13 pages, zero diff in `docs/` |
+| `git diff --check` / TODO-scan | clean / none |
+
+**Handoff taken (board rule):** `arena-e2e14758`'s final-integration claim (E2-T1…E2-T8) was pushed at 06:46 UTC with only its coordination commit and **no content commits**; at >60 minutes the handoff rule applied. Its overlapping content items (suggestions nav wiring, verifier page coverage, root-Markdown count refresh) were completed here; nothing was discarded from that branch (it contains only its claim). **First-merged-PR rule applied:** `arena-28b41043` (PRs #68–#70) had already delivered the suggestions page, state-vs-local answers, S34–S36 and the 15-point fix on `main` — this session only repaired what those merges left incomplete.
+
+**Requests to other sessions:** none requiring file changes. Open PR #61 (`arena-53e8f072`, coordination record) is untouched — that session's scope.

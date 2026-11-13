@@ -38,7 +38,7 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
-| `audit/final-integration/` | Machine-readable findings and 34-source live-retrieval manifest |
+| `audit/final-integration/` | Machine-readable findings and 36-source live-retrieval manifest |
 | `tools/verify_hub.py` | Canonical link, source, arithmetic, privacy, and corrected-label regression checks |
 | `tools/verify_assurance.py` | Independent cross-checks plus current-text privacy scan across the repository |
 | `.github/workflows/assurance.yml` | Rebuild and verification gate on pull requests and `main` |
@@ -53,7 +53,7 @@ python3 tools/verify_hub.py
 python3 tools/verify_assurance.py
 ```
 
-The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-13`), the suites passed **1,633 canonical checks** and **1,916 assurance checks**, including 211 source/flag-linked canonical claim rows, 39 source-linked assurance rows, 34 live-source manifest entries (each dated with the pass that read it, `2026-11-07` to `2026-11-13`), and a privacy scan of 246 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
+The assurance workflow fails if either generator changes committed output. At the final local verification (`2026-11-13`), the suites passed **1,892 canonical checks** and **2,204 assurance checks**, including 238 source/flag-linked canonical claim rows, 39 source-linked assurance rows, 36 live-source manifest entries (each dated with the pass that read it, `2026-11-07` to `2026-11-13`), and a privacy scan of 270 current text files. Count assertions are floors plus positive content assertions, so a later session cannot silently drop a verified row.
 
 ## Preserved prior work
 

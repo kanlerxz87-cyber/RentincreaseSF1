@@ -176,6 +176,7 @@ NAV = [
     ("@@/hub/practice.html", "Owner practice"),
     ("@@/hub/fair-housing.html", "One unit or both"),
     ("@@/hub/review.html", "Lawyer test"),
+    ("@@/hub/suggestions.html", "Suggestions"),
     ("@@/hub/flags.html", "Flagged"),
     ("@@/hub/sources.html", "Sources"),
 ]
@@ -254,6 +255,7 @@ index_body = """
     <p>San Francisco Administrative Code §37.15 contains no individual-owner or two-unit exemption. Report each unit through the annual <strong>Housing Inventory</strong>; after substantial reporting compliance, the Rent Board automatically generates the unit's license. Reporting is free. There is <strong>no separate per-increase approval application</strong>, and an ordinary annual/banked notice goes to the tenant, not to the Rent Board.</p>
     <p><strong>Timing, precisely:</strong> the official hard cutoff is a current license on the increase's <strong>effective date</strong>, not necessarily the day the notice is served. Best practice is to complete/update reporting and confirm the license <em>before</em> serving notice so a correctable omission does not become an unenforceable increase. Late reporting is allowed, but restoration is prospective; the tenant does not owe the increase for unlicensed suspension months. The license does not have to be attached to the notice.</p>
     <p><strong>Two different City registrations are often confused — only one gates the rent increase.</strong> The <strong>Rent Increase License</strong> comes from the Rent Board's Housing Inventory and is what makes an annual or banked increase enforceable. A <strong>Business Registration Certificate</strong> comes from the Office of the Treasurer &amp; Tax Collector, is a general business-tax registration, and does not affect the lawfulness of a rent increase. On the reported two units in one building, the Tax Collector's own guidance points to <em>no</em> business registration: rental income from "one residential structure consisting of fewer than four units" is not, "by reason of that fact alone", required to register. That carve-out is conditional — other San Francisco business activity, payroll expense, or short-term rental income can trigger it — so it is published as a conditional determination {s24} {s25} and logged as {h21}, not as a settled fact.</p>
+    <p><strong>2027 Rent Board Fee exemption vs Housing Inventory:</strong> the 2027 Informational Notice sets <strong>Monday, 14 December 2026</strong> as the Request for Exemption deadline for the 2027 Rent Board Fee and <strong>1 March 2027</strong> for both annual Housing Inventory reporting and the 2027 Fee bill. Requesting a fee exemption does not satisfy Housing Inventory reporting, and reporting does not satisfy a fee-exemption request {s17} {s32}.</p>
     <p><strong>Use this order:</strong> confirm coverage and lease terms → reconcile the full rent ledger → submit/update the Housing Inventory and confirm both licenses → calculate the amount → serve a conforming written notice → verify the license remains current on the effective date and retain proof. <a href="@@/hub/licensing.html">Full step-by-step answer and official links →</a></p>
     <p><strong>Privacy before reporting:</strong> the City's Housing Inventory submission is public. It can include the unit mailing address, owner or designated manager name and business contact, occupancy information, unit characteristics, and rent reported in $250 increments. Do not assume those details stay private in the City portal. This public research site publishes no tenant names, initials, street address, or contact details. Review the City's <a href="https://www.sf.gov/rent-board-housing-inventory">Housing Inventory disclosure</a> and <a href="https://www.sf.gov/information/sec-3715-reporting-obligations-licensing">§37.15 reporting requirements</a> before submitting.</p>
     <p><strong>Before any large banked catch-up:</strong> Board of Supervisors File #261020 would cap combined banked and capital-improvement increases at 10% per year of the lowest base rent in effect during the preceding 12 months through 31 December 2029 (carryover on/after 1 January 2030), and would add banked-increase reporting to §37.15(b)(2)(F). On 10 November 2026 Legistar showed <strong>Pending Committee Action — not law</strong> {s26} (re-checked 13 November 2026: unchanged — still Pending Committee Action, no final action, no enactment date). On 9 November 2026 the Rent Board posted a formal notice warning that, if enacted as currently proposed, the 10% cap would apply to banked increases <strong>noticed on or after 15 September 2026</strong> {s04} {s05}. Unit 2’s illustrative banked portion alone is 11.5%; do not rely on this scenario to serve notice. Re-check the proposal and seek advice. Logged as {h22}.</p>
@@ -407,6 +409,7 @@ index_html = page(
         s03=ref_links(["S03"]), s04=ref_links(["S04"]), s05=ref_links(["S05"]), s06=ref_links(["S06"]),
         s18=ref_links(["S18"]), s20=ref_links(["S20"]), s22=ref_links(["S22"]),
         s24=ref_links(["S24"]), s25=ref_links(["S25"]), s26=ref_links(["S26"]),
+        s17=ref_links(["S17"]), s32=ref_links(["S32"]),
         s01=ref_links(["S01"]), s08=ref_links(["S08"]), s21=ref_links(["S21"]), s35=ref_links(["S35"]), s36=ref_links(["S36"]),
         h21='<a href="@@/hub/flags.html#H-21">H-21</a>', h22='<a href="@@/hub/flags.html#H-22">H-22</a>',
         b_ok=badge("ok", "Verified"), b_calc=badge("calc", "Calculated"),
@@ -757,7 +760,7 @@ practice_table = table(["Topic", "Large / corporate owners", "Individual owners"
 practice_body = """
 <section>
   <h2>The honest answer about practice<span class="sub">Binding duties are verified; typical behavior by owner type is not.</span></h2>
-  <p>The same allowance, license, notice, banking, harassment, and fair-housing rules apply to an individual and a corporate landlord. San Francisco also prohibits covered algorithmic devices using nonpublic competitor data. No official dataset measuring typical increase behavior for San Francisco owners by corporate form was located; the value remains blank at <a href="@@/hub/flags.html#H-11">H-11</a>.</p>
+  <p>The same allowance, license, notice, banking, harassment, and fair-housing rules apply to an individual and a corporate landlord. San Francisco also prohibits covered algorithmic devices using nonpublic competitor data. While the U.S. Census Bureau and HUD released the 2024 Rental Housing Finance Survey (CB26-TPS.12) on 19 February 2026 tracking national property, mortgage, and ownership-entity structure {s34}, no official dataset measures typical rent-increase behavior for San Francisco owners by corporate form; the comparative rate remains blank at <a href="@@/hub/flags.html#H-11">H-11</a>.</p>
   <div class="answer"><h3>What an individual owner should take from this</h3><p>Use the same per-unit controls expected of any compliant operator: current reporting and license evidence, actual lease and ledger, reproducible calculation, neutral selection, timely notice, and proof of service. That is a recommendation, not a claim that small owners are inherently informal or large owners inherently compliant.</p></div>
 </section>
 <section>
@@ -779,7 +782,7 @@ practice_body = """
 
 """.format(practice_table=practice_table, s16=ref_links(["S16"]), s09=ref_links(["S09"]),
            s02=ref_links(["S02"]), s01=ref_links(["S01"]),
-           s22=ref_links(["S22"]), s10=ref_links(["S10"]))
+           s22=ref_links(["S22"]), s10=ref_links(["S10"]), s34=ref_links(["S34"]))
 
 practice_html = page(
     "hub/practice.html",
@@ -962,7 +965,7 @@ def mixed_links(ids) -> str:
         else:
             s = SRC[i]
             out.append(
-                '<a href="{}"#{} " title="{} — {}">{}</a>'.format(
+                '<a href="{}#{}" title="{} — {}">{}</a>'.format(
                     "@@/hub/sources.html", i, esc(s["publisher"]), esc(s["title"]), i
                 )
             )
@@ -1052,7 +1055,11 @@ suggestions_html = page(
         "Suggested operating steps, decisions not yet supported, missing-information discovery, and site-improvement suggestions. No suggestion is legal advice; no blank is filled in.",
         ["Review before implement", "Missing information", "Official sources only", "Decision log"],
     ),
-    suggestions_body,
+    suggestions_body.format(
+        steps_table=steps_table,
+        missing_table=missing_table,
+        site_table=site_table,
+    ),
 )
 
 flags_html = page(

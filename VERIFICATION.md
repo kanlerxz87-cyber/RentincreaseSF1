@@ -64,11 +64,11 @@ Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 
 | Check | Result at verification (`2026-11-13`) |
 |---|---|
-| `python3 hub/build.py` | Root and eight hub pages regenerated |
-| `python3 assurance/build.py` | Assurance page and 34-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,633 checks; 0 errors**; 211 claim-table rows with source/flag links; 34/34 sources cited |
-| `python3 tools/verify_assurance.py` | **1,916 checks; 0 errors**; 39 assurance rows with official sources; 34/34 manifest rows |
-| Current-text privacy scan | **246 files; no forbidden personal token** |
+| `python3 hub/build.py` | Root and nine hub pages regenerated (including `hub/suggestions.html`) |
+| `python3 assurance/build.py` | Assurance page and 36-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,892 checks; 0 errors**; 238 claim-table rows with source/flag links; 36/36 sources cited |
+| `python3 tools/verify_assurance.py` | **2,204 checks; 0 errors**; 39 assurance rows with official sources; 36/36 manifest rows |
+| Current-text privacy scan | **270 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
 The canonical verifier checks internal links/anchors, navigation, source registry completeness and use, every claim-table row’s source/flag citation, official dollar/rate traceability, service dates, placeholders, corrected categorical-label regressions, required flags, and explicit official-confirmation blanks.
