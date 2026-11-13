@@ -1897,3 +1897,22 @@ FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests a
 **Irregularities for owner review (all published on the Flagged for Review page, none blocks merge):** FL-25 banking look-back conflict; FL-26 AB 1482 / banked amounts above 8.8%; FL-27 Form 571 printed title; FL-28 time-critical notice dates; plus the sf.gov banking worked-example inconsistency (1.4% for August 2024 against Form 571's 1.7%, already FL-19).
 
 **Requests to other sessions / owner:** none edit a file owned by another session. The root hub (`index.html`) does not link to `/handbook/`; that change is held by the stale claim `arena-2c7b19e2` and is offered as option S-05 on the decisions page. `handbook/verify.py` is not run by any workflow in `.github/workflows/`; adding it is offered as option S-06 and needs a workflow change that this session did not make.
+# Session Addendum — `arena/cab8cfbc-rentincreasesf1` (2026-11-13 UTC) — final integration + fresh live verification
+
+- **Session ID / Branch:** `arena-cab8cfbc` / `arena/cab8cfbc-rentincreasesf1` (platform-pinned; no other branch may be created, switched to, or pushed). `git pull --rebase origin main` is run before every push, never through a pipe.
+- **Board state read before claiming (2026-11-13):** `main` at `81b2349` (PR #59 merged 2026-11-11). All prior claims on this board are >60 minutes old with no commits on their branches, so under the handoff rule this session may take over any stale scope. The only open PR is **#49** (`arena/c119d0f9`, S34 / 2024 RHFS, OPEN + CONFLICTING since 2026-11-11 04:21 UTC) — **stale; taken over by this session** per the 60-minute rule (handoff noted here as required). The PR head branch is platform-owned by the crashed session and cannot be pushed to, so the S34 work is re-done cleanly on this branch and PR #49 will be closed with a takeover note (its content preserved, nothing discarded).
+- **Role:** fresh line-by-line verification pass against live official sources, close the outstanding items logged by earlier sessions (canonical "14-point" count fix, S34 registry integration if verified, time-sensitive statuses), then final integration: PR to `main`, merge, confirm GitHub Pages.
+
+## Task board (claimed before writing)
+
+| ID | Task | Status | Owner | Exclusive file scope |
+|---|---|---|---|---|
+| C1 | 2026-11-13 live re-verification of load-bearing official sources (AGA 1.6% rate window, §37.15, Housing Inventory, Rule §13.14, banking §4.12, notice §827, fee, File #261020 current status, Treasurer lessor guidance, federal fair-housing statute); refresh any stale status in the registry | in progress | `arena-cab8cfbc` | `hub/data.json`, `hub/build.py`, `hub/*.html`, `index.html`, `audit/session-cab8cfbc/**` |
+| C2 | Verify the owner's "2023 law / inform the Rent Board" question (state vs local) from primary law; ensure the executive summary forefronts the licence answer + step-by-step process with official links | in progress | `arena-cab8cfbc` | `README.md`, `EXECUTIVE_SUMMARY.md`, `EXECUTIVE-SUMMARY.md`, `hub/data.json`, `index.html` |
+| C3 | Take over stale PR #49 scope: integrate S34 (2024 RHFS) only if verified live against the official publisher; otherwise record why it stays flagged | in progress | `arena-cab8cfbc` | `hub/data.json`, `audit/final-integration/source-manifest.json`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `assurance/build.py` |
+| C4 | Resolve outstanding cross-scope fix requests logged by `arena-fb3db9a1` (canonical "14-point" vs 15 rows) and re-run every suite | in progress | `arena-cab8cfbc` | `EXECUTIVE_SUMMARY.md`, `README.md` |
+| C5 | Line-by-line repo review; irregularities log with official links | in progress | `arena-cab8cfbc` | `audit/session-cab8cfbc/**` |
+| C6 | Final integration: PR to `main`, merge without waiting, confirm GitHub Pages deployment, record here | in progress | `arena-cab8cfbc` | `COORDINATION.md` (this section) |
+
+**Privacy:** no name, initial, street address, e-mail or telephone number from the owner's brief is written to any file, commit, branch or pull request. Placeholders only; dates and dollar amounts unchanged.
+**Handoff rule:** if this claim is >60 minutes old with no commit on `arena/cab8cfbc-rentincreasesf1`, any session may take it over and note the handoff here.
