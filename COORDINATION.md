@@ -2025,3 +2025,57 @@ dates and dollar amounts unchanged.
 **Privacy rule for this session:** zero tenant names, initials, street addresses, e-mails or phone numbers in any file, commit or PR metadata. Placeholders only (`Unit A`, `Unit B`, `Occupant 1..n`). Dates and dollar amounts preserved verbatim.
 
 **Handoff rule:** if this claim is >60 minutes old with no new commit on `arena/509488b5-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+---
+
+## `arena-509488b5` — completion, pull-request and deployment record
+
+**Tasks A5-T1 – A5-T9: done.**
+
+| Task | Outcome |
+|---|---|
+| `A5-T1` Claim scope, commit, push immediately | done — claim pushed as `007e11a` before any content file was written |
+| `A5-T2` Live 2026-11-13 source verification | done — 22 official sources fetched and read from the issuing body; `decision/data/sources.json` |
+| `A5-T3` Repository audit, irregularities flagged | done — `audit/session-509488b5/findings.md`; 7 irregularities R-01…R-07 on `decision/repoaudit.html` |
+| `A5-T4` Executive summary, state-vs-local at the forefront + beginner steps | done — `decision/index.html` |
+| `A5-T5` Suggestions page (reviewable, choose a path first) | done — `decision/suggestions.html`, 18 options, each accept / defer / reject; nothing implemented |
+| `A5-T6` Open questions page (known / missing / how to discover) | done — `decision/questions.html`; Q-01, Q-02, Q-03, Q-04, Q-05 identified as hard blockers |
+| `A5-T7` Clean dashboard at `/decision/`, source link on every row | done — 12 pages, 293 table rows, 16 deliberately blank cells |
+| `A5-T8` Generator + independent verifier | done — `decision/build.py`, `decision/verify.py`; 1,200 checks / 0 failures |
+| `A5-T9` Rebase, CI, PR, merge, Pages deploy | done — see below |
+
+**Headline finding (the question that prompted the brief).** The 2023 Rent Board requirement is **local, not state**: San Francisco Administrative Code **§37.15**, footnoted *"[Added by Ord. No. 265-20, effective January 18, 2021]"*, reaching condominiums and buildings with fewer than 10 units on **1 March 2023** (§37.15(c); Rule §13.14; Housing Inventory page; owner-noncompliance notice; 2023 Rent Board press release all carry the same date). Notice is **state** law (Civ. Code §827). Anti-discrimination is **state and federal** (Gov. Code §12955; 42 U.S.C. §3604). AB 1482's statewide cap does **not** apply — Civ. Code §1947.12(d)(3) exempts housing already under a stricter local cap. **No individual-owner or two-unit exemption exists**; there is **no licence application** (reporting into the Housing Inventory generates the licence), and the licence is tested on the **effective date** (Rule §13.14).
+
+### Pull request / merge / deployment
+
+| Item | Value |
+|---|---|
+| Pull Request | [PR #66](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/66) |
+| Branch | `arena/509488b5-rentincreasesf1` (platform-pinned) |
+| Pre-merge CI | `Verify site` pass, `Verify published site` pass, `Final assurance` pass |
+| Merge result | **MERGED** into `main` at `2026-11-13T07:09:44Z` as merge commit `a99d9c2f8bb3029965c809767eb5dd1bf93c5557`; no approval waited |
+| GitHub Pages deploy | `status=built` for `a99d9c2` at `2026-11-13T07:09:45Z`; source `main /`, `https_enforced=true` |
+| Live check | Landing, `suggestions.html` and `questions.html` fetched from `https://kanlerxz87-cyber.github.io/RentincreaseSF1/decision/` — all render, all source links resolve to `/decision/sources.html#S..` |
+| Local suites on merged tree | `decision/verify.py` 1,200/0 · `tools/verify_hub.py` 1633/0 · `tools/verify_assurance.py` 1929/0 · `tools/check_site.py` 781/0 · `tools/check_links.py` OK · `integration/verify.py` PASS · `hub/build.py`, `assurance/build.py`, `build/build.py` all reproducible with no diff |
+
+### Sources used (22, all read live 2026-11-13)
+
+S01 §37.15 · S02 Housing Inventory · S03 rent increases · S04 banked increases · S05 multiple years · S06 Form 571 · S07 current rates · S08 owner noncompliance · S09 Rule §13.14 · S10 §6.14 / Costa-Hawkins · S11 rental laws · S12 Rent Board fee · S13 §37.3 · S14 Civ. Code §827 · S15 Civ. Code §1947.12 · S16 Civ. Code §1942.5 · S17 Civ. Code §1954.53 · S18 Gov. Code §12955 · S19 42 U.S.C. §3604 · S20 Legistar File No. 261020 · S21 2023 Rent Board press release · S22 Rent Board Portal. Full registry with the verified passage from each: `decision/sources.html` and `decision/data/sources.json`.
+
+### Irregularities (published, non-blocking)
+
+20 flags **F-01 … F-20** and 7 repository findings **R-01 … R-07**, all on the site's Flagged for Review and Repository audit pages with source links. Highest severity: **F-03** licence status unknown for both units; **F-04/F-05** Unit B rent and both ledgers unconfirmed; **F-06** whether Unit B's original occupants remain (banked increases do not survive a new tenancy); **F-09** rate from 1 March 2027 not published; **F-10** File No. 261020 still *Pending Committee Action* and would cap banked increases at 10%/year reaching notices served on or after 15 Sep 2026 (Unit B's banked portion alone is 13.1%); **F-15** pre-redaction blobs in Git history; **F-18** Housing Inventory submissions are public.
+
+### Conflict-resolution log
+
+Two `COORDINATION.md` append conflicts with concurrent sessions (`arena-cab8cfbc`, `arena-e452e248`, and PRs #60/#62/#63/#64/#65 landing during this session). Both resolved by taking upstream `origin/main` content **verbatim** (`git checkout --ours` during rebase) and re-appending this session's block after it. **Zero upstream lines discarded.** One `git push --force-with-lease` was required on `arena/509488b5-rentincreasesf1` after rebasing that session's own two commits; no other branch was touched.
+
+### Requests to other sessions (cross-scope — please leave a note, do not edit `decision/**`)
+
+* **To the canonical root owner (`hub/build.py`, root `index.html`):** suggestion **S-16** — consider collapsing or clearly superseding the 13+ parallel editions; several predate the 1.6% rate and the 2026-11-09 File No. 261020 warning. A one-line pointer from the root dashboard to `/decision/` would also help the owner find the consolidated edition. This session did not edit those files because the "Final assurance" workflow enforces them.
+* **To a repository administrator:** **S-17 / F-15** — pre-redaction blobs remain in Git history and can only be removed by an administrator history rewrite. No identifier is reproduced in any request.
+* **To whoever verifies privacy repo-wide:** `decision/verify.py` detects tenant initials by **SHA-256 digest** (the same six digests as `tools/check_links.py`) precisely so that the verifier never contains them. Please do not "fix" it by adding literal tokens — that reintroduces the identifier into the tree.
+
+### Privacy
+
+Zero tenant names, initials, street addresses, e-mail addresses or personal phone numbers in any file, commit, PR title, PR body or branch name. Placeholders only (`Unit A`, `Unit B`, `Occupant 1..n`). Dates and dollar amounts preserved verbatim from the brief. The only telephone number on the site is the Rent Board's own published public counselling line, allow-listed explicitly in `decision/verify.py`.
