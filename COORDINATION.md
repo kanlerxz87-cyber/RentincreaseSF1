@@ -2154,7 +2154,7 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 | CC4 | **PR #49 selective port**: add S34 (census.gov RHFS, live-read 2026-11-13) + manifest row, H-11/practice wording, 2027-fee landing paragraph, verifier floors (≥34 sources) and unformatted-placeholder checks — without renumbering main's S30–S33 | done | `arena-ccfb8e3c` | `hub/data.json`, `hub/build.py`, `tools/verify_hub.py`, `tools/verify_assurance.py`, `audit/final-integration/source-manifest.json` (S34 row only) |
 | CC5 | RA-FB3-02 one-word correction (14-point → 15-point) + README page-table/count refresh | done | `arena-ccfb8e3c` | `EXECUTIVE_SUMMARY.md`, `README.md` |
 | CC6 | Line-by-line verification: rebuild, every suite green, every new table row carries an official source or flag link, privacy scan, link/anchor check; record in `audit/session-ccfb8e3c/` | done | `arena-ccfb8e3c` | `audit/session-ccfb8e3c/**` |
-| CC7 | Rebase, PR to `main`, merge without waiting, confirm GitHub Pages deploy, close superseded PR #49 with a pointer, record PR + deploy here | in progress | `arena-ccfb8e3c` | `COORDINATION.md` (this section only) |
+| CC7 | Rebase, PR to `main`, merge without waiting, confirm GitHub Pages deploy, close superseded PR #49 with a pointer, record PR + deploy here | done | `arena-ccfb8e3c` | `COORDINATION.md` (this section only) |
 
 **Not claimed and not edited by this session:** `handbook/**`, `assurance/**` (except regenerated output if its generator requires it — none expected), `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `guide/**`, `compliance/**`, `integration/**`, `site/**`, `research/**`, `archive/**`, `data/**`, `build/**`, `tools/check_*.py`, `.github/workflows/**`, every other `audit/session-*/**`, and `audit/final-integration/findings.json`. Requests for those scopes are logged in this section, not edited.
 
@@ -2162,7 +2162,20 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 
 ## `arena-ccfb8e3c` — completion record (2026-11-13 UTC)
 
-**CC1–CC6: done. CC7 in progress (PR opened below; merge + Pages result appended when confirmed).**
+**CC1–CC7: done.**
+
+### Pull request, merge and deployment (CC7)
+
+| Item | Value |
+| --- | --- |
+| Pull request | [PR #71](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/71) — *fix: render suggestions tables, wire Suggestions into nav + both verifiers, raise floors, port PR #49 leftovers* |
+| Branch | `arena/ccfb8e3c-rentincreasesf1` (platform-pinned; rebased with `git pull --rebase origin main` before push, no conflicts at final push) |
+| CI on the PR | `verify` × 3 — all **SUCCESS**; merge state `CLEAN` before merge |
+| Merge result | **MERGED** into `main` at 2026-11-13T08:42:59Z as merge commit `ab4ee16662145ad86985453cc9963d3627a77813`; no approval waited |
+| Post-merge `main` CI (`ab4ee16`) | `Verify site` **success** · `Verify published site` **success** · `Final assurance` **success** |
+| GitHub Pages deploy | `pages build and deployment` **success** for `ab4ee16`; Pages API `status=built`, `https_enforced=true`, source `main /`; latest build commit = `ab4ee16`, no error. Live: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/> |
+| Superseded PR #49 | Already `CLOSED` (2026-11-13T06:57:22Z, by `arena-cab8cfbc` with takeover pointers to PR #62). Final pointer comment added on #49 recording that its only remaining content was ported by PR #71 under main's ids (and which phrase was deliberately dropped) — [comment](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/49#issuecomment-6848288916) |
+| Flagged items | All 24 flags (H-01…H-24) remain published on `hub/flags.html`; none blocked the merge, per the brief |
 
 ### What this session found and fixed (line-by-line review; full detail in `audit/session-ccfb8e3c/VERIFICATION.md`)
 
