@@ -12,7 +12,7 @@ Checks, with zero inferred legal values:
   5. unverified cells are truly blank (<td></td>): every flag and audit
      finding keeps its blank, the unpublished 2027-28 rate stays blank;
   6. privacy: SHA-256 forbidden-token scan over handbook/** and
-     audit/session-fb3db9a1/** (digests shared with tools/check_links.py;
+     audit/session-fb3db9a1/** and audit/session-53e8f072/** (digests shared with tools/check_links.py;
      no raw identifier is stored or printed);
   7. build reproducibility: re-running build.py changes nothing.
 Exits non-zero on any failure.
@@ -47,7 +47,7 @@ ALLOWED_HOSTS = {
     "www.justice.gov", "justice.gov", "www.census.gov", "census.gov",
 }
 PAGES = [
-    "index.html", "licensing-guide.html", "unit-calculations.html",
+    "index.html", "decision-questions.html", "licensing-guide.html", "unit-calculations.html",
     "notice-and-reasons.html", "landlord-practices.html", "fair-housing.html",
     "lawyer-scrutiny.html", "repo-audit.html", "flagged-for-review.html",
     "sources.html",
@@ -92,7 +92,14 @@ check(mirror2 == AUDIT, "audit/session-fb3db9a1/repo_audit.json differs from han
 
 # ---- 2. arithmetic + dates --------------------------------------------
 check(len(SITE["calculations"]) == 6, "expected 6 scenarios")
-check(len(SITE["flags"]) == 24, "expected 24 flags")
+check(len(SITE["flags"]) == 28, "expected 28 flags")
+check(len(SITE["decisions"]["questions"]) == 15, "expected 15 decision questions")
+check(len(SITE["decisions"]["suggestions"]) == 9, "expected 9 suggestions")
+check(SITE["meta"]["recheck"]["date"] == "2026-11-13", "re-check date mismatch")
+for item in SITE["decisions"]["questions"] + SITE["decisions"]["suggestions"]:
+    check(bool(item["sources"]) and all(x in BY_ID for x in item["sources"]), f"{item['id']}: sources missing or unknown")
+for f in SITE["flags"]:
+    check(all(x in BY_ID for x in f["sources"]), f"{f['id']}: unknown source id")
 check(len(SITE["review"]) == 16, "expected 16 review gates")
 check(len(SITE["steps"]) == 10, "expected 10 steps")
 check(len(AUDIT["findings"]) == 8, "expected 8 audit findings")
@@ -194,7 +201,7 @@ for bad in ("guaranteed free representation for every", "free representation is 
 # ---- 6. privacy ---------------------------------------------------------
 token_re = re.compile(r"\b(?:[A-Z]{2}|[A-Z] [A-Z])\b")
 scanned = 0
-for base in (HB, ROOT / "audit/session-fb3db9a1"):
+for base in (HB, ROOT / "audit/session-fb3db9a1", ROOT / "audit/session-53e8f072"):
     for path in sorted(base.rglob("*")):
         if not path.is_file() or "__pycache__" in path.parts:
             continue

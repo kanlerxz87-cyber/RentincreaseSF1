@@ -9,7 +9,13 @@
       "units": 2,
       "reported_status": "Rent-controlled building (reported; parcel/exemption verification still required)"
     },
-    "privacy": "Anonymized placeholders only; dates and dollar amounts preserved exactly as supplied."
+    "privacy": "Anonymized placeholders only; dates and dollar amounts preserved exactly as supplied.",
+    "recheck": {
+      "date": "2026-11-13",
+      "sources_reread": 14,
+      "record": "audit/session-53e8f072/VERIFICATION.md",
+      "note": "Source registry retrieved 2026-11-11 is unchanged; 14 primary sources were re-read on 2026-11-13 and every scenario figure and notice date was recomputed independently."
+    }
   },
   "units": [
     {
@@ -201,7 +207,7 @@
       "effective": "2027-02-01",
       "effective_label": "February 1, 2027 (earliest scenario date)",
       "notice_days": 30,
-      "status": "Conditional illustration — valid only if no intervening increase and lease permits increase on that date",
+      "status": "Conditional illustration — valid only if no intervening increase and lease permits increase on that date; banking look-back reading changes the earliest date (FL-25: 1 Feb 2027 under Rule 4.12(a), 1 Feb 2028 under the 24-month wording)",
       "official_confirmation": "",
       "sources": [
         "HS11",
@@ -302,7 +308,7 @@
       "effective": "2027-02-28",
       "effective_label": "February 28, 2027 (scenario)",
       "notice_days": 90,
-      "status": "High caution — assumes zero increases since June 1, 2019; banked 11.5% exceeds proposed 10% cap in pending File #261020",
+      "status": "High caution — assumes zero increases since June 1, 2019; banked 11.5% exceeds proposed 10% cap in pending File #261020; under the 24-month wording the 1 Jun 2025 skip is not bankable until 1 Jun 2027 (banked 10.1%, FL-25); AB 1482 interaction open (FL-26)",
       "official_confirmation": "",
       "sources": [
         "HS11",
@@ -343,7 +349,7 @@
       "effective": "2027-02-28",
       "effective_label": "February 28, 2027 (scenario)",
       "notice_days": 90,
-      "status": "Conditional illustration — still >10% total, so 90/95-day notice; reduces File #261020 banked-cap exposure if ledger confirms bank",
+      "status": "Conditional illustration — still >10% total, so 90/95-day notice (last dates 30 Nov / 25 Nov 2026, FL-28); reduces File #261020 banked-cap exposure if ledger confirms bank; banked-total reading open (FL-25)",
       "official_confirmation": "",
       "sources": [
         "HS11",
@@ -383,7 +389,7 @@
       "effective": "2027-02-28",
       "effective_label": "February 28, 2027 (scenario; February 1, 2027 also shown in notice table)",
       "notice_days": 30,
-      "status": "Conditional illustration — total is 10.0% or less, so Civil Code §827 30/35-day band applies if no other increase in look-back",
+      "status": "Conditional illustration — total is 10.0% or less, so Civil Code §827 30/35-day band applies if no other increase in look-back; banked-total reading open (FL-25)",
       "official_confirmation": "",
       "sources": [
         "HS11",
@@ -817,6 +823,59 @@
       "sources": [
         "HS02"
       ]
+    },
+    {
+      "id": "FL-25",
+      "severity": "High",
+      "item": "Banking look-back: Rule 4.12(a) (12 months) and the sf.gov banking page (24 months) differ; the page does not say where the 24 months start",
+      "missing": "A written Rent Board interpretation of which test applies to a skipped increase, and the ledger dates of every skipped anniversary",
+      "effect": "Unit 1: the 1.4% skipped on 1 Feb 2026 is bankable from 1 Feb 2027 under Rule 4.12(a) but from 1 Feb 2028 under the 24-month wording. Unit 2: at a 28 Feb 2027 effective date the banked total is 11.5% under Rule 4.12(a) but 10.1% under the 24-month wording (the 1 Jun 2025 skip, 1.4%, is not 24 months old until 1 Jun 2027). The U1-B and U2-B/U2-C1/U2-C2 figures depend on this.",
+      "action": "Obtain a written Rent Board interpretation or a licensed attorney's view before using any banked figure; if the 24-month reading is applied, recompute U1-B and U2-B/C1/C2 before serving",
+      "official_confirmation": "",
+      "sources": [
+        "HS13",
+        "HS15"
+      ]
+    },
+    {
+      "id": "FL-26",
+      "severity": "High",
+      "item": "AB 1482 (8.8% statewide cap) and banked amounts above 8.8%: the Rent Board says the cap does not apply to SF Rent Ordinance units, but the statutory exemption is tied to local control that restricts annual increases",
+      "missing": "A ruling, opinion or attorney analysis on whether a single banked notice above 8.8% (U2-B 13.1%, U2-C1 11.6%) stays within the § 1947.12(d)(3) exemption",
+      "effect": "If the exemption did not cover a banked amount above 8.8%, U2-B and U2-C1 would exceed the state formula; no official source in this handbook resolves the question",
+      "action": "Treat U2-B and U2-C1 as legal questions for a licensed California attorney before any notice; AB 1482 is enforced in state court (Rent Board page)",
+      "official_confirmation": "",
+      "sources": [
+        "HS27",
+        "HS28",
+        "HS14"
+      ]
+    },
+    {
+      "id": "FL-27",
+      "severity": "Low",
+      "item": "Form 571 PDF printed title reads \"517: Allowable Annual Increases 26-27\" while the file name and the Rent Board link use \"571\"",
+      "missing": "None for the figure itself: the 1.6% for 3/1/26–2/28/27 is in the PDF body",
+      "effect": "Cosmetic; a reviewer who searches for the printed title may not find the document",
+      "action": "Cite the document by its Rent Board link (sf.gov/documents/34344/571_...pdf) and note the printed title",
+      "official_confirmation": "",
+      "sources": [
+        "HS11"
+      ]
+    },
+    {
+      "id": "FL-28",
+      "severity": "High",
+      "item": "Time-critical: the last service dates for a 28 Feb 2027 increase above 10% (Unit 2 scenarios U2-B, U2-C1) are 30 Nov 2026 (personal delivery) and 25 Nov 2026 (mail)",
+      "missing": "An owner decision on whether any notice will be served by those dates, and proof of the chosen delivery method",
+      "effect": "Missing those dates means a 28 Feb 2027 effective date cannot be used for a total above 10%. The 30/35-day band (for example U2-C2 at 10.0%) has later dates: 29 Jan 2027 personal / 24 Jan 2027 mail",
+      "action": "Decide before 25 Nov 2026; if no decision is made, plan for a later effective date and recalculate the Form 571 rate on that date",
+      "official_confirmation": "",
+      "sources": [
+        "HS24",
+        "HS25",
+        "HS13"
+      ]
     }
   ],
   "review": [
@@ -992,5 +1051,352 @@
         "HS42"
       ]
     }
-  ]
+  ],
+  "decisions": {
+    "intro": "Questions the owner must answer before a decision can reasonably be made, what the official record already says, what is still missing, and how to find out. Suggestions are for the owner to choose from; none has been implemented, and no figure on any other page changes because of this page.",
+    "questions": [
+      {
+        "id": "Q-01",
+        "question": "Is the Housing Inventory report and Rent Increase License active for Unit 1 and Unit 2 right now?",
+        "known": "Reporting is required every year by March 1; a licence is generated for each tenant-occupied unit; the licence must be in place on the effective date of the increase (Rule § 13.14).",
+        "unknown": "Whether a 2026 report was filed for each unit, and the dated licence PDFs.",
+        "how": "Sign in at portal.sfrb.org, download each unit's licence PDF, and check the public search for each unit. Questions: 311 (415-701-2311 from outside SF).",
+        "sources": [
+          "HS02",
+          "HS01",
+          "HS03",
+          "HS05"
+        ],
+        "status": "Blocks any notice"
+      },
+      {
+        "id": "Q-02",
+        "question": "Is $3,150.00 still Unit 2's current base rent, with no increase since June 1, 2019?",
+        "known": "The banked amount and the percentage both use the current base rent (Rule § 4.12; banking page). The owner's brief gives $3,150.00 from a June 1, 2019 lease start only.",
+        "unknown": "The lease, the rent ledger, and every rent notice served since June 2019.",
+        "how": "Owner's own file: lease, ledger, and copies of every notice. Compare the ledger with the Form 571 table before using any Unit 2 figure.",
+        "sources": [
+          "HS13",
+          "HS11",
+          "HS15"
+        ],
+        "status": "Blocks Unit 2 scenarios (FL-01, FL-02)"
+      },
+      {
+        "id": "Q-03",
+        "question": "Which banking test applies: 12 months (Rule § 4.12(a)) or 24 months (sf.gov banking page), and where does the 24-month period start?",
+        "known": "Rule § 4.12(a) says 'a full 12 months must have elapsed'. The sf.gov banking page says a skipped increase is banked only if 'at least 24 full months pass without any rent increase'. The page does not say where the 24 months start.",
+        "unknown": "A written Rent Board interpretation, or a court or attorney view, on which test and start date apply.",
+        "how": "Ask the Rent Board for a written interpretation (311 / 415-701-2311). Ask a licensed California attorney for a view. Recompute U1-B and the Unit 2 banked figures under each reading before deciding (FL-25).",
+        "sources": [
+          "HS15",
+          "HS13"
+        ],
+        "status": "Blocks U1-B timing and Unit 2 banked totals"
+      },
+      {
+        "id": "Q-04",
+        "question": "What is Unit 1's tenancy after April 1, 2026: fixed-term or month-to-month, and is the new occupant a co-tenant or a subtenant?",
+        "known": "No vacancy reset while an original occupant remains (Civ. Code § 1954.53(d)(3)). No increase may be imposed solely because an occupant was added (Admin. Code § 37.3(a)(11)(A)). A § 6.14 notice must be served within a reasonable time after the landlord knows of the occupant; sixty days is generally considered reasonable. Co-tenants and subtenants are treated differently.",
+        "unknown": "The April 2026 agreement, whether rent was accepted from the new occupant, and whether any § 6.14 notice was served.",
+        "how": "Read the April 2026 paperwork and the rent record. If no written agreement exists, record that as unknown; do not infer the answer.",
+        "sources": [
+          "HS29",
+          "HS14",
+          "HS21"
+        ],
+        "status": "Blocks Unit 1 scenarios (FL-03, FL-09, FL-10)"
+      },
+      {
+        "id": "Q-05",
+        "question": "Was Unit 1's increase due on February 1, 2026 skipped (so that a banked 1.4% exists)?",
+        "known": "Form 571 gives 1.4% for March 1, 2025 – February 28, 2026, the period in which the February 1, 2026 anniversary falls.",
+        "unknown": "Whether any notice was served on or around February 1, 2026, and the ledger for that period.",
+        "how": "Owner's ledger and notice file for Unit 1.",
+        "sources": [
+          "HS11",
+          "HS13"
+        ],
+        "status": "Blocks U1-B"
+      },
+      {
+        "id": "Q-06",
+        "question": "Will File #261020 (10% cap on banked plus capital-improvement increases) be enacted, and in what form and on what date?",
+        "known": "On 13 November 2026 the Legistar record shows 'Pending Committee Action', with no final action or enactment date. The Rent Board says the proposal would apply to banked increases noticed on or after 15 September 2026, if enacted as proposed. It is not law.",
+        "unknown": "Committee schedule, final text, enactment date, and whether any retroactive provision survives amendment.",
+        "how": "Watch the Legistar record and the Rent Board notices; re-check on the day any notice is served.",
+        "sources": [
+          "HS16",
+          "HS13",
+          "HS17",
+          "HS18"
+        ],
+        "status": "Risk for Unit 2 banked notices (FL-05)"
+      },
+      {
+        "id": "Q-07",
+        "question": "Does the 8.8% statewide AB 1482 cap limit any banked notice for these units?",
+        "known": "The Rent Board says the 8.8% cap 'does NOT apply' to units under the SF Rent Ordinance. Civ. Code § 1947.12(d)(3) exempts local rent control that restricts annual increases below the statewide formula. The Rent Board page does not address a single banked amount above 8.8%.",
+        "unknown": "A ruling or attorney analysis on banked amounts above 8.8% under the exemption.",
+        "how": "Ask a licensed California attorney. AB 1482 is enforced in state court; the Rent Board does not hold hearings on it (Rent Board page).",
+        "sources": [
+          "HS27",
+          "HS28"
+        ],
+        "status": "Blocks U2-B and U2-C1 choice (FL-26)"
+      },
+      {
+        "id": "Q-08",
+        "question": "Is the 1940 building covered by the Rent Ordinance, and does any exemption apply to either unit?",
+        "known": "The owner reports a 1940 build date in 94122. The Rent Board rental-laws page is the official source for coverage rules; the Housing Inventory page points to the SF Property Information Map for building facts.",
+        "unknown": "Parcel record, the certificate of occupancy date, and any exemption on file.",
+        "how": "Check the SF Property Information Map and the Rent Board's exemption list for each unit.",
+        "sources": [
+          "HS19",
+          "HS02",
+          "HS06"
+        ],
+        "status": "Blocks all figures (FL-06)"
+      },
+      {
+        "id": "Q-09",
+        "question": "Are the 2026–27 Rent Board fees paid for both units, or is either unit exempt?",
+        "known": "The fee is $59.00 per dwelling unit for 2026–27, due March 1, with a 5% monthly late penalty. Once the fee is paid in full, 50% ($29.50) may be recovered from the tenants in occupancy as of November 1 (Rent Board fee page).",
+        "unknown": "Payment status and any approved exemption for each unit.",
+        "how": "Portal account: payment history and exemption status.",
+        "sources": [
+          "HS07",
+          "HS08",
+          "HS06"
+        ],
+        "status": "Informs decision (FL-18)"
+      },
+      {
+        "id": "Q-10",
+        "question": "Which effective date and delivery method will be used, and can the notice deadlines be met?",
+        "known": "30 days' notice for increases of 10% or less, 90 days if more than 10%; add 5 days if mailed in California (Civ. Code § 827; CCP § 1013). For a 28 Feb 2027 effective date the last dates are 30 Nov 2026 (personal) and 25 Nov 2026 (mail) for a total above 10%.",
+        "unknown": "The owner's decision on effective date and delivery method; proof of service.",
+        "how": "Calendar both dates now. Decide before 25 Nov 2026, or choose a later effective date and recompute the Form 571 rate for that date.",
+        "sources": [
+          "HS24",
+          "HS25",
+          "HS13"
+        ],
+        "status": "Time-critical (FL-28)"
+      },
+      {
+        "id": "Q-11",
+        "question": "Are there repair, citation or retaliation facts that could defer or void an increase?",
+        "known": "A tenant's failure-to-repair petition, filed within 60 days of the notice, can defer an increase (Topic 353). Civ. Code § 1942.4(a) bars a landlord from issuing a rent-increase notice while listed substandard conditions exist, have not been abated 35 days after the enforcement notice, and were not caused by the tenant. A 180-day retaliation rule applies (Civ. Code § 1942.5).",
+        "unknown": "Repair requests, DBI or DPH citations, and any tenant complaint or proceeding in the last 180 days.",
+        "how": "Owner's repair log; public DBI and DPH inspection records; any tenant correspondence.",
+        "sources": [
+          "HS31",
+          "HS30",
+          "HS33"
+        ],
+        "status": "Blocks (FL-11, FL-12)"
+      },
+      {
+        "id": "Q-12",
+        "question": "Is the choice between raising one unit or both units documented as neutral?",
+        "known": "California FEHA (Gov. Code § 12955), the Unruh Act (Civ. Code § 51) and the federal Fair Housing Act (42 U.S.C. § 3604) prohibit discriminatory rental terms; SF Admin. Code § 37.10B prohibits harassment. The handbook's fair-housing page explains why a single written, neutral rule is the safest approach.",
+        "unknown": "The owner's written neutral criteria and the reasons for each unit, recorded before service.",
+        "how": "Write a neutral rule (for example: apply the same published rate on the same anniversary schedule to every unit that is eligible) and record the eligibility facts for each unit.",
+        "sources": [
+          "HS34",
+          "HS35",
+          "HS36",
+          "HS40"
+        ],
+        "status": "Informs decision (FL-13)"
+      },
+      {
+        "id": "Q-13",
+        "question": "Does the owner have other San Francisco business activity that changes the Business Registration position?",
+        "known": "The Treasurer's lessor guide describes the position for owners of one structure with fewer than four units; other activity, payroll or short-term rentals can change it.",
+        "unknown": "The owner's other SF business activity, payroll, and any short-term rental.",
+        "how": "Treasurer guidance (sftreasurer.org) and the owner's own records.",
+        "sources": [
+          "HS09",
+          "HS10"
+        ],
+        "status": "Informs decision (FL-14)"
+      },
+      {
+        "id": "Q-14",
+        "question": "Is there an official ZIP-code (94122) benchmark for a 'normal' increase?",
+        "known": "The citywide allowable annual rate is 1.6% for 3/1/26–2/28/27 (Form 571). No official ZIP-code benchmark was found.",
+        "unknown": "Any official 94122-specific or owner-type benchmark.",
+        "how": "Leave blank. Commercial listing averages are excluded by this handbook's rule.",
+        "sources": [
+          "HS11"
+        ],
+        "status": "Informs only; stays blank (FL-16)"
+      },
+      {
+        "id": "Q-15",
+        "question": "What is the owner's objective: annual allowance only, or banked amounts as well?",
+        "known": "A landlord does not have to impose the maximum allowed increase; the unused part may be banked (Rent Board banking page). Banked amounts carry the legal questions in Q-03, Q-06 and Q-07.",
+        "unknown": "The owner's choice and tolerance for legal and timing risk.",
+        "how": "Owner decision, using the suggestions below. Have the chosen option reviewed by a licensed California attorney before any notice.",
+        "sources": [
+          "HS13",
+          "HS11"
+        ],
+        "status": "Owner decision"
+      }
+    ],
+    "suggestions": [
+      {
+        "id": "S-01",
+        "title": "Sequence of actions before any notice",
+        "proposal": "Choose how to sequence the decision.",
+        "options": [
+          "A — Hold all increases until Q-01 to Q-05 are answered in writing (lowest risk; delays any increase)",
+          "B — Annual 1.6% only, on each unit that passes Q-01, Q-02 and Q-04 (no banked amount; see U1-A and U2-A)",
+          "C — Annual 1.6% plus the conservative banked figure only after Q-03 is resolved (U2-C2 at 10.0% is inside the 30/35-day band)",
+          "D — Full banked scenario U2-B (13.1%) — not recommended while FL-25, FL-26 and FL-28 are open"
+        ],
+        "why": "Each option trades timing risk against legal-question risk. The handbook does not choose for the owner.",
+        "effort": "Low (a decision); the attorney review adds cost",
+        "sources": [
+          "HS11",
+          "HS13",
+          "HS24"
+        ]
+      },
+      {
+        "id": "S-02",
+        "title": "Add a dated decision log (placeholders only)",
+        "proposal": "A page where the owner records the option chosen, the date, the evidence attached (licence PDF, ledger, notice copy) and who reviewed it.",
+        "options": [
+          "A — Add the log page",
+          "B — Keep decisions outside the site",
+          "C — Defer"
+        ],
+        "why": "Creates a record that the owner decided on verified facts before serving notice.",
+        "effort": "Low (one page)",
+        "sources": [
+          "HS13",
+          "HS01"
+        ]
+      },
+      {
+        "id": "S-03",
+        "title": "Deadline countdown on the landing page",
+        "proposal": "Show each date that controls a notice: 25 Nov 2026 (Unit 2, mail, total above 10%, effective 28 Feb 2027); 30 Nov 2026 (Unit 2, personal delivery, same); 14 Dec 2026 (2027 Rent Board fee exemption request); 28 Dec 2026 and 2 Jan 2027 (Unit 1, mail and personal, effective 1 Feb 2027); 24 Jan 2027 and 29 Jan 2027 (Unit 2 30/35-day band, effective 28 Feb 2027); 28 Feb 2027 (end of the 1.6% period); 1 Mar 2027 (Housing Inventory update and Rent Board fee deadline).",
+        "options": [
+          "A — Add a countdown",
+          "B — Add a static calendar table only",
+          "C — No change"
+        ],
+        "why": "The Unit 2 dates are 12 and 17 days away from 13 November 2026.",
+        "effort": "Low",
+        "sources": [
+          "HS24",
+          "HS25",
+          "HS06",
+          "HS07",
+          "HS02"
+        ]
+      },
+      {
+        "id": "S-04",
+        "title": "Printable pre-notice checklist",
+        "proposal": "A one-page checklist, generated from the Step-by-Step guide, that the owner signs before each notice.",
+        "options": [
+          "A — Add the checklist",
+          "B — Keep the existing step list only",
+          "C — Defer"
+        ],
+        "why": "Converts the 10-step guide into a check the owner completes for each unit.",
+        "effort": "Low",
+        "sources": [
+          "HS05",
+          "HS24",
+          "HS25"
+        ]
+      },
+      {
+        "id": "S-05",
+        "title": "Decide which site is the landing page",
+        "proposal": "The repository now has several editions (root hub, /handbook/, /docs/ and older folders). A single entry point makes decisions easier.",
+        "options": [
+          "A — Keep both the root hub and /handbook/ as they are (no change)",
+          "B — Make /handbook/ the landing page and add a banner on the root hub (root hub is held by another session's stale claim; needs a coordination entry first)",
+          "C — Mark the older editions as superseded with a notice on each page (no deletions)"
+        ],
+        "why": "Two editions give different counts and dates. The 'superseded' treatment is already named in FL-17 and FL-22.",
+        "effort": "Medium",
+        "sources": [
+          "HS02"
+        ]
+      },
+      {
+        "id": "S-06",
+        "title": "Automatic monitoring of File #261020 and Rent Board alerts",
+        "proposal": "Check the Legistar record and the Rent Board's notices on a schedule, rather than relying on a manual check.",
+        "options": [
+          "A — Manual check on each day a notice is served (no code)",
+          "B — Scheduled GitHub Action that opens an issue when the Legistar status changes (adds one workflow file)",
+          "C — Defer"
+        ],
+        "why": "FL-05 and FL-25 depend on a status that can change without notice.",
+        "effort": "Low (A) to Medium (B)",
+        "sources": [
+          "HS16",
+          "HS13"
+        ]
+      },
+      {
+        "id": "S-07",
+        "title": "Inputs file for ledger facts (placeholders only)",
+        "proposal": "A small inputs file (base rent, anniversary dates, skipped years, licence dates) that the generator reads and recomputes every scenario from.",
+        "options": [
+          "A — Add the inputs file",
+          "B — Keep the scenarios as written",
+          "C — Defer until Q-02 and Q-05 are answered"
+        ],
+        "why": "Lets a single corrected ledger fact update every scenario and its dates, rather than editing several places.",
+        "effort": "Medium",
+        "sources": [
+          "HS11",
+          "HS13"
+        ]
+      },
+      {
+        "id": "S-08",
+        "title": "Landlord-side legal review in addition to the tenant-lawyer audit",
+        "proposal": "The handbook's tenant-lawyer audit is a checklist, not a legal opinion. The Rent Board's referral listing names counsel and counselling for tenants; a landlord needs its own counsel.",
+        "options": [
+          "A — Engage a licensed California attorney for Q-03, Q-06 and Q-07 before any notice",
+          "B — Use the handbook only as a checklist, without attorney review (not recommended for banked notices)",
+          "C — Defer"
+        ],
+        "why": "The Rent Board's AB 1482 page says AB 1482 can only be enforced in state court. Its § 6.14 page says landlords and tenants should obtain legal advice on specific facts. The Rent Board's referral listing names counselling and legal-aid providers for tenants.",
+        "effort": "Paid (attorney fees)",
+        "sources": [
+          "HS28",
+          "HS42",
+          "HS21"
+        ]
+      },
+      {
+        "id": "S-09",
+        "title": "Tenant-side services: verify each provider before relying on it",
+        "proposal": "The Rent Board referral listing names tenant counselling and legal-aid providers for 94122. Their services are for tenants; the owner should not assume that any provider will advise the owner.",
+        "options": [
+          "A — Keep the listing as information only",
+          "B — Confirm each provider's scope in writing (owner is not a client)",
+          "C — Remove the listing"
+        ],
+        "why": "Free tenant representation is not guaranteed (FL-20).",
+        "effort": "Low",
+        "sources": [
+          "HS42"
+        ]
+      }
+    ]
+  }
 }
