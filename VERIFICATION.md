@@ -62,13 +62,13 @@ These are scenario calculations, not universal last-safe dates or legal clearanc
 
 Canonical and assurance gates were run with `PYTHONDONTWRITEBYTECODE=1`:
 
-| Check | Result at verification (`2026-11-10`) |
+| Check | Result at verification (`2026-11-13`) |
 |---|---|
 | `python3 hub/build.py` | Root and eight hub pages regenerated |
-| `python3 assurance/build.py` | Assurance page and 29-row source manifest regenerated |
-| `python3 tools/verify_hub.py` | **1,627 checks; 0 errors**; 211 claim-table rows with source/flag links; 33/33 sources cited |
-| `python3 tools/verify_assurance.py` | **1,902 checks; 0 errors**; 39 assurance rows with official sources; 33/33 manifest rows |
-| Current-text privacy scan | **170 files; no forbidden personal token** |
+| `python3 assurance/build.py` | Assurance page and 34-row source manifest regenerated |
+| `python3 tools/verify_hub.py` | **1,633 checks; 0 errors**; 211 claim-table rows with source/flag links; 34/34 sources cited |
+| `python3 tools/verify_assurance.py` | **1,916 checks; 0 errors**; 39 assurance rows with official sources; 34/34 manifest rows |
+| Current-text privacy scan | **246 files; no forbidden personal token** |
 | `git diff --check` | No whitespace errors |
 
 The canonical verifier checks internal links/anchors, navigation, source registry completeness and use, every claim-table row’s source/flag citation, official dollar/rate traceability, service dates, placeholders, corrected categorical-label regressions, required flags, and explicit official-confirmation blanks.
@@ -267,3 +267,50 @@ artifact was reverted, as before. All 24 flags remain open; no scenario is certi
   this pass.
 * Registry: **31 → 33 sources.** No rate, date or dollar figure changed. Recorded as assurance
   corrections `A-13` and `A-14`.
+
+## Addendum — 2026-11-13 live re-verification pass (`arena/cab8cfbc`)
+
+* **Load-bearing subset re-read live 2026-11-13** (fetch and read from the official publisher, quote
+  checked against the registered passage): **S01** (§37.15 — includes the Ord. No. 265-20 enactment
+  note and the §37.15(c) March 1, 2023 phase-in for buildings with fewer than 10 units), **S03**
+  (Housing Inventory), **S04** (banked increases, incl. the November 9, 2026 File #261020 notice),
+  **S05** (rent increases; 1.6% for 2026-03-01 – 2027-02-28), **S06** (Form 571 — full rate table
+  re-matched row by row), **S17** (Rent Board Fee $59.00/unit 2026-27; December 14, 2026 exemption
+  deadline), **S26** (Legistar File #261020), **S30** (Rule §13.14), **S32** (2027 fee/Housing
+  Inventory notice — names Ordinance No. 265-20 verbatim). No substantive change to any registered
+  quote; four quotes extended with passages verified today (S01 §37.15(c)+enactment note, S03
+  March-1-2023 sentence, S30 applicability sentence, S32 Ord. 265-20 sentence).
+* **File #261020 re-checked live on Legistar 2026-11-13:** still *Pending Committee Action* (Land Use
+  and Transportation Committee), no final action, no enactment date — **not law**. Recorded in H-22
+  and in every generated warning block.
+* **S34 added** (registry 33 → 34): U.S. Census Bureau / HUD press release CB26-TPS.12 for the 2024
+  Rental Housing Finance Survey, read live 2026-11-13. It is cited only for the negative finding
+  behind H-11 — the dataset is national ("U.S. residential properties with at least one housing rental
+  unit") and carries no SF/94122 figure — so the "reasonable and normal market increase for 94122"
+  and "corporate vs individual owner behaviour" cells remain blank and flagged, as the verification
+  rule requires. `tools/verify_assurance.py` now approves `www.census.gov` as an official publisher
+  (federal statistical agency) and accepts `2026-11-13` as a recorded live-verification date; no check
+  was removed or loosened. `tools/verify_hub.py` pins S34 positively (host + quote needle), as it
+  already did for S24–S26.
+* **Owner's "2023 law" question answered in the executive summary forefront** with registered quotes:
+  the reporting/licensing duty is **local** (S.F. Admin. Code §37.15, added by Ord. No. 265-20,
+  effective January 18, 2021); for buildings with fewer than 10 units it began **March 1, 2023**
+  (S01 §37.15(c), S03, S30); the state frameworks (Costa-Hawkins §1954.53, TPA §1947.12) impose
+  neither this licence nor this duty.
+* **Independent arithmetic re-check (Decimal, by hand from Form 571):** U1 $3,995.00 × 1.6% = $63.92
+  (new $4,058.92); U1 combined 3.0% = $119.85 (new $4,114.85); U2 $3,150.00 × 1.6% = $50.40 (new
+  $3,200.40); U2 banked 11.5% = $362.25; U2 combined 13.1% = $412.65 (new $3,562.65). Every figure
+  matches the canonical pages to the cent; banked components (1.8/0.7/2.3/3.6/1.7/1.4) match the
+  Form 571 rows for the anniversary years used.
+* **Stale-count irregularities fixed:** `EXECUTIVE_SUMMARY.md` "14-point review" → 15 review rows;
+  `SOURCES.md` header "All 29 registered sources live-verified 2026-11-10" → per-source dates through
+  2026-11-13; `README.md` "29-source live-retrieval manifest" → 34-source; `VERIFICATION.md` gate
+  table refreshed to this pass's measured values. Generator blanket-date wording in `hub/build.py`
+  corrected to per-source dates (it previously claimed all sources were read on one date).
+* **Gates re-run on this tree (2026-11-13):** `hub/build.py` (9 pages) and `assurance/build.py`
+  (34 manifest rows) regenerate cleanly; `tools/verify_hub.py` **1,633 checks, 0 errors**;
+  `tools/verify_assurance.py` **1,916 checks, 0 errors**; `tools/check_links.py` OK (10 published
+  pages +7 archived); `tools/check_site.py` **781 checks, 0 errors**; all preserved legacy suites
+  pass (`handbook/verify.py` 2,112; `integration/verify.py` 57 rows; `audit/verify_all.py` 137 rows;
+  `dashboard/verify.py` OK; `review/verify.py` OK). All 24 flags remain open; no scenario is
+  certified notice-ready. No personal identifier written to any file or commit.

@@ -116,6 +116,11 @@ allowed_hosts = {
     # U.S. Government Publishing Office, added 2026-11-11 after live retrieval of the
     # enacted text of 42 U.S.C. §3604 (federal Fair Housing Act).
     "www.govinfo.gov", "govinfo.gov",
+    # U.S. Census Bureau, added 2026-11-13 after live retrieval of press release
+    # CB26-TPS.12 (2024 Rental Housing Finance Survey, HUD-sponsored federal
+    # statistics). It is cited only for the negative finding behind H-11: the
+    # dataset is national and carries no SF/94122 figure.
+    "www.census.gov", "census.gov",
 }
 for s in HUB["sources"]:
     sid = s["id"]
@@ -125,7 +130,9 @@ for s in HUB["sources"]:
     if sid in manifest_by_id:
         m = manifest_by_id[sid]
         check(m["url"] == s["url"], f"{sid}: manifest URL mismatch")
-        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10", "2026-11-11"),
+        # 2026-11-13 is this session's live re-read of the load-bearing subset
+        # (S01, S03, S04, S05, S06, S17, S26, S30, S32) plus the new S34.
+        check(m["retrieved"] in ("2026-11-07", "2026-11-08", "2026-11-10", "2026-11-11", "2026-11-13"),
               f"{sid}: retrieval date {m['retrieved']} is not a recorded live-verification date")
         # The manifest must carry the date this source was actually fetched, not a blanket date.
         check(m["retrieved"] == s.get("retrieved"),
