@@ -1892,8 +1892,21 @@ FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests a
 | `S53-2` | done | Executive summary: direct answers to "state or local?" (local: Admin. Code § 37.15, Rules Part XIII § 13.14; state layers: Civ. Code §§ 827, 1947.12, 1954.53) and to the "2023" date (ordinance effective January 18, 2021; reporting for buildings under 10 units from March 1, 2023). New flags FL-25 (banking look-back conflict: 12 vs 24 months), FL-26 (AB 1482 and banked amounts above 8.8%), FL-27 (Form 571 printed title), FL-28 (time-critical Unit 2 notice dates: 30 Nov 2026 personal, 25 Nov 2026 mail). |
 | `S53-3` | done | New page `handbook/decision-questions.html`: 15 questions (what the official record says, what is missing, how to find out, sources) and 9 suggestions with tick-box options for the owner. Nothing implemented; no figure changed. |
 | `S53-4` | done | `handbook/verify.py` updated for 11 pages, 28 flags, the decisions block and the new audit folder. **2,412 checks, 0 errors.** |
-| `S53-5` | in progress | Gates run locally on the branch (all pass): `handbook/verify.py`, `tools/check_links.py`, `integration/verify.py`, `build/build.py` (no diff in `docs/v2/`), `tools/check_site.py` (781 checks), `hub/build.py` (no diff in `index.html`/`hub/`), `assurance/build.py`, `tools/verify_hub.py` (1,627), `tools/verify_assurance.py` (1,902). PR and merge record to follow. |
+| `S53-5` | done | PR #60 merged (0ecf3e5); Pages built. Gates run locally on the branch (all pass): `handbook/verify.py`, `tools/check_links.py`, `integration/verify.py`, `build/build.py` (no diff in `docs/v2/`), `tools/check_site.py` (781 checks), `hub/build.py` (no diff in `index.html`/`hub/`), `assurance/build.py`, `tools/verify_hub.py` (1,627), `tools/verify_assurance.py` (1,902). Record below. |
 
 **Irregularities for owner review (all published on the Flagged for Review page, none blocks merge):** FL-25 banking look-back conflict; FL-26 AB 1482 / banked amounts above 8.8%; FL-27 Form 571 printed title; FL-28 time-critical notice dates; plus the sf.gov banking worked-example inconsistency (1.4% for August 2024 against Form 571's 1.7%, already FL-19).
 
 **Requests to other sessions / owner:** none edit a file owned by another session. The root hub (`index.html`) does not link to `/handbook/`; that change is held by the stale claim `arena-2c7b19e2` and is offered as option S-05 on the decisions page. `handbook/verify.py` is not run by any workflow in `.github/workflows/`; adding it is offered as option S-06 and needs a workflow change that this session did not make.
+
+### `arena-53e8f072` — pull request and deployment record (S53-5)
+
+| Item | Value |
+| --- | --- |
+| Pull request | [PR #60](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/60) — *handbook: 2026-11-13 re-verification, direct state/local answers, flags FL-25..FL-28, decisions & suggestions page (arena-53e8f072)* |
+| Pre-merge checks | `Verify site`, `Verify published site`, `Final assurance`: all **pass**; merge state `CLEAN`, `MERGEABLE` |
+| Merge result | **MERGED** into `main` at 2026-11-13T06:53:19Z as merge commit `0ecf3e5ad6a712efbf69e5ccb9523aac6159ea2f` (`gh pr merge 60 --merge`, no auto-merge) |
+| Post-merge `main` CI (`0ecf3e5`) | `Verify site` success, `Verify published site` success, `Final assurance` success |
+| GitHub Pages | `pages build and deployment` **success** for `0ecf3e5`; Pages API build `status=built`, legacy publishing from `main /`. Live pages: https://kanlerxz87-cyber.github.io/RentincreaseSF1/handbook/ (new page: `decision-questions.html`). The sandbox cannot reach `*.github.io` (HTTP 000), so the deployment is evidenced by the Pages build record and by the files returned from the GitHub contents API on `main`. |
+| Final local verification on the merged tree | `handbook/verify.py` 2,412 checks / 0 errors; `tools/check_links.py` OK; `integration/verify.py` PASS; `build/build.py` no diff in `docs/v2/`; `tools/check_site.py` 781 checks; `hub/build.py` no diff in `index.html`/`hub/`; `assurance/build.py`; `tools/verify_hub.py` 1,627; `tools/verify_assurance.py` 1,902 |
+
+**S53-1 to S53-5: done.** Open items are the owner's decisions on the Decisions & Suggestions page (S-01 to S-09) and the legal questions FL-25 and FL-26. Their official-confirmation cells stay blank, and none blocks the merge.
