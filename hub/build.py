@@ -62,11 +62,14 @@ def longdate(s: str) -> str:
     return "{} {} {}".format(x.day, x.strftime("%B"), x.year)
 
 
-def src_links(ids, page="@@/hub/sources.html") -> str:
+def ref_links(ids, page="@@/hub/sources.html") -> str:
     out = []
     for i in ids:
-        s = SRC[i]
-        out.append(
+        if i.startswith("H"):
+            out.append('<a href="{0}#{1}" title="Flag {1}">{1}</a>'.format(page, i))
+        else:
+            s = SRC[i]
+            out.append(
             '<a href="{}#{}" title="{} — {}">{}</a>'.format(
                 page, i, esc(s["publisher"]), esc(s["title"]), i
             )
@@ -296,6 +299,7 @@ index_body = """
     <a class="cardlink" href="@@/hub/flags.html"><strong>Flagged for Review</strong><span>{flag_count} unresolved facts, source irregularities, and explicit blanks.</span></a>
     <a class="cardlink" href="@@/hub/sources.html"><strong>Sources</strong><span>{source_count} official sources with verbatim supporting passages and retrieval dates.</span></a>
     <a class="cardlink" href="assurance/index.html"><strong>Independent assurance</strong><span>What the final audit changed, what was recomputed, and which risks remain open.</span></a>
+    <a class="cardlink" href="hub/suggestions.html"><strong>Suggestions &amp; missing information</strong><span>Review-before-implement decision paths, decisions not yet supported, and how to discover what is still unknown.</span></a>
   </div>
 </section>
 
@@ -311,6 +315,16 @@ index_body = """
 </section>
 
 <section>
+<section>
+  <h2>State or local law — the 2023 question<span class="sub">Is there a 2023 law requiring Rent Board notification of rent increases?</span></h2>
+  <div class="answer">
+    <p><strong>It is local San Francisco law — not state law — and it is an annual report, not a per-increase filing.</strong></p>
+    <p>The San Francisco Rent Ordinance (Chapter 37 of the San Francisco Administrative Code) requires owners of units subject to Chapter 37 to report information about each unit to the Rent Board on the Housing Inventory form, and a landlord must have a current rent increase license on file before any annual or banked rent increase goes into effect. For units in buildings with fewer than 10 units — including this reported two-unit building — reporting commenced March 1, 2023 and is updated annually by March 1 {s36} {s01} {s03}.</p>
+    <p>California has no statewide rent board, and no California statute requires a landlord to notify or file with a rent board before raising rent. SB 567 (Durazo, chaptered September 30, 2023) amends Civil Code sections 1946.2 and 1947.12 — the just-cause termination and rent-cap provisions — including a duty to notify tenants of those rights, and it expressly does not preempt local rent control {s35}. The state notice rule (Civil Code section 827) requires written notice to the tenant — 30 days at 10 percent or less, 90 days above 10 percent — plus five calendar days for California mail: notice to the tenant, not a filing with any board {s08} {s21}.</p>
+    <p><strong>What this means for these units:</strong> there is no Rent Board application for approval of an ordinary annual or banked increase, no per-increase notice to the Board, and no state rent increase licence. The steps are: report or update the Housing Inventory each year by March 1; hold a current licence when the increase takes effect (generated after reporting, free); then serve a conforming written notice to the tenant {s03} {s01} {s05}. Coverage, current licences, ledgers, and lease status remain blank and flagged — see <a href="@@/hub/flags.html">Flagged for Review</a>.</p>
+    <p class="small"><strong>Scope limits:</strong> this answers the state-versus-local question only. It does not confirm coverage, current licences, ledgers, or lease status — those remain blank and flagged (H-02, H-04, H-05, H-17, H-18).</p>
+  </div>
+</section>
   <h2>Official confirmations deliberately blank<span class="sub">Owner-brief inputs remain visible as scenario inputs; these official-confirmation cells are not inferred.</span></h2>
   <div class="tablewrap"><table class="data-table">
   <caption>Blank means not independently confirmed, not zero and not “verified.”</caption>
@@ -350,7 +364,7 @@ for key, n in (("U1", u1), ("U2", u2)):
         "{} = {}".format(pct(n["annual_pct"]), money(n["annual_amt"])),
         "{} = {}".format(pct(n["total_pct"]), money(n["total_amt"])),
         '<span class="num">' + money(n["total_rent"]) + "</span>",
-        src_links(["S05", "S06"] if key == "U2" else ["S05", "S06", "S20"]),
+        ref_links(["S05", "S06"] if key == "U2" else ["S05", "S06", "S20"]),
     ])
 
 unit_table = table(
@@ -361,14 +375,14 @@ unit_table = table(
 )
 
 q_rows = [
-    ["Must an individual owner inform the Rent Board and obtain a license before notifying tenants?", "Each unit needs a current license on the increase's effective date; complete reporting before notice as the safer sequence. No separate per-increase approval or notice filing is required for ordinary annual/banked increases.", '<a href="@@/hub/licensing.html">Licence &amp; Board</a>', src_links(["S01", "S03", "S04"])],
-    ["What is reasonable and normal under local, state, and federal law?", "The routine local scenario is the published 1.6% annual allowance. Properly proven banked amounts are separate. The 8.8% state cap does not apply to these locally controlled units; federal fair-housing rules still apply. No official ZIP-specific market norm was located.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S05", "S09", "S10", "S14", "S33"])],
-    ["How do corporate and individual owners handle increases?", "The same SF duties apply. A DOJ enforcement example documents allegations about portfolio-scale pricing tools, not universal corporate behavior; no official SF behavior-by-owner-type dataset was located.", '<a href="@@/hub/practice.html">Owner practice</a>', src_links(["S02", "S16", "S22"])],
-    ["How should tenants be told, and what reasons are defensible?", "Use written notice under Civil Code §827 with dollar amount, percentage, effective date, and annual/banked details; add five calendar days for California mail. Use the published allowance or proven banked basis, not retaliation or a roommate surcharge.", '<a href="@@/hub/notice.html">Notice &amp; reasons</a>', src_links(["S08", "S21", "S02"])],
-    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, service evidence, and the pending banked-increase proposal. Arithmetic alone is not a legal clearance.".format(len(DATA["review_rows"])), '<a href="@@/hub/review.html">Lawyer test</a>', src_links(["S20", "S03", "S23"])],
-    ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', src_links(["S13", "S14", "S15"])],
-    ["Does Unit 1's April 2026 occupant change allow a market-rate reset?", "No, on the reported facts. One original occupant remained, and both reset routes are keyed to the last original occupant leaving. Whether a §6.14 notice was served, and whether the incoming occupant is a co-tenant or a subtenant, are open private facts.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', src_links(["S27", "S28", "S29"])],
-    ["What is still unverified?", "{} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.".format(len(DATA["flags"])), '<a href="@@/hub/flags.html">Flagged for Review</a>', src_links(["S20", "S04", "S03"])],
+    ["Must an individual owner inform the Rent Board and obtain a license before notifying tenants?", "Each unit needs a current license on the increase's effective date; complete reporting before notice as the safer sequence. No separate per-increase approval or notice filing is required for ordinary annual/banked increases.", '<a href="@@/hub/licensing.html">Licence &amp; Board</a>', ref_links(["S01", "S03", "S04"])],
+    ["What is reasonable and normal under local, state, and federal law?", "The routine local scenario is the published 1.6% annual allowance. Properly proven banked amounts are separate. The 8.8% state cap does not apply to these locally controlled units; federal fair-housing rules still apply. No official ZIP-specific market norm was located.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', ref_links(["S05", "S09", "S10", "S14", "S33"])],
+    ["How do corporate and individual owners handle increases?", "The same SF duties apply. A DOJ enforcement example documents allegations about portfolio-scale pricing tools, not universal corporate behavior; no official SF behavior-by-owner-type dataset was located.", '<a href="@@/hub/practice.html">Owner practice</a>', ref_links(["S02", "S16", "S22"])],
+    ["How should tenants be told, and what reasons are defensible?", "Use written notice under Civil Code §827 with dollar amount, percentage, effective date, and annual/banked details; add five calendar days for California mail. Use the published allowance or proven banked basis, not retaliation or a roommate surcharge.", '<a href="@@/hub/notice.html">Notice &amp; reasons</a>', ref_links(["S08", "S21", "S02"])],
+    ["Would the notice withstand tenant-side scrutiny?", "Not yet established. {} checks remain, including the fixed-term instrument, current base, ledgers, licenses, repairs, retaliation, occupant status, service evidence, and the pending banked-increase proposal. Arithmetic alone is not a legal clearance.".format(len(DATA["review_rows"])), '<a href="@@/hub/review.html">Lawyer test</a>', ref_links(["S20", "S03", "S23"])],
+    ["Does raising one or both units create discrimination risk?", "Raising one is not automatically discrimination; selecting by protected characteristic or retaliating can be unlawful. Identical increases are not a safe harbour, and an ineligible unit should never be raised merely for symmetry.", '<a href="@@/hub/fair-housing.html">One unit or both</a>', ref_links(["S13", "S14", "S15"])],
+    ["Does Unit 1's April 2026 occupant change allow a market-rate reset?", "No, on the reported facts. One original occupant remained, and both reset routes are keyed to the last original occupant leaving. Whether a §6.14 notice was served, and whether the incoming occupant is a co-tenant or a subtenant, are open private facts.", '<a href="@@/hub/limits.html">Limits &amp; amounts</a>', ref_links(["S27", "S28", "S29"])],
+    ["What is still unverified?", "{} flags, led by Unit 1 lease status, Unit 2 current base and history, both licenses, and official coverage. Unsupported confirmation cells are blank.".format(len(DATA["flags"])), '<a href="@@/hub/flags.html">Flagged for Review</a>', ref_links(["S20", "S04", "S03"])],
 ]
 q_table = table(["Question", "Short answer", "Detail", "Source"], q_rows, cls="data-table")
 
@@ -390,9 +404,10 @@ index_html = page(
         unit_table=unit_table, q_table=q_table,
         flag_count=len(DATA["flags"]), source_count=len(DATA["sources"]),
         n=len(DATA["review_rows"]),
-        s03=src_links(["S03"]), s04=src_links(["S04"]), s05=src_links(["S05"]), s06=src_links(["S06"]),
-        s18=src_links(["S18"]), s20=src_links(["S20"]), s22=src_links(["S22"]),
-        s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]),
+        s03=ref_links(["S03"]), s04=ref_links(["S04"]), s05=ref_links(["S05"]), s06=ref_links(["S06"]),
+        s18=ref_links(["S18"]), s20=ref_links(["S20"]), s22=ref_links(["S22"]),
+        s24=ref_links(["S24"]), s25=ref_links(["S25"]), s26=ref_links(["S26"]),
+        s01=ref_links(["S01"]), s08=ref_links(["S08"]), s21=ref_links(["S21"]), s35=ref_links(["S35"]), s36=ref_links(["S36"]),
         h21='<a href="@@/hub/flags.html#H-21">H-21</a>', h22='<a href="@@/hub/flags.html#H-22">H-22</a>',
         b_ok=badge("ok", "Verified"), b_calc=badge("calc", "Calculated"),
         b_flag=badge("flag", "Flag"), b_unv=badge("unv", "Unverified"),
@@ -407,7 +422,7 @@ for step in DATA["licensing_steps"]:
         "<strong>{}</strong>".format(esc(step["question"])),
         esc(step["answer"]),
         status_badge(step["status"]),
-        src_links(step["sources"]),
+        ref_links(step["sources"]),
     ])
 lic_table = table(
     ["#", "Question", "Answer, from the official text", "Status", "Source"],
@@ -423,29 +438,29 @@ for s in DATA["process_steps"]:
         "<strong>{}</strong>".format(esc(s["action"])),
         esc(s["detail"]),
         status_badge(s["status"]),
-        src_links(s["sources"]),
+        ref_links(s["sources"]),
     ])
 proc_table = table(["Step", "Action", "What to do, and why", "Status", "Source"], proc_rows,
                    caption="The compliance sequence, in order. Steps 1 and 2 decide whether the rest is usable.", cls="data-table")
 
 challenge_rows = [
-    ["No current license on the effective date", "Authority is suspended; the tenant need not pay the increase for suspension months. Restoration is prospective.", src_links(["S01", "S03"])],
-    ["Annual/banked itemisation or banked dates omitted", "Include them. Section 37.3(b)(5) states a null-and-void rule, but Rule 4.10(b) has an amount-based exception and Rule 4.12(b) expressly says banked-date omission does not itself void the increase.", src_links(["S02", "S07"])],
-    ["Wrong rate for the effective period, compounding, or rounding up", "The calculation exceeds the published allowance; use Form 571 and additive arithmetic.", src_links(["S05", "S06", "S07"])],
-    ["Increase during a fixed term without an agreement permitting it", "Official state guidance says the rent cannot be increased during the fixed term; review Unit 1's April 2026 instrument.", src_links(["S20"])],
-    ["Short personal/mail notice", "Use 30 days at ≤10%, 90 days above 10%, and five extra calendar days for California mail; longer mail extensions can apply elsewhere.", src_links(["S08", "S21"])],
-    ["Protected activity or repairs in the history", "Section 1942.5 requires fact-specific retaliation analysis, not an automatic 180-day bar. A qualifying repair petition can defer an annual increase.", src_links(["S12", "S23"])],
-    ["Bad-faith pressure to vacate or protected-class selection", "Harassment and fair-housing exposure; parallel percentages do not cure motive.", src_links(["S15", "S13", "S14"])],
-    ["A rent increase solely because an occupant joined", "Prohibited even if a lease purports to allow it. Any separate cost petition is not established by this record.", src_links(["S02", "S05"])],
+    ["No current license on the effective date", "Authority is suspended; the tenant need not pay the increase for suspension months. Restoration is prospective.", ref_links(["S01", "S03"])],
+    ["Annual/banked itemisation or banked dates omitted", "Include them. Section 37.3(b)(5) states a null-and-void rule, but Rule 4.10(b) has an amount-based exception and Rule 4.12(b) expressly says banked-date omission does not itself void the increase.", ref_links(["S02", "S07"])],
+    ["Wrong rate for the effective period, compounding, or rounding up", "The calculation exceeds the published allowance; use Form 571 and additive arithmetic.", ref_links(["S05", "S06", "S07"])],
+    ["Increase during a fixed term without an agreement permitting it", "Official state guidance says the rent cannot be increased during the fixed term; review Unit 1's April 2026 instrument.", ref_links(["S20"])],
+    ["Short personal/mail notice", "Use 30 days at ≤10%, 90 days above 10%, and five extra calendar days for California mail; longer mail extensions can apply elsewhere.", ref_links(["S08", "S21"])],
+    ["Protected activity or repairs in the history", "Section 1942.5 requires fact-specific retaliation analysis, not an automatic 180-day bar. A qualifying repair petition can defer an annual increase.", ref_links(["S12", "S23"])],
+    ["Bad-faith pressure to vacate or protected-class selection", "Harassment and fair-housing exposure; parallel percentages do not cure motive.", ref_links(["S15", "S13", "S14"])],
+    ["A rent increase solely because an occupant joined", "Prohibited even if a lease purports to allow it. Any separate cost petition is not established by this record.", ref_links(["S02", "S05"])],
 ]
 challenge_table = table(["What a tenant or advocate would challenge", "Consequence", "Source"], challenge_rows, cls="data-table")
 
 not_licence_rows = [
-    ["A fee", "The licence is free: &ldquo;Reporting is free and can be done online 24/7&rdquo;.", src_links(["S03"])],
-    ["Approval of the percentage", "Banked increases &ldquo;do not have to be approved by the Rent Board&rdquo;; the allowance is published by the Board for everyone.", src_links(["S04", "S05"])],
-    ["A copy of the notice sent to the Board", "No such filing appears in §37.3 (what the tenant must be told) or §37.15 (what the Board must be told).", src_links(["S02", "S01"])],
-    ["The same thing as the annual Rent Board fee", "$59.00 per dwelling unit for 2026-2027, due 1 March unless exempt. After full payment, 50% may be recoverable only from tenants in occupancy on the applicable November 1; penalties are not recoverable. Keep any recovery separate from base rent.", src_links(["S17", "S03"])],
-    ["Attached to the notice", "&ldquo;The rent increase license does not need to be included with your rent increase notice.&rdquo;", src_links(["S03"])],
+    ["A fee", "The licence is free: &ldquo;Reporting is free and can be done online 24/7&rdquo;.", ref_links(["S03"])],
+    ["Approval of the percentage", "Banked increases &ldquo;do not have to be approved by the Rent Board&rdquo;; the allowance is published by the Board for everyone.", ref_links(["S04", "S05"])],
+    ["A copy of the notice sent to the Board", "No such filing appears in §37.3 (what the tenant must be told) or §37.15 (what the Board must be told).", ref_links(["S02", "S01"])],
+    ["The same thing as the annual Rent Board fee", "$59.00 per dwelling unit for 2026-2027, due 1 March unless exempt. After full payment, 50% may be recoverable only from tenants in occupancy on the applicable November 1; penalties are not recoverable. Keep any recovery separate from base rent.", ref_links(["S17", "S03"])],
+    ["Attached to the notice", "&ldquo;The rent increase license does not need to be included with your rent increase notice.&rdquo;", ref_links(["S03"])],
 ]
 not_licence_table = table(["The licence is not…", "What the official text says", "Source"], not_licence_rows, cls="data-table")
 
@@ -465,6 +480,14 @@ licensing_body = """
   </div>
 </section>
 <section>
+<section>
+  <h2>State versus local — whose law?<span class="sub">Sec. 37.15 is San Francisco local law; the 2023 state law creates no Rent Board filing duty.</span></h2>
+  <div class="answer">
+    <p><strong>The duty is local, not state.</strong> The San Francisco Rent Ordinance is Chapter 37 of the San Francisco Administrative Code {s36}. Section 37.15 requires owners of units subject to Chapter 37 to report information about each unit to the Rent Board on the Housing Inventory form, and a landlord must have a current rent increase license on file before any annual or banked rent increase goes into effect. For units in buildings with fewer than 10 units — including this reported two-unit building — reporting commenced March 1, 2023 and is updated annually by March 1 {s36} {s01} {s03}.</p>
+    <p>California has no statewide rent board, and no California statute requires a landlord to notify or file with a rent board before raising rent. SB 567 (Durazo, chaptered September 30, 2023) amends Civil Code sections 1946.2 and 1947.12 — the just-cause termination and rent-cap provisions — including a duty to notify tenants of those rights, and it expressly does not preempt local rent control {s35}. The state notice rule (Civil Code section 827) requires written notice to the tenant — 30 days at 10 percent or less, 90 days above 10 percent — plus five calendar days for California mail: notice to the tenant, not a filing with any board {s08} {s21}.</p>
+    <p><strong>What this means practically:</strong> there is no Rent Board application for approval of an ordinary annual or banked increase, no per-increase notice to the Board, and no state rent increase licence {s03} {s01} {s05}. Annual and banked increases do not have to be approved by the Rent Board {s04}. The compliance steps are: report or update the Housing Inventory each year by March 1; hold a current licence when the increase takes effect (generated after reporting, free); then serve a conforming written notice to the tenant.</p>
+  </div>
+</section>
   <h2>Question by question<span class="sub">Every answer has an official link; private license status remains blank.</span></h2>
   {lic_table}
 </section>
@@ -493,9 +516,10 @@ licensing_body = """
 </section>
 
 """.format(lic_table=lic_table, proc_table=proc_table, challenge_table=challenge_table,
-           not_licence_table=not_licence_table, s19=src_links(["S19"]),
-           s03=src_links(["S03"]), s17=src_links(["S17"]),
-           s24=src_links(["S24"]), s25=src_links(["S25"]), s26=src_links(["S26"]))
+           not_licence_table=not_licence_table, s19=ref_links(["S19"]),
+           s03=ref_links(["S03"]), s17=ref_links(["S17"]),
+           s24=ref_links(["S24"]), s25=ref_links(["S25"]), s26=ref_links(["S26"]),
+           s01=ref_links(["S01"]), s04=ref_links(["S04"]), s05=ref_links(["S05"]), s08=ref_links(["S08"]), s21=ref_links(["S21"]), s35=ref_links(["S35"]), s36=ref_links(["S36"]))
 
 licensing_html = page(
     "hub/licensing.html",
@@ -518,7 +542,7 @@ for r in DATA["rates"]:
         ("<strong>{}</strong>".format(pct(r["pct"])) if cur else pct(r["pct"]), "num"),
         "{} – {}".format(r["start"].replace("-", "/"), r["end"].replace("-", "/")),
         badge("ok", "Current") if cur else "",
-        src_links(["S06"]),
+        ref_links(["S06"]),
     ])
 rate_table = table([("Allowance", "num"), "Effective period", "Status", "Source"], rate_rows,
                    caption="Every percentage published by the Rent Board, 1982 to 2027, from Form 571.", cls="data-table")
@@ -535,43 +559,43 @@ for key, label in (("U1", "Unit 1"), ("U2", "Unit 2")):
             pct(b["pct"]),
             money((n["base"] * Decimal(b["pct"]) / Decimal(100)).quantize(C, rounding=ROUND_HALF_UP)),
             badge("flag", "Scenario — verify ledger") if b["conditional"] else badge("ok", "Banked"),
-            src_links(["S04", "S06"]),
+            ref_links(["S04", "S06"]),
         ])
     bank_rows.extend(rows)
-bank_rows.append(["Unit 1", "Current annual component; scenario effective " + longdate(N["U1"]["effective"].isoformat()), pct(N["U1"]["annual_pct"]), money(N["U1"]["annual_amt"]), badge("calc", "Arithmetic only"), src_links(["S05", "S06", "S20"])])
-bank_rows.append(["Unit 2", "Current annual component; scenario effective " + longdate(N["U2"]["effective"].isoformat()), pct(N["U2"]["annual_pct"]), money(N["U2"]["annual_amt"]), badge("calc", "Arithmetic only"), src_links(["S05", "S06"])])
+bank_rows.append(["Unit 1", "Current annual component; scenario effective " + longdate(N["U1"]["effective"].isoformat()), pct(N["U1"]["annual_pct"]), money(N["U1"]["annual_amt"]), badge("calc", "Arithmetic only"), ref_links(["S05", "S06", "S20"])])
+bank_rows.append(["Unit 2", "Current annual component; scenario effective " + longdate(N["U2"]["effective"].isoformat()), pct(N["U2"]["annual_pct"]), money(N["U2"]["annual_amt"]), badge("calc", "Arithmetic only"), ref_links(["S05", "S06"])])
 bank_table = table(["Unit", "Anniversary the allowance belongs to", ("Allowance", "num"), ("Monthly value", "num"), "Status", "Source"], bank_rows,
                    caption="Banked and current allowances, unit by unit. The percentages are added, never compounded.", cls="data-table")
 
 layer_rows = [
-    ["Local — SF Rent Ordinance", "1.6% annual allowance for increases effective 1 Mar 2026 – 28 Feb 2027; properly proven banked amounts are added without compounding or rounding up; license and notice rules apply.", "Controls the routine annual scenario on the brief's rent-controlled premise; official coverage and private facts remain unverified.", src_links(["S02", "S05", "S06", "S07"])],
-    ["State — AB 1482 / Civil Code §1947.12", "5% + CPI or 10%, whichever is lower; 8.8% for San Francisco from 1 Aug 2026 to 31 Jul 2027.", "The rent-cap provision excludes housing under a local ordinance restricting annual increases below the state cap. This does not erase other applicable state duties.", src_links(["S09", "S10"])],
-    ["State — Costa-Hawkins, Civil Code §1954.53", "Vacancy rules depend on original occupants and partial changes in occupancy.", "The brief says one original Unit 1 occupant remains, so no vacancy reset is supported by that reported fact. Continuous occupancy and occupant status still require documents.", src_links(["S11", "S02"])],
-    ["State — fixed-term guidance", "During a fixed term, rent cannot be increased unless the agreement permits it; renewal is another possible increase point.", "Unit 1's April 2026 instrument is indispensable. If an unmodified fixed term ends March 31, 2027, the February scenario is unavailable.", src_links(["S20"])],
-    ["State — Civil Code §827 / CCP §1013", "30 days at ≤10%; 90 days above 10%; five extra calendar days for California-to-California mail, with longer extensions in other cases.", "Sets notice procedure, not permission to override a fixed term or missing license.", src_links(["S08", "S21"])],
-    ["Federal — fair housing", "The Fair Housing Act prohibits discrimination in rental terms and conditions. No general federal percentage cap for private unsubsidized housing was located in this scoped review; subsidy-specific rules were not evaluated.", "Owner-neutral selection and retaliation analysis still applies. This is a scoped negative finding, not a claim about every possible federal program.", src_links(["S14", "S33"])],
+    ["Local — SF Rent Ordinance", "1.6% annual allowance for increases effective 1 Mar 2026 – 28 Feb 2027; properly proven banked amounts are added without compounding or rounding up; license and notice rules apply.", "Controls the routine annual scenario on the brief's rent-controlled premise; official coverage and private facts remain unverified.", ref_links(["S02", "S05", "S06", "S07"])],
+    ["State — AB 1482 / Civil Code §1947.12", "5% + CPI or 10%, whichever is lower; 8.8% for San Francisco from 1 Aug 2026 to 31 Jul 2027.", "The rent-cap provision excludes housing under a local ordinance restricting annual increases below the state cap. This does not erase other applicable state duties.", ref_links(["S09", "S10"])],
+    ["State — Costa-Hawkins, Civil Code §1954.53", "Vacancy rules depend on original occupants and partial changes in occupancy.", "The brief says one original Unit 1 occupant remains, so no vacancy reset is supported by that reported fact. Continuous occupancy and occupant status still require documents.", ref_links(["S11", "S02"])],
+    ["State — fixed-term guidance", "During a fixed term, rent cannot be increased unless the agreement permits it; renewal is another possible increase point.", "Unit 1's April 2026 instrument is indispensable. If an unmodified fixed term ends March 31, 2027, the February scenario is unavailable.", ref_links(["S20"])],
+    ["State — Civil Code §827 / CCP §1013", "30 days at ≤10%; 90 days above 10%; five extra calendar days for California-to-California mail, with longer extensions in other cases.", "Sets notice procedure, not permission to override a fixed term or missing license.", ref_links(["S08", "S21"])],
+    ["Federal — fair housing", "The Fair Housing Act prohibits discrimination in rental terms and conditions. No general federal percentage cap for private unsubsidized housing was located in this scoped review; subsidy-specific rules were not evaluated.", "Owner-neutral selection and retaliation analysis still applies. This is a scoped negative finding, not a claim about every possible federal program.", ref_links(["S14", "S33"])],
 ]
 layer_table = table(["Level", "What it says", "Effect on these two units", "Source"], layer_rows, cls="data-table")
 
 u1_rows = [
-    ["Scenario input rent", money(N["U1"]["base"]), "Reported at lease start and again April 1, 2026; current composition and ledger unverified. " + '<a href="@@/hub/flags.html#H-02">H-02</a> ' + src_links(["S05"])],
-    ["Lease gate", "Fixed-term/month-to-month unknown", "Do not use February 1, 2027 until the April 2026 instrument is checked. " + '<a href="@@/hub/flags.html#H-17">H-17</a> ' + src_links(["S20"])],
-    ["Annual-only arithmetic", "1.6% × {0} = {1}; illustrative new rent {2}".format(money(N["U1"]["base"]), money(N["U1"]["annual_amt"]), money(N["U1"]["annual_rent"])), "Conditional scenario, not a certified current lawful rent. " + src_links(["S05", "S06"])],
-    ["Skipped-allowance arithmetic", "1.4% × {0} = {1}".format(money(N["U1"]["base"]), money(N["U1"]["banked_amt"])), "Potential component only if the actual history supports it. " + src_links(["S06", "S07"])],
-    ["Combined scenario", "3.0% = {0}; illustrative new rent {1}".format(money(N["U1"]["total_amt"]), money(N["U1"]["total_rent"])), badge("flag", "Conditional") + ' <a href="@@/hub/flags.html#H-02">H-02</a> <a href="@@/hub/flags.html#H-17">H-17</a> ' + src_links(["S04", "S07"])],
-    ["Banking measuring points", "February 1, 2027 satisfies both in this scenario", "24 months without an increase and 12 months after the skipped allowance became available; this is not a proven 12/24 conflict. " + '<a href="@@/hub/flags.html#H-01">H-01</a> ' + src_links(["S04", "S07"])],
-    ["Notice band if the scenario is otherwise lawful", "30 days; 35 days for California mail", "Notice never cures fixed-term, license, ledger, or coverage defects. " + src_links(["S08", "S21"])],
+    ["Scenario input rent", money(N["U1"]["base"]), "Reported at lease start and again April 1, 2026; current composition and ledger unverified. " + '<a href="@@/hub/flags.html#H-02">H-02</a> ' + ref_links(["S05"])],
+    ["Lease gate", "Fixed-term/month-to-month unknown", "Do not use February 1, 2027 until the April 2026 instrument is checked. " + '<a href="@@/hub/flags.html#H-17">H-17</a> ' + ref_links(["S20"])],
+    ["Annual-only arithmetic", "1.6% × {0} = {1}; illustrative new rent {2}".format(money(N["U1"]["base"]), money(N["U1"]["annual_amt"]), money(N["U1"]["annual_rent"])), "Conditional scenario, not a certified current lawful rent. " + ref_links(["S05", "S06"])],
+    ["Skipped-allowance arithmetic", "1.4% × {0} = {1}".format(money(N["U1"]["base"]), money(N["U1"]["banked_amt"])), "Potential component only if the actual history supports it. " + ref_links(["S06", "S07"])],
+    ["Combined scenario", "3.0% = {0}; illustrative new rent {1}".format(money(N["U1"]["total_amt"]), money(N["U1"]["total_rent"])), badge("flag", "Conditional") + ' <a href="@@/hub/flags.html#H-02">H-02</a> <a href="@@/hub/flags.html#H-17">H-17</a> ' + ref_links(["S04", "S07"])],
+    ["Banking measuring points", "February 1, 2027 satisfies both in this scenario", "24 months without an increase and 12 months after the skipped allowance became available; this is not a proven 12/24 conflict. " + '<a href="@@/hub/flags.html#H-01">H-01</a> ' + ref_links(["S04", "S07"])],
+    ["Notice band if the scenario is otherwise lawful", "30 days; 35 days for California mail", "Notice never cures fixed-term, license, ledger, or coverage defects. " + ref_links(["S08", "S21"])],
 ]
 u1_table = table(["Item", "Value", "Basis and source"], u1_rows, cls="data-table")
 
 u2_rows = [
-    ["Scenario input rent", money(N["U2"]["base"]), "Supplied only as the June 1, 2019 lease-start rent, not expressly as current base. " + '<a href="@@/hub/flags.html#H-18">H-18</a> ' + src_links(["S05"])],
-    ["Annual-only arithmetic", "1.6% × {0} = {1}; illustrative new rent {2}".format(money(N["U2"]["base"]), money(N["U2"]["annual_amt"]), money(N["U2"]["annual_rent"])), "Conditional on actual current base, timing, license, and notice. " + src_links(["S05", "S06"])],
-    ["Potentially banked components", "1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5% = {0}".format(money(N["U2"]["banked_amt"])), "Six components, conditional on a no-prior-increase ledger and valid anniversaries. " + '<a href="@@/hub/flags.html#H-03">H-03</a> ' + src_links(["S04", "S06", "S07"])],
-    ["Combined illustration", "13.1% = {0}; illustrative new rent {1}".format(money(N["U2"]["total_amt"]), money(N["U2"]["total_rent"])), badge("flag", "Not a certified lawful maximum") + ' <a href="@@/hub/flags.html#H-18">H-18</a> <a href="@@/hub/flags.html#H-03">H-03</a> ' + src_links(["S04", "S07"])],
-    ["Compounding", "Not used", "Percentages are added and not rounded up. " + src_links(["S07", "S04"])],
-    ["Notice band for the combined illustration", "90 days; 95 days for California mail", "The 10% threshold concerns notice, not a cap on valid banked totals. " + src_links(["S04", "S08", "S21"])],
-    ["Latest date for the 1.6% component", longdate("2027-02-28"), "Later effective dates require the unpublished 2027–28 rate; its official value is blank. " + '<a href="@@/hub/flags.html#H-08">H-08</a> ' + src_links(["S06"])],
+    ["Scenario input rent", money(N["U2"]["base"]), "Supplied only as the June 1, 2019 lease-start rent, not expressly as current base. " + '<a href="@@/hub/flags.html#H-18">H-18</a> ' + ref_links(["S05"])],
+    ["Annual-only arithmetic", "1.6% × {0} = {1}; illustrative new rent {2}".format(money(N["U2"]["base"]), money(N["U2"]["annual_amt"]), money(N["U2"]["annual_rent"])), "Conditional on actual current base, timing, license, and notice. " + ref_links(["S05", "S06"])],
+    ["Potentially banked components", "1.8 + 0.7 + 2.3 + 3.6 + 1.7 + 1.4 = 11.5% = {0}".format(money(N["U2"]["banked_amt"])), "Six components, conditional on a no-prior-increase ledger and valid anniversaries. " + '<a href="@@/hub/flags.html#H-03">H-03</a> ' + ref_links(["S04", "S06", "S07"])],
+    ["Combined illustration", "13.1% = {0}; illustrative new rent {1}".format(money(N["U2"]["total_amt"]), money(N["U2"]["total_rent"])), badge("flag", "Not a certified lawful maximum") + ' <a href="@@/hub/flags.html#H-18">H-18</a> <a href="@@/hub/flags.html#H-03">H-03</a> ' + ref_links(["S04", "S07"])],
+    ["Compounding", "Not used", "Percentages are added and not rounded up. " + ref_links(["S07", "S04"])],
+    ["Notice band for the combined illustration", "90 days; 95 days for California mail", "The 10% threshold concerns notice, not a cap on valid banked totals. " + ref_links(["S04", "S08", "S21"])],
+    ["Latest date for the 1.6% component", longdate("2027-02-28"), "Later effective dates require the unpublished 2027–28 rate; its official value is blank. " + '<a href="@@/hub/flags.html#H-08">H-08</a> ' + ref_links(["S06"])],
 ]
 u2_table = table(["Item", "Value", "Basis and source"], u2_rows, cls="data-table")
 
@@ -581,7 +605,7 @@ for r in DATA["occupancy_rows"]:
         "<strong>{}</strong>".format(esc(r["situation"])),
         esc(r["rule"]),
         esc(r["effect"]),
-        src_links(r["sources"]),
+        ref_links(r["sources"]),
     ])
 occupancy_table = table(["Situation", "What the official rule says", "Effect on these units", "Source"],
                         occupancy_rows_html,
@@ -629,8 +653,8 @@ limits_body = """
 """.format(layer_table=layer_table, rate_table=rate_table, u1_table=u1_table, u2_table=u2_table,
            bank_table=bank_table, occupancy_table=occupancy_table,
            u1_base=money(N["U1"]["base"]), u2_base=money(N["U2"]["base"]),
-           u1_banked=money(N["U1"]["banked_amt"]), s04=src_links(["S04"]), s05=src_links(["S05"]),
-           s07=src_links(["S07"]), s26=src_links(["S26"]), s28=src_links(["S28"]), s29=src_links(["S29"]))
+           u1_banked=money(N["U1"]["banked_amt"]), s04=ref_links(["S04"]), s05=ref_links(["S05"]),
+           s07=ref_links(["S07"]), s26=ref_links(["S26"]), s28=ref_links(["S28"]), s29=ref_links(["S29"]))
 
 limits_html = page(
     "hub/limits.html",
@@ -648,14 +672,14 @@ limits_html = page(
 # --------------------------------------------------------------------------- notice
 notice_rows_html = []
 for r in DATA["notice_rows"]:
-    notice_rows_html.append([esc(r["item"]), esc(r["detail"]), src_links(r["sources"])])
+    notice_rows_html.append([esc(r["item"]), esc(r["detail"]), ref_links(r["sources"])])
 notice_table = table(["Required element", "Detail", "Source"], notice_rows_html, cls="data-table")
 
 deadline_rows = [
-    ["Unit 1 — annual-only scenario", money(N["U1"]["annual_amt"]), "30 days", longdate(N["U1"]["short_serve_by"].isoformat()), longdate(N["U1"]["short_mail_by"].isoformat()), longdate(N["U1"]["effective"].isoformat()), src_links(["S08", "S20", "S21"])],
-    ["Unit 1 — combined scenario", money(N["U1"]["total_amt"]), "30 days", longdate(N["U1"]["serve_by"].isoformat()), longdate(N["U1"]["mail_by"].isoformat()), longdate(N["U1"]["effective"].isoformat()), src_links(["S08", "S20", "S21"])],
-    ["Unit 2 — annual-only scenario", money(N["U2"]["annual_amt"]), "30 days", longdate(N["U2"]["short_serve_by"].isoformat()), longdate(N["U2"]["short_mail_by"].isoformat()), longdate(N["U2"]["effective"].isoformat()), src_links(["S08", "S21"])],
-    ["Unit 2 — combined scenario", money(N["U2"]["total_amt"]), "90 days", longdate(N["U2"]["serve_by"].isoformat()), longdate(N["U2"]["mail_by"].isoformat()), longdate(N["U2"]["effective"].isoformat()), src_links(["S08", "S21"])],
+    ["Unit 1 — annual-only scenario", money(N["U1"]["annual_amt"]), "30 days", longdate(N["U1"]["short_serve_by"].isoformat()), longdate(N["U1"]["short_mail_by"].isoformat()), longdate(N["U1"]["effective"].isoformat()), ref_links(["S08", "S20", "S21"])],
+    ["Unit 1 — combined scenario", money(N["U1"]["total_amt"]), "30 days", longdate(N["U1"]["serve_by"].isoformat()), longdate(N["U1"]["mail_by"].isoformat()), longdate(N["U1"]["effective"].isoformat()), ref_links(["S08", "S20", "S21"])],
+    ["Unit 2 — annual-only scenario", money(N["U2"]["annual_amt"]), "30 days", longdate(N["U2"]["short_serve_by"].isoformat()), longdate(N["U2"]["short_mail_by"].isoformat()), longdate(N["U2"]["effective"].isoformat()), ref_links(["S08", "S21"])],
+    ["Unit 2 — combined scenario", money(N["U2"]["total_amt"]), "90 days", longdate(N["U2"]["serve_by"].isoformat()), longdate(N["U2"]["mail_by"].isoformat()), longdate(N["U2"]["effective"].isoformat()), ref_links(["S08", "S21"])],
 ]
 deadline_table = table(["Scenario", ("Increase", "num"), "Notice", "Personal-service arithmetic", "California-mail arithmetic", "Illustrative effective date", "Source"], deadline_rows,
                        caption="Calendar subtraction only, not universal last-safe dates. Fixed-term, ledger, license, coverage, and repair flags must be resolved first.", cls="data-table")
@@ -664,7 +688,7 @@ reason_rows = []
 for r in DATA["reasons"]:
     lawful = r["lawful"]
     cls = "ok" if lawful.startswith("Yes") else ("flag" if "petition" in lawful or "within" in lawful or lawful.startswith("Review") else "high")
-    reason_rows.append([esc(r["reason"]), badge(cls, lawful), esc(r["detail"]), src_links(r["sources"])])
+    reason_rows.append([esc(r["reason"]), badge(cls, lawful), esc(r["detail"]), ref_links(r["sources"])])
 reason_table = table(["Reason for the increase", "Lawful for a sitting tenant?", "What is required", "Source"], reason_rows, cls="data-table")
 
 notice_body = """
@@ -709,7 +733,7 @@ notice_body = """
            u1_base=money(N["U1"]["base"]), u1_annual=money(N["U1"]["annual_amt"]),
            u1_banked=money(N["U1"]["banked_amt"]), u1_annual_rent=money(N["U1"]["annual_rent"]),
            u2_total=money(N["U2"]["total_amt"]), u2_total_rent=money(N["U2"]["total_rent"]),
-           s04=src_links(["S04"]), s26=src_links(["S26"]))
+           s04=ref_links(["S04"]), s26=ref_links(["S26"]))
 
 notice_html = page(
     "hub/notice.html",
@@ -727,7 +751,7 @@ notice_html = page(
 # --------------------------------------------------------------------------- practice
 practice_rows_html = []
 for r in DATA["practice_rows"]:
-    practice_rows_html.append([esc(r["topic"]), esc(r["corporate"]), esc(r["individual"]), src_links(r["sources"])])
+    practice_rows_html.append([esc(r["topic"]), esc(r["corporate"]), esc(r["individual"]), ref_links(r["sources"])])
 practice_table = table(["Topic", "Large / corporate owners", "Individual owners", "Source"], practice_rows_html, cls="data-table")
 
 practice_body = """
@@ -753,9 +777,9 @@ practice_body = """
   <p>Track the March 1 inventory/fee dates, each verified anniversary or lease event, the correct notice period, and the February 28, 2027 end of the current rate. Re-fetch the official rate before any later effective date.</p>
 </section>
 
-""".format(practice_table=practice_table, s16=src_links(["S16"]), s09=src_links(["S09"]),
-           s02=src_links(["S02"]), s01=src_links(["S01"]),
-           s22=src_links(["S22"]), s10=src_links(["S10"]))
+""".format(practice_table=practice_table, s16=ref_links(["S16"]), s09=ref_links(["S09"]),
+           s02=ref_links(["S02"]), s01=ref_links(["S01"]),
+           s22=ref_links(["S22"]), s10=ref_links(["S10"]))
 
 practice_html = page(
     "hub/practice.html",
@@ -773,7 +797,7 @@ practice_html = page(
 # --------------------------------------------------------------------------- fair housing
 fh_rows = []
 for r in DATA["fair_housing_rows"]:
-    fh_rows.append([esc(r["point"]), esc(r["finding"]), status_badge(r["status"]), src_links(r["sources"])])
+    fh_rows.append([esc(r["point"]), esc(r["finding"]), status_badge(r["status"]), ref_links(r["sources"])])
 fh_table = table(["Question", "Answer", "Status", "Source"], fh_rows, cls="data-table")
 
 fh_body = """
@@ -805,8 +829,8 @@ fh_body = """
 </section>
 
 """.format(fh_table=fh_table, u1_base=money(N["U1"]["base"]), u2_base=money(N["U2"]["base"]),
-           s02=src_links(["S02"]), s12=src_links(["S12"]), s16=src_links(["S16"]),
-           s05=src_links(["S05"]), s23=src_links(["S23"]))
+           s02=ref_links(["S02"]), s12=ref_links(["S12"]), s16=ref_links(["S16"]),
+           s05=ref_links(["S05"]), s23=ref_links(["S23"]))
 
 fair_housing_html = page(
     "hub/fair-housing.html",
@@ -829,7 +853,7 @@ for r in DATA["review_rows"]:
         "<strong>{}</strong>".format(esc(r["test"])),
         esc(r["evidence"]),
         status_badge(r["result"]) if r["result"] in STATUS_BADGE else badge("calc", r["result"]),
-        src_links(r["sources"]),
+        ref_links(r["sources"]),
     ])
 review_table = table(["#", "What a tenant-side lawyer checks", "Evidence needed", "Where this file stands", "Source"], review_rows_html,
                      caption="{n} checks. Official rules and arithmetic can be verified here; actual legal sufficiency requires private records and notice evidence.".format(n=len(DATA["review_rows"])), cls="data-table")
@@ -860,8 +884,8 @@ review_body = """
   </ul>
 </section>
 
-""".format(review_table=review_table, s03=src_links(["S03"]), s19=src_links(["S19"]),
-           s18=src_links(["S18"]), s23=src_links(["S23"]))
+""".format(review_table=review_table, s03=ref_links(["S03"]), s19=ref_links(["S19"]),
+           s18=ref_links(["S18"]), s23=ref_links(["S23"]))
 
 review_html = page(
     "hub/review.html",
@@ -886,7 +910,7 @@ for f in DATA["flags"]:
         badge(cls, sev.upper()),
         "<strong>{}</strong>".format(esc(f["item"])),
         esc(f["detail"]) + '<br><span class="small"><strong>Effect:</strong> ' + esc(f["effect"]) + "</span>",
-        src_links(f["sources"]),
+        ref_links(f["sources"]),
         esc(f["action"]),
     ])
 flag_table = table(["ID", "Severity", "Item", "Detail and effect", "Official source", "Action for reviewer"], flag_rows,
@@ -917,9 +941,119 @@ flags_body = """
   </tbody></table></div>
 </section>
 
-""".format(flag_table=flag_table, s03=src_links(["S03"]), s04=src_links(["S04"]),
-           s05=src_links(["S05"]), s06=src_links(["S06"]), s18=src_links(["S18"]),
-           s20=src_links(["S20"]), s22=src_links(["S22"]))
+""".format(flag_table=flag_table, s03=ref_links(["S03"]), s04=ref_links(["S04"]),
+           s05=ref_links(["S05"]), s06=ref_links(["S06"]), s18=ref_links(["S18"]),
+           s20=ref_links(["S20"]), s22=ref_links(["S22"]))
+
+
+# --------------------------------------------------------------------------- suggestions
+def flag_links(ids) -> str:
+    out = []
+    for i in ids:
+        out.append('<a href="{0}#{1}" title="Flag {1}">{1}</a>'.format("@@/hub/flags.html", i))
+    return '<span class="src">' + " ".join(out) + "</span>"
+
+
+def mixed_links(ids) -> str:
+    out = []
+    for i in ids:
+        if i.startswith("H"):
+            out.append('<a href="{0}#{1}" title="Flag {1}">{1}</a>'.format("@@/hub/flags.html", i))
+        else:
+            s = SRC[i]
+            out.append(
+                '<a href="{}"#{} " title="{} — {}">{}</a>'.format(
+                    "@@/hub/sources.html", i, esc(s["publisher"]), esc(s["title"]), i
+                )
+            )
+    return '<span class="src">' + " ".join(out) + "</span>"
+
+
+steps_rows = []
+for s in DATA["decision_suggestions"]:
+    steps_rows.append([
+        '<span class="mono">{}</span>'.format(s["id"]),
+        "<strong>{}</strong>".format(esc(s["suggestion"])),
+        esc(s["why"]),
+        esc(s["official_basis"]) + mixed_links(s["links"]),
+        status_badge(s["status"]),
+    ])
+steps_table = table(["#", "Suggested step", "Why it matters", "Official basis", "Status"], steps_rows,
+                    caption="Operating suggestions, not legal requirements. Each step cites its official basis where one exists.", cls="data-table")
+
+missing_rows = []
+for m in DATA["missing_info_rows"]:
+    missing_rows.append([
+        '<span class="mono">{}</span>'.format(m["id"]),
+        "<strong>{}</strong>".format(esc(m["information"])),
+        esc(m["have"]),
+        esc(m["blocks"]),
+        esc(m["discover"]),
+        mixed_links(m["links"]),
+    ])
+missing_table = table(["#", "Information or question", "Have / don't have", "Why it blocks a decision", "How to discover it", "Source"], missing_rows, cls="data-table")
+
+site_rows = [
+    ["SS-01", "Pre-serve review gate", "No notice is drafted until the licence, lease, ledger, anniversary, coverage, and repair checks are signed off and dated.", mixed_links(["S03", "S01", "H-04", "H-17", "H-09"])],
+    ["SS-02", "Decision log / change register", "Record each considered path (raise neither, Unit 1 only, Unit 2 only, both) with reasons, inputs, and sources so differences follow records rather than assumptions.", mixed_links(["H-13", "S13", "S14", "S15"])],
+    ["SS-03", "Rate watch", "Re-fetch Form 571 each March 1 and archive prior versions so an outdated or unpublished percentage is never applied.", mixed_links(["S06", "H-08"])],
+    ["SS-04", "Independent review step", "An attorney, advocate, or Rent Board counselor reviews the draft notice before it reaches tenants; arithmetic alone is not a legal clearance.", mixed_links(["S18", "S19", "H-20"])],
+    ["SS-05", "Public/private split", "Never paste Rent Board Portal screenshots, ledgers, or tenant/owner contact details into the site; private verification happens off-site.", mixed_links(["S03"])],
+    ["SS-06", "One change at a time", "Do not bundle a rent increase with other lease or fee changes; each change keeps its own notice, timing, and legal basis.", mixed_links(["S02", "S08"])],
+]
+site_table = table(["#", "Site-improvement suggestion", "How it improves decision-making", "Basis / related flag"], site_rows, cls="data-table")
+
+suggestions_body = """
+<section>
+  <h2>Suggestions — review every path before implementing anything<span class="sub">A dedicated review section: suggested operating steps, decisions not yet supported, and how to discover what is still unknown.</span></h2>
+  <div class="answer">
+    <p>This section collects suggestions for how the owner should proceed and how this site can support better decisions. None of it is legal advice. Each suggested step carries its official basis where one exists; every unsupported private fact is left blank and flagged rather than assumed.</p>
+    <p><strong>Choose a path before acting:</strong> raise neither unit until the flags are resolved; raise Unit 1 only (annual-only, once the lease instrument and licence are confirmed); raise Unit 2 only (annual-only once the current base is verified); or raise both on the same verified schedule. The site records the reasons for whichever path is chosen — neutral, documented differences reduce, but do not eliminate, discrimination or retaliation exposure.</p>
+  </div>
+</section>
+<section>
+  <h2>Suggested operating steps before serving any notice<span class="sub">Sequence, not legal requirements; official basis cited where one exists.</span></h2>
+  {steps_table}
+</section>
+<section>
+  <h2>Decisions not yet supported — what must be resolved first<span class="sub">Information the owner has and does not have, and how to discover the rest.</span></h2>
+  {missing_table}
+</section>
+<section>
+  <h2>Suggestions for improving this site's decision support<span class="sub">For whoever maintains the site: review-before-implement paths and change control.</span></h2>
+  {site_table}
+</section>
+<section>
+  <h2>Decision log template<span class="sub">Record the chosen path and its basis before any change is implemented.</span></h2>
+  <table>
+  <caption>Fill in before implementing; keep with the dated evidence file.</caption>
+  <thead><tr><th scope="col">Field</th><th scope="col">Entry</th></tr></thead>
+  <tbody>
+    <tr><td>Date of decision</td><td></td></tr>
+    <tr><td>Path chosen</td><td>Raise neither &middot; raise Unit 1 only &middot; raise Unit 2 only &middot; raise both</td></tr>
+    <tr><td>Inputs used</td><td>Lease, full ledger, current base rent, rate period, banked components</td></tr>
+    <tr><td>Calculation (additive, not compounded, not rounded up)</td><td></td></tr>
+    <tr><td>Notice date and service method</td><td>30 days at 10% or less; 90 days above 10%; +5 days for California mail</td></tr>
+    <tr><td>Licence check (Rent Board Portal, before notice and on the effective date)</td><td></td></tr>
+    <tr><td>Independent review (attorney, advocate, or Rent Board counseling)</td><td></td></tr>
+    <tr><td>Flags resolved first</td><td>List H-numbers resolved</td></tr>
+    <tr><td>Retained with</td><td>Dated evidence file: notices, proof of service, licence confirmation, calculation worksheet</td></tr>
+  </tbody>
+  </table>
+</section>
+"""
+suggestions_html = page(
+    "hub/suggestions.html",
+    "Suggestions and missing information — SF Rent Increase Compliance",
+    "Review-before-implement decision paths, decisions not yet supported, missing-information discovery, and site-improvement suggestions. No suggestion is legal advice; no blank is filled in.",
+    hero_block(
+        "Suggestions · review before implementing",
+        "Review every path before implementing anything",
+        "Suggested operating steps, decisions not yet supported, missing-information discovery, and site-improvement suggestions. No suggestion is legal advice; no blank is filled in.",
+        ["Review before implement", "Missing information", "Official sources only", "Decision log"],
+    ),
+    suggestions_body,
+)
 
 flags_html = page(
     "hub/flags.html",
@@ -990,7 +1124,7 @@ sources_body = """
 </section>
 """.format(src_count=src_count, rb_count=rb_count, treas_count=treas_count, bos_count=bos_count,
            ca_stat_count=ca_stat_count, ca_guide_count=ca_guide_count, fed_count=fed_count,
-           src_table=src_table, s18=src_links(["S18"]))
+           src_table=src_table, s18=ref_links(["S18"]))
 
 sources_html = page(
     "hub/sources.html",
@@ -1010,6 +1144,7 @@ sources_html = page(
 
 # --------------------------------------------------------------------------- write
 PAGES = {
+    "hub/suggestions.html": suggestions_html,
     "index.html": index_html,
     "hub/licensing.html": licensing_html,
     "hub/limits.html": limits_html,

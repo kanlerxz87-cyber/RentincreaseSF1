@@ -33,7 +33,8 @@ All dollar results in this repository are **conditional scenario arithmetic**, n
 | `hub/fair-housing.html` | One unit or both; protected-class and retaliation analysis without safe-harbour claims |
 | `hub/review.html` | 15 tenant-side review checks; no attorney verdict |
 | `hub/flags.html` | 24 unresolved facts and source/repository irregularities; official-confirmation blanks |
-| `hub/sources.html` | 34 official sources with supporting passages and per-source retrieval dates |
+| `hub/sources.html` | 36 official sources with supporting passages and per-source retrieval dates |
+| `hub/suggestions.html` | Suggested review-before-implement paths (DS-01 to DS-08), decisions not yet supported (MI-01 to MI-13), missing-information discovery, site-improvement suggestions, and a decision-log template |
 | `hub/data.json` | Single canonical source for official rules, rates, owner-brief inputs, and flags |
 | `hub/build.py` | Reproducible root/hub generator |
 | `assurance/` | Independent correction register, recomputed arithmetic/dates, and assurance generator |
