@@ -1865,7 +1865,6 @@ FB3-T1–FB3-T7: **done**. Outstanding items are only the cross-scope requests a
 
 ---
 
-<<<<<<< HEAD
 # Session claim — `arena-53e8f072` (`arena/53e8f072-rentincreasesf1`, 2026-11-13 UTC)
 
 - **Board state read before claiming (2026-11-13 ~06:45 UTC):** `git fetch` of all heads shows no commit in the last 48 h on any branch except `main` (PR #59, merged 2026-11-11 04:47 UTC) and the still-open PR #49 (`arena/c119d0f9`, last commit 2026-11-11 04:21 UTC). Every claim on this board is more than 60 minutes old with no live session, so this session takes over the **handbook edition** (`/handbook/`, completed by `arena-fb3db9a1`, PR #58 — merged) for a re-verification and correction pass. Handoff noted here per the board's rule. No active claim is overwritten.
@@ -1966,34 +1965,11 @@ dates and dollar amounts unchanged.
 - **Board state read before claiming (2026-11-13 ~06:55 UTC):** `git fetch origin '+refs/heads/*:refs/remotes/origin/*'` showed **five live sessions** that pushed branches at 06:46–06:52 UTC: `arena-53e8f072` (handbook re-verification + `handbook/decision-questions.html`), `arena-28b41043` (canonical state-vs-local answer + `hub/suggestions.html`), `arena-cab8cfbc` (canonical fresh verification + PR #49 takeover), `arena-e2e14758` (canonical suggestions/open-questions + S34 takeover), and `arena-509488b5` (its own edition). `main` was at `81b2349` (PR #59). Every live claim is respected; no stale claim is overridden.
 - **Rebase artefact note:** this claim section was first pushed at 06:57 UTC and was dropped as an empty commit during a `git pull --rebase` conflict resolution at ~07:05 UTC; it is re-appended here unchanged in substance (see the process note in the audit record). Nothing from any other session was discarded at any point; upstream prefixes were verified byte-exact at every resolution.
 - **Coordination irregularity observed (recorded, not acted on):** the stale-PR-#49 takeover was claimed **simultaneously by two sessions** (`arena-cab8cfbc` C3 and `arena-e2e14758` E2-T6), and the canonical scope (`hub/data.json`, `hub/build.py`, `index.html`, suggestions pages, root Markdown) was claimed simultaneously by `arena-28b41043`, `arena-cab8cfbc`, and `arena-e2e14758`. Per the board rule ("never start a task another session has claimed"), this session takes **none** of those scopes; the first merged PR owns each item (PR #62 merged `arena-cab8cfbc`'s integration at 2026-11-13 ~07:00 UTC), and the others must rebase and re-check before touching the same cells. Nothing outside the scope below was edited by this session.
-=======
-# Session claim — `arena-ccfb8e3c` (2026-11-13 UTC) — final integration, suggestions section, state-vs-local answer, PR #49 takeover
-
-**Branch:** `arena/ccfb8e3c-rentincreasesf1` (platform-pinned; no other branch will be created, switched to, or pushed). `git pull --rebase origin main` is run before every push, chained with `&&`, never through a pipe. No tenant/owner name, initial, street address, e-mail or telephone number from the owner's brief is written to any file, commit, pull request or comment by this session; placeholders only, dates and dollar amounts unchanged.
-
-## Board state read before claiming (2026-11-13 UTC)
-
-* `main` at `81b2349` (PR #59 merged). Full history unshallowed for this session (`git fetch --unshallow`) so merges are evaluated against the real graph.
-* Every remote branch's last commit is 2026-11-11 or earlier — **all prior claims are more than 60 minutes old with no commits**, so the board's handoff rule applies to the items below.
-* One open pull request: **#49** (`arena/c119d0f9`, S30–S34 integration), `CONFLICTING`, last commit 2026-11-11 04:20 UTC. It is taken over here **selectively**: its S31/S32/S33 id assignments differ from the ids already published on `main` (main: S31 = Noncompliance notice, S32 = 2027 fee/Housing Inventory notice, S33 = 42 U.S.C. §3604), so a wholesale merge would renumber published anchors. Only content absent from `main` is ported, under **main's** id scheme.
-* Suites green on the claimed base: `verify_hub` 1,627/0; `verify_assurance` 1,902/0; `check_links` OK; `check_site` 781/0.
-* GitHub Pages: legacy publishing from `main` / root, status `built`. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.
-
-## Handoffs taken (stale claims, per the 60-minute rule)
-
-| Prior claim | Owner | Why stale | What is taken |
-| --- | --- | --- | --- |
-| C119-T2 (PR #49) | `arena-c119d0f9` | Branch last commit 2026-11-11 04:20 UTC; PR CONFLICTING | Port S34 (2024 RHFS, census.gov — live-read 2026-11-13), the H-11/practice RHFS wording, the 2027-fee landing paragraph, verifier floor/placeholder checks — under main's existing S-ids |
-| V5 last-pass integration | `arena-e8d3cb0f` | Claim 2026-11-11 04:24 UTC, no V5 commit | This session performs the last-pass integration, suite re-run, PR, merge, Pages confirmation |
-| RA-FB3-02 | requested of canonical holders (`arena-fb3db9a1` → canonical) | Canonical holders' claims all stale | One-word fix in root `EXECUTIVE_SUMMARY.md`: "14-point" → "15-point" (registry holds 15 review rows) |
-| K3–K6 canonical | `arena-2c7b19e2` | Claim 2026-11-11 02:16 UTC, no content commit | Canonical files edited only under the claim below |
->>>>>>> bc47959 (coordination: claim CC1-CC7 (final integration, suggestions section, state-vs-local answer, PR #49 selective port) (arena-ccfb8e3c))
 
 ## Claimed tasks and exclusive file scope
 
 | ID | Task | Status | Owner | Exclusive file scope |
 | --- | --- | --- | --- | --- |
-<<<<<<< HEAD
 | E452-1 | Independent 2026-11-13 re-verification of the load-bearing official facts (AGA 1.6% window, §37.15 Housing Inventory licence, Rules §13.14, banking §4.12, notice §827, AB 1482 exemption, File #261020 current status, Rent Board fee, referral listing), each with the official URL, the passage confirmed, and the retrieval date | done | `arena-e452e248` | `audit/session-e452e248/**` |
 | E452-2 | Read-only line-by-line audit of the canonical edition's published tables and figures (45/45 recomputation checks pass; every data row carries a source link) | done | `arena-e452e248` | `audit/session-e452e248/**` |
 | E452-3 | Run every verification suite on the tree and record results | done | `arena-e452e248` | `audit/session-e452e248/**` |
@@ -2144,7 +2120,34 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 | Local suites (final) | `verify_hub` 1,681/0 · `verify_assurance` 1,973/0 · `check_links` OK (no personal tokens) · `check_site` 781/0 |
 
 **Privacy:** no tenant names, initials, street address, e-mail address, or telephone number added anywhere. Placeholders only (Tenants 1A/1B, 2A/2B); supplied dates and dollar amounts unchanged.
-=======
+
+---
+
+# Session claim — `arena-ccfb8e3c` (2026-11-13 UTC) — final integration, suggestions section, state-vs-local answer, PR #49 takeover
+
+**Branch:** `arena/ccfb8e3c-rentincreasesf1` (platform-pinned; no other branch will be created, switched to, or pushed). `git pull --rebase origin main` is run before every push, chained with `&&`, never through a pipe. No tenant/owner name, initial, street address, e-mail or telephone number from the owner's brief is written to any file, commit, pull request or comment by this session; placeholders only, dates and dollar amounts unchanged.
+
+## Board state read before claiming (2026-11-13 UTC)
+
+* `main` at `81b2349` (PR #59 merged). Full history unshallowed for this session (`git fetch --unshallow`) so merges are evaluated against the real graph.
+* Every remote branch's last commit is 2026-11-11 or earlier — **all prior claims are more than 60 minutes old with no commits**, so the board's handoff rule applies to the items below.
+* One open pull request: **#49** (`arena/c119d0f9`, S30–S34 integration), `CONFLICTING`, last commit 2026-11-11 04:20 UTC. It is taken over here **selectively**: its S31/S32/S33 id assignments differ from the ids already published on `main` (main: S31 = Noncompliance notice, S32 = 2027 fee/Housing Inventory notice, S33 = 42 U.S.C. §3604), so a wholesale merge would renumber published anchors. Only content absent from `main` is ported, under **main's** id scheme.
+* Suites green on the claimed base: `verify_hub` 1,627/0; `verify_assurance` 1,902/0; `check_links` OK; `check_site` 781/0.
+* GitHub Pages: legacy publishing from `main` / root, status `built`. Live entry: <https://kanlerxz87-cyber.github.io/RentincreaseSF1/>.
+
+## Handoffs taken (stale claims, per the 60-minute rule)
+
+| Prior claim | Owner | Why stale | What is taken |
+| --- | --- | --- | --- |
+| C119-T2 (PR #49) | `arena-c119d0f9` | Branch last commit 2026-11-11 04:20 UTC; PR CONFLICTING | Port S34 (2024 RHFS, census.gov — live-read 2026-11-13), the H-11/practice RHFS wording, the 2027-fee landing paragraph, verifier floor/placeholder checks — under main's existing S-ids |
+| V5 last-pass integration | `arena-e8d3cb0f` | Claim 2026-11-11 04:24 UTC, no V5 commit | This session performs the last-pass integration, suite re-run, PR, merge, Pages confirmation |
+| RA-FB3-02 | requested of canonical holders (`arena-fb3db9a1` → canonical) | Canonical holders' claims all stale | One-word fix in root `EXECUTIVE_SUMMARY.md`: "14-point" → "15-point" (registry holds 15 review rows) |
+| K3–K6 canonical | `arena-2c7b19e2` | Claim 2026-11-11 02:16 UTC, no content commit | Canonical files edited only under the claim below |
+
+## Claimed tasks and exclusive file scope
+
+| ID | Task | Status | Owner | Exclusive file scope |
+| --- | --- | --- | --- | --- |
 | CC1 | Read the board, unshallow, inspect every remote branch and open PR, claim a disjoint scope, publish the claim | in progress | `arena-ccfb8e3c` | `COORDINATION.md` (this section only, append-only) |
 | CC2 | **Suggestions section**: new `hub/suggestions.html` — (a) site-improvement suggestions, each proposed-not-implemented and linked to the flag/source that motivates it; (b) a decision-gate table of the questions that must be answered before any rent-increase decision, with known/unknown status and official links — wired into the canonical nav | pending | `arena-ccfb8e3c` | `hub/build.py`, generated `index.html` + `hub/*.html`, `hub/data.json` |
 | CC3 | **State-vs-local law answer**: verify §37.15 live (Ord. 265-20, effective 18 Jan 2021; <10-unit reporting commenced 1 March 2023), publish the answer on the landing page, licensing Q&A and root `EXECUTIVE_SUMMARY.md`, with official links | pending | `arena-ccfb8e3c` | `hub/data.json`, `hub/build.py`, generated pages, `EXECUTIVE_SUMMARY.md` |
@@ -2156,4 +2159,3 @@ Zero tenant names, initials, street addresses, e-mail addresses or personal phon
 **Not claimed and not edited by this session:** `handbook/**`, `assurance/**` (except regenerated output if its generator requires it — none expected), `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `guide/**`, `compliance/**`, `integration/**`, `site/**`, `research/**`, `archive/**`, `data/**`, `build/**`, `tools/check_*.py`, `.github/workflows/**`, every other `audit/session-*/**`, and `audit/final-integration/findings.json`. Requests for those scopes are logged in this section, not edited.
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/ccfb8e3c-rentincreasesf1`, any session may take it over and must note the handoff here.
->>>>>>> bc47959 (coordination: claim CC1-CC7 (final integration, suggestions section, state-vs-local answer, PR #49 selective port) (arena-ccfb8e3c))
