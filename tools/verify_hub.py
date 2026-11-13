@@ -5,7 +5,7 @@ Line-by-line gate for the integrated dashboard (index.html + hub/*.html).
 What it proves, from the generated HTML itself:
 
   1  every internal link and anchor resolves to a real file / id
-  2  every page carries the same nine-item navigation and the same footer disclaimers
+  2  every page carries the same ten-item navigation and the same footer disclaimers
   3  every row of every claim table carries a link to an official source,
      or to an explicit flag when the row rests on an unverified private record
   4  every citation points at a source id that exists, and every registered
@@ -47,6 +47,7 @@ PAGES = ["index.html"] + [
         "practice.html",
         "fair-housing.html",
         "review.html",
+        "suggestions.html",
         "flags.html",
         "sources.html",
     )
@@ -138,7 +139,7 @@ for page, doc in docs.items():
 # ----------------------------------------------------------------- 2 nav + footer
 NAV_EXPECT = [
     "Dashboard", "Licence & Board", "Limits & amounts", "Notice & reasons",
-    "Owner practice", "One unit or both", "Lawyer test", "Flagged", "Sources",
+    "Owner practice", "One unit or both", "Lawyer test", "Suggestions", "Flagged", "Sources",
 ]
 navs = {}
 for page, doc in docs.items():
@@ -372,10 +373,10 @@ for page, doc in docs.items():
 # Floors, not exact pins: a later session may add sources/flags, but may never
 # silently drop the ones already verified. Each addition below is also asserted
 # positively further down, so removing one is a failure rather than a renumber.
-if len(sources) < 26:
-    fail(f"expected at least 26 official sources, found {len(sources)}")
-if len(DATA["flags"]) < 22:
-    fail(f"expected at least 22 flags, found {len(DATA['flags'])}")
+if len(sources) < 36:
+    fail(f"expected at least 36 official sources, found {len(sources)}")
+if len(DATA["flags"]) < 24:
+    fail(f"expected at least 24 flags, found {len(DATA['flags'])}")
 if len(DATA["review_rows"]) != 15:
     fail(f"expected 15 review checks, found {len(DATA['review_rows'])}")
 
@@ -388,6 +389,10 @@ for sid, host, needle in (
     # S34 pins the negative finding behind H-11: the federal RHFS release is the
     # only comprehensive rental-property finance dataset checked and it is national.
     ("S34", "census.gov", "Rental Housing Finance Survey"),
+    # S35/S36 pin the state-versus-local answer: SB 567's chaptered text (state
+    # layer) and the San Francisco Rent Ordinance page (local Chapter 37).
+    ("S35", "leginfo.legislature.ca.gov", "Approved by the Governor September 30, 2023"),
+    ("S36", "sf.gov", "Chapter 37 of the San Francisco Administrative Code"),
 ):
     if sid not in by_id:
         fail(f"required source {sid} missing from the registry")
@@ -432,6 +437,13 @@ if "noticed on or after 15 September 2026" not in docs["index.html"]:
     fail("landing page omits the proposed notice-date reach of File #261020")
 if "{n}" in docs["index.html"]:
     fail("landing page contains an unrendered template placeholder")
+# Reject unformatted placeholder strings (like literal '{steps_table}') on every
+# page. This guard caught hub/suggestions.html shipping unrendered table slots
+# when the page was first wired into this list (2026-11-13).
+for page, doc in docs.items():
+    if re.search(r"\{[a-z_]+\}", doc):
+        fail(f"{page}: unformatted template placeholder found")
+    ok()
 for field, needle in (
     (DATA["units"]["U2"]["base_status"], "lease-start"),
     (DATA["units"]["U2"]["base_status"], "not expressly as the current base rent"),

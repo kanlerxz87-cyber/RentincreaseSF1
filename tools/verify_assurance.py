@@ -28,7 +28,8 @@ from check_links import FORBIDDEN_HASHES  # noqa: E402
 
 PAGES = ["index.html"] + [f"hub/{n}" for n in (
     "licensing.html", "limits.html", "notice.html", "practice.html",
-    "fair-housing.html", "review.html", "flags.html", "sources.html",
+    "fair-housing.html", "review.html", "suggestions.html", "flags.html",
+    "sources.html",
 )] + ["assurance/index.html"]
 C = Decimal("0.01")
 errors: list[str] = []
@@ -102,7 +103,7 @@ check(assurance_rows == len(AUDIT["corrections"]) + 4 + 4 + len(AUDIT["residual_
 
 # Official source registry and live-retrieval manifest are complete and bounded.
 source_ids = [s["id"] for s in HUB["sources"]]
-check(len(source_ids) == len(set(source_ids)) >= 26, "expected at least 26 unique official sources")
+check(len(source_ids) == len(set(source_ids)) >= 36, "expected at least 36 unique official sources")
 check(len(MANIFEST) == len(source_ids), "source manifest length mismatch")
 manifest_by_id = {m["id"]: m for m in MANIFEST}
 allowed_hosts = {
@@ -181,7 +182,7 @@ check(all(b["conditional"] for b in HUB["calculations"]["U2"]["banked"]),
       "every Unit 2 banked component must remain conditional")
 check(HUB["rates"][0]["pct"] == "1.6" and HUB["rates"][0]["end"] == "2027-02-28",
       "current official rate period mismatch")
-check(len(HUB["flags"]) >= 22, "expected at least 22 canonical flags")
+check(len(HUB["flags"]) >= 24, "expected at least 24 canonical flags")
 check(len(HUB["review_rows"]) == 15, "expected 15 review checks")
 check(HUB["review_rows"][-1]["sources"] == ["S04", "S05", "S26"], "pending-ordinance review check missing")
 check("noticed on or after September 15, 2026" in next(s for s in HUB["sources"] if s["id"] == "S05")["quote"],
@@ -189,6 +190,12 @@ check("noticed on or after September 15, 2026" in next(s for s in HUB["sources"]
 check("noticed on or after 15 September 2026" in docs["index.html"],
       "proposed-retroactivity warning missing from landing page")
 check("{n}" not in docs["index.html"], "unrendered template placeholder on landing page")
+# No canonical page may ship an unformatted template placeholder (e.g. the
+# literal '{steps_table}' that hub/suggestions.html carried before it was wired
+# into this checker's page list on 2026-11-13).
+for rel in PAGES:
+    check(not re.search(r"\{[a-z_]+\}", docs[rel]),
+          f"{rel}: unformatted template placeholder found")
 for fid in ("H-01", "H-03", "H-17", "H-18", "H-19", "H-20", "H-21", "H-22", "H-23", "H-24"):
     check(fid in {f["id"] for f in HUB["flags"]}, f"missing required flag {fid}")
     check(f"flags.html#{fid}" in canonical_text, f"{fid}: not linked from canonical content")
