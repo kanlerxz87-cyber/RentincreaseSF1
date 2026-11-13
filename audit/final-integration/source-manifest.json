@@ -236,5 +236,19 @@
     "url": "https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html",
     "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S35",
+    "publisher": "California Legislative Information",
+    "url": "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202320240SB567",
+    "retrieved": "2026-11-13",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S36",
+    "publisher": "San Francisco Rent Board (SF.gov)",
+    "url": "https://www.sf.gov/rent-ordinance/",
+    "retrieved": "2026-11-13",
+    "result": "Retrieved and read from official publisher"
   }
 ]
