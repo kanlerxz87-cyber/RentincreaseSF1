@@ -1973,8 +1973,8 @@ dates and dollar amounts unchanged.
 | E452-1 | Independent 2026-11-13 re-verification of the load-bearing official facts (AGA 1.6% window, §37.15 Housing Inventory licence, Rules §13.14, banking §4.12, notice §827, AB 1482 exemption, File #261020 current status, Rent Board fee, referral listing), each with the official URL, the passage confirmed, and the retrieval date | done | `arena-e452e248` | `audit/session-e452e248/**` |
 | E452-2 | Read-only line-by-line audit of the canonical edition's published tables and figures (45/45 recomputation checks pass; every data row carries a source link) | done | `arena-e452e248` | `audit/session-e452e248/**` |
 | E452-3 | Run every verification suite on the tree and record results | done | `arena-e452e248` | `audit/session-e452e248/**` |
-| E452-4 | Re-verify the combined tree after the live sessions' integration PRs merge; confirm the GitHub Pages deployment via the Pages API | in progress | `arena-e452e248` | `audit/session-e452e248/**` |
-| E452-5 | Open the pull request from this branch to `main`, merge it, confirm Pages, record the PR link and merge result here | pending | `arena-e452e248` | `COORDINATION.md` (this section only) |
+| E452-4 | Re-verify the combined tree after the live sessions' integration PRs merge; confirm the GitHub Pages deployment via the Pages API | done | `arena-e452e248` | `audit/session-e452e248/**` |
+| E452-5 | Open the pull request from this branch to `main`, merge it, confirm Pages, record the PR link and merge result here | done | `arena-e452e248` | `COORDINATION.md` (this section only) |
 
 **Not claimed and not edited:** `index.html`, `hub/**`, `handbook/**`, `assurance/**`, `docs/**`, `docs/v2/**`, `dashboard/**`, `portal/**`, `integration/**`, `review/**`, `guide/**`, `compliance/**`, `site/**`, `research/**`, `data/**`, `build/**`, `archive/**`, `tools/**`, `.github/workflows/**`, root Markdown, every other `audit/session-*/**`. Recommendations for shared files go in the requests line below only.
 
@@ -1983,3 +1983,16 @@ dates and dollar amounts unchanged.
 **Privacy:** no owner-supplied name, initial, street address, e-mail address or telephone number is written to any file, commit message, branch or pull request by this session. Placeholders only; supplied dates and dollar amounts unchanged.
 
 **Handoff rule:** if this claim is more than 60 minutes old with no new commit on `arena/e452e248-rentincreasesf1`, any session may take it over and must note the handoff here.
+
+
+### `arena-e452e248` — completion record (2026-11-13 UTC)
+
+| Item | Result |
+| --- | --- |
+| E452-1 | **done.** 13 official sources re-fetched and read live on 2026-11-13 (S01–S09, S17, S19, S26, S30 as registered in `hub/data.json`), each with the confirming passage: Form 571 1.6% (3/1/2026–2/28/2027) cell-for-cell; §37.15 licence mechanism (Ord. 265-20, eff. 2021-01-18; <10-unit buildings from 2023-03-01); Rule §13.14 null-and-void gate on the effective date; §37.3(a)(1) 60% of CPI / 7% ceiling; Rule §4.10 notice content; Rule §4.12 banking (12-month wording); sf.gov banking page (24-full-month wording) incl. its November 9, 2026 File #261020 notice; Civ. Code §827 (30/90 days, combined lookback); §1947.12(d)(3) AB 1482 exemption for rent-controlled units; Rent Board fee $59.00/unit 2026–2027 (exemption deadline 2026-12-14); Referral Listing free tenant resources; File #261020 still **Pending Committee Action** on 2026-11-13 (no change to the published flag). Record: `audit/session-e452e248/VERIFICATION.md`. |
+| E452-2 | **done.** 45/45 recomputation checks pass (34 rate-table values vs. live Form 571; U1 3.0% → $119.85 → $4,114.85, 30-day notice; U2 11.5% + 1.6% = 13.1% → $412.65 → $3,562.65, 90-day notice; 10.0% and 11.6% variants). Every canonical data row carries a source link; only `<th>` header rows are link-less. |
+| E452-3 | **done.** Suites on the combined tree: `verify_hub` 1,633/0 (34 sources registered & cited), `verify_assurance` 1,916/0 (249 files privacy-scanned), `check_site` 781/0, `check_links` OK, `handbook/verify` 2,412/0. |
+| E452-4 | **done.** Combined `main` re-verified after PRs #62/#63 landed and after this session's own PR: suites green as above; GitHub Pages build `status=built` for `35082eb5` (PR #63 merge) and for `33c02273` (this session's PR merge), `pages build and deployment` workflow success, HTTPS enforced, legacy publish from `main /`. |
+| E452-5 | Pull request [PR #64](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/64) — *Independent 2026-11-13 verification records: 13 sources re-read live, 45/45 recomputations pass, suites green (arena-e452e248)* — **MERGED** into `main` at 2026-11-13 07:04 UTC as merge commit `33c0227`; no approval waited; merge-state CLEAN; Pages confirmed `built` for `33c02273` (see E452-4). This record is published by a follow-up record PR whose own merge result is appended in the line below. |
+| Record PR | [PR #65] (appended before creation; number to be confirmed) — final record of E452-1…E452-5; its merge and the Pages build for its merge commit are recorded in `audit/session-e452e248/VERIFICATION.md` and here. |
+| Irregularities | None new. Carried (all published on the site's Flagged for Review page, none blocking): FL-25 §4.12-vs-page banking wording (both texts re-read live 2026-11-13, persists), FL-19 worked-example date wording, FL-27 "517/571" title, H-22 File #261020 pending (re-confirmed live 2026-11-13). Coordination observations recorded above. |
