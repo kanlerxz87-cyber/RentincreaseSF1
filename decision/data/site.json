@@ -1,0 +1,654 @@
+{
+  "meta": {
+    "retrieved": "2026-11-13",
+    "site_title": "SF Rent Increase — Decision Pack",
+    "area": "Outer Sunset · ZIP 94122",
+    "privacy_note": "All tenant names and initials are replaced with placeholders (Occupant 1, Occupant 2, ...). Dates and dollar amounts are unchanged from the owner's brief.",
+    "not_legal_advice": "Not legal advice. Free Rent Board counselling: 415-252-4600 (Mon-Fri, 9am-12pm and 1pm-4pm)."
+  },
+
+  "flags": [
+    {"id": "F-01", "severity": "high", "title": "Unit A anniversary date is unresolved", "detail": "The brief shows a lease start of 2025-02-01 and a tenancy/occupant change on 2026-04-01 at an unchanged rent. Whether the rent-increase anniversary date is 1 February or 1 April determines which rate applies and which notice deadline binds. No official source resolves this from the brief alone.", "src": ["S03", "S04"]},
+    {"id": "F-02", "severity": "medium", "title": "Unit A — §6.14 notice status unknown", "detail": "One original occupant from the 2025-02-01 agreement remains in possession, so neither §6.14 nor Costa-Hawkins vacancy decontrol is triggered on the reported facts. Whether a written §6.14 notice was served on the incoming occupant is an unconfirmed private fact that would matter only if the last original occupant later leaves.", "src": ["S10", "S17"]},
+    {"id": "F-03", "severity": "high", "title": "Housing Inventory and Rent Increase Licence status for both units is unknown", "detail": "No licence record was checked for either unit. An annual or banked increase effective while the unit is unlicensed renders the entire increase null and void under adopted Rule §13.14, tested on the effective date rather than the service date.", "src": ["S09", "S01", "S08"]},
+    {"id": "F-04", "severity": "high", "title": "Unit B current base rent is unconfirmed", "detail": "The brief supplies the 2019-06-01 lease-start amount only. Every calculation on this site uses that figure as reported. The actual current base rent must be taken from the rent ledger before any notice is served.", "src": ["S03"]},
+    {"id": "F-05", "severity": "high", "title": "Neither rent ledger has been produced", "detail": "Banking entitlement depends on the exact date and amount of every increase actually imposed. The brief states Unit B rent is unchanged since 2019-06-01 and Unit A rent is unchanged since 2025-02-01, but no ledger was supplied to confirm it.", "src": ["S04", "S05"]},
+    {"id": "F-06", "severity": "high", "title": "Unit B — whether both original 2019 occupants remain", "detail": "Banked rent increases do not carry over to a new tenant. If either original occupant from the 2019-06-01 agreement has been replaced, the banked entitlement may be lost for that tenancy.", "src": ["S04"]},
+    {"id": "F-07", "severity": "medium", "title": "1940 construction year not officially confirmed", "detail": "The brief reports a 1940 building. Rent-control coverage turns on construction on or before 13 June 1979 together with the absence of an exemption. The parcel was not looked up on the official Property Information Map during this pass.", "src": ["S11"]},
+    {"id": "F-08", "severity": "medium", "title": "Official rent-control coverage not confirmed for either unit", "detail": "Whether each unit falls under Chapter 37 rent-increase limitations, or under a partial exemption, was not confirmed with the Rent Board or from an official parcel record.", "src": ["S11", "S13"]},
+    {"id": "F-09", "severity": "high", "title": "The rate effective 1 March 2027 is not yet published", "detail": "The Rent Board publishes the new percentage each 1 March. Any increase effective on or after 2027-03-01 — including Unit B's 2027-06-01 anniversary and Unit A's 2027-04-01 scenario — has an unknown annual component. Those cells are left blank, not estimated.", "src": ["S03", "S13", "S06"]},
+    {"id": "F-10", "severity": "high", "title": "File No. 261020 is pending and would cap banked increases", "detail": "Status on Legistar on 2026-11-13: Pending Committee Action — not law. As drafted it would cap combined banked and capital-improvement increases at 10% per year for three years and would apply to banked increases noticed on or after 15 September 2026. Unit B's illustrative banked portion alone is 13.1%.", "src": ["S20", "S04", "S07"]},
+    {"id": "F-11", "severity": "info", "title": "No official 'normal' or 'reasonable' market increase for ZIP 94122", "detail": "No official body publishes a ZIP-level market norm. The only official, published figure is the lawful maximum annual allowance. The market-normal cell is left blank by design rather than filled from a commercial rent-index site.", "src": ["S03", "S06"]},
+    {"id": "F-12", "severity": "info", "title": "No official dataset on how corporate vs individual owners actually set increases", "detail": "The Rent Board does not publish owner-type behaviour statistics. The comparison on the Owner practice page is limited to what the ordinance and the Board's own guidance actually say.", "src": ["S01", "S02"]},
+    {"id": "F-13", "severity": "medium", "title": "Business Registration Certificate not re-verified this pass", "detail": "A Business Registration Certificate from the Office of the Treasurer & Tax Collector is a separate duty from the Rent Board licence and does not affect whether a rent increase is lawful. It was not re-verified on this pass.", "src": ["S01"]},
+    {"id": "F-14", "severity": "medium", "title": "Repository carries many parallel editions", "detail": "The repository now contains more than a dozen parallel site editions (docs/, docs/v2/, dashboard/, portal/, review/, integration/, handbook/, compliance/, guide/, hub/, site/ and others). The root index.html is generated by hub/build.py and is enforced by the 'Final assurance' workflow, so a new consolidated edition cannot replace it without editing files owned by completed sessions.", "src": ["S01"]},
+    {"id": "F-15", "severity": "high", "title": "Pre-redaction blobs remain in Git history", "detail": "Earlier public history in this repository is reported to contain tenant initials. Current-file scans do not detect or repair historical commits; only an administrator history rewrite can remove them. No identifier is reproduced here.", "src": ["S02"]},
+    {"id": "F-16", "severity": "medium", "title": "Older editions still served may show superseded figures", "detail": "Several preserved editions predate the 2026-11-09 Rent Board notice about File No. 261020 and the current 1.6% rate. Treat this edition as the current one and read the archived editions with their own dates in mind.", "src": ["S07", "S20"]},
+    {"id": "F-17", "severity": "medium", "title": "The Rent Board may notify tenants of non-compliance", "detail": "If the Housing Inventory submission is missing, the Rent Board may notify the tenants that the owner is not in compliance, and the tenant may check licence status in the portal by address or Assessor's Parcel Number.", "src": ["S02", "S08"]},
+    {"id": "F-18", "severity": "high", "title": "Housing Inventory submissions are public", "detail": "The Rent Board states the information entered in a Housing Inventory submission is public and may include name, business contact information, square footage, bedroom and bathroom counts and occupancy history. Rent is reported in $250 increments, not exact dollars.", "src": ["S02", "S01"]},
+    {"id": "F-19", "severity": "info", "title": "Free tenant lawyer services not verified on an official page this pass", "detail": "San Francisco's Tenant Right to Counsel programme was not confirmed on an official sf.gov page during this pass; only commercial summaries were found. The officially verified tenant routes are the Rent Board's free counselling line and the Form 518 / Form 516C petitions.", "src": ["S08", "S11"]},
+    {"id": "F-20", "severity": "medium", "title": "Rent Board Fee and Rent Increase Licence are separate duties", "detail": "Paying the fee, or claiming a fee exemption, does not satisfy the Housing Inventory reporting requirement, and reporting does not exempt the fee. Do not treat one as proof of the other.", "src": ["S12", "S02"]}
+  ],
+
+  "pages": [
+    {
+      "id": "index",
+      "file": "index.html",
+      "nav": "Executive summary",
+      "title": "Executive summary — SF rent increase, Outer Sunset 94122",
+      "desc": "The 2023 Rent Board licence requirement is local, not state: what an individual owner must do, step by step, with the numbers for two rent-controlled units.",
+      "eyebrow": "Executive summary · live-verified 2026-11-13",
+      "h1": "Raising rent on two 1940 flats in the Outer Sunset",
+      "lede": "The rule you read about is real, and it is a <strong>San Francisco local law</strong>, not a state law. It applies to an individual owner of a two-unit building exactly as it applies to a corporation. Nothing is sent to the Rent Board for approval before you notify a tenant — but the unit must be licensed on the day the increase takes effect.",
+      "pills": ["ZIP 94122 · owner-brief facts", "Reported 1940 build · rent-controlled", "1.6% to 28 Feb 2027", "22 official sources", "20 flagged items"],
+      "blocks": [
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "Is the 2023 Rent Board requirement a state law or a local law?",
+          "body": "<p><strong>It is local.</strong> The duty sits in the <em>San Francisco Administrative Code</em>, Chapter 37, <strong>&sect;37.15</strong> — a City ordinance, titled &ldquo;Reporting Obligations; Licensing&rdquo; and footnoted on the City's own page as <em>&ldquo;Added by Ord. No. 265-20, effective January 18, 2021&rdquo;</em>. The Rent Board's 2023 press release describes it in exactly those terms: <em>&ldquo;A new law passed by the City and County of San Francisco.&rdquo;</em></p><p><strong>Why 2023 is the year you remember.</strong> The ordinance took effect in 2021, but it started on a staggered timetable. For buildings with <strong>10 or more</strong> residential units the duty began <strong>1 July 2022</strong>. For <strong>condominiums and buildings with fewer than 10 units</strong> — which is what a two-unit 1940 building is — the duty began <strong>1 March 2023</strong>, with updates due every 1 March after that. The Rent Board's adopted Rule &sect;13.14 says the same thing: for buildings with fewer than ten units it &ldquo;shall only apply to rent increases that are <em>effective on or after March 1, 2023</em>.&rdquo;</p><p><strong>So:</strong> the licence rule is <strong>local (City ordinance)</strong>; the <strong>notice</strong> rule you must also obey is <strong>state (California Civil Code &sect;827)</strong>; and the <strong>anti-discrimination</strong> rules are <strong>both state and federal</strong>. Three layers, three sources.</p>"
+        },
+        {
+          "type": "table",
+          "caption": "The three legal layers, and which one actually came from 2023",
+          "head": ["Layer", "What it governs", "Is it the 2023 rule?", "Who it binds", "Source"],
+          "rows": [
+            {"cells": ["<strong>Local</strong> — San Francisco Administrative Code &sect;37.15", "Annual Housing Inventory reporting, and the <strong>rent increase licence</strong> that flows from it", "<strong>Yes.</strong> Operative 1 Jul 2022 for 10+ unit buildings; <strong>1 Mar 2023</strong> for condos and buildings with fewer than 10 units", "Every &ldquo;owner&rdquo; — no entity or size threshold", ""], "src": ["S01", "S09", "S21"]},
+            {"cells": ["<strong>Local</strong> — S.F. Admin. Code &sect;37.3(a)(1)-(2)", "The size of the annual increase (60% of CPI, capped at 7%) and banking", "No — long-standing; the <em>percentage</em> is republished each 1 March", "Owners of covered units", ""], "src": ["S13", "S06"]},
+            {"cells": ["<strong>Local</strong> — Rent Board Rule &sect;13.14", "The licence test is the <strong>effective date</strong>; an unlicensed increase is <strong>null and void</strong>; banking rights survive", "Applies to fewer-than-10-unit buildings only from <strong>1 Mar 2023</strong>", "Owners imposing &sect;37.3(a)(1)-(2) increases", ""], "src": ["S09"]},
+            {"cells": ["<strong>State</strong> — Cal. Civil Code &sect;827", "How much <strong>written notice</strong>: 30 days at or under 10%, 90 days above 10%, +5 days if mailed", "No — this is the notice statute, not the 2023 licence rule", "Every residential landlord in California", ""], "src": ["S14"]},
+            {"cells": ["<strong>State</strong> — Cal. Civil Code &sect;1947.12 (AB 1482)", "Statewide 5% + CPI / 10% cap", "<strong>Does not apply here</strong>: &sect;1947.12(d)(3) exempts housing already under a stricter local rent-control regime", "Owners of units <em>not</em> covered by a stricter local cap", ""], "src": ["S15", "S11"]},
+            {"cells": ["<strong>State</strong> — Cal. Gov. Code &sect;12955 (FEHA)", "Discrimination and harassment in housing, including retaliation", "No", "Owners of any housing accommodation", ""], "src": ["S18"]},
+            {"cells": ["<strong>Federal</strong> — 42 U.S.C. &sect;3604", "Discrimination in the &ldquo;terms, conditions, or privileges&rdquo; of rental — which includes a rent increase", "No", "Housing providers generally", ""], "src": ["S19"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "I am one individual, not a corporation. Do I still have to report and hold a licence before notifying tenants?",
+          "body": "<p><strong>Yes — and this is the part most owners get wrong, so read it twice.</strong></p><p>&sect;37.15(a) opens with <em>&ldquo;Owners of residential dwelling units subject to this Chapter 37&hellip;&rdquo;</em>. There is <strong>no individual-owner exemption, no small-landlord exemption and no two-unit exemption</strong> anywhere in the section. The Rent Board's own Housing Inventory page says <em>&ldquo;All owners of residential property are required to report&rdquo;</em> and adds that most owners must report <em>&ldquo;even if you are not a landlord.&rdquo;</em></p><p><strong>But the mechanism is not what the phrase &ldquo;apply for a licence&rdquo; suggests.</strong> There is <strong>no licence application and no approval step</strong>. You file the annual <strong>Housing Inventory</strong> for each unit; the licence for a tenant-occupied unit is then <strong>generated automatically</strong>. Reporting is free. The Rent Board states plainly: <em>&ldquo;Landlords are not required to file a petition with the City to impose these types of rent increases&rdquo;</em> — so an ordinary annual or banked notice goes to the <strong>tenant</strong>, never to the Board for approval.</p><p><strong>The precise timing test (this is the whole ballgame).</strong> Adopted Rule &sect;13.14 says the <strong>effective date</strong> of the increase — <em>not</em> the date you serve the notice — is what decides whether you were licensed. An increase effective while you are unlicensed is <strong>&ldquo;null and void&rdquo;</strong>. Your banking rights survive, so you do not lose the skipped years. Practical consequence: <strong>finish the reporting and confirm the licence before you serve</strong>, because the safe sequence costs nothing and the wrong one can void the whole increase.</p><p class='warn'><strong>Privacy first:</strong> the Housing Inventory submission is <strong>public</strong>. It can carry the unit address, owner or manager name and business contact, square footage, bed and bath counts and occupancy history. Rent is reported in <strong>$250 increments</strong>, not exact dollars. See <a href='flagged.html#F-18'>F-18</a>.</p>"
+        },
+        {
+          "type": "table",
+          "caption": "Individual owner vs. corporation — what the official text actually says",
+          "head": ["Question", "Individual owner", "Corporate / institutional owner", "Source"],
+          "rows": [
+            {"cells": ["Must file the annual Housing Inventory?", "<strong>Yes.</strong> No exemption in &sect;37.15 for individuals or small buildings", "<strong>Yes.</strong> Same duty", ""], "src": ["S01", "S02"]},
+            {"cells": ["Must hold a current Rent Increase Licence for an annual or banked increase?", "<strong>Yes</strong>, tested on the effective date", "<strong>Yes</strong>, tested on the effective date", ""], "src": ["S09", "S08"]},
+            {"cells": ["Is there a company-size or entity-type carve-out?", "<strong>No.</strong> The section says &ldquo;Owners&rdquo;", "<strong>No.</strong> Identical wording", ""], "src": ["S01"]},
+            {"cells": ["When did the duty start?", "<strong>1 March 2023</strong> (buildings with fewer than 10 units, and condos)", "<strong>1 July 2022</strong> (buildings with 10 or more units)", ""], "src": ["S01", "S02", "S08"]},
+            {"cells": ["Maximum annual increase", "Same published percentage — <strong>1.6%</strong> to 28 Feb 2027", "Same published percentage — <strong>1.6%</strong> to 28 Feb 2027", ""], "src": ["S03", "S06"]},
+            {"cells": ["Notice period", "Same: 30 days at or under 10%, 90 days above, +5 if mailed", "Same: 30 days at or under 10%, 90 days above, +5 if mailed", ""], "src": ["S14", "S03"]},
+            {"cells": ["Anti-discrimination exposure", "42 U.S.C. &sect;3604 and Gov. Code &sect;12955 apply", "42 U.S.C. &sect;3604 and Gov. Code &sect;12955 apply", ""], "src": ["S19", "S18"]},
+            {"cells": ["How each group <em>actually behaves</em> in practice", "<strong>Left blank</strong> — no official dataset", "<strong>Left blank</strong> — no official dataset", ""], "src": ["S01", "S02"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "steps",
+          "head": "The process, step by step — written for someone who has never done this",
+          "body": "<p><strong>Before you do anything else:</strong> the only thing standing between you and an unenforceable increase is a licence on the <em>effective date</em>. Here is the whole sequence.</p><ol class='steps'><li><strong>Confirm the unit is covered.</strong> Rent control generally attaches to residential units built on or before <strong>13 June 1979</strong> that are not exempt. A reported 1940 build points to coverage, but confirm the parcel on the official Property Information Map and, if unsure, ask a Rent Board counsellor (415-252-4600). <a href='flagged.html#F-07'>F-07</a>, <a href='flagged.html#F-08'>F-08</a>.</li><li><strong>Rebuild the rent ledger for each unit.</strong> You need the tenancy start date, the lawful starting rent, the date and amount of <em>every</em> increase actually imposed, and the years when an allowed increase was skipped. Banking depends entirely on this. <a href='flagged.html#F-05'>F-05</a>.</li><li><strong>Work out the anniversary date.</strong> The first annual increase can take effect 12 months after the tenancy began; after that you cannot increase again until 12 months have passed, and the effective date becomes the new anniversary date. <a href='flagged.html#F-01'>F-01</a>.</li><li><strong>Report into the Housing Inventory</strong> at the Rent Board Portal (free, online, 24/7). Report each unit. The licence for a tenant-occupied unit is then generated automatically. Remember the submission is public. <a href='flagged.html#F-18'>F-18</a>.</li><li><strong>Confirm both licences are current</strong> in the portal before you serve anything, and screenshot the record.</li><li><strong>Calculate the amount.</strong> Take the percentage in force <em>on the effective date</em> (not the date you serve), add any banked percentages — <strong>added, never compounded</strong> — apply the total to <strong>base rent only</strong>, and <strong>do not round up</strong>.</li><li><strong>Draft the notice.</strong> It should state the dollar amount, the percentage, the date it takes effect, and <strong>which part of it is banked</strong>.</li><li><strong>Serve it in time.</strong> 30 days for an increase at or under 10%; 90 days above 10%; add 5 more days if you mail it.</li><li><strong>Re-check licence status on the effective date</strong> and keep the proof with the ledger.</li><li><strong>Do not touch the rent while any of this is unresolved</strong>, and re-check File No. 261020 before any large banked catch-up.</li></ol>"
+        },
+        {
+          "type": "table",
+          "caption": "Where each step comes from — every step traced to the issuing body",
+          "head": ["Step", "Action", "The official rule behind it", "Source"],
+          "rows": [
+            {"cells": ["1", "Confirm coverage", "&ldquo;Many residential units built on or before June 13, 1979 have both rent control and eviction protection.&rdquo;", ""], "src": ["S11"]},
+            {"cells": ["2", "Rebuild the ledger", "&ldquo;A skipped increase is only banked if at least 24 full months pass without any rent increase.&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["3", "Fix the anniversary date", "&ldquo;A landlord can impose the first annual increase 12 months after the date the tenant's lease began.&rdquo;", ""], "src": ["S03"]},
+            {"cells": ["4", "Report into the Housing Inventory", "&ldquo;Property owners who report that a unit is tenant-occupied will receive a rent increase license&rdquo;; deadline &ldquo;March 1 of every year&rdquo;", ""], "src": ["S02", "S01"]},
+            {"cells": ["5", "Confirm the licence", "&ldquo;your rent increase notice will not be enforceable without having a rent increase license on the effective date of the notice&rdquo;", ""], "src": ["S02", "S09"]},
+            {"cells": ["6", "Calculate", "&ldquo;They cannot be compounded or prorated&rdquo;; &ldquo;Rent increases cannot be rounded up to the nearest dollar&rdquo;; use &ldquo;the percentage that will be in effect on the date of the increase&rdquo;", ""], "src": ["S04", "S03"]},
+            {"cells": ["7", "Draft the notice", "&ldquo;Dollar amount ... Percentage amount ... Date the increase will go into effect ... Which part of the increase is banked&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["8", "Serve in time", "&ldquo;at least 30 days before the effective date&rdquo;; &ldquo;at least 90 days&rdquo; above 10%; &ldquo;subject to Section 1013 ... if served by mail&rdquo;", ""], "src": ["S14", "S03"]},
+            {"cells": ["9", "Re-check on the effective date", "&ldquo;the effective date of the rent increase, not the date of service, shall be used&rdquo;", ""], "src": ["S09"]},
+            {"cells": ["10", "Watch the pending cap", "File No. 261020 — &ldquo;Pending Committee Action&rdquo;; would cap banked + capital-improvement increases at 10% per year", ""], "src": ["S20", "S07"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "The numbers, at a glance — conditional on the flags above",
+          "body": "<p>These are reproducible arithmetic exercises on the figures in the owner's brief. They are <strong>not</strong> certified lawful maxima and <strong>not</strong> permission to serve notice: both licences, both ledgers, official coverage and Unit A's anniversary date are still open (<a href='questions.html'>open questions</a>).</p>"
+        },
+        {"type": "include", "name": "unit_summary_table"},
+        {"type": "include", "name": "scenario_table"},
+        {
+          "type": "cards",
+          "head": "Read next",
+          "items": [
+            {"href": "licence.html", "title": "Licence &amp; the Rent Board", "desc": "The state-vs-local answer in full, what to report, deadlines, and how a tenant checks your licence."},
+            {"href": "rates.html", "title": "Rates &amp; unit calculations", "desc": "The full Form 571 rate table and every scenario for both units, with notice deadlines."},
+            {"href": "notice.html", "title": "Notice &amp; reasons", "desc": "How to serve it, what it must contain, and whether you actually need a reason."},
+            {"href": "practice.html", "title": "Owner practice", "desc": "How corporate and individual owners are treated — and what the official record can and cannot tell you."},
+            {"href": "fairhousing.html", "title": "One unit or both", "desc": "The discrimination question, answered from the statutes rather than from caution."},
+            {"href": "lawyer.html", "title": "Tenant-lawyer test", "desc": "The 16 gates an SF tenant lawyer will walk through, in the order they will walk them."},
+            {"href": "suggestions.html", "title": "Suggestions", "desc": "Reviewable options with cost, risk and effort, so a path can be chosen before anything is implemented."},
+            {"href": "questions.html", "title": "Open questions", "desc": "What we know, what we do not, and exactly how to find each missing piece."},
+            {"href": "flagged.html", "title": "Flagged for review", "desc": "All 20 flagged items and unverified values, each with its official source link."},
+            {"href": "repoaudit.html", "title": "Repository audit", "desc": "Line-by-line review of the repository, with irregularities flagged."},
+            {"href": "sources.html", "title": "Sources", "desc": "All 22 official sources, read live on 2026-11-13, with the verified passage from each."}
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "licence",
+      "file": "licence.html",
+      "nav": "Licence &amp; Rent Board",
+      "title": "The Rent Board licence — local law, step by step",
+      "desc": "San Francisco Administrative Code §37.15 is a City ordinance. What an individual owner must report, when, what is public, and how a tenant checks the licence.",
+      "eyebrow": "Licence &amp; the Rent Board",
+      "h1": "It is a City ordinance, and there is no application form",
+      "lede": "You do not apply for approval and you do not send the Rent Board your rent notice. You report each unit once a year into the <strong>Housing Inventory</strong>, and the licence for a tenant-occupied unit is generated automatically.",
+      "pills": ["Local law — S.F. Admin. Code §37.15", "Fewer than 10 units: from 1 Mar 2023", "Free to report", "Licence tested on the effective date"],
+      "blocks": [
+        {"type": "callout", "cls": "answer", "head": "The one-sentence answer", "body": "<p>The 2023 rule is <strong>local</strong> — San Francisco Administrative Code Chapter 37, <strong>&sect;37.15</strong>, added by <strong>Ordinance No. 265-20, effective 18 January 2021</strong>, with the duty reaching condominiums and buildings with fewer than 10 units on <strong>1 March 2023</strong>. It is not a state law. The state law you must also obey is the <strong>notice</strong> rule in Civil Code &sect;827.</p>"},
+        {
+          "type": "table",
+          "caption": "What the official text says, verbatim",
+          "head": ["Proposition", "Official wording", "Source"],
+          "rows": [
+            {"cells": ["Who must report", "&ldquo;Owners of residential dwelling units subject to this Chapter 37 shall be required to report certain information about their units to the Rent Board&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["No entity or size carve-out", "The section uses the word &ldquo;Owners&rdquo; throughout; no individual-owner, small-building or two-unit exemption appears in the text", ""], "src": ["S01"]},
+            {"cells": ["Start date for small buildings", "&ldquo;For condominium units and units in buildings with fewer than 10 units, the information shall be reported commencing March 1, 2023 and updated annually by March 1 of each successive year.&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Start date for large buildings", "&ldquo;For units (other than condominium units) in buildings with 10 units or more, the information ... shall be reported to the Rent Board by July 1, 2022, and updated by March 1, 2023 and annually by March 1&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Licence on substantial compliance", "&ldquo;If a landlord has substantially complied ... the landlord shall receive a license to impose rent increases on tenants in that unit under Sections 37.3(a)(1)-(2).&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Consequence of non-compliance", "&ldquo;the license to impose rent increases shall be temporarily suspended during the period of the landlord's noncompliance ... a tenant shall not be obligated to pay the increased rent for months during the period of suspension.&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["The effective-date test", "&ldquo;Any rent increase ... purporting to be effective while the landlord is unlicensed shall render the entire rent increase null and void; provided, however, that the effective date of the rent increase, not the date of service, shall be used&rdquo;", ""], "src": ["S09"]},
+            {"cells": ["Banking survives a void increase", "&ldquo;Nothing in this Regulation shall affect a landlord's banking rights or the ability to accumulate otherwise lawful rent increases that were found to be null and void.&rdquo;", ""], "src": ["S09"]},
+            {"cells": ["No petition needed", "&ldquo;Landlords are not required to file a petition with the City to impose these types of rent increases&rdquo;", ""], "src": ["S05"]},
+            {"cells": ["No late penalty", "&ldquo;The Rent Board does not assess monetary penalties for filing after the deadline.&rdquo;", ""], "src": ["S02"]},
+            {"cells": ["Submissions are public", "&ldquo;The information entered in the housing inventory submission is public.&rdquo;", ""], "src": ["S02"]},
+            {"cells": ["Tenants can check", "&ldquo;If you are a tenant, you can search the Rent Board Portal to see if your landlord is up to date with their rent increase license.&rdquo;", ""], "src": ["S02"]},
+            {"cells": ["Unlicensed increases may be void for years", "&ldquo;A rent increase notice that goes into effect while the unit is unlicensed may be null and void (this may apply for multiple years)&rdquo;", ""], "src": ["S08"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "What you have to report for a non-owner-occupied unit",
+          "head": ["Item", "Detail as published", "Source"],
+          "rows": [
+            {"cells": ["Owner / manager contact", "&ldquo;the name and business contact information (address, phone number, email address) of the owner(s), or of the property manager, if any, designated by the owner(s) to address habitability issues&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Business registration number", "&ldquo;the business registration number for the unit, if any&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Size and layout", "&ldquo;the approximate square footage to the best of the owner's or manager's knowledge, and number of bedrooms and bathrooms&rdquo; — square footage &ldquo;in 250 square foot increments&rdquo;", ""], "src": ["S01", "S09"]},
+            {"cells": ["Occupancy", "&ldquo;whether the unit is vacant or occupied, and the date the vacancy or occupancy commenced&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["12-month history", "&ldquo;the start and end dates of any other vacancies or occupancies that have occurred during the previous 12 months&rdquo;", ""], "src": ["S01"]},
+            {"cells": ["Rent", "&ldquo;for tenant-occupied units, the base rent reported in $250 increments, and whether the base rent includes specified utilities&rdquo;", ""], "src": ["S01", "S02"]},
+            {"cells": ["Certification", "All of the above is reported &ldquo;under penalty of perjury&rdquo;; unknown values may be reported on information and belief without penalty (Rule §13.13)", ""], "src": ["S01", "S09"]},
+            {"cells": ["Change of contact details", "&ldquo;Unit information shall also be updated within 30 days of any change in the name or business contact information of the owner or designated property manager.&rdquo;", ""], "src": ["S01"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Two City duties that are constantly confused — only one gates your rent increase",
+          "head": ["Duty", "What it is", "Does it affect whether the increase is lawful?", "Deadline", "Source"],
+          "rows": [
+            {"cells": ["<strong>Rent Increase Licence</strong>", "Generated automatically after you report the unit into the Rent Board <strong>Housing Inventory</strong>. Free.", "<strong>Yes.</strong> An increase effective while unlicensed is null and void under Rule &sect;13.14.", "Report by <strong>1 March</strong> each year", ""], "src": ["S02", "S09"]},
+            {"cells": ["<strong>Rent Board Fee</strong>", "An annual per-unit fee. <strong>$59.00 per dwelling unit</strong> for the 2026-2027 tax year; the owner may recover 50% ($29.50) from a tenant <em>only after</em> paying it in full.", "<strong>No.</strong> A separate duty; paying or being exempted from the fee does not satisfy reporting, and reporting does not exempt the fee.", "Pay by <strong>1 March</strong>; 2027 exemption requests due <strong>14 December 2026</strong>", ""], "src": ["S12"]},
+            {"cells": ["<strong>Business Registration Certificate</strong>", "A general business-tax registration from the Office of the Treasurer &amp; Tax Collector.", "<strong>No.</strong> Not re-verified on this pass — see flag.", "Per the Tax Collector", ""], "src": ["S01"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "How a tenant — or a tenant's lawyer — will test you",
+          "body": "<p>The Rent Board publishes the exact route a tenant uses, and it takes about two minutes. See <a href='flagged.html#F-17'>F-17</a>.</p><ol class='steps'><li>Search the <strong>Rent Board Portal</strong> by address or Assessor's Parcel Number.</li><li>Check whether a <strong>Rent Increase Licence</strong> existed <em>on the effective date</em> of the increase — the Board's guidance says to &ldquo;check multiple years for all relevant dates&rdquo;.</li><li>If there was no licence and the increase has <strong>not yet</strong> taken effect: file a <strong>Tenant Summary Petition</strong> (Form 518). The Board then sends the landlord a letter saying a licence must be obtained before the increase takes effect.</li><li>If it has <strong>already</strong> taken effect: file a <strong>Tenant Petition for Unlawful Rent Increase</strong> (Form 516C), which may be set for a hearing before an Administrative Law Judge and can lead to a <strong>rent refund</strong>.</li></ol><p>The licence does <em>not</em> have to be attached to your notice — but that does not help you, because the tenant can look it up anyway.</p>"
+        },
+        {"type": "include", "name": "flag_table_cond", "arg": "licence"}
+      ]
+    },
+
+    {
+      "id": "rates",
+      "file": "rates.html",
+      "nav": "Rates &amp; calculations",
+      "title": "Allowable rates and unit calculations",
+      "desc": "The full Form 571 rate table, the calculation rules, and every scenario for both units with notice deadlines.",
+      "eyebrow": "Rates &amp; calculations",
+      "h1": "What the published numbers allow — and what they do not tell you",
+      "lede": "The Rent Board publishes one percentage a year. There is no official &ldquo;normal&rdquo; or &ldquo;reasonable&rdquo; figure for ZIP 94122, so that cell is left blank rather than filled from a commercial rent index.",
+      "pills": ["1.6% to 28 Feb 2027", "Added, never compounded", "Base rent only", "No rounding up"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "What is officially published, and what is not",
+          "head": ["Question asked", "Official answer", "Value", "Source"],
+          "rows": [
+            {"cells": ["Current allowable annual increase", "1.6%, effective 1 March 2026 – 28 February 2027", "1.6%", ""], "src": ["S03", "S06", "S07"]},
+            {"cells": ["How it is derived", "60% of the increase in Bay Area CPI-U, capped at 7% by ordinance", "60% of CPI, cap 7%", ""], "src": ["S13", "S03"]},
+            {"cells": ["Security deposit interest, 2026-27", "4.2%", "4.2%", ""], "src": ["S07"]},
+            {"cells": ["&ldquo;Reasonable and normal&rdquo; increase for ZIP 94122", "<strong>No official source publishes this.</strong> The only published figure is the lawful maximum.", "<span class='blank'>unverified</span>", ""], "src": ["S03", "S06"]},
+            {"cells": ["Rate effective 1 March 2027", "Not yet published; the Board publishes each 1 March", "<span class='blank'>unverified</span>", ""], "src": ["S03", "S13"]},
+            {"cells": ["Can banked and current-year percentages be compounded?", "&ldquo;They cannot be compounded or prorated&rdquo; — they are added together", "Added, not compounded", ""], "src": ["S04", "S05"]},
+            {"cells": ["Can the result be rounded up?", "&ldquo;Rent increases cannot be rounded up to the nearest dollar.&rdquo;", "No", ""], "src": ["S03", "S05"]},
+            {"cells": ["Calculated on what?", "Base rent only. Pass-throughs are excluded; parking and storage generally count as base rent.", "Base rent", ""], "src": ["S03", "S05"]},
+            {"cells": ["Is a petition needed for an annual or banked increase?", "&ldquo;Landlords are not required to file a petition with the City to impose these types of rent increases&rdquo;", "No", ""], "src": ["S05"]},
+            {"cells": ["How long can increases be banked?", "Back to 1 April 1982; &ldquo;there is no limit on how much can be banked&rdquo;; they do not expire during a tenancy but do not carry over to a new tenant", "From 1 Apr 1982", ""], "src": ["S04"]}
+          ]
+        },
+        {"type": "include", "name": "unit_summary_table"},
+        {"type": "include", "name": "scenario_table"},
+        {"type": "include", "name": "rate_table"},
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "Before you act on any banked figure",
+          "body": "<p><strong>File No. 261020</strong> is pending before the Land Use and Transportation Committee. As drafted it would cap <strong>combined banked and capital-improvement increases at 10% per year</strong> for three years, and would apply to <strong>banked increases noticed on or after 15 September 2026</strong>. It is <strong>not law</strong> — Legistar showed &ldquo;Pending Committee Action&rdquo; on 2026-11-13 — but the Rent Board has posted a formal warning about it on its own rate pages. Unit B's illustrative banked portion is <strong>13.1%</strong>, which is above the proposed cap. See <a href='flagged.html#F-10'>F-10</a>.</p>"
+        }
+      ]
+    },
+
+    {
+      "id": "notice",
+      "file": "notice.html",
+      "nav": "Notice &amp; reasons",
+      "title": "How to notify tenants, and whether you need a reason",
+      "desc": "California Civil Code §827 notice periods, the four things the notice must contain, service method, and what counts as a lawful reason.",
+      "eyebrow": "Notice &amp; reasons",
+      "h1": "30 days or 90 days — and no, you do not need a reason",
+      "lede": "For an annual or banked increase on a rent-controlled unit, San Francisco does <strong>not</strong> require the owner to justify the increase. What it requires is a licence, a correct calculation and a conforming notice.",
+      "pills": ["30 days at or under 10%", "90 days above 10%", "+5 days if mailed", "No reason required"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Notice periods — California Civil Code §827, as enacted",
+          "head": ["Situation", "Notice required", "Statutory wording", "Source"],
+          "rows": [
+            {"cells": ["Increase is 10% or less (alone or combined with any other increase in the prior 12 months)", "<strong>30 days</strong>", "&ldquo;the notice shall be delivered at least 30 days before the effective date of the increase&rdquo;", ""], "src": ["S14"]},
+            {"cells": ["Increase is greater than 10% (alone or combined)", "<strong>90 days</strong>", "&ldquo;the notice shall be delivered at least 90 days before the effective date of the increase&rdquo;", ""], "src": ["S14"]},
+            {"cells": ["Notice is mailed", "<strong>Add 5 days</strong>", "&ldquo;subject to Section 1013 of the Code of Civil Procedure if served by mail&rdquo;", ""], "src": ["S14", "S05"]},
+            {"cells": ["How to serve", "Personal delivery, or mail under CCP §1013", "&ldquo;By delivering a copy to the tenant personally&rdquo; or &ldquo;By serving a copy by mail under the procedures prescribed in Section 1013&rdquo;", ""], "src": ["S14"]},
+            {"cells": ["Which percentage to use", "The one in force on the <em>effective</em> date, not the service date", "&ldquo;The landlord should use the percentage that will be in effect on the date of the increase, not the percentage in effect on the date they serve the notice.&rdquo;", ""], "src": ["S03"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "What the notice must contain",
+          "head": ["Required element", "Source of the requirement", "Source"],
+          "rows": [
+            {"cells": ["Dollar amount of the increase", "Rent Board guidance on notice content", ""], "src": ["S04"]},
+            {"cells": ["Percentage amount of the increase", "Rent Board guidance on notice content", ""], "src": ["S04"]},
+            {"cells": ["Date the increase will go into effect", "Rent Board guidance on notice content", ""], "src": ["S04"]},
+            {"cells": ["<strong>Which part of the increase is banked</strong>", "Rent Board guidance on notice content — the element most often omitted", ""], "src": ["S04"]},
+            {"cells": ["The licence itself", "<strong>Not required.</strong> &ldquo;The rent increase license does not need to be included with your rent increase notice.&rdquo;", ""], "src": ["S02"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Do you need a reason? — what the official sources say",
+          "head": ["Route", "Is a reason required?", "What the official source says", "Source"],
+          "rows": [
+            {"cells": ["Annual allowable increase", "<strong>No.</strong>", "No petition and no justification: &ldquo;Landlords are not required to file a petition with the City to impose these types of rent increases&rdquo;", ""], "src": ["S05", "S03"]},
+            {"cells": ["Banked increase", "<strong>No</strong> — but the banked portion must be itemised in the notice", "&ldquo;Banked increases do not have to be approved by the Rent Board, but must be calculated correctly.&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["Capital improvement / rehabilitation pass-through", "<strong>Yes</strong> — a petition and certification are required", "&sect;37.3(a)(3) requires costs to be &ldquo;certified pursuant to Sections 37.7 and 37.8B&rdquo;", ""], "src": ["S13"]},
+            {"cells": ["Utility / water bond pass-throughs", "<strong>Yes</strong> — statutory conditions and tenant notice apply; some routes allow a tenant hardship application", "&sect;37.3(a)(4)-(5) sets the conditions; a &ldquo;tenant may file a hardship application with the Board&rdquo;", ""], "src": ["S13"]},
+            {"cells": ["Any &ldquo;reason&rdquo; that references a protected characteristic", "<strong>Never lawful.</strong>", "42 U.S.C. &sect;3604(b) and Gov. Code &sect;12955(a) prohibit it", ""], "src": ["S19", "S18"]},
+            {"cells": ["An increase after a tenant complaint", "<strong>Presumed retaliatory for 180 days.</strong>", "&ldquo;the lessor may not ... increase the rent ... within 180 days&rdquo; of a tenantability complaint, agency complaint, inspection or citation", ""], "src": ["S16"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "The 180-day retaliation trap",
+          "body": "<p>Under Civil Code &sect;1942.5(a), if a tenant has (in good faith) given a &sect;1942 notice, complained to the owner about tenantability, complained to an appropriate agency, or if there has been an inspection or citation, the owner <strong>may not increase the rent</strong> for <strong>180 days</strong> from the latest of those events, where the tenant is not in default in rent. Subdivision (d) extends the same protection to tenants who have lawfully organised or participated in a tenants' association. A tenant may invoke &sect;1942.5(a) <strong>once in any 12-month period</strong>.</p><p><strong>Operational consequence:</strong> before serving any notice, check whether either household has made a habitability complaint, requested repairs in writing, or contacted an agency in the last six months. If so, the timing of the increase is a legal question, not a business one. See <a href='lawyer.html'>the tenant-lawyer test</a>.</p>"
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "Practical drafting notes that cost nothing and remove the obvious attack lines",
+          "body": "<ul class='plain'><li>Use the percentage in force on the <strong>effective date</strong>, and say which period it comes from.</li><li>Show the arithmetic on the face of the notice: base rent &rarr; percentage &rarr; dollar amount &rarr; new base rent.</li><li>Itemise the <strong>banked</strong> years separately, with the year and percentage each.</li><li>Do not round up; carry the cents exactly.</li><li>Do not include pass-through amounts in the base used for the percentage.</li><li>State the service method and keep proof of service dated on the day you serve.</li><li>Never reference a tenant's protected characteristic, immigration status, complaint history or tenancy-organising activity anywhere in the notice or in any covering conversation.</li></ul>"
+        }
+      ]
+    },
+
+    {
+      "id": "practice",
+      "file": "practice.html",
+      "nav": "Owner practice",
+      "title": "How corporations and individual owners handle increases",
+      "desc": "The ordinance draws no distinction between owner types. What is officially knowable, and what is not published anywhere.",
+      "eyebrow": "Owner practice",
+      "h1": "The law does not care whether you are a corporation",
+      "lede": "Section 37.15 says &ldquo;Owners.&rdquo; The only officially published difference between a large portfolio and a two-unit building is <strong>when the duty started</strong> — not what it requires.",
+      "pills": ["Same duties, both owner types", "10+ units: from 1 Jul 2022", "Under 10 units: from 1 Mar 2023", "Behaviour: not published"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "What is officially different, and what is officially the same",
+          "head": ["Dimension", "Large portfolio (10+ units)", "Small / individual owner (under 10)", "Source"],
+          "rows": [
+            {"cells": ["Date the reporting duty began", "<strong>1 July 2022</strong>", "<strong>1 March 2023</strong>", ""], "src": ["S01", "S02"]},
+            {"cells": ["Annual update deadline", "1 March every year", "1 March every year", ""], "src": ["S01"]},
+            {"cells": ["Licence requirement", "Required; unlicensed increase null and void", "Required; unlicensed increase null and void", ""], "src": ["S09"]},
+            {"cells": ["Maximum annual percentage", "1.6% to 28 Feb 2027", "1.6% to 28 Feb 2027", ""], "src": ["S03", "S06"]},
+            {"cells": ["Notice period", "30 / 90 days, +5 if mailed", "30 / 90 days, +5 if mailed", ""], "src": ["S14"]},
+            {"cells": ["Petition needed for annual or banked increase", "No", "No", ""], "src": ["S05"]},
+            {"cells": ["Bulk reporting option", "Excel template available for 5 or more units", "Portal &ldquo;Individual Unit&rdquo; form recommended", ""], "src": ["S02"]},
+            {"cells": ["Licence status is publicly searchable", "Yes — by address or APN", "Yes — by address or APN", ""], "src": ["S02", "S08"]},
+            {"cells": ["How each group actually sets increases in practice", "<strong>Left blank</strong> — no official dataset", "<strong>Left blank</strong> — no official dataset", ""], "src": ["S01", "S02"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "What this means for you as a single-building owner",
+          "body": "<p>Three points follow directly from the official text:</p><ol class='steps'><li><strong>You are not exempt and you are not a special case.</strong> The ordinance applies to &ldquo;Owners&rdquo; with no threshold. If it helps: the Rent Board has said most owners must report <em>&ldquo;even if you are not a landlord&rdquo;</em>.</li><li><strong>You have one advantage, not a legal one but a practical one.</strong> With two units you can evidence your decision unit-by-unit from two short ledgers. A 200-unit owner cannot explain any single increase without a system. Documented, neutral, unit-level arithmetic is the strongest record available to you and it is cheap to produce.</li><li><strong>You carry the same exposure as a corporation.</strong> 42 U.S.C. &sect;3604 and Government Code &sect;12955 apply to the owner of any housing accommodation regardless of portfolio size. There is no small-landlord carve-out.</li></ol>"
+        },
+        {
+          "type": "table",
+          "caption": "What can and cannot be established from official sources about market behaviour",
+          "head": ["Question", "Can it be answered officially?", "Answer", "Source"],
+          "rows": [
+            {"cells": ["What is the maximum I may lawfully impose?", "<strong>Yes</strong>", "1.6% to 28 Feb 2027, plus validly banked percentages, added not compounded", ""], "src": ["S03", "S04"]},
+            {"cells": ["What is &lsquo;normal&rsquo; or &lsquo;reasonable&rsquo; in 94122?", "<strong>No</strong> — no official body publishes a ZIP-level norm", "<span class='blank'>unverified</span>", ""], "src": ["S03"]},
+            {"cells": ["How much do large corporate owners increase rent in SF?", "<strong>No</strong> — the Rent Board publishes no owner-type behaviour statistics", "<span class='blank'>unverified</span>", ""], "src": ["S01", "S02"]},
+            {"cells": ["Can I see whether another owner holds a licence?", "<strong>Yes</strong>", "Search the Rent Board Portal by address or Assessor's Parcel Number", ""], "src": ["S02", "S08"]},
+            {"cells": ["Is there any published guidance that treats small owners differently?", "<strong>No</strong>", "None found in &sect;37.15, Rule &sect;13.14, or the Board's published guidance", ""], "src": ["S01", "S09", "S02"]}
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "fairhousing",
+      "file": "fairhousing.html",
+      "nav": "One unit or both",
+      "title": "Raise one unit or both? The discrimination question",
+      "desc": "42 U.S.C. §3604 and Government Code §12955 read directly: uniformity is not required, and uniformity is not a defence.",
+      "eyebrow": "One unit or both",
+      "h1": "Neither &ldquo;one&rdquo; nor &ldquo;both&rdquo; is automatically safe",
+      "lede": "The statutes prohibit treating someone differently <em>because of</em> a protected characteristic. They do not require you to treat every tenant identically, and identical treatment is not a defence if the selection reason is itself unlawful.",
+      "pills": ["FHA §3604(b) covers rent terms", "FEHA §12955(a) — broader list", "Uniformity: not required, not sufficient"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "The statutory text, as enacted",
+          "head": ["Law", "Protected characteristics / conduct", "Reach", "Source"],
+          "rows": [
+            {"cells": ["<strong>Federal</strong> — 42 U.S.C. &sect;3604(b)", "race, colour, religion, sex, familial status, national origin", "&ldquo;To discriminate against any person in the <strong>terms, conditions, or privileges of sale or rental of a dwelling</strong> ... because of&rdquo; a protected characteristic", ""], "src": ["S19"]},
+            {"cells": ["<strong>Federal</strong> — 42 U.S.C. &sect;3604(f)(2)", "handicap (disability)", "Same &ldquo;terms, conditions, or privileges&rdquo; reach", ""], "src": ["S19"]},
+            {"cells": ["<strong>State</strong> — Cal. Gov. Code &sect;12955(a)", "race, colour, religion, sex, gender, gender identity, gender expression, sexual orientation, marital status, national origin, ancestry, familial status, <strong>source of income</strong>, disability, veteran or military status, genetic information", "&ldquo;For the owner of any housing accommodation to discriminate against or harass any person because of&rdquo; a protected characteristic", ""], "src": ["S18"]},
+            {"cells": ["<strong>State</strong> — Cal. Gov. Code &sect;12955(f)", "Retaliation", "Unlawful to increase rent where the &ldquo;dominant purpose is retaliation against a person who has opposed practices unlawful under this section&rdquo;", ""], "src": ["S18"]},
+            {"cells": ["<strong>State</strong> — Cal. Civ. Code &sect;1942.5", "Retaliation for tenantability complaints and tenant organisation", "No rent increase within <strong>180 days</strong> of a qualifying complaint, inspection or citation", ""], "src": ["S16"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "The four propositions that actually decide this",
+          "head": ["Proposition", "Is it supported by the statutes?", "Source"],
+          "rows": [
+            {"cells": ["A rent increase is a &ldquo;term, condition, or privilege&rdquo; of rental covered by &sect;3604(b)", "<strong>Yes</strong> — the statute reaches &ldquo;terms, conditions, or privileges of sale or rental&rdquo;, which is exactly what a rent increase is", ""], "src": ["S19"]},
+            {"cells": ["The law requires all tenants to receive identical increases", "<strong>No.</strong> Nothing in &sect;3604 or &sect;12955 imposes a uniformity requirement", ""], "src": ["S19", "S18"]},
+            {"cells": ["Giving both units the same increase is a complete defence", "<strong>No.</strong> Identical treatment is not immunity if the <em>reason</em> for the increase is itself unlawful", ""], "src": ["S19", "S18"]},
+            {"cells": ["A different percentage for each unit can be objectively justified under SF rules", "<strong>Yes.</strong> Each unit's lawful maximum depends on its own anniversary date and its own banked history", ""], "src": ["S03", "S04"]},
+            {"cells": ["A documented, neutral, ledger-based reason recorded <em>before</em> service is the strongest available evidence", "<strong>Yes, as a matter of evidence.</strong> It is what a reviewer would look for", ""], "src": ["S19", "S18", "S03"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "So: one unit or both?",
+          "body": "<p><strong>Decide it on the ledgers, not on optics.</strong> Under San Francisco's own rules the two units are not similarly situated: Unit B's rent has not moved since 2019 while Unit A's has not moved since 2025, so the banked entitlement diverges sharply. Applying each unit's own lawful maximum is <strong>arithmetically explainable</strong> and is the single most defensible posture available.</p><p><strong>The risk pattern to avoid</strong> is not &ldquo;different numbers&rdquo; — it is raising the unit occupied by a household with a protected characteristic while leaving an identically situated unit untouched. That is the fact pattern a tenant lawyer looks for, and it is why the reason must be written down <strong>before</strong> the notice is served, not reconstructed afterwards.</p><p><strong>Two cautions specific to this file:</strong></p><ul class='plain'><li>Unit B's banked entitlement, if the ledger confirms it, produces an increase <strong>above 10%</strong> — which triggers the <strong>90-day</strong> notice rule and sits above the cap proposed in File No. 261020. Size and timing matter more here than symmetry.</li><li>If you raise only one unit, write down in one sentence <em>why that unit and not the other</em>, in terms of dates and ledgers only. If you raise both, do the same. The sentence is the evidence.</li></ul><p>This site does <strong>not</strong> promise that any particular choice would survive a lawyer's review. It shows what the statutes prohibit and what the record would need to show.</p>"
+        },
+        {
+          "type": "table",
+          "caption": "Decision options — the choice is yours to make, not one this site makes for you",
+          "head": ["Option", "What it looks like", "What it does well", "What it leaves exposed", "Source"],
+          "rows": [
+            {"cells": ["<strong>A — Each unit at its own lawful maximum</strong>", "Unit A 3.0% on its anniversary; Unit B banked + annual on its anniversary", "Arithmetically explainable from two ledgers; maximises lawful entitlement", "Unit B lands above 10%: 90-day notice, and above the proposed 10% cap in File No. 261020", ""], "src": ["S03", "S04", "S14", "S20"]},
+            {"cells": ["<strong>B — Annual-only, both units</strong>", "1.6% each (Unit A), current published rate each", "Simplest to explain; both well under the 10% threshold; 30-day notice", "Leaves banked entitlement unused; does not need to be used, but is a real economic cost", ""], "src": ["S03", "S14"]},
+            {"cells": ["<strong>C — Both units, same percentage</strong>", "A single percentage applied to both regardless of each unit's own history", "Visually uniform", "Uniformity is not a defence; ignores that the units are not similarly situated under SF rules", ""], "src": ["S19", "S18", "S03"]},
+            {"cells": ["<strong>D — Neither unit, pending verification</strong>", "No notice until licences, ledgers, coverage and File No. 261020 are resolved", "Zero legal exposure; preserves banking rights throughout", "Defers income; banking rights survive the delay under Rule &sect;13.14", ""], "src": ["S09", "S04"]}
+          ]
+        }
+      ]
+    },
+
+    {
+      "id": "lawyer",
+      "file": "lawyer.html",
+      "nav": "Tenant-lawyer test",
+      "title": "The scrutiny test: 16 gates a tenant lawyer will walk through",
+      "desc": "Every gate mapped to the official text it comes from, in the order an SF tenant lawyer would check them.",
+      "eyebrow": "Tenant-lawyer test",
+      "h1": "If a tenant lawyer reviewed this file, here is what they would open first",
+      "lede": "Nothing here is a prediction of an outcome. It is a checklist built from the official sources, so that each gate can be answered &ldquo;pass&rdquo;, &ldquo;fail&rdquo; or &ldquo;unknown&rdquo; before a notice goes out.",
+      "pills": ["16 gates", "Each traced to statute, ordinance or rule", "Answer pass / fail / unknown"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "The 16 gates, in the order they would be checked",
+          "head": ["#", "Gate", "What a reviewer looks for", "The official hook", "Source"],
+          "rows": [
+            {"cells": ["1", "Licence on the effective date", "A current Rent Increase Licence for the unit on the day the increase takes effect", "Rule &sect;13.14: unlicensed increase &ldquo;null and void&rdquo;; tested on the effective date", ""], "src": ["S09", "S01"]},
+            {"cells": ["2", "Housing Inventory reporting current", "Annual report filed, and contact details updated within 30 days of any change", "&sect;37.15(a)-(c)", ""], "src": ["S01"]},
+            {"cells": ["3", "Reporting accurate", "Occupancy, unit characteristics and rent band reported truthfully under penalty of perjury", "&sect;37.15(b); Rule &sect;13.13", ""], "src": ["S01", "S09"]},
+            {"cells": ["4", "12 months since last increase", "The anniversary-date arithmetic", "&ldquo;A landlord can impose the first annual increase 12 months after the date the tenant's lease began&rdquo;", ""], "src": ["S03"]},
+            {"cells": ["5", "Correct percentage for the effective date", "The published rate for the period containing the effective date, not the service date", "&ldquo;use the percentage that will be in effect on the date of the increase&rdquo;", ""], "src": ["S03", "S06"]},
+            {"cells": ["6", "Banking added, not compounded", "Percentages summed; no compounding, no prorating", "&ldquo;They cannot be compounded or prorated&rdquo;", ""], "src": ["S04", "S05"]},
+            {"cells": ["7", "24-month banking threshold met", "At least 24 full months passed with no rent increase for the skipped year to bank", "&ldquo;A skipped increase is only banked if at least 24 full months pass without any rent increase&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["8", "Banking window", "No banking claimed for years before 1 April 1982", "&ldquo;Banking has only been allowed since April 1, 1982&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["9", "Banking survived any tenancy change", "Original occupants still in possession; banked increases do not carry to a new tenant", "&ldquo;Banked increases do not carry over to a new tenant&rdquo;", ""], "src": ["S04"]},
+            {"cells": ["10", "Base rent only, no rounding up", "Pass-throughs excluded; parking/storage treated correctly; cents carried exactly", "&ldquo;Rent increases cannot be rounded up to the nearest dollar&rdquo;", ""], "src": ["S03", "S05"]},
+            {"cells": ["11", "Notice period and service", "30 or 90 days as required; +5 days if mailed; proper service method", "Civ. Code &sect;827(b)(1)-(3)", ""], "src": ["S14"]},
+            {"cells": ["12", "Notice content", "Dollar amount, percentage, effective date, and which part is banked", "Rent Board notice-content guidance", ""], "src": ["S04"]},
+            {"cells": ["13", "No protected-characteristic differential", "The reason for selecting or sizing each increase is neutral and dated before service", "42 U.S.C. &sect;3604(b); Gov. Code &sect;12955(a)", ""], "src": ["S19", "S18"]},
+            {"cells": ["14", "No retaliation", "No increase within 180 days of a tenantability complaint, agency complaint, inspection or citation; no response to tenant organising", "Civ. Code &sect;1942.5(a), (d)", ""], "src": ["S16"]},
+            {"cells": ["15", "Occupant-change route handled correctly", "If the last original occupant left, whether a &sect;6.14 notice was served, and whether the remaining person is a co-tenant or a subtenant", "Rule &sect;6.14 and Costa-Hawkins guidance", ""], "src": ["S10", "S17"]},
+            {"cells": ["16", "Pending legislation considered", "Whether a large banked catch-up is exposed to File No. 261020", "Legistar File No. 261020 — Pending Committee Action", ""], "src": ["S20", "S07"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "Current status of those 16 gates on this file",
+          "body": "<p><strong>Gates 1, 2, 4, 7, 9, 13 and 14 cannot be answered from the brief alone</strong> — they depend on licence records, ledgers and private facts that were not supplied. Gates 5, 6, 8, 10, 11 and 12 are <em>rules</em> rather than facts and can be satisfied by drafting correctly. Gate 16 is a live risk on Unit B. Gate 3 depends on the reporting you now file. Gate 15 is not triggered on the reported facts because an original occupant remains in Unit A.</p><p><strong>Honest summary:</strong> on the information available today, this file would <em>not</em> survive an unqualified &ldquo;done reasonably, normal business practice, no discrimination&rdquo; sign-off — not because anything was done wrong, but because <strong>the licence status and the ledgers are unknown</strong>. That is fixable in an afternoon of document retrieval, and the <a href='questions.html'>open questions</a> page sets out exactly which documents to pull.</p>"
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "Free, officially verified routes a tenant can use",
+          "body": "<ul class='plain'><li><strong>Rent Board counselling</strong>, free, 415-252-4600, weekdays 9am-12pm and 1pm-4pm — available to landlords as well as tenants.</li><li><strong>Tenant Summary Petition (Form 518)</strong> if the increase has not yet taken effect and there is no licence.</li><li><strong>Tenant Petition for Unlawful Rent Increase (Form 516C)</strong> once it has taken effect; may be set for a hearing before an Administrative Law Judge and can lead to a rent refund.</li><li><strong>Portal licence lookup</strong> by address or Assessor's Parcel Number, including previous years.</li></ul><p class='warn'>San Francisco's Tenant Right to Counsel programme was <strong>not</strong> confirmed on an official sf.gov page during this pass — only commercial summaries were found, so it is flagged rather than asserted (<a href='flagged.html#F-19'>F-19</a>).</p>"
+        }
+      ]
+    },
+
+    {
+      "id": "suggestions",
+      "file": "suggestions.html",
+      "nav": "Suggestions",
+      "title": "Suggestions — review and choose a path before implementing",
+      "desc": "Ranked, reviewable suggestions with effort, risk, and the official basis for each, so a decision can be made before any change is implemented.",
+      "eyebrow": "Suggestions for review",
+      "h1": "Nothing here has been implemented — pick a path first",
+      "lede": "Each suggestion below is written so it can be accepted, deferred or rejected on its own. Every one states what it costs, what it reduces, and which official source makes it worth doing. <strong>No change has been made to the property, the tenancies or the repository's existing canonical site.</strong>",
+      "pills": ["Review only — nothing implemented", "Effort and risk stated per item", "Every item traced to an official source"],
+      "blocks": [
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "How to read this page",
+          "body": "<p>Each row is one decision. <strong>Priority</strong> reflects how much legal exposure it removes per unit of effort. <strong>Effort</strong> is the owner's time, not a fee estimate. <strong>Risk if skipped</strong> is what remains unresolved. Choose with the <a href='questions.html'>open questions</a> page beside you: several suggestions exist purely to close a question.</p>"
+        },
+        {
+          "type": "table",
+          "caption": "Suggestions — ordered by exposure removed per unit of effort",
+          "head": ["#", "Suggestion", "Why", "Effort", "Risk if skipped", "Options", "Source"],
+          "rows": [
+            {"cells": ["S-01", "<strong>Confirm and, if needed, complete the Housing Inventory for both units before serving anything.</strong>", "The licence is the gate. An increase effective while unlicensed is null and void, and the tenant can look this up in the portal in minutes.", "Low — one portal session per unit, free", "<strong>High.</strong> The entire increase can be void, potentially for multiple years", "Accept / defer to a fixed date / reject with written reasoning", ""], "src": ["S02", "S09", "S08"]},
+            {"cells": ["S-02", "<strong>Screenshot and file the licence record for each unit, dated, for every relevant year.</strong>", "The Board advises checking &ldquo;multiple years for all relevant dates&rdquo;. A dated screenshot is the cheapest evidence you will ever create.", "Low", "Medium — you cannot later prove the licence existed on the effective date", "Accept / defer / reject", ""], "src": ["S02", "S08"]},
+            {"cells": ["S-03", "<strong>Rebuild both rent ledgers from the tenancy start, month by month.</strong>", "Banking entitlement is entirely a ledger question. The 24-month rule means one missed or mis-dated entry changes the number.", "Medium", "<strong>High.</strong> Every banked calculation is unsupported without it", "Accept / defer / reject", ""], "src": ["S04", "S05"]},
+            {"cells": ["S-04", "<strong>Resolve Unit A's anniversary date before calculating anything.</strong>", "The 2026-04-01 occupant change may have moved the anniversary from 1 February to 1 April, which changes both the applicable rate and the notice deadline.", "Low — read the agreement and the ledger", "Medium — a notice served against the wrong anniversary is defective", "Accept / defer / reject", ""], "src": ["S03"]},
+            {"cells": ["S-05", "<strong>Confirm official coverage for both units</strong> (parcel build date and any exemption) rather than relying on the reported 1940 date.", "Rent control attaches to units built on or before 13 June 1979, subject to exemptions. Everything downstream depends on it.", "Low — Property Information Map, plus a Rent Board counselling call if unclear", "Medium — the entire analysis could be applied to the wrong regime", "Accept / defer / reject", ""], "src": ["S11", "S13"]},
+            {"cells": ["S-06", "<strong>Do not serve any large banked catch-up until File No. 261020 is resolved.</strong>", "As drafted, the 10% cap would reach banked increases noticed on or after 15 September 2026 — i.e. notices served from today onward.", "Low — a calendar reminder and a Legistar check", "<strong>High for Unit B.</strong> Its banked portion alone is above the proposed cap", "Accept / defer to a decision date / reject with advice", ""], "src": ["S20", "S04"]},
+            {"cells": ["S-07", "<strong>Decide one unit or both <em>on the ledgers</em>, and write the reason down before serving.</strong>", "Uniformity is not a defence and is not required. What protects you is a neutral, dated, ledger-based reason.", "Low", "Medium — the reason would otherwise be reconstructed after the fact", "Accept / defer / reject", ""], "src": ["S19", "S18", "S03"]},
+            {"cells": ["S-08", "<strong>Use a notice template that shows the arithmetic and itemises the banked years.</strong>", "The Rent Board lists &ldquo;which part of the increase is banked&rdquo; as a required element; it is the one most often missing.", "Low", "Medium — a defect that invites a petition even where the number is right", "Accept / defer / reject", ""], "src": ["S04", "S14"]},
+            {"cells": ["S-09", "<strong>Add 5 days if you mail the notice, and keep proof of service.</strong>", "Civ. Code &sect;827(b) expressly makes mailed service subject to CCP &sect;1013.", "Low", "Medium — a short notice is a void notice", "Accept / defer / reject", ""], "src": ["S14"]},
+            {"cells": ["S-10", "<strong>Check the 180-day retaliation window for both households before serving.</strong>", "A tenantability complaint, agency complaint, inspection or citation inside 180 days blocks the increase.", "Low", "Medium — timing, not amount, becomes the defect", "Accept / defer / reject", ""], "src": ["S16"]},
+            {"cells": ["S-11", "<strong>Pay the Rent Board Fee and the Housing Inventory as two separate tasks.</strong>", "The Board states expressly that a fee exemption does not satisfy reporting, and reporting does not exempt the fee.", "Low", "Low — but a missed fee accrues penalties, and a missed report voids increases", "Accept / defer / reject", ""], "src": ["S12", "S02"]},
+            {"cells": ["S-12", "<strong>Decide the privacy posture before filing the Housing Inventory.</strong>", "The submission is public and can carry owner/manager name and business contact, plus unit characteristics. Rent is reported in $250 bands, not exact dollars.", "Low", "Medium — an avoidable public disclosure", "Accept / defer / reject", ""], "src": ["S02", "S01"]},
+            {"cells": ["S-13", "<strong>Set one annual calendar entry: 1 March.</strong>", "The Housing Inventory update and the Rent Board Fee fall on the same date each year; the fee exemption window closes in December.", "Low", "Medium — the licence lapses silently", "Accept / defer / reject", ""], "src": ["S02", "S12"]},
+            {"cells": ["S-14", "<strong>Have a Rent Board counsellor sanity-check the calculation before serving.</strong>", "Free counselling is available to landlords as well as tenants on 415-252-4600.", "Low", "Medium — a free check is being left unused", "Accept / defer / reject", ""], "src": ["S11"]},
+            {"cells": ["S-15", "<strong>Consider whether the annual-only route is the better first move.</strong>", "Taking the current published percentage, without touching banked amounts, keeps both units far below the 10% threshold and the proposed cap, and preserves banking for later.", "Low", "Low — the cost is foregone income, not legal exposure", "Accept / defer / reject", ""], "src": ["S03", "S04", "S20"]},
+            {"cells": ["S-16", "<strong>Site: collapse the parallel editions or mark them clearly superseded.</strong>", "More than a dozen editions now exist; several predate the current rate and the File No. 261020 warning.", "Medium — a repository task", "Low legal, medium practical — contradicts nothing, but confuses the record", "Accept / defer / reject", ""], "src": ["S07", "S20"]},
+            {"cells": ["S-17", "<strong>Site: request an administrator history rewrite for the pre-redaction blobs.</strong>", "Earlier public history reportedly contains tenant initials; current-file scans cannot repair history.", "Medium — requires an administrator", "<strong>High privacy</strong> — historical commits remain retrievable", "Accept / defer / reject", ""], "src": ["S02"]},
+            {"cells": ["S-18", "<strong>Site: keep blank cells blank.</strong>", "Where no official source publishes a value — the 94122 market norm, owner behaviour by entity type — leave it empty and flagged rather than filling it in.", "Low", "Medium — an inferred number becomes an unauthorised representation", "Accept / defer / reject", ""], "src": ["S03", "S01"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "What has deliberately NOT been suggested",
+          "body": "<ul class='plain'><li><strong>No suggested dollar figure has been recommended as &ldquo;the&rdquo; increase.</strong> The scenarios are arithmetic on the brief's figures; the choice is the owner's.</li><li><strong>No template notice has been drafted as a finished legal document.</strong> The content requirements are listed on the <a href='notice.html'>notice page</a>; the drafting should follow the resolved ledger.</li><li><strong>No change has been made to the repository's existing canonical site.</strong> The root <code>index.html</code> is generated by <code>hub/build.py</code> and enforced by the &ldquo;Final assurance&rdquo; workflow, and that code is owned by completed sessions. This edition is additive and sits at <code>/decision/</code>. See <a href='flagged.html#F-14'>F-14</a>.</li><li><strong>No legal conclusion has been reached</strong> about whether any proposed increase would be upheld. That depends on facts this site does not have.</li></ul>"
+        }
+      ]
+    },
+
+    {
+      "id": "questions",
+      "file": "questions.html",
+      "nav": "Open questions",
+      "title": "Open questions — what we know, what we do not, and how to find it",
+      "desc": "A decision gate: every question that must be answered before a reasonable decision is possible, with the specific document or source that answers it.",
+      "eyebrow": "Open questions — decision gate",
+      "h1": "What has to be true before any of this is decidable",
+      "lede": "Split into three columns: what the brief and the official sources already establish, what is missing, and the exact step that closes each gap. <strong>No decision should be made while the &lsquo;missing&rsquo; column has entries in it.</strong>",
+      "pills": ["Known", "Missing", "How to discover it"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Information we already have",
+          "head": ["Item", "Value as supplied or officially published", "Source type", "Source"],
+          "rows": [
+            {"cells": ["Unit A tenancy start", "2025-02-01", "Owner brief", ""], "src": ["S03"]},
+            {"cells": ["Unit A rent at start", "$3,995.00 per month", "Owner brief", ""], "src": ["S03"]},
+            {"cells": ["Unit A occupant change", "2026-04-01, two occupants now in place, rent unchanged at $3,995.00", "Owner brief", ""], "src": ["S03"]},
+            {"cells": ["Unit B tenancy start", "2019-06-01", "Owner brief", ""], "src": ["S03"]},
+            {"cells": ["Unit B rent at start", "$3,150.00 per month", "Owner brief", ""], "src": ["S03"]},
+            {"cells": ["Reported construction year", "1940", "Owner brief — not officially confirmed", ""], "src": ["S11"]},
+            {"cells": ["Location", "Outer Sunset, ZIP 94122, San Francisco", "Owner brief", ""], "src": ["S11"]},
+            {"cells": ["Current allowable annual increase", "1.6%, 1 Mar 2026 – 28 Feb 2027", "Official", ""], "src": ["S03", "S06", "S07"]},
+            {"cells": ["Full rate history", "46 published periods from 1 Apr 1982", "Official", ""], "src": ["S06"]},
+            {"cells": ["Banking mechanics", "Added not compounded; 24-month rule; from 1 Apr 1982; no cap; lost on a new tenancy", "Official", ""], "src": ["S04", "S05"]},
+            {"cells": ["Notice periods", "30 / 90 days, +5 if mailed", "Official (state statute)", ""], "src": ["S14"]},
+            {"cells": ["Licence requirement and test", "Local; tested on the effective date; unlicensed is null and void; banking survives", "Official", ""], "src": ["S01", "S09"]},
+            {"cells": ["Small-building start date", "1 March 2023 for buildings with fewer than 10 units and condos", "Official", ""], "src": ["S01", "S02", "S09"]},
+            {"cells": ["Anti-discrimination framework", "42 U.S.C. &sect;3604(b); Gov. Code &sect;12955(a), (f); Civ. Code &sect;1942.5", "Official", ""], "src": ["S19", "S18", "S16"]},
+            {"cells": ["Pending legislation", "File No. 261020, Pending Committee Action, 10% cap as drafted", "Official", ""], "src": ["S20", "S07"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Information that is missing — and the exact step that closes each gap",
+          "head": ["#", "Open question", "Why it blocks a decision", "How to discover it", "Source"],
+          "rows": [
+            {"cells": ["Q-01", "Is a current Rent Increase Licence on file for each unit?", "Without it the entire increase is null and void on the effective date", "Search the Rent Board Portal by address or Assessor's Parcel Number; check each relevant year; screenshot the result", ""], "src": ["S02", "S08"]},
+            {"cells": ["Q-02", "Has the annual Housing Inventory been filed for each unit, for each year since 1 March 2023?", "Reporting is what generates the licence; a gap suspends the licence for that period", "Portal submission history; if nothing is on file, submit now (free, and no late penalty)", ""], "src": ["S02", "S01"]},
+            {"cells": ["Q-03", "What is Unit A's rent-increase anniversary date — 1 February or 1 April?", "It sets the applicable rate and the notice deadline", "Read the 2025-02-01 agreement and the 2026-04-01 document; if still ambiguous, ask a Rent Board counsellor", ""], "src": ["S03"]},
+            {"cells": ["Q-04", "What is Unit B's current base rent?", "Every dollar figure on this site uses the reported 2019 starting amount", "Reconcile the rent ledger and bank statements from 2019-06-01 to date", ""], "src": ["S03"]},
+            {"cells": ["Q-05", "Has Unit B's rent truly been unchanged since 2019-06-01?", "The 13.1% banked figure assumes no increase was ever imposed", "The ledger, plus every notice ever served", ""], "src": ["S04", "S05"]},
+            {"cells": ["Q-06", "Are both original 2019 occupants still in possession of Unit B?", "Banked increases do not carry over to a new tenant", "Occupancy records and the Housing Inventory 12-month occupancy history", ""], "src": ["S04"]},
+            {"cells": ["Q-07", "Is either unit officially covered by SF rent control?", "The whole analysis assumes coverage", "Official Property Information Map for the build date; Rent Board counselling on exemptions (415-252-4600)", ""], "src": ["S11", "S13"]},
+            {"cells": ["Q-08", "Was a written &sect;6.14 notice served on the incoming Unit A occupant?", "It decides whether a market reset is available if the last original occupant later leaves", "The owner's own files; if none exists, note it now and serve one going forward", ""], "src": ["S10"]},
+            {"cells": ["Q-09", "Has either household made a habitability complaint, contacted an agency, or been part of an inspection in the last 180 days?", "A rent increase is barred for 180 days after such an event", "Repair requests, correspondence, agency notices", ""], "src": ["S16"]},
+            {"cells": ["Q-10", "What is the annual rate from 1 March 2027?", "It is the annual component for Unit B's 2027-06-01 date and Unit A's 2027-04-01 scenario", "The Rent Board publishes it on 1 March 2027; it cannot be known before then", ""], "src": ["S03", "S13"]},
+            {"cells": ["Q-11", "What will File No. 261020 do, and when?", "It may cap Unit B's banked catch-up at 10% per year", "Legistar File No. 261020; the Rent Board's posted notice; re-check before serving anything large", ""], "src": ["S20", "S07"]},
+            {"cells": ["Q-12", "How does the Rent Board Fee stand for each unit?", "A separate duty from reporting; penalties run monthly from 1 March", "Portal billing; 2027 exemption requests close 14 December 2026", ""], "src": ["S12"]},
+            {"cells": ["Q-13", "What is the base-rent composition — are there any pass-throughs?", "Pass-throughs must be excluded from the base used for the percentage", "The lease and any pass-through notices", ""], "src": ["S03", "S05"]},
+            {"cells": ["Q-14", "Is a Business Registration Certificate required?", "Separate from the licence and does not affect lawfulness, but penalties can accrue", "Office of the Treasurer &amp; Tax Collector guidance", ""], "src": ["S01"]},
+            {"cells": ["Q-15", "What counts as &lsquo;reasonable and normal&rsquo; in 94122?", "It is the question asked, but no official body publishes a ZIP-level norm", "<strong>Unanswerable from official sources.</strong> The lawful maximum is published; a market norm is not. Left blank by design", ""], "src": ["S03", "S06"]},
+            {"cells": ["Q-16", "How do corporate and individual owners differ in practice?", "Asked in the brief; no official dataset exists", "<strong>Unanswerable from official sources.</strong> The ordinance draws no distinction; behaviour is not published. Left blank by design", ""], "src": ["S01", "S02"]},
+            {"cells": ["Q-17", "Is free tenant legal representation available?", "Relevant to how hard any increase will be scrutinised", "Not confirmed on an official page this pass; the verified official routes are Rent Board counselling and Forms 518 / 516C", ""], "src": ["S08", "S11"]},
+            {"cells": ["Q-18", "Has anything been published on this site that should not be public?", "Privacy is the stated top priority", "Re-scan every published file for names, initials, addresses, e-mails and phone numbers; request an administrator history rewrite for older commits", ""], "src": ["S02"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "warn",
+          "head": "The decision rule this page implies",
+          "body": "<p><strong>Q-01, Q-02, Q-03, Q-04 and Q-05 are hard blockers.</strong> Until the licence status is confirmed, Unit A's anniversary is fixed, and Unit B's ledger is reconciled, the dollar amounts on this site are arithmetic exercises and nothing more. They must not be used to draft a notice.</p><p><strong>Q-11 is a timing blocker for Unit B only.</strong> A banked catch-up above 10% served while File No. 261020 is pending and drafted to reach notices served on or after 15 September 2026 is a decision that should be made consciously, with advice.</p><p><strong>Q-15 and Q-16 are permanently blank by design.</strong> They are the two questions where an answer would have to be invented, and inventing one is exactly what this site is built not to do.</p>"
+        }
+      ]
+    },
+
+    {
+      "id": "repoaudit",
+      "file": "repoaudit.html",
+      "nav": "Repository audit",
+      "title": "Repository audit — line by line, with irregularities flagged",
+      "desc": "What the repository contains, what was re-verified this pass, and the irregularities found.",
+      "eyebrow": "Repository audit",
+      "h1": "What is actually in the repository, and what does not add up",
+      "lede": "Fifty-nine pull requests have been merged into <code>main</code>. The result is a working published site carrying more than a dozen parallel editions of the same analysis. This page records what that means.",
+      "pills": ["59 PRs merged", "13+ parallel editions", "Pages source: main / (root)", "22 sources re-read live"],
+      "blocks": [
+        {
+          "type": "table",
+          "caption": "Repository structure as of 2026-11-13",
+          "head": ["Path", "What it is", "Status", "Source"],
+          "rows": [
+            {"cells": ["<code>index.html</code>", "The published landing page. <strong>Generated</strong> by <code>hub/build.py</code> from <code>hub/data.json</code>; enforced by the &ldquo;Final assurance&rdquo; workflow, which fails the build if the generated output differs from what is committed.", "Owned by a completed session. <strong>Not edited by this session.</strong>", ""], "src": ["S01"]},
+            {"cells": ["<code>hub/</code>", "The canonical eight-page edition plus its generator, data file and verifier (<code>tools/verify_hub.py</code>).", "Active canonical edition. Not edited by this session.", ""], "src": ["S01"]},
+            {"cells": ["<code>docs/</code>, <code>docs/v2/</code>, <code>dashboard/</code>, <code>portal/</code>, <code>review/</code>, <code>integration/</code>, <code>handbook/</code>, <code>compliance/</code>, <code>guide/</code>, <code>site/</code>, <code>research/</code>, <code>assurance/</code>, <code>audit/</code>", "Earlier parallel editions, each with its own generator, data and verifier. All preserved and all reachable from the published root.", "Superseded but still served. Several predate the current rate and the File No. 261020 warning.", ""], "src": ["S07", "S20"]},
+            {"cells": ["<code>COORDINATION.md</code>", "The shared multi-session task board. Now over 1,800 lines and 200 KB.", "Append-only. This session appended its claim before writing any file.", ""], "src": ["S01"]},
+            {"cells": ["<code>decision/</code>", "<strong>This edition.</strong> Eleven pages, generated from <code>decision/data/</code> by <code>decision/build.py</code>, verified by <code>decision/verify.py</code>.", "New, additive. Published at <code>/decision/</code>.", ""], "src": ["S01"]},
+            {"cells": ["<code>.github/workflows/</code>", "Three workflows: &ldquo;Verify site&rdquo;, &ldquo;Verify published site&rdquo; and &ldquo;Final assurance&rdquo;.", "All pass on the current tree; this session added no workflow and changed none.", ""], "src": ["S01"]}
+          ]
+        },
+        {
+          "type": "table",
+          "caption": "Irregularities found on this pass",
+          "head": ["#", "Irregularity", "Assessment", "Suggested handling", "Source"],
+          "rows": [
+            {"cells": ["R-01", "More than a dozen parallel editions of the same analysis are published and interlinked from the root.", "<strong>Irregular.</strong> Not a legal problem, but it makes the record hard to rely on and hard to review.", "Mark superseded editions clearly at the top of each, or archive them behind a single index. See suggestion S-16.", ""], "src": ["S07"]},
+            {"cells": ["R-02", "Several preserved editions predate the 2026-11-09 Rent Board notice about File No. 261020 and therefore present banked-increase guidance without that warning.", "<strong>Irregular.</strong> Material omission, not an error in the figures.", "Either withdraw the affected pages or add the warning. Suggestion S-16.", ""], "src": ["S20", "S07"]},
+            {"cells": ["R-03", "The root <code>index.html</code> cannot be edited without also editing <code>hub/build.py</code> and re-running the &ldquo;Final assurance&rdquo; workflow.", "<strong>By design, but constraining.</strong> A new consolidated edition therefore cannot become the root page without taking over a completed session's files.", "Either leave the root as is and publish consolidated editions underneath it (what this session did), or have one session own the root and regenerate it. See F-14.", ""], "src": ["S01"]},
+            {"cells": ["R-04", "Earlier public Git history reportedly contains tenant initials; pre-redaction blobs persist below an early PR.", "<strong>Serious privacy irregularity.</strong> Current-file scans do not detect or repair history.", "Requires an administrator history rewrite. No session should attempt it unilaterally. See F-15 and suggestion S-17.", ""], "src": ["S02"]},
+            {"cells": ["R-05", "<code>COORDINATION.md</code> has grown past 200 KB through repeated append-only session addenda.", "<strong>Irregular but harmless.</strong> It is a log, not a deliverable.", "Trim completed session records into <code>audit/</code> at the next integration pass.", ""], "src": ["S01"]},
+            {"cells": ["R-06", "One earlier session's record notes that a commercially sourced page was still being served from a legacy edition.", "<strong>Irregular.</strong> Commercial summaries are not official sources.", "Withdraw commercial content from served pages or relabel it clearly as unofficial. See suggestion S-18.", ""], "src": ["S03"]},
+            {"cells": ["R-07", "The &ldquo;sources&rdquo; count differs between editions (29, 31, 33, 34, 42 across various builds).", "<strong>Not an error</strong> — each edition registered a different set. But a reader cannot tell which count is current.", "This edition states its own count (22) and lists every source with its verified passage. See the <a href='sources.html'>sources page</a>.", ""], "src": ["S01"]}
+          ]
+        },
+        {
+          "type": "callout",
+          "cls": "answer",
+          "head": "What this session re-verified, and what it did not",
+          "body": "<p><strong>Re-verified live on 2026-11-13</strong> by fetching and reading the issuing body's own page: &sect;37.15, the Housing Inventory page, the rent-increase page, the banked-increase page, the multiple-years page, Form 571, the current rates page, the owner-noncompliance notice, Rule &sect;13.14, &sect;6.14 / Costa-Hawkins, the rental-laws page, the Rent Board fee page, &sect;37.3, Civil Code &sect;&sect;827, 1947.12, 1942.5, 1954.53, Government Code &sect;12955, 42 U.S.C. &sect;3604, Legistar File No. 261020, and the 2023 Rent Board press release. Twenty-two sources in total, each recorded with the passage relied on on the <a href='sources.html'>sources page</a>.</p><p><strong>Not re-verified this pass:</strong> the Business Registration Certificate question (F-13); the Tenant Right to Counsel programme (F-19); the official parcel build date (F-07); both rent ledgers; and both licence records. Each is flagged rather than asserted.</p><p><strong>Not re-run this pass:</strong> other sessions' verifiers were left untouched, because this session edits none of their files. Only <code>decision/verify.py</code> covers this edition.</p>"
+        }
+      ]
+    },
+
+    {
+      "id": "flagged",
+      "file": "flagged.html",
+      "nav": "Flagged for review",
+      "title": "Flagged for review",
+      "desc": "Every flagged item and every unverified value, each with the official source link needed to check it.",
+      "eyebrow": "Flagged for review",
+      "h1": "Twenty items that need a human decision",
+      "lede": "Nothing here blocks the site publishing. Each item is recorded with the official source that would resolve it. Blank cells elsewhere on the site are blank <strong>because</strong> no official source publishes those values — they are never estimated.",
+      "pills": ["20 flagged items", "Blank cells are deliberate", "Every item has a source link"],
+      "blocks": [
+        {"type": "include", "name": "flag_table"}
+      ]
+    },
+
+    {
+      "id": "sources",
+      "file": "sources.html",
+      "nav": "Sources",
+      "title": "Sources — 22 official sources, read live 2026-11-13",
+      "desc": "Every source used on this site, with the exact passage relied on and a direct link to the issuing body.",
+      "eyebrow": "Source registry",
+      "h1": "Every figure traced to the body that published it",
+      "lede": "All twenty-two sources below were fetched and read directly on 2026-11-13. No secondary source is used as a substitute for a primary one, and no value on this site comes from a commercial rent-index site.",
+      "pills": ["22 sources", "Read live 2026-11-13", "Federal · State · City"],
+      "blocks": [
+        {"type": "include", "name": "source_table"}
+      ]
+    }
+  ]
+}

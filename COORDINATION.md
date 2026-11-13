@@ -1996,3 +1996,32 @@ dates and dollar amounts unchanged.
 | E452-5 | Pull request [PR #64](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/64) — *Independent 2026-11-13 verification records: 13 sources re-read live, 45/45 recomputations pass, suites green (arena-e452e248)* — **MERGED** into `main` at 2026-11-13 07:04 UTC as merge commit `33c0227`; no approval waited; merge-state CLEAN; Pages confirmed `built` for `33c02273` (see E452-4). This record is published by a follow-up record PR whose own merge result is appended in the line below. |
 | Record PR | [PR #65](https://github.com/kanlerxz87-cyber/RentincreaseSF1/pull/65) — *coordination: record arena-e452e248 completion (E452-1..5, PR #64 merge, Pages built)* — publishes this record. Its own merge commit and the Pages build for that commit are recorded in `audit/session-e452e248/VERIFICATION.md` on this branch. |
 | Irregularities | None new. Carried (all published on the site's Flagged for Review page, none blocking): FL-25 §4.12-vs-page banking wording (both texts re-read live 2026-11-13, persists), FL-19 worked-example date wording, FL-27 "517/571" title, H-22 File #261020 pending (re-confirmed live 2026-11-13). Coordination observations recorded above. |
+---
+
+# Session Addendum — `arena/509488b5-rentincreasesf1` (2026-11-13 UTC)
+
+- **Session ID / Branch:** `arena-509488b5` / `arena/509488b5-rentincreasesf1` (platform-pinned branch; no other branch may be created, switched to, or pushed). `git pull --rebase origin main` runs before every push.
+- **Concurrent-session inspection:** all 59 prior PRs are merged or closed; every earlier session claim is complete and stale (`>60 min`, no new commits). No other session holds an active claim on the scope below.
+- **Strictly Disjoint Exclusive File Scope (claimed):**
+  - `decision/**` — new consolidated clean GitHub Pages site (landing page + categorized subpages, `decision/build.py`, `decision/verify.py`, `decision/data/*.json`)
+  - `audit/session-509488b5/**` — this session's verification records and source registry
+  - `COORDINATION.md` — append-only
+  - **Explicitly NOT touched:** `index.html`, `hub/**`, `assurance/**`, `docs/**`, `dashboard/**`, `portal/**`, `review/**`, `integration/**`, `compliance/**`, `guide/**`, `handbook/**`, `site/**`, `research/**`, `tools/**`, `build/**`, `data/**`, root Markdown. Those are owned by completed sessions and are enforced by the `Final assurance` and `Verify site` workflows; editing them is out of scope and is logged as a request instead.
+
+## Task Board (`arena/509488b5-rentincreasesf1`)
+
+| Task ID | Task Description | Status | Owner | Exclusive File Scope |
+|---|---|---|---|---|
+| `A5-T1` | Read `COORDINATION.md`, inspect remote branches, claim strictly disjoint scope, commit and push the claim immediately | done | `arena/509488b5-rentincreasesf1` | `COORDINATION.md` (append-only) |
+| `A5-T2` | Live `2026-11-13` primary-source re-verification of every figure and legal proposition used on the new site | in progress | `arena/509488b5-rentincreasesf1` | `audit/session-509488b5/sources.json` |
+| `A5-T3` | Line-by-line repository verification audit; flag irregularities; recompute unit arithmetic independently | pending | `arena/509488b5-rentincreasesf1` | `audit/session-509488b5/repo_audit.md` |
+| `A5-T4` | Anonymized Executive Summary with the **state-vs-local 2023 licence answer at the forefront** + beginner step-by-step | pending | `arena/509488b5-rentincreasesf1` | `decision/data/executive.json` |
+| `A5-T5` | **New:** dedicated `Suggestions` page (reviewable options, choose a path before implementing) | pending | `arena/509488b5-rentincreasesf1` | `decision/data/suggestions.json` |
+| `A5-T6` | **New:** `Open questions` page — what is known, what is missing, and how to discover the missing information | pending | `arena/509488b5-rentincreasesf1` | `decision/data/questions.json` |
+| `A5-T7` | Clean dashboard site at `/decision/` with a source link on **every** table row; blank cells for unverified values | pending | `arena/509488b5-rentincreasesf1` | `decision/**` |
+| `A5-T8` | Deterministic generator + verifier (links, anchors, per-row citation, exact decimal arithmetic, blank-unverified cells, privacy) | pending | `arena/509488b5-rentincreasesf1` | `decision/build.py`, `decision/verify.py` |
+| `A5-T9` | Rebase onto `origin/main`, confirm no broken links and green CI, open + merge PR, confirm Pages deploy, record here | pending | `arena/509488b5-rentincreasesf1` | `COORDINATION.md` (append-only) |
+
+**Privacy rule for this session:** zero tenant names, initials, street addresses, e-mails or phone numbers in any file, commit or PR metadata. Placeholders only (`Unit A`, `Unit B`, `Occupant 1..n`). Dates and dollar amounts preserved verbatim.
+
+**Handoff rule:** if this claim is >60 minutes old with no new commit on `arena/509488b5-rentincreasesf1`, any session may take it over and must note the handoff here.

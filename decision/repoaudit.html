@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Repository audit — line by line, with irregularities flagged</title>
+<meta name="description" content="What the repository contains, what was re-verified this pass, and the irregularities found.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap navwrap">
+    <a class="brand" href="index.html"><span class="mark">SF</span><span>Rent Increase<small>Decision pack &middot; Outer Sunset 94122</small></span></a>
+    <nav class="main" aria-label="Main"><a href="index.html">Executive summary</a><a href="licence.html">Licence &amp; Rent Board</a><a href="rates.html">Rates &amp; calculations</a><a href="notice.html">Notice &amp; reasons</a><a href="practice.html">Owner practice</a><a href="fairhousing.html">One unit or both</a><a href="lawyer.html">Tenant-lawyer test</a><a href="suggestions.html">Suggestions</a><a href="questions.html">Open questions</a><a href="repoaudit.html" aria-current="page">Repository audit</a><a href="flagged.html">Flagged for review</a><a href="sources.html">Sources</a></nav>
+  </div>
+</header>
+<section class="hero"><div class="wrap">
+<p class="eyebrow">Repository audit</p>
+<h1>What is actually in the repository, and what does not add up</h1>
+<p class="lede">Fifty-nine pull requests have been merged into <code>main</code>. The result is a working published site carrying more than a dozen parallel editions of the same analysis. This page records what that means.</p>
+<div class="pillrow"><span class="pill">59 PRs merged</span><span class="pill">13+ parallel editions</span><span class="pill">Pages source: main / (root)</span><span class="pill">22 sources re-read live</span></div>
+</div></section>
+<main class="wrap" id="main">
+<div class="tablewrap"><table class="data-table">
+<caption>Repository structure as of 2026-11-13</caption>
+<thead><tr>
+<th>Path</th>
+<th>What it is</th>
+<th>Status</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr>
+<td><code>index.html</code></td>
+<td>The published landing page. <strong>Generated</strong> by <code>hub/build.py</code> from <code>hub/data.json</code>; enforced by the &ldquo;Final assurance&rdquo; workflow, which fails the build if the generated output differs from what is committed.</td>
+<td>Owned by a completed session. <strong>Not edited by this session.</strong></td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td><code>hub/</code></td>
+<td>The canonical eight-page edition plus its generator, data file and verifier (<code>tools/verify_hub.py</code>).</td>
+<td>Active canonical edition. Not edited by this session.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td><code>docs/</code>, <code>docs/v2/</code>, <code>dashboard/</code>, <code>portal/</code>, <code>review/</code>, <code>integration/</code>, <code>handbook/</code>, <code>compliance/</code>, <code>guide/</code>, <code>site/</code>, <code>research/</code>, <code>assurance/</code>, <code>audit/</code></td>
+<td>Earlier parallel editions, each with its own generator, data and verifier. All preserved and all reachable from the published root.</td>
+<td>Superseded but still served. Several predate the current rate and the File No. 261020 warning.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S07" title="Current Rates, including Rent Increase, Relocation, Sec. Deposit — City and County of San Francisco — Rent Board">S07</a> <a class="srcref" href="sources.html#S20" title="File No. 261020 — Administrative Code - Cap On Rent Increases for Rent-Controlled Units — City and County of San Francisco — Board of Supervisors (Legistar)">S20</a></td>
+</tr>
+<tr>
+<td><code>COORDINATION.md</code></td>
+<td>The shared multi-session task board. Now over 1,800 lines and 200 KB.</td>
+<td>Append-only. This session appended its claim before writing any file.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td><code>decision/</code></td>
+<td><strong>This edition.</strong> Eleven pages, generated from <code>decision/data/</code> by <code>decision/build.py</code>, verified by <code>decision/verify.py</code>.</td>
+<td>New, additive. Published at <code>/decision/</code>.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td><code>.github/workflows/</code></td>
+<td>Three workflows: &ldquo;Verify site&rdquo;, &ldquo;Verify published site&rdquo; and &ldquo;Final assurance&rdquo;.</td>
+<td>All pass on the current tree; this session added no workflow and changed none.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+</tbody></table></div>
+<div class="tablewrap"><table class="data-table">
+<caption>Irregularities found on this pass</caption>
+<thead><tr>
+<th>#</th>
+<th>Irregularity</th>
+<th>Assessment</th>
+<th>Suggested handling</th>
+<th>Source</th>
+</tr></thead><tbody>
+<tr>
+<td>R-01</td>
+<td>More than a dozen parallel editions of the same analysis are published and interlinked from the root.</td>
+<td><strong>Irregular.</strong> Not a legal problem, but it makes the record hard to rely on and hard to review.</td>
+<td>Mark superseded editions clearly at the top of each, or archive them behind a single index. See suggestion S-16.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S07" title="Current Rates, including Rent Increase, Relocation, Sec. Deposit — City and County of San Francisco — Rent Board">S07</a></td>
+</tr>
+<tr>
+<td>R-02</td>
+<td>Several preserved editions predate the 2026-11-09 Rent Board notice about File No. 261020 and therefore present banked-increase guidance without that warning.</td>
+<td><strong>Irregular.</strong> Material omission, not an error in the figures.</td>
+<td>Either withdraw the affected pages or add the warning. Suggestion S-16.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S20" title="File No. 261020 — Administrative Code - Cap On Rent Increases for Rent-Controlled Units — City and County of San Francisco — Board of Supervisors (Legistar)">S20</a> <a class="srcref" href="sources.html#S07" title="Current Rates, including Rent Increase, Relocation, Sec. Deposit — City and County of San Francisco — Rent Board">S07</a></td>
+</tr>
+<tr>
+<td>R-03</td>
+<td>The root <code>index.html</code> cannot be edited without also editing <code>hub/build.py</code> and re-running the &ldquo;Final assurance&rdquo; workflow.</td>
+<td><strong>By design, but constraining.</strong> A new consolidated edition therefore cannot become the root page without taking over a completed session's files.</td>
+<td>Either leave the root as is and publish consolidated editions underneath it (what this session did), or have one session own the root and regenerate it. See F-14.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td>R-04</td>
+<td>Earlier public Git history reportedly contains tenant initials; pre-redaction blobs persist below an early PR.</td>
+<td><strong>Serious privacy irregularity.</strong> Current-file scans do not detect or repair history.</td>
+<td>Requires an administrator history rewrite. No session should attempt it unilaterally. See F-15 and suggestion S-17.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S02" title="The Rent Board Housing Inventory — City and County of San Francisco — Rent Board">S02</a></td>
+</tr>
+<tr>
+<td>R-05</td>
+<td><code>COORDINATION.md</code> has grown past 200 KB through repeated append-only session addenda.</td>
+<td><strong>Irregular but harmless.</strong> It is a log, not a deliverable.</td>
+<td>Trim completed session records into <code>audit/</code> at the next integration pass.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+<tr>
+<td>R-06</td>
+<td>One earlier session's record notes that a commercially sourced page was still being served from a legacy edition.</td>
+<td><strong>Irregular.</strong> Commercial summaries are not official sources.</td>
+<td>Withdraw commercial content from served pages or relabel it clearly as unofficial. See suggestion S-18.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S03" title="Learn about rent increases in San Francisco — City and County of San Francisco — Rent Board">S03</a></td>
+</tr>
+<tr>
+<td>R-07</td>
+<td>The &ldquo;sources&rdquo; count differs between editions (29, 31, 33, 34, 42 across various builds).</td>
+<td><strong>Not an error</strong> — each edition registered a different set. But a reader cannot tell which count is current.</td>
+<td>This edition states its own count (22) and lists every source with its verified passage. See the <a href='sources.html'>sources page</a>.</td>
+<td class="c-src"><a class="srcref" href="sources.html#S01" title="San Francisco Administrative Code §37.15 — Reporting Obligations; Licensing — City and County of San Francisco — Rent Board">S01</a></td>
+</tr>
+</tbody></table></div>
+<section class="callout answer"><h3>What this session re-verified, and what it did not</h3><p><strong>Re-verified live on 2026-11-13</strong> by fetching and reading the issuing body's own page: &sect;37.15, the Housing Inventory page, the rent-increase page, the banked-increase page, the multiple-years page, Form 571, the current rates page, the owner-noncompliance notice, Rule &sect;13.14, &sect;6.14 / Costa-Hawkins, the rental-laws page, the Rent Board fee page, &sect;37.3, Civil Code &sect;&sect;827, 1947.12, 1942.5, 1954.53, Government Code &sect;12955, 42 U.S.C. &sect;3604, Legistar File No. 261020, and the 2023 Rent Board press release. Twenty-two sources in total, each recorded with the passage relied on on the <a href='sources.html'>sources page</a>.</p><p><strong>Not re-verified this pass:</strong> the Business Registration Certificate question (F-13); the Tenant Right to Counsel programme (F-19); the official parcel build date (F-07); both rent ledgers; and both licence records. Each is flagged rather than asserted.</p><p><strong>Not re-run this pass:</strong> other sessions' verifiers were left untouched, because this session edits none of their files. Only <code>decision/verify.py</code> covers this edition.</p></section>
+</main>
+<footer class="site-footer"><div class="wrap">
+<p><strong>Anonymised.</strong> All tenant names and initials are replaced with placeholders (Occupant 1, Occupant 2, ...). Dates and dollar amounts are unchanged from the owner's brief.</p>
+<p><strong>Verified live 2026-11-13.</strong> All 22 registered official sources were fetched and read on that date. Dollar figures are conditional scenario arithmetic on the reported rents, not certified lawful maxima. Values that no official source publishes are left blank and listed on <a href="flagged.html">Flagged for Review</a>.</p>
+<p><strong>Not legal advice. Free Rent Board counselling: 415-252-4600 (Mon-Fri, 9am-12pm and 1pm-4pm).</strong></p>
+<p class="muted">This is the <code>/decision/</code> edition, published alongside the repository's existing editions. It is additive: it changes none of them. <a href="repoaudit.html">Repository audit &rarr;</a></p>
+</div></footer>
+</body>
+</html>
