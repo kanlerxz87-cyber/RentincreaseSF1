@@ -3,7 +3,7 @@
     "id": "S01",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information/sec-3715-reporting-obligations-licensing",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -17,28 +17,28 @@
     "id": "S03",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/rent-board-housing-inventory",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S04",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/information--banked-rent-increases",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S05",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/learn-about-rent-increases-san-francisco",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
     "id": "S06",
     "publisher": "San Francisco Rent Board (SF.gov, PDF)",
     "url": "https://www.sf.gov/documents/34344/571_Allowable_Annual_Increases_26-27_1.pdf",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -115,7 +115,7 @@
     "id": "S17",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/rent-board-fee",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -178,7 +178,7 @@
     "id": "S26",
     "publisher": "San Francisco Board of Supervisors (Legistar)",
     "url": "https://sfgov.legistar.com/LegislationDetail.aspx?ID=8217304&GUID=7EDA4662-EBFB-4AF5-962F-C669B64AA770",
-    "retrieved": "2026-11-10",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -206,7 +206,7 @@
     "id": "S30",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/reports--december-2022--rent-board-rules-and-regulations-part-xiii-reporting-obligations-under-rent",
-    "retrieved": "2026-11-11",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -220,7 +220,7 @@
     "id": "S32",
     "publisher": "San Francisco Rent Board (SF.gov)",
     "url": "https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement",
-    "retrieved": "2026-11-11",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   },
   {
@@ -228,6 +228,13 @@
     "publisher": "U.S. Government Publishing Office (GovInfo)",
     "url": "https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm",
     "retrieved": "2026-11-11",
+    "result": "Retrieved and read from official publisher"
+  },
+  {
+    "id": "S34",
+    "publisher": "U.S. Census Bureau / U.S. Department of Housing and Urban Development (census.gov)",
+    "url": "https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html",
+    "retrieved": "2026-11-13",
     "result": "Retrieved and read from official publisher"
   }
 ]

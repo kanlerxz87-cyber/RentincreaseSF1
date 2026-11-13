@@ -1,10 +1,10 @@
 # Official source registry
 
-**Retrieved and read:** All 29 registered sources live-verified 2026-11-10 (originally retrieved 2026-11-07 for S01–S23 and 2026-11-08 for S24–S29)
+**Retrieved and read:** All 34 registered sources, each fetched and read from its official publisher on the date recorded in the registry (2026-11-07 through 2026-11-13; the load-bearing subset S01/S03/S04/S05/S06/S17/S26/S30/S32 was re-read live 2026-11-13, and S34 was added that day)
 **Canonical registry:** [`hub/data.json`](hub/data.json) → rendered at [`hub/sources.html`](hub/sources.html)
 **Machine-readable live-retrieval manifest:** [`audit/final-integration/source-manifest.json`](audit/final-integration/source-manifest.json)
 
-All 33 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
+All 34 sources are official government publications. Commercial listings and blogs are not used for legal values or market conclusions. Verbatim supporting passages appear in `hub/sources.html`; this page is the compact link index.
 
 | ID | Official publisher and document | How it is used |
 |---|---|---|
@@ -52,3 +52,4 @@ All 33 sources are official government publications. Commercial listings and blo
 Owner-brief dates and amounts are not official facts. They remain labeled as scenario inputs throughout the canonical site.
 | S32 | San Francisco Rent Board (SF.gov) — [Notification of Rent Board Fee and Housing Inventory Requirements (2027 cycle)](https://www.sf.gov/notice-of-rent-board-fee-and-housing-inventory-requirement) | Separates the two 2027 obligations: fee-exemption request by **Monday, December 14, 2026**; Housing Inventory report by **March 1, 2027**. No licence until reporting is complete, and a fee exemption does not satisfy inventory reporting. Read 2026-11-11. |
 | S33 | U.S. Government Publishing Office (GovInfo) — [42 U.S.C. §3604 — Discrimination in the sale or rental of housing](https://www.govinfo.gov/content/pkg/USCODE-2023-title42/html/USCODE-2023-title42-chap45-subchapI-sec3604.htm) | Enacted federal text: §3604(b) reaches the "terms, conditions, or privileges" of a rental — which covers a rent increase — and §3604(f)(2) covers handicap. Read 2026-11-11. |
+| S34 | U.S. Census Bureau / HUD (census.gov) — [2024 Rental Housing Finance Survey (RHFS) summary tables and public use files, press release CB26-TPS.12](https://www.census.gov/newsroom/press-releases/2026/2024-rhfs-data.html) | Negative finding behind H-11: the only comprehensive federal rental-property finance dataset checked is national in scope ("U.S. residential properties with at least one housing rental unit") and publishes no San Francisco 94122 market-increase or owner-behaviour figure, so those cells stay blank and flagged. Read 2026-11-13. |

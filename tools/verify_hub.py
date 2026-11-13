@@ -385,6 +385,9 @@ for sid, host, needle in (
     ("S24", "sftreasurer.org", "fewer than four units"),
     ("S25", "sftreasurer.org", "fewer than four units"),
     ("S26", "sfgov.legistar.com", "Pending Committee Action"),
+    # S34 pins the negative finding behind H-11: the federal RHFS release is the
+    # only comprehensive rental-property finance dataset checked and it is national.
+    ("S34", "census.gov", "Rental Housing Finance Survey"),
 ):
     if sid not in by_id:
         fail(f"required source {sid} missing from the registry")
